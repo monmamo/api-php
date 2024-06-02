@@ -1,6 +1,12 @@
 <?php
+
 namespace App\Skills;
-class Drain implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class Drain implements Skill
+{
+}
 
 // [[Attack]]
 //Damage done to defender:: H(Level) Damage

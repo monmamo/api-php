@@ -1,12 +1,21 @@
----
-title: "Pronos"
-url: https://roamresearch.com/#/app/MonMaMo/page/oPHeeAvnP
-author: Unknown
-date: Thu May 30 2024 02:36:25 GMT-0500 (Central Daylight Time)
----
+<?php
 
+namespace App\Taxons;
 
-// ,posture morphotype
-// 1.333:
+use App\Contracts\Taxon;
+
 // ,"Felos , Lupos , Lutros , Otarys ",,,
 // [[posture morphotype]]
+
+final class Pronos implements Taxon
+{
+    public static function rarity(): float
+    {
+        return 4 / 3;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}

@@ -1,11 +1,14 @@
 <?php
+
 namespace App\Skills;
-class RazorSlash implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class RazorSlash implements Skill
+{
+}
 
 // [[Attack]] [[Physical Mode]]
-//---
+
 //Requires Sharpness, thus requires external anatomy that can be sharp.
 //# playable card::
-
-
-// ---

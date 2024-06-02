@@ -9,11 +9,18 @@ use Laravel\Jetstream\Jetstream;
 class JetstreamServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
+     * Configure the permissions that are available within the application.
      */
-    public function register(): void
+    protected function configurePermissions(): void
     {
-        //
+        Jetstream::defaultApiTokenPermissions(['read']);
+
+        Jetstream::permissions([
+            'create',
+            'read',
+            'update',
+            'delete',
+        ]);
     }
 
     /**
@@ -27,17 +34,9 @@ class JetstreamServiceProvider extends ServiceProvider
     }
 
     /**
-     * Configure the permissions that are available within the application.
+     * Register any application services.
      */
-    protected function configurePermissions(): void
+    public function register(): void
     {
-        Jetstream::defaultApiTokenPermissions(['read']);
-
-        Jetstream::permissions([
-            'create',
-            'read',
-            'update',
-            'delete',
-        ]);
     }
 }

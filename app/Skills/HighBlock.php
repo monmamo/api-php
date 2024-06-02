@@ -1,6 +1,12 @@
 <?php
+
 namespace App\Skills;
-class HighBlock implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class HighBlock implements Skill
+{
+}
 
 // [[Defense]]
 //Damage prevented:: 3dS damage from high Manual Skills only.

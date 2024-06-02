@@ -1,11 +1,17 @@
 <?php
+
 namespace App\Skills;
-class HornAttack implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class HornAttack implements Skill
+{
+}
 
 // [[Attack]]
 //[[innate skill]], , [[Physical Mode]]
 //requirements:: [[Single Cranial Horn]] or [[Dual Cranial Horns]].
-//---
+
 //Choose one monster in play. This attack does H(Manual/3) Damage to that monster.
 //Collectible Card Game::
 // Does 3d4 damage.

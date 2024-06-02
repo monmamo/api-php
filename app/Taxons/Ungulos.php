@@ -1,14 +1,27 @@
----
-title: "Ungulos"
-url: https://roamresearch.com/#/app/MonMaMo/page/jf_3Q7kao
-author: Unknown
-date: Thu May 30 2024 02:36:25 GMT-0500 (Central Daylight Time)
----
+<?php
 
+namespace App\Taxons;
 
-// Hooved quadrupeds that cannot be ridden.
-// phylum::
-// ,"Bovos , Cervos , Suinos ",,,
-// phylum Hooved quadrupeds that cannot be ridden.
-// rarity: 100
-// size delta: 0
+use App\Contracts\Taxon;
+use App\GeneralAttributes\Gloss;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
+
+#[Gloss('Hooved quadrupeds that cannot be ridden.')]
+
+#[NeuterName('Ungulon')]
+#[MasculineMonsterName('Ungulor')]
+#[FeminineMonsterName('Unguless')]
+final class Ungulos implements Taxon
+{
+    public static function rarity(): float
+    {
+        return 100;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}

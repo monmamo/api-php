@@ -1,7 +1,21 @@
 <?php
-namespace App\Taxons;
-class Troglodys implements \App\Contracts\Taxon {}
 
+namespace App\Taxons;
+
+use App\Contracts\Taxon;
+
+class Troglodys implements Taxon
+{
+    public static function rarity(): float
+    {
+        return TODO;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}
 
 // species of genus Hominos. Cave-dwelling hominid.
 // [[genus]]
@@ -13,6 +27,6 @@ class Troglodys implements \App\Contracts\Taxon {}
 // Feminine:
 // Troglodyss
 // Attributes:
-// Requires:
+
 // rarity: {{calc: ((uuUwRY2_d)) * 5}}
 // size delta: ((qsC8F8tTR))

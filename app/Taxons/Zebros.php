@@ -1,8 +1,32 @@
 <?php
-namespace App\Taxons;
-class Zebros implements \App\Contracts\Taxon {}
 
+namespace App\Taxons;
+
+use App\Contracts\Taxon;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
+
+#[NeuterName('Zebron')]
+#[MasculineAnthropeName('Zebrander')]
+#[MasculineMonsterName('Zebror')]
+#[FeminineAnthropeName('Zebrquin')]
+#[FeminineMonsterName('Zebress')]
+class Zebros implements Taxon
+{
+    public static function rarity(): float
+    {
+        return TODO;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}
 
 // Zebra forms
-// Species::
+
 // 100000,Equos ,,,zebra,Equos  x 10000

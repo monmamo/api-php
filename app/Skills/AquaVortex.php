@@ -1,6 +1,12 @@
 <?php
+
 namespace App\Skills;
-class AquaVortex implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class AquaVortex implements Skill
+{
+}
 
 // [[Attack]]
 //variables::
@@ -10,6 +16,3 @@ class AquaVortex implements \App\Contracts\Skill {}
 //Requires [[Aquos]].
 //Creates a swirling water vortex, trapping and spinning the target.
 //# playable card::
-
-
-// ---

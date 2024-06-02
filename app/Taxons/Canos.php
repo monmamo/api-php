@@ -1,19 +1,35 @@
 <?php
+
 namespace App\Taxons;
-class Canos implements \App\Contracts\Taxon {}
 
+use App\Contracts\Taxon;
+use App\GeneralAttributes\Gloss;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
-// genus:: Dog forms.
-// ,"Lupos , Lycos , Alopecos ",,,
-// Alternates:
-// Feminine: Caness, Canvack, Canquin
-// Masculine: Canor, Cantaur, Canander
-// Plural:
-// Assets:
-// Attributes:
-// Excludes:
-// Prefers:
-// Requires:
-// Flaws:
-// rarity: 5
-// size delta: 0
+#[NeuterName('Canon')]
+#[MasculineAnthropeName('Canander')]
+#[MasculineMonsterName('Canor')]
+#[FeminineAnthropeName('Canquin')]
+#[FeminineMonsterName('Caness')]
+#[Gloss('Dog forms.')]
+#[NeuterName('Canon')]
+#[MasculineAnthropeName('Canander')]
+#[MasculineMonsterName('Canor')]
+#[FeminineAnthropeName('Canquin')]
+#[FeminineMonsterName('Caness')]
+class Canos implements Taxon
+{
+    public static function rarity(): float
+    {
+        return 5;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}

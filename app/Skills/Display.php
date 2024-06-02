@@ -1,14 +1,15 @@
 <?php
+
 namespace App\Skills;
-class Display implements \App\Contracts\Skill {}
 
+use App\Contracts\Skill;
 
-//
+class Display implements Skill
+{
+}
+
 //variables::
 // Training Experience
 // Battle Experience
-//---
+
 //# playable card::
-
-
-// ---

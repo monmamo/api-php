@@ -1,6 +1,12 @@
 <?php
+
 namespace App\Skills;
-class BodySlam implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class BodySlam implements Skill
+{
+}
 
 // [[Attack]] [[Physical Mode]]
 //variables::
@@ -8,9 +14,5 @@ class BodySlam implements \App\Contracts\Skill {}
 // Battle Experience
 //# playable card::
 
-
-
 // Damage done to defender:: 3dSize
 // Damage done to self:: 1dSize
-//
-//

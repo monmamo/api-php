@@ -1,15 +1,17 @@
 <?php
-namespace App\Skills;
-class Sonicboom implements \App\Contracts\Skill {}
 
+namespace App\Skills;
+
+use App\Contracts\Skill;
+
+class Sonicboom implements Skill
+{
+}
 
 //[[Attack]] [[Sonic Mode]]
 //variables::
 // Training Experience
 // Battle Experience
-//---
+
 //Requires [[Sonos]].
 //# playable card::
-
-
-// ---

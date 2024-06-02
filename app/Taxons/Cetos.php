@@ -1,19 +1,28 @@
 <?php
+
 namespace App\Taxons;
-class Cetos implements \App\Contracts\Taxon {}
+
+use App\Contracts\Taxon;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
 // Great whale forms. Exclusively aquatic.
 // [[Species]] of [[Aquadys]] with [[Aquos]] power.
 
-// alternative names::
-// neuter name:: Ceton
-// masculine anthrope:: N/A
-// masculine monster:: Cetor
-// feminine anthrope::  N/A
-// feminine monster:: Cetess
-// Rarity:: 150000
-// size delta:: +1
 // image generation prompt:: [[needs representative image]]
-// requires:
-// profile card:: TODO
-// ---
+#[NeuterName('Ceton')]
+#[MasculineMonsterName('Cetor')]
+#[FeminineMonsterName('Cetess')]
+class Cetos implements Taxon
+{
+    public static function rarity(): float
+    {
+        return 150000;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 1;
+    }
+}

@@ -1,27 +1,37 @@
 <?php
+
 namespace App\Taxons;
-class Lupos implements \App\Contracts\Taxon {}
 
+use App\GeneralAttributes\Gloss;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
-// gloss:: Wolf-forms. Resembles a wolf or has wolflike properties.
-// [[Species]] of genus [[Canos]] with [[Pronos]] form.
+// [[Species]] of genus [[]] with [[Pronos]] form.
 // Attributes:
 // effect:: Tetrapod, Fur, Paw.
-// Requires:
+
 // [[Alertness]]
-// # alternative names::
-// neuter name:: Lupon
-// masculine anthrope:: Lupander
-// masculine monster:: Lupor
-// feminine anthrope:: Lupquin
-// feminine monster:: Lupess
+
 // image generation prompt:: wolflike, wolfform
-// # variables
-// Rarity:: 10
-// size delta:: 0.2
-// Posterior Physical Strength::
-// Anterior Physical Strength::
-// Counterattacking Strength::
-// Emotional Strength::
-// Intelligence::
-// Spiritual Strength::
+
+#[NeuterName('Lupon')]
+#[MasculineAnthropeName('Lupander')]
+#[MasculineMonsterName('Lupor')]
+#[FeminineAnthropeName('Lupquin')]
+#[FeminineMonsterName('Lupess')]
+#[Gloss('Wolf-forms. Resembles a wolf or has wolflike properties.')]
+class Lupos extends Canos
+{
+    public static function rarity(): float
+    {
+        return Canos::rarity() * 3;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0.2;
+    }
+}

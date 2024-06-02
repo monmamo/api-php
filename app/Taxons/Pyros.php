@@ -1,20 +1,44 @@
 <?php
-namespace App\Taxons;
-class Pyros implements \App\Contracts\Taxon {}
 
+namespace App\Taxons;
+
+use App\Contracts\Taxon;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
+
+#[NeuterName('Pyron')]
+#[MasculineAnthropeName('Pyrander')]
+#[MasculineMonsterName('Pyror')]
+#[FeminineAnthropeName('Pyrquin')]
+#[FeminineMonsterName('Pyress')]
+class Pyros implements Taxon
+{
+    public static function rarity(): float
+    {
+        return TODO;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}
 
 // Fire.
-// essential power::
+
 // ,0,"Myrmidon , Candesce ",Calienta Rey ,Pyror,Pyrquin,Pyress,Pyrander,
 // [[essential power]]. Fire.
 // Alternates:
 // Masculine: Pyror, Pyrander
 // Feminine: Pyress, Pyrquin
 // Attributes:
-// Requires:
+
 // Color: Red
 // rarity: 50
-// cost: true
+
 // https://huggingface.co/datasets/monmamo/pyros
 // https://bulbapedia.bulbagarden.net/wiki/Fire_(type)
 // ### Defense
@@ -23,5 +47,5 @@ class Pyros implements \App\Contracts\Taxon {}
 // ### Offense
 // During [harsh sunlight](https://bulbapedia.bulbagarden.net/wiki/Harsh_sunlight) or extremely harsh sunlight, the power of Fire-type attacks is increased by 50%. The power of Fire-type attacks is decreased by 50% during [rain](https://bulbapedia.bulbagarden.net/wiki/Rain), while all Fire-type moves will fail during heavy rain. When [Water Sport](https://bulbapedia.bulbagarden.net/wiki/Water_Sport_%28move%29) is in effect, the power of Fire-type moves is decreased by 67%. When used under the effect of [Powder](https://bulbapedia.bulbagarden.net/wiki/Powder_%28move%29), Fire attacks will damage the user by 1/4 of its max HP instead of executing normally.
 // The Fire type enables the use of [Burn Up](https://bulbapedia.bulbagarden.net/wiki/Burn_Up_%28move%29), though Burn Up removes the user's Fire type.
-// WORK::
+
 // Flame Body  21  Contact with the monsters may burn the attacker.    3

@@ -1,6 +1,12 @@
 <?php
+
 namespace App\Skills;
-class GrowlDefense implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class GrowlDefense implements Skill
+{
+}
 
 // [[Defense]]
 //defense skill [[Physical Mode]]
@@ -9,7 +15,4 @@ class GrowlDefense implements \App\Contracts\Skill {}
 // Battle Experience
 //# playable card::
 
-
-//
-//
 //Prevent MUF(Growling/3) damage.

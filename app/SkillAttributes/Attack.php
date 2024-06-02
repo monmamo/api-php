@@ -2,15 +2,11 @@
 
 namespace App\SkillAttributes;
 
-/**
- *
- */
 #[\Attribute(\Attribute::TARGET_ALL)]
 class Attack
 {
     /**
      * Constructor.
-     *
      *
      * @group magic
      * @group mutator

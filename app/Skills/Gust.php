@@ -1,6 +1,11 @@
 <?php
-namespace App\Skills;
-class Gust implements \App\Contracts\Skill {}
 
+namespace App\Skills;
+
+use App\Contracts\Skill;
+
+class Gust implements Skill
+{
+}
 
 //Offensive.

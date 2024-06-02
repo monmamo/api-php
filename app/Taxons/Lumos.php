@@ -1,11 +1,17 @@
 <?php
+
 namespace App\Taxons;
-class Lumos implements \App\Contracts\Taxon {}
 
+use App\Contracts\Taxon;
+use App\GeneralAttributes\Gloss;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
-// gloss:: #[[essential power]]
-// Light and bioluminescence.
-// 
+#[Gloss('Light and bioluminescence.')]
+
 // Alternates:
 // Masculine:
 // Lumor
@@ -14,6 +20,24 @@ class Lumos implements \App\Contracts\Taxon {}
 // Lumess
 // Lumquin
 // Attributes:
-// Requires:
+
 // Color: yellow
-// rarity:: 300
+// rarity::
+
+#[NeuterName('Lumon')]
+#[MasculineAnthropeName('Lumander')]
+#[MasculineMonsterName('Lumor')]
+#[FeminineAnthropeName('Lumquin')]
+#[FeminineMonsterName('Lumess')]
+class Lumos implements Taxon
+{
+    public static function rarity(): float
+    {
+        return 300;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}

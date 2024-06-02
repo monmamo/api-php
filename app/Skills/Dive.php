@@ -1,12 +1,12 @@
 <?php
+
 namespace App\Skills;
-class Dive implements \App\Contracts\Skill {}
 
+use App\Contracts\Skill;
 
-//
-//---
+class Dive implements Skill
+{
+}
+
 //Requires Diving.
 //# playable card::
-
-
-// ---

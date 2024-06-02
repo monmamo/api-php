@@ -1,6 +1,12 @@
 <?php
+
 namespace App\Skills;
-class CrestingWave implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class CrestingWave implements Skill
+{
+}
 
 // [[Attack]]
 //variables::
@@ -11,7 +17,3 @@ class CrestingWave implements \App\Contracts\Skill {}
 //Can be used only at an [[Ocean]].
 //Summons a large wave, carrying the force of the ocean to sweep away opponents.
 //# playable card::
-
-
-
-// ---

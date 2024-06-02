@@ -1,31 +1,43 @@
 <?php
+
 namespace App\Taxons;
-class Lycos implements \App\Contracts\Taxon {}
 
+use App\Contracts\Taxon;
+use App\GeneralAttributes\Gloss;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
-// gloss:: Erect wolf-forms (compare [[Lupos]]).
 // [[Species]] of genus [[Canos]] with [[Erectos]] form.
-// # alternative names::
-// neuter name::
-// masculine anthrope::
-// masculine monster:: Lycor
-// feminine anthrope:: Lyx
-// feminine monster::
+
+#[MasculineMonsterName('Lycor')]
+#[FeminineAnthropeName('Lyx')]
+
 // image generation prompt:: wolflike, wolfform
 // image tags:: TODO
-// profile card:: TODO
-// # variables
+
 // Rarity:: [[Canos]] x 30
 // size delta:: 0.5
-// Posterior Physical Strength::
-// Anterior Physical Strength::
-// Counterattacking Strength::
-// Emotional Strength::
-// Intelligence::
-// Spiritual Strength::
-// ---
-// automatic features::
-// automatic traits::
-// prohibited features::
-// prohibited traits::
+
+#[Gloss('Erect wolf-forms (compare [[Lupos]]).')]
+#[NeuterName('Lycon')]
+#[MasculineAnthropeName('Lycander')]
+#[MasculineMonsterName('Lycor')]
+#[FeminineAnthropeName('Lycquin')]
+#[FeminineMonsterName('Lycess')]
+class Lycos implements Taxon
+{
+    public static function rarity(): float
+    {
+        return TODO;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}
+
 // rarity:

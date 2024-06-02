@@ -1,31 +1,41 @@
 <?php
-namespace App\Taxons;
-class Venenos implements \App\Contracts\Taxon {}
 
+namespace App\Taxons;
+
+use App\Contracts\Taxon;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
 // essential power:: Poisons, acids, musk and other bodily fluids.
 // https://huggingface.co/datasets/monmamo/venenos
-// alternative names::
-// neuter name:: Venenon
-// masculine anthrope:: Venenander
-// masculine monster:: Venenor
-// feminine anthrope:: Venenquin
-// feminine monster:: Veneness
-// Rarity::
-// size delta::
 // image generation prompt:: [[needs representative image]]
-// requires:
-// profile card:: TODO
-// ---
-// Alternates:
-// Masculine:
-// Feminine:
-// Attributes:
-// Requires:
+
 // Color: Yellow-Green
-// rarity: 1000
-// size delta: 0
-// cost: true
+
 // Poisons.
-// 
-// ,Meffitos ,Venenia Blossom ,,pale green,
+
+#[NeuterName('Venenon')]
+#[MasculineAnthropeName('Venenander')]
+#[MasculineMonsterName('Venenor')]
+#[FeminineAnthropeName('Venenquin')]
+#[FeminineMonsterName('Veneness')]
+#[NeuterName('Venenon')]
+#[MasculineAnthropeName('Venenander')]
+#[MasculineMonsterName('Venenor')]
+#[FeminineAnthropeName('Venenquin')]
+#[FeminineMonsterName('Veneness')]
+class Venenos implements Taxon
+{
+    public static function rarity(): float
+    {
+        return 1000;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}

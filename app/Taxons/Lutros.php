@@ -1,30 +1,40 @@
 <?php
+
 namespace App\Taxons;
-class Lutros implements \App\Contracts\Taxon {}
 
+use App\Contracts\Taxon;
+use App\GeneralAttributes\Gloss;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
-// gloss:: Otter-form.
 // genus:: of [[Pronos]]
-// # alternative names::
-// neuter name:: Lutron
-// masculine anthrope:: Lutrander
-// masculine monster:: Luter
-// feminine anthrope:: Lutriquin
-// feminine monster:: Lutress
+
 // image generation prompt:: otterlike, otterform
 // image tags:: otter
-// profile card:: TODO
-// # variables
-// Rarity:: 100000
-// size delta:: 0
-// Posterior Physical Strength::
-// Anterior Physical Strength::
-// Counterattacking Strength::
-// Emotional Strength::
-// Intelligence::
-// Spiritual Strength::
-// ---
-// automatic features::
-// automatic traits::
-// prohibited features::
-// prohibited traits::
+
+#[Gloss('Otter-form.')]
+#[NeuterName('Lutron')]
+#[MasculineAnthropeName('Lutrander')]
+#[MasculineMonsterName('Luter')]
+#[FeminineAnthropeName('Lutriquin')]
+#[FeminineMonsterName('Lutress')]
+#[NeuterName('Lutron')]
+#[MasculineAnthropeName('Lutrander')]
+#[MasculineMonsterName('Lutror')]
+#[FeminineAnthropeName('Lutrquin')]
+#[FeminineMonsterName('Lutress')]
+class Lutros implements Taxon
+{
+    public static function rarity(): float
+    {
+        return 100000;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}

@@ -1,27 +1,28 @@
 <?php
+
 namespace App\Taxons;
-class Vitos implements \App\Contracts\Taxon {}
 
+use App\Contracts\Taxon;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
-// gloss::
-// # alternative names::
-// neuter name::
-// masculine anthrope::
-// masculine monster::
-// feminine anthrope::
-// feminine monster::
-// {{x-template-button:((_Yr1enQVc))}}
-// # variables
-// Rarity::
-// size delta::
-// Posterior Physical Strength::
-// Anterior Physical Strength::
-// Counterattacking Strength::
-// Emotional Strength::
-// Intelligence::
-// Spiritual Strength::
-// ---
-// automatic features::
-// automatic traits::
-// prohibited features::
-// prohibited traits::
+#[NeuterName('Viton')]
+#[MasculineAnthropeName('Vitander')]
+#[MasculineMonsterName('Vitor')]
+#[FeminineAnthropeName('Vitquin')]
+#[FeminineMonsterName('Vitess')]
+class Vitos implements Taxon
+{
+    public static function rarity(): float
+    {
+        return TODO;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}

@@ -1,21 +1,31 @@
 <?php
+
 namespace App\Taxons;
-class Hystricos implements \App\Contracts\Taxon {}
 
+use App\GeneralAttributes\Gloss;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
-// gloss:: Porcupine forms.
 // [[genus]] of phylum [[Rodentos]] with [[Quilos]]
-// Alternates:
-// Masculine:
-// Hystricor
-// Feminine:
-// Hystrix
-// # variables
-// Rarity:: Rodentos  x 10
-// size delta:: 0.3
-// Posterior Physical Strength::
-// Anterior Physical Strength::
-// Counterattacking Strength::
-// Emotional Strength::
-// Intelligence::
-// Spiritual Strength::
+
+#[NeuterName('Hystricon')]
+#[MasculineAnthropeName('Hystricander')]
+#[MasculineMonsterName('Hystricor')]
+#[FeminineAnthropeName('Hystricquin')]
+#[FeminineMonsterName('Hystrix')]
+#[Gloss('Porcupine forms.')]
+class Hystricos extends Rodentos
+{
+    public static function rarity(): float
+    {
+        return Rodentos::rarity() * 10;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0.3;
+    }
+}

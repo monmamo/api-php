@@ -1,7 +1,31 @@
 <?php
-namespace App\Taxons;
-class Vectos implements \App\Contracts\Taxon {}
 
+namespace App\Taxons;
+
+use App\Contracts\Taxon;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
+
+#[NeuterName('Vecton')]
+#[MasculineAnthropeName('Vectander')]
+#[MasculineMonsterName('Vector')]
+#[FeminineAnthropeName('Vectquin')]
+#[FeminineMonsterName('Vectess')]
+class Vectos implements Taxon
+{
+    public static function rarity(): float
+    {
+        return TODO;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}
 
 // species of genus Hominos. Wight
 // elf:
@@ -13,6 +37,6 @@ class Vectos implements \App\Contracts\Taxon {}
 // Feminine:
 // Vectess
 // Attributes:
-// Requires:
+
 // rarity: {{calc: ((uuUwRY2_d)) * 5}}
 // size delta: [[Hominos]] - 0.3

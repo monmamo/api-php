@@ -1,5 +1,9 @@
 <?php
+
 namespace App\Skills;
-class Rhapsody implements \App\Contracts\Skill {}
 
+use App\Contracts\Skill;
 
+class Rhapsody implements Skill
+{
+}

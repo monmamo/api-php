@@ -2,15 +2,11 @@
 
 namespace App\GeneralAttributes;
 
-/**
- *
- */
 #[\Attribute(\Attribute::TARGET_ALL)]
 class Title
 {
     /**
      * Constructor.
-     *
      *
      * @group magic
      * @group mutator

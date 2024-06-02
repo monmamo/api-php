@@ -1,7 +1,31 @@
 <?php
-namespace App\Taxons;
-class Serpos implements \App\Contracts\Taxon {}
 
+namespace App\Taxons;
+
+use App\Contracts\Taxon;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
+
+#[NeuterName('Serpon')]
+#[MasculineAnthropeName('Serpander')]
+#[MasculineMonsterName('Serpor')]
+#[FeminineAnthropeName('Serpquin')]
+#[FeminineMonsterName('Serpess')]
+class Serpos implements Taxon
+{
+    public static function rarity(): float
+    {
+        return TODO;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}
 
 // serpent-form
 // ,:

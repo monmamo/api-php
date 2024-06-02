@@ -1,6 +1,12 @@
 <?php
+
 namespace App\Skills;
-#[\App\GeneralAttributes\Requires(\App\Taxons\Aquos::class)]
-class AbsorbWater implements \App\Contracts\Skill {}
 
+use App\Contracts\Skill;
+use App\GeneralAttributes\Requires;
+use App\Taxons\Aquos;
 
+#[Requires(Aquos::class)]
+class AbsorbWater implements Skill
+{
+}

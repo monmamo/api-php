@@ -1,20 +1,32 @@
 <?php
+
 namespace App\Taxons;
-class Floros implements \App\Contracts\Taxon {}
 
+use App\Contracts\Taxon;
+use App\GeneralAttributes\Gloss;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
-// 
-// essential power:: Flowers and complex plants.
-// Alternates:
-// Masculine:
-// Floror
-// Florander
-// Feminine:
-// Floress
-// Florquin
-// Attributes:
-// Requires:
 // Color: Pink
-// Rarity:: 200000
-// size delta:: 0
-// 
+
+#[Gloss('Flowers and complex plants.')]
+#[NeuterName('Floron')]
+#[MasculineAnthropeName('Florander')]
+#[MasculineMonsterName('Floror')]
+#[FeminineAnthropeName('Florquin')]
+#[FeminineMonsterName('Floress')]
+class Floros implements Taxon
+{
+    public static function rarity(): float
+    {
+        return 200000;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}

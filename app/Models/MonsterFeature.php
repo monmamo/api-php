@@ -6,5 +6,4 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class MonsterFeature extends Pivot
 {
-    //
 }

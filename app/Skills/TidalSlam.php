@@ -1,6 +1,12 @@
 <?php
+
 namespace App\Skills;
-class TidalSlam implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class TidalSlam implements Skill
+{
+}
 
 // [[Attack]]
 //variables::
@@ -10,7 +16,3 @@ class TidalSlam implements \App\Contracts\Skill {}
 //Requires [[Aquos]].
 //A powerful wave crashes onto the opponent, potentially causing disorientation.
 //# playable card::
-
-
-
-// ---

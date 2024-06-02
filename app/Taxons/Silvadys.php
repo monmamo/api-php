@@ -1,11 +1,24 @@
 <?php
+
 namespace App\Taxons;
-class Silvadys implements \App\Contracts\Taxon {}
 
+use App\Contracts\Taxon;
 
-// phylum::
+class Silvadys implements Taxon
+{
+    public static function rarity(): float
+    {
+        return TODO;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}
+
 // Carnivorous monsters of the forest.
-// 
+
 // Prefers:
 // [[Pronos]]
 // [[Pilos]]
@@ -13,8 +26,7 @@ class Silvadys implements \App\Contracts\Taxon {}
 // Masculine:  Silvadyr
 // Feminine: Silvadyss
 // Attributes:
-// Requires:
+
 // Prefers:
 // [[Tail]]
 // rarity: 2.5 in forested areas, 5 in unforested rural areas
-// 

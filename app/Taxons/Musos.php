@@ -1,30 +1,43 @@
 <?php
+
 namespace App\Taxons;
-class Musos implements \App\Contracts\Taxon {}
 
+use App\Contracts\Taxon;
+use App\GeneralAttributes\Gloss;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
-// gloss:: Mouse-forms, small rodents.
+#[Gloss('Mouse-forms, small rodents.')]
+#[NeuterName('Muson')]
+#[MasculineAnthropeName('Musander')]
+#[MasculineMonsterName('Musor')]
+#[FeminineAnthropeName('Musquin')]
+#[FeminineMonsterName('Musess')]
+#[NeuterName('Muson')]
+#[MasculineAnthropeName('Musander')]
+#[MasculineMonsterName('Musor')]
+#[FeminineAnthropeName('Musquin')]
+#[FeminineMonsterName('Musess')]
+class Musos implements Taxon
+{
+    public static function rarity(): float
+    {
+        return TODO;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return TODO;
+    }
+}
+
 // [[genus]] of phylum [[Rodentos]] with [[Pygmys]].
-// # alternative names::
-// neuter name:: Muson
-// masculine anthrope:: Musander
-// masculine monster:: Musor
-// feminine anthrope:: Musquin
-// feminine monster:: Musess
+
 // image generation prompt:: mouselike, mouseform, small rodent
 // image tags:: mouse
-// profile card:: TODO
-// # variables
+
 // Rarity:: [[Rodentos]] x ((Dl7wZZs2n))
 // size delta:: [[Rodentos]] + {{calc: ((pMJ5cJmbG)) - 0.2}}
-// Posterior Physical Strength::
-// Anterior Physical Strength::
-// Counterattacking Strength::
-// Emotional Strength::
-// Intelligence::
-// Spiritual Strength::
-// automatic features::
-// automatic traits::
-// prohibited features::
-// prohibited traits::
-// ---

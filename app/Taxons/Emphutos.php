@@ -1,27 +1,36 @@
 <?php
-namespace App\Taxons;
-class Emphutos implements \App\Contracts\Taxon {}
 
-// 
+namespace App\Taxons;
+
+use App\Contracts\Taxon;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
+
+#[NeuterName('Emphuton')]
+#[MasculineAnthropeName('Emphutander')]
+#[MasculineMonsterName('Emphutor')]
+#[FeminineAnthropeName('Emphutquin')]
+#[FeminineMonsterName('Emphutess')]
+class Emphutos implements Taxon
+{
+    public static function rarity(): float
+    {
+        return TODO;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}
 
 // genus:: Imp.
-// alternative names::
-// neuter name::
-// masculine anthrope::
-// masculine monster::
-// feminine anthrope::
-// feminine monster::
-// Rarity::
-// size delta::
+
 // image generation prompt:: [[needs representative image]]
 // supertaxons::  [[Hominos]] [[Faeos]]
-// profile card:: TODO
-// ---
-// automatic features::
-// automatic traits::
-// prohibited features::
-// prohibited traits::
-// 
-// 
+
 // rarity: {{calc: ((uuUwRY2_d))}} x [[Faeos]]
 // size delta: ((qsC8F8tTR)) + [[Faeos]]

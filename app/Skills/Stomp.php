@@ -1,14 +1,17 @@
 <?php
+
 namespace App\Skills;
-class Stomp implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class Stomp implements Skill
+{
+}
 
 // [[Attack]] [[Physical Mode]]
 //variables::
 // Training Experience
 // Battle Experience
-//---
+
 //Requires [[Stomping]], but is innate for those monsters.
 //# playable card::
-
-
-// ---

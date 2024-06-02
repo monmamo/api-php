@@ -1,17 +1,36 @@
 <?php
+
 namespace App\Taxons;
-class Fanacos implements \App\Contracts\Taxon {}
+
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
 // A fox-like body style characterized by large ears.
 // Compare [[Vulpos]], [[Alopecos]].
-// alternative names::
-// feminine anthrope:: Fanacquin
-// feminine monster:: Fanax
-// masculine anthrope:: Fanacander
-// masculine monster:: Fanacor
-// neuter name:: Fanacon
+
 // image generation prompt:: foxlike, foxform
 
-// Rarity:: 200000
+// Rarity::
 // requires: [[Fur]], [[Long Tail]]
-// size delta:: [[Silvadys]] + 1
+// size delta:: [[]] + 1
+
+#[NeuterName('Fanacon')]
+#[MasculineAnthropeName('Fanacander')]
+#[MasculineMonsterName('Fanacor')]
+#[FeminineAnthropeName('Fanacquin')]
+#[FeminineMonsterName('Fanax')]
+class Fanacos extends Silvadys
+{
+    public static function rarity(): float
+    {
+        return 20000;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return parent::sizeDelta() + 1;
+    }
+}

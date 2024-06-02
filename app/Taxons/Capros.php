@@ -1,8 +1,34 @@
 <?php
+
 namespace App\Taxons;
-class Capros implements \App\Contracts\Taxon {}
+
+use App\Contracts\Taxon;
+use App\GeneralAttributes\Gloss;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
 // [[genus]]
-// gloss:: Goat-forms with horns, a tail and hooves
+
 // Not to be confused with [[Faunos]].
-// ,Bovos ,,Capor,Capress,,
+
+#[Gloss('Goat-forms with horns, a tail and hooves')]
+#[NeuterName('Capron')]
+#[MasculineAnthropeName('Caprander')]
+#[MasculineMonsterName('Capror')]
+#[FeminineAnthropeName('Caprquin')]
+#[FeminineMonsterName('Capress')]
+class Capros implements Taxon
+{
+    public static function rarity(): float
+    {
+        return TODO;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}

@@ -1,6 +1,12 @@
 <?php
+
 namespace App\Skills;
-class TorrentialImpact implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class TorrentialImpact implements Skill
+{
+}
 
 // [[Attack]]
 //Requires [[Aquos]].
@@ -10,9 +16,5 @@ class TorrentialImpact implements \App\Contracts\Skill {}
 //Unleashes a massive, forceful stream of water, capable of knocking back the target.
 //# playable card::
 
-
-
-// ---
 // Discard any number of Water cards attached to this Monster to use this attack.
 // Damage done to defender:: 1dSize + 1d6 for each Water card discarded
-//

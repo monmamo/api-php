@@ -1,6 +1,12 @@
 <?php
+
 namespace App\Skills;
-class Block implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class Block implements Skill
+{
+}
 
 // [[Defense]]
 //[[defensive skill, trait or variable]] [[Physical Mode]]
@@ -9,7 +15,4 @@ class Block implements \App\Contracts\Skill {}
 // Battle Experience
 //# playable card::
 
-
-
 // Damage prevented:: 1d(Size/2)
-// ---

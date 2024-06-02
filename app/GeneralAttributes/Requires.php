@@ -2,15 +2,11 @@
 
 namespace App\GeneralAttributes;
 
-/**
- *
- */
 #[\Attribute(\Attribute::TARGET_ALL | \Attribute::IS_REPEATABLE)]
 class Requires
 {
     /**
      * Constructor.
-     *
      *
      * @group magic
      * @group mutator

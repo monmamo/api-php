@@ -1,8 +1,13 @@
 <?php
-namespace App\Skills;
-class Nightmare implements \App\Contracts\Skill {}
 
+namespace App\Skills;
+
+use App\Contracts\Skill;
+
+class Nightmare implements Skill
+{
+}
 
 //[[Mental Skill]] [[Attack]]
-//---
+
 //Requires [[Gouros]].

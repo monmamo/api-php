@@ -1,8 +1,13 @@
 <?php
-namespace App\Skills;
-class Rage implements \App\Contracts\Skill {}
 
+namespace App\Skills;
+
+use App\Contracts\Skill;
+
+class Rage implements Skill
+{
+}
 
 //[[Attack]] [[Physical Mode]]
-//---
+
 //Choose one monster in play. This attack does 1uX Damage to that monster, where X is the Damage that this monster already has.

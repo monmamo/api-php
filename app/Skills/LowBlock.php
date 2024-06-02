@@ -1,6 +1,12 @@
 <?php
+
 namespace App\Skills;
-class LowBlock implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class LowBlock implements Skill
+{
+}
 
 // [[Defense]]
 //Prevents 3dManual damage from low [[Manual Mode]] Skills only.

@@ -1,29 +1,37 @@
 <?php
+
 namespace App\Taxons;
-class Megos implements \App\Contracts\Taxon {}
+
+use App\Contracts\Taxon;
+use App\GeneralAttributes\Gloss;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
 // [[size morphotype]]
-// gloss:: Large forms.
-// # alternative names::
-// neuter name:: Megon
-// masculine anthrope:: Megander
-// masculine monster:: Megor
-// feminine anthrope:: Megquin
-// feminine monster:: Megess
-// {{x-template-button:((_Yr1enQVc))}}
-// # variables
-// Rarity::
-// 750
-// size delta::
-// 0.5
-// Posterior Physical Strength::
-// Anterior Physical Strength::
-// Counterattacking Strength::
-// Emotional Strength::
-// Intelligence::
-// Spiritual Strength::
-// ---
-// automatic features::
-// automatic traits::
-// prohibited features::
-// prohibited traits::
+
+#[NeuterName('Megon')]
+#[MasculineAnthropeName('Megander')]
+#[MasculineMonsterName('Megor')]
+#[FeminineAnthropeName('Megquin')]
+#[FeminineMonsterName('Megess')]
+#[Gloss('Large forms.')]
+#[NeuterName('Megon')]
+#[MasculineAnthropeName('Megander')]
+#[MasculineMonsterName('Megor')]
+#[FeminineAnthropeName('Megquin')]
+#[FeminineMonsterName('Megess')]
+class Megos implements Taxon
+{
+    public static function rarity(): float
+    {
+        return 750;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0.5;
+    }
+}

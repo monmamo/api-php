@@ -1,10 +1,15 @@
 <?php
+
 namespace App\Skills;
-class MeditationAttack implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class MeditationAttack implements Skill
+{
+}
 
 // [[Attack]]
 //[[Attack]] [[Physical Mode]]
 //variables::
 // Training Experience
 // Battle Experience
-//---

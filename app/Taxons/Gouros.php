@@ -1,20 +1,17 @@
 <?php
-namespace App\Taxons;
-class Gouros implements \App\Contracts\Taxon {}
 
+namespace App\Taxons;
+
+use App\Contracts\Taxon;
+use App\Taxons\Attributes\FeminineAnthropeName;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineAnthropeName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
 // [[essential power]]
 // Grotesqueness, ugliness, fear, surprise/shock.
-// alternative names::
-// neuter name:: Gouron
-// masculine anthrope:: Gourander
-// masculine monster:: Gouror
-// feminine anthrope:: Gourquin
-// feminine monster:: Gouress
-// Attributes:
-// Requires:
-// Excludes:
-// Prefers:
+
 // color:: Yellow
 // Rarity:: 1000
 // Assets
@@ -22,3 +19,21 @@ class Gouros implements \App\Contracts\Taxon {}
 // Flaws
 // Creates problems with integrity.
 // The beholder may secretly enjoy causing messes for other people.
+
+#[NeuterName('Gouron')]
+#[MasculineAnthropeName('Gourander')]
+#[MasculineMonsterName('Gouror')]
+#[FeminineAnthropeName('Gourquin')]
+#[FeminineMonsterName('Gouress')]
+class Gouros implements Taxon
+{
+    public static function rarity(): float
+    {
+        return TODO;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}

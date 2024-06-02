@@ -1,11 +1,11 @@
 <?php
+
 namespace App\Skills;
-class Growl implements \App\Contracts\Skill {}
 
+use App\Contracts\Skill;
 
-//
-//---
+class Growl implements Skill
+{
+}
+
 //# playable card::
-
-
-// ---

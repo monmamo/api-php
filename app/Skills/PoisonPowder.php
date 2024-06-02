@@ -1,6 +1,11 @@
 <?php
-namespace App\Skills;
-class PoisonPowder implements \App\Contracts\Skill {}
 
+namespace App\Skills;
+
+use App\Contracts\Skill;
+
+class PoisonPowder implements Skill
+{
+}
 
 //"{{[ ]}} (affects all monsters in play)."

@@ -1,28 +1,27 @@
 <?php
+
 namespace App\Taxons;
-class Flegermusos implements \App\Contracts\Taxon {}
 
+use App\GeneralAttributes\Gloss;
+use App\Taxons\Attributes\FeminineMonsterName;
+use App\Taxons\Attributes\MasculineMonsterName;
+use App\Taxons\Attributes\NeuterName;
 
-// gloss:: Flying mouse form, bat form.
 // [[Species]] of genus [[Musos]] with [[Flegeros]] form.
-// # alternative names::
-// neuter name:: Flegermuson
-// masculine anthrope:: N/A
-// masculine monster:: Flegermusor
-// feminine anthrope:: N/A
-// feminine monster:: Flegermusess
-// {{x-template-button:((_Yr1enQVc))}}
-// # variables
-// size delta:: [[Rodentos]] + {{calc: ((pMJ5cJmbG)) - 0.2}}
-// Rarity:: [[Musos]] x 20
-// Posterior Physical Strength::
-// Anterior Physical Strength::
-// Counterattacking Strength::
-// Emotional Strength::
-// Intelligence::
-// Spiritual Strength::
-// ---
-// automatic features::
-// automatic traits::
-// prohibited features::
-// prohibited traits::
+
+#[Gloss('Flying mouse form, bat form.')]
+#[NeuterName('Flegermuson')]
+#[MasculineMonsterName('Flegermusor')]
+#[FeminineMonsterName('Flegermusess')]
+class Flegermusos extends Musos
+{
+    public static function rarity(): float
+    {
+        return parent::rarity() * 20;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return parent::sizeDelta() + 0.25;
+    }
+}

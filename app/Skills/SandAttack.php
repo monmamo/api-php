@@ -1,7 +1,11 @@
 <?php
+
 namespace App\Skills;
-class SandAttack implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class SandAttack implements Skill
+{
+}
 
 // [[Attack]] [[Physical Mode]]
-//---
-//

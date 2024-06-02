@@ -1,6 +1,12 @@
 <?php
+
 namespace App\Skills;
-class DoubleTeamAttack implements \App\Contracts\Skill {}
+
+use App\Contracts\Skill;
+
+class DoubleTeamAttack implements Skill
+{
+}
 
 // [[Attack]]
 //variables::
@@ -8,6 +14,3 @@ class DoubleTeamAttack implements \App\Contracts\Skill {}
 // Battle Experience
 //Damage::
 //# playable card::
-
-
-

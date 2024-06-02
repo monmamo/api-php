@@ -1,22 +1,23 @@
 <?php
+
 namespace App\Taxons;
-class Lamis implements \App\Contracts\Taxon {}
 
+use App\GeneralAttributes\Gloss;
 
-// 
-// Alternates:
-// Masculine:
-// Feminine:
-// Attributes:
 // Requires: Demon Wings
-// 
-// gloss:: [[Species]] of genus [[Hominos]] with [[Demonos]] form.
-// # variables
-// Rarity:: {{calc: ((uuUwRY2_d))}} x [[Demonos]] x 3
-// size delta:: 0
-// Posterior Physical Strength::
-// Anterior Physical Strength::
-// Counterattacking Strength::
-// Emotional Strength::
-// Intelligence::
-// Spiritual Strength::
+// Rarity:: {{calc: ((uuUwRY2_d))}} x [[]] x 3
+
+#[Gloss('[[Species]] of genus [[]] with [[Demonos]] form.')]
+
+class Lamis extends Hominos
+{
+    public static function rarity(): float
+    {
+        return Hominos::rarity() * Demonos::rarity() * 3;
+    }
+
+    public static function sizeDelta(): float
+    {
+        return 0;
+    }
+}
