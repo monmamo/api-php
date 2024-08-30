@@ -1,5 +1,36 @@
 <?php
 
+use App\Providers\AppServiceProvider;
+use App\Providers\AuthServiceProvider;
+use App\Providers\BladeServiceProvider;
+use App\Providers\CollectionServiceProvider;
+use App\Providers\ContextServiceProvider;
+use App\Providers\EventServiceProvider;
+use App\Providers\RequestServiceProvider;
+use App\Providers\RouteServiceProvider;
+use App\Providers\SolutionServiceProvider;
+use App\Providers\TelescopeServiceProvider;
+use Illuminate\Auth\Passwords\PasswordResetServiceProvider;
+use Illuminate\Bus\BusServiceProvider;
+use Illuminate\Cache\CacheServiceProvider;
+use Illuminate\Cookie\CookieServiceProvider;
+use Illuminate\Database\DatabaseServiceProvider;
+use Illuminate\Encryption\EncryptionServiceProvider;
+use Illuminate\Filesystem\FilesystemServiceProvider;
+use Illuminate\Foundation\Providers\ConsoleSupportServiceProvider;
+use Illuminate\Foundation\Providers\FoundationServiceProvider;
+use Illuminate\Hashing\HashServiceProvider;
+use Illuminate\Mail\MailServiceProvider;
+use Illuminate\Notifications\NotificationServiceProvider;
+use Illuminate\Pagination\PaginationServiceProvider;
+use Illuminate\Pipeline\PipelineServiceProvider;
+use Illuminate\Queue\QueueServiceProvider;
+use Illuminate\Session\SessionServiceProvider;
+use Illuminate\Translation\TranslationServiceProvider;
+use Illuminate\Validation\ValidationServiceProvider;
+use Illuminate\View\ViewServiceProvider;
+use Spatie\LaravelIgnition\IgnitionServiceProvider;
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -38,7 +69,7 @@ return [
     |
     */
 
-    'debug' => (bool) \env('APP_DEBUG', false),
+    'debug' => true, //(bool) \env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -120,5 +151,58 @@ return [
     'maintenance' => [
         'driver' => \env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => \env('APP_MAINTENANCE_STORE', 'database'),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Autoloaded Service Providers
+    |--------------------------------------------------------------------------
+    | The service providers listed here will be automatically loaded on the
+    | request to your application. Feel free to add your own services to
+    | this array to grant expanded functionality to your applications.
+    */
+
+    'providers' => [
+        AppServiceProvider::class,
+        AuthServiceProvider::class,
+
+        // Laravel Framework Service Providers...
+        //Illuminate\Broadcasting\BroadcastServiceProvider::class,
+        BusServiceProvider::class,
+        CacheServiceProvider::class,
+        ConsoleSupportServiceProvider::class,
+        CookieServiceProvider::class,
+        DatabaseServiceProvider::class,
+        EncryptionServiceProvider::class,
+        FilesystemServiceProvider::class,
+        FoundationServiceProvider::class,
+        HashServiceProvider::class,
+        MailServiceProvider::class,
+        NotificationServiceProvider::class,
+        PaginationServiceProvider::class,
+        PipelineServiceProvider::class,
+        QueueServiceProvider::class,
+        //Illuminate\Redis\RedisServiceProvider::class,
+        PasswordResetServiceProvider::class,
+        SessionServiceProvider::class,
+        TranslationServiceProvider::class,
+        ValidationServiceProvider::class,
+        ViewServiceProvider::class,
+
+        // Third-Party Service Providers...
+        IgnitionServiceProvider::class,
+
+        // Application Service Providers...
+        // do not reorder these...
+        // CollectionServiceProvider::class,
+        // RequestServiceProvider::class,
+        // ContextServiceProvider::class,
+        // // you may sort these...
+        // EventServiceProvider::class,
+        \App\Providers\FolioServiceProvider::class,
+        // BladeServiceProvider::class,
+        // RouteServiceProvider::class,
+        // TelescopeServiceProvider::class,
+        // SolutionServiceProvider::class,
     ],
 ];

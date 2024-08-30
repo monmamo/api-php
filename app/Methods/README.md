@@ -1,0 +1,1 @@
+Each file in this folder corresponds to one standard method and provides the documentation for the standard method with the same name as the file.

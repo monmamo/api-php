@@ -1,15 +1,29 @@
 #!/usr/bin/env php
 <?php
 
-use Symfony\Component\Console\Input\ArgvInput;
-
 define('LARAVEL_START', microtime(true));
 
-// Register the Composer autoloader...
-require __DIR__.'/vendor/autoload.php';
+// Register the auto loader. Composer provides a convenient, automatically generated class loader for this application. We just need to utilize it! We'll simply require it into the script here so we don't need to manually load our classes.
 
-// Bootstrap Laravel and handle the command...
-$status = (require_once __DIR__.'/bootstrap/app.php')
-    ->handleCommand(new ArgvInput);
+require __DIR__ . '/vendor/autoload.php';
+
+// Build the application instance.
+
+$app = new \App\Applications\ArtisanApplication;
+
+// Once we have the application, we can handle the incoming request using the application's HTTP kernel.
+
+$kernel = $app->getKernel();
+
+// Run the Artisan application. The response will be sent back to the console.
+
+$status = $kernel->handle(
+    $input = new \Symfony\Component\Console\Input\ArgvInput,
+    new \Symfony\Component\Console\Output\ConsoleOutput
+);
+
+// Terminate the application.
+
+$kernel->terminate($input, $status);
 
 exit($status);

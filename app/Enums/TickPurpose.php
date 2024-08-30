@@ -2,6 +2,4 @@
 
 namespace App\Enums;
 
-enum TickPurpose
-{
-}
+enum TickPurpose {}

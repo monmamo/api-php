@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => \env('DB_CONNECTION', 'sqlite'),
+    'default' => null, // \env('DB_CONNECTION', 'sqlite'),
 
     /*
     |--------------------------------------------------------------------------

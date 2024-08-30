@@ -16,6 +16,5 @@ class Gloss
      */
     public function __construct(
         public string $gloss,
-    ) {
-    }
+    ) {}
 }

@@ -16,6 +16,5 @@ class Trainable
      */
     public function __construct(
         public readonly int $cost_per_unit = 1,
-    ) {
-    }
+    ) {}
 }

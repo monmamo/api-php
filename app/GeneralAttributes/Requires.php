@@ -16,6 +16,5 @@ class Requires
      */
     public function __construct(
         public string $requirement,
-    ) {
-    }
+    ) {}
 }

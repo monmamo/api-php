@@ -1,0 +1,1 @@
+Resolves a value of any type to a known type.
