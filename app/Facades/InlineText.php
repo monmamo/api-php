@@ -7,7 +7,7 @@ namespace App\Facades;
  */
 abstract class InlineText
 {
-    use Concerns\NonsingularFunctionality;
+    use \App\Concerns\NonsingularFunctionality;
 
     /**
      * Returns the registered name of the component.

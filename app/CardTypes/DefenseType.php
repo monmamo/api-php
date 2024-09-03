@@ -1,10 +1,10 @@
 <?php
 
-namespace CardTypes;
+namespace App\CardTypes;
 
-abstract class DefenseType implements \CardType
+abstract class DefenseType implements \App\CardType
 {
-    use Concerns\Formatting;
+    use \App\Concerns\Formatting;
 
     public static function background(): ?string
     {
@@ -16,13 +16,14 @@ abstract class DefenseType implements \CardType
         return 'blue';
     }
 
-    public static function icon(): ?string
-    {
+    public static function icon():\Illuminate\Contracts\Support\Renderable{
+        return new class implements \Illuminate\Contracts\Support\Renderable{
+            public function render(){
         return
             <<<'SVG'
 <path d="M80 32c-64 256 48 416 176 464 128-48 240-208 176-464-112 32-240 32-352 0z"></path>
 SVG;
-    }
+    }};}
 
     public static function standardRule(): \Traversable
     {

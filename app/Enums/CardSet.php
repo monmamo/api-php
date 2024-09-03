@@ -2,6 +2,8 @@
 
 namespace App\Enums;
 
+use Illuminate\Support\Collection;
+
 enum CardSet: string
 {
     case Acadie = 'ACD';
@@ -31,15 +33,21 @@ enum CardSet: string
     case PyroTA = 'PTA';
     case RiseOfSwitch = 'AS';
 
+public function cards():Collection{
+    return new Collection( config('cards.'.$this->value));
+}
+
+//
+
     public function echo_section(): void
     {
         ?>
     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"  hx-boost="true" hx-target="#right-section" hx-swap="innerHTML">
         <?php
-                foreach (new \App\CardCollection(set: $this) as $card_id => $card_info) {
+                foreach ( $this->cards() as $card_number => $card_info) {
                     ?>
-            <li><a href="show.php?card_id=<?php echo $card_id; ?>"
- class="card-link link-body-emphasis d-inline-flex text-decoration-none rounded" data-id="<?php echo $card_id; ?>"><?php echo $card_id; ?> <?php echo $card_info->name ?? ''; ?></a></li>
+            <li><a href="<?= app('url')->route('card',['id'=>$card_number]) ?>"
+ class="card-link link-body-emphasis d-inline-flex text-decoration-none rounded" data-id="<?php echo $card_number; ?>"><?php echo $card_number; ?> <?php echo $card_info->name() ?? ''; ?></a></li>
         <?php } ?>
     </ul>
 <?php

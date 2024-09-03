@@ -71,4 +71,32 @@ enum FacilityType
     case Venue;
 
     case Warehouse;
+
+    case Farmstead;
+    case Estate;
+    case Manor;
+    case Castle;
+    case Fort;
+    case Tower;
+    case Keep;
+    case Citadel;
+    case Palace;
+    case Monastery;
+    case Abbey;
+    case Convent;
+    case Priory;
+    case Hermitage;
+    case Sanctuary;
+    case Orphanage;
+    case Hospital;
+    case Asylum;
+    case Hospice;
+    case Infirmary;
+    case Dispensary;
+    
+    case Surgery;
+    case Apothecary;
+    case Pharmacy;
+    case Drugstore;
+
 }

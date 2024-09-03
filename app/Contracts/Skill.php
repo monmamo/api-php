@@ -2,4 +2,6 @@
 
 namespace App\Contracts;
 
-interface Skill {}
+interface Skill 
+{
+}

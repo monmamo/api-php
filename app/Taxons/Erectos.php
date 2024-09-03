@@ -1,24 +1,29 @@
 <?php
 
-namespace App\Traits;
+namespace App\Taxons;
 
-use App\Contracts\Feature;
+use App\Contracts\Taxon;
 
-final class Erectos implements Feature
+// 25% of all monsters.
+
+final class Erectos implements Taxon
 {
     public static function sizeDelta(): float
     {
         return 0;
+    }
+    public static function   rarity(): float
+    {
+        return 4;
     }
 }
 
 // [[posture morphotype]]
 
 // Rarity:: 4
-// 25% of all monsters.
 
 // image generation prompt:: [[needs representative image]]
 
 // automatic traits:: [[Erect Posture]]
 
-// ,"Hominos , Alopecos , Dracos ",,,
+

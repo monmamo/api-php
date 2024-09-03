@@ -8,24 +8,34 @@ use Illuminate\View\Component;
 
 class Card extends Component
 {
+    public readonly string $set;
+
     /**
      * Create a new component instance.
      */
     public function __construct(
-        public string $name,
-        public string $cardTypeFqn,
+        public readonly string $cardNumber,
+        public readonly string $name,
+        public readonly string $cardTypeFqn,
 
-    )
-    {
-
-
+    ) {
+        $this->set =  explode('-', $cardNumber)[0];
     }
+
 
     /**
-     * Get the view / contents that represent the component.
+     * @group unary
      */
-    public function render(): View|Closure|string
-    {
-        return view('components.card');
-    }
+    // public function __construct(?string $card_id = null, ?string $path = null)
+    // {
+    //     $path ??= self::path($card_id);
+
+    //     try {
+    //         parent::__construct(json_decode(file_get_contents($path), true));
+    //     } catch (\Exception $e) {
+    //         throw new \Exception("Card not found: {$path}");
+    //     }
+    // }
+
+
 }

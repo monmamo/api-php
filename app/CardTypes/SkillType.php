@@ -1,8 +1,8 @@
 <?php
 
-namespace CardTypes;
+namespace App\CardTypes;
 
-abstract class SkillType implements \CardType
+abstract class SkillType implements \App\CardType
 {
     public static function background(): ?string
     {
@@ -16,12 +16,13 @@ SVG;
         return 'black';
     }
 
-    public static function icon(): ?string
-    {
+    public static function icon():\Illuminate\Contracts\Support\Renderable{
+        return new class implements \Illuminate\Contracts\Support\Renderable{
+            public function render(){
         return
 <<<'SVG'
 SVG;
-    }
+    }};}
 
     public static function standardRule(): \Traversable
     {

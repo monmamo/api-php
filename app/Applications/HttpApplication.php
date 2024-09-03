@@ -31,12 +31,12 @@ abstract class HttpApplication extends BaseApplication implements MakesGuard
      *
      * @return void
      */
-    public function __construct(callable $host)
+    public function __construct(?callable $host=null)
     {
         parent::__construct();
 
         Host::setFacadeApplication($this);
-        Host::bind($host);
+        Host::bind($host ?? EnvironmentProperties::host(...));
     }
 
     /**
@@ -85,10 +85,12 @@ abstract class HttpApplication extends BaseApplication implements MakesGuard
         return $this->make(Kernel::class);
     }
 
+    abstract public function bootRouting(): void;
+
     /**
      * @group nonary
      */
-    public static function run(): void
+    public function __destruct()
     {
         // Set this only if something is running way too long in development. set_time_limit(15); // seconds
 
@@ -98,14 +100,10 @@ abstract class HttpApplication extends BaseApplication implements MakesGuard
             require $maintenance;
         }
 
-        $app = new static(
-            host: EnvironmentProperties::host(...),
-        );
-
         // Once we have the application, we can handle the incoming request using the application's HTTP kernel.
         // Then, we will send the response back to this client's browser, allowing them to enjoy our application.
 
-        $kernel = $app->getKernel();
+        $kernel = $this->getKernel();
 
         // $kernel::handle calls $kernel::bootstrap
         $response = $kernel->handle(
@@ -115,5 +113,7 @@ abstract class HttpApplication extends BaseApplication implements MakesGuard
         // Terminate the application.
 
         $kernel->terminate($request, $response);
+
+        parent::__destruct();
     }
 }

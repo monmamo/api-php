@@ -24,13 +24,15 @@ class CardCollection extends \ArrayObject
             $id === true => '*',
         };
 
-        $jsonFiles = glob(resource_path("cards/{$set_string}/{$id_string}.json"));
 
-        foreach ($jsonFiles as $file) {
-            if ($file[0] === '_') {
+$cards
+
+        foreach ($files as $filepath) {
+            if ($filepath[0] === '_') {
                 continue;
             }
-            $this[ pathinfo($file, PATHINFO_FILENAME)] = new Card(path: $file);
+            
+            $this[ str_replace('.blade','',pathinfo($filepath,PATHINFO_FILENAME)) ] = \App\View\Components\Card::byPath($filepath );
         }
     }
 }

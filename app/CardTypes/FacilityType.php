@@ -1,6 +1,6 @@
 <?php
 
-namespace CardTypes;
+namespace App\CardTypes;
 
 abstract class FacilityType extends PlaceType
 {
