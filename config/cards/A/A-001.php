@@ -4,16 +4,30 @@ return  new
     #[\App\GeneralAttributes\Title('Acid')]
     #[\App\CardAttributes\CardType(\App\CardTypes\ManaType::class)]
     #[\App\CardAttributes\ImageCredit("Game-Icons.net")]
-    class extends \App\Card implements \App\Contracts\Card\FullsizeImage {
+    class extends \App\Card implements \App\Contracts\Card\FullsizeImage, \App\Contracts\Card\SvgImage {
 
 
+        /**
+         * @group nonary
+         */
+        public function bodyText(): \Traversable
+        {
+            return new \EmptyIterator;
+        }
+
+        /**
+         * @group nonary
+         */
         public function flavorText(): \Traversable
         {
             yield "Corrosive substance that can dissolve materials.";
             yield "It is often used in manufacturing and cleaning.";
         }
 
-        public function image()
+        /**
+         * @group nonary
+         */
+        public function image():string
         {
             return <<<SVG
 <g transform="scale(2.05) translate(0,15)">

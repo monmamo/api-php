@@ -49,7 +49,7 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">Monsters Masters &amp; Mobsters</a>
+            <a class="navbar-brand" href="/">Monsters Masters &amp; Mobsters</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -94,11 +94,11 @@
                     <li class="nav-item">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Decks</a>
                         <ul class="dropdown-menu" hx-boost="true" hx-target="#left-section" hx-swap="innerHTML">
-                            <li><a class="dropdown-item" href="/deck.php?id=sdv-library">SDV Library</a></li>
-                            <li><a class="dropdown-item" href="/deck.php?id=sdv-monsters">SDV Monsters</a></li>
-                            <li><a class="dropdown-item" href="/deck.php?id=pdv-e">PDV Electricty Starter</a></li>
-                            <li><a class="dropdown-item" href="/deck.php?id=pdv-f">PDV Fire Starter</a></li>
-                            <li><a class="dropdown-item" href="/deck.php?id=pdv-w">PDV Water Starter</a></li>
+                            <li><a class="dropdown-item" href="/cards/deck/sdv-library">SDV Library</a></li>
+                            <li><a class="dropdown-item" href="/cards/deck/sdv-monsters">SDV Monsters</a></li>
+                            <li><a class="dropdown-item" href="/cards/deck/pdv-e">PDV Electricty Starter</a></li>
+                            <li><a class="dropdown-item" href="/cards/deck/pdv-f">PDV Fire Starter</a></li>
+                            <li><a class="dropdown-item" href="/cards/deck/pdv-w">PDV Water Starter</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -130,7 +130,7 @@
         async function load(contentId) {
             if (!contentId && contentId === '') throw 'Invalid contentId';
 
-            const response = await fetch(`show.php?card_id=${contentId}`);
+            const response = await fetch(`/cards/show/${contentId}`);
 
             if (!response.ok) {
                 throw new Error(`Response status: ${response.status}`);
