@@ -2,7 +2,7 @@
 
 return  new
     #[\App\GeneralAttributes\Title('Acid')]
-    #[\App\CardAttributes\CardType(\App\CardTypes\ManaType::class)]
+    #[\App\CardAttributes\CardType("Mana")]
     #[\App\CardAttributes\ImageCredit("Game-Icons.net")]
     class extends \App\Card implements \App\Contracts\Card\FullsizeImage, \App\Contracts\Card\SvgImage {
 

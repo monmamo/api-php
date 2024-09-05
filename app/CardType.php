@@ -2,14 +2,43 @@
 
 namespace App;
 
-interface CardType extends \App\Contracts\HasIcon
+abstract class CardType implements \App\Contracts\HasIcon
 {
-    public static function background(): ?string;
+use \App\Concerns\Properties\Name;
 
-    public static function color(): string|array;
+  public function __construct(protected readonly string $type) {}
 
 
-    public static function standardRule(): \Traversable;
+  public  function background(): \Illuminate\Contracts\Support\Renderable
+  {
+    return view($this->type . '.background');
+  }
 
-    public static function title(): string;
+  public  function icon(): \Illuminate\Contracts\Support\Renderable
+  {
+    return view($this->type . '.icon');
+  }
+
+  protected ?string $color = null;
+
+  public  function color(): string|array
+  {
+    return $this->color ??=  value(function () {
+      $reflection = new \ReflectionClass($this);
+      $attributes = $reflection->getAttributes();
+
+      foreach ($attributes as $attribute) {
+        if ($attribute->getName() === \App\GeneralAttributes\Color::class) {
+          return $attribute->getArguments()[0]->value;
+        }
+      }
+
+      throw new \LogicException();
+    });
+  }
+
+
+  abstract public static function standardRule(): \Traversable;
+
+  
 }

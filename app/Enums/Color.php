@@ -11,7 +11,13 @@ enum Color: string
     case Pink = '#FFC0CB';
     case Purple = '#800080';
     case Red = '#FF0000';
-    case TraitBackgroundColor = '#653294';
+    case TraitColor = '#400060';
     case White = '#FFFFFF';
     case Yellow = '#FFFF00';
+    case CalamityColor = 'orange';
+    case CharacterColor = '#000000';
+    case GameActionColor = '#427900';
+    case ItemColor = '#222222';
+    case EnvironmentColor = '#003300';
+    case PlaceColor = '#E25420';
 }

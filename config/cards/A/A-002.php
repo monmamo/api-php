@@ -1,7 +1,7 @@
 <?php
 return  new
     #[\App\GeneralAttributes\Title('Make It Rain')]
-    #[\App\CardAttributes\CardType(\App\CardTypes\DrawType::class)]
+    #[\App\CardAttributes\CardType("Draw")]
     class extends \App\Card {
 
 

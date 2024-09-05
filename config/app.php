@@ -8,7 +8,6 @@ use App\Providers\ContextServiceProvider;
 use App\Providers\EventServiceProvider;
 use App\Providers\RequestServiceProvider;
 use App\Providers\SolutionServiceProvider;
-use App\Providers\TelescopeServiceProvider;
 use Illuminate\Auth\Passwords\PasswordResetServiceProvider;
 use Illuminate\Bus\BusServiceProvider;
 use Illuminate\Cache\CacheServiceProvider;
@@ -200,7 +199,7 @@ return [
         // EventServiceProvider::class,
         \App\Providers\RouteServiceProvider::class,
         // BladeServiceProvider::class,
-        // TelescopeServiceProvider::class,
+        // \App\Providers\TelescopeServiceProvider::class,
         // SolutionServiceProvider::class,
     ],
 ];

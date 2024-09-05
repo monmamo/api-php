@@ -46,7 +46,7 @@ public function cards():Collection{
         <?php
                 foreach ( $this->cards() as $card_number => $card_info) {
                     ?>
-            <li><a href="<?= app('url')->route('card',['id'=>$card_number]) ?>"
+            <li><a href="/cards/card/<?= $card_number ?>"
  class="card-link link-body-emphasis d-inline-flex text-decoration-none rounded" data-id="<?php echo $card_number; ?>"><?php echo $card_number; ?> <?php echo $card_info->name() ?? ''; ?></a></li>
         <?php } ?>
     </ul>

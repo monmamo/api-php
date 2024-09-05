@@ -15,6 +15,6 @@ class CardType
      * @return void
      */
     public function __construct(
-        public string $fqn,
+        public string $type,
     ) {}
 }
