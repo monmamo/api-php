@@ -1,7 +1,7 @@
 <?php
 return  new
     #[\App\GeneralAttributes\Title('Agility')]
-    #[\App\CardAttributes\CardType(\App\CardTypes\TraitType::class)]
+    #[\App\CardType('Trait')]
     #[\App\CardAttributes\ImageCredit("DarkZaitzev on Game-Icons.net under CC BY 3.0")]
     class extends \App\Card {
 

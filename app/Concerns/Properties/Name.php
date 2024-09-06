@@ -14,13 +14,12 @@ trait Name
     {
 
         $reflection = new \ReflectionClass($this);
-        $attributes = $reflection->getAttributes();
+        $attributes = $reflection->getAttributes(\App\GeneralAttributes\Title::class);
 
-        foreach ($attributes as $attribute) {
-            if ($attribute->getName() === \App\GeneralAttributes\Title::class) {
-                return $attribute->getArguments()[0];
-            }
+        if (count($attributes) > 0) {
+            return $attributes[0]->getArguments()[0];
         }
+
 
         return Str::title(class_basename($reflection->getName()));
     }

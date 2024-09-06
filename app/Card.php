@@ -20,23 +20,9 @@ abstract class Card
     {
         return $this->card_type_facade ??=  value(function () {
             $reflection = new \ReflectionClass($this);
-            $attributes = $reflection->getAttributes();
-
-            foreach ($attributes as $attribute) {
-                if ($attribute->getName() === \App\CardAttributes\CardType::class) {
-                    return new class($attribute->getArguments()[0]) {
-                        public function __construct(
-                            public readonly string $fqn,
-                        ) {}
-                        public function __call($method, $args)
-                        {
-                            return call_user_func_array([$this->fqn, $method], $args);
-                        }
-                    };
-                }
-            }
-
-            throw new \LogicException();
+            $attributes = $reflection->getAttributes(\App\CardType::class);
+            $attribute =            $attributes[0] ??  throw new \LogicException();
+            return $attribute->newInstance();
         });
     }
 
@@ -50,10 +36,10 @@ abstract class Card
         return config("cards.{$pieces[0]}.{$card_id}");
     }
 
-        /**
+    /**
      * @group nonary
      */
-   abstract public function bodyText():\Traversable;
+    abstract public function bodyText(): \Traversable;
 
 
 
@@ -66,7 +52,7 @@ abstract class Card
         return new \EmptyIterator;
     }
 
-     /**
+    /**
      * @implements \App\Contracts\HasName
      */
     public function imageCredit(): ?string
@@ -76,8 +62,10 @@ abstract class Card
         $attributes = $reflection->getAttributes(\App\CardAttributes\ImageCredit::class);
 
         foreach ($attributes as $attribute) {
-                return 'Image by ' .$attribute->getArguments()[0];
+            return 'Image by ' . $attribute->getArguments()[0];
         }
+
+        return null;
     }
 
     /**

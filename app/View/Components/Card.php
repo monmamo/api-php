@@ -2,40 +2,26 @@
 
 namespace App\View\Components;
 
-use Closure;
-use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class Card extends Component
 {
-    public readonly string $set;
-
-    /**
-     * Create a new component instance.
-     */
     public function __construct(
-        public readonly string $cardNumber,
-        public readonly string $name,
-        public readonly string $cardTypeFqn,
-
-    ) {
-        $this->set =  explode('-', $cardNumber)[0];
-    }
-
-
+        public string $cardName,
+        public string $cardType,
+        public ?string $cardNumber =  null, // will be set later
+    ) {}
     /**
-     * @group unary
+     * Get the view / contents that represent the component.
+     * This is a point where we can inject a value into the view.
      */
-    // public function __construct(?string $card_id = null, ?string $path = null)
-    // {
-    //     $path ??= self::path($card_id);
+    public function render(): \Illuminate\View\View
+    {
 
-    //     try {
-    //         parent::__construct(json_decode(file_get_contents($path), true));
-    //     } catch (\Exception $e) {
-    //         throw new \Exception("Card not found: {$path}");
-    //     }
-    // }
-
-
+        if (is_null($this->cardNumber)) {
+            dump($this, $this->data());
+            throw new \Exception('cardNumber must be set before rendering');
+        }
+        return view('components.card.index');
+    }
 }

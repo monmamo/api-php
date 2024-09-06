@@ -588,3 +588,10 @@ function unknown($value = null): string
 
     return \app('translator')->get('unknown-value', ['value' => $value]);
 }
+
+function explode_lines(string $source):\Traversable
+{
+    foreach( \explode("\n", $source) as $line){
+        yield trim($line);
+    }
+}

@@ -1,1 +1,0 @@
-<x-linear-gradient-background start="#254871" end="#4A90E2" />

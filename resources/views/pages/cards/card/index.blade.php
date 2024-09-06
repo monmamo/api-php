@@ -1,6 +1,4 @@
 <?php
-
-
 $jsonFiles = \glob('specs/*/*.json');
 
 // Iterate through each .json file
