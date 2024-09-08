@@ -1,0 +1,11 @@
+<x-card.Defense :$cardNumber card-name="Fire Shield" >
+    <g class="svg-hero"><?= view('Pyros.icon') ?></g>
+</g>
+<x-slot:card-rules>
+    Requires Pyros.
+    For each Fire card attached to this Monster,
+    prevent 1d6 damage. Discard all Fire cards
+    attached to this Monster
+    (even if they weren't needed to prevent damage).
+</x-slot:card-rules>
+</x-card.Defense>

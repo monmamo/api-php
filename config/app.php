@@ -198,7 +198,7 @@ return [
         // // you may sort these...
         // EventServiceProvider::class,
         \App\Providers\RouteServiceProvider::class,
-        // BladeServiceProvider::class,
+        \App\Providers\BladeServiceProvider::class,
         // \App\Providers\TelescopeServiceProvider::class,
         // SolutionServiceProvider::class,
     ],

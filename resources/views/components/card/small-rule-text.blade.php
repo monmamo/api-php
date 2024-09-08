@@ -1,0 +1,1 @@
+<tspan x="50%" dy="25" class="smallrule">{{$slot}}</tspan>

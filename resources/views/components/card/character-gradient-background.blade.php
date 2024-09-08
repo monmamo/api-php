@@ -1,1 +1,1 @@
-<x-linear-gradient-background start="#000000" end="#4a4a4a" />
+<x-linear-gradient-background :start="\App\Enums\Color::CharacterGradientBottom" :end="\App\Enums\Color::CharacterGradientTop" />

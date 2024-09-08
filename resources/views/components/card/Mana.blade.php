@@ -1,10 +1,6 @@
-<?php
-return  new #[\App\GeneralAttributes\Title('Mana')] class('Mana') extends \App\CardType
-{
+<x-card :$cardNumber :$cardName card-type="Mana">
 
-    public function standardRule(): \Traversable
-    {
-        return new \EmptyIterator();
-    }
+{{$background ?? null}}
 
- };
+    {{$slot ?? null}}
+</x-card>
