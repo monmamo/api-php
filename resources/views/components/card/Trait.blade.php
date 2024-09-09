@@ -9,9 +9,9 @@
     
     <x-card.rulebox>
         <x-slot:small>
-This card can be attached to a Monster card only when a Monster. 
-enters the Battlefield. A Monster may have
-only one of any particular Trait card.
+This card can be attached to a Monster card
+only when a Monster enters the Battlefield. 
+A Monster may have only one of any particular Trait card.
         </x-slot:small>
         @isset($cardRules)
             <x-slot:normal>{{$cardRules}}</x-slot:normal>

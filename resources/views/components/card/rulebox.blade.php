@@ -1,4 +1,4 @@
-@props(['y'=>550])
+@props(['y'=>500])
 
 <text x="50%" y="{{$y}}" width="100%" height="auto" filter="url(#solid)">
     <?php foreach (\App\Strings\explode_lines( $small ?? '') as $index => $line) { ?>

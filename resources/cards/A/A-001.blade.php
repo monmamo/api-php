@@ -13,4 +13,4 @@
 Icon by sbed on Game-Icons.net under CC BY 3.0
 @endpush
 
-<x-card.Mana :$cardNumber card-name="Acid" />
+<x-card card-type="Mana" :$cardNumber card-name="Acid" />

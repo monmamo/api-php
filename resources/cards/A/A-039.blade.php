@@ -1,11 +1,12 @@
 <x-card.Trait :$cardNumber card-name="Absorb Water" >
+    <g class="svg-hero"><?= view('Aquos.icon') ?></g>
 
     <text x="50%" y="600" width="100%" height="auto" filter="url(#solid)">
-        <x-card.small-rule-line>Requires Aquos.</x-card.small-rule-line>
-        <x-card.normal-rule-line>If hit by an Attack that results in the attacker</x-card.normal-rule-line>
-        <x-card.normal-rule-line>discarding Water, attach those cards to</x-card.normal-rule-line>
-        <x-card.normal-rule-line>this Monster.</x-card.normal-rule-line>
-        <x-card.small-rule-line>(When those cards are discarded, they go </x-card.small-rule-line>
-        <x-card.small-rule-line>to the Discard of the player who owns them.)</x-card.small-rule-line>
+@smallrule(Requires Aquos.)
+@normalrule(If hit by an Attack that results in the attacker)
+@normalrule(discarding Water, attach those cards to)
+@normalrule(this Monster.)
+@smallrule((When those cards are discarded, they go )
+@smallrule(to the Discard of the player who owns them.)
             </text>
 </x-card.Trait>

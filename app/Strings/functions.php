@@ -252,7 +252,7 @@ function unwrap(mixed $source, string $delimiter = ' '): string
  */
 function unwrapThen(callable $callback): \Closure
 {
-    return fn (mixed $source) => $callback(\App\Strings\unwrap($source));
+    return fn(mixed $source) => $callback(\App\Strings\unwrap($source));
 }
 
 /**
@@ -589,9 +589,35 @@ function unknown($value = null): string
     return \app('translator')->get('unknown-value', ['value' => $value]);
 }
 
-function explode_lines(string $source):\Traversable
+/**
+ * 
+ */
+function explode_lines(string $source): \Traversable
 {
-    foreach( \explode("\n", $source) as $line){
+    foreach (\explode("\n", $source) as $line) {
         yield trim($line);
     }
+}
+
+
+/**
+ * ‼️ This obliterates newlines. DO NOT use this on block text or any other context where newlines are significant.
+ *
+ * @group unary
+ *
+ * @uses \assert (native) If enabled, and the given assertion is false, throws an exception.
+ * @uses \is_callable (native) Returns whether a variable can be called as a function.
+ * @uses \is_string (native) Returns whether a variable is a string.
+ * @uses \preg_replace
+ *
+ * @throws \AssertionError
+ */
+function clean(string $raw, ?\Closure $after_clean = null): string
+{
+    $step1 = \preg_replace('~[\x00-\x1F\x80-\xFF]~u', '', $raw); // remove unprintables
+    $step2 = \preg_replace('~^[\s\x{FEFF}]+|[\s\x{FEFF}]+$~u', '', $step1); // trim
+    $clean_value = \preg_replace('~(\s|\x{3164})+~u', ' ', $step2); // squish spaces
+    $final_clean_value = \is_callable($after_clean) ? $after_clean($clean_value) : $clean_value;
+    \assert(\is_string($final_clean_value));
+    return $final_clean_value;
 }

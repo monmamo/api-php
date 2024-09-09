@@ -10,7 +10,7 @@
 <?php
 
 ?>
-<svg width="@cardspec(width)" height="@cardspec(height)" viewBox="0 0 @cardspec(width) @cardspec(height)" xmlns="http://www.w3.org/2000/svg">
+<svg id="{{$cardNumber}}" width="@cardspec(width)" height="@cardspec(height)" viewBox="0 0 @cardspec(width) @cardspec(height)" xmlns="http://www.w3.org/2000/svg">
 
     <title><?= $cardName ?></title>
 
@@ -122,18 +122,17 @@
     @stack('image-credit')
 </text>
 
-<text x="50%" y="510" width="100%" height="auto" text-anchor="middle">
+<text x="50%" y="510" width="100%" height="auto" text-anchor="hanging">
     @stack('flavor-text')
 </text>
 
 
-
-
 <x-card.bodybox id="bodybox">
     {{ $slot ?? null }}
+    @stack('rules')
 </x-card.bodybox>
 
-    <x-card.titlebox :$cardType :$cardName :$transparentNameBackground></x-card.titlebox>
+    <x-card.titlebox.index :$cardType :$cardName :$transparentNameBackground></x-card.titlebox.index>
 
     <text x="1.5%" y="98.5%" class="credit" text-anchor="start" alignment-baseline="top">&#169; Monsters Masters &amp; Mobsters LLC</text>
     <text x="70%" y="98.5%" class="credit" text-anchor="middle" alignment-baseline="top"><?php echo \date('Y-m-d'); ?></text>

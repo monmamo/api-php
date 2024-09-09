@@ -1,2 +1,2 @@
 @props(['fill'=>'#FFFFFF'])
-<tspan x="50%" dy="25" class="flavor" alignment-baseline="hanging" fill="{{$fill}}">{{$slot}}</tspan>
+<tspan x="50%" dy="25" class="flavor"  text-anchor="middle" alignment-baseline="hanging" fill="{{$fill}}">{{$slot}}</tspan>

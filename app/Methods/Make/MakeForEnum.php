@@ -153,7 +153,7 @@ trait MakeForEnum
     /**
      * @group unary
      *
-     * @uses \App\Casts\Meta\TrimmedString::clean
+     * @uses \App\Strings\clean
      * @uses \BackedEnum::tryFrom
      * @uses \constant
      * @uses \is_a (native) Returns whether an object is of this class or has this class as one of its parents.
@@ -162,7 +162,7 @@ trait MakeForEnum
      */
     public static function makeFromString(string $source)
     {
-        $source = TrimmedString::clean($source);
+        $source =  \App\Strings\clean($source);
 
         if ($source === '') {
             return self::makeDefaultValue();

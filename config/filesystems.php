@@ -1,5 +1,7 @@
 <?php
 
+use \Illuminate\Support\Facades\Storage;
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -31,6 +33,12 @@ return [
         'local' => [
             'driver' => 'local',
             'root' => \storage_path('app'),
+            'throw' => false,
+        ],
+
+        'cards' => [
+            'driver' => 'local',
+            'root' => \resource_path('cards'),
             'throw' => false,
         ],
 

@@ -1,5 +1,5 @@
     <x-card.Trait :$cardNumber card-name="Sparking">
-
+        <g class="svg-hero"><?= view('Energos.icon') ?></g>
     <x-card.body-text y="500">
         Requires Energos.
         When this Monster attacks or defends,
@@ -10,5 +10,3 @@
         takes 1d6 damage.        
 </x-slot:card-rules>
 </x-card.Trait>
-<?php
-    <image x="0" y="0" class="hero" href="@local(energosattack)" />

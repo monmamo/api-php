@@ -1,7 +1,7 @@
 
     
     <x-card.Skill :$cardNumber card-name="Flash of Lightning">
-
+        <g class="svg-hero"><?= view('Energos.icon') ?></g>
     <x-slot:card-rules>
         Requires Energos.
         Discard all Electricity cards attached to this Monster.
@@ -10,5 +10,3 @@
         may attack until and through this player’s next turn.        
 </x-slot:card-rules>
 </x-card.Skill>
-<?php
-    <image x="0" y="0" class="hero" href="@local(energosattack)" />
