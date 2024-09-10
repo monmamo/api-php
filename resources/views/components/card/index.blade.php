@@ -129,7 +129,6 @@
 
 <x-card.bodybox id="bodybox">
     {{ $slot ?? null }}
-    @stack('rules')
 </x-card.bodybox>
 
     <x-card.titlebox.index :$cardType :$cardName :$transparentNameBackground></x-card.titlebox.index>

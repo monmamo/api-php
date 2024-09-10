@@ -8,12 +8,12 @@
 <x-card :$cardNumber :$cardName card-type="Defense">
 
     
-        <x-card.rulebox>
-            <x-slot:small>Can be played only as a response to an Attack.</x-slot:normal>
-            @isset($cardRules)
-                <x-slot:normal>{{$cardRules}}</x-slot:normal>
-            @endisset
-        </x-card.rulebox>
-        {{$slot ?? null}}
+<x-card.rulebox>
+    <x-slot:small>Can be played only as a response to an Attack.</x-slot:small>
+    @isset($cardRules)
+        <x-slot:normal>{{$cardRules}}</x-slot:normal>
+    @endisset
+</x-card.rulebox>
+{{$slot ?? null}}
     
 </x-card>
