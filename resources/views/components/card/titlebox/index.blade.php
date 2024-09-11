@@ -1,5 +1,5 @@
 
-@props(['cardType'=>null,'cardName'=>null,'transparent_name_background'=>false])
+@props(['cardType'=>null,'cardName'=>null])
 
 <?php
 $has_icon = \Illuminate\Support\Facades\View::exists($cardType . '.icon');

@@ -9,6 +9,8 @@ enum Hosts: string
 {
     #[Environment(Environments::Testing)]
     case CLI = 'localhost'; // This is what request()->host() resolves to from the CLI.
+    #[Environment(Environments::Development)]
+case Default="";
 
     /**
      * Returns the environment of the host.

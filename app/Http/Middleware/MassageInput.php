@@ -37,10 +37,8 @@ final class MassageInput extends TransformsRequest
      * @param string $key Key of the value on which to operate.
      * @param mixed $value Value to transform.
      *
-     * @uses \app (Laravel) Gets an item from the available container instance.
-     * @uses \App\Casts\Meta\TrimmedString::clean
-     * @uses \App\Constraints\IsStringable::evaluate
-     * @uses \App\Strings\InlineText::__construct
+     * @uses \App\Strings\clean
+     * @uses \App\Strings\unwrap
      * @uses \in_array (native) Returns whether a value exists in an array.
      */
     protected function transform($key, $value)
@@ -57,13 +55,8 @@ final class MassageInput extends TransformsRequest
             'current_password',
             'password',
             'password_confirmation',
-            LetterProperties::Body->value,
         ];
 
-        if (\in_array($key, $except, true) || !\app(IsStringable::class)->evaluate($value, '', true)) {
-            return $value;
-        }
-
-        return TrimmedString::clean($value);
+        return \in_array($key, $except, true) ?  $value : \App\Strings\clean( \App\Strings\unwrap($value));
     }
 }

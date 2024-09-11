@@ -22,14 +22,12 @@ $rect_attributes = [
     'y' => 0,
     'width' => $width,
     'height' => $height,
-    'fill' => $rect_fill,
-    'fill-opacity' => is_null($rect_fill) ? 0 : 1,
 ];
 
 ?>
 <svg {{new \Illuminate\View\ComponentAttributeBag($attributes)}}>
 
-    <rect {{new \Illuminate\View\ComponentAttributeBag($rect_attributes)}} />
+    <rect class="{{$slug}}" {{new \Illuminate\View\ComponentAttributeBag($rect_attributes)}} />
 
     {{$slot}}
 </svg>

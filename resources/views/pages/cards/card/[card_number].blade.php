@@ -1,5 +1,30 @@
 <?php
-$set =  explode('-', $card_number)[0];
+$card_number_pieces =  explode('-', $card_number);
+$set = $card_number_pieces[0];
+$card_numeral = 
+
+$previous = match(true) {
+  is_numeric(last( $card_number_pieces)) => transform(
+    $card_number_pieces ,
+    function(array $pieces){
+      $pieces[count($pieces)-1] -= 1;
+      return implode('-',$pieces);
+    }
+  ),
+  default => null
+};
+
+$next = match(true) {
+  is_numeric(last( $card_number_pieces)) => transform(
+    $card_number_pieces ,
+    function(array $pieces){
+      $pieces[count($pieces)-1] += 1;
+      return implode('-',$pieces);
+    }
+  ),
+  default => null
+};
+
  
 if (!\Illuminate\Support\Facades\View::exists("$set.$card_number")) {
     abort(404);
@@ -22,9 +47,15 @@ $view = view("$set.$card_number")->with('cardNumber', $card_number)->with('cardS
 <html>
 
 <div class="item buttons">
+  @isset($previous)
+  <a id="btn-previous" href="/cards/card/{{$previous}}">{{$previous}}</a>
+    @endisset
   <button id="btn-png" data-format="png">PNG</button>
   <button id="btn-jpg" data-format="jpeg">JPG</button>
   <button id="btn-webp" data-format="webp">WEBP</button>
+  @isset($next)
+  <a id="btn-next" href="/cards/card/{{$next}}">{{$next}}</a>
+    @endisset
 </div>
   <div id="svg-container">{{$view}}</div>
   <div id="img-container"></div>

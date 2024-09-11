@@ -1,5 +1,5 @@
 @push('flavor-text')
-<x-card.flavor-text-line y="500" fill="#000000">Because both adulting and monster battling are hard.</x-card.flavor-text>
+<x-card.flavor-text-line y="450" fill="#000000">Because both adulting and monster battling are hard.</x-card.flavor-text>
 @endpush
 
 @push('background')
@@ -10,15 +10,21 @@
 Image by macrovector on Freepik
 @endpush
 
-<x-card card-type="Mana" :$cardNumber card-name="Caffeine" credit-color="#000000" :transparent-name-background="true">
+
+<x-card 
+    credit-color="#000000" 
+    card-type="Mana" 
+    card-name="Caffeine" 
+    :$cardNumber 
+    :titlebox-opacity="0.25"
+>
     <x-card.rulebox y="500">
         <x-slot:normal>
-    For any attempt to put this Monster to Sleep,
-    roll 1d6. (Roll one die for each
-    Caffeine card attached to this Monster.)
-    If @dieroll(5,6), the Monster remains awake.
-    If @dieroll(1,2), discard this card.
-    </x-slot:normal>
+        For any attempt to put this Monster to Sleep,
+        roll 1d6. (Roll one die for each
+        Caffeine card attached to this Monster.)
+        If @dieroll(5,6), the Monster remains awake.
+        If @dieroll(1,2), discard this card.
+        </x-slot:normal>
     </x-card.rulebox>
-    
 </x-card>

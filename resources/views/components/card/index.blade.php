@@ -1,15 +1,5 @@
-@props([
-    'cardType',
-     'cardName',
-      'cardNumber',
-       'stats', 
-       'subtypes',
-        'creditColor'=>'white',
-        'transparentNameBackground'=>false
-        ])
-<?php
+{{-- no @props here, they're defined in \App\View\Components\Card --}}
 
-?>
 <svg id="{{$cardNumber}}" width="@cardspec(width)" height="@cardspec(height)" viewBox="0 0 @cardspec(width) @cardspec(height)" xmlns="http://www.w3.org/2000/svg">
 
     <title><?= $cardName ?></title>
@@ -25,7 +15,7 @@
         .credit {
             font-style: normal;
             font-size: 20px;
-            fill: <?= $creditColor  ?>;
+            fill: <?= $creditColor ?>;
         }
 
         .flavor {
@@ -74,6 +64,11 @@
             font-weight: 500;
             font-style: normal;
             fill: black;
+        }
+
+        rect.titlebox {
+            fill: white;
+            fill-opacity: <?= $titleboxOpacity ?>
         }
 
         image.hero {
@@ -128,10 +123,11 @@
 
 
 <x-card.bodybox id="bodybox">
+
     {{ $slot ?? null }}
 </x-card.bodybox>
 
-    <x-card.titlebox.index :$cardType :$cardName :$transparentNameBackground></x-card.titlebox.index>
+    <x-card.titlebox :$cardType :$cardName></x-card.titlebox>
 
     <text x="1.5%" y="98.5%" class="credit" text-anchor="start" alignment-baseline="top">&#169; Monsters Masters &amp; Mobsters LLC</text>
     <text x="70%" y="98.5%" class="credit" text-anchor="middle" alignment-baseline="top"><?php echo \date('Y-m-d'); ?></text>

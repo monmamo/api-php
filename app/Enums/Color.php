@@ -17,6 +17,8 @@ enum Color: string
     case CalamityColor = 'orange';
     case GameActionColor = '#427900';
     case ItemColor = '#222222';
+    case ItemGradientBottom = '#020202';
+    case ItemGradientTop = '#424242';
     case EnvironmentColor = '#003300';
     case PlaceColor = '#E25420';
     case Pyros = '#FFA457';
