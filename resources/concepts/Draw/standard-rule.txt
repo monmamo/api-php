@@ -1,0 +1,1 @@
+Discard this card after playing.

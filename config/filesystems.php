@@ -42,6 +42,12 @@ return [
             'throw' => false,
         ],
 
+        'concepts' => [
+            'driver' => 'local',
+            'root' => \resource_path('concepts'),
+            'throw' => false,
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => \storage_path('app/public'),

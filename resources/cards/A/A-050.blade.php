@@ -1,4 +1,4 @@
-<x-card.Trait :$cardNumber card-name="Cunning">
+<x-card concepts="Trait" :$cardNumber card-name="Cunning">
 
 <x-slot:card-rules>
     Draw phase: Choose a Library.
@@ -6,4 +6,4 @@
     without rearranging them.
     Then you may shuffle that Library.
 </x-slot:card-rules>
-</x-card.Trait>
+</x-card>

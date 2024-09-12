@@ -1,4 +1,4 @@
-<x-card.Trait :$cardNumber card-name="Tackling">
+<x-card concepts="Trait" :$cardNumber card-name="Tackling">
 
 <x-slot:card-rules>
     When this Monster uses Pounce
@@ -8,4 +8,4 @@
     After that damage is resolved,
     this Monster takes Speed damage.
     </x-slot:card-rules>
-</x-card.Trait>
+</x-card>

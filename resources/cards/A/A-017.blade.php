@@ -1,4 +1,4 @@
-<x-card.Draw :$cardNumber card-name="Sleight of Hand">
+<x-card concepts="Draw" :$cardNumber card-name="Sleight of Hand">
     <x-slot:card-rules>
         Put any number of cards from your hand
         on the bottom of your Library in any order.

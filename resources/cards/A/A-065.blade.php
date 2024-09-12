@@ -7,7 +7,7 @@
 @endpush
 
 
-<x-card.Trait :$cardNumber card-name="Firebreath">
+<x-card concepts="Trait" :$cardNumber card-name="Firebreath">
     <image x="0" y="0" class="hero" href="@local(hero/firebreath.jpeg)" />
 <x-slot:card-rules>
     Requires Pyros. When this Monster attacks or defends
@@ -17,6 +17,6 @@
     If the defending/attacking Monster takes any damage,
     discard 1 Fire Mana card from this Monster.
     </x-slot:card-rules>
-</x-card.Trait>
+</x-card>
 {{-- https://www.notion.so/monmamo/Firebreath-570c6fc6a1b541928a7b4168293b2c6e?pvs=4#8b14c79fef304feaaacd808a2007baa7 --}}
 

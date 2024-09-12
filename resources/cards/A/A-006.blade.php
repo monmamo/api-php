@@ -2,8 +2,16 @@
 @ai
 @endpush
 
-<x-card.Trait :$cardNumber card-name="Biting">
+@push('background')
+{{ view('Trait.background') }}
+@endpush
+
+
+<x-card :$cardNumber card-name="Biting">
 <image x="0" y="0" class="hero" href="@local(A006.png)" source="https://www.freepik.com/free-photo/hand-pouring-food-birds_1713221.htm" />
+
+<x-card.rulebox>
+  <x-card.concept-card type="Trait" /> 
 
 <svg id="titlebox" x="50" y="600" width="550" height="165" viewBox="0 0 550 165">
 
@@ -16,4 +24,6 @@
 
 </svg>
 
-</x-card.Trait>
+</x-card.rulebox>
+
+</x-card>

@@ -1,4 +1,4 @@
-    <x-card.Draw :$cardNumber card-name="Basic Lure">
+    <x-card concepts="Draw" :$cardNumber card-name="Basic Lure">
 @push('image-credit')
 Image by Lorc on Game-Icons.net under CC BY 3.0
 @endpush
@@ -13,4 +13,4 @@ Put that/those card(s) in your hand.
 </g>
     {{-- https://game-icons.net/1x1/lorc/gift-trap.html --}}
 
-</x-card.Draw>
+</x-card>

@@ -1,12 +1,12 @@
-<x-card.Draw :$cardNumber card-name="Recycle">
+<x-card concepts="Draw" :$cardNumber card-name="Recycle">
 
 <x-slot:card-rules>
-</x-slot:card-rules>
-</x-card.Draw>
+    Put a card from your Discard
+    pile into your hand.
+    </x-slot:card-rules>
+</x-card>
 <?php
  [
-Put a card from your Discard
-pile into your hand.
     ],
     "stats": null,
     "subtypes": [],
@@ -15,9 +15,6 @@ pile into your hand.
         @push('image-credit')
 Image by Lorc on Game-Icons.net under CC BY 3.0
 @endpush
-        "source": null,
-        
-        "prompt": null
     },
     "_image": {
         <image x="0" y="0" class="hero" href="@local(A212.jpg)" />

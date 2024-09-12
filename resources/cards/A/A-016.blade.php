@@ -3,7 +3,7 @@
 @endpush
 
   
-  <x-card.Trait :$cardNumber card-name="Large Brain">
+  <x-card concepts="Trait" :$cardNumber card-name="Large Brain">
 
     @push('image-credit')
 Image by Lorc on Game-Icons.net
@@ -12,7 +12,7 @@ Image by Lorc on Game-Icons.net
       Size +3. 
       Attack base damage +5.
     </x-slot:card-rules>
-</x-card.Trait>
+</x-card>
 
 <?php
   // "_image": {

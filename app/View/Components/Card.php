@@ -8,8 +8,10 @@ class Card extends Component
 {
     public function __construct(
         public string $cardName,
-        public string $cardType,
+        public string $creditColor = 'white',
+        public float $titleboxOpacity = 1,
         public ?string $cardNumber =  null, // will be set later
+        public mixed $concepts = null,
     ) {}
     /**
      * Get the view / contents that represent the component.

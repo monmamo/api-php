@@ -1,4 +1,4 @@
-    <x-card.Trait :$cardNumber card-name="Evasiveness">
+    <x-card concepts="Trait" :$cardNumber card-name="Evasiveness">
         @push('image-credit')
 Image by Delapouite on Game-Icons.net under CC BY 3.0
 @endpush
@@ -7,6 +7,6 @@ Image by Delapouite on Game-Icons.net under CC BY 3.0
         Resolution phase: If this Monster uses Dodge,
         increase Speed by 6 before resolving.        
 </x-slot:card-rules>
-</x-card.Trait>
+</x-card>
 
     {{-- "image source": "https://game-icons.net/1x1/delapouite/split-arrows.html --}}

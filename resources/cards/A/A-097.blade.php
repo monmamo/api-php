@@ -1,6 +1,6 @@
-<x-card.Trait :$cardNumber card-name="Frenzy">
+<x-card concepts="Trait" :$cardNumber card-name="Frenzy">
 
-</x-card.Trait>
+</x-card>
     <x-slot:card-rules>Resolution phase: If this Monster does any damage while it is Confused (even to itself), it does 1d4 more damage.</x-slot:card-rules>
     "stats": null,
     "subtypes": [],

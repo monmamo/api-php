@@ -594,6 +594,7 @@ function unknown($value = null): string
  */
 function explode_lines(string $source): \Traversable
 {
+    if ($source === '') return;
     foreach (\explode("\n", $source) as $line) {
         yield trim($line);
     }

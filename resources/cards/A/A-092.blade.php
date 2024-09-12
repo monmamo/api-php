@@ -28,4 +28,4 @@ Image by Luis Prado via The Noun Project
             Each other Monster in play takes 1d4-1 damage.
             </x-slot:normal>
 </x-card.rulebox>
-</x-card.Bane>
+</x-card>

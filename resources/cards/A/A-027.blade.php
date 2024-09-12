@@ -1,4 +1,4 @@
-<x-card.Trait :$cardNumber card-name="Natural Healing" >
+<x-card concepts="Trait" :$cardNumber card-name="Natural Healing" >
 @push('flavor-text')
 <x-card.flavor-text-line>When I get that feeling I want natural healing…</x-card.flavor-text-line>
 @endpush
@@ -11,4 +11,4 @@ Image by Lorc and sbed on Game-Icons.net
     If this Monster is not Knocked Out,
     you may remove 1d6 damage from it.        
 </x-slot:card-rules>
-</x-card.Trait>
+</x-card>

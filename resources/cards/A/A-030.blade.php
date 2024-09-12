@@ -1,4 +1,4 @@
-<x-card.Trait :$cardNumber card-name="Ramming">
+<x-card concepts="Trait" :$cardNumber card-name="Ramming">
     <x-card.image-credit :ai="true" />
     <image x="0" y="0" class="hero" href="@local(AT32.png)" />
 <x-slot:card-rules>
@@ -8,4 +8,4 @@
     If @dieroll(6), also discard one Trait
     card from the defending Monster.
 </x-slot:card-rules>
-</x-card.Trait>
+</x-card>

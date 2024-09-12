@@ -1,7 +1,6 @@
 <?php
 $card_number_pieces =  explode('-', $card_number);
 $set = $card_number_pieces[0];
-$card_numeral = 
 
 $previous = match(true) {
   is_numeric(last( $card_number_pieces)) => transform(
@@ -57,7 +56,8 @@ $view = view("$set.$card_number")->with('cardNumber', $card_number)->with('cardS
   <a id="btn-next" href="/cards/card/{{$next}}">{{$next}}</a>
     @endisset
 </div>
-  <div id="svg-container">{{$view}}</div>
+  <div id="svg-container" hx-get="#"  hx-trigger="dblclick"
+  hx-target="#svg-container">{{$view}}</div>
   <div id="img-container"></div>
 
 <script>
@@ -87,7 +87,6 @@ const encodeAsUTF8 = s => `${dataHeader},${encodeURIComponent(s)}`
 const encodeAsB64 = s => `${dataHeader};base64,${btoa(s)}`
 
 const convertSVGtoImg = async e => {
-  console.log('convertSVGtoImg BEGIN', $svg.clientWidth, $svg.clientHeight);//TEMP
   const $btn = e.target
   const format = $btn.dataset.format ?? 'png'
 
@@ -107,7 +106,6 @@ const convertSVGtoImg = async e => {
   const $img = new Image($svg.clientWidth, $svg.clientHeight);
   $img.src = dataURL;
   $holder.appendChild($img);
-  console.log('convertSVGtoImg END');//TEMP
 }
 
 const buttons = [...document.querySelectorAll('[data-format]')]

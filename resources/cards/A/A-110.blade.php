@@ -1,8 +1,8 @@
-<x-card.Bane :$cardNumber card-name="Halitosis">
+<x-card concepts="Draw" :$cardNumber card-name="Halitosis">
 
 <x-slot:card-rules>
 </x-slot:card-rules>
-</x-card.Bane>
+</x-card>
 <?php
  [
 Resolution phase: When a Monster on

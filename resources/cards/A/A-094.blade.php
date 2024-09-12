@@ -17,4 +17,4 @@ This card will remain on the Battlefield until it is discarded by rule.
         If @dieroll(1,2), discard your hand and this card.
 </x-slot:normal>
     </x-card.rulebox>
-</x-card.Draw>
+</x-card>

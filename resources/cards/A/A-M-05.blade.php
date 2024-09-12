@@ -11,7 +11,7 @@
         <image x="0" y="0" class="hero" href="@local(AM05.jpg)" />
         @push('image-credit')
 @ai
-@endpush,
+@endpush
         "source": null
     },
 

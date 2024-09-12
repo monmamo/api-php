@@ -7,13 +7,14 @@ Image by fxquadro on Freepik
 @endpush
 source": "
     },
-    <x-slot:card-rules>
-
-</x-slot:card-rules>
- [
-During your opponents' Draw phase,
+    <x-card.rulebox>
+        <x-slot:normal>
+            During your opponents' Draw phase,
 they must let you draw a card of your own,
 or discard two of their own cards.
+</x-slot:normal>
+</x-card.rulebox>
+ [
 <x-card.Mobster :$cardNumber card-name="Neighborhood \"Protection\"">
 
 </x-card.Mobster>

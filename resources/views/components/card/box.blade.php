@@ -1,11 +1,11 @@
-@props(['slug','rect_fill'=>'#FFFFFF'])
+@props(['slug','rectFill'=>'#FFFFFF'])
 <?php
 $width = config("card-design.$slug.width");
 $height = config("card-design.$slug.height");
 
-$rect_fill = match(true) {
-    is_string($rect_fill) => $rect_fill,
-    $rect_fill === false => null,    
+$rectFill = match(true) {
+    is_string($rectFill) => $rectFill,
+    $rectFill === false => null,    
 };
 
 $attributes = [

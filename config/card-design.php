@@ -1,4 +1,5 @@
 <?php
+// Don't define rulebox in here! Rulebox is dependent on actual content.
 
 $icon_size = 512;
 
@@ -6,22 +7,24 @@ $width = 750;
 $height = 1050;
 $margin = 50;
 
+$primary_rule_height = 35;
+$secondary_rule_height = 25;
+
 $icon = [
     'size' => $icon_size,
     'scale' => $height / $icon_size,
     'translate' => ['x' => ($width - $height) / 2, 'y' => 0],
 ];
 
-
 $viewbox_width = $width - $margin - $margin;
-$viewbox_height = $width - $margin - $margin;
+$viewbox_height = $height - $margin - $margin;
 
 $viewbox = [
     'width' => $viewbox_width,
     'height' => $viewbox_height,
 ];
 
-$titlebox_height = 140;
+$titlebox_height = 80;
 $titlebox_cardtype_baseline = 30;
 $titlebox_cardname_baseline = $titlebox_height - $titlebox_cardtype_baseline;
 
@@ -33,11 +36,6 @@ $titlebox = [
     'cardtype-baseline' => $titlebox_cardtype_baseline,
     'cardname-baseline' => $titlebox_cardname_baseline,
     'text_x' => fn(bool $has_icon) => $viewbox['width'] / 2 + ($has_icon ? $titlebox_height / 2 : 0)
-];
-
-$bodybox = [
-    'width' => $viewbox['width'],
-    'height' => $viewbox['height'] - $titlebox['height']
 ];
 
 $hero_width = $viewbox['width'];
@@ -52,18 +50,14 @@ $hero = [
     ]
 ];
 
-
-
 $bodytext = [
-    'line-height' => 35,
+    'line-height' => $primary_rule_height,
     'y' => $hero_height + 50,
     'width' => $viewbox['width'],
     'height' => $viewbox_height - $titlebox_height + $margin - $hero_height
 ];
 
-
-return compact('height', 'width', 'margin', 'icon', 'viewbox', 'titlebox', 'bodybox', 'bodytext', 'hero');
-
+return compact('height', 'width', 'margin', 'icon', 'viewbox', 'titlebox', 'bodytext', 'hero','primary_rule_height','secondary_rule_height');
 
 [
     'CARD_TITLE_FONT_SIZE' => 48,

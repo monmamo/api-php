@@ -1,15 +1,12 @@
-<?php
-
-    <x-slot:card-rules>
-
-</x-slot:card-rules>
- [
-Each player, including you,
+<x-card concepts="Draw" :$cardNumber card-name="Round for the House">
+    <x-card.rulebox>
+        <x-slot:normal>
+            Each player, including you,
 may choose to draw a card.
 Then you may take another Draw phase.
-<x-card.Draw :$cardNumber card-name="Round for the House">
-
-</x-card.Draw>
+</x-slot:normal>
+</x-card.rulebox>
+</x-card>
     "flavor_text": [
 Your favorite monster sports club had a great day
 on the field. Let's celebrate!

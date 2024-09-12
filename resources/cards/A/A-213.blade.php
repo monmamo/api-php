@@ -1,12 +1,12 @@
-<x-card.Draw :$cardNumber card-name="Recycle Mana" >
+<x-card concepts="Draw" :$cardNumber card-name="Recycle Mana" >
 
 <x-slot:card-rules>
-</x-slot:card-rules>
-</x-card.Draw>
+    Shuffle up to 5 basic Mana cards
+    from your Discard pile into your Library.
+    </x-slot:card-rules>
+</x-card>
 <?php
  [
-Shuffle up to 5 basic Mana cards
-from your Discard pile into your Library.
     ],
     "image": {
         <image x="0" y="0" class="hero" href="@local(A212.jpg)" />

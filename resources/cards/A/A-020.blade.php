@@ -1,4 +1,4 @@
-<x-card.Trait :$cardNumber card-name="Alertness">
+<x-card concepts="Trait" :$cardNumber card-name="Alertness">
     @push('image-credit')
 Image by Lorc on Game-Icons.net under CC BY 3.0
 @endpush
@@ -10,6 +10,6 @@ Image by Lorc on Game-Icons.net under CC BY 3.0
     Resolution phase: Add Speed÷2 (rounded down)
     to all Attacks and Defenses.
     </x-slot:card-rules>
-</x-card.Trait>
+</x-card>
 <?php
 // https://www.freepik.com/free-vector/cartoon-eyes_763685.htm

@@ -3,7 +3,7 @@
 Adobe Stock #2910609
 @endpush
 
-<x-card.Trait :$cardNumber card-name="Grotesque Mouth" >
+<x-card concepts="Trait" :$cardNumber card-name="Grotesque Mouth" >
     <image x="0" y="0" class="hero" href="@local(hero/AdobeStock_2910609.jpeg)" />
 <x-slot:card-rules>
     Size +1.
@@ -18,4 +18,4 @@ Adobe Stock #2910609
         <text x="345" y="140" text-anchor="middle" font-size="30px" alignment-baseline="baseline">Does Speed×3 damage.</text>
     </svg>    
 
-  </x-card.Trait>
+  </x-card>

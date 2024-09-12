@@ -26,7 +26,7 @@ class BladeServiceProvider extends ServiceProvider
 
         yield        'cardspec' => fn(string $pieces) => config('card-design.' . $pieces);
 
-        foreach (['viewbox', 'titlebox', 'bodybox', 'bodytext', 'hero'] as $component)
+        foreach (['viewbox', 'titlebox',  'bodytext', 'hero'] as $component)
             yield             $component . 'spec' => fn(string $pieces) =>  config("card-design.$component.$pieces");
 
         yield        'dieroll' =>         function (string $pieces): string {
@@ -46,19 +46,23 @@ class BladeServiceProvider extends ServiceProvider
         };
 
         $tspan = function ($dy, $class) {
-            return fn($line): string => \Illuminate\Support\Facades\Blade::render(
-                '<tspan x="50%" dy="{{$dy}}" class="{{$class}}">{{$line}}</tspan>',
-                ['dy' => $dy, 'class' => $class, 'line' => $line] // 💢
+            return fn($line): string => sprintf(
+                '<tspan x="50%%" dy="%s" class="%s">%s</tspan>',
+                $dy,
+                $class,
+                $line
             );
         };
 
-        yield 'smallrule' => $tspan(dy: '25', class: 'smallrule');
+        yield 'smallrule' => $tspan(dy: config('card-design.secondary_rule_height'), class: 'smallrule');
 
-        yield 'normalrule' => $tspan(dy: '35', class: 'bodyrule');
+        yield 'normalrule' => $tspan(dy: config('card-design.primary_rule_height'), class: 'bodytext');
 
 
         yield    'ai' =>        fn() => 'Generated image';
     }
+
+
 
     private function _stringables(): \Traversable
     {

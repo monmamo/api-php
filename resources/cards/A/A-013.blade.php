@@ -1,4 +1,4 @@
-<x-card.Draw :$cardNumber card-name="Baker's Dozen">
+<x-card concepts="Draw" :$cardNumber card-name="Baker's Dozen">
     <x-slot:card-rules>
 Look at the top 13 cards of your Library.
 You may put 3 of them into your hand.

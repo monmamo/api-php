@@ -13,8 +13,6 @@ $height = STAT_ICON_BOX_SIZE;
 $y += $height * $index;
 ?>
 
-
-
 <svg  x="{{$x}}" y="{{$y}}" width="{{$width}}" height="{{$height}}" viewBox="0 0 {{$width}} {{$height}}">
 <g transform="translate({{STAT_ICON_SHIFT}},{{STAT_ICON_SHIFT}}) scale({{STAT_ICON_SCALE}})" fill="#000000" fill-opacity="1" filter="url(#solid)"><?php
     require resource_path("concepts/{$type}/icon.blade.php");

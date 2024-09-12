@@ -1,4 +1,4 @@
-<x-card.Trait :$cardNumber card-name="Water Pulse" >
+<x-card concepts="Trait" :$cardNumber card-name="Water Pulse" >
     <g class="svg-hero"><?= view('Aquos.icon') ?></g>
 <x-slot:card-rules>
 Use when this Monster attacks or defends.
@@ -7,4 +7,4 @@ this Monster. The defending or attacking
 Monster takes 1d6 damage for each Water card 
 actually discarded.</x-slot:card-rules>
 
-</x-card.Trait>
+</x-card>

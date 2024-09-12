@@ -1,4 +1,4 @@
-<x-card.Trait :$cardNumber card-name="Slow Start" >
+<x-card concepts="Trait" :$cardNumber card-name="Slow Start" >
 
     <x-card.rulebox>
         <x-slot:small>
@@ -13,4 +13,4 @@
     </x-slot:normal>
 </x-card.rulebox>
 
-</x-card.Trait>
+</x-card>

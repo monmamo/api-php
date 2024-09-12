@@ -8,17 +8,18 @@ prompt": "head coach standing on the sidelines with a clipboard, green jacket
 @ai
 @endpush
     },
-    <x-slot:card-rules>
-
-</x-slot:card-rules>
- [
-Limit 1 per player in Battlefield
+    <x-card.Master :$cardNumber card-name="Head Coach">
+        <x-card.rulebox>
+        <x-slot:normal>
+            Limit 1 per player in Battlefield
 Resolution phase: Your Monsters' attacks
 do 1d6 more damage and
 defenses prevent 1d6 more damage.
-<x-card.Master :$cardNumber card-name="Head Coach">
-
+</x-slot:normal>
+</x-card.rulebox>
 </x-card.Master>
+ [
+
     <x-card.concept type="Integrity">2d6</x-card.concern>
 name": "
 }
