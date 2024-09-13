@@ -1,4 +1,13 @@
-    <x-card concepts="Trait" :$cardNumber card-name="Berserk">
+    
+    @push('background')
+    {{ view('Trait.background') }}
+    @endpush
+    
+    <x-card  :$cardNumber card-name="Berserk">
 
-    <x-slot:card-rules>Speed +2 when remaining HP drops below half.</x-slot:card-rules>
+        <x-card.rulebox>
+            <x-card.concept-card type="Trait" /> 
+            <x-slot:normal>Speed +2 when remaining HP drops below half.</x-slot:normal>
+        </x-card.rulebox>
+
 </x-card>
