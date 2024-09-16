@@ -33,7 +33,6 @@ function expectationMessage(string $expectation, mixed $value): string
 }
 
 /**
- *
  * @group variadic
  *
  * @param null|mixed $glue
@@ -252,7 +251,7 @@ function unwrap(mixed $source, string $delimiter = ' '): string
  */
 function unwrapThen(callable $callback): \Closure
 {
-    return fn(mixed $source) => $callback(\App\Strings\unwrap($source));
+    return fn (mixed $source) => $callback(\App\Strings\unwrap($source));
 }
 
 /**
@@ -589,17 +588,16 @@ function unknown($value = null): string
     return \app('translator')->get('unknown-value', ['value' => $value]);
 }
 
-/**
- * 
- */
 function explode_lines(string $source): \Traversable
 {
-    if ($source === '') return;
+    if ($source === '') {
+        return;
+    }
+
     foreach (\explode("\n", $source) as $line) {
         yield trim($line);
     }
 }
-
 
 /**
  * ‼️ This obliterates newlines. DO NOT use this on block text or any other context where newlines are significant.

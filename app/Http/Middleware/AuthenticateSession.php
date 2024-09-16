@@ -10,14 +10,12 @@ use Illuminate\Http\Request;
 /**
  * Our implementation of \Illuminate\Session\Middleware\AuthenticateSession.
  *
- *
  * @author Laravel
  */
 final class AuthenticateSession implements AuthenticatesSessions
 {
     /**
      * Constructor. Creates a new middleware instance.
-     *
      *
      * @group magic
      * @group mutator
@@ -82,7 +80,6 @@ final class AuthenticateSession implements AuthenticatesSessions
 
     /**
      * Handles an incoming request.
-     *
      *
      * @author Laravel
      * @extends

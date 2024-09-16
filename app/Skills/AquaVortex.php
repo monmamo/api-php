@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class AquaVortex implements Skill
-{
-}
+class AquaVortex implements Skill {}
 
 // [[Attack]]
 //variables::

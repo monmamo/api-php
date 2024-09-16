@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class FangAttack implements Skill
-{
-}
+class FangAttack implements Skill {}
 
 //[[Attack]] [[Physical Mode]]
 //variables::

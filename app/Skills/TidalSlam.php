@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class TidalSlam implements Skill
-{
-}
+class TidalSlam implements Skill {}
 
 // [[Attack]]
 //variables::

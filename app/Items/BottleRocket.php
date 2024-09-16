@@ -1,15 +1,13 @@
 <?php
+
 namespace App\Items;
-class BottleRocket implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class BottleRocket implements Item {}
 
 // metatype:: [[Item]] [[Consumable]] [[Weapon]]
 
 // playable card type:: [[Upkeep]]
-// card set:: [[Base Card Set]]
-// card ID:: A-020
 // ---
-// Roll 1d20 for each Monster in play (including those that are Knocked Out). The one that gets the lowest number takes 4 damage.
+// Roll 1d20 for each Monster on the Battlefield (including those that are Knocked Out). The one that gets the lowest number takes 4 damage.

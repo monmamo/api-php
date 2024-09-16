@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Comatose implements Skill
-{
-}
+class Comatose implements Skill {}
 
 //[[Attack]] [[Physical Mode]]
 //variables::

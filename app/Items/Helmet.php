@@ -1,10 +1,10 @@
 <?php
+
 namespace App\Items;
-class Helmet implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class Helmet implements Item {}
 
 // metatype:: [[Item]] [[Durable]] #UNDEFINED
 // Lucky Helmet https://bulbapedia.bulbagarden.net/wiki/Lucky_Helmet_(Ancient_Origins_77)

@@ -38,9 +38,6 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  */
 final class Handler extends \Illuminate\Foundation\Exceptions\Handler
 {
-    /**
-     *
-     */
     private static $_dump_cache = [];
 
     /**
@@ -87,7 +84,6 @@ final class Handler extends \Illuminate\Foundation\Exceptions\Handler
     ];
 
     /**
-     *
      * @group unary
      *
      * @uses \header (native) Sends a raw HTTP header.
@@ -131,7 +127,6 @@ final class Handler extends \Illuminate\Foundation\Exceptions\Handler
      *
      * @see https://laravel.com/docs/9.x/errors#global-log-context
      *
-     *
      * @author Laravel
      * @group nonary
      *
@@ -145,7 +140,6 @@ final class Handler extends \Illuminate\Foundation\Exceptions\Handler
     }
 
     /**
-     *
      * @group key-value-signature
      * @group trinary
      *
@@ -157,7 +151,6 @@ final class Handler extends \Illuminate\Foundation\Exceptions\Handler
     }
 
     /**
-     *
      * @group nonary
      */
     public static function clearDumpCache(): void
@@ -166,7 +159,6 @@ final class Handler extends \Illuminate\Foundation\Exceptions\Handler
     }
 
     /**
-     *
      * @group nonary
      *
      * @uses \App\Exceptions\Handler::_exit
@@ -201,7 +193,6 @@ final class Handler extends \Illuminate\Foundation\Exceptions\Handler
     }
 
     /**
-     *
      * @group nonary
      *
      * @uses \App\Dumping\dump
@@ -285,7 +276,6 @@ final class Handler extends \Illuminate\Foundation\Exceptions\Handler
      *
      * Don't capture an exception thrown here. \\Illuminate\Foundation\Bootstrap\HandleExceptions catches it here.
      *
-     *
      * @extends \Illuminate\Foundation\Exceptions\Handler::report
      * @group unary
      *
@@ -304,7 +294,6 @@ final class Handler extends \Illuminate\Foundation\Exceptions\Handler
 
     /**
      * Returns whether the exception should be reported.
-     *
      *
      * @extends \Illuminate\Foundation\Exceptions\Handler::shouldReport
      * @group unary

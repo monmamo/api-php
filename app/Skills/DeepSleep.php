@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class DeepSleep implements Skill
-{
-}
+class DeepSleep implements Skill {}
 
 //Requires [[Psychos]].
 //# playable card::

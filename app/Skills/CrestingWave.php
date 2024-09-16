@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class CrestingWave implements Skill
-{
-}
+class CrestingWave implements Skill {}
 
 // [[Attack]]
 //variables::

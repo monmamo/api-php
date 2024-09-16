@@ -1,9 +1,9 @@
 <?php
+
 namespace App\Items;
-class Vest implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class Vest implements Item {}
 
 // metatype:: [[Item]]

@@ -1,15 +1,11 @@
-<x-card.Catastrophe :$cardNumber card-name="Extraordinary Comeback" >
+@push('background')
+{{ view('Catastrophe.background') }}
+@endpush
+
+<x-card :$cardNumber card-name="Extraordinary Comeback" >
+<x-card.concept-card type="Catastrophe" />
 
 </x-card.Catastrophe>
-    <x-slot:card-rules>Remove all damage from your Monsters.</x-slot:card-rules>
-    "stats": null,
-    "subtypes": [],
-    "image": {
-        "filename": null,
-        
-        "source": null,
-        
-        "prompt": null
-    },
-    
-}
+    <x-card.rulebox>
+<x-slot:normal>The player playing this card may remove all damage from his Monsters.</x-slot:normal>
+</x-card.rulebox>

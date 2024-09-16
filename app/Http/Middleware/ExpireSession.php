@@ -6,16 +6,12 @@ use App\Enums\SessionVariables;
 use App\Http\NormalizeResponse;
 use Illuminate\Http\Request;
 
-/**
- *
- */
 final class ExpireSession
 {
     use NormalizeResponse;
 
     /**
      * Massages the request per the needs of the middleware.
-     *
      *
      * @implements \App\Http\NormalizeResponse::massageRequest
      * @group unary

@@ -5,19 +5,12 @@ namespace App\States;
 use App\Enums\Sections;
 use App\Slug;
 
-/**
- *
- */
 trait SlugIsBasename
 {
-    /**
-     *
-     */
     private Sections $_enum;
 
     /**
      * Returns the section enumeration for this object.
-     *
      *
      * @group nonary
      *
@@ -30,7 +23,6 @@ trait SlugIsBasename
     }
 
     /**
-     *
      * @group nonary
      *
      * @uses \App\Slug::forClassBasename

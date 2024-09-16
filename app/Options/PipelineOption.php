@@ -5,9 +5,6 @@ namespace App\Options;
 use App\Contracts\HasContext;
 use App\Contracts\Optional;
 
-/**
- *
- */
 class PipelineOption implements HasContext, Optional
 {
     use ContextualLazyOption;
@@ -32,7 +29,6 @@ class PipelineOption implements HasContext, Optional
     /**
      * The generator should never return an option.
      *
-     *
      * @implements \App\Options\ContextualLazyOption::argumentsToGenerator
      * @group variadic
      */
@@ -42,7 +38,6 @@ class PipelineOption implements HasContext, Optional
     }
 
     /**
-     *
      * @implements \App\Options\ContextualLazyOption::generator
      * @group variadic
      *
@@ -62,7 +57,6 @@ class PipelineOption implements HasContext, Optional
     }
 
     /**
-     *
      * @group sugar Consider implementing literally instead of using this method.
      * @group variadic
      *

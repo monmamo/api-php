@@ -23,8 +23,6 @@ use Illuminate\Contracts\Database\Eloquent\Castable;
  * DO NOT use these:
  * - \App\Concerns\AlwaysSingleValue
  * - \App\Concerns\AlwaysDefined (handled by \App\Concerns\InnerObject)
- *
- *
  */
 final class DateTimeOption implements Castable, HasValue, Normalizable, Optional
 {
@@ -33,14 +31,10 @@ final class DateTimeOption implements Castable, HasValue, Normalizable, Optional
     use SelectThroughFilter; // WARNING We may need to implement specific ::reject and ::select.
     use ToStringFromAsString;
 
-    /**
-     *
-     */
     private Carbon $_inner_value;
 
     /**
      * Constructor.
-     *
      *
      * @group binary
      * @group magic
@@ -62,7 +56,6 @@ final class DateTimeOption implements Castable, HasValue, Normalizable, Optional
      *
      * 💡 This makes this object callable, eliminating the need for a tap method.
      *
-     *
      * @implements \App\Contracts\TransformativeInvoker::__invoke
      * @group magic
      * @group nonary
@@ -82,7 +75,6 @@ final class DateTimeOption implements Castable, HasValue, Normalizable, Optional
     }
 
     /**
-     *
      * @implements \App\Concerns\InnerObject::object
      * @group nonary
      * @group resolving
@@ -94,7 +86,6 @@ final class DateTimeOption implements Castable, HasValue, Normalizable, Optional
 
     /**
      * Runs the given Closure bound to this item then returns the result.
-     *
      *
      * @group accessor
      * @group unary
@@ -129,7 +120,6 @@ final class DateTimeOption implements Castable, HasValue, Normalizable, Optional
     /**
      * Returns a representation of this object as a string.
      *
-     *
      * @implements \App\Interfaces\Contracts\Stringable::asString
      * @group accessor
      * @group nonary
@@ -143,7 +133,6 @@ final class DateTimeOption implements Castable, HasValue, Normalizable, Optional
     /**
      * Returns the caster class to use when casting from / to this cast target.
      *
-     *
      * @implements \Illuminate\Contracts\Database\Eloquent\Castable::castUsing
      *
      * @param array<string, mixed> $arguments
@@ -154,7 +143,6 @@ final class DateTimeOption implements Castable, HasValue, Normalizable, Optional
     }
 
     /**
-     *
      * @implements \App\Contracts\Dumps::dump
      * @group fluent
      * @group nonary
@@ -167,9 +155,6 @@ final class DateTimeOption implements Castable, HasValue, Normalizable, Optional
         return $this;
     }
 
-    /**
-     *
-     */
     public static function endOfYear(?int $year = null): static
     {
         return new static(Year::endOfYear($year ?? \date('Y')));
@@ -181,7 +166,6 @@ final class DateTimeOption implements Castable, HasValue, Normalizable, Optional
      * This method allows objects to be used as keys in structures such as Ds\Map and Ds\Set, or any other lookup structure that honors this interface.
      *
      * @see https://www.php.net/manual/en/ds-hashable.equals.php
-     *
      *
      * @implements \App\Interfaces\Contracts\Equality::equals
      * @implements \Ds\Hashable::equals
@@ -199,7 +183,6 @@ final class DateTimeOption implements Castable, HasValue, Normalizable, Optional
     }
 
     /**
-     *
      * @implements \App\Contracts\Foldable::foldLeft
      * @group binary
      *
@@ -212,7 +195,6 @@ final class DateTimeOption implements Castable, HasValue, Normalizable, Optional
     }
 
     /**
-     *
      * @implements \App\Contracts\Foldable::foldRight
      * @group binary
      *
@@ -226,7 +208,6 @@ final class DateTimeOption implements Castable, HasValue, Normalizable, Optional
 
     /**
      * Returns the "normal" value of the object, as defined by \App\Casts\NormalScalar.
-     *
      *
      * @implements \App\Contracts\Normalizable::normalized
      * @group nonary

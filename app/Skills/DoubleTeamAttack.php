@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class DoubleTeamAttack implements Skill
-{
-}
+class DoubleTeamAttack implements Skill {}
 
 // [[Attack]]
 //variables::

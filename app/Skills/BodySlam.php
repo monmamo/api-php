@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class BodySlam implements Skill
-{
-}
+class BodySlam implements Skill {}
 
 // [[Attack]] [[Physical Mode]]
 //variables::

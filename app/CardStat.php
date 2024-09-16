@@ -1,5 +1,7 @@
 <?php
-namespace App;
-interface CardStat extends \App\Contracts\HasIcon{
 
-}
+namespace App;
+
+use App\Contracts\HasIcon;
+
+interface CardStat extends HasIcon {}

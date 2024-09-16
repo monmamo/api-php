@@ -42,8 +42,6 @@ use PHPUnit\Framework\Constraint\Constraint;
  *
  * Do not implement the following methods:
  * - __toString
- *
- *
  */
 trait MultivalueOption
 {
@@ -59,15 +57,12 @@ trait MultivalueOption
 
     /**
      * Indicates that the object's string representation should be escaped when __toString is invoked.
-     *
-     *
      */
     protected bool $escapeWhenCastingToString = false;
 
     /**
      * Method invoked when attempting invoke an inaccessible or undefined method of this class in an object context.
      * Dynamically passes a method to the underlying object.
-     *
      *
      * @group magic
      * @group magic-call-signature
@@ -89,7 +84,6 @@ trait MultivalueOption
      * Retrieves the inner value or pipes it through any number of transforms.
      *
      * 💡 This makes this object callable, eliminating the need for a tap method.
-     *
      *
      * @implements \App\Contracts\TransformativeInvoker::__invoke
      * @group magic
@@ -116,7 +110,6 @@ trait MultivalueOption
      * Triggered by calling isset() or empty() on inaccessible (protected or private) or non-existing properties.
      * Dynamically check a property exists on the underlying object.
      *
-     *
      * @group accessor
      * @group accessor-by-key
      * @group magic
@@ -132,8 +125,6 @@ trait MultivalueOption
     }
 
     /**
-     *
-     *
      * @uses \App\Options\MultivalueOption::getInnerIterator
      * @uses \iterator_to_array (native) Copies the output of an iterator into an array.
      */
@@ -143,7 +134,6 @@ trait MultivalueOption
     }
 
     /**
-     *
      * @group associative
      * @group multivalue
      * @group nonary
@@ -170,7 +160,6 @@ trait MultivalueOption
     }
 
     /**
-     *
      * @group associative
      * @group multivalue
      * @group nonary
@@ -199,7 +188,6 @@ trait MultivalueOption
     /**
      * Not the same as self::reduce.
      *
-     *
      * @group binary
      *
      * @uses \App\Options\MultivalueOption::getInnerIterator
@@ -216,7 +204,6 @@ trait MultivalueOption
     }
 
     /**
-     *
      * @implements \App\Concerns\Deferable::internalArguments
      * @group nonary
      *
@@ -230,7 +217,6 @@ trait MultivalueOption
 
     /**
      * Determines whether all items pass the given truth test.
-     *
      *
      * @group unary
      */
@@ -247,7 +233,6 @@ trait MultivalueOption
 
     /**
      * Runs the given Closure bound to this item then returns the result.
-     *
      *
      * @group accessor
      * @group unary
@@ -282,7 +267,6 @@ trait MultivalueOption
     /**
      * Alias for the "avg" method.
      *
-     *
      * @group unary
      *
      * @param null|(callable(TValue): float|int)|string $callback
@@ -296,7 +280,6 @@ trait MultivalueOption
 
     /**
      * Don't use \App\Dumping\dumpLabeled here. We want to dump the inner array as a whole, not as labeled items.
-     *
      *
      * @implements \App\Contracts\Dumps::dump
      * @group fluent
@@ -318,7 +301,6 @@ trait MultivalueOption
     /**
      * Indicate that the model's string representation should be escaped when __toString is invoked.
      *
-     *
      * @group unary
      *
      * @param bool $escape
@@ -338,7 +320,6 @@ trait MultivalueOption
     /**
      * Determines whether all items pass the given truth test.
      *
-     *
      * @group unary
      */
     public function every(Constraint $predicate): bool
@@ -353,7 +334,6 @@ trait MultivalueOption
      * If the option is empty, it is returned immediately without applying the callable.
      *
      * If the option is non-empty, the callable is applied, and if it returns true, the option itself is returned; otherwise, None is returned.
-     *
      *
      * @implements \App\Contracts\Filterable::filter
      * @group unary
@@ -370,7 +350,6 @@ trait MultivalueOption
      *
      * If the option is non-empty, the callable is applied, and if it returns false, the option itself is returned; otherwise, None is returned.
      *
-     *
      * @implements \App\Contracts\Filterable::filterNot
      * @group unary
      *
@@ -386,7 +365,6 @@ trait MultivalueOption
      *
      * WARNING Doesn't do the assertion (instance of \App\Contracts\Optional) for the return value of the callable.
      *
-     *
      * @implements \App\Contracts\Mappable::flatMap
      * @group unary
      *
@@ -401,7 +379,6 @@ trait MultivalueOption
     }
 
     /**
-     *
      * @implements \App\Contracts\Foldable::foldLeft
      * @group binary
      *
@@ -414,7 +391,6 @@ trait MultivalueOption
     }
 
     /**
-     *
      * @implements \App\Contracts\Foldable::foldRight
      * @group binary
      *
@@ -428,7 +404,6 @@ trait MultivalueOption
 
     /**
      * Calculate the fraction of items that pass a given truth test.
-     *
      *
      * @group unary
      *
@@ -446,7 +421,6 @@ trait MultivalueOption
     /**
      * Returns the value if available, or throws an exception otherwise.
      *
-     *
      * @implements \App\Contracts\HasValue::get
      * @group nonary
      *
@@ -460,7 +434,6 @@ trait MultivalueOption
     }
 
     /**
-     *
      * @implements \OuterIterator::getInnerIterator
      */
     public function getInnerIterator(): ?\Iterator
@@ -472,7 +445,6 @@ trait MultivalueOption
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -492,7 +464,6 @@ trait MultivalueOption
      * 💢 Can't be declared as boolean because \Illuminate\Support\Optional::isEmpty and  \PhpOption\Option::isEmpty are not type-declared.
      *
      * 💢 Do not implement as "return $this->count() === 0;" See note in \App\Concerns\EmptyByCount.
-     *
      *
      * @implements \App\Contracts\Emptyable::isEmpty
      * @implements \Illuminate\Support\Optional::isEmpty
@@ -515,7 +486,6 @@ trait MultivalueOption
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -526,7 +496,6 @@ trait MultivalueOption
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -544,7 +513,6 @@ trait MultivalueOption
      * 💢 Can't be declared as boolean because \Illuminate\Support\Optional::isNotEmpty and  \PhpOption\Option::isNotEmpty are not type-declared.
      *
      * 💢 Do not implement as "return $this->count() !== 0;" See note in \App\Concerns\EmptyByCount.
-     *
      *
      * @implements \App\Contracts\Emptyable::isNotEmpty
      * @implements \Illuminate\Support\Optional::isNotEmpty
@@ -567,7 +535,6 @@ trait MultivalueOption
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -579,7 +546,6 @@ trait MultivalueOption
 
     /**
      * Converts the object into something that can be serialized into JSON.
-     *
      *
      * @implements \JsonSerializable::jsonSerialize
      * @group accessor
@@ -612,7 +578,6 @@ trait MultivalueOption
     /**
      * Applies the callable to all non-empty values in the collection.
      *
-     *
      * @implements \App\Contracts\Mappable::map
      * @group unary
      *
@@ -629,7 +594,6 @@ trait MultivalueOption
     /**
      * Returns the numerical maximum value of the collection.
      *
-     *
      * @group nonary
      *
      * @uses \App\Options\MultivalueOption::reduce
@@ -643,7 +607,6 @@ trait MultivalueOption
 
     /**
      * Returns the numerical minimum value of the collection.
-     *
      *
      * @group nonary
      *
@@ -659,7 +622,6 @@ trait MultivalueOption
     /**
      * Determines whether all items pass the given truth test.
      *
-     *
      * @group unary
      *
      * @uses \App\Options\MultivalueOption::_reduce
@@ -674,7 +636,6 @@ trait MultivalueOption
 
     /**
      * Partition the collection into two arrays using the given callback or key.
-     *
      *
      * @group unary
      *
@@ -711,7 +672,6 @@ trait MultivalueOption
     /**
      * Reduces the collection to a single value.
      *
-     *
      * @group binary
      * @group reductive
      *
@@ -745,7 +705,6 @@ trait MultivalueOption
     /**
      * Alias for the "contains" method.
      *
-     *
      * @group trinary
      *
      * @param (callable(TValue, TKey): bool)|string|TValue $key
@@ -762,8 +721,6 @@ trait MultivalueOption
     /**
      * Returns the numerical sum of the collection.
      *
-     *
-     *
      * @uses \App\Options\MultivalueOption::_reduce
      */
     public function sum()
@@ -775,7 +732,6 @@ trait MultivalueOption
     }
 
     /**
-     *
      * @group variadic
      *
      * @uses \App\Callables\transform
@@ -788,7 +744,6 @@ trait MultivalueOption
 
     /**
      * Returns the collection of items as JSON.
-     *
      *
      * @group unary
      *
@@ -805,7 +760,6 @@ trait MultivalueOption
 
     /**
      * Returns only unique items from the collection array.
-     *
      *
      * @group binary
      *
@@ -839,7 +793,6 @@ trait MultivalueOption
     /**
      * Returns only unique items from the collection array using strict comparison.
      *
-     *
      * @group unary
      *
      * @param null|(callable(TValue, TKey): mixed)|string $key
@@ -853,7 +806,6 @@ trait MultivalueOption
 
     /**
      * Applies the callback unless the collection is empty.
-     *
      *
      * @group binary
      *
@@ -872,7 +824,6 @@ trait MultivalueOption
     /**
      * Applies the callback unless the collection is not empty.
      *
-     *
      * @group binary
      *
      * @template TUnlessNotEmptyReturnType
@@ -889,7 +840,6 @@ trait MultivalueOption
 
     /**
      * Returns a single key's value from the first matching item in the collection.
-     *
      *
      * @group binary
      *
@@ -915,7 +865,6 @@ trait MultivalueOption
     /**
      * Applies the callback if the collection is empty.
      *
-     *
      * @group binary
      *
      * @template TWhenEmptyReturnType
@@ -932,7 +881,6 @@ trait MultivalueOption
 
     /**
      * Applies the callback if the collection is not empty.
-     *
      *
      * @group binary
      *

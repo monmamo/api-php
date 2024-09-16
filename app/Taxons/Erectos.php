@@ -8,13 +8,14 @@ use App\Contracts\Taxon;
 
 final class Erectos implements Taxon
 {
+    public static function rarity(): float
+    {
+        return 4;
+    }
+
     public static function sizeDelta(): float
     {
         return 0;
-    }
-    public static function   rarity(): float
-    {
-        return 4;
     }
 }
 
@@ -25,5 +26,3 @@ final class Erectos implements Taxon
 // image generation prompt:: [[needs representative image]]
 
 // automatic traits:: [[Erect Posture]]
-
-

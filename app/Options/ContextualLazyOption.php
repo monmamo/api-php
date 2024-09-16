@@ -8,27 +8,16 @@ use App\Contracts\Optional;
 use App\Stringable;
 
 /**
- *
- *
  * @template T
  */
 trait ContextualLazyOption
 {
     use InnerOption;
 
-    /**
-     *
-     */
     private array $_arguments_to_generator = [];
 
-    /**
-     *
-     */
     private array $_items;
 
-    /**
-     *
-     */
     private ?Optional $_option;
 
     /**
@@ -46,7 +35,6 @@ trait ContextualLazyOption
     /**
      * The generator should never return an option.
      *
-     *
      * @implements \App\Options\ContextualLazyOption::argumentsToGenerator
      * @group variadic
      */
@@ -55,14 +43,12 @@ trait ContextualLazyOption
     /**
      * The generator should never return an option.
      *
-     *
      * @implements \App\Options\ContextualLazyOption::generator
      * @group variadic
      */
     abstract protected function generator(...$arguments): \Generator;
 
     /**
-     *
      * @implements \App\Options\LazyOption::makeOption
      * @group nonary
      * @group resolving
@@ -136,7 +122,6 @@ trait ContextualLazyOption
     /**
      * Yields the object's context information.
      *
-     *
      * @implements \App\Contracts\HasContext::context
      * @group multivalue
      * @group nonary
@@ -151,7 +136,6 @@ trait ContextualLazyOption
 
     /**
      * Resolves the lazy value.
-     *
      *
      * @implements \App\Contracts\Lazy::resolve
      * @group nonary

@@ -9,7 +9,6 @@ use App\Enums\FontAwesomeIcons;
  *
  * @see docs/groups/nonrecursion.md
  *
- *
  * @extends \Exception
  * @extends \LogicException
  * @implements \Throwable
@@ -18,7 +17,6 @@ final class RecursionException extends \LogicException implements \Stringable
 {
     /**
      * Constructor.
-     *
      *
      * @extends \LogicException::__construct
      * @group binary
@@ -51,7 +49,6 @@ final class RecursionException extends \LogicException implements \Stringable
     /**
      * Returns a representation of this object as a string.
      *
-     *
      * @group magic
      * @group magic-tostring-signature
      * @group nonary
@@ -63,7 +60,6 @@ final class RecursionException extends \LogicException implements \Stringable
 
     /**
      * @see https://fontawesome.com/icons/bug?s=solid
-     *
      *
      * @implements \App\Interfaces\Properties\Icon::icon
      * @group html

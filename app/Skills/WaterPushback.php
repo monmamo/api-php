@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class WaterPushback implements Skill
-{
-}
+class WaterPushback implements Skill {}
 
 // [[Defense]]
 //variables::

@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Fireball implements Skill
-{
-}
+class Fireball implements Skill {}
 
 // [[Attack]]
 //requirements:: [[Pyros]]

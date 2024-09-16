@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class WarRumble implements Skill
-{
-}
+class WarRumble implements Skill {}
 
 //[[Attack]] [[Sonic Mode]]
 //variables::

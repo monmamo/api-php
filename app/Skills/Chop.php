@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Chop implements Skill
-{
-}
+class Chop implements Skill {}
 
 //[[Attack]] [[Physical Mode]]
 //variables::

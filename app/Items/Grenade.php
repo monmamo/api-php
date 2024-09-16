@@ -1,10 +1,10 @@
 <?php
+
 namespace App\Items;
-class Grenade implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class Grenade implements Item {}
 
 // metatype:: [[Item]] [[Consumable]] [[Weapon]]
 

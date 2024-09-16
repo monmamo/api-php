@@ -4,9 +4,6 @@ namespace App\Enums;
 
 use Illuminate\Support\Str;
 
-/**
- *
- */
 enum ContextGroups
 {
     case Application;

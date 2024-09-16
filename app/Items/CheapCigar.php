@@ -1,10 +1,10 @@
 <?php
+
 namespace App\Items;
-class CheapCigar implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class CheapCigar implements Item {}
 
 // metatype:: [[Item]] [[Consumable]]
 
@@ -12,7 +12,7 @@ class CheapCigar implements \App\Contracts\Item {}
 // card set:: [[Base Card Set]]
 // card ID:: A-033
 // ---
-// Counts as one [[Fire]] mana and two [[Smoke]] mana while in play.
-// Upkeep phase:: Attach this card to a Mobster or Bystander card in play.
+// Counts as one [[Fire]] mana and two [[Smoke]] mana while on the Battlefield.
+// UPKEEP:: Attach this card to a Mobster or Bystander card on the Battlefield.
 // Resolution phase:: For 5 turns, Monster effects are -2d4 effective.
-// 
+//

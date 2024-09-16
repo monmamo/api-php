@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class WaterShield implements Skill
-{
-}
+class WaterShield implements Skill {}
 
 // [[Defense]]
 //[[defensive skill, trait or variable]]

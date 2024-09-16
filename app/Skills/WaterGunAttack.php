@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class WaterGunAttack implements Skill
-{
-}
+class WaterGunAttack implements Skill {}
 
 // [[Attack]] [[Physical Mode]]
 //variables::

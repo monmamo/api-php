@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Contracts;
 
-interface Place extends HasName{}
+interface Place extends HasName {}

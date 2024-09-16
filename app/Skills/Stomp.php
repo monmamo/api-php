@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Stomp implements Skill
-{
-}
+class Stomp implements Skill {}
 
 // [[Attack]] [[Physical Mode]]
 //variables::

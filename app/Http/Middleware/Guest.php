@@ -5,16 +5,12 @@ namespace App\Http\Middleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-/**
- *
- */
 final class Guest
 {
     /**
      * Handles an incoming request.
      *
      * @author handler
-     *
      * @group variadic
      *
      * @param \Illuminate\Http\Request $request (injected) The request we are handling.

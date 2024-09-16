@@ -10,7 +10,6 @@ use Spatie\Ignition\Contracts\Solution;
 /**
  * An exception indicating that a method was not implemented.
  *
- *
  * @extends \BadMethodCallException
  * @extends \Exception
  * @extends \LogicException
@@ -43,7 +42,6 @@ final class InvalidEmailAddressException extends \LogicException implements Prov
     }
 
     /**
-     *
      * @group nonary
      */
     public function getSolution(): Solution

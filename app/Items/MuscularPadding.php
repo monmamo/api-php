@@ -1,10 +1,10 @@
 <?php
+
 namespace App\Items;
-class MuscularPadding implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class MuscularPadding implements Item {}
 
 // metatype:: [[Item]] [[Durable]] [[Wearable]] [[Garment]]
 // source or inspiration:: Buff Padding https://bulbapedia.bulbagarden.net/wiki/Buff_Padding_(Team_Up_136)

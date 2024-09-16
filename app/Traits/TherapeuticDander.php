@@ -6,9 +6,9 @@ use App\Contracts\Feature;
 use App\GeneralAttributes\Requires;
 use App\Taxons\Floros;
 
-// Removes damage from all Monsters in play.
+// Removes damage from all Monsters on the Battlefield.
 
-// Upkeep phase:: Remove 1d4 damage from each Monster in play (both yours and your opponents').
+// UPKEEP:: Remove 1d4 damage from each Monster on the Battlefield (both yours and your opponents').
 
 #[Requires(Floros::class)]
 

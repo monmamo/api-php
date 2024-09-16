@@ -3,7 +3,6 @@
 namespace App\Methods\Make;
 
 use App\Callables\Concerns\Getter;
-use App\Casts\Meta\TrimmedString;
 use App\ColumnReference;
 use App\Concerns\MultivalueContext;
 use App\Concerns\PipelineFunctionality;
@@ -162,7 +161,7 @@ trait MakeForEnum
      */
     public static function makeFromString(string $source)
     {
-        $source =  \App\Strings\clean($source);
+        $source = \App\Strings\clean($source);
 
         if ($source === '') {
             return self::makeDefaultValue();

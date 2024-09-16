@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Berserk implements Skill
-{
-}
+class Berserk implements Skill {}
 
 //variables::
 // Training Experience

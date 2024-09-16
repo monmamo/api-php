@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Drought implements Skill
-{
-}
+class Drought implements Skill {}
 
 //[[environmental skill]]
 

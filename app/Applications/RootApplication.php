@@ -8,7 +8,6 @@ use Illuminate\Contracts\Auth\Guard;
 class RootApplication extends HttpApplication
 {
     /**
-     *
      * @group unary
      */
     public function makeGuardObject(): Guard

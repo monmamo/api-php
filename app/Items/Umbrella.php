@@ -1,9 +1,9 @@
 <?php
+
 namespace App\Items;
-class Umbrella implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class Umbrella implements Item {}
 
 // metatype:: [[Item]]

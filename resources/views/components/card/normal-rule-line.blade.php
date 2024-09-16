@@ -1,1 +1,0 @@
-<tspan x="50%" dy="35" class="bodytext">{{$slot}}</tspan>

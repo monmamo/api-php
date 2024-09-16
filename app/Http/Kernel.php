@@ -11,7 +11,6 @@ use Illuminate\Routing\Middleware\ThrottleRequests;
 /**
  * I persomally do not like using aliases because Telescope doesn't resolve the aliases to the actual classes.
  *
- *
  * @author Laravel
  */
 final class Kernel extends \Illuminate\Foundation\Http\Kernel
@@ -45,7 +44,7 @@ final class Kernel extends \Illuminate\Foundation\Http\Kernel
      */
     protected $middlewareGroups = [
         'web' => [],
-        'api' => []
+        'api' => [],
     ];
 
     /**

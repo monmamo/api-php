@@ -12,4 +12,4 @@ trait Formatting
 <path d="M0 0h750v1050H0z" fill="url(#background-gradient)"></path>
 SVG;
     }
-};
+}

@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Withdraw implements Skill
-{
-}
+class Withdraw implements Skill {}
 
 // [[Defense]]
 //Requires [[Shell]].

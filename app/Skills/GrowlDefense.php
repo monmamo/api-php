@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class GrowlDefense implements Skill
-{
-}
+class GrowlDefense implements Skill {}
 
 // [[Defense]]
 //defense skill [[Physical Mode]]

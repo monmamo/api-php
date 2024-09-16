@@ -8,13 +8,9 @@ use App\Contracts\Normalizable;
 use App\Contracts\Optional;
 use App\Strings\InlineText;
 
-/**
- *
- */
 final class UnitEnumOption extends InlineText implements HasValue, Normalizable, Optional
 {
     /**
-     *
      * @group mutator
      * @group unary
      *
@@ -27,7 +23,6 @@ final class UnitEnumOption extends InlineText implements HasValue, Normalizable,
 
     /**
      * Runs the given Closure bound to this item then returns the result.
-     *
      *
      * @group accessor
      * @group unary
@@ -62,7 +57,6 @@ final class UnitEnumOption extends InlineText implements HasValue, Normalizable,
     /**
      * Returns a representation of this object as a string.
      *
-     *
      * @implements \App\Interfaces\Contracts\Stringable::asString
      * @group accessor
      * @group nonary
@@ -79,7 +73,6 @@ final class UnitEnumOption extends InlineText implements HasValue, Normalizable,
      * This method allows objects to be used as keys in structures such as Ds\Map and Ds\Set, or any other lookup structure that honors this interface.
      *
      * @see https://www.php.net/manual/en/ds-hashable.equals.php
-     *
      *
      * @implements \App\Interfaces\Contracts\Equality::equals
      * @implements \Ds\Hashable::equals
@@ -102,7 +95,6 @@ final class UnitEnumOption extends InlineText implements HasValue, Normalizable,
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -115,7 +107,6 @@ final class UnitEnumOption extends InlineText implements HasValue, Normalizable,
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -126,7 +117,6 @@ final class UnitEnumOption extends InlineText implements HasValue, Normalizable,
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -137,7 +127,6 @@ final class UnitEnumOption extends InlineText implements HasValue, Normalizable,
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive

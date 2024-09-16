@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Takedown implements Skill
-{
-}
+class Takedown implements Skill {}
 
 //[[Attack]] [[Physical Mode]]
 //variables::

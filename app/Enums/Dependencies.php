@@ -9,8 +9,6 @@ use Illuminate\Container\Container;
  *
  * Ours unless noted otherwise:
  * [L] = Laravel.
- *
- *
  */
 enum Dependencies: string
 {
@@ -27,7 +25,6 @@ enum Dependencies: string
     case Search = 'search';
 
     /**
-     *
      * @group unary
      *
      * @uses \Illuminate\Container\Container::getInstance

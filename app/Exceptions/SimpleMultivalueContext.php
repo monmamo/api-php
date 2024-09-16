@@ -6,8 +6,6 @@ use App\Concerns\MultivalueContext;
 
 /**
  * User MUST implement App\Contracts\HasContext.
- *
- *
  */
 trait SimpleMultivalueContext
 {
@@ -15,7 +13,6 @@ trait SimpleMultivalueContext
 
     /**
      * Constructor.
-     *
      *
      * @group binary
      * @group magic

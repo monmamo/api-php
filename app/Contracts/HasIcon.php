@@ -6,5 +6,5 @@ use Illuminate\Contracts\Support\Renderable;
 
 interface HasIcon
 {
-    public  function icon(): Renderable;
+    public function icon(): Renderable;
 }

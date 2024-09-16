@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Supersonic implements Skill
-{
-}
+class Supersonic implements Skill {}
 
 //[[Attack]] [[Sonic Mode]]
 //variables::

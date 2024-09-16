@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class LightningPunch implements Skill
-{
-}
+class LightningPunch implements Skill {}
 
 // [[Attack]]
 //Damage::

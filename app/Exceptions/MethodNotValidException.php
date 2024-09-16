@@ -5,7 +5,6 @@ namespace App\Exceptions;
 /**
  * An exception indicating that a method was not implemented.
  *
- *
  * @extends \BadMethodCallException
  * @extends \Exception
  * @extends \LogicException
@@ -15,7 +14,6 @@ final class MethodNotValidException extends \BadMethodCallException
 {
     /**
      * Constructor.
-     *
      *
      * @group binary
      * @group magic

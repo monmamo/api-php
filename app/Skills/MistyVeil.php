@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class MistyVeil implements Skill
-{
-}
+class MistyVeil implements Skill {}
 
 // [[Defense]]
 //variables::

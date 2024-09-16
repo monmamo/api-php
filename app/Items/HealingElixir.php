@@ -1,10 +1,10 @@
 <?php
+
 namespace App\Items;
-class HealingElixir implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class HealingElixir implements Item {}
 
 // metatype:: [[Item]] [[Consumable]] [[Elixir]]
 

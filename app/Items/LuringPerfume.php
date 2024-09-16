@@ -1,10 +1,10 @@
 <?php
+
 namespace App\Items;
-class LuringPerfume implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class LuringPerfume implements Item {}
 
 // metatype:: [[Item]] [[Consumable]] [[Lure]]
 // source or inspiration:: Erika's Perfume PTCG card https://bulbapedia.bulbagarden.net/wiki/Erika%27s_Perfume_(Gym_Heroes_110)
@@ -14,4 +14,4 @@ class LuringPerfume implements \App\Contracts\Item {}
 // card ID:: A-148
 // ---
 // Choose one opponent. Look at that opponent's hand. If he or she has any Monster cards there, you may put any number of them onto the Battlefield.
-// 
+//

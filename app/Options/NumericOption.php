@@ -26,9 +26,6 @@ use Illuminate\Support\Collection;
 use PhpOption\Option;
 use PHPUnit\Framework\Constraint\Constraint;
 
-/**
- *
- */
 final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable, Filterable, Foldable, HasValue, Mappable, Normalizable, Optional, TransformativeInvoker
 {
     use AlwaysGettable;
@@ -42,13 +39,10 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
 
     /**
      * The underlying value.
-     *
-     *
      */
     protected $_value;
 
     /**
-     *
      * @group mutator
      * @group unary
      *
@@ -70,7 +64,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
      * Retrieves the inner value or pipes it through any number of transforms.
      *
      * 💡 This makes this object callable, eliminating the need for a tap method.
-     *
      *
      * @implements \App\Contracts\TransformativeInvoker::__invoke
      * @group magic
@@ -94,7 +87,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
      * Triggered by calling isset() or empty() on inaccessible (protected or private) or non-existing properties.
      * Dynamically check a property exists on the underlying object.
      *
-     *
      * @group accessor
      * @group accessor-by-key
      * @group magic
@@ -112,7 +104,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     /**
      * Returns a representation of this object as a string.
      *
-     *
      * @group magic
      * @group magic-tostring-signature
      * @group nonary
@@ -124,7 +115,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     }
 
     /**
-     *
      * @implements \App\Concerns\Deferable::internalArguments
      * @group nonary
      */
@@ -134,7 +124,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     }
 
     /**
-     *
      * @implements \App\Interfaces\Contracts\Booleanable::asBoolean
      * @group accessor
      * @group nonary
@@ -153,7 +142,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     /**
      * Returns a representation of this object as a float.
      *
-     *
      * @implements \App\Interfaces\Contracts\Floatble::asFloat
      * @group accessor
      * @group nonary
@@ -166,7 +154,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
 
     /**
      * Returns a representation of this object as an integer.
-     *
      *
      * @implements \App\Interfaces\Contracts\Integerable::asInteger
      * @group accessor
@@ -182,7 +169,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
 
     /**
      * Runs the given Closure bound to this item then returns the result.
-     *
      *
      * @group accessor
      * @group unary
@@ -217,7 +203,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     /**
      * Returns a representation of this object as a string.
      *
-     *
      * @implements \App\Interfaces\Contracts\Stringable::asString
      * @group accessor
      * @group nonary
@@ -229,7 +214,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     }
 
     /**
-     *
      * @implements \App\Contracts\Dumps::dump
      * @group fluent
      * @group nonary
@@ -248,7 +232,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
      * This method allows objects to be used as keys in structures such as Ds\Map and Ds\Set, or any other lookup structure that honors this interface.
      *
      * @see https://www.php.net/manual/en/ds-hashable.equals.php
-     *
      *
      * @implements \App\Interfaces\Contracts\Equality::equals
      * @implements \Ds\Hashable::equals
@@ -274,7 +257,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
      *
      * If the option is non-empty, the callable is applied, and if it returns true, the option itself is returned; otherwise, None is returned.
      *
-     *
      * @implements \App\Contracts\Filterable::filter
      * @group unary
      *
@@ -290,7 +272,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
      *
      * If the option is non-empty, the callable is applied, and if it returns false, the option itself is returned; otherwise, None is returned.
      *
-     *
      * @implements \App\Contracts\Filterable::filterNot
      * @group unary
      *
@@ -305,7 +286,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
      * Applies the callable to the value of the option if it is non-empty, and returns the return value of the callable directly.
      * The return value of the callable is expected to be an Option itself; it is not automatically wrapped in Some().
      *
-     *
      * @implements \App\Contracts\Mappable::flatMap
      * @group unary
      *
@@ -317,7 +297,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     }
 
     /**
-     *
      * @implements \App\Contracts\Foldable::foldLeft
      * @group binary
      *
@@ -330,7 +309,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     }
 
     /**
-     *
      * @implements \App\Contracts\Foldable::foldRight
      * @group binary
      *
@@ -344,7 +322,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
 
     /**
      * Returns the value if available, or throws an exception otherwise.
-     *
      *
      * @implements \App\Contracts\HasValue::get
      * @group nonary
@@ -361,7 +338,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     /**
      * Returns an iterator (either as an explicit implementation of \Traversable or an implicit implementation of \Generator with yield statements) that iterates through the component items of this object.
      *
-     *
      * @implements \IteratorAggregate::getIterator
      * @group accessor
      * @group multivalue
@@ -374,7 +350,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -387,7 +362,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -398,7 +372,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -415,7 +388,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
      *
      * 💢 Can't be declared as boolean because \Illuminate\Support\Optional::isEmpty is not type-declared.
      *
-     *
      * @implements \App\Contracts\Emptyable::isNotEmpty
      * @implements \Illuminate\Support\Optional::isNotEmpty
      * @implements \App\Contracts\Emptyable::isNotEmpty
@@ -430,7 +402,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -442,7 +413,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
 
     /**
      * Applies the callable to the value of the option if it is non-empty, and returns the return value of the callable wrapped in Some(). If the option is empty, then the callable is not applied.
-     *
      *
      * @implements \App\Contracts\Mappable::map
      * @group unary
@@ -458,7 +428,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     /**
      * Returns the "normal" value of the object, as defined by \App\Casts\NormalScalar.
      *
-     *
      * @implements \App\Contracts\Normalizable::normalized
      * @group nonary
      */
@@ -468,7 +437,6 @@ final class NumericOption implements \App\Contracts\Deferable, Dumps, Emptyable,
     }
 
     /**
-     *
      * @group variadic
      *
      * @uses \App\Callables\transform

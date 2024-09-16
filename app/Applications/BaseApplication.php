@@ -58,6 +58,11 @@ abstract class BaseApplication extends Application
     }
 
     /**
+     * Stubbed so that we can call it in child destructors.
+     */
+    public function __destruct() {}
+
+    /**
      * Registers the basic bindings into the container.
      *
      * @group nonary
@@ -191,10 +196,4 @@ abstract class BaseApplication extends Application
             $authManager,
         );
     }
-
-    /**
-     * Stubbed so that we can call it in child destructors.
-     */
-    public function __destruct(){}
-
 }

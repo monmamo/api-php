@@ -7,7 +7,6 @@ namespace App\Exceptions;
  *
  * @see docs/groups/nonrecursion.md
  *
- *
  * @extends \Exception
  * @extends \LogicException
  * @implements \Throwable

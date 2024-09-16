@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Tickle implements Skill
-{
-}
+class Tickle implements Skill {}
 
 // [[Attack]]
 //variables::

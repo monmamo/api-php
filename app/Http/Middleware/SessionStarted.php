@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 /**
  * Anything we want to do after the session is started but before the session is authenticated.
  *
- *
  * @author Laravel
  */
 final class SessionStarted
@@ -19,7 +18,6 @@ final class SessionStarted
      * Massages the request per the needs of the middleware.
      *
      * In this case, just call $next($request) and run the result through our resolver.
-     *
      *
      * @implements \App\Http\NormalizeResponse::massageRequest
      * @group unary

@@ -4,8 +4,6 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class PoisonPowder implements Skill
-{
-}
+class PoisonPowder implements Skill {}
 
-//"{{[ ]}} (affects all monsters in play)."
+//"{{[ ]}} (affects all monsters on the Battlefield)."

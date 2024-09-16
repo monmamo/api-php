@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class StaticElectricity implements Skill
-{
-}
+class StaticElectricity implements Skill {}
 
 // [[Power]]
 //Requires [[Fur]].

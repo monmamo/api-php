@@ -16,7 +16,6 @@ final class TrustHosts extends \Illuminate\Http\Middleware\TrustHosts
     /**
      * Returns the host patterns that should be trusted.
      *
-     *
      * @author Laravel
      * @implements \Illuminate\Http\Middleware\TrustHosts::hosts
      * @group multivalue

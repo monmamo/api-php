@@ -15,6 +15,5 @@ class Defense
      * @return void
      */
     public function __construct(
-    ) {
-    }
+    ) {}
 }

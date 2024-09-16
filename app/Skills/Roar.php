@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Roar implements Skill
-{
-}
+class Roar implements Skill {}
 
 // [[Defense]]
 //[[defensive skill, trait or variable]] [[Physical Mode]]

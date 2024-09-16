@@ -15,6 +15,5 @@ class Attack
      * @return void
      */
     public function __construct(
-    ) {
-    }
+    ) {}
 }

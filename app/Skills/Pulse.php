@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Pulse implements Skill
-{
-}
+class Pulse implements Skill {}
 
 //[[Attack]]
 

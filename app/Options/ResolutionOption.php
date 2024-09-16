@@ -9,7 +9,6 @@ use App\Contracts\Lazy;
  * function tap(SEED, TRANSFORMS):mixed { BaseCallable::resolve(seed:SEED,transforms:[TRANSFORMS]); return SEED; }
  * function resolve(SEED, TRANSFORMS):mixed { return BaseCallable::resolve(seed:SEED,transforms:[TRANSFORMS]); }.
  *
- *
  * @group variadic
  */
 final class ResolutionOption implements Lazy
@@ -34,7 +33,6 @@ final class ResolutionOption implements Lazy
     /**
      * The generator should never return an option.
      *
-     *
      * @implements \App\Options\ContextualLazyOption::argumentsToGenerator
      * @group variadic
      */
@@ -44,7 +42,6 @@ final class ResolutionOption implements Lazy
     }
 
     /**
-     *
      * @implements \App\Options\ContextualLazyOption::generator
      * @group variadic
      */
@@ -57,7 +54,6 @@ final class ResolutionOption implements Lazy
     }
 
     /**
-     *
      * @group sugar Consider implementing literally instead of using this method.
      * @group variadic
      *

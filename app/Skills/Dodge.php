@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Dodge implements Skill
-{
-}
+class Dodge implements Skill {}
 
 // [[Defense]]
 //[[innate skill]] [[Physical Mode]]

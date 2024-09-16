@@ -1,13 +1,11 @@
 <?php
+
 namespace App\Items;
-class Crystal implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class Crystal implements Item {}
 
 // metatype:: [[Item]] [[Durable]]
 
 // playable card type:: [[Durable]]
-// card set:: #UNDEFINED
-// card ID:: #UNDEFINED

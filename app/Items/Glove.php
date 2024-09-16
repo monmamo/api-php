@@ -1,5 +1,9 @@
 <?php
+
 namespace App\Items;
+
+use App\Contracts\Item;
+use App\GeneralAttributes\Gloss;
 
 // A Monster can wear only one set of Gloves at a time.
 // Spongy Gloves https://bulbapedia.bulbagarden.net/wiki/Spongy_Gloves_(Fusion_Strike_243)
@@ -12,10 +16,5 @@ namespace App\Items;
 // playable card type:: [[Glove]]
 // The attacks of the Pokémon this card is attached to do 30 more damage to your opponent's Active [[Fighting]] Pokémon _(before applying Weakness and Resistance)_.
 
-#[\App\GeneralAttributes\Gloss('A Durable item that can be worn only on a Monster\'s anterior extremities.')]
-class Glove implements \App\Contracts\Item {}
-
-
-
-
-
+#[Gloss('A Durable item that can be worn only on a Monster\'s anterior extremities.')]
+class Glove implements Item {}

@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class BubbleAttack implements Skill
-{
-}
+class BubbleAttack implements Skill {}
 
 // [[Attack]]
 //[[Physical Mode]]

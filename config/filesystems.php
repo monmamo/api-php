@@ -1,6 +1,6 @@
 <?php
 
-use \Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Storage;
 
 return [
     /*

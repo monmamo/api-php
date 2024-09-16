@@ -6,19 +6,12 @@ use App\Contracts\HasContext;
 use App\Strings\TypeIndicator;
 use Symfony\Component\VarDumper\VarDumper;
 
-/**
- *
- */
 class Context extends \Exception implements HasContext
 {
-    /**
-     *
-     */
     private array $_dumpables;
 
     /**
      * Constructor.
-     *
      *
      * @group magic
      * @group mutator
@@ -45,7 +38,6 @@ class Context extends \Exception implements HasContext
     }
 
     /**
-     *
      * @group unary
      *
      * @uses \header (native) Sends a raw HTTP header.
@@ -61,7 +53,6 @@ class Context extends \Exception implements HasContext
     }
 
     /**
-     *
      * @group unary
      */
     public function andThrow(\Throwable $exception): void
@@ -71,7 +62,6 @@ class Context extends \Exception implements HasContext
 
     /**
      * Yields the object's context information.
-     *
      *
      * @implements \App\Contracts\HasContext::context
      * @group multivalue
@@ -85,7 +75,6 @@ class Context extends \Exception implements HasContext
     }
 
     /**
-     *
      * @group nonary
      *
      * @uses \App\Dumping\inDumpingContext

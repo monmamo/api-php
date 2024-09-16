@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Intercept implements Skill
-{
-}
+class Intercept implements Skill {}
 
 //Mode:: [[Physical Mode]]
 //variables::

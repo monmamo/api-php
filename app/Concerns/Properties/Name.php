@@ -2,7 +2,7 @@
 
 namespace App\Concerns\Properties;
 
-use Illuminate\Support\Facades\App;
+use App\GeneralAttributes\Title;
 use Illuminate\Support\Str;
 
 trait Name
@@ -12,15 +12,13 @@ trait Name
      */
     public function name(): string
     {
-
         $reflection = new \ReflectionClass($this);
-        $attributes = $reflection->getAttributes(\App\GeneralAttributes\Title::class);
+        $attributes = $reflection->getAttributes(Title::class);
 
-        if (count($attributes) > 0) {
+        if (\count($attributes) > 0) {
             return $attributes[0]->getArguments()[0];
         }
 
-
-        return Str::title(class_basename($reflection->getName()));
+        return Str::title(\class_basename($reflection->getName()));
     }
 }

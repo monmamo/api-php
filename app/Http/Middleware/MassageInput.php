@@ -2,9 +2,6 @@
 
 namespace App\Http\Middleware;
 
-use App\Casts\Meta\TrimmedString;
-use App\Constraints\IsStringable;
-use App\Enums\LetterProperties;
 use Illuminate\Foundation\Http\Middleware\TransformsRequest;
 
 /**
@@ -20,14 +17,12 @@ use Illuminate\Foundation\Http\Middleware\TransformsRequest;
  *
  * @see https://laravel.com/docs/9.x/requests#input-trimming-and-normalization
  *
- *
  * @author Laravel
  */
 final class MassageInput extends TransformsRequest
 {
     /**
      * Transforms the given request value unless its key is in the exclusion list.
-     *
      *
      * @author Laravel
      * @extends \Illuminate\Foundation\Http\Middleware\TransformsRequest::transform
@@ -57,6 +52,6 @@ final class MassageInput extends TransformsRequest
             'password_confirmation',
         ];
 
-        return \in_array($key, $except, true) ?  $value : \App\Strings\clean( \App\Strings\unwrap($value));
+        return \in_array($key, $except, true) ? $value : \App\Strings\clean(\App\Strings\unwrap($value));
     }
 }

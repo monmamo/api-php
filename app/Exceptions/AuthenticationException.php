@@ -5,14 +5,10 @@ namespace App\Exceptions;
 use App\Facades\URL;
 use App\View\LoginForm;
 
-/**
- *
- */
 final class AuthenticationException extends \Illuminate\Auth\AuthenticationException
 {
     /**
      * Constructor.
-     *
      *
      * @group magic
      * @group mutator

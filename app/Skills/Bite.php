@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Bite implements Skill
-{
-}
+class Bite implements Skill {}
 
 //tags:: [[Attack]] #[[Physical Mode]]
 //requirements:: [[Biting]]

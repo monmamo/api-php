@@ -11,8 +11,6 @@ use App\Contracts\Optional;
  * This is also a helper constructor for lazy-consuming existing APIs where the return value is not yet an option. By default, we treat ``null`` as None case, and everything else as Some.
  *
  * @template T
- *
- *
  */
 class SimpleLazyOption implements Lazy, Optional
 {
@@ -20,7 +18,6 @@ class SimpleLazyOption implements Lazy, Optional
 
     /**
      * Constructor.
-     *
      *
      * @group magic
      * @group mutator
@@ -39,7 +36,6 @@ class SimpleLazyOption implements Lazy, Optional
     /**
      * Returns this option if non-empty, or the passed option otherwise.
      *
-     *
      * @implements \App\Contracts\Optional::orElse
      * @group passthrough
      * @group unary
@@ -54,7 +50,6 @@ class SimpleLazyOption implements Lazy, Optional
 
     /**
      * Resolves the lazy value.
-     *
      *
      * @implements \App\Contracts\Lazy::resolve
      * @group nonary

@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Sing implements Skill
-{
-}
+class Sing implements Skill {}
 
 //[[Attack]] [[Sonic Mode]]
 //variables::
@@ -14,5 +12,5 @@ class Sing implements Skill
 // Battle Experience
 
 //Requires [[Sonos]] and [[Singing]].
-//All monsters in play (other than this one) are now Hypnotized (Z=SingingLevel)
+//All monsters on the Battlefield (other than this one) are now Hypnotized (Z=SingingLevel)
 //# playable card::

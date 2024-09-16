@@ -1,16 +1,12 @@
 <?php
+
 namespace App\Items;
-class Cape implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class Cape implements Item {}
 
 // metatype:: [[Item]] [[Durable]] [[Wearable]]
 
 // playable card type:: [[Wearable]]
-// card set:: [[Base Card Set]]
-// card ID:: A-027
 // Size:: +2
-// ---
-// 

@@ -4,14 +4,10 @@ namespace App\Exceptions;
 
 use App\Facades\Context;
 
-/**
- *
- */
 class NoStringRepresentationException extends \LogicException
 {
     /**
      * Constructor.
-     *
      *
      * @group magic
      * @group mutator
@@ -33,7 +29,6 @@ class NoStringRepresentationException extends \LogicException
      * Returns any data relevant to that exception that should be added to the exception's log entry.
      *
      * @see https://laravel.com/docs/10.x/errors#exception-log-context
-     *
      *
      * @group nonary
      *

@@ -1,10 +1,10 @@
 <?php
+
 namespace App\Items;
-class FarewellBell implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class FarewellBell implements Item {}
 
 // metatype:: [[Item]] [[Durable]]
 // source or inspiration:: Farewell Bell PTCG card https://bulbapedia.bulbagarden.net/wiki/Farewell_Bell_(Fusion_Strike_234)

@@ -2,8 +2,4 @@
 
 namespace App\Contracts;
 
-/**
- */
-interface Item 
-{
-}
+interface Item {}

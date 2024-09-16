@@ -7,6 +7,7 @@ use App\Providers\CollectionServiceProvider;
 use App\Providers\ContextServiceProvider;
 use App\Providers\EventServiceProvider;
 use App\Providers\RequestServiceProvider;
+use App\Providers\RouteServiceProvider;
 use App\Providers\SolutionServiceProvider;
 use Illuminate\Auth\Passwords\PasswordResetServiceProvider;
 use Illuminate\Bus\BusServiceProvider;
@@ -197,8 +198,8 @@ return [
         // ContextServiceProvider::class,
         // // you may sort these...
         // EventServiceProvider::class,
-        \App\Providers\RouteServiceProvider::class,
-        \App\Providers\BladeServiceProvider::class,
+        RouteServiceProvider::class,
+        BladeServiceProvider::class,
         // \App\Providers\TelescopeServiceProvider::class,
         // SolutionServiceProvider::class,
     ],

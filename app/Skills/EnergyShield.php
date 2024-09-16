@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class EnergyShield implements Skill
-{
-}
+class EnergyShield implements Skill {}
 
 //![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FMonMaMo%2F7vcZbU7EKo.png?alt=media&token=e9764e97-cd47-457f-9dca-008ee8b95d77)
 // [[Defense]]

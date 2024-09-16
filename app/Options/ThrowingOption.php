@@ -11,8 +11,6 @@ use App\Methods\Equals\EqualsNothing;
  * DO NOT USe these traits:
  * - \App\Concerns\AlwaysUndefined
  * - \App\Concerns\AlwaysEmpty
- *
- *
  */
 final class ThrowingOption implements Lazy, Optional
 {
@@ -38,7 +36,6 @@ final class ThrowingOption implements Lazy, Optional
      *
      * MUST NEVER RETURN AN INSTANCE OF TransformativeInvoker!
      *
-     *
      * @implements \App\Contracts\TransformativeInvoker::__invoke
      * @group magic
      * @group variadic
@@ -50,16 +47,12 @@ final class ThrowingOption implements Lazy, Optional
         $this->resolve();
     }
 
-    /**
-     *
-     */
     public static function create(\Throwable $throwable, mixed $context_to_dump = []): self
     {
         return new self($throwable, $context_to_dump);
     }
 
     /**
-     *
      * @implements \App\Contracts\Dumps::dump
      * @group fluent
      * @group nonary
@@ -73,8 +66,6 @@ final class ThrowingOption implements Lazy, Optional
     }
 
     /**
-     *
-     *
      * @uses \get_debug_type (native) Returns the type of a variable, with special handling for objects.
      * @uses \sprintf (native) Returns a formatted string.
      * @uses \ValueError::__construct
@@ -89,7 +80,6 @@ final class ThrowingOption implements Lazy, Optional
 
     /**
      * Resolves the lazy value.
-     *
      *
      * @implements \App\Contracts\Lazy::resolve
      * @group nonary

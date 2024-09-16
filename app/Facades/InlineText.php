@@ -2,12 +2,14 @@
 
 namespace App\Facades;
 
+use App\Concerns\NonsingularFunctionality;
+
 /**
  * tapwrap: (string) (new \App\Strings\InlineText(VALUE))->map(CALLABE);.
  */
 abstract class InlineText
 {
-    use \App\Concerns\NonsingularFunctionality;
+    use NonsingularFunctionality;
 
     /**
      * Returns the registered name of the component.

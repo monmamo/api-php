@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Surf implements Skill
-{
-}
+class Surf implements Skill {}
 
 //[[Attack]] [[Physical Mode]]
 //variables::

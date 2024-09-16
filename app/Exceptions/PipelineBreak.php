@@ -2,14 +2,10 @@
 
 namespace App\Exceptions;
 
-/**
- *
- */
 class PipelineBreak extends \Exception
 {
     /**
      * Constructor.
-     *
      *
      * @group magic
      * @group mutator

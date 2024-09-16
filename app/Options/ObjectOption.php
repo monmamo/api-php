@@ -14,8 +14,6 @@ use PhpOption\Option;
 /**
  * Do not use these traits:
  * - \App\Concerns\NeverEmpty (is(Not)Empty defined by inner object)
- *
- *
  */
 final class ObjectOption implements HasValue, Optional
 {
@@ -24,7 +22,6 @@ final class ObjectOption implements HasValue, Optional
     use InnerObject;
 
     /**
-     *
      * @group mutator
      * @group unary
      *
@@ -58,7 +55,6 @@ final class ObjectOption implements HasValue, Optional
      * Method invoked when attempting invoke an inaccessible or undefined method of this class in an object context.
      * Dynamically passes a method to the underlying object.
      *
-     *
      * @group magic
      * @group magic-call-signature
      * @group variadic
@@ -75,7 +71,6 @@ final class ObjectOption implements HasValue, Optional
     }
 
     /**
-     *
      * @implements \App\Concerns\InnerObject::object
      * @group nonary
      * @group resolving
@@ -86,7 +81,6 @@ final class ObjectOption implements HasValue, Optional
     }
 
     /**
-     *
      * @implements \App\Contracts\Dumps::dump
      * @group fluent
      * @group nonary
@@ -100,7 +94,6 @@ final class ObjectOption implements HasValue, Optional
     }
 
     /**
-     *
      * @group unary
      */
     public static function forMultivalue(\Traversable $value): static
@@ -109,7 +102,6 @@ final class ObjectOption implements HasValue, Optional
         {
             /**
              * Returns whether an item exists at an offset.
-             *
              *
              * @implements \ArrayAccess::offsetGet
              * @group accessor
@@ -130,7 +122,6 @@ final class ObjectOption implements HasValue, Optional
              *
              * TODO Return a ThrowingOption instead.
              *
-             *
              * @implements \ArrayAccess::offsetGet
              * @group accessor
              * @group accessor-by-key
@@ -149,7 +140,6 @@ final class ObjectOption implements HasValue, Optional
     }
 
     /**
-     *
      * @group unary
      */
     public static function make($value): static

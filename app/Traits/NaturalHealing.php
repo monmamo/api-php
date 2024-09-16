@@ -11,6 +11,3 @@ final class NaturalHealing implements Feature
         return 0;
     }
 }
-
-// ---
-// Upkeep phase:: If this Monster is not Knocked Out, you may remove 1d4 damage from it.

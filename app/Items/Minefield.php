@@ -1,10 +1,10 @@
 <?php
+
 namespace App\Items;
-class Minefield implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class Minefield implements Item {}
 
 // metatype:: [[Item]]
 // #[[Baneful Item]]

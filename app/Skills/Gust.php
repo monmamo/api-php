@@ -4,8 +4,6 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Gust implements Skill
-{
-}
+class Gust implements Skill {}
 
 //Offensive.

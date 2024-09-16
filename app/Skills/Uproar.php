@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Uproar implements Skill
-{
-}
+class Uproar implements Skill {}
 
 //[[Attack]] [[Sonic Mode]]
 //variables::

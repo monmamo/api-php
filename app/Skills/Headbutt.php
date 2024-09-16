@@ -4,12 +4,10 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Headbutt implements Skill
-{
-}
+class Headbutt implements Skill {}
 
 // [[Attack]]
-//Choose one monster in play. [[Damage]] X = 5u(Strength5×Skull60). If this attack does any [[Damage]], this monster is Confused (C=1uX).
+//Choose one monster on the Battlefield. [[Damage]] X = 5u(Strength5×Skull60). If this attack does any [[Damage]], this monster is Confused (C=1uX).
 //# playable card::
 
 // Damage done to defender:: 1dSize + 1dSpeed

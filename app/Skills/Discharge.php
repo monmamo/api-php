@@ -11,6 +11,4 @@ use App\GeneralAttributes\Trainable;
 // Discard all [[Electricity]] cards attached to this Monster. For each card, roll 1d6. The total rolled is the amount of Damage done to the Defending Monster.
 
 #[Trainable]
-class Discharge implements Skill
-{
-}
+class Discharge implements Skill {}

@@ -1,10 +1,10 @@
 <?php
+
 namespace App\Items;
-class HydroelectricFactory implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class HydroelectricFactory implements Item {}
 
 // metatype:: [[Item]] [[Durable]] [[Factory]]
 
@@ -13,4 +13,4 @@ class HydroelectricFactory implements \App\Contracts\Item {}
 // card ID:: AQ-03
 // ---
 // Discard a [[Water]] card from your hand. Then draw 3 cards.
-// 
+//

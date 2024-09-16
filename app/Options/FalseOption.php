@@ -22,9 +22,6 @@ use Illuminate\Contracts\Database\Query\Expression;
 use Illuminate\Database\Grammar;
 use PHPUnit\Framework\Constraint\Constraint;
 
-/**
- *
- */
 final class FalseOption implements Dumps, Emptyable, Expression, Filterable, Foldable, HasValue, Mappable, Normalizable, Optional, TransformativeInvoker
 {
     use AlwaysGettable;
@@ -35,7 +32,6 @@ final class FalseOption implements Dumps, Emptyable, Expression, Filterable, Fol
     use SelectThroughFilter;
 
     /**
-     *
      * @implements \App\Concerns\Deferable::internalArguments
      * @group nonary
      */
@@ -45,7 +41,6 @@ final class FalseOption implements Dumps, Emptyable, Expression, Filterable, Fol
     }
 
     /**
-     *
      * @implements \App\Contracts\Dumps::dump
      * @group fluent
      * @group nonary
@@ -63,7 +58,6 @@ final class FalseOption implements Dumps, Emptyable, Expression, Filterable, Fol
      *
      * If the option is non-empty, the callable is applied, and if it returns true, the option itself is returned; otherwise, None is returned.
      *
-     *
      * @implements \App\Contracts\Filterable::filter
      * @group unary
      *
@@ -79,7 +73,6 @@ final class FalseOption implements Dumps, Emptyable, Expression, Filterable, Fol
      *
      * If the option is non-empty, the callable is applied, and if it returns false, the option itself is returned; otherwise, None is returned.
      *
-     *
      * @implements \App\Contracts\Filterable::filterNot
      * @group unary
      *
@@ -93,7 +86,6 @@ final class FalseOption implements Dumps, Emptyable, Expression, Filterable, Fol
     /**
      * Applies the callable to the value of the option if it is non-empty, and returns the return value of the callable directly.
      *
-     *
      * @implements \App\Contracts\Mappable::flatMap
      *
      * @template S
@@ -106,7 +98,6 @@ final class FalseOption implements Dumps, Emptyable, Expression, Filterable, Fol
     }
 
     /**
-     *
      * @implements \App\Contracts\Foldable::foldLeft
      * @group binary
      *
@@ -118,7 +109,6 @@ final class FalseOption implements Dumps, Emptyable, Expression, Filterable, Fol
     }
 
     /**
-     *
      * @implements \App\Contracts\Foldable::foldRight
      * @group binary
      *
@@ -132,7 +122,6 @@ final class FalseOption implements Dumps, Emptyable, Expression, Filterable, Fol
     /**
      * Returns the value if available, or throws an exception otherwise.
      *
-     *
      * @implements \App\Contracts\HasValue::get
      * @group nonary
      *
@@ -145,7 +134,6 @@ final class FalseOption implements Dumps, Emptyable, Expression, Filterable, Fol
 
     /**
      * Returns an iterator (either as an explicit implementation of \Traversable or an implicit implementation of \Generator with yield statements) that iterates through the component items of this object.
-     *
      *
      * @implements \IteratorAggregate::getIterator
      * @group accessor
@@ -161,7 +149,6 @@ final class FalseOption implements Dumps, Emptyable, Expression, Filterable, Fol
     /**
      * Returns the value of the expression.
      *
-     *
      * @implements \Illuminate\Contracts\Database\Query\Expression::getValue
      * @group unary
      *
@@ -174,7 +161,6 @@ final class FalseOption implements Dumps, Emptyable, Expression, Filterable, Fol
 
     /**
      * Applies the callable to the value of the option if it is non-empty, and returns the return value of the callable wrapped in Some().
-     *
      *
      * @implements \App\Contracts\Mappable::map
      * @group unary
@@ -193,7 +179,6 @@ final class FalseOption implements Dumps, Emptyable, Expression, Filterable, Fol
 
     /**
      * Returns the "normal" value of the object, as defined by \App\Casts\NormalScalar.
-     *
      *
      * @implements \App\Contracts\Normalizable::normalized
      * @group nonary

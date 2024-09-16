@@ -39,7 +39,6 @@ use Illuminate\Support\Arr;
 use PhpOption\Option;
 
 /**
- *
  * @group unary
  *
  * @uses \App\Options\FalseOption::__construct
@@ -56,7 +55,6 @@ function _castBoolean(mixed $value): Optional
 }
 
 /**
- *
  * @group binary
  *
  * @uses \App\Options\ThrowingOption::__construct
@@ -75,7 +73,6 @@ function assertOption(mixed $value, $message): Optional
 }
 
 /**
- *
  * @group unary
  *
  * @uses \App\Options\assertOption
@@ -87,7 +84,6 @@ function assertOptionForFlatMap(mixed $value): Optional
 }
 
 /**
- *
  * @group defered-call
  * @group variadic
  *
@@ -147,7 +143,6 @@ function castBoolean(mixed $given_value, array $arguments = []): Optional
 }
 
 /**
- *
  * @group binary
  *
  * @uses \assert (native) If enabled, and the given assertion is false, throws an exception.
@@ -163,7 +158,6 @@ function classInstanceMaker(string $fqn, ?callable $transform = null): \Closure
 }
 
 /**
- *
  * @group variadic
  *
  * @uses \App\Options\iterate
@@ -192,7 +186,6 @@ function createLeftLazy(
 }
 
 /**
- *
  * @group variadic
  *
  * @uses \App\Options\iterate
@@ -218,7 +211,6 @@ function createRightLazy(
 }
 
 /**
- *
  * @group sugar Consider implementing literally instead of using this method.
  */
 function ensureThenIfNotEmpty(mixed $callable): \Closure
@@ -251,7 +243,6 @@ function ensureThenIfNotEmpty(mixed $callable): \Closure
 }
 
 /**
- *
  * @group binary
  *
  * @uses \App\Contracts\Emptyable::isEmpty
@@ -282,7 +273,6 @@ function fieldValue(mixed $field_or_value, mixed $key)
  *
  * @see app/Methods/Make/README.md
  *
- *
  * @group factory
  * @group unary
  *
@@ -300,7 +290,6 @@ function filterFactory(
 }
 
 /**
- *
  * @group binary
  */
 function arrayAccessFacade(callable $on_isset, callable $on_get): \ArrayAccess
@@ -365,7 +354,6 @@ function arrayAccessFacade(callable $on_isset, callable $on_get): \ArrayAccess
 /**
  * Basic implementation of \App\Contracts\Foldable::foldLeft.
  *
- *
  * @group binary
  * @group sugar
  */
@@ -382,7 +370,6 @@ function foldLeft(mixed $callable, mixed $initial_value, mixed $inner_value)
 /**
  * Basic implementation of \App\Contracts\Foldable::foldRight.
  *
- *
  * @group binary
  * @group sugar
  */
@@ -397,7 +384,6 @@ function foldRight(mixed $callable, mixed $initial_value, mixed $inner_value)
 }
 
 /**
- *
  * @group variadic
  *
  * @uses \App\Facades\Context::yieldContext
@@ -416,7 +402,6 @@ function fromContext(...$sources): Optional
  * - Use that option to determine what needs to come out of here.
  *
  * We return DateTimeOption or NullOption.
- *
  *
  * @group unary
  *
@@ -481,7 +466,6 @@ function fromDateTime($source): Optional
  *
  * Not the same as \App\Options\fromOffset.
  *
- *
  * @group nonary
  * @group resolving
  *
@@ -509,7 +493,6 @@ function fromFilterOffset(mixed $source, mixed $key): Optional
  * Creates an option from an array's value.
  *
  * If the key does not exist in the array, the array is not actually an array, or the array's value at the given key is null, None is returned. Otherwise, Some is returned wrapping the value at the given key.
- *
  *
  * @group binary
  *
@@ -549,7 +532,6 @@ function fromOffset(mixed $source, mixed $offset): Optional
 }
 
 /**
- *
  * @group unary
  *
  * @uses \App\Dumping\dumpIfException
@@ -582,7 +564,6 @@ function wrapAnythingAsArray(mixed $offset): array
 
 /**
  * Returns an option for a specific offset represented or produced by the option.
- *
  *
  * @group binary
  *
@@ -660,7 +641,6 @@ function fromOffsetOfArrayAccess(\ArrayAccess $source, mixed $offset): Optional
 /**
  * Replacement for Arr::wrap: \iterator_to_array(\App\Options\iterate(VALUE));.
  *
- *
  * @group unary
  *
  * @uses \App\Contracts\HasValue::get
@@ -686,7 +666,6 @@ function iterate(mixed $value): \Iterator
 }
 
 /**
- *
  * @group binary
  *
  * @param string $key The key to check.
@@ -713,7 +692,6 @@ function fromProperty($source, $key): Optional
  * Creates an option given a return value.
  *
  * ❗ Try to avoid calling this method. Instead, resolve the value to an appropriate instance of \App\Contracts\Optional.
- *
  *
  * @group factory
  * @group unary
@@ -810,7 +788,6 @@ function fromValue($source): Optional
  *
  * If the key does not exist in the array, the array is not actually an array, or the array's value at the given key is null, None is returned. Otherwise, Some is returned wrapping the value at the given key.
  *
- *
  * @group trinary
  *
  * @param string $key The key to check.
@@ -825,7 +802,6 @@ function fromValueOrAttribute(mixed $value, array $attributes, $key): Optional
 }
 
 /**
- *
  * @group sugar
  * @group unary
  *
@@ -840,7 +816,6 @@ function identityInteger(mixed $offset_raw): Optional
  * Transforms the given value if it has an inner value.
  *
  * Replacement for \transform.
- *
  *
  * @group binary
  *
@@ -881,7 +856,6 @@ function transform(mixed $value, callable $callable): mixed
  * Transforms the given value if it has an inner value.
  *
  * Replacement for \transform.
- *
  *
  * @group binary
  *
@@ -925,7 +899,6 @@ function get(mixed $value): mixed
  *
  * 💢 Can't be declared as boolean because \Illuminate\Support\Optional::isEmpty and  \PhpOption\Option::isEmpty are not type-declared.
  *
- *
  * @implements \App\Contracts\Emptyable::isEmpty
  * @implements \Illuminate\Support\Optional::isEmpty
  * @implements \App\Contracts\Emptyable::isEmpty
@@ -960,7 +933,6 @@ function isEmpty(mixed $value)
  *
  * 💢 Can't be declared as boolean because \Illuminate\Support\Optional::isNotEmpty and  \PhpOption\Option::isNotEmpty are not type-declared.
  *
- *
  * @implements \App\Contracts\Emptyable::isNotEmpty
  * @implements \Illuminate\Support\Optional::isNotEmpty
  * @implements \App\Contracts\Emptyable::isNotEmpty
@@ -990,7 +962,6 @@ function isNotEmpty(mixed $value)
 
 /**
  * Returns an option for a specific property value represented or produced by the option.
- *
  *
  * @implements \App\Contracts\HasProperties::property
  * @group unary
@@ -1024,7 +995,6 @@ function property(mixed $value, mixed $property): mixed
 /**
  * Lets all values through except the passed value.
  *
- *
  * @implements \App\Contracts\Filterable::reject
  * @group passthrough
  * @group unary
@@ -1057,7 +1027,6 @@ function reject(mixed $value): Optional
 
 /**
  * Lets through only the passed value.
- *
  *
  * @implements \App\Contracts\Filterable::select
  * @group passthrough
@@ -1097,7 +1066,6 @@ function select(mixed $value): Optional
  * Should never throw an exception for a null value. If the value is null or undefined, simply do not call the callable.
  *
  * Replacement for \with.
- *
  *
  * @group fluent
  * @group functional
@@ -1149,7 +1117,6 @@ function with(mixed $value, mixed $callable): void
  *
  * Should never throw an exception for a null value. If the value is null or undefined, simply do not call the callable.
  *
- *
  * @group fluent
  * @group functional
  * @group passthrough
@@ -1199,7 +1166,6 @@ function withAll(mixed $value, mixed $callable): void
 }
 
 /**
- *
  * @group nonary
  *
  * @uses \__ (Laravel) Translates the message given to it.
@@ -1281,7 +1247,6 @@ function unwrap(mixed $source)
  * curry:
  * fn ($value) => $callable(\App\Options\wrap($value));
  *
- *
  * @group unary
  *
  * @uses \App\Options\fromValue
@@ -1348,7 +1313,6 @@ function wrap(mixed $candidate): Optional
 }
 
 /**
- *
  * @group unary
  *
  * @deprecated
@@ -1362,7 +1326,6 @@ function wrapArray(array $candidate): Optional
 }
 
 /**
- *
  * @group unary
  *
  * @deprecated
@@ -1376,7 +1339,6 @@ function wrapCollection(mixed $candidate): Optional
 }
 
 /**
- *
  * @group unary
  *
  * @uses \App\Options\wrap
@@ -1401,7 +1363,6 @@ function unwrapFirst(mixed $value): mixed
 }
 
 /**
- *
  * @group unary
  *
  * @uses \App\Options\wrap
@@ -1412,7 +1373,6 @@ function getFilter(\ArrayAccess $source): Optional
 }
 
 /**
- *
  * @group unary
  *
  * @uses \App\Options\wrap

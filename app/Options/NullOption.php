@@ -31,8 +31,6 @@ use Illuminate\Database\Grammar;
  *
  * Do not implement these interfaces:
  * - \App\Contracts\HasValue
- *
- *
  */
 class NullOption implements Emptyable, Equality, Expression, Mappable, Normalizable, Optional, Scalarable
 {
@@ -45,7 +43,6 @@ class NullOption implements Emptyable, Equality, Expression, Mappable, Normaliza
 
     /**
      * Binary operator for the initial value and the option's value.
-     *
      *
      * @implements \App\Contracts\Foldable::foldLeft
      *
@@ -62,7 +59,6 @@ class NullOption implements Emptyable, Equality, Expression, Mappable, Normaliza
 
     /**
      * foldLeft() but with reversed arguments for the callable.
-     *
      *
      * @implements \App\Contracts\Foldable::foldRight
      *
@@ -82,7 +78,6 @@ class NullOption implements Emptyable, Equality, Expression, Mappable, Normaliza
      *
      * Ensures that this value is injected into a query as NULL.
      *
-     *
      * @implements \Illuminate\Contracts\Database\Query\Expression::getValue
      * @group unary
      *
@@ -96,7 +91,6 @@ class NullOption implements Emptyable, Equality, Expression, Mappable, Normaliza
     /**
      * Returns the "normal" value of the object, as defined by \App\Casts\NormalScalar.
      *
-     *
      * @implements \App\Contracts\Normalizable::normalized
      * @group nonary
      */
@@ -106,7 +100,6 @@ class NullOption implements Emptyable, Equality, Expression, Mappable, Normaliza
     }
 
     /**
-     *
      * @group nonary
      *
      * @uses \App\Strings\InlineText::__construct
@@ -117,7 +110,6 @@ class NullOption implements Emptyable, Equality, Expression, Mappable, Normaliza
     }
 
     /**
-     *
      * @group factory
      * @group nonary
      */

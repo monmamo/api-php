@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Lunge implements Skill
-{
-}
+class Lunge implements Skill {}
 
 // [[Attack]]
 //[[Physical Mode]]

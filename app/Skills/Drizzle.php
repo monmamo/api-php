@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Drizzle implements Skill
-{
-}
+class Drizzle implements Skill {}
 
 //[[environmental skill]]
 //variables::

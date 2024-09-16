@@ -10,24 +10,15 @@ use Laravel\Telescope\TelescopeApplicationServiceProvider;
 class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
 {
     /**
-     * Register any application services.
+     * Register the Telescope gate.
+     *
+     * This gate determines who can access Telescope in non-local environments.
      */
-    public function register(): void
+    protected function gate(): void
     {
-        // Telescope::night();
-
-        $this->hideSensitiveRequestDetails();
-
-        $isLocal = $this->app->environment('local');
-
-        Telescope::filter(function (IncomingEntry $entry) use ($isLocal) {
-            return $isLocal ||
-                   $entry->isReportableException() ||
-                   $entry->isFailedRequest() ||
-                   $entry->isFailedJob() ||
-                   $entry->isScheduledTask() ||
-                   $entry->hasMonitoredTag();
-        });
+        // \Illuminate\Support\Facades\Gate::define('viewTelescope', function ($user) {
+        //     return false; //in_array($user->email, []);
+        // });
     }
 
     /**
@@ -49,14 +40,23 @@ class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
     }
 
     /**
-     * Register the Telescope gate.
-     *
-     * This gate determines who can access Telescope in non-local environments.
+     * Register any application services.
      */
-    protected function gate(): void
+    public function register(): void
     {
-        // \Illuminate\Support\Facades\Gate::define('viewTelescope', function ($user) {
-        //     return false; //in_array($user->email, []);
-        // });
+        // Telescope::night();
+
+        $this->hideSensitiveRequestDetails();
+
+        $isLocal = $this->app->environment('local');
+
+        Telescope::filter(function (IncomingEntry $entry) use ($isLocal) {
+            return $isLocal
+                   || $entry->isReportableException()
+                   || $entry->isFailedRequest()
+                   || $entry->isFailedJob()
+                   || $entry->isScheduledTask()
+                   || $entry->hasMonitoredTag();
+        });
     }
 }

@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Amnesia implements Skill
-{
-}
+class Amnesia implements Skill {}
 
 //[[Attack]] [[Mental Mode]]
 

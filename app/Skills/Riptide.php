@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Riptide implements Skill
-{
-}
+class Riptide implements Skill {}
 
 //source or inspiration:: https://bulbapedia.bulbagarden.net/wiki/Feraligatr_(Neo_Genesis_5)
 //requirement:: [[Aquos]] [[Megos]]

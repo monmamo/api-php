@@ -25,6 +25,4 @@ use App\Taxons\Attributes\NeuterName;
 #[MasculineMonsterName('Bovor')]
 #[FeminineAnthropeName('Bovquin')]
 #[FeminineMonsterName('Bovess')]
-class Bovos extends Ungulos
-{
-}
+class Bovos extends Ungulos {}

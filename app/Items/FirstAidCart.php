@@ -1,14 +1,12 @@
 <?php
+
 namespace App\Items;
 
+use App\Contracts\Item;
 use App\GeneralAttributes\Title;
 
 #[Title('First Aid Cart')]
-class FirstAidCart implements \App\Contracts\Item {}
-
-
-
-
+class FirstAidCart implements Item {}
 
 // metatype:: [[Item]] [[Durable]]
 // source or inspiration:: Switch Cart PTCG card https://bulbapedia.bulbagarden.net/wiki/Switch_Cart_(Astral_Radiance_154)

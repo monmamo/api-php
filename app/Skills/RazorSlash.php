@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class RazorSlash implements Skill
-{
-}
+class RazorSlash implements Skill {}
 
 // [[Attack]] [[Physical Mode]]
 

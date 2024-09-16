@@ -8,21 +8,16 @@ use Illuminate\Contracts\Foundation\Application as ApplicationContract;
  * To use: in __construct
  * - Include an  \Illuminate\Contracts\Foundation\Application  parameter.
  * - Call $this->setApplication() with the parameter.
- *
- *
  */
 trait Application
 {
     /**
      * The application instance.
-     *
-     *
      */
     private ApplicationContract $_Application;
 
     /**
      * Retrieves the application instance.
-     *
      *
      * @group nonary
      * @group accessor
@@ -34,7 +29,6 @@ trait Application
 
     /**
      * Sets the application instance.
-     *
      *
      * @group unary
      * @group mutator

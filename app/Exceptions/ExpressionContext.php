@@ -5,26 +5,16 @@ namespace App\Exceptions;
 use App\Expression;
 use App\Methods\ReportFromContext;
 
-/**
- *
- */
 trait ExpressionContext
 {
     use ReportFromContext;
 
-    /**
-     *
-     */
     private mixed $_value;
 
-    /**
-     *
-     */
     public Expression $Expression;
 
     /**
      * Constructor.
-     *
      *
      * @group magic
      * @group mutator
@@ -55,7 +45,6 @@ trait ExpressionContext
      * While adding context to every log message can be useful, sometimes a particular exception may have unique context that you would like to include in your logs. By defining a context method on one of your application's custom exceptions, you may specify any data relevant to that exception that should be added to the exception's log entry.
      *
      * @see https://laravel.com/docs/9.x/errors#exception-log-context
-     *
      *
      * @group nonary
      *

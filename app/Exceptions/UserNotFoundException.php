@@ -5,16 +5,12 @@ namespace App\Exceptions;
 use App\Concerns\MultivalueContext;
 use App\Contracts\HasContext;
 
-/**
- *
- */
 final class UserNotFoundException extends \LogicException implements HasContext
 {
     use MultivalueContext;
 
     /**
      * Constructor.
-     *
      *
      * @group magic
      * @group mutator

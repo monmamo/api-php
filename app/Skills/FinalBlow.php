@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class FinalBlow implements Skill
-{
-}
+class FinalBlow implements Skill {}
 
 //# playable card::
 

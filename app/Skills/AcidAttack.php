@@ -9,9 +9,7 @@ use App\SkillAttributes\Attack;
 
 #[Attack]
 #[Requires(AcidSupply::class)]
-class AcidAttack implements Skill
-{
-}
+class AcidAttack implements Skill {}
 
 //[[Physical Mode]]
 //variables::

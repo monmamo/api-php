@@ -2,7 +2,4 @@
 
 namespace App\Contracts\Card;
 
-interface ImageIsGenerated
-{
- 
-}
+interface ImageIsGenerated {}

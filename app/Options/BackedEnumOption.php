@@ -7,14 +7,10 @@ use App\Contracts\Normalizable;
 use App\Contracts\Optional;
 use App\Strings\InlineText;
 
-/**
- *
- */
 final class BackedEnumOption extends InlineText implements HasValue, Normalizable, Optional
 {
     /**
      * Constructor.
-     *
      *
      * @group magic
      * @group mutator
@@ -30,7 +26,6 @@ final class BackedEnumOption extends InlineText implements HasValue, Normalizabl
     }
 
     /**
-     *
      * @implements \App\Concerns\Deferable::internalArguments
      * @group nonary
      *
@@ -42,7 +37,6 @@ final class BackedEnumOption extends InlineText implements HasValue, Normalizabl
     }
 
     /**
-     *
      * @group trinary
      */
     public static function areEqual(\BackedEnum $standard, mixed $candidate, bool $invert = false): bool
@@ -58,7 +52,6 @@ final class BackedEnumOption extends InlineText implements HasValue, Normalizabl
 
     /**
      * Runs the given Closure bound to this item then returns the result.
-     *
      *
      * @group accessor
      * @group unary
@@ -91,7 +84,6 @@ final class BackedEnumOption extends InlineText implements HasValue, Normalizabl
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -104,7 +96,6 @@ final class BackedEnumOption extends InlineText implements HasValue, Normalizabl
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -115,7 +106,6 @@ final class BackedEnumOption extends InlineText implements HasValue, Normalizabl
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -126,7 +116,6 @@ final class BackedEnumOption extends InlineText implements HasValue, Normalizabl
     }
 
     /**
-     *
      * @group accessor
      * @group nonary
      * @group reductive
@@ -142,7 +131,6 @@ final class BackedEnumOption extends InlineText implements HasValue, Normalizabl
      * If the option is non-empty, and its value does equal the passed value (via a shallow comparison ===), then None is returned; otherwise, the Option is returned.
      *
      * In other words, this will let all values through except the passed value.
-     *
      *
      * @implements \App\Contracts\Filterable::reject
      * @group unary
@@ -166,7 +154,6 @@ final class BackedEnumOption extends InlineText implements HasValue, Normalizabl
      *
      * In other words, this will filter all but the passed value.
      *
-     *
      * @implements \App\Contracts\Filterable::select
      * @group unary
      *
@@ -182,7 +169,6 @@ final class BackedEnumOption extends InlineText implements HasValue, Normalizabl
     }
 
     /**
-     *
      * @group variadic
      *
      * @uses \App\Callables\transform

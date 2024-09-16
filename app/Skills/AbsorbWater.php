@@ -7,6 +7,4 @@ use App\GeneralAttributes\Requires;
 use App\Taxons\Aquos;
 
 #[Requires(Aquos::class)]
-class AbsorbWater implements Skill
-{
-}
+class AbsorbWater implements Skill {}

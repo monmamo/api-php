@@ -1,15 +1,9 @@
 <?php
+
 namespace App\Items;
-class Amulet implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class Amulet implements Item {}
 
 // metatype:: [[Item]] [[Durable]]
-
-// playable card type:: [[Durable]] #UNDEFINED
-// card set:: [[Base Card Set]]
-// card ID::
-// ---
-// 

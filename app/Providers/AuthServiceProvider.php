@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use App\Applications\BaseApplication;
 use App\AuthManager;
-use App\Enums\Roles;
 use Illuminate\Container\Container;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
@@ -35,7 +34,6 @@ final class AuthServiceProvider extends ServiceProvider
      *
      * This method is called after all other service providers have been registered.
      *
-     *
      * @author Laravel
      * @implements \Illuminate\Support\ServiceProvider::boot
      * @group nonary
@@ -44,14 +42,10 @@ final class AuthServiceProvider extends ServiceProvider
      * @uses \App\Providers\AuthServiceProvider::defineModelGate
      * @uses \Illuminate\Contracts\Auth\Access::define
      */
-    public function boot(): void
-    {
-
-    }
+    public function boot(): void {}
 
     /**
      * Returns the policies defined on the provider.
-     *
      *
      * @group nonary
      *
@@ -64,7 +58,6 @@ final class AuthServiceProvider extends ServiceProvider
 
     /**
      * Registers the service provider and the the application's policies.
-     *
      *
      * @group nonary
      *

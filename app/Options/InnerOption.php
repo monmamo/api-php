@@ -34,8 +34,6 @@ use PHPUnit\Framework\Constraint\Constraint;
  * - \App\Concerns\Optional\NoOffsets
  * - \App\Concerns\Optional\NoProperties
  * - \App\Methods\MagicGet\MagicGetNotValid
- *
- *
  */
 trait InnerOption
 {
@@ -49,7 +47,6 @@ trait InnerOption
      * Dynamically passes a method to the underlying object.
      *
      * Do not declare final.
-     *
      *
      * @group magic
      * @group magic-call-signature
@@ -71,7 +68,6 @@ trait InnerOption
      * Invoker.
      *
      * MUST NEVER RETURN AN INSTANCE OF TransformativeInvoker!
-     *
      *
      * @implements \App\Contracts\TransformativeInvoker::__invoke
      * @group magic
@@ -100,7 +96,6 @@ trait InnerOption
      *
      * Returns a representation of this object as a string.
      *
-     *
      * @group nonary
      * @group resolving
      * @group magic-tostring-signature
@@ -115,7 +110,6 @@ trait InnerOption
     }
 
     /**
-     *
      * @group unary
      * @group sugar
      *
@@ -135,7 +129,6 @@ trait InnerOption
     }
 
     /**
-     *
      * @group unary
      * @group sugar
      *
@@ -147,7 +140,6 @@ trait InnerOption
     }
 
     /**
-     *
      * @implements \App\Concerns\Deferable::internalArguments
      * @group nonary
      *
@@ -176,7 +168,6 @@ trait InnerOption
     /**
      * Returns the inner option.
      *
-     *
      * @implements \App\Options\InnerOption::option
      * @group nonary
      * @group resolving
@@ -189,7 +180,6 @@ trait InnerOption
      * This method allows objects to be used as keys in structures such as Ds\Map and Ds\Set, or any other lookup structure that honors this interface.
      *
      * @see https://www.php.net/manual/en/ds-hashable.equals.php
-     *
      *
      * @implements \App\Interfaces\Contracts\Equality::equals
      * @implements \Ds\Hashable::equals
@@ -219,7 +209,6 @@ trait InnerOption
      *
      * If the option is non-empty, the callable is applied, and if it returns true, the option itself is returned; otherwise, None is returned.
      *
-     *
      * @implements \App\Contracts\Filterable::filter
      * @group passthrough
      * @group unary
@@ -238,7 +227,6 @@ trait InnerOption
      * If the option is empty, it is returned immediately without applying the callable.
      *
      * If the option is non-empty, the callable is applied, and if it returns false, the option itself is returned; otherwise, None is returned.
-     *
      *
      * @implements \App\Contracts\Filterable::filterNot
      * @group passthrough
@@ -259,7 +247,6 @@ trait InnerOption
      *
      * WARNING Doesn't do the assertion (instance of \App\Contracts\Optional) for the return value of the callable.
      *
-     *
      * @implements \App\Contracts\Mappable::flatMap
      * @group passthrough
      * @group unary
@@ -276,7 +263,6 @@ trait InnerOption
 
     /**
      * Binary operator for the initial value and the option's value.
-     *
      *
      * @implements \App\Contracts\Foldable::foldLeft
      * @group binary
@@ -313,7 +299,6 @@ trait InnerOption
     /**
      * Binary operator for the initial value and the option's value.
      *
-     *
      * @implements \App\Contracts\Foldable::foldRight
      * @group binary
      * @group passthrough
@@ -349,7 +334,6 @@ trait InnerOption
     /**
      * Returns the value if available, or throws an exception otherwise.
      *
-     *
      * @implements \App\Contracts\HasValue::get
      * @group nonary
      * @group passthrough
@@ -366,7 +350,6 @@ trait InnerOption
 
     /**
      * Returns an iterator (either as an explicit implementation of \Traversable or an implicit implementation of \Generator with yield statements) that iterates through the component items of this object.
-     *
      *
      * @implements \IteratorAggregate::getIterator
      * @group accessor
@@ -397,7 +380,6 @@ trait InnerOption
 
     /**
      * Conditionally transforms a value.
-     *
      *
      * @group nonary
      *
@@ -430,7 +412,6 @@ trait InnerOption
      *
      * 💢 Can't be declared as boolean because \Illuminate\Support\Optional::isEmpty and  \PhpOption\Option::isEmpty are not type-declared.
      *
-     *
      * @implements \App\Contracts\Emptyable::isEmpty
      * @implements \Illuminate\Support\Optional::isEmpty
      * @implements \App\Contracts\Emptyable::isEmpty
@@ -453,7 +434,6 @@ trait InnerOption
      *
      * 💢 Can't be declared as boolean because \Illuminate\Support\Optional::isNotEmpty and  \PhpOption\Option::isNotEmpty are not type-declared.
      *
-     *
      * @implements \App\Contracts\Emptyable::isNotEmpty
      * @implements \Illuminate\Support\Optional::isNotEmpty
      * @implements \App\Contracts\Emptyable::isNotEmpty
@@ -471,7 +451,6 @@ trait InnerOption
 
     /**
      * Applies the callable to the value of the option if it is non-empty, and returns the return value of the callable wrapped in Some().
-     *
      *
      * @implements \App\Contracts\Mappable::map
      * @group passthrough
@@ -524,7 +503,6 @@ trait InnerOption
     /**
      * Returns this option if non-empty, or the passed option otherwise.
      *
-     *
      * @implements \App\Contracts\Optional::orElse
      * @group passthrough
      * @group unary
@@ -540,7 +518,6 @@ trait InnerOption
     /**
      * Returns an option for a specific property value represented or produced by the option.
      *
-     *
      * @implements \App\Contracts\HasProperties::property
      * @group unary
      *
@@ -554,7 +531,6 @@ trait InnerOption
 
     /**
      * Lets all values through except the passed value.
-     *
      *
      * @implements \App\Contracts\Filterable::reject
      * @group passthrough
@@ -571,7 +547,6 @@ trait InnerOption
     /**
      * Lets through only the passed value.
      *
-     *
      * @implements \App\Contracts\Filterable::select
      * @group passthrough
      * @group unary
@@ -585,7 +560,6 @@ trait InnerOption
     }
 
     /**
-     *
      * @group variadic
      *
      * @uses \App\Callables\transform
@@ -601,7 +575,6 @@ trait InnerOption
 
     /**
      * Conditionally transforms a value.
-     *
      *
      * @group nonary
      *

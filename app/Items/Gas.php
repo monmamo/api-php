@@ -1,10 +1,10 @@
 <?php
+
 namespace App\Items;
-class Gas implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class Gas implements Item {}
 
 // metatype:: [[Item]]
 // #[[Baneful Item]]

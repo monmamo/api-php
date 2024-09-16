@@ -17,7 +17,6 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
  *
  * The guards invoked will usually be of class \Illuminate\Auth\SessionGuard.
  *
- *
  * @author Laravel
  */
 final class Authenticate extends \Illuminate\Auth\Middleware\Authenticate
@@ -28,7 +27,6 @@ final class Authenticate extends \Illuminate\Auth\Middleware\Authenticate
      * Injects the host into the list of guards. The host guard allows only certain types of users. Host guards are defined in the config/auth.php.
      *
      * ❗ Do not put fancy debugging infrastructure in here.
-     *
      *
      * @extends \Illuminate\Auth\Middleware\Authenticate::authenticate
      * @group variadic
@@ -65,7 +63,6 @@ final class Authenticate extends \Illuminate\Auth\Middleware\Authenticate
      * Almost always the login form.
      *
      * \Illuminate\Auth\Middleware\Authenticate::redirectTo does not return a value for this.
-     *
      *
      * @extends \Illuminate\Auth\Middleware\Authenticate::redirectTo
      * @group unary

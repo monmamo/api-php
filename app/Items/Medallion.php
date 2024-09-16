@@ -1,10 +1,10 @@
 <?php
+
 namespace App\Items;
-class Medallion implements \App\Contracts\Item {}
 
+use App\Contracts\Item;
 
-
-
+class Medallion implements Item {}
 
 // metatype:: [[Item]] [[Durable]]
 

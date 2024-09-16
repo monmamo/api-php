@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class Struggle implements Skill
-{
-}
+class Struggle implements Skill {}
 
 // [[Defense]]
 //[[defensive skill, trait or variable]] [[Physical Mode]]

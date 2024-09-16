@@ -4,9 +4,7 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class TorrentialImpact implements Skill
-{
-}
+class TorrentialImpact implements Skill {}
 
 // [[Attack]]
 //Requires [[Aquos]].

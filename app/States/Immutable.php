@@ -2,14 +2,10 @@
 
 namespace App\States;
 
-/**
- *
- */
 trait Immutable
 {
     /**
      * Runs when writing data to inaccessible (protected or private) or non-existing properties.
-     *
      *
      * @group mutator
      * @group binary
@@ -33,7 +29,6 @@ trait Immutable
     }
 
     /**
-     *
      * @group mutator
      * @group unary
      * @group magic
@@ -52,7 +47,6 @@ trait Immutable
     }
 
     /**
-     *
      * @group binary
      * @group generative
      *
@@ -66,7 +60,6 @@ trait Immutable
     }
 
     /**
-     *
      * @implements \Ds\Sequence::allocate
      * @group mutator
      * @group unary
@@ -81,7 +74,6 @@ trait Immutable
     }
 
     /**
-     *
      * @implements \Ds\Sequence::apply
      * @group mutator
      * @group unary
@@ -98,7 +90,6 @@ trait Immutable
     /**
      * Removes all values or items from the object.
      *
-     *
      * @implements \Ds\Collection::clear
      * @group mutator
      * @group nonary
@@ -113,7 +104,6 @@ trait Immutable
     }
 
     /**
-     *
      * @implements \Ds\Sequence::insert
      * @group mutator
      * @group variadic
@@ -134,7 +124,6 @@ trait Immutable
      *
      * Throws an exception.
      *
-     *
      * @implements \ArrayAccess::offsetSet
      * @group mutator
      * @group binary
@@ -153,7 +142,6 @@ trait Immutable
      *
      * Throws an exception.
      *
-     *
      * @implements \ArrayAccess::offsetUnset
      * @group mutator
      * @group unary
@@ -170,7 +158,6 @@ trait Immutable
     }
 
     /**
-     *
      * @group mutator
      * @group nonary
      *
@@ -182,7 +169,6 @@ trait Immutable
     }
 
     /**
-     *
      * @implements \Ds\Sequence::push
      * @group mutator
      * @group variadic
@@ -201,7 +187,6 @@ trait Immutable
     /**
      * Signature of Illuminate\Support\Stringable::remove.
      *
-     *
      * @group mutator
      * @group unary
      *
@@ -219,7 +204,6 @@ trait Immutable
     /**
      * Signature of Illuminate\Support\Stringable::reverse.
      *
-     *
      * @implements \Ds\Sequence::reverse
      * @group mutator
      * @group variadic
@@ -236,7 +220,6 @@ trait Immutable
     }
 
     /**
-     *
      * @implements \Ds\Sequence::rotate
      * @group mutator
      * @group unary
@@ -251,7 +234,6 @@ trait Immutable
     }
 
     /**
-     *
      * @implements \Ds\Sequence::set
      * @group mutator
      * @group binary
@@ -266,7 +248,6 @@ trait Immutable
     }
 
     /**
-     *
      * @group mutator
      * @group nonary
      *
@@ -284,7 +265,6 @@ trait Immutable
      *
      * Happens to have the same signature as \Ds\Sequence::sort.
      *
-     *
      * @implements \App\Interfaces\Abilities\Sortable::sort
      * @group unary
      * @group mutator
@@ -301,7 +281,6 @@ trait Immutable
     }
 
     /**
-     *
      * @implements \Ds\Sequence::unshift
      * @group variadic
      *

@@ -1,8 +1,6 @@
 <?php
 
 return [
-
-
-    "cards" => [
-    ]
+    'cards' => [
+    ],
 ];

@@ -12,8 +12,6 @@ use Illuminate\Http\Request;
 /**
  * Our custom implementation of \Illuminate\Auth\AuthManager.
  *
- *
- *
  * @mixin \Illuminate\Contracts\Auth\Guard
  * @mixin \Illuminate\Contracts\Auth\StatefulGuard
  */
@@ -21,7 +19,6 @@ final class AuthManager extends StandardAuthManager
 {
     /**
      * Constructor. Creates a new Auth manager instance.
-     *
      *
      * @group magic
      * @group mutator
@@ -38,7 +35,6 @@ final class AuthManager extends StandardAuthManager
     }
 
     /**
-     *
      * @group nonary
      *
      * @uses \assert (native) If enabled, and the given assertion is false, throws an exception.
@@ -87,7 +83,6 @@ final class AuthManager extends StandardAuthManager
     /**
      * Attempts to get the guard from the local cache.
      *
-     *
      * @extends \Illuminate\Auth\AuthManager::guard
      *
      * @param null|string $name
@@ -116,7 +111,6 @@ final class AuthManager extends StandardAuthManager
 
     /**
      * Creates a new Auth manager instance.
-     *
      *
      * @group unary
      *

@@ -4,15 +4,13 @@ namespace App\Skills;
 
 use App\Contracts\Skill;
 
-class HighPunch implements Skill
-{
-}
+class HighPunch implements Skill {}
 
 // [[Attack]]
 //[[Attack]] [[Physical Mode]]
 
 //Requires [[Punching]].
-//Choose one monster in play.
+//Choose one monster on the Battlefield.
 // Damage:: M(Manual/4)
 // Flinch:: 30% chance
 //# playable card::
