@@ -2,9 +2,9 @@
 {{ view('Facility.background') }}
 @endpush
 
-@push('flavor-text')
-<x-card.flavor-text-line>Have a hot meal. Hang out with the boys.</x-card.flavor-text-line>
-@endpush
+<x-card.flavortext>
+<x-card.flavortext.line>Have a hot meal. Hang out with the boys.</x-card.flavortext.line>
+</x-card.flavortext>
 
 <x-card :$cardNumber card-name="Community Center" >
     <x-card.rulebox>

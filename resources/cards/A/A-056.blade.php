@@ -1,6 +1,10 @@
-<x-card concepts="Trait" :$cardNumber card-name="Slow Start" >
+@push('background')
+{{ view('Trait.background') }}
+@endpush
 
-    <x-card.rulebox>
+<x-card :$cardNumber card-name="Slow Start">
+<x-card.rulebox>
+<x-card.concept-card type="Trait" />
         <x-slot:small>
             This card can be attached to a Monster only during the Setup Phase.
     </x-slot:small>

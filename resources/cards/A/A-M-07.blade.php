@@ -1,7 +1,8 @@
 <?php
 
     #[\App\GeneralAttributes\Title('male Energos Monster L35')]
-<x-card.Monster :$cardNumber card-name=""card_id": "A-M-07",">
+<x-card :$cardNumber card-name=""card_id": "A-M-07",">
+<x-card.concept-card type="Monster" />
 
 </x-card.Monster>
     "subtypes":["Male"],

@@ -33,20 +33,19 @@ enum CardSet: string
     case PyroTA = 'PTA';
     case RiseOfSwitch = 'AS';
 
-public function cards():Collection{
-    return new Collection( config('cards.'.$this->value));
-}
-
-//
+    public function cards(): Collection
+    {
+        return new Collection(\config('cards.' . $this->value));
+    }
 
     public function echo_section(): void
     {
         ?>
     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"  hx-boost="true" hx-target="#right-section" hx-swap="innerHTML">
         <?php
-                foreach ( $this->cards() as $card_number => $card_info) {
+                foreach ($this->cards() as $card_number => $card_info) {
                     ?>
-            <li><a href="/cards/card/<?= $card_number ?>"
+            <li><a href="/cards/card/<?php echo $card_number; ?>"
  class="card-link link-body-emphasis d-inline-flex text-decoration-none rounded" data-id="<?php echo $card_number; ?>"><?php echo $card_number; ?> <?php echo $card_info->name() ?? ''; ?></a></li>
         <?php } ?>
     </ul>

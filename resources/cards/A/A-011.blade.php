@@ -11,7 +11,7 @@
             <x-slot:small>Requires Energos.</x-slot:small>
                 <x-slot:normal>
         Discard all Electricity cards attached to 
-        this Monster. Each other Monster in play takes 
+        this Monster. Each other Monster on the Battlefield takes 
         1d6 damage for each Electricity card discarded. 
         Only this Monster may attack until & through 
         this player’s next turn.        

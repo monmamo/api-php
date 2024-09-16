@@ -1,5 +1,6 @@
-@push('image-credit')
+<x-card.image-credit>
 @ai
+</x-card.image-credit>
 @endpush
 
 @push('background')

@@ -1,5 +1,6 @@
-@push('image-credit')
+<x-card.image-credit>
 Image by DarkZaitzev on Game-Icons.net under CC BY 3.0
+</x-card.image-credit>
 @endpush
 
 @push('background')

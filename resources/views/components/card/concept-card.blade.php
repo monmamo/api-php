@@ -1,30 +1,40 @@
-@props(['type','y'=>0,'index'=>0])
+@props(['type','x'=>null,'y'=>0,'width'=>null,'index'=>0,'rule'=>null])
 
 <?php
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\View;
 
-$icon_height = 54;
-$icon_padding = 2;
+global $rules_dy;
+$rules_dy ??= 0;
+
+if (View::exists("$type.card")) {
+    echo View::make("$type.card",compact('y','rule'));
+} else {
 
 $rule_path = resource_path("concepts/$type/standard-rule.txt");
 $rule_lines = file_exists($rule_path) ? file($rule_path) : [];
-$width = config("card-design.viewbox.width");
-$height = max($icon_height+$icon_padding*2,count($rule_lines)*25+25);
+$width ??= config("card-design.viewbox.width");
+$height = max(config("card-design.concept.standard-height"),count($rule_lines)*25+25);
 ?>
 
 <symbol id="<?= $type ?>-card" width="<?= $width ?>" height="<?= $height ?>" viewBox="0 0 <?= $width ?> <?= $height ?>">
 
-    <rect width="<?= $width ?>" height="<?= $height ?>" fill="#ffffff" fill-opacity="50%" />
-     <g transform="translate(<?= $icon_padding ?>,<?= $icon_padding ?>) scale(<?= $icon_height/512 ?>)" fill="#000000" fill-opacity="1">
+    <rect width="100%" height="100%" fill="#ffffff" fill-opacity="50%" />
+     <g class="concept-icon" fill="#000000" fill-opacity="1">
         {{ view($type.'.icon') }}
      </g>
-     <text x="58" y="30" class="cardtype" text-anchor="left" alignment-baseline="central"><?= $type ?> {{ $slot }}</text>
-     <text x="395" y="0" text-anchor="right" alignment-baseline="central">
-        <?php 
-            foreach ($rule_lines as $line) 
-            echo  Blade::render("@smallrule($line)");
- ?>
+     <text x="<?= config("card-design.concept.standard-height") ?>" y="30" class="concept-type"><?= $type ?> {{ $slot }}</text>
+     <text >
+        <?php foreach ($rule_lines as $line) { ?>
+         <tspan x="60%" dy="20" class="smallrule"  alignment-baseline="baseline"><?= $line ?></tspan>
+<?php } ?>
         </text>
- </symbol>
+</symbol>
 
- <use href="#<?= $type ?>-card" x="0" y="<?= $y+$index*60 ?>" />
+<use href="#<?= $type ?>-card" x="<?= $x ?? 0 ?>" y="<?= $y+$index*60+$rules_dy ?>" />
+
+<?php 
+if (is_null($x)) 
+$rules_dy += $height; 
+}
+ ?>

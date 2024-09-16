@@ -1,9 +1,17 @@
-<x-card.Attack :$cardNumber card-name="Body Slam" >
-    @push('flavor-text')
-<x-card.flavor-text-line>Give it ALL you got.</x-card.flavor-text-line>
+@push('background')
+{{ view('Attack.background') }}
 @endpush
-<x-slot:card-rules>
+
+<x-card.flavortext>
+<x-card.flavortext.line>Give it ALL you got.</x-card.flavortext.line>
+</x-card.flavortext>
+
+<x-card :$cardNumber card-name="Body Slam" >
+<x-card.rulebox>
+    <x-card.concept-card type="Attack" />
+    <x-slot:normal>
 Does 3×Size damage to defending Monster.
 Does 2×Size damage to self.
-</x-slot:card-rules>
+</x-slot:normal>
+</x-card.rulebox>
 </x-card.Attack>

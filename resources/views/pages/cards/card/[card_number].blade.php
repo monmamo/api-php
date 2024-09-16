@@ -42,6 +42,12 @@ $view = view("$set.$card_number")->with('cardNumber', $card_number)->with('cardS
 
 // if (isset($_REQUEST['download'] )) 
 // \header('Content-Disposition: attachment; filename="'.$card_number.'.svg"');
+
+$filepath = resource_path("cards/$set/$card_number.blade.php");
+assert(!empty($filepath));
+assert(file_exists($filepath));
+$edit_url = "vscode://file/".urlencode($filepath);
+
 ?>
 <html>
 
@@ -52,6 +58,9 @@ $view = view("$set.$card_number")->with('cardNumber', $card_number)->with('cardS
   <button id="btn-png" data-format="png">PNG</button>
   <button id="btn-jpg" data-format="jpeg">JPG</button>
   <button id="btn-webp" data-format="webp">WEBP</button>
+
+  <a href="<?= $edit_url ?>">Edit</a>
+
   @isset($next)
   <a id="btn-next" href="/cards/card/{{$next}}">{{$next}}</a>
     @endisset

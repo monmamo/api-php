@@ -4,13 +4,14 @@
 </g>
 @endpush
 
-@push('flavor-text')
-<x-card.flavor-text-line>Corrosive substance that can dissolve materials.</x-card.flavor-text-line>
-<x-card.flavor-text-line>It is often used in manufacturing and cleaning.</x-card.flavor-text-line>
-@endpush
+<x-card.flavortext>
+<x-card.flavortext.line>Corrosive substance that can dissolve materials.</x-card.flavortext.line>
+<x-card.flavortext.line>It is often used in manufacturing and cleaning.</x-card.flavortext.line>
+</x-card.flavortext>
 
-@push('image-credit')
+<x-card.image-credit>
 Icon by sbed on Game-Icons.net under CC BY 3.0
+</x-card.image-credit>
 @endpush
 
 <x-card concepts="Mana" :$cardNumber card-name="Acid" />

@@ -1,7 +1,8 @@
 <?php
 
     #[\App\GeneralAttributes\Title('Pyros Monster L35')]
-<x-card.Monster :$cardNumber card-name=""card_id": "A-M-10",">
+<x-card :$cardNumber card-name=""card_id": "A-M-10",">
+<x-card.concept-card type="Monster" />
 
 </x-card.Monster>
 sex":     "male

@@ -1,4 +1,9 @@
-<x-card concepts="Draw" :$cardNumber card-name="Temporary Blindness">
+@push('background')
+{{ view('Draw.background') }}
+@endpush
+
+<x-card :$cardNumber card-name="Temporary Blindness">
+<x-card.concept-card type="Draw" /> 
     <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
     <x-card.rulebox>
         <x-slot:small>

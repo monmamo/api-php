@@ -1,7 +1,8 @@
 <?php
 
     #[\App\GeneralAttributes\Title('Lutress L35')]
-<x-card.Monster :$cardNumber card-name=""card_id": "A-M-02",">
+<x-card :$cardNumber card-name=""card_id": "A-M-02",">
+<x-card.concept-card type="Monster" />
 
 </x-card.Monster>
     "subtypes":["Female"],

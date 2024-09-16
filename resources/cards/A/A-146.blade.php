@@ -1,20 +1,25 @@
-<x-card.Vendor :$cardNumber card-name="Lottery">
-    <x-card.concept type="Item">Item</x-card.concept>
+@push('background')
+{{ view('Vendor.background') }}
+<x-card.image-credit>Image by storyset on Freepik</x-card.image-credit>
+@endpush
+
+<x-card :$cardNumber card-name="Lottery">
+<x-card.concept-card type="Vendor" />
+    <x-card.concept-card type="Item">Item</x-card.concept>
 
     <x-card.rulebox>
         <x-slot:normal>
-            Discard two or more cards from your hand.
-Then draw that number plus two cards.
+<x-card.normalrule>Discard two or more cards from your hand.</x-card.normalrule>
+<x-card.normalrule>Then draw that number plus two cards.</x-card.normalrule>
 </x-slot:normal>
 </x-card.rulebox>
 </x-card.Vendor>
-    @push('flavor-text')
-<x-card.flavor-text-line>Can’t win if you don’t play!</x-card.flavor-text-line>
-@endpush
+    <x-card.flavortext>
+<x-card.flavortext.line>Can’t win if you don’t play!</x-card.flavortext.line>
+</x-card.flavortext>
     "image": {
         <image x="0" y="0" class="hero" href="@local(A146.jpg)" />
-        @push('image-credit')
-Image by storyset on Freepik
+        
 @endpush
 {{-- https://www.freepik.com/free-vector/lottery-ticket-concept-illustration_171056284.htm --}}
     },

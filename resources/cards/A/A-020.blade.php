@@ -1,9 +1,6 @@
-@push('image-credit')
-Image by Lorc on Game-Icons.net under CC BY 3.0
-@endpush
-
 @push('background')
 {{ view('Trait.background') }}
+<x-card.image-credit>Image by Lorc on Game-Icons.net under CC BY 3.0</x-card.image-credit>
 @endpush
 
 {{-- https://www.freepik.com/free-vector/cartoon-eyes_763685.htm --}}
@@ -16,10 +13,13 @@ Image by Lorc on Game-Icons.net under CC BY 3.0
 
         <x-card.rulebox>
             <x-card.concept-card type="Draw" />
-            <x-slot:normal>        
-    Resolution phase: Add Speed÷2 (rounded down)
-    to all Attacks and Defenses.
-</x-slot:normal>
+            <x-card.phaserule type="Resolution" y="135" height="135">
+                <text >
+            <x-card.normalrule>Add Speed÷2 (rounded down)</x-card.normalrule>
+<x-card.normalrule>to all Attacks and Defenses.</x-card.normalrule>
+</text>
+</x-card.phaserule>
+
 </x-card.rulebox>
 
 </x-card>

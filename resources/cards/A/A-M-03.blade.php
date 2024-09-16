@@ -1,4 +1,5 @@
-<x-card.Monster :$cardNumber card-name="Aquofeless L40" >
+<x-card :$cardNumber card-name="Aquofeless L40" >
+<x-card.concept-card type="Monster" />
 
 </x-card.Monster>
     "speed": 10,

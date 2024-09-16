@@ -1,7 +1,13 @@
-<x-card concepts="Trait" :$cardNumber card-name="Benevolence">
+@push('background')
+{{ view('Trait.background') }}
+@endpush
 
-<x-slot:card-rules>
+<x-card :$cardNumber card-name="Benevolence">
+<x-card.rulebox>
+<x-card.concept-card type="Trait" />
+<x-slot:normal>
     Damage done to defender: -1d6
     Damage prevented: +1d6
-    </x-slot:card-rules>
+    </x-slot:normal>
+</x-card.rulebox>
 </x-card>

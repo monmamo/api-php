@@ -1,4 +1,5 @@
-<x-card.Monster :$cardNumber card-name="Aquomusor L30" >
+<x-card :$cardNumber card-name="Aquomusor L30" >
+<x-card.concept-card type="Monster" />
 
 </x-card.Monster>
     "subtypes":["Male"],

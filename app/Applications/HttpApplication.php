@@ -14,7 +14,6 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Session\Middleware\StartSession;
-use Illuminate\Support\Facades\Route;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 abstract class HttpApplication extends BaseApplication implements MakesGuard
@@ -31,12 +30,42 @@ abstract class HttpApplication extends BaseApplication implements MakesGuard
      *
      * @return void
      */
-    public function __construct(?callable $host=null)
+    public function __construct(?callable $host = null)
     {
         parent::__construct();
 
         Host::setFacadeApplication($this);
         Host::bind($host ?? EnvironmentProperties::host(...));
+    }
+
+    /**
+     * @group nonary
+     */
+    public function __destruct()
+    {
+        // Set this only if something is running way too long in development. set_time_limit(15); // seconds
+
+        // If the application is in maintenance / demo mode via the "down" command we will load this file so that any pre-rendered content can be shown instead of starting the framework, which could cause an exception.
+
+        if (\file_exists($maintenance = __DIR__ . '/../../storage/framework/maintenance.php')) {
+            require $maintenance;
+        }
+
+        // Once we have the application, we can handle the incoming request using the application's HTTP kernel.
+        // Then, we will send the response back to this client's browser, allowing them to enjoy our application.
+
+        $kernel = $this->getKernel();
+
+        // $kernel::handle calls $kernel::bootstrap
+        $response = $kernel->handle(
+            $request = Request::capture(),
+        )->send();
+
+        // Terminate the application.
+
+        $kernel->terminate($request, $response);
+
+        parent::__destruct();
     }
 
     /**
@@ -71,6 +100,7 @@ abstract class HttpApplication extends BaseApplication implements MakesGuard
         // foreach (\App\Facades\Host::middleware() ?? [] as $middleware) {yield $middleware; }
     }
 
+    abstract public function bootRouting(): void;
 
     /**
      * Returns the kernel that needs tbo be bootstrapped for the application.
@@ -83,37 +113,5 @@ abstract class HttpApplication extends BaseApplication implements MakesGuard
     public function getKernel(): object
     {
         return $this->make(Kernel::class);
-    }
-
-    abstract public function bootRouting(): void;
-
-    /**
-     * @group nonary
-     */
-    public function __destruct()
-    {
-        // Set this only if something is running way too long in development. set_time_limit(15); // seconds
-
-        // If the application is in maintenance / demo mode via the "down" command we will load this file so that any pre-rendered content can be shown instead of starting the framework, which could cause an exception.
-
-        if (\file_exists($maintenance = __DIR__ . '/../../storage/framework/maintenance.php')) {
-            require $maintenance;
-        }
-
-        // Once we have the application, we can handle the incoming request using the application's HTTP kernel.
-        // Then, we will send the response back to this client's browser, allowing them to enjoy our application.
-
-        $kernel = $this->getKernel();
-
-        // $kernel::handle calls $kernel::bootstrap
-        $response = $kernel->handle(
-            $request = Request::capture(),
-        )->send();
-
-        // Terminate the application.
-
-        $kernel->terminate($request, $response);
-
-        parent::__destruct();
     }
 }

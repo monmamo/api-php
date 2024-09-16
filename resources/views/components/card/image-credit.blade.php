@@ -2,7 +2,7 @@
 <?php
 $text = match(true) {
     $ai => 'Generated image',
-    default => 'Image by '.$slot,
+    default => $slot,
 };
 ?>
-<text x="50%" y="-10" class="credit" text-anchor="middle" alignment-baseline="bottom">{{$text}}</text>
+<text x="50%" y="50" class="credit" text-anchor="middle" alignment-baseline="baseline">{{$text}}</text>

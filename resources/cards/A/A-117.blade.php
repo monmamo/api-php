@@ -1,24 +1,31 @@
-<x-card.Vendor :$cardNumber card-name="Convenience Store" >
+@push('background')
+{{ view('Vendor.background') }}
+@endpush
 
-<x-slot:card-rules>
-  Discard 1d4 cards from your hand.
-  Search your Library for one Item card. 
-  Reveal it, then put it in your hand.
-  Shuffle your library.
-  You may perform another Draw phase action.
-  </x-slot:card-rules>
+<x-card :$cardNumber card-name="Convenience Store" >
+<x-card.rulebox>
+<x-card.concept-card type="Vendor" />
+<x-slot:normal>
+<x-card.normalrule>Discard 1d4 cards from your hand.</x-card.normalrule>
+<x-card.normalrule>Search your Library for one Item card. </x-card.normalrule>
+<x-card.normalrule>Reveal it, then put it in your hand.</x-card.normalrule>
+<x-card.normalrule>Shuffle your library.</x-card.normalrule>
+<x-card.normalrule>You may perform another Draw phase action.</x-card.normalrule>
+  </x-slot:normal>
+</x-card.rulebox>
 </x-card.Vendor>
 <?php
  [
   ],
-  <x-card.concept type="Integrity">1d6</x-card.concern>
-  @push('flavor-text')
-<x-card.flavor-text-line>The quick stop for all your needs.</x-card.flavor-text-line>
-@endpush
+  <x-card.concept-card type="Integrity">1d6</x-card.concern-card>
+  <x-card.flavortext>
+<x-card.flavortext.line>The quick stop for all your needs.</x-card.flavortext.line>
+</x-card.flavortext>
   "image": {
     <image x="0" y="0" class="hero" href="@local(A040.png)" />
-    @push('image-credit')
+    <x-card.image-credit>
 @ai
+</x-card.image-credit>
 @endpush
   }
 }

@@ -1,0 +1,2 @@
+Play when declaring an attack
+in the Command Phase.

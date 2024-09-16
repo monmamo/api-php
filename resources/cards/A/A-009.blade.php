@@ -2,8 +2,9 @@
 {{ view('Trait.background') }}
 @endpush
 
-@push('image-credit')
+<x-card.image-credit>
 Image by Lorc on Game-Icons.net under CC BY 3.0
+</x-card.image-credit>
 @endpush
 
 

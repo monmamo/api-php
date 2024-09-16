@@ -1,16 +1,13 @@
-<x-card.Vendor :$cardNumber card-name="Junk Patrol" >
+@push('background')
+{{ view('Vendor.background') }}
+@endpush
+
+<x-card :$cardNumber card-name="Junk Patrol" >
+<x-card.concept-card type="Vendor" />
 
 </x-card.Vendor>
-    <x-slot:card-rules>Put a discarded Item card into your hand.</x-slot:card-rules>
-    "stats": null,
-    "subtypes": [],
-    "image": {
-        "filename": null,
-        
-        "source": null,
-        
-        "prompt": null
-    },
+    <x-card.rulebox>
+<x-slot:normal>Put a discarded Item card into your hand.</x-slot:normal>
+</x-card.rulebox>
     
-_inspiration": "https://bulbapedia.bulbagarden.net/wiki/Junk_Arm_(Triumphant_87)
-}
+{{-- _inspiration": "https://bulbapedia.bulbagarden.net/wiki/Junk_Arm_(Triumphant_87) --}}

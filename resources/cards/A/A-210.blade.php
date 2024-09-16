@@ -1,8 +1,11 @@
-<x-card.Upkeep :$cardNumber card-name="Recall the Wounded" >
-
-<x-slot:card-rules>
-</x-slot:card-rules>
+<x-card :$cardNumber card-name="Recall the Wounded" >
+<x-card.rulebox>
+<x-card.concept-card type="Upkeep" />
+<x-slot:normal>
+</x-slot:normal>
+</x-card.rulebox>
 </x-card.Upkeep>
 <?php
-Shuffle your Knocked Out Monsters into your Library. (The Monsters still count as Knocked Out for the purpose of resolving the match.)
+<x-card.normalrule>Shuffle your Knocked Out Monsters into your Library. </x-card.normalrule>
+(The Monsters still count as Knocked Out for the purpose of resolving the match.)
 }

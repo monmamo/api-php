@@ -1,11 +1,14 @@
-@push('flavor-text')
-@endpush
-
-@push('image-credit')
+<x-card.image-credit>
 Image by USER_NAME on SERVICE
+</x-card.image-credit>
 @endpush
 
-<x-card concepts="Draw" :$cardNumber card-name="Cowardice">
+@push('background')
+{{ view('Draw.background') }}
+@endpush
+
+<x-card :$cardNumber card-name="Cowardice">
+<x-card.concept-card type="Draw" /> 
     <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
     <x-card.rulebox>
         <x-slot:normal>

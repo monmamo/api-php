@@ -1,1 +1,1 @@
-<x-linear-gradient-background start="#D0021C" end="#F4A623" />
+<x-linear-gradient-background :base="\App\Enums\Color::PlaceColor" :dg="40" :db="24" />

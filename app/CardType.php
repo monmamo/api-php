@@ -2,10 +2,15 @@
 
 namespace App;
 
-#[\Attribute(\Attribute::TARGET_CLASS)]
-class CardType implements \App\Contracts\HasIcon
-{
+use App\Contracts\HasIcon;
+use App\GeneralAttributes\Color;
+use App\GeneralAttributes\Title;
+use Illuminate\Contracts\Support\Renderable;
 
+#[\Attribute(\Attribute::TARGET_CLASS)]
+class CardType implements HasIcon
+{
+    protected ?string $color = null;
 
     /**
      * Constructor.
@@ -17,40 +22,35 @@ class CardType implements \App\Contracts\HasIcon
      * @return void
      */
     public function __construct(
-        protected readonly string $type
+        protected readonly string $type,
     ) {}
 
-
-
-    public  function icon(): \Illuminate\Contracts\Support\Renderable
+    public function color(): string|array
     {
-        return view($this->type . '.icon');
-    }
-
-    protected ?string $color = null;
-
-    public  function color(): string|array
-    {
-        return $this->color ??=  value(function () {
+        return $this->color ??= \value(function () {
             $reflection = new \ReflectionClass($this);
-            $attributes = $reflection->getAttributes(\App\GeneralAttributes\Color::class);
-            $attribute = $attributes[0] ??  throw new \LogicException();
+            $attributes = $reflection->getAttributes(Color::class);
+            $attribute = $attributes[0] ?? throw new \LogicException();
             return $attribute->getArguments()[0]->value;
         });
     }
 
+    public function icon(): Renderable
+    {
+        return \view($this->type . '.icon');
+    }
 
     public function standardRule(): \Traversable
     {
-        return new \EmptyIterator;
+        return new \EmptyIterator();
     }
 
     public function title(): string
     {
         $reflection = new \ReflectionClass($this);
-        $attributes = $reflection->getAttributes(\App\GeneralAttributes\Title::class);
+        $attributes = $reflection->getAttributes(Title::class);
 
-        if (count($attributes) > 0) {
+        if (\count($attributes) > 0) {
             return $attributes[0]->getArguments()[0];
         }
 

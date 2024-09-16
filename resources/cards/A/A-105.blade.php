@@ -1,9 +1,10 @@
-@push('flavor-text')
-<x-card.flavor-text-line>Ouuuuuch....</x-card.flavor-text-line>
-@endpush
+<x-card.flavortext>
+<x-card.flavortext.line>Ouuuuuch....</x-card.flavortext.line>
+</x-card.flavortext>
 
-@push('image-credit')
+<x-card.image-credit>
 @ai
+</x-card.image-credit>
 @endpush
 {{-- https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FMonMaMo%2F0lqNV7_F94.jpeg?alt=media&token=78f7b026-4cd1-49a6-8fc0-2c1d2692f962 --}}
 

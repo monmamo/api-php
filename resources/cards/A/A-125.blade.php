@@ -1,23 +1,18 @@
-<x-card.Catastrophe :$cardNumber card-name="Hurricane">
+@push('background')
+{{ view('Catastrophe.background') }}
+@endpush
 
-<x-slot:card-rules>
-</x-slot:card-rules>
+<x-card :$cardNumber card-name="Hurricane">
+<x-card.rulebox>
+<x-card.concept-card type="Catastrophe" />
+<x-slot:normal>
+    <x-card.normalrule>This card can be played only if Summer or Autumn is on the Battlefield.</x-card.normalrule>
+    <x-card.normalrule>Each player discards 3 cards from the top of his Library.</x-card.normalrule>
+    <x-card.normalrule>If the Place card on the Battlefield is a Venue or Facility card, discard it.</x-card.normalrule>
+    <x-card.normalrule>Discard all Mobster and Bystander cards on the Battlefield.</x-card.normalrule>
+    <x-card.normalrule>Discard all Item cards on the Battlefield that are not attached to Monsters.</x-card.normalrule>
+    <x-card.normalrule>Shuffle all Item cards attached to Monsters into the Library.</x-card.normalrule>
+    </x-slot:normal>
+</x-card.rulebox>
 </x-card.Catastrophe>
 <?php
- ["This card can be played only if Summer or Autumn is in play.",
-Each player discards 3 cards from the top of his Library.
-If the Place card in play is a Venue or Facility card, discard it.
-Discard all Mobster and Bystander cards in play.
-Discard all Item cards in play that are not attached to Monsters.
-Shuffle all Item cards attached to Monsters into the Library.
-],
-    "image": {
-        "filename": null,
-        
-        "source": null,
-        "ai":false,
-        "prompt":null
-    },
-    
-}
-

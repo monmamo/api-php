@@ -1,9 +1,10 @@
-@push('flavor-text')
-<x-card.flavor-text-line>Pay it forward even when it isn't cool.</x-card.flavor-text-line>
-@endpush
+<x-card.flavortext>
+<x-card.flavortext.line>Pay it forward even when it isn't cool.</x-card.flavortext.line>
+</x-card.flavortext>
 
-@push('image-credit')
+<x-card.image-credit>
 Image by freepik
+</x-card.image-credit>
 @endpush
 
 @push('background')

@@ -1,17 +1,32 @@
-@push('image-credit')
+<x-card.image-credit>
 @ai
+</x-card.image-credit>
 @endpush
 
-<x-card.Mobster :$cardNumber card-name="Crooked Cop" >
-    <image x="0" y="0" class="hero" href="@local(A-045.jpg)" />
-    <x-card.concept type="Integrity">1d4</x-card.concern>
+@push('background')
+{{ view('Mobster.background') }}
+@endpush
 
-<x-slot:card-rules>
-  Draw phase: Choose an opponent.
-  Choose a random card from that opponent's
-  hand. They must discard that card.
-  Reveal cards from the top of your Library until an
-  Item card appears. Put that card in your hand.
-  Shuffle the other cards back into your Library.
-</x-slot:card-rules>
-</x-card.Mobster>
+<x-card :$cardNumber card-name="Crooked Cop">
+
+    <image x="0" y="0" class="hero" href="@local(A-045.jpg)" />
+
+<x-card.rulebox>
+  <x-card.concept.row>
+    <x-card.concept.card type="Mobster" x="0" width="380" />
+    <x-card.concept.card type="Integrity" x="380" width="230" >1d4</x-card.concept>
+    </x-card.concept.row>
+
+    <x-card.phaserule type="Draw" y="170" height="130">
+      <text >
+<x-card.normalrule>Choose an opponent.</x-card.normalrule>
+<x-card.normalrule>Choose a random card from that opponent's</x-card.normalrule>
+<x-card.normalrule>hand. They must discard that card.</x-card.normalrule>
+<x-card.normalrule>Reveal cards from the top of your Library until </x-card.normalrule>
+<x-card.normalrule>an Item card appears. Put that card in your hand.</x-card.normalrule>
+<x-card.normalrule>Shuffle the other cards back into your Library.</x-card.normalrule>
+</text>
+</x-card.phaserule>
+
+            </x-card.rulebox>
+</x-card>

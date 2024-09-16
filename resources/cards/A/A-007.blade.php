@@ -1,12 +1,9 @@
-@push('flavor-text')
-<x-card.flavor-text-line>Loose lips sink championships.</x-card.flavor-text-line>
-@endpush
-
-@push('image-credit')
-Image by Delapouite on Game-Icons.net under CC BY 3.0
-@endpush
-
 @push('background')
+<x-card.flavortext>
+<x-card.flavortext.line>Loose lips sink championships.</x-card.flavortext.line>
+</x-card.flavortext>
+
+<x-card.image-credit>Image by Delapouite on Game-Icons.net under CC BY 3.0</x-card.image-credit>
 {{ view('Mobster.background') }}
 @endpush
 
@@ -17,19 +14,18 @@ Image by Delapouite on Game-Icons.net under CC BY 3.0
 
     <x-card.rulebox>
         <x-card.concept-card type="Mobster" />
-        <x-slot:normal>
+    
 
-No limit on battlefield
-Upkeep phase: You may look at a random card
-from any Library. Do not reveal the card
-to anyone else or change its location
-in the Library.    
-</x-slot:normal>
-</x-card.rulebox>
+<x-card.smallrule>No limit on battlefield</x-card.smallrule>
 
+<x-card.phaserule type="Upkeep" y="170" height="130">
+    <text >
+<x-card.normalrule>You may look at a random card</x-card.normalrule>
+<x-card.normalrule>from any Library. Do not reveal the card</x-card.normalrule>
+<x-card.normalrule>to anyone else or change its location</x-card.normalrule>
+<x-card.normalrule>in the Library.    </x-card.normalrule>
+</text>
+</x-card.phaserule>
+
+            </x-card.rulebox>
 </x-card>
-
-<?php
-
-
-

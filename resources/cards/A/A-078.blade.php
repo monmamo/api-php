@@ -1,13 +1,18 @@
-
-@push('image-credit')
-Adobe Stock #2910609
+@push('background')
+{{ view('Trait.background') }}
+<x-card.image-credit>Adobe Stock #2910609</x-card.image-credit>
 @endpush
 
-<x-card concepts="Trait" :$cardNumber card-name="Grotesque Mouth" >
+<x-card :$cardNumber card-name="Grotesque Mouth">
+
     <image x="0" y="0" class="hero" href="@local(hero/AdobeStock_2910609.jpeg)" />
-<x-slot:card-rules>
-    Size +1.
-    </x-slot:card-rules>
+
+<x-card.rulebox>
+    <x-card.concept-card type="Trait" /> 
+    <text y="70" filter="url(#solid)">
+    <x-card.normalrule>Size +1.</x-card.normalrule>
+    </text>
+</x-card.rulebox>
 
     <svg id="titlebox" x="50" y="630" width="550" height="165" viewBox="0 0 550 165">
         <rect x="0" y="0" width="550" height="165" fill="#FFFFFF" fill-opacity="0.75" />

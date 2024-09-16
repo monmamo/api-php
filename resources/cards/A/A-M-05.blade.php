@@ -1,4 +1,5 @@
-<x-card.Monster :$cardNumber card-name="Energos Monster L30" >
+<x-card :$cardNumber card-name="Energos Monster L30" >
+<x-card.concept-card type="Monster" />
 
 </x-card.Monster>
     "subtypes":["Female"],
@@ -9,8 +10,9 @@
     "damage_capacity": 60,
     "image": {
         <image x="0" y="0" class="hero" href="@local(AM05.jpg)" />
-        @push('image-credit')
+        <x-card.image-credit>
 @ai
+</x-card.image-credit>
 @endpush
         "source": null
     },

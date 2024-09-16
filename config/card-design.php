@@ -1,11 +1,11 @@
 <?php
+
 // Don't define rulebox in here! Rulebox is dependent on actual content.
 
 $icon_size = 512;
 
 $width = 750;
 $height = 1050;
-$margin = 50;
 
 $primary_rule_height = 35;
 $secondary_rule_height = 25;
@@ -16,27 +16,31 @@ $icon = [
     'translate' => ['x' => ($width - $height) / 2, 'y' => 0],
 ];
 
-$viewbox_width = $width - $margin - $margin;
-$viewbox_height = $height - $margin - $margin;
+// This is the actual cutline of your final design.
+$trimbox = ['margin' => 35];
+$trimbox['x'] = $trimbox['y'] = $trimbox['margin'];
+$trimbox['width'] = $width - $trimbox['margin'] - $trimbox['margin'];
+$trimbox['height'] = $height - $trimbox['margin'] - $trimbox['margin'];
 
-$viewbox = [
-    'width' => $viewbox_width,
-    'height' => $viewbox_height,
-];
+// DO NOT place ANY important text/images beyond the viewbox. Anything past the viewbox could be trimmed.
+$viewbox = ['margin' => 35];
+$viewbox['x'] = $viewbox['y'] = $trimbox['x'] + $viewbox['margin'];
+$viewbox['width'] = $trimbox['width'] - $trimbox['margin'] - $trimbox['margin'];
+$viewbox['height'] = $trimbox['height'] - $trimbox['margin'] - $trimbox['margin'];
 
-$titlebox_height = 80;
-$titlebox_cardtype_baseline = 30;
-$titlebox_cardname_baseline = $titlebox_height - $titlebox_cardtype_baseline;
+// The titlebox is at the bottom of the viewbox.
 
 $titlebox = [
-    'x' => $margin,
-    'y' => $height - $titlebox_height - $margin,
-    'height' => $titlebox_height,
+    'x' => $viewbox['x'],
     'width' => $viewbox['width'],
-    'cardtype-baseline' => $titlebox_cardtype_baseline,
-    'cardname-baseline' => $titlebox_cardname_baseline,
-    'text_x' => fn(bool $has_icon) => $viewbox['width'] / 2 + ($has_icon ? $titlebox_height / 2 : 0)
+    'height' => 80,
+    'cardtype_baseline' => 30,
 ];
+
+$titlebox['cardname_baseline'] = $titlebox['height'] - $titlebox['cardtype_baseline'];
+
+$titlebox['y'] = $viewbox['y'] + $viewbox['height'] - $titlebox['height'];
+$titlebox['text_x'] = fn (bool $has_icon) => $viewbox['width'] / 2 + ($has_icon ? $titlebox['height'] / 2 : 0);
 
 $hero_width = $viewbox['width'];
 $hero_height = 450;
@@ -47,18 +51,19 @@ $hero = [
     'icon' => [
         'scale' => $hero_height / $icon_size,
         'translate' => ['x' => ($hero_width - $hero_height) / 2, 'y' => 0],
-    ]
+    ],
 ];
 
-$bodytext = [
-    'line-height' => $primary_rule_height,
-    'y' => $hero_height + 50,
-    'width' => $viewbox['width'],
-    'height' => $viewbox_height - $titlebox_height + $margin - $hero_height
+$concept_icon_height = 54;
+$concept_icon_padding = 2;
+
+$concept = [
+    'icon-size' => $concept_icon_height,
+    'icon-padding' => $concept_icon_padding,
+    'standard-height' => $concept_icon_height + $concept_icon_padding * 2,
 ];
 
-return compact('height', 'width', 'margin', 'icon', 'viewbox', 'titlebox', 'bodytext', 'hero','primary_rule_height','secondary_rule_height');
-
+return \compact('height', 'width', 'icon', 'trimbox', 'viewbox', 'titlebox', 'hero', 'primary_rule_height', 'secondary_rule_height', 'concept');
 [
     'CARD_TITLE_FONT_SIZE' => 48,
     'CARD_TITLE_FONT_COLOR' => '#000000',
@@ -101,5 +106,5 @@ return compact('height', 'width', 'margin', 'icon', 'viewbox', 'titlebox', 'body
 
     'CARD_BACKGROUND_COLOR' => '#FFFFFF',
     'CARD_BORDER_RADIUS' => 0,
-    'CARD_BORDER_WIDTH'
+    'CARD_BORDER_WIDTH',
 ];

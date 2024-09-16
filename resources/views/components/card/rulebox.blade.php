@@ -3,6 +3,8 @@
 <?php
 use Illuminate\Support\Facades\Blade;
 
+global $rules_dy;
+
 $width = config("card-design.viewbox.width");
 $height = config("card-design.viewbox.height")-config("card-design.titlebox.height")-$y;
 
@@ -20,14 +22,6 @@ $svg_attributes = [
 
     {{$slot}}
 
-<text x="50%" y="20%" width="100%" height="80%" filter="url(#solid)">
-        <?php foreach (\App\Strings\explode_lines( $small ?? '') as $index => $line) { 
-            echo Blade::render("@smallrule($line)");
- } 
- foreach (\App\Strings\explode_lines( $normal ?? '' ) as $index => $line) { 
-echo Blade::render("@normalrule($line)");
- } ?>
-</text>
-
-
 </svg>
+
+<rect x="0" y="<?= $y ?>" width="<?= $width ?>" height="<?= $height ?>" fill-opacity="0" stroke-width="3" class="debug"/>

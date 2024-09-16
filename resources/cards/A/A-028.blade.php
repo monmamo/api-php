@@ -1,24 +1,24 @@
-@push('flavor-text')
-<x-card.flavor-text-line y="450" fill="#000000">Because both adulting and monster battling are hard.</x-card.flavor-text>
-@endpush
+<x-card.flavortext>
+<x-card.flavortext.line y="450" fill="#000000">Because both adulting and monster battling are hard.</x-card.flavor-text>
+</x-card.flavortext>
 
 @push('background')
 <image x="0" y="0" href="@local(A028-full.jpg)" source="https://www.freepik.com/free-vector/realistic-cup-black-brewed-coffee-saucer-vector-illustration_23128948.htm" />
 @endpush
 
-@push('image-credit')
+<x-card.image-credit>
 Image by macrovector on Freepik
+</x-card.image-credit>
 @endpush
-
 
 <x-card 
     credit-color="#000000" 
-    card-type="Mana" 
     card-name="Caffeine" 
     :$cardNumber 
     :titlebox-opacity="0.25"
 >
     <x-card.rulebox y="500">
+        <x-card.concept-card type="Mana" /> 
         <x-slot:normal>
         For any attempt to put this Monster to Sleep,
         roll 1d6. (Roll one die for each

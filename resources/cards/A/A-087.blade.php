@@ -1,22 +1,33 @@
 {{-- inspiration: Fieldworker PTCG card https://bulbapedia.bulbagarden.net/wiki/Fieldworker_(EX_Legend_Maker_73) --}}
 
-@push('image-credit')
-Image by Freepik
+@push('background')
+{{ view('Bystander.background') }}
+<x-card.image-credit>Image by Freepik</x-card.image-credit>
 @endpush
 
-<x-card.Bystander :$cardNumber card-name="Fieldworker">
+
+<x-card :$cardNumber card-name="Fieldworker">
+
     <image x="0" y="0" class="hero" href="@local(hero/fieldworker.jpg)"  />
-    <x-card.concept type="Integrity">1d4</x-card.concern>
-        <x-card.concept type="Male" index="1">Male</x-card.concern>
-        <x-card.concept type="Cumulative" index="2">Cumulative</x-card.concern>
-        
-            <x-card.rulebox>
-                <x-slot:small>
-                    A player may have any number of Drivers on the Battlefield.
-                </x-slot:small>
-                <x-slot:normal>Draw phase: You may choose to 
-                    draw up to 2 cards for each Fieldworker 
-                    you have on the Battlefield.
-                Then you may Redraw.</x-slot:normal>
+    <x-card.rulebox>
+        <x-card.concept-card type="Bystander"/>
+        <x-card.concept.row>
+        <x-card.concept.card type="Male" x="0" width="190" />
+        <x-card.concept.card type="Cumulative" x="190" width="190" />
+        <x-card.concept.card type="Integrity" x="380" width="230" >1d4</x-card.concept>
+        </x-card.concept.row>
+        <text y="120" filter="url(#solid)">
+            <x-card.smallrule>A player may have any number of Fieldworkers on the Battlefield.</x-card.smallrule>
+        </text>
+
+
+<x-card.phaserule type="Draw" y="170" height="130">
+    <text >
+        <x-card.normalrule>Draw up to 2 cards for each</x-card.normalrule>
+        <x-card.normalrule>of your Fieldworkers.</x-card.normalrule>
+        <x-card.normalrule>Then you may Redraw.</x-card.normalrule>
+ </text>
+</x-card.phaserule>
+
             </x-card.rulebox>
-</x-card.Bystander>
+</x-card>

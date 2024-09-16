@@ -3,8 +3,9 @@
 @endpush
 
 
-@push('image-credit')
+<x-card.image-credit>
 Image by Lorc on Game-Icons.net
+</x-card.image-credit>
 @endpush
 
 {{-- <image x="0" y="0" class="hero" href="@local(AT28)" /> pikisuperstar on Freepik   "source": "https://www.freepik.com/free-vector/hand-drawn-brain-cartoon-illustration_53573325.htm" --}}
