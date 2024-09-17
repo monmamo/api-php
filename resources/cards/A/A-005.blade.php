@@ -9,10 +9,10 @@
 <x-card :$cardNumber card-name="Community Center">
     <x-card.rulebox>
         <x-card.concept-card type="Facility" />
-        <x-slot:normal>
-            No Mobsters are allowed on the Battlefield.
-            Discard all Mobsters from the Battlefield.
-        </x-slot:normal>
+        <text y="80" filter="url(#solid)">
+            <x-card.normalrule>No Mobsters are allowed on the Battlefield.</x-card.normalrule>
+            <x-card.normalrule>Discard all Mobsters from the Battlefield.</x-card.normalrule>
+        </text>
     </x-card.rulebox>
 
 </x-card>

@@ -16,18 +16,18 @@
 
     <x-card.rulebox>
         <x-card.concept-card type="Mobster" />
+        <x-card.concept-card type="Integrity">1d4</x-card.concern-card>
 
+            <x-card.smallrule>No limit on battlefield</x-card.smallrule>
 
-        <x-card.smallrule>No limit on battlefield</x-card.smallrule>
-
-        <x-card.phaserule type="Upkeep" y="170" height="130">
-            <text>
-                <x-card.normalrule>You may look at a random card</x-card.normalrule>
-                <x-card.normalrule>from any Library. Do not reveal the card</x-card.normalrule>
-                <x-card.normalrule>to anyone else or change its location</x-card.normalrule>
-                <x-card.normalrule>in the Library. </x-card.normalrule>
-            </text>
-        </x-card.phaserule>
+            <x-card.phaserule type="Upkeep" y="170" height="130">
+                <text>
+                    <x-card.normalrule>You may look at a random card</x-card.normalrule>
+                    <x-card.normalrule>from any Library. Do not reveal the card</x-card.normalrule>
+                    <x-card.normalrule>to anyone else or change its location</x-card.normalrule>
+                    <x-card.normalrule>in the Library. </x-card.normalrule>
+                </text>
+            </x-card.phaserule>
 
     </x-card.rulebox>
 </x-card>

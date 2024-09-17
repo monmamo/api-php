@@ -1,27 +1,27 @@
 @push('background')
 {{ view('Vendor.background') }}
-@endpush
 
-<x-card :$cardNumber card-name="Pawn Shop" >
-<x-card.rulebox>
-<x-card.concept-card type="Vendor" />
-<x-slot:normal>
-</x-slot:normal>
-</x-card.rulebox>
-</x-card.Vendor>
-<?php
- [
-You may do one of the following:
-- Discard three cards from your hand. Search your Library for one Durable cards. Reveal any cards you select, then put them in your hand. Shuffle your library.
-- Discard a Durable card to draw two cards.
-  ],
-  <x-card.concept-card type="Integrity">1d4</x-card.concern-card>
-  "image": {
-    <image x="0" y="0" class="hero" href="@local(A192.jpg)" />
-    <x-card.image-credit>
-@ai
+<x-card.image-credit>
+    @ai
 </x-card.image-credit>
 @endpush
-  },
-{{-- Get an icon from Noun Project --}}
-}
+
+<x-card :$cardNumber card-name="Pawn Shop">
+    <x-card.rulebox>
+        <svg x="29" height="450" width="552" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+            <g>
+                <path d="m81.168 43.957c-0.875-14.082-11.25-26-25.082-28.75-0.66797-2.75-3.125-4.793-6.043-4.793s-5.418 2.043-6.043 4.793c-13.832 2.75-24.25 14.668-25.082 28.75-7.082 1-12.582 7.043-12.582 14.375 0 8.043 6.543 14.582 14.582 14.582 8.043 0 14.582-6.543 14.582-14.582 0-7.25-5.375-13.25-12.332-14.375 0.83203-12 9.582-22.082 21.332-24.543 0.70703 1.457 1.957 2.543 3.5 3.082v38.082c-7.043 1.043-12.5 7.043-12.5 14.375 0 8.043 6.543 14.582 14.582 14.582 8.043 0 14.582-6.543 14.582-14.582 0-7.332-5.457-13.332-12.5-14.375l0.003907-38.035c1.543-0.54297 2.793-1.668 3.5-3.082 11.75 2.5 20.5 12.543 21.332 24.543-6.957 1.082-12.332 7.082-12.332 14.375 0 8.043 6.543 14.582 14.582 14.582 8.043 0 14.582-6.543 14.582-14.582 0-7.375-5.5-13.418-12.582-14.375zm-49.918 14.375c0 5.75-4.668 10.418-10.418 10.418s-10.418-4.668-10.418-10.418 4.668-10.418 10.418-10.418 10.418 4.668 10.418 10.418zm29.168 16.668c0 5.75-4.668 10.418-10.418 10.418s-10.418-4.668-10.418-10.418 4.668-10.418 10.418-10.418 10.418 4.668 10.418 10.418zm-10.418-56.25c-1.168 0-2.082-0.91797-2.082-2.082 0-1.168 0.91797-2.082 2.082-2.082 1.168 0 2.082 0.91797 2.082 2.082 0 1.168-0.91797 2.082-2.082 2.082zm29.168 50c-5.75 0-10.418-4.668-10.418-10.418s4.668-10.418 10.418-10.418 10.418 4.668 10.418 10.418-4.668 10.418-10.418 10.418z" />
+                <path d="m18.75 58.332c0-1.168-0.91797-2.082-2.082-2.082-1.168 0-2.082 0.91797-2.082 2.082 0 3.457 2.793 6.25 6.25 6.25 1.168 0 2.082-0.91797 2.082-2.082 0-1.168-0.91797-2.082-2.082-2.082-1.168 0-2.082-0.91797-2.082-2.082z" />
+                <path d="m47.918 75c0-1.168-0.91797-2.082-2.082-2.082-1.168 0-2.082 0.91797-2.082 2.082 0 3.457 2.793 6.25 6.25 6.25 1.168 0 2.082-0.91797 2.082-2.082 0-1.168-0.91797-2.082-2.082-2.082-1.168 0-2.082-0.91797-2.082-2.082z" />
+                <path d="m79.168 60.418c-1.168 0-2.082-0.91797-2.082-2.082 0-1.168-0.91797-2.082-2.082-2.082-1.168 0-2.082 0.91797-2.082 2.082 0 3.457 2.793 6.25 6.25 6.25 1.168 0 2.082-0.91797 2.082-2.082 0-1.168-0.91797-2.082-2.082-2.082z" />
+                <text x="0.0" y="117.5" font-size="5.0" font-weight="bold" font-family="Arbeit Regular, Helvetica, Arial-Unicode, Arial, Sans-serif" fill="#000000">Created by archer7</text><text x="0.0" y="122.5" font-size="5.0" font-weight="bold" font-family="Arbeit Regular, Helvetica, Arial-Unicode, Arial, Sans-serif" fill="#000000">from Noun Project</text>
+        </svg>
+        <x-card.concept-card type="Vendor" />
+        <x-card.concept-card type="Integrity">1d4</x-card.concern-card>
+            <x-slot:normal>
+                You may do one of the following:
+                - Discard three cards from your hand. Search your Library for one Durable cards. Reveal any cards you select, then put them in your hand. Shuffle your library.
+                - Discard a Durable card to draw two cards.
+            </x-slot:normal>
+    </x-card.rulebox>
+    </x-card.Vendor>

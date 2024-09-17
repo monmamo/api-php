@@ -17,10 +17,10 @@
 
     <x-card.rulebox>
         <x-card.concept-card type="Trait" />
-        <x-slot:normal>
-            Speed +1d6
-            (rolled when attached to the Monster).
-        </x-slot:normal>
+        <text y="80" filter="url(#solid)">
+            <x-card.normalrule>Speed +1d6</x-card.normalrule>
+            <x-card.normalrule>(rolled when attached to the Monster).</x-card.normalrule>
+        </text>
     </x-card.rulebox>
 
 </x-card>
