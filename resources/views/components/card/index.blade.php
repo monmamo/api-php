@@ -157,6 +157,38 @@ return compact('type','detail');
             alignment-baseline: central;
         }
 
+        g.stat .icon {
+            fill:#FFFFFF;
+            fill-opacity:1;
+            stroke:#000000;
+            stroke-width: 10px
+        }
+               g.stat text.value {
+            font-family: 'Roboto Condensed';
+            font-style: normal;
+            font-size: 400px;
+            fill: #000000;
+            paint-order: stroke;
+            font-width:200;
+    stroke: #000000;
+    stroke-width: 8px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    letter-spacing: -12px;
+    text-anchor: middle;
+    alignment-baseline: baseline;
+        }
+               g.stat text.gloss {
+            font-family: 'Roboto Condensed';
+            font-style: normal;
+            font-size: 100px;
+            fill: #000000;
+            paint-order: stroke;
+            font-width:200;
+    text-anchor: middle;
+    alignment-baseline: baseline;
+        }
+
     </style>
 
     <defs>
@@ -169,6 +201,8 @@ return compact('type','detail');
         </filter>
     </defs>
 
+
+<defs><filter id="shadow-1" height="500%" width="500%" x="-100%" y="-100%"><feFlood flood-color="rgba(255, 255, 255, 1)" result="flood"></feFlood><feComposite in="flood" in2="SourceGraphic" operator="atop" result="composite"></feComposite><feGaussianBlur in="composite" stdDeviation="35" result="blur"></feGaussianBlur><feOffset dx="0" dy="0" result="offset"></feOffset><feComposite in="SourceGraphic" in2="offset" operator="over"></feComposite></filter><linearGradient x1="0" x2="1" y1="1" y2="0" id="shadow-gradient-0"><stop offset="0%" stop-color="#390303" stop-opacity="1"></stop><stop offset="100%" stop-color="#a10a0a" stop-opacity="1"></stop></linearGradient></defs>
     
     <rect id="absolute-bounds" x="0" y="0"  width="@cardspec(width)" height="@cardspec(height)"  fill-opacity="0" stroke="#808080" rx="75"/>
 
