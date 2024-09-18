@@ -16,7 +16,7 @@
     :$cardNumber
     :titlebox-opacity="0.25">
     <x-card.rulebox y="500">
-        <x-card.concept-card type="Mana" />
+        <x-card.concept.staticon type="Mana" x="530" />
         <text y="80" filter="url(#solid)">
             <x-card.normalrule>For any attempt to put this Monster to Sleep,</x-card.normalrule>
             <x-card.normalrule>roll 1d6. (Roll one die for each</x-card.normalrule>
@@ -24,5 +24,5 @@
             <x-card.normalrule>If @dieroll(5,6), the Monster remains awake.</x-card.normalrule>
             <x-card.normalrule>If @dieroll(1,2), discard this card.</x-card.normalrule>
         </text>
-    </x-card.rulebox>
+    
 </x-card>

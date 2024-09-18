@@ -15,9 +15,9 @@
 <x-card :$cardNumber card-name="Big-Box Store">
     <image x="0" y="0" class="hero" href="@local(A-014.jpg)" source="https://www.freepik.com/free-vector/express-truck-delivering-goods-supermarket_4147963.htm" />
 
-    <x-card.rulebox>
-        <x-card.concept-card type="Vendor" />
-        <x-card.concept-card type="Integrity" index="1">1d4</x-card.concern-card>
+    
+        <x-card.concept.staticon type="Vendor" x="466" />
+        <x-card.concept.staticon type="Integrity" value="1d4" />
 
             <text y="80" filter="url(#solid)">
                 <x-card.normalrule>Discard three cards from your hand.</x-card.normalrule>
@@ -26,5 +26,5 @@
                 <x-card.normalrule>Shuffle your library.</x-card.normalrule>
             </text>
 
-    </x-card.rulebox>
+    
 </x-card>

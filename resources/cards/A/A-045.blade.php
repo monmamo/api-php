@@ -11,7 +11,7 @@
 
     <image x="0" y="0" class="hero" href="@local(A-045.jpg)" />
 
-<x-card.rulebox>
+
   <x-card.concept.row>
     <x-card.concept.card type="Mobster" x="0" width="380" />
     <x-card.concept.card type="Integrity" x="380" width="230" >1d4</x-card.concept>
@@ -28,5 +28,5 @@
 </text>
 </x-card.phaserule>
 
-            </x-card.rulebox>
+            
 </x-card>

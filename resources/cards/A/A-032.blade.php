@@ -17,8 +17,8 @@ Image by freepik
     <x-card.concept.staticon type="Cumulative" x="466"  y="370" :dx="-0.5" />
     <x-card.concept.staticon type="Integrity" x="530"  y="370" :dx="0.5" value="1d4"/>
 
-<x-card.rulebox>
-    <x-card.concept-card type="Bystander"/>
+
+    <x-card.concept.staticon type="Bystander" x="530" />
     <text y="80" filter="url(#solid)">
         <x-card.smallrule>A player may have any number of Cheerleaders on the Battlefield.</x-card.smallrule>
         <x-card.smallrule>You may choose to make this card Male</x-card.smallrule>
@@ -33,5 +33,5 @@ Image by freepik
     </x-card.phaserule>
     
     
-</x-card.rulebox>
+
 </x-card>

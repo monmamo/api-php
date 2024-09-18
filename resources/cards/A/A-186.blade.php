@@ -13,9 +13,9 @@
     <image x="0" y="0" class="hero" href="@local(A186.jpg)" />
 
 
-    <x-card.rulebox>
-        <x-card.concept-card type="Mobster" />
-        <x-card.concept-card type="Integrity">1d4</x-card.concern-card>
+    
+        <x-card.concept.staticon type="Mobster" x="530" />
+        <x-card.concept.staticon type="Integrity" x="530" >1d4</x-card.concern-card>
 
             <x-card.smallrule>No limit on battlefield</x-card.smallrule>
 
@@ -28,5 +28,5 @@
                 </text>
             </x-card.phaserule>
 
-    </x-card.rulebox>
+    
 </x-card>

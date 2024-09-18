@@ -8,11 +8,11 @@
 
 <x-card :$cardNumber card-name="Recycle">
     <image x="0" y="0" class="hero" href="@local(A212.jpg)" />
-    <x-card.rulebox>
-      <x-card.concept-card type="Draw" /> 
+    
+      <x-card.concept.staticon type="Draw" x="530" /> 
       <text y="70" filter="url(#solid)">
         <x-card.normalrule>Put a card from your Discard</x-card.normalrule>
             <x-card.normalrule>pile into your hand.</x-card.normalrule>
       </text>
-</x-card.rulebox>
+
 </x-card>

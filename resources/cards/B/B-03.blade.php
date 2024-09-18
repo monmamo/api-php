@@ -12,12 +12,12 @@ Image by USER_NAME on SERVICE
 @endpush
 
 <x-card :$cardNumber card-name="Hyperhidrosis">
-<x-card.concept-card type="Draw" /> 
+<x-card.concept.staticon type="Draw" x="530" /> 
     <image x="0" y="0" class="hero" href="@local(TODO.jpg)"  />
-    <x-card.rulebox>
-        <x-slot:normal>
+    
+        <text>
 TODO
-    </x-slot:normal>
-    </x-card.rulebox>
+    </text>
+    
 
 </x-card>

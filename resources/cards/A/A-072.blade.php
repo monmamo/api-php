@@ -10,7 +10,7 @@
 <x-card :$cardNumber card-name="Enforcer">
 
     <image x="0" y="0" class="hero" href="@local(A072.png)" />
-        <x-card.rulebox>
+        
             <x-card.concept.row>
                 <x-card.concept.card type="Mobster" x="0" width="190" />
                 <x-card.concept.card type="Male" x="190" width="190" />
@@ -29,5 +29,5 @@
 </text>
 </x-card.phaserule>
 
-            </x-card.rulebox>
+            
 </x-card>

@@ -5,8 +5,8 @@
 @endpush
 
 <x-card :$cardNumber card-name="Focus">
-    <x-card.rulebox>
-<x-card.concept-card type="Trait" /> 
+    
+<x-card.concept.staticon type="Trait" x="530" /> 
 
 <x-card.phaserule type="Resolution" y="135" height="135">
     <text >
@@ -16,5 +16,5 @@
 </text>
 </x-card.phaserule>
 
-</x-card.rulebox>
+
 </x-card>

@@ -8,11 +8,11 @@
     @endpush
 
     <x-card :$cardNumber card-name="Merchandizing">
-        <x-card.rulebox>
-            <x-card.concept-card type="Vendor" />
-            <x-slot:normal>
+        
+            <x-card.concept.staticon type="Vendor" x="530" />
+            <text>
                 <x-card.normalrule>Discard a card from your hand</x-card.normalrule>
                 <x-card.normalrule>to take a card of your choice from your Library.</x-card.normalrule>
-            </x-slot:normal>
-        </x-card.rulebox>
+            </text>
+        
     </x-card>

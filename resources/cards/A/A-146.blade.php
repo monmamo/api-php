@@ -12,13 +12,13 @@
 
 <x-card :$cardNumber card-name="Lottery">
     <image x="0" y="0" class="hero" href="@local(A146.jpg)" />
-    <x-card.concept-card type="Vendor" />
-    <x-card.concept-card type="Item">Item</x-card.concept>
+    <x-card.concept.staticon type="Vendor" x="530" />
+    <x-card.concept.staticon type="Item" x="530" >Item</x-card.concept>
 
-        <x-card.rulebox>
-            <x-slot:normal>
+        
+            <text>
                 <x-card.normalrule>Discard two or more cards from your hand.</x-card.normalrule>
                 <x-card.normalrule>Then draw that number plus two cards.</x-card.normalrule>
-            </x-slot:normal>
-        </x-card.rulebox>
+            </text>
+        
 </x-card>

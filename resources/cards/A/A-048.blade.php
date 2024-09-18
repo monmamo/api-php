@@ -7,12 +7,12 @@
 </x-card.flavortext>
 
 <x-card :$cardNumber card-name="Trial and Error">
-<x-card.rulebox>
-<x-slot:normal>
-    Put this card on the Battlefield.
-    As long as this card is in the Battlefield,
-    you may redo any attack or defense once.
-    If the result improves, discard this card.
-</x-slot:normal>
-</x-card.rulebox>
+
+<text>
+<x-card.normalrule>Put this card on the Battlefield.</x-card.normalrule>
+<x-card.normalrule>As long as this card is in the Battlefield,</x-card.normalrule>
+<x-card.normalrule>you may redo any attack or defense once.</x-card.normalrule>
+<x-card.normalrule>If the result improves, discard this card.</x-card.normalrule>
+</text>
+
 </x-card>

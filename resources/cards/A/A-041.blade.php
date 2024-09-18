@@ -7,11 +7,11 @@
 </x-card.flavortext>
 
 <x-card :$cardNumber card-name="Body Slam" >
-<x-card.rulebox>
-    <x-card.concept-card type="Attack" />
-    <x-slot:normal>
-Does 3×Size damage to defending Monster.
-Does 2×Size damage to self.
-</x-slot:normal>
-</x-card.rulebox>
+
+    <x-card.concept.staticon type="Attack" x="530" />
+    <text>
+<x-card.normalrule>Does 3×Size damage to defending Monster.</x-card.normalrule>
+<x-card.normalrule>Does 2×Size damage to self.</x-card.normalrule>
+</text>
+
 </x-card.Attack>

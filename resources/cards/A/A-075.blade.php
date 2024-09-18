@@ -12,7 +12,7 @@
 <x-card :$cardNumber card-name="Sheriff">
     <image x="0" y="0" class="hero" href="@local(A245.png)" />
 
-<x-card.rulebox>
+
     <x-card.concept.row>
     <x-card.concept.card type="Bystander" x="0" width="380" />
     <x-card.concept.card type="Integrity" x="380" width="230" >2d6</x-card.concept>
@@ -26,6 +26,6 @@
 <x-card.normalrule>No more Mobster or Criminal cards can be played </x-card.normalrule>
 <x-card.normalrule>while this card is on the Battlefield.</x-card.normalrule>
 </text>
-</x-card.rulebox>
+
 
 </x-card>

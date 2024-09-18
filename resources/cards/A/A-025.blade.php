@@ -7,13 +7,13 @@
 
 <x-card :$cardNumber card-name="Busybody">
     <image x="0" y="0" class="hero" href="@local(A025.jpeg)" />
-    <x-card.rulebox>
-        <x-card.concept-card type="Draw" />
+    
+        <x-card.concept.staticon type="Draw" x="530" />
         <text y="80" filter="url(#solid)">
             <x-card.normalrule>Choose an opponent. That opponent</x-card.normalrule>
             <x-card.normalrule>reveals their hand. Choose one card.</x-card.normalrule>
             <x-card.normalrule>The opponent puts that card</x-card.normalrule>
             <x-card.normalrule>on the bottom of their Library.</x-card.normalrule>
-            </x-slot:normal>
-    </x-card.rulebox>
+            </text>
+    
 </x-card>

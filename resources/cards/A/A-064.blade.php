@@ -8,8 +8,8 @@
 <x-card :$cardNumber card-name="Energy Shield">
 
     <g class="svg-hero"><?= view('Energos.icon') ?></g>
-    <x-card.rulebox>
-        <x-card.concept-card type="Defense" />
+    
+        <x-card.concept.staticon type="Defense" x="530" />
 
         <x-slot:small>Requires Energos.</x-slot:small>
         <text>
@@ -18,5 +18,5 @@
             <x-card.normalrule>cards attached to this Monster</x-card.normalrule>
             <x-card.normalrule>(even if they weren't needed to prevent damage).</x-card.normalrule>
         </text>
-    </x-card.rulebox>
+    
 </x-card>

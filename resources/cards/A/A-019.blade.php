@@ -14,8 +14,8 @@
 <x-card  :$cardNumber card-name="Unknown Allergen" >
 
 
-    <x-card.rulebox>
-        <x-card.concept-card type="Bane" /> 
+    
+        <x-card.concept.staticon type="Bane" x="530" /> 
 
 
         <x-card.phaserule type="Resolution" y="135" height="135">
@@ -25,6 +25,6 @@
 <x-card.normalrule>this Monster takes 1d6 damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>
-</x-card.rulebox>
+
 
 </x-card>

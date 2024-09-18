@@ -3,10 +3,10 @@
 @endpush
 
 <x-card :$cardNumber card-name="Uncontrollable Empathy">
-<x-card.rulebox>
-<x-card.concept-card type="Draw" />
-<x-slot:normal>
+
+<x-card.concept.staticon type="Draw" x="530" />
+<text>
         Reduce Attack damage by Size/2.
-    </x-slot:normal>
-</x-card.rulebox>
+    </text>
+
     </x-card>

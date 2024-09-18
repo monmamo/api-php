@@ -5,11 +5,11 @@
 
 <x-card :$cardNumber card-name="Recycle Mana">
   <image x="0" y="0" class="hero" href="@local(A212.jpg)" />
-<x-card.rulebox>
-<x-card.concept-card type="Draw" />
+
+<x-card.concept.staticon type="Draw" x="530" />
 <text y="100" filter="url(#solid)">
 <x-card.normalrule>Shuffle up to 5 basic Mana cards</x-card.normalrule>
 <x-card.normalrule>from your Discard pile into your Library.</x-card.normalrule>
 </text>
-</x-card.rulebox>
+
 </x-card>

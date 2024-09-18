@@ -8,16 +8,16 @@
 @endpush
 
 <x-card :$cardNumber card-name="Herbal Scent">
-<x-card.concept-card type="Trait" /> 
+<x-card.concept.staticon type="Trait" x="530" /> 
     <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
-    <x-card.rulebox>
+    
     <x-slot:small>
 <x-card.normalrule>Requires Floros.</x-card.normalrule>
     </x-slot:small>
-        <x-slot:normal>
+        <text>
 <x-card.normalrule>Resolution phase (all players):</x-card.normalrule>
 <x-card.normalrule>Before resolving attacks, remove 1d4 damage from each Monster on the Battlefield.</x-card.normalrule>
-    </x-slot:normal>
-    </x-card.rulebox>
+    </text>
+    
 
 </x-card>

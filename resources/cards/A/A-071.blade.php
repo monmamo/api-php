@@ -1,21 +1,18 @@
-<x-card.image-credit>
-@ai
-</x-card.image-credit>
-@endpush
-
-
 @push('background')
 {{ view('Place.background') }}
+
+<x-card.flavortext>
+    <x-card.flavortext.line>Prohibition only drives drunkenness behind doors and into dark places. - Mark Twain</x-card.flavortext.line>
+</x-card.flavortext>
 @endpush
 
-
 <x-card :$cardNumber card-name="Speakeasy">
-<x-card.rulebox>
-<x-card.concept-card type="Place" />
-<x-slot:normal>
-        For any attempt to use an rule from a 
-        Mobster card, roll 1d6. 
-        If @dieroll(1,2) the effect has no effect.
-    </x-slot:normal>
-</x-card.rulebox>
+
+<x-card.concept.staticon type="Place" x="530" />
+<text>
+<x-card.normalrule>For any attempt to use an rule from a </x-card.normalrule>
+<x-card.normalrule>Mobster card, roll 1d6. </x-card.normalrule>
+<x-card.normalrule>If @dieroll(1,2) the effect has no effect.</x-card.normalrule>
+    </text>
+
 </x-card>

@@ -15,12 +15,12 @@
         <path d="M231.068 342.576L211.158 368.449L322.048 383.146C322.048 383.146 340.686 365.306 337.083 364.17C309.371 355.547 257.197 347.2 231.068 342.576Z" fill="#808080" fill-opacity="1"></path>
     </g>
 
-    <x-card.rulebox>
-        <x-card.concept-card type="Trait" />
+    
+        <x-card.concept.staticon type="Trait" x="530" />
         <text y="80" filter="url(#solid)">
             <x-card.normalrule>Speed +1d6</x-card.normalrule>
             <x-card.normalrule>(rolled when attached to the Monster).</x-card.normalrule>
         </text>
-    </x-card.rulebox>
+    
 
 </x-card>

@@ -3,9 +3,9 @@
 @endpush
 
 <x-card :$cardNumber card-name="Extraordinary Comeback" >
-<x-card.concept-card type="Catastrophe" />
+<x-card.concept.staticon type="Catastrophe" x="530" />
+<text>The player playing this card may remove all damage from his Monsters.</text>
+</x-card>
+    
 
-</x-card.Catastrophe>
-    <x-card.rulebox>
-<x-slot:normal>The player playing this card may remove all damage from his Monsters.</x-slot:normal>
-</x-card.rulebox>
+

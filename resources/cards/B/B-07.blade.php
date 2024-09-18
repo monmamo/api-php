@@ -8,12 +8,12 @@ Image by USER_NAME on SERVICE
 @endpush
 
 <x-card :$cardNumber card-name="Cowardice">
-<x-card.concept-card type="Draw" /> 
+<x-card.concept.staticon type="Draw" x="530" /> 
     <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
-    <x-card.rulebox>
-        <x-slot:normal>
+    
+        <text>
         Attack -3. Defense -3.
-    </x-slot:normal>
-    </x-card.rulebox>
+    </text>
+    
 
 </x-card>

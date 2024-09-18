@@ -13,14 +13,14 @@ Image by photoroyalty on Freepik {{-- https://www.freepik.com/free-vector/time-i
 
 
 <x-card :$cardNumber card-name="Dividends">
-<x-card.concept-card type="Vendor" />
+<x-card.concept.staticon type="Vendor" x="530" />
   <image x="0" y="0" class="hero" href="@local(A135.jpg)" />
-<x-card.rulebox>
-<x-slot:normal>
-  Turn your Discard pile face-down,
-  shuffle it, and draw 1d6 cards from it
-  without looking at them.
-  Shuffle those cards into your Library.
-  </x-slot:normal>
-</x-card.rulebox>
+
+<text>
+<x-card.normalrule>Turn your Discard pile face-down,</x-card.normalrule>
+<x-card.normalrule>shuffle it, and draw 1d6 cards from it</x-card.normalrule>
+<x-card.normalrule>without looking at them.</x-card.normalrule>
+<x-card.normalrule>Shuffle those cards into your Library.</x-card.normalrule>
+  </text>
+
 </x-card.Vendor>

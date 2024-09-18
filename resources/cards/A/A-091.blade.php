@@ -11,8 +11,8 @@
 
 <x-card  :$cardNumber card-name="Flamboyant Mogul" >
 
-    <x-card.rulebox>
-        <x-card.concept-card type="Vendor"/>
+    
+        <x-card.concept.staticon type="Vendor" x="530" />
         <x-card.concept.row>
         <x-card.concept.card type="Male" x="0" width="50" />
         <x-card.concept.card type="Integrity" x="50" width="120" >1d4</x-card.concept>
@@ -22,5 +22,5 @@
 <x-card.normalrule>Discard five cards from your Hand</x-card.normalrule>
 <x-card.normalrule>to play a Venue card from your Hand.</x-card.normalrule>
 </text>
-</x-card.rulebox>
+
 </x-card>

@@ -113,7 +113,7 @@ yield "<x-card.flavortext.line>{$line}</x-card.flavortext.line>";
    yield <<<HTML
 <x-card :\$cardNumber card-name="{$card_name}">
 <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
-<x-card.rulebox>
+
 <x-card.concept-card type="{$card_type}" />
 <x-slot:text>
 HTML;
@@ -127,7 +127,7 @@ foreach (self::_askMultiline('Primary text:') as $line) {
 
 yield <<<HTML
 </x-slot:text>
-</x-card.rulebox>
+
 </x-card>
 HTML;
 };

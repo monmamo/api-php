@@ -8,7 +8,7 @@ use App\GeneralAttributes\Title;
 use Illuminate\Contracts\Support\Renderable;
 
 #[\Attribute(\Attribute::TARGET_CLASS)]
-class CardType implements HasIcon
+class Concept implements HasIcon
 {
     protected ?string $color = null;
 
@@ -25,6 +25,9 @@ class CardType implements HasIcon
         protected readonly string $type,
     ) {}
 
+    /**
+     * @group nonary
+     */
     public function color(): string|array
     {
         return $this->color ??= \value(function () {
@@ -35,16 +38,25 @@ class CardType implements HasIcon
         });
     }
 
+    /**
+     * @group nonary
+     */
     public function icon(): Renderable
     {
         return \view($this->type . '.icon');
     }
 
+    /**
+     * @group nonary
+     */
     public function standardRule(): \Traversable
     {
-        return new \EmptyIterator();
+        return new \ArrayIterator(file(resource_path("concepts/$this->type/standard-rule.txt")));
     }
 
+    /**
+     * @group nonary
+     */
     public function title(): string
     {
         $reflection = new \ReflectionClass($this);

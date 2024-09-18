@@ -3,18 +3,14 @@
 @endpush
 
 <x-card :$cardNumber card-name="Slow Start">
-<x-card.rulebox>
-<x-card.concept-card type="Trait" />
-        <x-slot:small>
-            This card can be attached to a Monster only during the Setup Phase.
-    </x-slot:small>
-    <x-slot:normal>
-        During the first round of turns, 
-        this Monster's Speed is halved 
-        & Attacks do half as much damage.
-        During subsequent turns, Speed +2 
-        & Attacks do 2 additional damage.
-    </x-slot:normal>
-</x-card.rulebox>
+
+<x-card.concept.staticon type="Trait" x="530" />
+<x-card.smallrule>This card can be attached to a Monster only during the Setup Phase.</x-card.smallrule>
+<x-card.normalrule>During the first round of turns, </x-card.normalrule>
+<x-card.normalrule>this Monster's Speed is halved </x-card.normalrule>
+<x-card.normalrule>and Attacks do half as much damage.</x-card.normalrule>
+<x-card.normalrule>During subsequent turns, Speed +2 </x-card.normalrule>
+<x-card.normalrule>and Attacks do 2 additional damage.</x-card.normalrule>
+
 
 </x-card>

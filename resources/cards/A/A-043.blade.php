@@ -7,14 +7,14 @@
 </x-card.flavortext>
 
 <x-card :$cardNumber card-name="Creepy Guy in the Alley" >
-<x-card.rulebox>
-    <x-card.concept-card type="Vendor" />
-    <x-card.concept-card type="Integrity">1d4</x-card.concern-card>
-<x-slot:normal>
-    Draw two cards
-    from the bottom of your Library.
-</x-slot:normal>
-</x-card.rulebox>
+
+    <x-card.concept.staticon type="Vendor" x="530" />
+    <x-card.concept.staticon type="Integrity" x="530" >1d4</x-card.concern-card>
+<text>
+<x-card.normalrule>Draw two cards</x-card.normalrule>
+<x-card.normalrule>from the bottom of your Library.</x-card.normalrule>
+</text>
+
 
 </x-card>
 {{-- inspiration: https://bulbapedia.bulbagarden.net/wiki/Looker_(Ultra_Prism_152) --}}

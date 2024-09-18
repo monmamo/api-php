@@ -3,7 +3,7 @@
 @endpush
 
 <x-card :$cardNumber card-name="Binge" >
-    <x-card.rulebox>
+    
         <text y="0" filter="url(#solid)">           
 <x-card.smallrule>Put this card on the Battlefield.</x-card.smallrule>
 <x-card.smallrule>This card will remain on the Battlefield until it is discarded by rule.</x-card.smallrule>
@@ -22,5 +22,5 @@
 </text>
 </x-card.phaserule>
 
-</x-card.rulebox>
+
 </x-card>

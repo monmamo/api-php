@@ -20,12 +20,12 @@
 
 <x-card :$cardNumber card-name="Large Brain">
 
-    <x-card.rulebox>
-        <x-card.concept-card type="Trait" />
+    
+        <x-card.concept.staticon type="Trait" x="530" />
         <text y="80" filter="url(#solid)">
             <x-card.normalrule>Size +3. </x-card.normalrule>
             <x-card.normalrule>Attack base damage +5.</x-card.normalrule>
         </text>
-    </x-card.rulebox>
+    
 
 </x-card>

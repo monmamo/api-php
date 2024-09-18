@@ -19,18 +19,19 @@
     credit-color="#000000" 
     :titlebox-opacity="0.25"
 >
-    <x-card.rulebox y="515">
-
+    <text y="515">
 <x-card.smallrule>The effect will last for</x-card.smallrule>
 <x-card.smallrule>1d6 turns, including this one.</x-card.smallrule>
 <x-card.smallrule>After that many turns, discard this card.</x-card.smallrule>
-<x-card.phaserule type="Resolution" height="135">
+    </text>
+
+<x-card.phaserule type="Resolution"  y="700" height="135">
     <text >
 <x-card.normalrule>Reduce Attack damage</x-card.normalrule>
 <x-card.normalrule>done by all other Monsters by 3.</x-card.normalrule>
             </text>
         </x-card.phaserule>
 
-    </x-card.rulebox>
+    
 
 </x-card>

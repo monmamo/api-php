@@ -10,15 +10,15 @@
 @endpush
 
 <x-card :$cardNumber card-name="Convenience Store">
-    <x-card.rulebox>
-        <x-card.concept-card type="Vendor" />
-        <x-card.concept-card type="Integrity">1d6</x-card.concern-card>
-            <x-slot:normal>
+    
+        <x-card.concept.staticon type="Vendor" x="530" />
+        <x-card.concept.staticon type="Integrity" x="530" >1d6</x-card.concern-card>
+            <text>
                 <x-card.normalrule>Discard 1d4 cards from your hand.</x-card.normalrule>
                 <x-card.normalrule>Search your Library for one Item card. </x-card.normalrule>
                 <x-card.normalrule>Reveal it, then put it in your hand.</x-card.normalrule>
                 <x-card.normalrule>Shuffle your library.</x-card.normalrule>
                 <x-card.normalrule>You may perform another Draw phase action.</x-card.normalrule>
-            </x-slot:normal>
-    </x-card.rulebox>
+            </text>
+    
 </x-card>

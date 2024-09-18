@@ -1,5 +1,5 @@
 <x-card.image-credit>
-Generated with StarryAI. Placeholder image.
+<x-card.normalrule>Generated with StarryAI. Placeholder image.</x-card.normalrule>
 </x-card.image-credit>
 @endpush
 
@@ -10,12 +10,12 @@ Generated with StarryAI. Placeholder image.
 
 <x-card :$cardNumber card-name="Cruel Order">
     <image x="0" y="0" class="hero" href="@local(A066.jpeg)" />
-    <x-card.rulebox>
-        <x-card.concept-card type="Catastrophe" />
-        <x-slot:normal>
-        Discard the highest-level Monster
-        of each opponent
-        and all cards attached to that Monster.
-    </x-slot:normal>
-</x-card.rulebox>
+    
+        <x-card.concept.staticon type="Catastrophe" x="530" />
+        <text>
+<x-card.normalrule>Discard the highest-level Monster</x-card.normalrule>
+<x-card.normalrule>of each opponent</x-card.normalrule>
+<x-card.normalrule>and all cards attached to that Monster.</x-card.normalrule>
+    </text>
+
 </x-card>

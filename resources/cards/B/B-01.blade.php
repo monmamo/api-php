@@ -12,14 +12,14 @@ Image by USER_NAME on SERVICE
 @endpush
 
 <x-card :$cardNumber card-name="Fabric Allergy">
-<x-card.concept-card type="Draw" /> 
+<x-card.concept.staticon type="Draw" x="530" /> 
     <image x="0" y="0" class="hero" href="@local(TODO.jpg)"  />
-    <x-card.rulebox>
+    
         <x-card.phaserule type="Resolution" y="135" height="100">
             <text >
                 <x-card.normalrule>If this Monster is wearing a Garment, it takes 1d4 damage.</x-card.normalrule>
             </text>
         </x-card.phaserule>
         
-        </x-card.rulebox>
+        
         </x-card>

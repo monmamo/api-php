@@ -5,13 +5,13 @@
 @endpush
 
 <x-card  :$cardNumber card-name="99 Red Balloons" >
-    <x-card.rulebox>
-        <x-card.concept-card type="Environment" /> 
+    
+        <x-card.concept.staticon type="Environment" x="530" /> 
         <x-card.phaserule type="Resolution" y="135" height="135">
             <text >
         <x-card.normalrule>For each Defense, roll 1d6. </x-card.normalrule>
 <x-card.normalrule>If @dieroll(1), the Defense does nothing.</x-card.normalrule>
 </text>
 </x-card.phaserule>
-</x-card.rulebox>
+
 </x-card>

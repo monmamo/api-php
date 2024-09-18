@@ -12,10 +12,10 @@
 <x-card :$cardNumber card-name="Healing Salve">
 
     <image x="0" y="0" class="hero" href="@local(A120.png)" />
-    <x-card.concept-card type="Item">Item</x-card.concept>
-        <x-card.concept-card type="Healing" index="1">Healing</x-card.concept>
+    <x-card.concept.staticon type="Item" x="530" >Item</x-card.concept>
+        <x-card.concept.staticon type="Healing" >Healing</x-card.concept>
 
-            <x-card.rulebox>
+            
 
                 <x-card.phaserule type="Upkeep" y="135" height="100">
                     <text>
@@ -31,5 +31,5 @@
                     </text>
                 </x-card.phaserule>
 
-            </x-card.rulebox>
+            
 </x-card>

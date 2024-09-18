@@ -7,12 +7,12 @@
 
     <image x="0" y="0" class="hero" href="@local(hero/AdobeStock_2910609.jpeg)" />
 
-<x-card.rulebox>
-    <x-card.concept-card type="Trait" /> 
+
+    <x-card.concept.staticon type="Trait" x="530" /> 
     <text y="70" filter="url(#solid)">
     <x-card.normalrule>Size +1.</x-card.normalrule>
     </text>
-</x-card.rulebox>
+
 
     <svg id="titlebox" x="50" y="630" width="550" height="165" viewBox="0 0 550 165">
         <rect x="0" y="0" width="550" height="165" fill="#FFFFFF" fill-opacity="0.75" />

@@ -9,14 +9,14 @@
 <x-card :$cardNumber card-name="Copycat">
 
 
-    <x-card.rulebox>
-        <x-card.concept-card type="Draw" /> 
-<x-slot:normal>
-        Shuffle your hand into your deck. 
-        Choose another player. Count the number 
-        of cards in his hand. Draw that many cards.
-    </x-slot:normal>
-</x-card.rulebox>
+    
+        <x-card.concept.staticon type="Draw" x="530" /> 
+<text>
+<x-card.normalrule>Shuffle your hand into your deck. </x-card.normalrule>
+<x-card.normalrule>Choose another player. Count the number </x-card.normalrule>
+<x-card.normalrule>of cards in his hand. Draw that many cards.</x-card.normalrule>
+    </text>
+
 </x-card>
 
 

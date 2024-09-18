@@ -6,8 +6,8 @@
 
     <g class="svg-hero"><?= view('Aquos.icon') ?></g>
 
-    <x-card.rulebox>
-    <x-card.concept-card type="Trait" /> 
+    
+    <x-card.concept.staticon type="Trait" x="530" /> 
 
     <text y="80" filter="url(#solid)">
         <x-card.smallrule>Requires Aquos.</x-card.smallrule>
@@ -17,5 +17,5 @@
 <x-card.smallrule>When those cards are discarded, they go </x-card.smallrule>
 <x-card.smallrule>to the Discard of the player who owns them.</x-card.smallrule>
 </text>
-</x-card.rulebox>
+
 </x-card>

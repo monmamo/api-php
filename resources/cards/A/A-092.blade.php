@@ -12,8 +12,8 @@
 @endpush
 
 <x-card :$cardNumber card-name="Flatus">
-    <x-card.rulebox>
-        <x-card.concept-card type="Bane"/>
+    
+        <x-card.concept.staticon type="Bane" x="530" />
         <text y="80" filter="url(#solid)">
             <x-card.phaserule type="Resolution" y="185" height="130">
                 <text >    
@@ -24,5 +24,5 @@
 <x-card.normalrule>@dieroll(5) Each other Monster takes 3 damage.</x-card.normalrule>
 <x-card.normalrule>@dieroll(6) Each other Monster takes 4 damage.</x-card.normalrule>
         </text>
-</x-card.rulebox>
+
 </x-card>

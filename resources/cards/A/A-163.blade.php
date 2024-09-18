@@ -8,7 +8,7 @@
 
 <x-card :$cardNumber card-name="Masseuse">
 
-    <x-card.rulebox>
+    
         <x-card.concept.row>
         <x-card.concept.card type="Bystander" x="0" width="130" />
         <x-card.concept.card type="Female" x="130" width="250" />
@@ -24,5 +24,5 @@
 </text>
 </x-card.phaserule>
 
-</x-card.rulebox>
+
 </x-card>

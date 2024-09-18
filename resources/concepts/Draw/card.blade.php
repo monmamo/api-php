@@ -15,7 +15,7 @@ $height =  config("card-design.concept.standard-height");
      <text x="<?= config("card-design.concept.standard-height") ?>" y="30" class="concept-type">Draw</text>
      <text >
         @empty($rule)
-        <tspan x="70%" dy="30" class="conceptrule">Discard this card after playing.</tspan>
+        <tspan x="70%" dy="30" class="conceptrule"><?= file_get_contents(resource_path('concepts/Draw/standard-rule.txt')?></tspan>
         @endempty
         @isset($rule)
         {{ $rule }}

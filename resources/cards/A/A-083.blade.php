@@ -4,8 +4,8 @@
 
 <x-card :$cardNumber card-name="Farmer's Refuse">
 
-    <x-card.rulebox>
-<x-card.concept-card type="Draw" />
+    
+<x-card.concept.staticon type="Draw" x="530" />
 
 <text y="100" filter="url(#solid)">
     <x-card.normalrule>Discard any number of cards from your hand.</x-card.normalrule>
@@ -14,5 +14,5 @@
     <x-card.normalrule>Reveal those cards, then put them in your hand.</x-card.normalrule>
     </text>
     
-</x-card.rulebox>
+
 </x-card>

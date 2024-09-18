@@ -32,8 +32,8 @@
     <rect x="200" y="350" width="250" height="35" fill="#FFFFFF" fill-opacity="1" />
 
 
-    <x-card.rulebox>
-        <x-card.concept-card type="Draw" />
+    
+        <x-card.concept.staticon type="Draw" x="530" />
         <text y="80" filter="url(#solid)">
             <x-card.normalrule>Search your Library for a card that makes a </x-card.normalrule>
             <x-card.normalrule>cultural reference. Reveal the card. Explain </x-card.normalrule>
@@ -41,6 +41,6 @@
             <x-card.normalrule>put the card in your hand. Otherwise discard </x-card.normalrule>
             <x-card.normalrule>the card. Then shuffle your Library.</x-card.normalrule>
         </text>
-    </x-card.rulebox>
+    
 
 </x-card>

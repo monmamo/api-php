@@ -11,16 +11,16 @@
 
 <x-card :$cardNumber card-name="Shopping Center">
     <image x="0" y="0" class="hero" href="@local(A246.jpeg)" />
-<x-card.rulebox>
-<x-card.concept-card type="Place" />
-<x-slot:normal>
-        Draw phase (every player): You may search
-        your Library for a Vendor card and play it
-        immediately. If you do so, return the card
-        to the Library and shuffle your Library.
-        Then you may take another Draw phase.
-    </x-slot:normal>
-</x-card.rulebox>
+
+<x-card.concept.staticon type="Place" x="530" />
+<text>
+<x-card.normalrule>Draw phase (every player): You may search</x-card.normalrule>
+<x-card.normalrule>your Library for a Vendor card and play it</x-card.normalrule>
+<x-card.normalrule>immediately. If you do so, return the card</x-card.normalrule>
+<x-card.normalrule>to the Library and shuffle your Library.</x-card.normalrule>
+<x-card.normalrule>Then you may take another Draw phase.</x-card.normalrule>
+    </text>
+
 </x-card>
 
 <?php

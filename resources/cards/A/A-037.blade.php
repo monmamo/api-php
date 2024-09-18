@@ -10,8 +10,8 @@ Image by Freepik
 @endpush
 
 <x-card :$cardNumber card-name="Eau de Resistance">
-<x-card.concept-card type="Upkeep" />
-    <x-card.concept-card type="Item" />
+<x-card.concept.staticon type="Upkeep" x="530" />
+    <x-card.concept.staticon type="Item" x="530" />
 
     <text x="50%" y="450" width="100%" height="auto" filter="url(#solid)">
 @normalrule(Attach to a Monster.)

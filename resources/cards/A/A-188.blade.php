@@ -11,7 +11,7 @@
 
   <image x="0" y="0" class="hero" href="@local(A188.png)" />
 
-  <x-card.rulebox>
+  
     <x-card.concept.row>
     <x-card.concept.card type="Bystander" x="0" width="130" />
     <x-card.concept.card type="Female" x="130" width="250" />
@@ -40,5 +40,5 @@
 </text>
 </x-card.phaserule>
 
-            </x-card.rulebox>
+            
 </x-card>

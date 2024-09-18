@@ -9,13 +9,13 @@
 @endpush
 
 <x-card :$cardNumber card-name="Idiot Agents">
-    <x-card.rulebox>
-        <x-card.concept-card type="Draw" />
-        <x-card.concept-card type="Integrity">1d4</x-card.concern-card>
-            <x-slot:normal>
+    
+        <x-card.concept.staticon type="Draw" x="530" />
+        <x-card.concept.staticon type="Integrity" x="530" >1d4</x-card.concern-card>
+            <text>
                 <x-card.normalrule>Choose an opponent. That opponent removes all</x-card.normalrule>
                 <x-card.normalrule>Monster cards from his Library and puts them in Discard.</x-card.normalrule>
-            </x-slot:normal>
-    </x-card.rulebox>
+            </text>
+    
 </x-card>
 <?php

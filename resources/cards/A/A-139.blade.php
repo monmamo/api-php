@@ -10,14 +10,14 @@
 @endpush
 
 <x-card :$cardNumber card-name="Karma">
-    <x-card.concept-card type="Draw" />
+    <x-card.concept.staticon type="Draw" x="530" />
     <image x="0" y="0" class="hero" href="@local(A139.jpg)" />
 
-    <x-card.rulebox>
-        <x-slot:normal>
+    
+        <text>
             <x-card.normalrule>Each player adds up the remaining health</x-card.normalrule>
             <x-card.normalrule>on his Monsters. The player with the highest total</x-card.normalrule>
             <x-card.normalrule>shuffles his hand into his Library.</x-card.normalrule>
-        </x-slot:normal>
-    </x-card.rulebox>
+        </text>
+    
 </x-card>

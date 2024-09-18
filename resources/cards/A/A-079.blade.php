@@ -3,8 +3,8 @@
 @endpush
 
 <x-card :$cardNumber card-name="Rescue Drone" >
-    <x-card.rulebox>
-<x-card.concept-card type="Drone" />
+    
+<x-card.concept.staticon type="Drone" x="530" />
 <x-card.concept.row>
     <x-card.concept.card  type="Item">Item</x-card.concept.card >
         <x-card.concept.card  type="DamageCapacity" index="1">5</x-card.concept.card >    
@@ -16,5 +16,5 @@
 <x-card.normalrule>Shuffle that Monster, all cards attached to it,</x-card.normalrule>
 <x-card.normalrule>and Rescue Drone into your Library.</x-card.normalrule>
 </text>
-</x-card.rulebox>
+
 </x-card>

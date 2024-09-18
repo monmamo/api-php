@@ -8,15 +8,15 @@ Image by USER_NAME on SERVICE
 @endpush
 
 <x-card :$cardNumber card-name="Permanent Blindness">
-<x-card.concept-card type="Draw" /> 
+<x-card.concept.staticon type="Draw" x="530" /> 
     <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
-    <x-card.rulebox>
+    
     <x-slot:small>
         Limit 1 per Monster.
     </x-slot:small>
-        <x-slot:normal>
+        <text>
         You may play this Bane only with an Attack.
-    </x-slot:normal>
-    </x-card.rulebox>
+    </text>
+    
 
 </x-card>

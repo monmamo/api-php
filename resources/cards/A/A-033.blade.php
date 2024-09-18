@@ -13,11 +13,11 @@ Image by freepik {{-- https://www.freepik.com/free-psd/casino-roulette-icon-rend
 
 <x-card :$cardNumber card-name="Wheel of Fortune">
     <image x="0" y="0" class="hero" href="@local(hero/wheel-of-fortune.jpg)" />
-<x-card.rulebox>
-    <x-card.concept-card type="Draw" /> 
-    <x-slot:normal>
+
+    <x-card.concept.staticon type="Draw" x="530" /> 
+    <text>
     Each player puts his hand on the
     bottom of his Library, then draws 7 cards.
-    </x-slot:normal>
-</x-card.rulebox>
+    </text>
+
 </x-card>

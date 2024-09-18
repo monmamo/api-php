@@ -4,8 +4,8 @@
 
 <x-card :$cardNumber card-name="Cunning">
 
-<x-card.rulebox>
-    <x-card.concept-card type="Trait" /> 
+
+    <x-card.concept.staticon type="Trait" x="530" /> 
     <x-card.phaserule type="Upkeep" y="170" height="130">
         <text >
     <x-card.normalrule>Choose a Library.</x-card.normalrule>
@@ -15,5 +15,5 @@
 </text>
 </x-card.phaserule>
 
-            </x-card.rulebox>
+            
 </x-card>

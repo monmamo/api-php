@@ -9,7 +9,7 @@
 
     <image x="0" y="0" class="hero" href="@local(A-055.png)" />
 
-    <x-card.rulebox>
+    
         <x-card.concept.row>
             <x-card.concept.card type="Bystander" x="0" width="190" />
             <x-card.concept.card type="Coach" x="95" width="95" />
@@ -28,6 +28,6 @@
         You may put the Defense cards you use
         at the bottom of your Library.
         </text>
-    </x-card.rulebox>
+    
 
 </x-card>

@@ -7,19 +7,15 @@
 
 
 <x-card :$cardNumber card-name="Healing Elixir" >
-<x-card.concept-card type="Upkeep" />
-    <x-card.concept-card type="Item">Item</x-card.concept>
-    <x-card.concept-card type="Healing" index="1">Healing</x-card.concept>
-<x-card.rulebox>
-<x-slot:normal>
+    <image x="0" y="0" class="hero" href="@local(A119.jpg)" />
+<x-card.concept.staticon type="Upkeep" x="530" />
+    <x-card.concept.staticon type="Item" x="530" >Item</x-card.concept>
+    <x-card.concept.staticon type="Healing" >Healing</x-card.concept>
+
+<text>
 <x-card.normalrule>Discard any number of cards from your hand.</x-card.normalrule>
 <x-card.normalrule>For each card you discarded,</x-card.normalrule>
 <x-card.normalrule>remove 5 damage from one Monster.</x-card.normalrule>
-    </x-slot:normal>
-</x-card.rulebox>
+    </text>
+
 </x-card.Upkeep>
-<?php
- [
-     "image": {
-        <image x="0" y="0" class="hero" href="@local(A119.jpg)" />
-}

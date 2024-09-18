@@ -3,8 +3,8 @@
 @endpush
 
 <x-card :$cardNumber card-name="Cunning">
-<x-card.rulebox>
-<x-card.concept-card type="Trait" />
+
+<x-card.concept.staticon type="Trait" x="530" />
 
 <x-card.phaserule type="Draw" y="170" height="130">
     <text >
@@ -15,5 +15,5 @@
 </text>
 </x-card.phaserule>
 
-            </x-card.rulebox>
+            
 </x-card>

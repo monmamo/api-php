@@ -12,13 +12,13 @@ Image by USER_NAME on SERVICE
 @endpush
 
 <x-card :$cardNumber card-name="Sunken Eye">
-<x-card.concept-card type="Draw" /> 
+<x-card.concept.staticon type="Draw" x="530" /> 
     <image x="0" y="0" class="hero" href="@local(TODO.jpg)"  />
-    <x-card.rulebox>
-        <x-slot:normal>
+    
+        <text>
             You may play this Bane only with an Attack.
             Limit 2 per Monster.
-    </x-slot:normal>
-    </x-card.rulebox>
+    </text>
+    
 
 </x-card>

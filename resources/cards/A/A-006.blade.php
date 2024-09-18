@@ -9,11 +9,11 @@
 <x-card :$cardNumber card-name="Biting">
     <image x="0" y="0" class="hero" href="@local(A006.png)" source="https://www.freepik.com/free-photo/hand-pouring-food-birds_1713221.htm" />
 
-    <x-card.rulebox>
-        <x-card.concept-card type="Trait" />
+    
+        <x-card.concept.staticon type="Trait" x="530" />
 
 
-    </x-card.rulebox>
+    
 
     <svg id="titlebox" x="50" y="600" width="550" height="165" viewBox="0 0 550 165">
 

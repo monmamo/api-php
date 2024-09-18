@@ -12,9 +12,9 @@
 </x-card.flavortext>
 
 <x-card :$cardNumber card-name="Bagman">
-    <x-card.rulebox>
-        <x-card.concept-card type="Vendor" y="500" />
-        <x-card.concept-card type="Integrity" y="500" index="1">1d4</x-card.concern-card>
+    
+        <x-card.concept.staticon type="Vendor" x="466" /> />
+        <x-card.concept.staticon type="Integrity" index="1">1d4</x-card.concern-card>
             <text x="50%" y="620" width="100%" height="auto" filter="url(#solid)">
                 <x-card.normalrule>You may play this card only if you have a</x-card.normalrule>
                 <x-card.normalrule>Mobster card on the Battlefield. Choose one</x-card.normalrule>
@@ -23,6 +23,6 @@
                 <x-card.normalrule>or all if he doesn't have that many.</x-card.normalrule>
                 <x-card.normalrule>You may draw as many cards as were discarded.</x-card.normalrule>
             </text>
-    </x-card.rulebox>
+    
 
 </x-card>

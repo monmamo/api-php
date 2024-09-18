@@ -6,9 +6,9 @@
 
 <x-card :$cardNumber card-name="Mana Lottery">
     <image x="0" y="0" class="hero" href="@local(A146.jpg)" />
-    <x-card.rulebox>
-        <x-card.concept-card type="Vendor" />
-        <x-card.concept-card type="Item">Item</x-card.concept>
+    
+        <x-card.concept.staticon type="Vendor" x="530" />
+        <x-card.concept.staticon type="Item" x="530" >Item</x-card.concept>
             <text>
                 <x-card.normalrule>Discard two or more cards from your hand.</x-card.normalrule>
                 <x-card.normalrule>Lay your hand aside. Draw twice as many</x-card.normalrule>
@@ -17,5 +17,5 @@
                 <x-card.normalrule>Put the remaining cards at the bottom of your Library,</x-card.normalrule>
                 <x-card.normalrule>then shuffle your Library.</x-card.normalrule>
             </text>
-    </x-card.rulebox>
+    
 </x-card>
