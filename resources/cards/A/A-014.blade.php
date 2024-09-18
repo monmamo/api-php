@@ -1,14 +1,14 @@
+@push('background')
+{{ view('Vendor.background') }}
+
 <x-card.image-credit>
     Image by teravector on Freepik
 </x-card.image-credit>
-@endpush
 
 <x-card.flavortext>
     <x-card.flavortext.line>Expect more. Live better. Simplify life. Get more done.</x-card.flavortext.line>
 </x-card.flavortext>
 
-@push('background')
-{{ view('Vendor.background') }}
 @endpush
 
 

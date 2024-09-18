@@ -1,4 +1,3 @@
-
 @push('background')
 {{ view('Trait.background') }}
 <x-card.image-credit>

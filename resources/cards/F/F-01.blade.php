@@ -1,10 +1,8 @@
+@push('background')
+{{ view('Trait.background') }}
 <x-card.image-credit>
 <x-card.normalrule>Image by USER_NAME on SERVICE</x-card.normalrule>
 </x-card.image-credit>
-@endpush
-
-@push('background')
-{{ view('Trait.background') }}
 @endpush
 
 <x-card :$cardNumber card-name="Herbal Scent">

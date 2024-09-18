@@ -1,11 +1,9 @@
-<x-card.image-credit>
-Image by freepik {{-- https://www.freepik.com/free-vector/hand-drawn-werewolf-silhouette_59740170.htm --}}
-</x-card.image-credit>
-@endpush
-
 @push('background')
 {{ view('Trait.background') }}
-@endpush
+<x-card.image-credit>
+  Image by freepik {{-- https://www.freepik.com/free-vector/hand-drawn-werewolf-silhouette_59740170.htm --}}
+  </x-card.image-credit>
+  @endpush
 
 <x-card :$cardNumber card-name="Dire Form">
 

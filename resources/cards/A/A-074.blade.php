@@ -1,13 +1,10 @@
+@push('background')
+{{ view('Place.background') }}
+
 <x-card.image-credit>
 @ai
 </x-card.image-credit>
 @endpush
-
-
-@push('background')
-{{ view('Place.background') }}
-@endpush
-
 
 <x-card :$cardNumber card-name="Shopping Center">
     <image x="0" y="0" class="hero" href="@local(A246.jpeg)" />

@@ -1,11 +1,9 @@
-<x-card.image-credit>
-<x-card.normalrule>Flamethrower the placeholder image.</x-card.normalrule>
-</x-card.image-credit>
-@endpush
-
 @push('background')
 {{ view('Attack.background') }}
-@endpush
+<x-card.image-credit>
+    <x-card.normalrule>Flamethrower the placeholder image.</x-card.normalrule>
+    </x-card.image-credit>
+    @endpush
 
 <x-card :$cardNumber card-name="Flamethrower Attack" >
 

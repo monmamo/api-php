@@ -1,4 +1,3 @@
-
 @push('background')
 {{ view('Vendor.background') }}
 @endpush

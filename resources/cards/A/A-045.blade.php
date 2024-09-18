@@ -1,11 +1,9 @@
-<x-card.image-credit>
-@ai
-</x-card.image-credit>
-@endpush
-
 @push('background')
 {{ view('Mobster.background') }}
-@endpush
+<x-card.image-credit>
+  @ai
+  </x-card.image-credit>
+  @endpush
 
 <x-card :$cardNumber card-name="Crooked Cop">
 

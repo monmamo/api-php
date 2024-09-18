@@ -1,17 +1,12 @@
-<x-card.image-credit>
-@ai
-</x-card.image-credit>
-@endpush
-
 @push('background')
 {{ view('Bystander.background') }}
-@endpush
-
-
-
+<x-card.image-credit>
+    @ai
+    </x-card.image-credit>
+    @endpush
+    
 <x-card :$cardNumber card-name="Sheriff">
     <image x="0" y="0" class="hero" href="@local(A245.png)" />
-
 
     <x-card.concept.row>
     <x-card.concept.card type="Bystander" x="0" width="380" />

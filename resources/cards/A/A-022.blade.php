@@ -1,11 +1,9 @@
+@push('background')
+{{ view('Draw.background') }}
+
 <x-card.image-credit>
     Image from elements by Delapouite on Game-Icons.net under CC BY 3.0
 </x-card.image-credit>
-@endpush
-
-
-@push('background')
-{{ view('Draw.background') }}
 @endpush
 
 <defs>

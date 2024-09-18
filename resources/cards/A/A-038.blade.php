@@ -1,10 +1,6 @@
-<x-card.image-credit>
-Image by Freepik
-</x-card.image-credit>
-@endpush
-
 @push('background')
 {{ view('Defense.background') }}
+<x-card.image-credit>Image by Freepik</x-card.image-credit>
 @endpush
 
 

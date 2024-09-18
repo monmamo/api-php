@@ -1,6 +1,5 @@
-{{-- "dark man in a mask wearing a trenchcoat carrying a large tote bag" --}}
-
 @push('background')
+{{-- "dark man in a mask wearing a trenchcoat carrying a large tote bag" --}}
 <image x="0" y="0" href="@local(A-008-full.png)" />
 <x-card.image-credit>
     @ai

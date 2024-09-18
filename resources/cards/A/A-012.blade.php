@@ -1,11 +1,10 @@
+@push('background')
+{{ view('Draw.background') }}
+
 <x-card.image-credit>
     Image by Lorc on Game-Icons.net under CC BY 3.0
 </x-card.image-credit>
 {{-- https://game-icons.net/1x1/lorc/gift-trap.html --}}
-@endpush
-
-@push('background')
-{{ view('Draw.background') }}
 @endpush
 
 <x-card :$cardNumber card-name="Basic Lure">

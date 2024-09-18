@@ -1,10 +1,6 @@
-<x-card.image-credit>
-Image by wirestock on Freepik
-</x-card.image-credit>
-@endpush
-
 @push('background')
 {{ view('Trait.background') }}
+<x-card.image-credit>Image by wirestock on Freepik</x-card.image-credit>
 @endpush
 
 <x-card :$cardNumber card-name="Dual Cranial Horns">
@@ -12,9 +8,9 @@ Image by wirestock on Freepik
 
     <x-card.concept.staticon type="Trait" x="530" /> 
     <text>
-    Size +6.
-    Gives the attack “Horn Attack”
-    which does Speed×2 damage.
+<x-card.normalrule>Size +6.</x-card.normalrule>
+<x-card.normalrule>Gives the attack “Horn Attack”</x-card.normalrule>
+<x-card.normalrule>which does Speed×2 damage.</x-card.normalrule>
 </text>
 
 </x-card>

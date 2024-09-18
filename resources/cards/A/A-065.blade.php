@@ -1,14 +1,14 @@
+@push('background')
+{{ view('Trait.background') }}
 <x-card.image-credit>
 @ai
 </x-card.image-credit>
 @endpush
 
 <x-card.flavortext>
-<x-card.flavortext.line>Halitosis is the least of your problems.</x-card.flavortext.line>
+<x-card.flavortext.line>Halitosis (A-110) is the least of your problems.</x-card.flavortext.line>
 </x-card.flavortext>
 
-@push('background')
-{{ view('Trait.background') }}
 @endpush
 
 <x-card :$cardNumber card-name="Firebreath">

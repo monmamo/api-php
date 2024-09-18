@@ -1,11 +1,8 @@
-
 @push('background')
 {{ view('Bystander.background') }}
 @endpush
 
-
 <x-card :$cardNumber card-name="Mascot">
-
     
         <x-card.concept.row>
         <x-card.concept.card type="Bystander" x="0" width="380" />

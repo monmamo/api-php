@@ -1,16 +1,12 @@
+@push('background')
+{{ view('Trait.background') }}
 <x-card.image-credit>
 @ai
 </x-card.image-credit>
 @endpush
 
-@push('background')
-{{ view('Trait.background') }}
-@endpush
-
 <x-card :$cardNumber card-name="Ramming">
     <image x="0" y="0" class="hero" href="@local(AT32.png)" />
-
-    
         <x-card.concept.staticon type="Trait" x="530" /> 
         <text>
     When this Monster uses Pounce or physical 

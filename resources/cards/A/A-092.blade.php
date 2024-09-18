@@ -14,7 +14,9 @@
 <x-card :$cardNumber card-name="Flatus">
     
         <x-card.concept.staticon type="Bane" x="530" />
-        <text y="80" filter="url(#solid)">
+
+        <use href="#limit-1-per-monster" y="500"  />
+        
             <x-card.phaserule type="Resolution" y="185" height="130">
                 <text >    
 <x-card.normalrule>Roll 1d6.</x-card.normalrule>

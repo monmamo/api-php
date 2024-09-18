@@ -1,10 +1,9 @@
+@push('background')
+{{ view('Draw.background') }}
+
 <x-card.image-credit>
     Image by Delapouite on Game-Icons.net under CC BY 3.0
 </x-card.image-credit>
-@endpush
-
-@push('background')
-{{ view('Draw.background') }}
 @endpush
 
 <x-card :$cardNumber card-name="Burglary">

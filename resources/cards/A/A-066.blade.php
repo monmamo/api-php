@@ -1,12 +1,9 @@
+@push('background')
+{{ view('Catastrophe.background') }}
 <x-card.image-credit>
 <x-card.normalrule>Generated with StarryAI. Placeholder image.</x-card.normalrule>
 </x-card.image-credit>
 @endpush
-
-@push('background')
-{{ view('Catastrophe.background') }}
-@endpush
-
 
 <x-card :$cardNumber card-name="Cruel Order">
     <image x="0" y="0" class="hero" href="@local(A066.jpeg)" />

@@ -204,6 +204,15 @@ return compact('type','detail');
 
 <defs><filter id="shadow-1" height="500%" width="500%" x="-100%" y="-100%"><feFlood flood-color="rgba(255, 255, 255, 1)" result="flood"></feFlood><feComposite in="flood" in2="SourceGraphic" operator="atop" result="composite"></feComposite><feGaussianBlur in="composite" stdDeviation="35" result="blur"></feGaussianBlur><feOffset dx="0" dy="0" result="offset"></feOffset><feComposite in="SourceGraphic" in2="offset" operator="over"></feComposite></filter><linearGradient x1="0" x2="1" y1="1" y2="0" id="shadow-gradient-0"><stop offset="0%" stop-color="#390303" stop-opacity="1"></stop><stop offset="100%" stop-color="#a10a0a" stop-opacity="1"></stop></linearGradient></defs>
     
+{{-- TEMP. Make filter="url(#solid)" a @directive. Localize the text. --}}
+<symbol id="limit-1-per-monster">
+    <text  filter="url(#solid)">
+        <x-card.smallrule>Limit 1 per Monster.</x-card.smallrule>
+        </text >
+    </symbol>        
+
+{{-- //////////////////////// --}}
+
     <rect id="absolute-bounds" x="0" y="0"  width="@cardspec(width)" height="@cardspec(height)"  fill-opacity="0" stroke="#808080" rx="75"/>
 
 <text id="MON-MA-MO" >
