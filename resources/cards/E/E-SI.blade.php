@@ -1,3 +1,13 @@
 @push('background')
+<x-card.background fill="#000000" />
+<x-card.flavortext>
+</x-card.flavortext>
+
 @endpush
-<x-card concepts="Mana,Material" :$cardNumber card-name="Slilicon" />
+<x-card :$cardNumber card-name="Silicon">
+
+{{ view('Material.element-icon', ['symbol' => 'Si']) }}
+
+<text y="500">
+</text>
+</x-card>
