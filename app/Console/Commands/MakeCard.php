@@ -23,6 +23,9 @@ class MakeCard extends Command implements PromptsForMissingInput
      */
     protected $signature = 'card:make {card-number} {type} {name}';
 
+    /**
+     * @group unary
+     */
     private function _askMultiline(string $prompt): \Traversable
     {
         $this->info($prompt);
@@ -38,18 +41,23 @@ class MakeCard extends Command implements PromptsForMissingInput
         } while (!\is_null($input));
     }
 
+    /**
+     * @group unary
+     */
     private static function _parseLineInput(string $line): \Traversable
     {
         $line = \str_replace('","', '"|"', $line);
 
         foreach (\explode('|', $line) as $subline) {
-            yield \trim($subline, " \n\r\t\v\x00\"'");
+            $subline = \trim($subline, " \n\r\t\v\x00\"'");
+            $subline = str_replace(['[[',']]'], '', $subline);
+            yield $subline;
         }
     }
 
     /**
      * Prompt for missing input arguments using the returned questions.
-     *
+     * @group nonary
      * @return array
      */
     protected function promptForMissingArgumentsUsing()
@@ -93,47 +101,44 @@ class MakeCard extends Command implements PromptsForMissingInput
             $card_number = $set . '-' . \str_pad($max + 1, 2, '0', \STR_PAD_LEFT);
         }
 
-$content_generator = function() use($card_type, $card_name, $card_number) {
+        $content_generator = function () use ($card_type, $card_name) {
+            yield "@push('background')";
+            yield "{{ view('{$card_type}.background') }}";
+            yield '<x-card.flavortext>';
 
-    
-    yield    "@push('background')";
-    yield    "{{ view('{$card_type}.background') }}";
-    yield    "<x-card.flavortext>";
+            foreach (self::_askMultiline('Flavor text:') as $line) {
+                yield "<x-card.flavortext.line>{$line}</x-card.flavortext.line>";
+            }
 
-    foreach (self::_askMultiline('Flavor text:') as $line) {
-yield "<x-card.flavortext.line>{$line}</x-card.flavortext.line>";
-    }
+            yield '</x-card.flavortext>';
+            yield '<x-card.image-credit>';
+            yield 'Image by USER_NAME on SERVICE';
+            yield '</x-card.image-credit>';
+            yield '@endpush';
 
-   yield "</x-card.flavortext>";
-   yield "<x-card.image-credit>";
-   yield 'Image by USER_NAME on SERVICE';
-   yield '</x-card.image-credit>';
-   yield '@endpush';
-
-   yield <<<HTML
+            yield <<<HTML
 <x-card :\$cardNumber card-name="{$card_name}">
 <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
 
 <x-card.concept-card type="{$card_type}" />
-<x-slot:text>
+<text y="500">
 HTML;
 
-foreach (self::_askMultiline('Secondary text:') as $line) {
-yield "<x-card.smallrule>{$line}</x-card.smallrule>";
-}
-foreach (self::_askMultiline('Primary text:') as $line) {
-    yield "<x-card.normalrule>{$line}</x-card.normalrule>";
-}
+            foreach (self::_askMultiline('Secondary text:') as $line) {
+                yield "<x-card.smallrule>{$line}</x-card.smallrule>";
+            }
 
-yield <<<HTML
-</x-slot:text>
+            foreach (self::_askMultiline('Primary text:') as $line) {
+                yield "<x-card.normalrule>{$line}</x-card.normalrule>";
+            }
 
+            yield <<<'HTML'
+</text>
 </x-card>
 HTML;
-};
+        };
 
-
-        $filesystem->put("{$set}/{$card_number}.blade.php", implode("\n",iterator_to_array($content_generator())));
+        $filesystem->put("{$set}/{$card_number}.blade.php", \implode("\n", \iterator_to_array($content_generator())));
 
         $this->info("{$card_number} {$card_name} created.");
     }

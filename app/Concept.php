@@ -51,7 +51,7 @@ class Concept implements HasIcon
      */
     public function standardRule(): \Traversable
     {
-        return new \ArrayIterator(file(resource_path("concepts/$this->type/standard-rule.txt")));
+        return new \ArrayIterator(\file(\resource_path("concepts/{$this->type}/standard-rule.txt")));
     }
 
     /**

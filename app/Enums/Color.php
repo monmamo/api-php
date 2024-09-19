@@ -37,16 +37,25 @@ enum Color: string
     case White = '#FFFFFF';
     case Yellow = '#FFFF00';
 
+    /**
+     * @group unary
+     */
     public static function explodeRBG(string $value): array
     {
         return \sscanf($value, '#%02x%02x%02x');
     }
 
+    /**
+     * @group unary
+     */
     public static function gradiantPairByName(string $name): array
     {
         return [Color::{$name . 'GradientBottom'}, Color::{$name . 'GradientTop'}];
     }
 
+    /**
+     * @group trinary
+     */
     public function gradiate(int $dr, int $dg, int $db): array
     {
         [$r, $g, $b] = \sscanf($this->value, '#%02x%02x%02x');
@@ -59,16 +68,25 @@ enum Color: string
         ];
     }
 
+    /**
+     * @group nonary
+     */
     public function gradiateByName(): array
     {
         return self::gradiantPairByName($this->name);
     }
 
+    /**
+     * @group trinary
+     */
     public static function implodeRBG(int $r, int $g, int $b): string
     {
         return \sprintf('#%02x%02x%02x', $r, $g, $b);
     }
 
+    /**
+     * @group trinary
+     */
     public function makeBrighter(int $dr, int $dg, int $db): string
     {
         [$r, $g, $b] = \sscanf($this->value, '#%02x%02x%02x');
@@ -78,6 +96,9 @@ enum Color: string
         return \sprintf('#%02x%02x%02x', $r + $dr, $g + $dg, $b + $db);
     }
 
+    /**
+     * @group unary
+     */
     public function makeBrighterByScale($scale = 0.5): string
     {
         $scale_as_float = self::unwrapScale($scale);
@@ -86,10 +107,13 @@ enum Color: string
 
         return self::withRBG(
             $this->value,
-            self::withEach(fn ($value) => $value + (255 - $value) * $scale_as_float),
+            self::withEach(fn($value) => $value + (255 - $value) * $scale_as_float),
         );
     }
 
+    /**
+     * @group trinary
+     */
     public function makeDarker(int $dr, int $dg, int $db): string
     {
         [$r, $g, $b] = \sscanf($this->value, '#%02x%02x%02x');
@@ -99,6 +123,9 @@ enum Color: string
         return \sprintf('#%02x%02x%02x', $r - $dr, $g - $dg, $b - $db);
     }
 
+    /**
+     * @group unary
+     */
     public function makeDarkerByScale($scale = 0.5): string
     {
         $scale_as_float = self::unwrapScale($scale);
@@ -107,12 +134,13 @@ enum Color: string
 
         return self::withRBG(
             $this->value,
-            self::withEach(fn ($value) => $value * $scale_as_float),
+            self::withEach(fn($value) => $value * $scale_as_float),
         );
     }
 
-    
-
+    /**
+     * @group unary
+     */
     public static function rbgCode($value): string
     {
         return match (true) {
@@ -121,6 +149,9 @@ enum Color: string
         };
     }
 
+    /**
+     * @group unary
+     */
     public static function unwrapScale($value): float
     {
         return match (true) {
@@ -140,11 +171,17 @@ enum Color: string
         };
     }
 
+    /**
+     * @group unary
+     */
     public static function withEach($transform): \Closure
     {
-        return fn (...$values) => \array_map($transform, $values);
+        return fn(...$values) => \array_map($transform, $values);
     }
 
+    /**
+     * @group binary
+     */
     public static function withRBG(string $value, $callback): string
     {
         return self::implodeRBG(...$callback(...self::explodeRBG($value)));
