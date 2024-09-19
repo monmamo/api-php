@@ -147,6 +147,10 @@ return compact('type','detail');
             transform: translate(2px,2px) scale(<?= 54/512 ?>);
         }
 
+        g.concept-icon-badge {
+            transform: translate(29px,29px) scale(<?= 27/512 ?>);
+        }
+
         text.concept-type {
             font-style: normal;
             font-size: 30px;
@@ -199,10 +203,8 @@ return compact('type','detail');
                 <feMergeNode in="SourceGraphic" />
             </feMerge>
         </filter>
-    </defs>
 
-
-<defs><filter id="shadow-1" height="500%" width="500%" x="-100%" y="-100%"><feFlood flood-color="rgba(255, 255, 255, 1)" result="flood"></feFlood><feComposite in="flood" in2="SourceGraphic" operator="atop" result="composite"></feComposite><feGaussianBlur in="composite" stdDeviation="35" result="blur"></feGaussianBlur><feOffset dx="0" dy="0" result="offset"></feOffset><feComposite in="SourceGraphic" in2="offset" operator="over"></feComposite></filter><linearGradient x1="0" x2="1" y1="1" y2="0" id="shadow-gradient-0"><stop offset="0%" stop-color="#390303" stop-opacity="1"></stop><stop offset="100%" stop-color="#a10a0a" stop-opacity="1"></stop></linearGradient></defs>
+<filter id="icon-overlay-shadow" height="500%" width="500%" x="-100%" y="-100%"><feFlood flood-color="rgba(255, 255, 255, 1)" result="flood"></feFlood><feComposite in="flood" in2="SourceGraphic" operator="atop" result="composite"></feComposite><feGaussianBlur in="composite" stdDeviation="35" result="blur"></feGaussianBlur><feOffset dx="0" dy="0" result="offset"></feOffset><feComposite in="SourceGraphic" in2="offset" operator="over"></feComposite></filter><linearGradient x1="0" x2="1" y1="1" y2="0" id="shadow-gradient-0"><stop offset="0%" stop-color="#390303" stop-opacity="1"></stop><stop offset="100%" stop-color="#a10a0a" stop-opacity="1"></stop></linearGradient></defs>
     
 {{-- TEMP. Make filter="url(#solid)" a @directive. Localize the text. --}}
 <symbol id="limit-1-per-monster">
