@@ -4,13 +4,10 @@
 </x-card.Monster>
 sex":     "female
     "taxons": ["Energos", "Tigros"],
-    "speed": 10,
-    "size": 22,
-    "level": 40,
-    "damage_capacity": 70,
-    <x-card.rulebox>
-<x-slot:normal> •  •  • </x-slot:normal>
-</x-card.rulebox>
+    <x-card.concept.staticon type="Speed"    value="10" />
+    <x-card.concept.staticon type="Size"    value="22" />
+    <x-card.concept.staticon type="Level"    value="40" />
+    <x-card.concept.staticon type="DamageCapacity"    value="70" />
     "multiplier": 3,
 background_color": "#FB9E00
     <image x="0" y="0" class="hero" href="@local(AM06)" />

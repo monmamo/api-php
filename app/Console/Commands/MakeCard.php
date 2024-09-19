@@ -49,15 +49,13 @@ class MakeCard extends Command implements PromptsForMissingInput
         $line = \str_replace('","', '"|"', $line);
 
         foreach (\explode('|', $line) as $subline) {
-            $subline = \trim($subline, " \n\r\t\v\x00\"'");
-            $subline = str_replace(['[[',']]'], '', $subline);
-            yield $subline;
+            yield \trim($subline, " \n\r\t\v\x00\"'");
         }
     }
 
     /**
      * Prompt for missing input arguments using the returned questions.
-     * @group nonary
+     *
      * @return array
      */
     protected function promptForMissingArgumentsUsing()
@@ -134,6 +132,9 @@ HTML;
 
             yield <<<'HTML'
 </text>
+            yield <<<'HTML'
+</x-slot:text>
+</x-card.rulebox>
 </x-card>
 HTML;
         };

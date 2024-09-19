@@ -1,19 +1,16 @@
 <x-card :$cardNumber card-name="male Energos Monster L45" >
 <x-card.concept-card type="Monster" />
+<image x="0" y="0" class="hero" href="@local(AM08)" />
 
-</x-card.Monster>
     "subtypes":["Male"],
     "taxons": ["Energos", "Canos"],
-    "speed": 8,
-    "size": 22,
-    "level": 45,
-    "damage_capacity": 80,
+    <x-card.concept.staticon type="Speed"    value="8" />
+    <x-card.concept.staticon type="Size"    value="22" />
+    <x-card.concept.staticon type="Level"    value="45" />
+    <x-card.concept.staticon type="DamageCapacity"    value="80" />
 
 
 
     "multiplier":4,
 background_color": "#FB9E00
-    <image x="0" y="0" class="hero" href="@local(AM08)" />
-    
-stats": "
-}
+</x-card.Monster>

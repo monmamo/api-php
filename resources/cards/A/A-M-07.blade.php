@@ -1,19 +1,18 @@
-<?php
-
-    #[\App\GeneralAttributes\Title('male Energos Monster L35')]
-<x-card :$cardNumber card-name=""card_id": "A-M-07",">
+<x-card :$cardNumber card-name="male Energos Monster L35" >
 <x-card.concept-card type="Monster" />
+
+
 
 </x-card.Monster>
     "subtypes":["Male"],
     "taxons": ["Energos"],
-    "speed": 18,
-    "size": 12,
-    "level": 35,
-    "damage_capacity": 65,
+    <x-card.concept.staticon type="Speed"    value="18" />
+    <x-card.concept.staticon type="Size"    value="12" />
+    <x-card.concept.staticon type="Level"    value="35" />
+    <x-card.concept.staticon type="DamageCapacity"    value="65" />
     "multiplier":3,
 background_color": "#FB9E00
     <image x="0" y="0" class="hero" href="@local(AM07)" />
-    
+
 stats": "
 }

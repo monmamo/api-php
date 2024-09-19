@@ -4,10 +4,10 @@
 </x-card.Monster>
     "subtypes":["Female"],
     "taxons": ["Energos"],
-    "speed": 10,
-    "size": 16,
-    "level": 30,
-    "damage_capacity": 60,
+    <x-card.concept.staticon type="Speed"    value="10" />
+    <x-card.concept.staticon type="Size"    value="16" />
+    <x-card.concept.staticon type="Level"    value="30" />
+    <x-card.concept.staticon type="DamageCapacity"    value="60" />
     "image": {
         <image x="0" y="0" class="hero" href="@local(AM05.jpg)" />
         <x-card.image-credit>

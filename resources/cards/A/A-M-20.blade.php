@@ -2,9 +2,9 @@
 <x-card.concept-card type="Monster" />
 
 </x-card.Monster>
-    "damage_capacity": 75,
-    "speed": 10,
-    "size": 22,
-    "level": 44,
+    <x-card.concept.staticon type="DamageCapacity"    value="75" />
+    <x-card.concept.staticon type="Speed"    value="10" />
+    <x-card.concept.staticon type="Size"    value="22" />
+    <x-card.concept.staticon type="Level"    value="44" />
     "multiplier": 4
 }

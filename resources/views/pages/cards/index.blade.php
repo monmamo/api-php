@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Monsters Masters & Mobsters Card Manager</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://unpkg.com/htmx.org@2.0.2"></script>
 </head>
@@ -113,9 +113,14 @@
     <main class="container-fluid">
         <div class="row">
             <div class="col col-lg-3 flex-shrink-0 p-3" style="height: 1050px; overflow: auto" id="left-section" >
-                <?php
-                \App\Enums\CardSet::Base->echo_section();
-                ?>
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"  hx-boost="true" hx-target="#right-section" hx-swap="innerHTML">
+        <?php
+                foreach (\App\Enums\CardSet::Base->cards() as $card_number => $card_info) {
+                    ?>
+            <li><a href="/cards/card/<?php echo $card_number; ?>"
+ class="card-link link-body-emphasis d-inline-flex text-decoration-none rounded" data-id="<?php echo $card_number; ?>"><?php echo $card_number; ?> <?php echo $card_info->name() ?? ''; ?></a></li>
+        <?php } ?>
+    </ul>
             </div>
             <div class="col col-lg-9" style="height: 1050px" id="right-section" hx-get="#"  hx-trigger="dblclick"
             hx-target="#right-section">

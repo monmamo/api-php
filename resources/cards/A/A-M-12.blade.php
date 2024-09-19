@@ -8,10 +8,10 @@
     "subtypes":["Female"],
     "taxons": ["Pyros", "Hystrix"],
     "multiplier": 4,
-    "speed": 8,
-    "size": 25,
-    "level": 45,
-    "damage_capacity": 75,
+    <x-card.concept.staticon type="Speed"    value="8" />
+    <x-card.concept.staticon type="Size"    value="25" />
+    <x-card.concept.staticon type="Level"    value="45" />
+    <x-card.concept.staticon type="DamageCapacity"    value="75" />
     <image x="0" y="0" class="hero" href="@local(AM12)" />
 
 }
