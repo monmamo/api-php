@@ -143,6 +143,10 @@ return compact('type','detail');
             stroke: #ffff00;
         }
 
+        .secondary {
+            stroke-dasharray: 1.44;
+        }
+
         g.concept-icon {
             transform: translate(2px,2px) scale(<?= 54/512 ?>);
         }
@@ -205,23 +209,12 @@ return compact('type','detail');
         </filter>
 
 <filter id="icon-overlay-shadow" height="500%" width="500%" x="-100%" y="-100%"><feFlood flood-color="rgba(255, 255, 255, 1)" result="flood"></feFlood><feComposite in="flood" in2="SourceGraphic" operator="atop" result="composite"></feComposite><feGaussianBlur in="composite" stdDeviation="35" result="blur"></feGaussianBlur><feOffset dx="0" dy="0" result="offset"></feOffset><feComposite in="SourceGraphic" in2="offset" operator="over"></feComposite></filter><linearGradient x1="0" x2="1" y1="1" y2="0" id="shadow-gradient-0"><stop offset="0%" stop-color="#390303" stop-opacity="1"></stop><stop offset="100%" stop-color="#a10a0a" stop-opacity="1"></stop></linearGradient></defs>
-    
-{{-- TEMP. Make filter="url(#solid)" a @directive. Localize the text. --}}
-<symbol id="limit-1-per-monster">
-    <text  filter="url(#solid)">
-        <x-card.smallrule>Limit 1 per Monster.</x-card.smallrule>
-        </text >
-    </symbol>        
+  
 
 {{-- //////////////////////// --}}
 
     <rect id="absolute-bounds" x="0" y="0"  width="@cardspec(width)" height="@cardspec(height)"  fill-opacity="0" stroke="#808080" rx="75"/>
 
-<text id="MON-MA-MO" >
-<tspan x="50%" y="440" font-family="Roboto" text-anchor="middle"  font-size="265" font-weight="700" fill="#333333" >MON</tspan>
-<tspan x="50%" y="657.7" font-family="Roboto" text-anchor="middle"  font-size="265" font-weight="700" fill="#333333" >MA</tspan>
-<tspan x="50%" y="875.4" font-family="Roboto"  text-anchor="middle"  font-size="265" font-weight="700" fill="#333333" >MO</tspan>
-</text>
 
 @stack('background') 
 
@@ -264,11 +257,16 @@ $credit_y =  config('card-design.trimbox.y')+config('card-design.trimbox.height'
     <text x="70%" y="<?= $credit_y ?>" class="credit" text-anchor="middle" alignment-baseline="top"><?php echo \date('Y-m-d'); ?></text>
     <text x="<?= config('card-design.viewbox.x')+config('card-design.viewbox.width') ?>" y="<?= $credit_y ?>" class="credit" text-anchor="end" alignment-baseline="top"><?php echo $cardNumber; ?></text>
 
-    <x-card.rect slug="trimbox" class="debug" fill-opacity="0" stroke-width=3 stroke="#FF0000" rx="25" />
+    <g class="debug">
+    <x-card.rect slug="trimbox"  fill-opacity="0" stroke-width=3 stroke="#FF0000" rx="25" />
 
-    <x-card.rect slug="viewbox" class="debug" fill-opacity="0" stroke-width=3 stroke="#2BA6DE" stroke-dasharray="1.44" rx="5" />
+    <x-card.rect slug="viewbox"  fill-opacity="0" stroke-width=3 stroke="#2BA6DE" stroke-dasharray="1.44" rx="5" />
 
-    <line x1="375" y1="0" x2="375" y2="1050" class="debug info" />
+    <x-card.rect slug="hero"  fill-opacity="0" stroke-width=1 stroke="#2BA6DE" stroke-dasharray="1.44" />
 
+    <line x1="25%" y1="0" x2="25%" y2="100%" class="info secondary" />
+    <line x1="50%" y1="0" x2="50%" y2="100%" class="info" />
+    <line x1="75%" y1="0" x2="75%" y2="100%" class="info secondary" />
+    </g>
         
 </svg>

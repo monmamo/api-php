@@ -3,6 +3,7 @@
 @endpush
 
 <x-card :$cardNumber card-name="Recall the Wounded" >
+
     <x-card.phaserule type="Upkeep"  height="150"><text >    
         <x-card.normalrule>Shuffle your Knocked Out Monsters</x-card.normalrule>
         <x-card.normalrule>into your Library. </x-card.normalrule>

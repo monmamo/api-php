@@ -18,8 +18,10 @@
         <x-card.concept.staticon type="Mobster" x="466" />
         <x-card.concept.staticon type="Integrity" >1d4</x-card.concern-card>
 
-            <x-card.smallrule>No limit on battlefield</x-card.smallrule>
-
+            <text y="500" filter="url(#solid)">
+                <x-card.smallrule>No limit on battlefield</x-card.smallrule>
+            </text>
+            
             <x-card.phaserule type="Upkeep" y="170" height="130">
                 <text>
                     <x-card.normalrule>You may look at a random card</x-card.normalrule>

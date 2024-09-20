@@ -1,5 +1,5 @@
 <x-card :$cardNumber card-name="Energos Monster L30" >
-<x-card.concept-card type="Monster" />
+<x-card.concept.staticon type="Monster" x="530" />
 
 </x-card.Monster>
     "subtypes":["Female"],

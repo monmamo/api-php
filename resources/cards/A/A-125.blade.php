@@ -4,15 +4,23 @@
 
 <x-card :$cardNumber card-name="Hurricane">
 
-<x-card.concept.staticon type="Catastrophe" x="530" />
-<text>
-    <x-card.normalrule>This card can be played only if Summer or Autumn is on the Battlefield.</x-card.normalrule>
-    <x-card.normalrule>Each player discards 3 cards from the top of his Library.</x-card.normalrule>
-    <x-card.normalrule>If the Place card on the Battlefield is a Venue or Facility card, discard it.</x-card.normalrule>
-    <x-card.normalrule>Discard all Mobster and Bystander cards on the Battlefield.</x-card.normalrule>
-    <x-card.normalrule>Discard all Item cards on the Battlefield that are not attached to Monsters.</x-card.normalrule>
-    <x-card.normalrule>Shuffle all Item cards attached to Monsters into the Library.</x-card.normalrule>
+    <image x="0" y="0" class="hero" href="@local(hero/hurricane.jpg)" />
+
+
+<text y="440" filter="url(#solid)">
+    <x-card.smallrule>This card can be played only if Summer </x-card.smallrule>
+        <x-card.smallrule>or Autumn is on the Battlefield.</x-card.smallrule>
+    <x-card.normalrule>Each player discards 2d6 cards</x-card.normalrule> 
+        <x-card.normalrule>from the top of his Library.</x-card.normalrule>
+    <x-card.normalrule>If the Place card on the Battlefield </x-card.normalrule>
+        <x-card.normalrule>is a Venue or Facility card, discard it.</x-card.normalrule>
+    <x-card.normalrule>Discard all Mobster, Bystander & Item cards</x-card.normalrule>
+        <x-card.normalrule>on the Battlefield</x-card.normalrule>
+    <x-card.normalrule>that are not attached to Monsters.</x-card.normalrule>
+    <x-card.normalrule>Shuffle all Item cards attached to Monsters</x-card.normalrule>
+        <x-card.normalrule>into the Library.</x-card.normalrule>
     </text>
 
-</x-card.Catastrophe>
-<?php
+    <x-card.concept.staticon type="Catastrophe" :dx="1" />
+
+</x-card>

@@ -10,6 +10,8 @@ use Illuminate\Contracts\Support\Renderable;
 #[\Attribute(\Attribute::TARGET_CLASS)]
 class Concept implements HasIcon
 {
+    use \App\Methods\Make\MakeFromConstructor;
+
     protected ?string $color = null;
 
     /**
@@ -39,6 +41,14 @@ class Concept implements HasIcon
     }
 
     /**
+     * @group unary
+     */
+    private function _file(string $name): string
+    {
+        return \resource_path("concepts/{$this->type}/$name");
+    }
+
+    /**
      * @group nonary
      */
     public function icon(): Renderable
@@ -47,11 +57,28 @@ class Concept implements HasIcon
     }
 
     /**
+     * TODO Support localization if the file is a .php.
      * @group nonary
      */
     public function standardRule(): \Traversable
     {
-        return new \ArrayIterator(\file(\resource_path("concepts/{$this->type}/standard-rule.txt")));
+        return $this->_text("standard-rule");
+    }
+
+    /**
+     * @group unary
+     */
+    private function _text(string $name): \Traversable
+    {
+        return new \ArrayIterator(\file($this->_file("$name.txt")));
+    }
+
+    /**
+     * @group unary
+     */
+    private function _php(string $name): \Traversable
+    {
+        return require $this->_file("$name.php");
     }
 
     /**

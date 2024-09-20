@@ -6,8 +6,8 @@
     <g class="svg-hero"><?= view('Aquos.icon') ?></g>
 
     <x-card.concept.staticon type="Trait" x="530" />
-    <text y="80" filter="url(#solid)">
-<x-card.smallrule>Requires Aquos.</x-card.smallrule>
+    <text y="500" filter="url(#solid)">
+        <x-card.smallrule>Requires Aquos.</x-card.smallrule>
 <x-card.smallrule>Use when this Monster attacks or defends.</x-card.smallrule>
 <x-card.normalrule>When resolving, discard 1d6 Water cards</x-card.normalrule>
 <x-card.normalrule>from this Monster. The defending or attacking </x-card.normalrule>

@@ -46,6 +46,8 @@ $hero_width = $viewbox['width'];
 $hero_height = 450;
 
 $hero = [
+    'x' => $viewbox['x'],
+    'y' => $viewbox['y'],
     'width' => $hero_width,
     'height' => $hero_height,
     'icon' => [

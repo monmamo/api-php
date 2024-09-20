@@ -7,7 +7,7 @@
 <x-card.concept.staticon type="Defense" x="530" />
 
 
-<text>
+<text y="500" filter="url(#solid)">
     <x-card.smallrule>A Monster may use this Defense if it is not subject to an Attack.</x-card.smallrule>
 <x-card.normalrule>Choose an opposing Monster that is </x-card.normalrule>
 <x-card.normalrule>attacking another Monster. </x-card.normalrule>

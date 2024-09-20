@@ -13,8 +13,8 @@
     <x-card.concept.staticon type="Cumulative"   />
         <x-card.concept.staticon type="Integrity"  value="1d6" />
 
-            <text y="500" filter="url(#solid)">
-                <x-card.smallrule>A player may have any number of Personal Assistants</x-card.smallrule>
+        <text y="500" filter="url(#solid)">
+            <x-card.smallrule>A player may have any number of Personal Assistants</x-card.smallrule>
                 <x-card.smallrule> on the Battlefield. You may choose to make this card Male or Female</x-card.smallrule>
                 <x-card.smallrule>when you put it on the Battlefield.</x-card.smallrule>
             </text>

@@ -2,7 +2,7 @@
 
     #[\App\GeneralAttributes\Title('Pyrohystrix L45')]
 <x-card :$cardNumber card-name=""card_id": "A-M-12",">
-<x-card.concept-card type="Monster" />
+<x-card.concept.staticon type="Monster" x="530" />
 
 </x-card.Monster>
     "subtypes":["Female"],

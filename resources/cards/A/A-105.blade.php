@@ -16,7 +16,9 @@
     <x-card.concept.staticon type="Item" x="466"  y="370" />
     <x-card.concept.staticon type="Weapon" x="530"  y="370" />
 
-    <use href="#limit-1-per-monster" y="500"  />
+    <text y="500" filter="url(#solid)">
+        <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
+        </text >
 
     <x-card.phaserule type="Upkeep"  height="100">
         <text >    

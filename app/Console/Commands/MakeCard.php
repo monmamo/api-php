@@ -118,8 +118,8 @@ class MakeCard extends Command implements PromptsForMissingInput
 <x-card :\$cardNumber card-name="{$card_name}">
 <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
 
-<x-card.concept-card type="{$card_type}" />
-<text y="500">
+<x-card.staticon type="{$card_type}" :dx="1" />
+<text y="500" filter="url(#solid)">
 HTML;
 
             foreach (self::_askMultiline('Secondary text:') as $line) {
@@ -134,7 +134,6 @@ HTML;
 </text>
             yield <<<'HTML'
 </x-slot:text>
-</x-card.rulebox>
 </x-card>
 HTML;
         };

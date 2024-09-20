@@ -24,9 +24,6 @@ class CardCollection extends \ArrayObject
             $id === true => '*',
         };
 
-
-$cards
-
         foreach ($files as $filepath) {
             if ($filepath[0] === '_') {
                 continue;

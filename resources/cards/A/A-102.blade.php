@@ -19,8 +19,8 @@
     credit-color="#000000" 
     :titlebox-opacity="0.25"
 >
-    <text y="515">
-<x-card.smallrule>The effect will last for</x-card.smallrule>
+<text y="515" filter="url(#solid)">
+    <x-card.smallrule>The effect will last for</x-card.smallrule>
 <x-card.smallrule>1d6 turns, including this one.</x-card.smallrule>
 <x-card.smallrule>After that many turns, discard this card.</x-card.smallrule>
     </text>

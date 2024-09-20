@@ -9,7 +9,6 @@
 
     <image x="0" y="0" class="hero" href="@local(A-055.png)" />
 
-    
         <x-card.concept.row>
             <x-card.concept.card type="Bystander" x="0" width="190" />
             <x-card.concept.card type="Coach" x="95" width="95" />
@@ -17,7 +16,7 @@
             <x-card.concept.card type="Integrity" x="380" width="230">1d4</x-card.concept>
         </x-card.concept.row>
 
-        <text>
+        <text y="500" filter="url(#solid)">
             <x-card.smallrule>Limit 1 per player on Battlefield. </x-card.smallrule>
             <x-card.smallrule>You must already have a Head Coach on the Battlefield</x-card.smallrule>
             <x-card.smallrule>to put this card on the Battlefield.</x-card.smallrule>

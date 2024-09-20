@@ -9,7 +9,7 @@
     
     <x-card.concept.staticon type="Trait" x="530" /> 
 
-    <text y="80" filter="url(#solid)">
+    <text y="500" filter="url(#solid)">
         <x-card.smallrule>Requires Aquos.</x-card.smallrule>
 <x-card.normalrule>If hit by an Attack that results in the attacker</x-card.normalrule>
 <x-card.normalrule>discarding Water, attach those cards to</x-card.normalrule>

@@ -16,10 +16,10 @@
         <x-card.concept.card type="Cumulative" x="190" width="190" />
         <x-card.concept.card type="Integrity" x="380" width="230" >1d4</x-card.concept>
         </x-card.concept.row>
-        <text y="120" filter="url(#solid)">
+
+        <text y="500" filter="url(#solid)">
             <x-card.smallrule>A player may have any number of Fieldworkers on the Battlefield.</x-card.smallrule>
         </text>
-
 
 <x-card.phaserule type="Draw" y="170" height="130">
     <text >

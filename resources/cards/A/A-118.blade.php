@@ -19,7 +19,7 @@
     
 
     <text y="500" filter="url(#solid)">
-<x-card.smallrule>Limit 1 per player on Battlefield. </x-card.smallrule>
+        <x-card.smallrule>Limit 1 per player on Battlefield. </x-card.smallrule>
 <x-card.smallrule>You may choose to make this card Female </x-card.smallrule>
     <x-card.smallrule>when you put it on the Battlefield.</x-card.smallrule>
     </text>

@@ -9,7 +9,7 @@
     <x-card.concept.staticon type="Bane" x="530" /> 
 
     <text y="500" filter="url(#solid)">
-        <x-card.smallrule>Limit 1 per Monster.</x-card.smallrule>
+        <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
         <x-card.smallrule>You may play this card only with an Attack.</x-card.smallrule>
         </text >
     

@@ -6,7 +6,7 @@
     <g class="svg-hero"><?= view('Aquos.icon') ?></g>
 
     <x-card.concept.staticon type="Defense" x="530" />
-    <text y="70" filter="url(#solid)">
+    <text y="500" filter="url(#solid)">
         <x-card.smallrule>Requires Aquos.</x-card.smallrule>
 <x-card.normalrule>For each Water card attached to this Monster,</x-card.normalrule>
 <x-card.normalrule>prevent 1d6 damage. Discard all Water cards</x-card.normalrule>
