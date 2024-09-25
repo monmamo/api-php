@@ -13,12 +13,16 @@ use App\Facades\Environment;
 use App\Facades\Handler;
 use App\GeneralAttributes\Gloss;
 use App\Options\NullOption;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Query\Builder as GenericBuilder;
 use Illuminate\Support\Arr;
+use Illuminate\Support\HtmlString;
+use Illuminate\View\ComponentAttributeBag;
+use Illuminate\View\ComponentSlot;
 use SebastianBergmann\Exporter\Exporter;
 
 /**
@@ -588,7 +592,10 @@ function unknown($value = null): string
     return \app('translator')->get('unknown-value', ['value' => $value]);
 }
 
-function explode_lines(string $source): \Traversable
+/**
+ * @group unary
+ */
+function explode_string_lines(string $source): \Traversable
 {
     if ($source === '') {
         return;
@@ -597,6 +604,36 @@ function explode_lines(string $source): \Traversable
     foreach (\explode("\n", $source) as $line) {
         yield trim($line);
     }
+}
+
+/**
+ * @group unary
+ */
+function explode_lines($source): \Traversable
+{
+    if (\is_iterable($source)) {
+        $iterator = new \AppendIterator();
+
+        foreach ($source as $element) {
+            $iterator->append(explode_string_lines($element));
+        }
+        return $iterator;
+    }
+
+    if (\is_string($source)) {
+        return explode_string_lines($source);
+    }
+
+    if (\is_null($source)) {
+        return new \EmptyIterator();
+    }
+
+    if ($source instanceof ComponentSlot) {
+        return explode_string_lines($source->toHtml());
+    }
+
+    \dump($source);
+    throw new \LogicException('Invalid value.');
 }
 
 /**
@@ -619,4 +656,34 @@ function clean(string $raw, ?\Closure $after_clean = null): string
     $final_clean_value = \is_callable($after_clean) ? $after_clean($clean_value) : $clean_value;
     \assert(\is_string($final_clean_value));
     return $final_clean_value;
+}
+
+function html(...$pieces): Htmlable
+{
+    $content = [];
+    $attributes = [];
+
+    foreach ($pieces as $index => $piece) {
+        if ($index === 0) {
+            continue;
+        }
+
+        if (\is_null($piece)) {
+            continue;
+        }
+
+        if (\is_array($piece)) {
+            $attributes = \array_merge($attributes, $piece);
+            continue;
+        }
+        $content[] = $piece;
+    }
+
+    if (\count($content) === 0) {
+        $html = \sprintf('<%s %s />', $pieces[0], new ComponentAttributeBag($attributes));
+    } else {
+        $html = \sprintf('<%s %s>%s</%s>', $pieces[0], new ComponentAttributeBag($attributes), \implode('', $content), $pieces[0]);
+    }
+
+    return new HtmlString($html);
 }

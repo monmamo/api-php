@@ -11,7 +11,8 @@ if (View::exists("$type.card")) {
     echo View::make("$type.card",compact('y','rule'));
 } else {
 
-$rule_path = resource_path("concepts/$type/standard-rule.txt");
+    $concept = \App\Concept::make($type);
+    $rule_path = resource_path("concepts/$type/standard-rule.txt");
 $rule_lines = file_exists($rule_path) ? file($rule_path) : [];
 $width ??= config("card-design.viewbox.width");
 $height = max(config("card-design.concept.standard-height"),count($rule_lines)*25+25);
@@ -21,7 +22,7 @@ $height = max(config("card-design.concept.standard-height"),count($rule_lines)*2
 
     <rect width="100%" height="100%" fill="#ffffff" fill-opacity="50%" />
      <g class="concept-icon" fill="#000000" fill-opacity="1">
-        {{ view($type.'.icon') }}
+        {{ $concept->icon() }}
      </g>
      <text x="<?= config("card-design.concept.standard-height") ?>" y="30" class="concept-type"><?= $type ?> {{ $slot }}</text>
      <text >

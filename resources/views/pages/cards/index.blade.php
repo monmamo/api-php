@@ -63,25 +63,11 @@
                             <?php } ?>
                         </ul>
                     </li>
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Card Types</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Concepts</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Attack</a></li>
-                        <li><a class="dropdown-item" href="#">Bane</a></li>
-                        <li><a class="dropdown-item" href="#">Bystander</a></li>
-                        <li><a class="dropdown-item" href="#">Catastrophe</a></li>
-                        <li><a class="dropdown-item" href="#">Defense</a></li>
-                        <li><a class="dropdown-item" href="#">Draw</a></li>
-                        <li><a class="dropdown-item" href="#">Drone</a></li>
-                        <li><a class="dropdown-item" href="#">Facility</a></li>
-                        <li><a class="dropdown-item" href="#">Mana</a></li>
-                        <li><a class="dropdown-item" href="#">Master</a></li>
-                        <li><a class="dropdown-item" href="#">Mobster</a></li>
-                        <li><a class="dropdown-item" href="#">Monster</a></li>
-                        <li><a class="dropdown-item" href="#">Place</a></li>
-                        <li><a class="dropdown-item" href="#">Trait</a></li>
-                        <li><a class="dropdown-item" href="#">Upkeep</a></li>
-                        <li><a class="dropdown-item" href="#">Vendor</a></li>
-                        <li><a class="dropdown-item" href="#">Venue</a></li>
+@foreach(\App\Concept::all() as $concept)
+<li><a class="dropdown-item" href="#">{{$concept}}</a></li>
+@endforeach
                     </ul>
                     </li>
 

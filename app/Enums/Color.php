@@ -107,7 +107,7 @@ enum Color: string
 
         return self::withRBG(
             $this->value,
-            self::withEach(fn($value) => $value + (255 - $value) * $scale_as_float),
+            self::withEach(fn ($value) => $value + (255 - $value) * $scale_as_float),
         );
     }
 
@@ -134,7 +134,7 @@ enum Color: string
 
         return self::withRBG(
             $this->value,
-            self::withEach(fn($value) => $value * $scale_as_float),
+            self::withEach(fn ($value) => $value * $scale_as_float),
         );
     }
 
@@ -176,7 +176,7 @@ enum Color: string
      */
     public static function withEach($transform): \Closure
     {
-        return fn(...$values) => \array_map($transform, $values);
+        return fn (...$values) => \array_map($transform, $values);
     }
 
     /**

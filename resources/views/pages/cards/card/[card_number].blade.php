@@ -1,6 +1,14 @@
 <?php
+use Illuminate\Support\Facades\Blade;
+
 $card_number_pieces =  explode('-', $card_number);
 $set = $card_number_pieces[0];
+
+$filepath = resource_path("cards/$set/$card_number.php");
+assert(!empty($filepath));
+assert(file_exists($filepath));
+
+$spec = require $filepath;
 
 $previous = match(true) {
   is_numeric(last( $card_number_pieces)) => transform(
@@ -25,12 +33,21 @@ $next = match(true) {
 };
 
  
-if (!\Illuminate\Support\Facades\View::exists("$set.$card_number")) {
+if (!\Illuminate\Support\Facades\View::exists("$card_number")) {
     abort(404);
     exit;
 }
 
-$view = view("$set.$card_number")->with('cardNumber', $card_number)->with('cardSet', $set);
+// $view = view(
+//   "$card_number",
+//   [
+//     'dx' => 0,
+//     'dy' => 0,
+//     'cardNumber' => $card_number,
+//   ]
+// );
+
+
 
 // if (isset($_REQUEST['png'] )) {
 //      \header('Content-Type: image/png');
@@ -43,14 +60,16 @@ $view = view("$set.$card_number")->with('cardNumber', $card_number)->with('cardS
 // if (isset($_REQUEST['download'] )) 
 // \header('Content-Disposition: attachment; filename="'.$card_number.'.svg"');
 
-$filepath = resource_path("cards/$set/$card_number.blade.php");
-assert(!empty($filepath));
-assert(file_exists($filepath));
-$edit_url = "vscode://file/".urlencode($filepath);
+
+
+
 
 ?>
 <html>
-
+  <head>
+    <title><?= $card_number ?> <?= $spec['name'] ?></title>
+  </head>
+<body>
 <div class="item buttons">
   @isset($previous)
   <a id="btn-previous" href="/cards/card/{{$previous}}">{{$previous}}</a>
@@ -59,14 +78,16 @@ $edit_url = "vscode://file/".urlencode($filepath);
   <button id="btn-jpg" data-format="jpeg">JPG</button>
   <button id="btn-webp" data-format="webp">WEBP</button>
 
-  <a href="<?= $edit_url ?>">Edit</a>
+  <a href="<?=  "vscode://file/".urlencode($filepath) ?>">Edit</a>
 
   @isset($next)
   <a id="btn-next" href="/cards/card/{{$next}}">{{$next}}</a>
     @endisset
 </div>
   <div id="svg-container" hx-get="#"  hx-trigger="dblclick"
-  hx-target="#svg-container">{{$view}}</div>
+  hx-target="#svg-container">
+  <x-card :cardNumber="$card_number" :$spec />
+</div>
   <div id="img-container"></div>
 
 <script>
@@ -122,4 +143,6 @@ for (const btn of buttons) {
   btn.onclick = convertSVGtoImg
 }
     </script>
+    @stack('debug')
+    </body>
     </html>

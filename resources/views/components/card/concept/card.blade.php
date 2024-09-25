@@ -9,6 +9,7 @@ $rules_dy ??= 0;
 $concept_cursor_x ??= 0;
 $concept_cursor_y ??= 0;
 
+$concept = \App\Concept::make($type);
 $concept_config =  config("card-design.concept");
 $icon_height = $concept_config['icon-size'];
 $icon_padding = $concept_config['icon-padding'];
@@ -21,7 +22,7 @@ $width ??= config("card-design.viewbox.width");
 
     <rect width="<?= $width ?>" height="<?= $standard_height ?>" fill="#ffffff" fill-opacity="50%" />
      <g transform="translate(<?= $icon_padding ?>,<?= $icon_padding ?>) scale(<?= $icon_height/config("card-design.icon.size") ?>)" fill="#000000" fill-opacity="1">
-        {{ view($type.'.icon') }}
+        {{ $concept->icon() }}
      </g>
      <text x="<?= $concept_config['standard-height'] ?>" y="30" class="cardtype" text-anchor="left" alignment-baseline="central">
       @empty($slot) <?= $type ?>  @endempty

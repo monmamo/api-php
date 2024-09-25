@@ -19,7 +19,7 @@ enum CardSet: string
     case Aquos = 'AQ';
 
     #[Title('Banes and Catastrophes Card Set')]
-    case BanesAndCatastrophes = 'A';
+    case BanesAndCatastrophes = 'B';
 
     #[Title('Base Card Set')]
     case Base = 'A';
@@ -79,12 +79,8 @@ enum CardSet: string
     {
         $files = new Collection(Storage::disk('cards')->files($this->value));
 
-        $files = $files->filter(fn (string $filename): bool => \preg_match('/_(.*)\.blade\.php$/U', $filename))
+        return $files->filter(fn (string $filename): bool => \preg_match('/_(.*)\.blade\.php$/U', $filename))
             ->map(fn (string $filename): string => \preg_replace('/_(.*)\.blade\.php$/U', '$1', $filename))
             ->map(fn (string $filename) => new Card($this, $filename));
-
-        \dump($files);
-        exit; //TEMP
-        return $files;
     }
 }

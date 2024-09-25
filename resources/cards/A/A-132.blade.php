@@ -1,0 +1,27 @@
+@push('background')
+{{ view('Bystander.background') }}
+<x-card.flavortext>
+    <x-card.flavortext.line>Touch is the best medicine.</x-card.flavortext.line>    
+</x-card.flavor-text>
+@endpush
+
+<x-card :$cardNumber :$dx :$dy card-name="Masseuse">
+    
+        <x-card.concept.staticon type="Bystander" :dx="3" />
+        <x-card.concept.staticon type="Female"  />
+        <x-card.concept.staticon type="Integrity" value="1d4" />
+
+        <text y="500" filter="url(#solid)">
+<x-card.smallrule>{{ trans_choice('rules.player-limit',1) }}</x-card.smallrule>
+        </text>
+
+<x-card.phaserule type="Resolution" :lines="3">
+    <text >
+<x-card.normalrule>After all attacks & skills</x-card.normalrule>
+<x-card.normalrule>are resolved, remove 4 damage from each</x-card.normalrule>
+<x-card.normalrule>of your Monsters that is not Knocked Out.</x-card.normalrule>
+</text>
+</x-card.phaserule>
+
+
+</x-card>

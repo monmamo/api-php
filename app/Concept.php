@@ -5,12 +5,14 @@ namespace App;
 use App\Contracts\HasIcon;
 use App\GeneralAttributes\Color;
 use App\GeneralAttributes\Title;
+use App\Methods\Make\MakeFromConstructor;
 use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Support\Facades\Storage;
 
 #[\Attribute(\Attribute::TARGET_CLASS)]
 class Concept implements HasIcon
 {
-    use \App\Methods\Make\MakeFromConstructor;
+    use MakeFromConstructor;
 
     protected ?string $color = null;
 
@@ -28,6 +30,38 @@ class Concept implements HasIcon
     ) {}
 
     /**
+     * @group unary
+     */
+    private function _file(string $name): string
+    {
+        return \resource_path("concepts/{$this->type}/{$name}");
+    }
+
+    /**
+     * @group unary
+     */
+    private function _php(string $name): \Traversable
+    {
+        return require $this->_file("{$name}.php");
+    }
+
+    /**
+     * @group unary
+     */
+    private function _text(string $name): \Traversable
+    {
+        return new \ArrayIterator(\file($this->_file("{$name}.txt")));
+    }
+
+    public static function all(): \Traversable
+    {
+        return \collect(Storage::disk('concepts')->directories())->sort();
+        // $files = $files->filter(fn (string $filename): bool => \preg_match('/_(.*)\.blade\.php$/U', $filename))
+        //     ->map(fn (string $filename): string => \preg_replace('/_(.*)\.blade\.php$/U', '$1', $filename))
+        //     ->map(fn (string $filename) => new Card($this, $filename));
+    }
+
+    /**
      * @group nonary
      */
     public function color(): string|array
@@ -41,14 +75,6 @@ class Concept implements HasIcon
     }
 
     /**
-     * @group unary
-     */
-    private function _file(string $name): string
-    {
-        return \resource_path("concepts/{$this->type}/$name");
-    }
-
-    /**
      * @group nonary
      */
     public function icon(): Renderable
@@ -58,27 +84,30 @@ class Concept implements HasIcon
 
     /**
      * TODO Support localization if the file is a .php.
+     *
      * @group nonary
      */
     public function standardRule(): \Traversable
     {
-        return $this->_text("standard-rule");
+        $path = $this->_file('standard-rule.txt');
+
+        if (\file_exists($path)) {
+            yield from \file($path);
+            return;
+        }
     }
 
     /**
-     * @group unary
+     * @group nonary
      */
-    private function _text(string $name): \Traversable
+    public function staticonLabel(): string
     {
-        return new \ArrayIterator(\file($this->_file("$name.txt")));
-    }
+        $path = $this->_file('staticon-label.txt');
 
-    /**
-     * @group unary
-     */
-    private function _php(string $name): \Traversable
-    {
-        return require $this->_file("$name.php");
+        if (\file_exists($path)) {
+            return \file_get_contents($path);
+        }
+        return \strtoupper($this->type);
     }
 
     /**

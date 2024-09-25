@@ -11,7 +11,7 @@ echo "<pre>";
 print_r($files);
 exit;
 
-$view = view("$set.$card_number")->with('cardNumber', $card_number)->with('cardSet', $set);
+$view = view("$set.$card_number")->with('cardNumber', $card_number);
 
 \header('Content-Type: image/svg+xml');
 if (isset($_REQUEST['download'] )) 

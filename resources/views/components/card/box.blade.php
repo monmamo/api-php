@@ -1,21 +1,12 @@
 @props(['slug','rectFill'=>'#FFFFFF'])
 <?php
-$width = config("card-design.$slug.width");
+extract(config("card-design.$slug")); // sets $x, $y, $width, $height
 $height = config("card-design.$slug.height");
 
 $rectFill = match(true) {
     is_string($rectFill) => $rectFill,
     $rectFill === false => null,    
 };
-
-$attributes = [
-    'id' => $slug,
-    'x' => config("card-design.$slug.x"),
-    'y' => config("card-design.$slug.y"),
-    'width' => $width,
-    'height' =>$height,
-    'viewBox' => "0 0 $width $height",
-];
 
 $rect_attributes = [
     'x' => 0,
@@ -25,9 +16,7 @@ $rect_attributes = [
 ];
 
 ?>
-<svg {{new \Illuminate\View\ComponentAttributeBag($attributes)}}>
-
+<x-svg :id="$slug" :$x :$y :$height :$width>
     <rect class="{{$slug}}" {{new \Illuminate\View\ComponentAttributeBag($rect_attributes)}} />
-
     {{$slot}}
-</svg>
+</x-svg>

@@ -2,25 +2,27 @@
 
 namespace App;
 
+use App\Enums\CardSet;
+use App\View\Components\Card;
+
 class CardCollection extends \ArrayObject
 {
     public function __construct(
         $set = '*',
-        $id = '*'
+        $id = '*',
     ) {
         parent::__construct();
 
         $set_string = match (true) {
-            is_string($set) => $set,
-            $set instanceof \App\Enums\CardSet => $set->value,
-            is_null($set) => '*',
+            \is_string($set) => $set,
+            $set instanceof CardSet => $set->value,
+            \is_null($set) => '*',
             $set === true => '*',
         };
 
-
         $id_string = match (true) {
-            is_string($id) => $id,
-            is_null($id) => '*',
+            \is_string($id) => $id,
+            \is_null($id) => '*',
             $id === true => '*',
         };
 
@@ -28,8 +30,8 @@ class CardCollection extends \ArrayObject
             if ($filepath[0] === '_') {
                 continue;
             }
-            
-            $this[ str_replace('.blade','',pathinfo($filepath,PATHINFO_FILENAME)) ] = \App\View\Components\Card::byPath($filepath );
+
+            $this[\str_replace('.blade', '', \pathinfo($filepath, \PATHINFO_FILENAME))] = Card::byPath($filepath);
         }
     }
 }

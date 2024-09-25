@@ -4,8 +4,10 @@
 
 $icon_size = 512;
 
-$width = 750;
-$height = 1050;
+$dots_per_inch = 300;
+
+$width = $dots_per_inch * 2.5;
+$height = $dots_per_inch * 3.5;
 
 $primary_rule_height = 35;
 $secondary_rule_height = 25;
@@ -33,7 +35,7 @@ $viewbox['height'] = $trimbox['height'] - $trimbox['margin'] - $trimbox['margin'
 $titlebox = [
     'x' => $viewbox['x'],
     'width' => $viewbox['width'],
-    'height' => 80,
+    'height' => 70,
     'cardtype_baseline' => 30,
 ];
 
