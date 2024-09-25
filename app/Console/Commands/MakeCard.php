@@ -22,7 +22,7 @@ class MakeCard extends Command implements PromptsForMissingInput
      *
      * @var string
      */
-    protected $signature = 'card:make {card-number} {name} {--C|nocontent}';
+    protected $signature = 'card:make {card-number} {name} {--C|nocontent} {--c|concepts=*}';
 
     /**
      * @group unary
@@ -77,6 +77,8 @@ class MakeCard extends Command implements PromptsForMissingInput
         $card_name = $this->argument('name');
 
         $concept_generator = function () {
+foreach($this->option('concepts') as $command_line_concept) yield $command_line_concept;
+
             $all_concepts = Concept::all();
 
             do {
@@ -87,7 +89,9 @@ class MakeCard extends Command implements PromptsForMissingInput
                 }
             } while (!\is_null($input));
         };
-        $concepts = $this->option('nocontent') ? [] : [...$concept_generator()];
+        $concepts = $this->option('concepts');
+        if (!$this->option('nocontent'))
+array_push(        $concepts,...$concept_generator());
 
         $card_number_pieces = \explode('-', $card_number);
         $set = $card_number_pieces[0];
@@ -99,21 +103,20 @@ class MakeCard extends Command implements PromptsForMissingInput
                 ->filter(function (StorageAttributes $attributes) {
                     return $attributes->isFile();
                 })
-                ->sortByPath()
-                ->map(function (StorageAttributes $attributes) use ($set) {
-                    if (\preg_match("/{$set}\\/{$set}-(\\d+)\\.\\.php/", $attributes->path(), $matches) === 1) {
-                        return $matches[1];
+                ->map(function (StorageAttributes $attributes) use ($set): int {
+                    if (\preg_match("/{$set}\\/{$set}-(\\d+)\\.php/", $attributes->path(), $matches) === 1) {
+                        return (int) $matches[1];
                     }
                 })
                 ->toArray();
 
-            $max = \max(\array_map(fn ($value): int => (int) $value, $existing_files)) ?? 0;
+            $existing_files[] = 0; //ensure there is at least one element in the array
 
-            $card_number = $set . '-' . \str_pad($max + 1, 2, '0', \STR_PAD_LEFT);
+            $card_number = $set . '-' . \str_pad(\max($existing_files) + 1, 2, '0', \STR_PAD_LEFT);
         }
 
         $content_generator = function () use ($concepts, $card_name): \Traversable {
-            $format_value = fn ($key, $value) => \sprintf("'%s' => %s,", $key, \json_encode($value));
+            $format_value = fn($key, $value) => \sprintf("'%s' => %s,", $key, \json_encode($value));
 
             yield '<?php';
             yield 'return [';
@@ -149,6 +152,9 @@ class MakeCard extends Command implements PromptsForMissingInput
                 foreach ($primary_lines as $line) {
                     yield "<x-card.normalrule>{$line}</x-card.normalrule>";
                 }
+
+                if ($height === 0)
+                    yield "<x-card.normalrule>TODO</x-card.normalrule>";
 
                 yield '</x-card.cardrule>';
             }

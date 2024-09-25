@@ -1,0 +1,23 @@
+<?php
+return [
+'name' => "Broken Ground",
+
+'concepts' => ["Environment"],
+
+'image-prompt' => null,
+
+'image-credit' => "Image by USER_NAME on SERVICE",
+
+'flavor-text' => [],
+'background' => view('Environment.background'),
+'content' => <<<HTML
+<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
+<x-card.cardrule height="0" >
+
+<x-card.normalrule>Discard this card if the Place changes.</x-card.normalrule>
+<x-card.normalrule>Resolution phase: Each Monster that used an Attack or Defense</x-card.normalrule>
+<x-card.normalrule>takes 1d6 more Damage.</x-card.normalrule>
+
+</x-card.cardrule>
+HTML
+];
