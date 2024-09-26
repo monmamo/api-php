@@ -66,6 +66,14 @@ class MakeCard extends Command implements PromptsForMissingInput
         ];
     }
 
+    private function generateOne(\App\CardSpec $spec): void
+    {
+        $spec->put();
+        $card_number = $spec->cardNumber();
+        $card_name = $spec->name();
+        $this->info("{$card_number} {$card_name} created.");
+    }
+
     /**
      * Execute the console command.
      */
@@ -77,7 +85,7 @@ class MakeCard extends Command implements PromptsForMissingInput
         $card_name = $this->argument('name');
 
         $concept_generator = function () {
-foreach($this->option('concepts') as $command_line_concept) yield $command_line_concept;
+            foreach ($this->option('concepts') as $command_line_concept) yield $command_line_concept;
 
             $all_concepts = Concept::all();
 
@@ -91,7 +99,7 @@ foreach($this->option('concepts') as $command_line_concept) yield $command_line_
         };
         $concepts = $this->option('concepts');
         if (!$this->option('nocontent'))
-array_push(        $concepts,...$concept_generator());
+            array_push($concepts, ...$concept_generator());
 
         $card_number_pieces = \explode('-', $card_number);
         $set = $card_number_pieces[0];
@@ -115,55 +123,17 @@ array_push(        $concepts,...$concept_generator());
             $card_number = $set . '-' . \str_pad(\max($existing_files) + 1, 2, '0', \STR_PAD_LEFT);
         }
 
-        $content_generator = function () use ($concepts, $card_name): \Traversable {
-            $format_value = fn($key, $value) => \sprintf("'%s' => %s,", $key, \json_encode($value));
+        $spec = new \App\CardSpec(
+            card_name: $card_name,
+            card_number: $card_number,
+            concepts: $concepts,
+            image_credit: $this->ask('Image credit:'),
+            flavor_text: \iterator_to_array(self::_askMultiline('Flavor text:')),
+            no_content: $this->option('nocontent'),
+            secondary_lines: \iterator_to_array(self::_askMultiline('Secondary text:')),
+            primary_lines: $primary_lines = \iterator_to_array(self::_askMultiline('Primary text:'))
+        );
 
-            yield '<?php';
-            yield 'return [';
-            yield $format_value('name', $card_name);
-            yield '';
-            yield $format_value('concepts', $concepts);
-            yield '';
-            yield $format_value('image-prompt', null);
-            yield '';
-            yield $format_value('image-credit', 'Image by USER_NAME on SERVICE');
-            yield '';
-
-            if (!$this->option('nocontent')) {
-                yield $format_value('flavor-text', \iterator_to_array(self::_askMultiline('Flavor text:')));
-            }
-            yield "'background' => view('{$concepts[0]}.background'),";
-
-            yield "'content' => <<<HTML";
-
-            if (!$this->option('nocontent')) {
-                yield '<image x="0" y="0" class="hero" href="@local(TODO.png)"  />';
-
-                $secondary_lines = \iterator_to_array(self::_askMultiline('Secondary text:'));
-                $primary_lines = \iterator_to_array(self::_askMultiline('Primary text:'));
-                $height = \count($secondary_lines) * 40 + \count($primary_lines) * 55;
-
-                yield "<x-card.cardrule height=\"{$height}\" >";
-
-                foreach ($secondary_lines as $line) {
-                    yield "<x-card.smallrule>{$line}</x-card.smallrule>";
-                }
-
-                foreach ($primary_lines as $line) {
-                    yield "<x-card.normalrule>{$line}</x-card.normalrule>";
-                }
-
-                if ($height === 0)
-                    yield "<x-card.normalrule>TODO</x-card.normalrule>";
-
-                yield '</x-card.cardrule>';
-            }
-            yield 'HTML';
-            yield '];';
-        };
-
-        $filesystem->put("{$set}/{$card_number}.php", \implode("\n", \iterator_to_array($content_generator())));
-
-        $this->info("{$card_number} {$card_name} created.");
+        $this->generateOne($spec);
     }
 }

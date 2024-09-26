@@ -5,16 +5,11 @@ namespace App;
 use App\CardAttributes\ImageCredit;
 use App\Concerns\Properties\Name;
 
-abstract class Card
+abstract class Card implements \App\Contracts\Card\CardComponents
 {
     use Name;
 
     private object $card_type_facade;
-
-    /**
-     * @group nonary
-     */
-    abstract public function bodyText(): \Traversable;
 
     /**
      * @group unary
