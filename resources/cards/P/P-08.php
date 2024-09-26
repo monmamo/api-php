@@ -1,17 +1,18 @@
 <?php
+
 // inspiration: High Pressure System PTCG card https://bulbapedia.bulbagarden.net/wiki/High_Pressure_System_(POP_Series_3_10)
 return [
-'name' => "High Pressure System",
+    'name' => 'High Pressure System',
 
-'concepts' => ["Environment","Weather"],
+    'concepts' => ['Environment', 'Weather'],
 
-'image-prompt' => null,
+    'image-prompt' => null,
 
-'image-credit' => "Image by USER_NAME on SERVICE",
+    'image-credit' => 'Image by USER_NAME on SERVICE',
 
-'flavor-text' => [],
-'background' => view('Environment.background'),
-'content' => <<<HTML
+    'flavor-text' => [],
+    'background' => \view('Environment.background'),
+    'content' => <<<'HTML'
 <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
 <x-card.cardrule height="0" >
 <x-card.normalrule>Has no effect in an Enclosed Venue.</x-card.normalrule>

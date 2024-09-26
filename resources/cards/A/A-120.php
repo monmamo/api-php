@@ -1,16 +1,17 @@
 <?php
+
 return [
-'name' => "Healing Salve",
+    'name' => 'Healing Salve',
 
-'concepts' => ["Item","healing"],
+    'concepts' => ['Item', 'healing'],
 
-'image-prompt' => 'green jar of healing ointment',
-'image-source' => 'https://www.freepik.com/free-psd/skin-product-isolated_158243292.htm',
-'image-credit' => "Image by freepik",
+    'image-prompt' => 'green jar of healing ointment',
+    'image-source' => 'https://www.freepik.com/free-psd/skin-product-isolated_158243292.htm',
+    'image-credit' => 'Image by freepik',
 
-'flavor-text' => ["Does a monster good!"],
-'background' => view('Item.background'),
-'content' => <<<HTML
+    'flavor-text' => ['Does a monster good!'],
+    'background' => \view('Item.background'),
+    'content' => <<<'HTML'
 <image x="0" y="0" class="hero" href="@local(A120.png)" />
 
 <x-card.phaserule type="Upkeep" y="600" lines="1">

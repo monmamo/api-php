@@ -7,7 +7,7 @@ return [
 
     'image-prompt' => null,
 
-    'image-credit' => 'Image by USER_NAME on SERVICE',
+    'image-credit' => null,
 
     'prerequisites' => ['Requires Aquos.'],
 

@@ -1,15 +1,16 @@
 <?php
+
 return [
-'name' => "Biting",
+    'name' => 'Biting',
 
-'concepts' => ["Trait"],
-'ai' => true,
-'image-prompt' => null,
-'image-credit' => null,
+    'concepts' => ['Trait'],
+    'ai' => true,
+    'image-prompt' => null,
+    'image-credit' => null,
 
-'flavor-text' => ["What sharp teeth you have."],
-'background' => view('Trait.background'),
-'content' => <<<HTML
+    'flavor-text' => ['What sharp teeth you have.'],
+    'background' => \view('Trait.background'),
+    'content' => <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(A006.png)" source="https://www.freepik.com/free-photo/hand-pouring-food-birds_1713221.htm" />
 
     <x-card.phaserule type="Attack" height="140">

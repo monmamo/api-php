@@ -1,16 +1,17 @@
 <?php
+
 return [
-'name' => "Cresting Wave",
+    'name' => 'Cresting Wave',
 
-'concepts' => ["Attack"],
+    'concepts' => ['Attack'],
 
-'image-prompt' => null,
+    'image-prompt' => null,
 
-'image-credit' => "Image by USER_NAME on SERVICE",
+    'image-credit' => 'Image by USER_NAME on SERVICE',
 
-'flavor-text' => [],
-'background' => view('Attack.background'),
-'content' => <<<HTML
+    'flavor-text' => [],
+    'background' => \view('Attack.background'),
+    'content' => <<<'HTML'
 <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
 <x-card.cardrule height="25" >
 <x-card.smallrule>Requires Aquos.</x-card.smallrule>

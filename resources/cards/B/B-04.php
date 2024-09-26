@@ -1,16 +1,17 @@
 <?php
+
 return [
-'name' => "Sunken Eye",
+    'name' => 'Sunken Eye',
 
-'concepts' => ["Bane"],
+    'concepts' => ['Bane'],
 
-'image-prompt' => null,
+    'image-prompt' => null,
 
-'image-credit' => "Image by USER_NAME on SERVICE",
+    'image-credit' => 'Image by USER_NAME on SERVICE',
 
-'flavor-text' => [],
-'background' => view('Bane.background'),
-'content' => <<<HTML
+    'flavor-text' => [],
+    'background' => \view('Bane.background'),
+    'content' => <<<'HTML'
 <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
 <text y="500">
 <x-card.normalrule>You may play this Bane only with an Attack.</x-card.normalrule>

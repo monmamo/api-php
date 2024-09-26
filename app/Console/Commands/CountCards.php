@@ -2,7 +2,6 @@
 
 namespace App\Console\Commands;
 
-use App\Concept;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Console\PromptsForMissingInput;
 use Illuminate\Support\Facades\Storage;
@@ -34,10 +33,13 @@ class CountCards extends Command implements PromptsForMissingInput
 
         // Determine the list of cards to count.
 
-        if (!is_null($deck = $this->option('deck'))) {
-            $list = config("decks.$deck.cards");
-            foreach ($list as $card_number => $count) $total_count += $count;
-            $this->info(sprintf("%5u TOTAL", $total_count));
+        if (!\is_null($deck = $this->option('deck'))) {
+            $list = \config("decks.{$deck}.cards");
+
+            foreach ($list as $card_number => $count) {
+                $total_count += $count;
+            }
+            $this->info(\sprintf('%5u TOTAL', $total_count));
             return;
         }
 
@@ -53,13 +55,13 @@ class CountCards extends Command implements PromptsForMissingInput
         ) {
             $existing_files = $filesystem->listContents($set)
                 ->filter(function (StorageAttributes $attributes) {
-                    return $attributes->isFile() && \preg_match("/\\.php$/", $attributes->path(), $matches) === 1;
+                    return $attributes->isFile() && \preg_match('/\\.php$/', $attributes->path(), $matches) === 1;
                 })
                 ->toArray();
 
-            $this->info(sprintf("%5u %s", count($existing_files), $set));
-            $total_count += count($existing_files);
+            $this->info(\sprintf('%5u %s', \count($existing_files), $set));
+            $total_count += \count($existing_files);
         }
-        $this->info(sprintf("%5u TOTAL", $total_count));
+        $this->info(\sprintf('%5u TOTAL', $total_count));
     }
 }

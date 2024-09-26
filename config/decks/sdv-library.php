@@ -46,7 +46,8 @@ return [
         'A-135' => 3, // Investment
         'A-139' => 2, // Karma
         'A-140' => 2, // Last Resort
-        'A-141' => 4, // Lottery
+        'A-141' => 3, // Lottery
+        'A-051' => 1, // Waste Manager
         'A-143' => 2, // Financial Planner
         'A-144' => 1, // Taxman
         'A-145' => 2, // First Aid Kit

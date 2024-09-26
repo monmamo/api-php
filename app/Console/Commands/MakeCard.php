@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\CardSpec;
 use App\Concept;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Console\PromptsForMissingInput;
@@ -22,36 +23,32 @@ class MakeCard extends Command implements PromptsForMissingInput
      *
      * @var string
      */
-    protected $signature = 'card:make {card-number} {name} {--C|nocontent} {--c|concepts=*}';
+    protected $signature = 'card:make {card-number} {name} {--C|nocontent} {--c|concepts=*} {--j|json}';
 
     /**
      * @group unary
      */
     private function _askMultiline(string $prompt): \Traversable
     {
-        $this->info($prompt);
+        $input = \Laravel\Prompts\textarea($prompt);
 
-        do {
-            $input = $this->ask('');
+        $line = \str_replace('","', "\n", $input);
 
-            if ($input) {
-                foreach (self::_parseLineInput($input) as $line) {
-                    yield $line;
-                }
+        foreach (\explode("\n", $line) as $subline) {
+            $subline = \trim($subline, " \n\r\t\v\x00\"'");
+
+            if (!empty($subline)) {
+                yield $subline;
             }
-        } while (!\is_null($input));
+        }
     }
 
-    /**
-     * @group unary
-     */
-    private static function _parseLineInput(string $line): \Traversable
+    private function generateOne(CardSpec $spec): void
     {
-        $line = \str_replace('","', '"|"', $line);
-
-        foreach (\explode('|', $line) as $subline) {
-            yield \trim($subline, " \n\r\t\v\x00\"'");
-        }
+        $spec->put();
+        $card_number = $spec->cardNumber();
+        $card_name = $spec->name();
+        $this->info("{$card_number} {$card_name} created.");
     }
 
     /**
@@ -66,14 +63,6 @@ class MakeCard extends Command implements PromptsForMissingInput
         ];
     }
 
-    private function generateOne(\App\CardSpec $spec): void
-    {
-        $spec->put();
-        $card_number = $spec->cardNumber();
-        $card_name = $spec->name();
-        $this->info("{$card_number} {$card_name} created.");
-    }
-
     /**
      * Execute the console command.
      */
@@ -84,22 +73,24 @@ class MakeCard extends Command implements PromptsForMissingInput
         $card_number = $this->argument('card-number');
         $card_name = $this->argument('name');
 
-        $concept_generator = function () {
-            foreach ($this->option('concepts') as $command_line_concept) yield $command_line_concept;
+        $concepts = $this->option('concepts');
 
-            $all_concepts = Concept::all();
+        if (!$this->option('nocontent')) {
+            $all_concepts = \collect(Concept::all());
 
             do {
-                $input = $this->anticipate('Concept', $all_concepts);
+                $input = \Laravel\Prompts\suggest(
+                    'Concept',
+                    fn ($value) => $all_concepts->filter(
+                        fn ($name) => \str_starts_with(\strtolower($name), \strtolower($value)),
+                    ),
+                );
 
-                if ($input) {
-                    yield $input;
+                if (!empty($input)) {
+                    $concepts[] = $input;
                 }
-            } while (!\is_null($input));
-        };
-        $concepts = $this->option('concepts');
-        if (!$this->option('nocontent'))
-            array_push($concepts, ...$concept_generator());
+            } while (!empty($input));
+        }
 
         $card_number_pieces = \explode('-', $card_number);
         $set = $card_number_pieces[0];
@@ -115,6 +106,7 @@ class MakeCard extends Command implements PromptsForMissingInput
                     if (\preg_match("/{$set}\\/{$set}-(\\d+)\\.php/", $attributes->path(), $matches) === 1) {
                         return (int) $matches[1];
                     }
+                    return 0;
                 })
                 ->toArray();
 
@@ -123,16 +115,21 @@ class MakeCard extends Command implements PromptsForMissingInput
             $card_number = $set . '-' . \str_pad(\max($existing_files) + 1, 2, '0', \STR_PAD_LEFT);
         }
 
-        $spec = new \App\CardSpec(
+        $spec = $this->option('nocontent') ? new CardSpec(
             card_name: $card_name,
             card_number: $card_number,
             concepts: $concepts,
-            image_credit: $this->ask('Image credit:'),
-            flavor_text: \iterator_to_array(self::_askMultiline('Flavor text:')),
-            no_content: $this->option('nocontent'),
-            secondary_lines: \iterator_to_array(self::_askMultiline('Secondary text:')),
-            primary_lines: $primary_lines = \iterator_to_array(self::_askMultiline('Primary text:'))
-        );
+            no_content: true,
+        )
+            : new CardSpec(
+                card_name: $card_name,
+                card_number: $card_number,
+                concepts: $concepts,
+                image_credit: \Laravel\Prompts\text('Image credit'),
+                flavor_text: \iterator_to_array(self::_askMultiline('Flavor text')),
+                secondary_lines: \iterator_to_array(self::_askMultiline('Secondary text')),
+                primary_lines: $primary_lines = \iterator_to_array(self::_askMultiline('Primary text')),
+            );
 
         $this->generateOne($spec);
     }

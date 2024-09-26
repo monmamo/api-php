@@ -1,16 +1,17 @@
 <?php
+
 return [
-'name' => "Volcanic Eruption",
+    'name' => 'Volcanic Eruption',
 
-'concepts' => ["Catastrophe"],
+    'concepts' => ['Catastrophe'],
 
-'image-prompt' => null,
+    'image-prompt' => null,
 
-'image-credit' => "Image by USER_NAME on SERVICE",
+    'image-credit' => 'Image by USER_NAME on SERVICE',
 
-'flavor-text' => [],
-'background' => view('Catastrophe.background'),
-'content' => <<<HTML
+    'flavor-text' => [],
+    'background' => \view('Catastrophe.background'),
+    'content' => <<<'HTML'
 <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
 <text>
 <x-card.normalrule>May be played only when the Place on the Battlefield is a Volcano.</x-card.normalrule>

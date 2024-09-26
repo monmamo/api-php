@@ -1,17 +1,18 @@
 <?php
+
 // inspiration: Giant Stump PTCG card https://bulbapedia.bulbagarden.net/wiki/Giant_Stump_(EX_Legend_Maker_75)
 return [
-'name' => "Giant Stump",
+    'name' => 'Giant Stump',
 
-'concepts' => ["Venue","Outdoors"],
+    'concepts' => ['Venue', 'Outdoors'],
 
-'image-prompt' => null,
+    'image-prompt' => null,
 
-'image-credit' => "Image by USER_NAME on SERVICE",
+    'image-credit' => 'Image by USER_NAME on SERVICE',
 
-'flavor-text' => [],
-'background' => view('Venue.background'),
-'content' => <<<HTML
+    'flavor-text' => [],
+    'background' => \view('Venue.background'),
+    'content' => <<<'HTML'
 <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
 <x-card.cardrule height="0" >
 <x-card.normalrule>This card may be played only if there are two or three players.</x-card.normalrule>

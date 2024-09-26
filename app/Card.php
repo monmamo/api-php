@@ -4,8 +4,9 @@ namespace App;
 
 use App\CardAttributes\ImageCredit;
 use App\Concerns\Properties\Name;
+use App\Contracts\Card\CardComponents;
 
-abstract class Card implements \App\Contracts\Card\CardComponents
+abstract class Card implements CardComponents
 {
     use Name;
 

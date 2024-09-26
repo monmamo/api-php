@@ -9,6 +9,8 @@ use Illuminate\View\View;
 
 class Card extends Component
 {
+    private array $flavorTextLines;
+
     public function __construct(
         public string $cardNumber,
         public array $spec = [],
@@ -85,7 +87,7 @@ class Card extends Component
             \array_push($prerequisites, ...Concept::make($type)->standardRule());
         }
 
-        $y = 475 + 25 * max(count($this->flavortextLines()), 1);
+        $y = 475 + 25 * \max(\count($this->flavortextLines()), 1);
 
         yield "<text y=\"{$y}\" filter=\"url(#solid)\">";
 
@@ -138,29 +140,19 @@ class Card extends Component
         return $this->spec['credit-color'] ?? 'white';
     }
 
-    private array $flavorTextLines;
-
-    /**
-     * @group nonary
-     */
-    public function flavorTextLines(): array
-    {
-        return $this->flavorTextLines ??=  [...\App\Strings\explode_lines($this->spec['flavor-text'] ?? null)];
-    }
-
     /**
      * @group nonary
      */
     public function flavorText(): string
     {
         if (isset($this->spec['flavor-text'])) {
-            $lines = array_map(
-                fn($line) =>  \App\Strings\html(
+            $lines = \array_map(
+                fn ($line) => \App\Strings\html(
                     'tspan',
                     ['x' => '50%', 'dy' => '25', 'class' => 'flavor', 'text-anchor' => 'middle', 'alignment-baseline' => 'hanging',  'fill' => $this->spec['flavor-text-color'] ?? 'white'],
                     $line,
                 ),
-                $this->flavorTextLines()
+                $this->flavorTextLines(),
             );
 
             return \App\Strings\html(
@@ -171,6 +163,14 @@ class Card extends Component
         }
 
         return '';
+    }
+
+    /**
+     * @group nonary
+     */
+    public function flavorTextLines(): array
+    {
+        return $this->flavorTextLines ??= [...\App\Strings\explode_lines($this->spec['flavor-text'] ?? null)];
     }
 
     /**

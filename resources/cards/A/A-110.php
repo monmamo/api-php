@@ -1,16 +1,17 @@
 <?php
+
 return [
-'name' => "Personal Shopper",
+    'name' => 'Personal Shopper',
 
-'concepts' => ["Vendor","Integrity:1d4"],
-'ai'=>true,
-'image-prompt' => null,
+    'concepts' => ['Vendor', 'Integrity:1d4'],
+    'ai' => true,
+    'image-prompt' => null,
 
-'image-credit' =>null,
+    'image-credit' => null,
 
-'flavor-text' => [],
-'background' => view('Vendor.background'),
-'content' => <<<HTML
+    'flavor-text' => [],
+    'background' => \view('Vendor.background'),
+    'content' => <<<'HTML'
   <image class="hero" href="@local(hero/personal-shopper.jpg)" />
 
   <x-card.phaserule type="Draw"  height="170">

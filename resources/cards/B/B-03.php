@@ -1,16 +1,17 @@
 <?php
+
 return [
-'name' => "Hyperhidrosis",
+    'name' => 'Hyperhidrosis',
 
-'concepts' => ["Bane"],
+    'concepts' => ['Bane'],
 
-'image-prompt' => null,
+    'image-prompt' => null,
 
-'image-credit' => "Image by USER_NAME on SERVICE",
+    'image-credit' => 'Image by USER_NAME on SERVICE',
 
-'flavor-text' => ["Excessive sweating."],
-'background' => view('Bane.background'),
-'content' => <<<HTML
+    'flavor-text' => ['Excessive sweating.'],
+    'background' => \view('Bane.background'),
+    'content' => <<<'HTML'
 <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
 <text y="500" filter="url(#solid)">
         <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>

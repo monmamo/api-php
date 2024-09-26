@@ -1,16 +1,17 @@
 <?php
+
 return [
-'name' => "Healing Elixir",
+    'name' => 'Healing Elixir',
 
-'concepts' => ["Item","Healing"],
+    'concepts' => ['Item', 'Healing'],
 
-'image-prompt' => null,
-'image-source' => 'https://www.freepik.com/free-photo/brain-booster-pills-container-still-life_65114716.htm',
-'image-credit' => "Image by freepik",
+    'image-prompt' => null,
+    'image-source' => 'https://www.freepik.com/free-photo/brain-booster-pills-container-still-life_65114716.htm',
+    'image-credit' => 'Image by freepik',
 
-'flavor-text' => ["Does a monster good!"],
-'background' => view('Item.background'),
-'content' => <<<HTML
+    'flavor-text' => ['Does a monster good!'],
+    'background' => \view('Item.background'),
+    'content' => <<<'HTML'
 <image x="0" y="0" class="hero" href="@local(A119.jpg)"  />
 <x-card.phaserule type="Upkeep"  lines="3"><text >    
 <x-card.normalrule>Discard any number of cards from</x-card.normalrule>

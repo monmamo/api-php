@@ -50,7 +50,10 @@ enum Color: string
      */
     public static function gradiantPairByName(string $name): array
     {
-        return [Color::{$name . 'GradientBottom'}, Color::{$name . 'GradientTop'}];
+        return [
+            \constant(Color::class . '::' . $name . 'GradientBottom'),
+            \constant(Color::class . '::' . $name . 'GradientTop'),
+        ];
     }
 
     /**

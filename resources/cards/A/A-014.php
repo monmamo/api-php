@@ -2,13 +2,13 @@
 
 return [
     'name' => 'Big-Box Store',
-'concepts' => ['Vendor', 'Integrity:1d4'],
+    'concepts' => ['Vendor', 'Integrity:1d4'],
     'image-prompt' => null,
 
-    'background' => view('Vendor.background'),
+    'background' => \view('Vendor.background'),
 
-'image-credit' => "Image by teravector on Freepik",
-'flavor-text' => 'Expect more. Live better. Simplify life. Get more done.',
+    'image-credit' => 'Image by teravector on Freepik',
+    'flavor-text' => 'Expect more. Live better. Simplify life. Get more done.',
 
     'content' => <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(A-014.jpg)" source="https://www.freepik.com/free-vector/express-truck-delivering-goods-supermarket_4147963.htm" />
