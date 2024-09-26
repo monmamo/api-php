@@ -1,5 +1,5 @@
 <?php
-
+// inspiration: Hooligans Jim and Cas PTCG card https://bulbapedia.bulbagarden.net/wiki/Hooligans_Jim_%26_Cas_(Dark_Explorers_95) 
 return [
     'name' => 'Enforcer',
 

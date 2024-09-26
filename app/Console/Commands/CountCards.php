@@ -22,7 +22,7 @@ class CountCards extends Command implements PromptsForMissingInput
      *
      * @var string
      */
-    protected $signature = 'card:count';
+    protected $signature = 'card:count {--d|deck=}';
 
     /**
      * Execute the console command.
@@ -30,8 +30,17 @@ class CountCards extends Command implements PromptsForMissingInput
     public function handle(): void
     {
         $filesystem = Storage::disk('cards');
-
         $total_count = 0;
+
+        // Determine the list of cards to count.
+
+        if (!is_null($deck = $this->option('deck'))) {
+            $list = config("decks.$deck.cards");
+            foreach ($list as $card_number => $count) $total_count += $count;
+            $this->info(sprintf("%5u TOTAL", $total_count));
+            return;
+        }
+
         foreach (
             $filesystem->listContents('')
                 ->filter(function (StorageAttributes $attributes) {

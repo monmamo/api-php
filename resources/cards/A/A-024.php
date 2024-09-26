@@ -3,7 +3,7 @@
 return [
     'name' => 'Burglary',
 
-    'concepts' => ['Draw'],
+    'concepts' => ['Draw','Criminal'],
 
     'image-prompt' => null,
 

@@ -1,30 +1,22 @@
 <?php
-
 return [
-    'name' => 'Biting',
+'name' => "Biting",
 
-    'image-prompt' => null,
+'concepts' => ["Trait"],
+'ai' => true,
+'image-prompt' => null,
+'image-credit' => null,
 
-    'background' => <<<'HTML'
-{{ view('Trait.background') }}
-'image-credit' => "@ai",
-
-HTML,
-
-    'content' => <<<'HTML'
+'flavor-text' => ["What sharp teeth you have."],
+'background' => view('Trait.background'),
+'content' => <<<HTML
     <image x="0" y="0" class="hero" href="@local(A006.png)" source="https://www.freepik.com/free-photo/hand-pouring-food-birds_1713221.htm" />
 
-<x-card.concept.staticon type="Trait"  />
-
-<svg id="titlebox" x="50" y="600" width="550" height="165" viewBox="0 0 550 165">
-
-<rect x="0" y="0" width="550" height="165" fill="#FFFFFF" fill-opacity="0.75" />
-<x-card.titlebox.icon card-type="Attack" />
-
-<text x="345" y="30" text-anchor="middle" class="cardtype" alignment-baseline="hanging">ATTACK</text>
-<text x="345" y="90" text-anchor="middle" class="cardname" alignment-baseline="middle">Bite</text>
-<text x="345" y="140" text-anchor="middle" font-size="30px" alignment-baseline="baseline">Does Speed×3 damage.</text>
-
-</svg>
+    <x-card.phaserule type="Attack" height="140">
+<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Bite</text>
+<text  y="<?= config('card-design.titlebox.height')?>"  height="35">
+<x-card.normalrule>Does Speed×3 damage.</x-card.normalrule>
+</text>
+</x-card.phaserule>
 HTML
 ];

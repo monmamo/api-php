@@ -141,7 +141,7 @@ array_push(        $concepts,...$concept_generator());
 
                 $secondary_lines = \iterator_to_array(self::_askMultiline('Secondary text:'));
                 $primary_lines = \iterator_to_array(self::_askMultiline('Primary text:'));
-                $height = \count($secondary_lines) * 25 + \count($primary_lines) * 35;
+                $height = \count($secondary_lines) * 40 + \count($primary_lines) * 55;
 
                 yield "<x-card.cardrule height=\"{$height}\" >";
 

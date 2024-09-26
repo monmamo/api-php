@@ -85,10 +85,7 @@ class Card extends Component
             \array_push($prerequisites, ...Concept::make($type)->standardRule());
         }
 
-        $y = 475 + 25 * match (true) {
-            isset($this->spec['flavor-text']) => \count($this->spec['flavor-text']),
-            default => 1
-        };
+        $y = 475 + 25 * max(count($this->flavortextLines()), 1);
 
         yield "<text y=\"{$y}\" filter=\"url(#solid)\">";
 
@@ -141,21 +138,31 @@ class Card extends Component
         return $this->spec['credit-color'] ?? 'white';
     }
 
+    private array $flavorTextLines;
+
+    /**
+     * @group nonary
+     */
+    public function flavorTextLines(): array
+    {
+        return $this->flavorTextLines ??=  [...\App\Strings\explode_lines($this->spec['flavor-text'] ?? null)];
+    }
+
     /**
      * @group nonary
      */
     public function flavorText(): string
     {
         if (isset($this->spec['flavor-text'])) {
-            $lines = [];
-
-            foreach (\App\Strings\explode_lines($this->spec['flavor-text']) as $line) {
-                $lines[] = \App\Strings\html(
+            $lines = array_map(
+                fn($line) =>  \App\Strings\html(
                     'tspan',
                     ['x' => '50%', 'dy' => '25', 'class' => 'flavor', 'text-anchor' => 'middle', 'alignment-baseline' => 'hanging',  'fill' => $this->spec['flavor-text-color'] ?? 'white'],
                     $line,
-                );
-            }
+                ),
+                $this->flavorTextLines()
+            );
+
             return \App\Strings\html(
                 'text',
                 ['x' => '50%', 'y' => '510', 'class' => 'credit', 'text-anchor' => 'middle', 'alignment-baseline' => 'baseline'],
