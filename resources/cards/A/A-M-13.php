@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'name' => 'colorless monster L42',
+    'name' => 'Felequess L48',
 
-    'concepts' => ['Monster', 'Male', 'DamageCapacity:70', 'Level:42', 'Size:22', 'Speed:12', 'Multiplier:x4'],
+    'concepts' => ['Monster', 'Male', 'DamageCapacity:90', 'Level:48', 'Size:28', 'Speed:16', 'Multiplier:x4'],
 
     'image-prompt' => null,
     'ai' => true,
@@ -11,9 +11,9 @@ return [
 
     'background' => \view('Monster.background'),
     'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)" />
-<x-card.cardrule height="55" >
-<x-card.normalrule>Taxons: TODO</x-card.normalrule>
+<image x="0" y="0" class="hero" href="@local(hero/felequos.png)" />
+<x-card.cardrule y="460" height="55" >
+<x-card.normalrule>Taxons: Felequos</x-card.normalrule>
 </x-card.cardrule>
 HTML
 ];

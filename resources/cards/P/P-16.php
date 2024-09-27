@@ -13,9 +13,10 @@ return [
     'background' => \view('Environment.background'),
     'content' => <<<'HTML'
 <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
-<x-card.cardrule height="95" >
-<x-card.smallrule></x-card.smallrule>
-<x-card.normalrule>Resolution phase: For each Skill that is declared for a Monster to use, roll 1d4. If @dieroll(1), the skill has no effect.</x-card.normalrule>
-</x-card.cardrule>
+<x-card.phaserule type="Resolution" height="140"><text>
+<x-card.normalrule>For each Skill that is declared for a </x-card.normalrule>
+<x-card.normalrule>Monster to use, roll 1d4. </x-card.normalrule>
+<x-card.normalrule>If @dieroll(1), the skill has no effect.</x-card.normalrule>
+</text></x-card.phaserule>
 HTML
 ];

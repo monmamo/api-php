@@ -14,7 +14,7 @@
     <x-card.concept.staticon type="Item" :x="610-64"  />
     
     <x-card.phaserule type="Upkeep"  height="130"><text >    
-        <x-card.normalrule>Roll 1d4. If @dieroll(1), you may ask </x-card.normalrule>
+        <x-card.normalrule>Roll 1d4. If @dieroll(4), you may ask </x-card.normalrule>
 <x-card.normalrule>one opponent to show you their hand.</x-card.normalrule>
 <x-card.normalrule>(Only you get to see the hand.)</x-card.normalrule>
 </text></x-card.phaserule>  </x-card>

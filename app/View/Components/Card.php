@@ -102,8 +102,10 @@ class Card extends Component
             yield Blade::render($content, []);
         }
 
+        \assert(\is_array($this->concepts));
+
         // Concept icons.
-        $staticon_x ??= \config('card-design.viewbox.width') - 64 * \count($this->concepts);
+        $staticon_x ??= \config('card-design.viewbox.width')/2 - 32 * \count($this->concepts);
 
         foreach ($this->concepts as $index => $spec) {
             [$type, $value] = $spec;

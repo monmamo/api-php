@@ -23,8 +23,8 @@ HTML,
 <x-card.normalrule>For any attempt to put this Monster to Sleep,</x-card.normalrule>
 <x-card.normalrule>roll 1d6. (Roll one die for each</x-card.normalrule>
 <x-card.normalrule>Caffeine card attached to this Monster.)</x-card.normalrule>
-<x-card.normalrule>If @dieroll(5,6), the Monster remains awake.</x-card.normalrule>
-<x-card.normalrule>If @dieroll(1,2), discard this card.</x-card.normalrule>
+<x-card.normalrule>@dieroll(5,6) The Monster remains awake.</x-card.normalrule>
+<x-card.normalrule>@dieroll(1,2) Discard this card.</x-card.normalrule>
 </x-card.cardrule>
 HTML
 ];

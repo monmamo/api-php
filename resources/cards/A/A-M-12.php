@@ -11,9 +11,17 @@ return [
 
     'background' => \view('Monster.background'),
     'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)" />
-<x-card.cardrule height="55" >
+<image x="0" y="0" class="hero" href="@local(hero/A-M-12.jpeg)" />
+<x-card.cardrule y="460" height="55" >
 <x-card.normalrule>Taxons: Pyros, Hystrix</x-card.normalrule>
 </x-card.cardrule>
+
+<x-card.phaserule type="Attack" height="175">
+<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Hot Quills</text>
+<text  y="<?= config('card-design.titlebox.height')?>"  height="70">
+<x-card.normalrule>Does 6d6 damage.</x-card.normalrule>
+</text>
+</x-card.phaserule>
+
 HTML
 ];
