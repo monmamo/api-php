@@ -1,14 +1,15 @@
 <?php
+
 return [
-'name' => "Arcana Intelligence",
+    'name' => 'Arcana Intelligence',
 
-'concepts' => ["Trait"],
+    'concepts' => ['Trait'],
 
-'image-prompt' => null,
+    'image-prompt' => null,
 
-'image-credit' => "Image by USER_NAME on SERVICE",
+    'image-credit' => 'Image by USER_NAME on SERVICE',
 
-'background' => null,
-'content' => <<<HTML
+    'background' => null,
+    'content' => <<<'HTML'
 HTML
 ];

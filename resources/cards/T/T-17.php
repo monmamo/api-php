@@ -1,16 +1,17 @@
 <?php
+
 return [
-'name' => "Blade Arms",
+    'name' => 'Blade Arms',
 
-'concepts' => ["Trait"],
+    'concepts' => ['Trait'],
 
-'image-prompt' => null,
+    'image-prompt' => null,
 
-'image-credit' => "Image by USER_NAME on SERVICE",
+    'image-credit' => 'Image by USER_NAME on SERVICE',
 
-'flavor-text' => ["Adds a slashing effect to Pounce and physical attacks."],
-'background' => null,
-'content' => <<<HTML
+    'flavor-text' => ['Adds a slashing effect to Pounce and physical attacks.'],
+    'background' => null,
+    'content' => <<<'HTML'
 <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
 <x-card.cardrule height="0" >
 <x-card.normalrule>TODO</x-card.normalrule>

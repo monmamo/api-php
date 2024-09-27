@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Blade;
 
-// no @props here, they're defined in \App\View\Components\Card 
+// no @props here, they're defined in \App\View\Components\Card
 
 $rules_dy = 0;
 ?>
@@ -54,7 +54,7 @@ $text_x =  config('card-design.titlebox.text_x')(false) ;
 <?php
 $credit_y =  config('card-design.trimbox.y')+config('card-design.trimbox.height')-5;
 ?>
-        
+
 <g class="credit" fill="{{$creditColor()}}">
     <text x="<?= config('card-design.viewbox.x') ?>" y="<?= $credit_y ?>" text-anchor="start" alignment-baseline="top">&#169; Monsters Masters &amp; Mobsters LLC</text>
     <text x="70%" y="<?= $credit_y ?>"  text-anchor="middle" alignment-baseline="top"><?php echo \date('Y-m-d'); ?></text>
@@ -63,11 +63,8 @@ $credit_y =  config('card-design.trimbox.y')+config('card-design.trimbox.height'
 
 <g class="debug">
     <x-card.rect slug="trimbox"  fill-opacity="0" stroke-width=3 stroke="#FF0000" rx="25" />
-
     <x-card.rect slug="viewbox"  fill-opacity="0" stroke-width=3 stroke="#2BA6DE" stroke-dasharray="1.44" rx="5" />
-
     <x-card.rect slug="hero"  fill-opacity="0" stroke-width=1 stroke="#2BA6DE" stroke-dasharray="1.44" />
-
     <line x1="25%" y1="0" x2="25%" y2="100%" class="info secondary" />
     <line x1="50%" y1="0" x2="50%" y2="100%" class="info" />
     <line x1="75%" y1="0" x2="75%" y2="100%" class="info secondary" />

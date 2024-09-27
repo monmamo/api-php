@@ -2,12 +2,12 @@
 
 return [
     'name' => 'Basic Lure',
-'concepts' => ['Draw','Item','Lure'],
+    'concepts' => ['Draw', 'Item', 'Lure'],
     'image-prompt' => null,
 
-    'background' => view('Draw.background'),
+    'background' => \view('Draw.background'),
 
-'image-credit' => "Image by Lorc on Game-Icons.net under CC BY 3.0",
+    'image-credit' => 'Image by Lorc on Game-Icons.net under CC BY 3.0',
 
     // https://game-icons.net/1x1/lorc/gift-trap.html
 

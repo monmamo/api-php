@@ -2,12 +2,11 @@
 
 namespace App\Console\Commands;
 
+use App\CardNumber;
 use App\CardSpec;
 use App\Concept;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Console\PromptsForMissingInput;
-use Illuminate\Support\Facades\Storage;
-use League\Flysystem\StorageAttributes;
 
 class MakeCard extends Command implements PromptsForMissingInput
 {
@@ -23,7 +22,14 @@ class MakeCard extends Command implements PromptsForMissingInput
      *
      * @var string
      */
-    protected $signature = 'card:make {card-number} {name} {--C|nocontent} {--c|concepts=*} {--j|json}';
+    protected $signature = 'card:make {card-number} {names*}
+    {--C|nocontent}
+    {--c|concepts=*}
+    {--I|noimagecredit}
+    {--F|noflavor}
+    {--S|nosecondary}
+    {--P|noprimary}
+    {--j|json : Take JSON input.}';
 
     /**
      * @group unary
@@ -68,10 +74,7 @@ class MakeCard extends Command implements PromptsForMissingInput
      */
     public function handle(): void
     {
-        $filesystem = Storage::disk('cards');
-
-        $card_number = $this->argument('card-number');
-        $card_name = $this->argument('name');
+        $card_number = CardNumber::make($this->argument('card-number'));
 
         $concepts = $this->option('concepts');
 
@@ -80,7 +83,7 @@ class MakeCard extends Command implements PromptsForMissingInput
 
             do {
                 $input = \Laravel\Prompts\suggest(
-                    'Concept',
+                    'Additional Concept',
                     fn ($value) => $all_concepts->filter(
                         fn ($name) => \str_starts_with(\strtolower($name), \strtolower($value)),
                     ),
@@ -92,45 +95,28 @@ class MakeCard extends Command implements PromptsForMissingInput
             } while (!empty($input));
         }
 
-        $card_number_pieces = \explode('-', $card_number);
-        $set = $card_number_pieces[0];
+        foreach ($this->argument('names') as $card_name) {
+            $this->info("Creating card {$card_number} {$card_name}.");
 
-        if (\count($card_number_pieces) === 1) {
-            // find the next available number in the set
-
-            $existing_files = $filesystem->listContents($set)
-                ->filter(function (StorageAttributes $attributes) {
-                    return $attributes->isFile();
-                })
-                ->map(function (StorageAttributes $attributes) use ($set): int {
-                    if (\preg_match("/{$set}\\/{$set}-(\\d+)\\.php/", $attributes->path(), $matches) === 1) {
-                        return (int) $matches[1];
-                    }
-                    return 0;
-                })
-                ->toArray();
-
-            $existing_files[] = 0; //ensure there is at least one element in the array
-
-            $card_number = $set . '-' . \str_pad(\max($existing_files) + 1, 2, '0', \STR_PAD_LEFT);
-        }
-
-        $spec = $this->option('nocontent') ? new CardSpec(
-            card_name: $card_name,
-            card_number: $card_number,
-            concepts: $concepts,
-            no_content: true,
-        )
-            : new CardSpec(
+            $spec = $this->option('nocontent') ? new CardSpec(
                 card_name: $card_name,
                 card_number: $card_number,
                 concepts: $concepts,
-                image_credit: \Laravel\Prompts\text('Image credit'),
-                flavor_text: \iterator_to_array(self::_askMultiline('Flavor text')),
-                secondary_lines: \iterator_to_array(self::_askMultiline('Secondary text')),
-                primary_lines: $primary_lines = \iterator_to_array(self::_askMultiline('Primary text')),
-            );
+                no_content: true,
+            )
+                : new CardSpec(
+                    card_name: $card_name,
+                    card_number: $card_number,
+                    concepts: $concepts,
+                    image_credit: $this->option('noimagecredit') ? null : \Laravel\Prompts\text('Image credit'),
+                    flavor_text: $this->option('noflavor') ? [] : \iterator_to_array(self::_askMultiline('Flavor text')),
+                    secondary_lines: \iterator_to_array(self::_askMultiline('Secondary text')),
+                    primary_lines: $primary_lines = \iterator_to_array(self::_askMultiline('Primary text')),
+                );
 
-        $this->generateOne($spec);
+            $this->generateOne($spec);
+
+            $card_number = $card_number->makeNext();
+        }
     }
 }

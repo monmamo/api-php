@@ -2,14 +2,19 @@
 
 namespace App\View\Components;
 
+use App\CardAttributes\ImageCredit;
+use App\CardNumber;
 use App\Concept;
+use App\Contracts\Card\CardComponents;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
-class Card extends Component
+class Card extends Component implements CardComponents
 {
     private array $flavorTextLines;
+
+    protected readonly CardNumber $card_number_parsed;
 
     public function __construct(
         public string $cardNumber,
@@ -41,9 +46,15 @@ class Card extends Component
     /**
      * @group nonary
      */
-    public function background(): \Traversable
+    private function _backgroundPieces(): \Traversable
     {
-        $background = $this->spec['background'] ?? null;
+        $background = match (true) {
+            isset($this->spec['background']) => $this->spec['background'],
+            \count($this->concepts) === 0 => '<x-card.background />',
+            \Illuminate\Support\Facades\View::exists($this->concepts[0][0] . '.background') => $this->concepts[0][0] . '.background',
+            default => '<x-card.background />'
+        };
+
         yield match (true) {
             $background instanceof View => $background,
             \is_string($background) => Blade::render($background, []),
@@ -65,6 +76,35 @@ class Card extends Component
                 $this->spec['image-credit'],
             );
         }
+    }
+
+    /**
+     * @group nonary
+     */
+    public function background(): ?string
+    {
+        $html = '';
+
+        foreach ($this->_backgroundPieces() as $piece) {
+            $html .= $piece;
+        }
+        return $html;
+    }
+
+    /**
+     * @group nonary
+     */
+    public function cardNumber(): string
+    {
+        return $this->cardNumber;
+    }
+
+    /**
+     * @group nonary
+     */
+    public function concepts(): array
+    {
+        return $this->concepts;
     }
 
     /**
@@ -105,7 +145,7 @@ class Card extends Component
         \assert(\is_array($this->concepts));
 
         // Concept icons.
-        $staticon_x ??= \config('card-design.viewbox.width')/2 - 32 * \count($this->concepts);
+        $staticon_x ??= \config('card-design.viewbox.width') / 2 - 32 * \count($this->concepts);
 
         foreach ($this->concepts as $index => $spec) {
             [$type, $value] = $spec;
@@ -145,7 +185,15 @@ class Card extends Component
     /**
      * @group nonary
      */
-    public function flavorText(): string
+    public function flavorText(): \Traversable
+    {
+        return \App\Strings\explode_lines($this->spec['flavor-text'] ?? null);
+    }
+
+    /**
+     * @group nonary
+     */
+    public function flavorTextHtml(): string
     {
         if (isset($this->spec['flavor-text'])) {
             $lines = \array_map(
@@ -154,7 +202,7 @@ class Card extends Component
                     ['x' => '50%', 'dy' => '25', 'class' => 'flavor', 'text-anchor' => 'middle', 'alignment-baseline' => 'hanging',  'fill' => $this->spec['flavor-text-color'] ?? 'white'],
                     $line,
                 ),
-                $this->flavorTextLines(),
+                \iterator_to_array($this->flavorText()),
             );
 
             return \App\Strings\html(
@@ -168,11 +216,34 @@ class Card extends Component
     }
 
     /**
+     * @implements \App\Contracts\HasName
+     */
+    public function imageCredit(): ?string
+    {
+        $reflection = new \ReflectionClass($this);
+        $attributes = $reflection->getAttributes(ImageCredit::class);
+
+        foreach ($attributes as $attribute) {
+            return 'Image by ' . $attribute->getArguments()[0];
+        }
+
+        return null;
+    }
+
+    /**
      * @group nonary
      */
-    public function flavorTextLines(): array
+    public function imagePrompt(): ?string
     {
-        return $this->flavorTextLines ??= [...\App\Strings\explode_lines($this->spec['flavor-text'] ?? null)];
+        return $this->spec['image-prompt'] ?? null;
+    }
+
+    /**
+     * @group nonary
+     */
+    public function name(): string
+    {
+        return $this->cardName;
     }
 
     /**
@@ -188,5 +259,14 @@ class Card extends Component
             throw new \Exception('cardNumber must be set before rendering');
         }
         return \view('components.card.index');
+    }
+
+    /**
+     * @group nonary
+     */
+    public function set(): string
+    {
+        $this->card_number_parsed ??= CardNumber::make($this->cardNumber);
+        return $this->card_number_parsed->set;
     }
 }

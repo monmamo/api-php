@@ -1,16 +1,17 @@
 <?php
+
 return [
-'name' => "Fragrance",
+    'name' => 'Fragrance',
 
-'concepts' => ["Trait"],
+    'concepts' => ['Trait'],
 
-'image-prompt' => null,
+    'image-prompt' => null,
 
-'image-credit' => "Image by USER_NAME on SERVICE",
+    'image-credit' => 'Image by USER_NAME on SERVICE',
 
-'flavor-text' => [],
-'background' => null,
-'content' => <<<HTML
+    'flavor-text' => [],
+    'background' => null,
+    'content' => <<<'HTML'
 <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
 <x-card.cardrule height="330" >
 <x-card.normalrule>Fragrance Strength: 1d6</x-card.normalrule>

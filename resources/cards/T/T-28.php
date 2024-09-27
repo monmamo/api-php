@@ -1,14 +1,15 @@
 <?php
+
 return [
-'name' => "Night Vision",
+    'name' => 'Night Vision',
 
-'concepts' => ["Trait"],
+    'concepts' => ['Trait'],
 
-'image-prompt' => "https://game-icons.net/1x1/delapouite/night-vision.html",
+    'image-prompt' => 'https://game-icons.net/1x1/delapouite/night-vision.html',
 
-'image-credit' => "Image by USER_NAME on SERVICE",
+    'image-credit' => 'Image by USER_NAME on SERVICE',
 
-'background' => null,
-'content' => <<<HTML
+    'background' => null,
+    'content' => <<<'HTML'
 HTML
 ];

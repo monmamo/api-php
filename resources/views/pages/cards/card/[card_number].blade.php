@@ -1,68 +1,27 @@
 <?php
 use Illuminate\Support\Facades\Blade;
 
-$card_number_pieces =  explode('-', $card_number);
-$set = $card_number_pieces[0];
-
-$filepath = resource_path("cards/$set/$card_number.php");
-assert(!empty($filepath));
-assert(file_exists($filepath));
-
-$spec = require $filepath;
-
-$previous = match(true) {
-  is_numeric(last( $card_number_pieces)) => transform(
-    $card_number_pieces ,
-    function(array $pieces){
-      $pieces[count($pieces)-1] -= 1;
-      return implode('-',$pieces);
-    }
-  ),
-  default => null
-};
-
-$next = match(true) {
-  is_numeric(last( $card_number_pieces)) => transform(
-    $card_number_pieces ,
-    function(array $pieces){
-      $pieces[count($pieces)-1] += 1;
-      return implode('-',$pieces);
-    }
-  ),
-  default => null
-};
-
- 
 if (!\Illuminate\Support\Facades\View::exists("$card_number")) {
     abort(404);
     exit;
 }
 
-// $view = view(
-//   "$card_number",
-//   [
-//     'dx' => 0,
-//     'dy' => 0,
-//     'cardNumber' => $card_number,
-//   ]
-// );
+$card_number_object =  \App\CardNumber::make($card_number);
+$spec = require $card_number_object->getSpecFilePath();
 
+$previous = $card_number_object->makePrevious();
+$next = $card_number_object->makeNext();
 
 
 // if (isset($_REQUEST['png'] )) {
 //      \header('Content-Type: image/png');
 //      \header('Content-Disposition: attachment; filename="'.$card_number.'.png"');
-//         echo   \Spatie\Browsershot\Browsershot::html($view)->screenshot();        
+//         echo   \Spatie\Browsershot\Browsershot::html($view)->screenshot();
 //     return;
 // }
 
-
-// if (isset($_REQUEST['download'] )) 
+// if (isset($_REQUEST['download'] ))
 // \header('Content-Disposition: attachment; filename="'.$card_number.'.svg"');
-
-
-
-
 
 ?>
 <html>
@@ -125,14 +84,14 @@ const convertSVGtoImg = async e => {
   const svgData = encodeAsUTF8(serializeAsXML($svg))
 
   const img = await loadImage(svgData)
-  
+
   const $canvas = document.createElement('canvas')
   $canvas.width = $svg.clientWidth
   $canvas.height = $svg.clientHeight
   $canvas.getContext('2d').drawImage(img, 0, 0, $svg.clientWidth, $svg.clientHeight)
-  
+
   const dataURL = await $canvas.toDataURL(`image/${format}`, 1.0)
-  
+
   const $img = new Image($svg.clientWidth, $svg.clientHeight);
   $img.src = dataURL;
   $holder.appendChild($img);

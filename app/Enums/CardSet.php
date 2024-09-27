@@ -2,8 +2,8 @@
 
 namespace App\Enums;
 
-use App\Card;
 use App\CardSetAttributes\CardSeries;
+use App\CardSpec;
 use App\GeneralAttributes\Title;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
@@ -75,12 +75,21 @@ enum CardSet: string
     /**
      * @group nonary
      */
-    public function cards(): Collection
+    public function cardNumbers(): Collection
     {
         $files = new Collection(Storage::disk('cards')->files($this->value));
+        $pattern = \sprintf('/^%s\/(%s-[A-Z0-9-]+)\.php$/U', $this->value, $this->value);
 
-        return $files->filter(fn (string $filename): bool => \preg_match('/_(.*)\.blade\.php$/U', $filename))
-            ->map(fn (string $filename): string => \preg_replace('/_(.*)\.blade\.php$/U', '$1', $filename))
-            ->map(fn (string $filename) => new Card($this, $filename));
+        return $files->filter(fn (string $filename): bool => \preg_match($pattern, $filename))
+            ->map(fn (string $filename): string => \preg_replace($pattern, '$1', $filename));
+    }
+
+    /**
+     * @group nonary
+     */
+    public function cards(): Collection
+    {
+        return $this->cardNumbers()
+            ->map(fn (string $filename) => new CardSpec($this, $filename));
     }
 }

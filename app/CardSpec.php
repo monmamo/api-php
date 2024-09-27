@@ -2,35 +2,12 @@
 
 namespace App;
 
-use App\CardAttributes\ImageCredit;
-use App\Concerns\Properties\Name;
+use App\Contracts\Card\CardComponents;
+use Illuminate\Support\Facades\Storage;
 
-class CardSpec implements \IteratorAggregate, \App\Contracts\Card\CardComponents
+class CardSpec implements \IteratorAggregate, CardComponents
 {
-/**
-     * @implements \App\Contracts\HasName
-     */
-    public function name(): string
-    {
-        return $this->card_name;
-    }
-
-private string $_set;
-
-    public function cardNumber(): string { return $this->card_number; }
-    public function set(): string {
-        $card_number_pieces = \explode('-', $this->card_number);
-        return $this->_set ??= $card_number_pieces[0];
-    }
-
-
-    public function concepts(): array { return $this->concepts; }
-    public function imagePrompt(): ?string { return $this->image_prompt; }
-    public function imageCredit(): ?string { return $this->image_credit; }
-    public function background(): ?string { return $this->background; }
-
-
-    private object $card_type_facade;
+    protected readonly CardNumber $card_number_parsed;
 
     public function __construct(
         protected readonly string $card_number,
@@ -42,17 +19,48 @@ private string $_set;
         protected readonly bool $no_content = false,
         protected readonly array $secondary_lines = [],
         protected readonly array $primary_lines = [],
-        protected  ?string $background = null,
-    ) {
-$this->background ??= "view('{$this->concepts[0]}.background')";
+        protected ?string $background = null,
+    ) {}
+
+    /**
+     * @group nonary
+     */
+    public function background(): ?string
+    {
+        return $this->background;
     }
 
-/**
- * @group nonary
- * @implements \IteratorAggregate::getIterator
- */
-    public function getIterator(): \Traversable    {
-        $format_value = fn($key, $value) => \sprintf("'%s' => %s,", $key, \json_encode($value));
+    /**
+     * @group nonary
+     */
+    public function cardNumber(): string
+    {
+        return $this->card_number;
+    }
+
+    /**
+     * @group nonary
+     */
+    public function concepts(): array
+    {
+        return $this->concepts;
+    }
+
+    /**
+     * @group nonary
+     */
+    public function flavorText(): \Traversable
+    {
+        return new \ArrayIterator($this->flavor_text);
+    }
+
+    /**
+     * @implements \IteratorAggregate::getIterator
+     * @group nonary
+     */
+    public function getIterator(): \Traversable
+    {
+        $format_value = fn ($key, $value) => \sprintf("'%s' => %s,", $key, \json_encode($value));
 
         yield '<?php';
         yield 'return [';
@@ -68,7 +76,7 @@ $this->background ??= "view('{$this->concepts[0]}.background')";
         if (!$this->no_content) {
             yield $format_value('flavor-text', $this->flavor_text);
         }
-        yield "'background' => $this->background,";
+        yield $format_value('background', $this->background);
 
         yield "'content' => <<<HTML";
 
@@ -87,8 +95,9 @@ $this->background ??= "view('{$this->concepts[0]}.background')";
                 yield "<x-card.normalrule>{$line}</x-card.normalrule>";
             }
 
-            if ($height === 0)
-                yield "<x-card.normalrule>TODO</x-card.normalrule>";
+            if ($height === 0) {
+                yield '<x-card.normalrule>TODO</x-card.normalrule>';
+            }
 
             yield '</x-card.cardrule>';
         }
@@ -96,6 +105,29 @@ $this->background ??= "view('{$this->concepts[0]}.background')";
         yield '];';
     }
 
+    /**
+     * @group nonary
+     */
+    public function imageCredit(): ?string
+    {
+        return $this->image_credit;
+    }
+
+    /**
+     * @group nonary
+     */
+    public function imagePrompt(): ?string
+    {
+        return $this->image_prompt;
+    }
+
+    /**
+     * @implements \App\Contracts\HasName
+     */
+    public function name(): string
+    {
+        return $this->card_name;
+    }
 
     public function put(): void
     {
@@ -103,31 +135,15 @@ $this->background ??= "view('{$this->concepts[0]}.background')";
         $card_number = $this->cardNumber();
         $card_name = $this->name();
 
-        \Illuminate\Support\Facades\Storage::disk('cards')->put("{$set}/{$card_number}.php", \implode("\n", \iterator_to_array($this)));
-
-
+        Storage::disk('cards')->put("{$set}/{$card_number}.php", \implode("\n", \iterator_to_array($this)));
     }
 
     /**
      * @group nonary
      */
-    public function cardType(): object
+    public function set(): string
     {
-        return $this->card_type_facade ??= \value(function () {
-            $reflection = new \ReflectionClass($this);
-            $attributes = $reflection->getAttributes(CardType::class);
-            $attribute = $attributes[0] ?? throw new \LogicException();
-            return $attribute->newInstance();
-        });
+        $this->card_number_parsed ??= CardNumber::make($this->card_number);
+        return $this->card_number_parsed->set;
     }
-
-    /**
-     * @group nonary
-     */
-    public function flavorText(): \Traversable
-    {
-        return new \ArrayIterator($this->flavor_text);
-    }
-
-
 }

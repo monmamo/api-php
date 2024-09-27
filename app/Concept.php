@@ -53,12 +53,12 @@ class Concept implements HasIcon
         return new \ArrayIterator(\file($this->_file("{$name}.txt")));
     }
 
+    /**
+     * @group nonary
+     */
     public static function all(): \Traversable
     {
         return \collect(Storage::disk('concepts')->directories())->sort();
-        // $files = $files->filter(fn (string $filename): bool => \preg_match('/_(.*)\.blade\.php$/U', $filename))
-        //     ->map(fn (string $filename): string => \preg_replace('/_(.*)\.blade\.php$/U', '$1', $filename))
-        //     ->map(fn (string $filename) => new Card($this, $filename));
     }
 
     /**
