@@ -8,7 +8,7 @@
 <x-card :$cardNumber card-name="Cruel Order">
     <image x="0" y="0" class="hero" href="@local(A066.jpeg)" />
     
-        <x-card.concept.staticon type="Catastrophe" x="530" />
+        'concepts' => ['Catastrophe'],
         <text>
 <x-card.normalrule>Discard the highest-level Monster</x-card.normalrule>
 <x-card.normalrule>of each opponent</x-card.normalrule>

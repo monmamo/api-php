@@ -10,7 +10,7 @@
 
     <image x="0" y="0" class="hero" href="@local(hero/fieldworker.jpg)"  />
     
-        <x-card.concept.staticon type="Bystander" x="530" />
+        'concepts' => ['Bystander'],
         <x-card.concept.row>
         <x-card.concept.card type="Male" x="0" width="190" />
         <x-card.concept.card type="Cumulative" x="190" width="190" />

@@ -4,9 +4,9 @@
 'image-credit' => "ShutterStock #2389392699 by AnhSilhouetteArt",
 
 
-<x-card.flavortext>
-    <x-card.flavortext.line>It's a female monster.</x-card.flavortext.line>
-</x-card.flavortext>
+'flavor-text' => [
+    'It's a female monster.'
+],
 
 @endpush
 
@@ -14,7 +14,7 @@
     
     <image x="0" y="0" class="hero" href="@local(A139.jpg)" />
 
-    <x-card.concept.staticon type="Draw" dx="1" />
+    'concepts' => ['Draw'],
     
 <x-card.phaserule type="Draw" lines="4"><text>    
 <x-card.normalrule>Each player adds up the remaining</x-card.normalrule>

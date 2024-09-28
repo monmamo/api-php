@@ -37,14 +37,13 @@ $next = $card_number_object->makeNext();
   <button id="btn-jpg" data-format="jpeg">JPG</button>
   <button id="btn-webp" data-format="webp">WEBP</button>
 
-  <a href="<?=  "vscode://file/".urlencode($filepath) ?>">Edit</a>
+  <a href="<?=  "vscode://file/".urlencode($card_number_object->getSpecFilePath()) ?>">Edit</a>
 
   @isset($next)
   <a id="btn-next" href="/cards/card/{{$next}}">{{$next}}</a>
     @endisset
 </div>
-  <div id="svg-container" hx-get="#"  hx-trigger="dblclick"
-  hx-target="#svg-container">
+  <div id="svg-container" hx-get="#"  hx-trigger="dblclick" hx-target="#svg-container">
   <x-card :cardNumber="$card_number" :$spec />
 </div>
   <div id="img-container"></div>

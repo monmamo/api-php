@@ -2,22 +2,18 @@
 
 return [
     'name' => 'Bagman',
-
+    'concepts' => ['Vendor', 'Integrity:3'],
+    'ai' => true,
     'image-prompt' => 'dark man in a mask wearing a trenchcoat carrying a large tote bag',
+    'flavor-text' => [
+        'Just collecting the dues.'
+    ],
 
     'background' => <<<'HTML'
 <image x="0" y="0" href="@local(A-008-full.png)" />
-'image-credit' => "@ai",
-
-
-<x-card.flavortext>
-    <x-card.flavortext.line>Just collecting the dues.</x-card.flavortext.line>
-</x-card.flavortext>
 HTML,
 
     'content' => <<<'HTML'
-        <x-card.concept.staticon type="Vendor" dx="2"/> />
-        <x-card.concept.staticon type="Integrity" value="1d4" />
 
             <text y="500" filter="url(#solid)">
                 <x-card.normalrule>You may play this card only if you have a</x-card.normalrule>

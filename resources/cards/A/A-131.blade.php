@@ -3,7 +3,7 @@
 @endpush
 
 <x-card :$cardNumber :$dx :$dy card-name="Insurance Policy" >
-<x-card.concept.staticon type="Vendor"  />
+'concepts' => ['Vendor'],
 
     
     <text y="500" filter="url(#solid)">

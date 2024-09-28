@@ -6,7 +6,7 @@
 <x-card :$cardNumber card-name="Grab Bag">
   <image x="0" y="0" class="hero" href="@local(A108.jpg)" />
 
-  <x-card.concept.staticon type="Draw" x="530" y="370" />
+  'concepts' => ['Draw'],
   
   <x-card.phaserule type="Draw"  height="160"><text >   
   <x-card.normalrule>Reveal the top 7 cards of your Library.</x-card.normalrule>

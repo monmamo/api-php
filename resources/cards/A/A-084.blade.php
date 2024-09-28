@@ -7,7 +7,7 @@
 
     <g class="svg-hero"><?= view('Energos.icon') ?></g>
     
-        <x-card.concept.staticon type="Attack" x="530" />
+        'concepts' => ['Attack'],
         <text y="500" filter="url(#solid)">
             <x-card.smallrule>Requires Energos.</x-card.smallrule>
 <x-card.normalrule>Discard all Electricity cards from the attacking </x-card.normalrule>

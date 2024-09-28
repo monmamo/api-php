@@ -2,19 +2,18 @@
 
 return [
     'name' => 'Baker\'s Dozen',
+    'concepts' => ['Draw'],
 
     'image-prompt' => null,
 
-    'background' => <<<'HTML'
-{{ view('Draw.background') }}
-HTML,
+    'background' =>  view('Draw.background'),
 
     'content' => <<<'HTML'
 <text y="500" filter="url(#solid)">
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text>
 
-        <x-card.concept.staticon type="Draw" />
+        
         <x-card.phaserule type="Draw" lines="4"><text>
             <x-card.normalrule>Look at the top 13 cards of your</x-card.normalrule>
             <x-card.normalrule>Library. You may put 3 of them into</x-card.normalrule>

@@ -9,7 +9,7 @@ Image by Lorc on Game-Icons.net under CC BY 3.0
 
     <g class="svg-hero"><?= view('Energos.icon') ?></g>
 
-    <x-card.concept.staticon type="Trait" x="530" />
+    'concepts' => ['Trait'],
 
     <x-slot:small>Requires Energos.</x-slot:small>
 <text>

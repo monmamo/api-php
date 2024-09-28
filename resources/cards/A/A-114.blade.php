@@ -9,9 +9,9 @@
 <x-card :$cardNumber card-name="Personal Assistant">
     
     <image x="0" y="0" class="hero" href="@local(hero/personal-assistant.jpg)" />
-    <x-card.concept.staticon type="Bystander" x="{{610-64*3}}" />
-    <x-card.concept.staticon type="Cumulative"   />
-        <x-card.concept.staticon type="Integrity"  value="1d6" />
+    'concepts' => ['Bystander'],
+    'concepts' => ['Cumulative'],
+        'concepts' => ['Integrity'],
 
         <text y="500" filter="url(#solid)">
             <x-card.smallrule>A player may have any number of Personal Assistants</x-card.smallrule>

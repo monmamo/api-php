@@ -8,7 +8,7 @@
     <image x="0" y="0" class="hero" href="@local(hero/AdobeStock_2910609.jpeg)" />
 
 
-    <x-card.concept.staticon type="Trait" x="530" /> 
+    'concepts' => ['Trait'], 
     <text y="70" filter="url(#solid)">
     <x-card.normalrule>Size +1.</x-card.normalrule>
     </text>

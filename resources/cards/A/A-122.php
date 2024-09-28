@@ -11,7 +11,7 @@ return [
     'flavor-text' => [],
     'background' => \view('Bystander.background'),
     'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(A189.png)"  />
+<image x="0" y="0" class="hero" href="@local(A189.jpg)"  />
 
 
 <text y="575" filter="url(#solid)">

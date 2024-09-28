@@ -1,8 +1,8 @@
 @push('background')
 {{ view('Bane.background') }}
-<x-card.flavortext>
-  <x-card.flavortext.line>They say that bad breath is better than no breath at all…</x-card.flavortext.line>
-  </x-card.flavortext>
+'flavor-text' => [
+  'They say that bad breath is better than no breath at all…'
+  ],
   <x-card.image-credit>@ai</x-card.image-credit>
   @endpush
 
@@ -10,7 +10,7 @@
   <image x="0" y="0" class="hero" href="@local(A110.jpg)" />
 
   
-<x-card.concept.staticon type="Bane" x="530" />
+'concepts' => ['Bane'],
 
 <text y="500" filter="url(#solid)">
   <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>

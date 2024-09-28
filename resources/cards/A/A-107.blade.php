@@ -4,7 +4,7 @@
 
 <x-card :$cardNumber card-name="Product Recall">
 
-    <x-card.concept.staticon type="Draw" x="530" y="370" />
+    'concepts' => ['Draw'],
 
     <x-card.phaserule type="Draw" height="260">
         <text>

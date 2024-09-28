@@ -9,9 +9,9 @@
 
   <image x="0" y="0" class="hero" href="@local(A188.png)" />
   
-    <x-card.concept.staticon type="Bystander" :dx="3" />
-    <x-card.concept.staticon type="Female"  />
-    <x-card.concept.staticon type="Integrity" value="1d6" />
+    'concepts' => ['Bystander'],
+    'concepts' => ['Female'],
+    'concepts' => ['Integrity'],
     
     <text y="460" filter="url(#solid)">
       <x-card.smallrule>{{ trans_choice('rules.player-limit',1) }}</x-card.smallrule>

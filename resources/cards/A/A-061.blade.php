@@ -8,6 +8,6 @@
 <x-card :$cardNumber card-name="Dire Form">
 
   <image x="100" y="0"  href="@local(hero/dire-form.png)" />
-    <x-card.concept.staticon type="Trait" x="530" /> 
+    'concepts' => ['Trait'], 
     <text><x-card.normalrule>Size +5. Speed +3.</x-card.normalrule></text>
 </x-card>

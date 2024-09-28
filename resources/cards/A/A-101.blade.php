@@ -6,7 +6,7 @@
     <g class="svg-hero"><?= view('Pyros.icon') ?></g>
 
     
-    <x-card.concept.staticon type="Draw" x="530" /> 
+    'concepts' => ['Draw'], 
 
     <text y="80" filter="url(#solid)">
 <x-card.normalrule>Transfer a Fire Mana card from your Discard</x-card.normalrule>

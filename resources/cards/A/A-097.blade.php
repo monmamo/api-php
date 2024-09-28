@@ -6,7 +6,7 @@
 
 <x-card :$cardNumber card-name="Focus">
     
-<x-card.concept.staticon type="Trait" x="530" /> 
+'concepts' => ['Trait'], 
 
 <x-card.phaserule type="Resolution" y="135" height="135">
     <text >

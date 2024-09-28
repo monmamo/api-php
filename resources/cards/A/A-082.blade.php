@@ -7,7 +7,7 @@
 
   <image x="0" y="0" class="hero" href="@local(A082.png)" />
   
-    <x-card.concept.staticon type="Vendor" x="530" />
+    'concepts' => ['Vendor'],
     <x-card.concept.row>
   <x-card.concept.card type="Integrity">1d4</x-card.concept.card>
     </x-card.concept.row>

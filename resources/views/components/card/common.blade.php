@@ -119,11 +119,11 @@ $debug_opacity = match(true) {
     }
 
     g.concept-icon {
-        transform: translate(2px,2px) scale(<?= 54/512 ?>);
+        transform: translate(3px,3px) scale(<?= 64/512 ?>);
     }
 
     g.concept-icon-badge {
-        transform: translate(29px,29px) scale(<?= 27/512 ?>);
+        transform: translate(35px,35px) scale(<?= 32/512 ?>);
     }
 
     text.concept-type {

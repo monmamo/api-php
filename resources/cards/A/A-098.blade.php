@@ -5,7 +5,7 @@
 <x-card card-type="Environment" :$cardNumber card-name="From Bad to Worse" >
 
     
-        <x-card.concept.staticon type="Environment" x="530" /> 
+        'concepts' => ['Environment'], 
         <text y="80" filter="url(#solid)">  
 
 <x-card.normalrule>Discard this card once there are no longer</x-card.normalrule>

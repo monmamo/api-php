@@ -6,7 +6,7 @@
 @endpush
 
 <x-card :$cardNumber card-name="Herbal Scent">
-<x-card.concept.staticon type="Trait" x="530" /> 
+'concepts' => ['Trait'], 
     <image x="0" y="0" class="hero" href="@local(TODO.png)"  />
     
     <x-slot:small>

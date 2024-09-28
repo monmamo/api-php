@@ -7,7 +7,7 @@
 <x-card :$cardNumber card-name="Scram" >
     <image x="0" y="0" class="hero" href="@local(hero/well-bye.jpg)" />
 
-<x-card.concept.staticon type="Skill" x="530" />
+'concepts' => ['Skill'],
 
 
 

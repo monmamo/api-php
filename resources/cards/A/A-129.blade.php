@@ -1,13 +1,13 @@
 @push('background')
 {{ view('Draw.background') }}
-<x-card.flavortext>
-  <x-card.flavortext.line>Also called "airport security."</x-card.flavortext.line>
-  </x-card.flavortext>
+'flavor-text' => [
+  'Also called "airport security."'
+  ],
   @endpush
 
 <x-card :$cardNumber :$dx :$dy card-name="Inappropriate Traffic Stop">
 
-<x-card.concept.staticon type="Draw" />
+'concepts' => ['Draw'],
 <x-card.phaserule type="Draw" lines="4"><text>    
 <x-card.normalrule>Look at the top 5 cards of any Library.</x-card.normalrule>
 <x-card.normalrule>Discard any number of Item cards you find</x-card.normalrule>

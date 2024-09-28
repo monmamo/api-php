@@ -8,7 +8,7 @@
     </text>
 
 
-<x-card.concept.staticon type="Draw" x="530" />
+'concepts' => ['Draw'],
 <text>
 <x-card.normalrule>Shuffle your hand into your Library.</x-card.normalrule>
 <x-card.normalrule>Then draw 3 cards.</x-card.normalrule>

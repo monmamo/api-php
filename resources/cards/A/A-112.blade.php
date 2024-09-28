@@ -2,8 +2,8 @@
 {{ view('Mobster.background') }}
 <x-card.image-credit>Icon by Kholifah from Noun Project</x-card.image-credit>
 <x-card.flavortext y="570">
-<x-card.flavortext.line>Hacking is getting other people to do strange things. - S. Wozniak</x-card.flavortext.line>
-</x-card.flavortext>
+'Hacking is getting other people to do strange things. - S. Wozniak'
+],
 @endpush
 
 <x-card :$cardNumber card-name="Hacker">
@@ -13,7 +13,7 @@
     </g>
 
 
-        <x-card.concept.staticon type="Mobster" x="530" /> 
+        'concepts' => ['Mobster'], 
 
         <x-card.phaserule type="Upkeep" height="240">
             <text >

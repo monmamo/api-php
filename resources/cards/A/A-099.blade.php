@@ -6,7 +6,7 @@
 
 <x-card  :$cardNumber card-name="99 Red Balloons" >
     
-        <x-card.concept.staticon type="Environment" x="530" /> 
+        'concepts' => ['Environment'], 
         <x-card.phaserule type="Resolution" y="135" height="135">
             <text >
         <x-card.normalrule>For each Defense, roll 1d6. </x-card.normalrule>

@@ -4,8 +4,8 @@
 
 <x-card :$cardNumber :$dx :$dy card-name="Mascot">
         
-        <x-card.concept.staticon type="Bystander" dx="2" />
-        <x-card.concept.staticon type="Integrity" value="1d4" />
+        'concepts' => ['Bystander'],
+        'concepts' => ['Integrity'],
         
         <text y="500" filter="url(#solid)">
             <x-card.smallrule>{{ trans_choice('rules.player-limit',1) }}</x-card.smallrule>

@@ -7,12 +7,12 @@
 <x-card :$cardNumber :$dx :$dy card-name="Hypnotic Drone">
     <image x="0" y="0" class="hero" href="@local(hero/hypnotic-drone.jpeg)" />
 
-    <x-card.concept.staticon type="Drone" :dx="6" />
-    <x-card.concept.staticon type="Item" />
-    <x-card.concept.staticon type="DamageCapacity" value="20" />
-    <x-card.concept.staticon type="Level" value="7" />
-    <x-card.concept.staticon type="Size" value="10" />
-    <x-card.concept.staticon type="Speed" value="10" />
+    'concepts' => ['Drone'],
+    'concepts' => ['Item'],
+    'concepts' => ['DamageCapacity'],
+    'concepts' => ['Level'],
+    'concepts' => ['Size'],
+    'concepts' => ['Speed'],
 
     <x-card.phaserule type="Resolution" lines="4"><text>
     <x-card.normalrule>If an opponent's Moster, Master,</x-card.normalrule>

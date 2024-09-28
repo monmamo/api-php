@@ -3,17 +3,17 @@
 <x-card.image-credit>
     @ai
 </x-card.image-credit>
-<x-card.flavortext>
-    <x-card.flavortext.line>The quick stop for everything you forgot</x-card.flavortext.line> 
-        <x-card.flavortext.line>at the Big-Box Store (A-014).</x-card.flavortext.line>
-</x-card.flavortext>
+'flavor-text' => [
+    'The quick stop for everything you forgot' 
+        'at the Big-Box Store (A-014).'
+],
 @endpush
 
 <x-card :$cardNumber card-name="Convenience Store">
     <image x="0" y="0" class="hero" href="@local(A040.png)" />
     
-        <x-card.concept.staticon type="Vendor" :dx="2" />
-        <x-card.concept.staticon type="Integrity" value="1d4" />
+        'concepts' => ['Vendor'],
+        'concepts' => ['Integrity'],
 
         <x-card.phaserule type="Draw" height="210" badge="Repeat">
             <text>

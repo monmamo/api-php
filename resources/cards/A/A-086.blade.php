@@ -5,7 +5,7 @@
 <x-card :$cardNumber card-name="Water Pulse">
     <g class="svg-hero"><?= view('Aquos.icon') ?></g>
 
-    <x-card.concept.staticon type="Trait" x="530" />
+    'concepts' => ['Trait'],
     <text y="500" filter="url(#solid)">
         <x-card.smallrule>Requires Aquos.</x-card.smallrule>
 <x-card.smallrule>Use when this Monster attacks or defends.</x-card.smallrule>

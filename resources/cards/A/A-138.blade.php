@@ -8,8 +8,8 @@
 <x-card :$cardNumber :$dx :$dy card-name="Mana Lottery">
     <image x="0" y="0" class="hero" href="@local(A146.jpg)" />
     
-        <x-card.concept.staticon type="Vendor"  dx="2"  />
-        <x-card.concept.staticon type="Integrity" value="1d4" />
+        'concepts' => ['Vendor'],
+        'concepts' => ['Integrity'],
 
 <x-card.phaserule type="Draw" lines="6"><text>    
 <x-card.normalrule>Discard 2+ cards from your hand.</x-card.normalrule>

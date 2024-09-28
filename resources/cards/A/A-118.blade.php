@@ -12,10 +12,10 @@
 
   
     
-    <x-card.concept.staticon type="Master" :dx="4" />
-    <x-card.concept.staticon type="Coach" />
-    <x-card.concept.staticon type="Male"  />
-    <x-card.concept.staticon type="Integrity" value="1d6+4" />
+    'concepts' => ['Master'],
+    'concepts' => ['Coach'],
+    'concepts' => ['Male'],
+    'concepts' => ['Integrity'],
     
 
     <text y="500" filter="url(#solid)">

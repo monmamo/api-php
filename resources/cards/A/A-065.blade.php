@@ -5,9 +5,9 @@
 </x-card.image-credit>
 @endpush
 
-<x-card.flavortext>
-<x-card.flavortext.line>Halitosis (A-110) is the least of your problems.</x-card.flavortext.line>
-</x-card.flavortext>
+'flavor-text' => [
+'Halitosis (A-110) is the least of your problems.'
+],
 
 @endpush
 
@@ -15,7 +15,7 @@
     <image x="0" y="0" class="hero" href="@local(hero/firebreath.jpeg)" />
 
 
-    <x-card.concept.staticon type="Trait" x="530" /> 
+    'concepts' => ['Trait'], 
     <x-slot:small>Requires Pyros.</x-slot:small>
 <text>    
 <x-card.normalrule>When this Monster attacks or defends</x-card.normalrule>

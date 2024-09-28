@@ -1,7 +1,7 @@
 @push('background')
 {{ view('Draw.background') }}
-<x-card.flavortext>
-</x-card.flavortext>
+'flavor-text' => [
+],
 <x-card.image-credit>
 Image by Delapouite on Game-Icons.net under CC BY 3.0
 </x-card.image-credit>

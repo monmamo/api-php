@@ -2,29 +2,29 @@
 <?php
     $dx = 0;
     $dy = 0;
-    $omitCommon = true;
 
 //TODO Chunk the cards into pages.
+
 //TODO Iterate over the pages.
 ?>
-
-<x-svg  :width="config('card-design.width')*3" :height="config('card-design.height')*3" >
+<html>
+    @foreach(array_chunk($cards, 9) as $chunk)
+<svg width="7.5in" height="10.5in" viewBox="0 0 2250 3150" xmlns="http://www.w3.org/2000/svg">
 
     <x-card.common />
 
     <?php
-    foreach($cards as $cardNumber)   {
-        echo view("$cardNumber",compact('cardNumber','dy','dx','omitCommon'));
-        $dx++;
-        if ($dx === 3) {
-            $dx = 0;
-            $dy++;
-        }
-        if ($dy === 3) {
-            //TODO insert page break
-            
-        }
+    foreach($chunk as $index => $cardNumber)   {
+        $card_number_object =  \App\CardNumber::make($cardNumber);
+$spec = require $card_number_object->getSpecFilePath();
+$dx = $index % 3;
+$dy = floor($index / 3);
+?>
+<x-card :$cardNumber :$spec :$dx :$dy :omit-common="true" />
+<?php
     }
 ?>
 
-</x-svg>
+</svg>
+@endforeach {{-- chunk --}}
+</html>

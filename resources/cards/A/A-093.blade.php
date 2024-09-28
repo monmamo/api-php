@@ -5,7 +5,7 @@
 <x-card :$cardNumber card-name="Flee">
     <image x="0" y="0" class="hero" href="@local(hero/well-bye.jpg)" />
     
-<x-card.concept.staticon type="Defense" x="530" />
+'concepts' => ['Defense'],
 
 <text y="80" filter="url(#solid)">   
     <x-card.normalrule>Discard this Monster</x-card.normalrule>

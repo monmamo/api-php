@@ -9,7 +9,7 @@
 
     <image x="0" y="0" class="hero" href="@local(hero/flamethrower.jpeg)" />
 
-    <x-card.concept.staticon type="Attack" x="530" />
+    'concepts' => ['Attack'],
     <text y="500" filter="url(#solid)">
         <x-card.smallrule>Requires Pyros and Level 40.</x-card.smallrule>
 <x-card.normalrule>Discard any number of Fire cards </x-card.normalrule>

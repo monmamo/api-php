@@ -1,15 +1,15 @@
 @push('background')
 {{ view('Bystander.background') }}
-<x-card.flavortext>
-    <x-card.flavortext.line>Touch is the best medicine.</x-card.flavortext.line>    
+'flavor-text' => [
+    'Touch is the best medicine.'    
 </x-card.flavor-text>
 @endpush
 
 <x-card :$cardNumber :$dx :$dy card-name="Masseuse">
     
-        <x-card.concept.staticon type="Bystander" :dx="3" />
-        <x-card.concept.staticon type="Female"  />
-        <x-card.concept.staticon type="Integrity" value="1d4" />
+        'concepts' => ['Bystander'],
+        'concepts' => ['Female'],
+        'concepts' => ['Integrity'],
 
         <text y="500" filter="url(#solid)">
 <x-card.smallrule>{{ trans_choice('rules.player-limit',1) }}</x-card.smallrule>

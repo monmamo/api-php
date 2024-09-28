@@ -8,7 +8,7 @@
 
 
     
-        <x-card.concept.staticon type="Draw" x="530" /> 
+        'concepts' => ['Draw'], 
         <text y="80" filter="url(#solid)">
 <x-card.normalrule>The Monster no longer takes commands,</x-card.normalrule>
 <x-card.normalrule>always attacks on its player’s turn,</x-card.normalrule>

@@ -3,15 +3,15 @@
 
 @push('background') 
 {{ view('Item.background') }}
-<x-card.flavortext>
-<x-card.flavortext.line>Here's lookin' at you, kid.</x-card.flavortext.line>
-</x-card.flavortext>
+'flavor-text' => [
+'Here's lookin' at you, kid.'
+],
 @endpush
 
 <x-card :$cardNumber card-name="Hand Scope">
     
 
-    <x-card.concept.staticon type="Item" :x="610-64"  />
+    'concepts' => ['Item'],
     
     <x-card.phaserule type="Upkeep"  height="130"><text >    
         <x-card.normalrule>Roll 1d4. If @dieroll(4), you may ask </x-card.normalrule>

@@ -2,15 +2,15 @@
 {{ view('Draw.background') }}
 'image-credit' => "Image by ",
 
-<x-card.flavortext>
-    <x-card.flavortext.line></x-card.flavortext.line>
-</x-card.flavortext>
+'flavor-text' => [
+    ''
+],
 @endpush
 
 <x-card :$cardNumber :$dx :$dy card-name="Investment">
 {{--  --}}
     
-        <x-card.concept.staticon type="Draw" />
+        'concepts' => ['Draw'],
 
 
     

@@ -4,7 +4,7 @@
 
 <x-card :$cardNumber card-name="Rescue Drone" >
     
-<x-card.concept.staticon type="Drone" x="530" />
+'concepts' => ['Drone'],
 <x-card.concept.row>
     <x-card.concept.card  type="Item">Item</x-card.concept.card >
         <x-card.concept.card  type="DamageCapacity" index="1">5</x-card.concept.card >    

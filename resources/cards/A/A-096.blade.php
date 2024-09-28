@@ -4,7 +4,7 @@
 
 <x-card :$cardNumber card-name="Fortitude">
     
-<x-card.concept.staticon type="Trait" x="530" /> 
+'concepts' => ['Trait'], 
 <x-card.phaserule type="Resolution" y="135" height="135">
     <text >
 <x-card.normalrule>When attacked, prevent 2d6 damage.</x-card.normalrule>

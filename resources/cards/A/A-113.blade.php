@@ -6,7 +6,7 @@
 
 <x-card :$cardNumber card-name="Creative Academy" >
 
-<x-card.concept.staticon type="Venue" x="530" />
+'concepts' => ['Venue'],
 
 <x-card.phaserule type="Upkeep" height="100">
     <text >

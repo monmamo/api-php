@@ -1,9 +1,9 @@
 @push('background')
 {{ view('Draw.background') }}
 
-<x-card.flavortext>
-    <x-card.flavortext.line></x-card.flavortext.line>
-</x-card.flavortext>
+'flavor-text' => [
+    ''
+],
 
 <x-card.image-credit>
     
@@ -16,7 +16,7 @@
     <image x="0" y="0" class="hero" href="@local(TODO.png)" />
 
     
-        <x-card.concept.staticon type="Draw" :dx="1" />
+        'concepts' => ['Draw'],
 
         <text y="500" filter="url(#solid)">
 <x-card.smallrule>You can play this card only if you have </x-card.smallrule>

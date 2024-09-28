@@ -6,10 +6,10 @@
 <x-card.normalrule>Image by brgfx on Freepik</x-card.normalrule>
 </x-card.image-credit>
 
-<x-card.flavortext>
+'flavor-text' => [
 <x-card.flavortext.line y="425" fill="#000000">A clove a day keeps the doctor away.</x-card.flavor-text>
 <x-card.flavortext.line y="450" fill="#000000">(And everyone else.)</x-card.flavor-text>
-</x-card.flavortext>
+],
 @endpush
 
 <x-card

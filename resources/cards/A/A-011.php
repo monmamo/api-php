@@ -5,16 +5,13 @@ return [
 
     'image-prompt' => null,
 
-    'background' => <<<'HTML'
-{{ view('Skill.background') }}
-HTML,
+    'concepts' => ['Skill'],
+    'background' =>  view('Skill.background'),
 
     'content' => <<<'HTML'
     <g class="svg-hero"><?= view('Energos.icon') ?></g>
-    
-<x-card.concept.staticon type="Skill"  />
 
-<text y="500" filter="url(#solid)">
+    <text y="500" filter="url(#solid)">
     <x-card.smallrule>Requires Energos.</x-card.smallrule>
 </text>
 

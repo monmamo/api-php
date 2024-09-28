@@ -7,8 +7,8 @@
 
 <x-card :$cardNumber card-name="Personal Shopper" >
   <image class="hero" href="@local(hero/personal-shopper.jpg)" />
-  <x-card.concept.staticon type="Vendor" x="482" /> 
-  <x-card.concept.staticon type="Integrity"  value="1d6" />
+  'concepts' => ['Vendor'], 
+  'concepts' => ['Integrity'],
 
   <x-card.phaserule type="Draw"  height="170">
       <text >    

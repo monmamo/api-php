@@ -1,10 +1,10 @@
 @push('background')
 {{ view('Vendor.background') }}
 
-<x-card.flavortext>
-    <x-card.flavortext.line>Where the real money from the concept is made.</x-card.flavortext.line>
-    <x-card.flavortext.line>- Mel Brooks (paraphrased)</x-card.flavortext>
-    </x-card.flavortext>
+'flavor-text' => [
+    'Where the real money from the concept is made.'
+    '- Mel Brooks (paraphrased)],
+    ],
     @endpush
 
     <x-card :$cardNumber :$dx :$dy card-name="Merchandizing">

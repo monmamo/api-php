@@ -4,7 +4,7 @@
 
 <x-card :$cardNumber :$dx :$dy card-name="Junk Patrol">
     
-        <x-card.concept.staticon type="Vendor"  />
+        'concepts' => ['Vendor'],
 
     
         <x-card.phaserule type="Draw" lines="2">

@@ -2,7 +2,7 @@
 use Illuminate\Support\Facades\Blade;
 
 // no @props here, they're defined in \App\View\Components\Card
-
+// :width="config('card-design.width')" :height="config('card-design.height')"
 $rules_dy = 0;
 ?>
 
@@ -21,9 +21,9 @@ $rules_dy = 0;
     <rect id="absolute-bounds" x="0" y="0"  width="@cardspec(width)" height="@cardspec(height)"  fill-opacity="0" stroke="#808080" rx="75"/>
 
 <?php
-echo implode([...$background()]);
+echo $background();
 
-echo $flavorText();
+echo $flavorTextHtml();
 
 // The bodybox is a viewbox minus the titlebox.
 $bodybox_width = config("card-design.viewbox.width");

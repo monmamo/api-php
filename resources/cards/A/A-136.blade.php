@@ -6,7 +6,7 @@
 
 <x-card :$cardNumber :$dx :$dy card-name="Junk from the Trunk">
     
-        <x-card.concept.staticon type="Draw"  />
+        'concepts' => ['Draw'],
 
 
         <x-card.phaserule type="Draw" lines="2">

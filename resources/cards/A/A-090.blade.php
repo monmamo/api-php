@@ -6,8 +6,8 @@
 <x-card :$cardNumber card-name="Five-Finger Discount">
     <image x="0" y="0" class="hero" href="@local(hero/AdobeStock_756008424.jpeg)"/>
 
-    <x-card.concept.staticon type="Draw" x="530" /> 
-    <x-card.concept.staticon type="Criminal" x="530" /> 
+    'concepts' => ['Draw'], 
+    'concepts' => ['Criminal'], 
     <text y="150" filter="url(#solid)">
 <x-card.normalrule>Play a Vendor card.</x-card.normalrule>
 <x-card.normalrule>You may ignore any requirement</x-card.normalrule>

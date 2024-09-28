@@ -4,7 +4,7 @@
 
 <x-card :$cardNumber card-name="Intercept">
 
-<x-card.concept.staticon type="Defense" x="530" />
+'concepts' => ['Defense'],
 
 
 <text y="500" filter="url(#solid)">

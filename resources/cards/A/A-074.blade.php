@@ -9,7 +9,7 @@
 <x-card :$cardNumber card-name="Shopping Center">
     <image x="0" y="0" class="hero" href="@local(A246.jpeg)" />
 
-<x-card.concept.staticon type="Place" x="530" />
+'concepts' => ['Place'],
 <text>
 <x-card.normalrule>Draw phase (every player): You may search</x-card.normalrule>
 <x-card.normalrule>your Library for a Vendor card and play it</x-card.normalrule>

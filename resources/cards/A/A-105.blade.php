@@ -1,8 +1,8 @@
 @push('background')
 {{ view('Bane.background') }}
-<x-card.flavortext>
-<x-card.flavortext.line>Ouuuuuch....</x-card.flavortext.line>
-</x-card.flavortext>
+'flavor-text' => [
+'Ouuuuuch....'
+],
 
 <x-card.image-credit>
 @ai
@@ -12,9 +12,9 @@
 
 <x-card :$cardNumber card-name="Tranquilizer Dart">
     <image x="0" y="0" class="hero" href="@local(A306.jpeg)"  />
-    <x-card.concept.staticon type="Bane" x="402" y="370"/>
-    <x-card.concept.staticon type="Item" x="466"  y="370" />
-    <x-card.concept.staticon type="Weapon" x="530"  y="370" />
+    'concepts' => ['Bane'],
+    'concepts' => ['Item'],
+    'concepts' => ['Weapon'],
 
     <text y="500" filter="url(#solid)">
         <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>

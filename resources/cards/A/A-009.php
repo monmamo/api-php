@@ -5,22 +5,16 @@ return [
 
     'image-prompt' => null,
 
-    'background' => <<<'HTML'
-{{ view('Trait.background') }}
-'image-credit' => "Image by Lorc on Game-Icons.net under CC BY 3.0",
-
-HTML,
+    'concepts' => ['Trait'],
+    'background' =>  view('Trait.background'),
+    'image-credit' => "Image by Lorc on Game-Icons.net under CC BY 3.0",
 
     'content' => <<<'HTML'
   <g class="svg-hero"><?= view('Energos.icon') ?></g>
-    
-    <x-card.concept.staticon type="Trait" />
-
 
     <text  y="500"  filter="url(#solid)">
         <x-card.normalrule>Requires Energos.</x-card.normalrule>
     </text>
-
 
     <x-card.phaserule y="580" type="Command" lines="2"><text>
         <x-card.normalrule>You may discard any</x-card.normalrule>

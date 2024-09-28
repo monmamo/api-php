@@ -5,7 +5,7 @@
 <x-card :$cardNumber card-name="Farmer's Refuse">
 
     
-<x-card.concept.staticon type="Draw" x="530" />
+'concepts' => ['Draw'],
 
 <text y="100" filter="url(#solid)">
     <x-card.normalrule>Discard any number of cards from your hand.</x-card.normalrule>
