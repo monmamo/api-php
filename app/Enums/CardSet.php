@@ -3,7 +3,7 @@
 namespace App\Enums;
 
 use App\CardSetAttributes\CardSeries;
-use App\CardSpec;
+use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
@@ -73,15 +73,16 @@ enum CardSet: string
     case TraitsAndAbilities = 'T';
 
     /**
-     * @group nonary
+     * @group unary
      */
-    public function cardNumbers(): Collection
+    private function _makeCard(string $filename): ?CardComponents
     {
-        $files = new Collection(Storage::disk('cards')->files($this->value));
         $pattern = \sprintf('/^%s\/(%s-[A-Z0-9-]+)\.php$/U', $this->value, $this->value);
 
-        return $files->filter(fn (string $filename): bool => \preg_match($pattern, $filename))
-            ->map(fn (string $filename): string => \preg_replace($pattern, '$1', $filename));
+        if (\preg_match($pattern, $filename, $matches) !== 1) {
+            return null;
+        }
+        return \App\Card\make($matches[1]);
     }
 
     /**
@@ -89,7 +90,10 @@ enum CardSet: string
      */
     public function cards(): Collection
     {
-        return $this->cardNumbers()
-            ->map(fn (string $filename) => new CardSpec($this, $filename));
+        $files = new Collection(Storage::disk('cards')->files($this->value));
+
+        return $files
+            ->map($this->_makeCard(...))
+            ->filter(fn ($value): bool => $value instanceof CardComponents);
     }
 }

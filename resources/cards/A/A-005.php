@@ -1,22 +1,26 @@
 <?php
 
-return [
-    'name' => 'Community Center',
-    'concepts' => ['Facility'],
+use App\CardAttributes\Concepts;
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'image-prompt' => null,
+return new
+    #[Title('Community Center')]
+    #[Concepts('Facility')]
+#[FlavorText('Have a hot meal. Hang out with the boys.')]
+class implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'background' => <<<'HTML'
-{{ view('Facility.background') }}
-'flavor-text' => [
-    'Have a hot meal. Hang out with the boys.'
-],
-HTML,
-
-    'content' => <<<'HTML'
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
         <text y="500" filter="url(#solid)">
             <x-card.normalrule>No Mobsters are allowed on the Battlefield.</x-card.normalrule>
             <x-card.normalrule>Discard all Mobsters from the Battlefield.</x-card.normalrule>
         </text>
-HTML
-];
+HTML;
+    }
+};

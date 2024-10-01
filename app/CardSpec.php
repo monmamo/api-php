@@ -3,7 +3,6 @@
 namespace App;
 
 use App\Contracts\Card\CardComponents;
-use Illuminate\Support\Facades\Storage;
 
 class CardSpec implements \IteratorAggregate, CardComponents
 {
@@ -25,7 +24,7 @@ class CardSpec implements \IteratorAggregate, CardComponents
     /**
      * @group nonary
      */
-    public function background(): ?string
+    public function background()
     {
         return $this->background;
     }
@@ -114,28 +113,11 @@ class CardSpec implements \IteratorAggregate, CardComponents
     }
 
     /**
-     * @group nonary
-     */
-    public function imagePrompt(): ?string
-    {
-        return $this->image_prompt;
-    }
-
-    /**
      * @implements \App\Contracts\HasName
      */
     public function name(): string
     {
         return $this->card_name;
-    }
-
-    public function put(): void
-    {
-        $set = $this->set();
-        $card_number = $this->cardNumber();
-        $card_name = $this->name();
-
-        Storage::disk('cards')->put("{$set}/{$card_number}.php", \implode("\n", \iterator_to_array($this)));
     }
 
     /**

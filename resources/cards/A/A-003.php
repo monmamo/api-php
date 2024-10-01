@@ -1,16 +1,22 @@
 <?php
 
-return [
-    'name' => 'Agility',
+use App\CardAttributes\Concepts;
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Trait', 'Physical'],
+return new
+#[Title('Agility')]
+#[Concepts('Trait', 'Physical')]
+#[ImageCredit('Image by DarkZaitzev on Game-Icons.net under CC BY 3.0')]
+class implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'image-prompt' => null,
-    'image-credit' => 'Image by DarkZaitzev on Game-Icons.net under CC BY 3.0',
-
-    'background' => \view('Trait.background'),
-
-    'content' => <<<'HTML'
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
     <g class="svg-hero">
         <path d="M140.488 19.31C140.488 19.31 113.762 84.894 115.916 95.044C117.794 104.235 125.222 95.36 128.373 102.108C133.963 113.911 183.715 195.771 177.555 200.734C175.997 202.094 138.175 200.332 109.594 194.889C57.104 184.891 14.772 197.241 32.555 237.099C58.732 295.752 165.705 391.239 130.445 420.701C89.601 454.86 150.265 537.95 209.72 461.009C220.605 446.924 239.076 387.808 208.106 391.43C170.659 395.81 193.978 360.939 193.978 360.939L217.323 331.019C230.283 329.119 351.857 309.57 351.857 309.57L347.631 282.568L173.156 302.818C173.156 302.818 148.996 270.365 137.192 252.131C127.822 240.657 199.197 257.011 213.58 241.609C233.548 220.333 221.181 197.729 221.181 197.729L155.35 69.201Z" class="selected" fill="#ffffff" fill-opacity="1"></path>
         <path d="M255.107 63.287L192.348 102.706L208.429 131.603L323.36 72.743Z" fill="#808080" fill-opacity="1"></path>
@@ -23,5 +29,6 @@ return [
     <x-card.normalrule>Speed +1d6</x-card.normalrule>
     <x-card.normalrule>(rolled when attached to the Monster).</x-card.normalrule>
 </x-card.cardrule>
-HTML
-];
+HTML;
+    }
+};

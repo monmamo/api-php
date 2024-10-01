@@ -7,6 +7,8 @@ use League\Flysystem\StorageAttributes;
 
 class CardNumber
 {
+    public const FILEPATH_PATTERN = '/\w+\/(\w+-[A-Z0-9-]+)\.php$/U';
+
     protected readonly string $format_string;
 
     public function __construct(
@@ -75,6 +77,10 @@ class CardNumber
      */
     public static function make(string $whole): self
     {
+        if (\preg_match(self::FILEPATH_PATTERN, $whole, $matches) === 1) {
+            return self::make($matches[1]);
+        }
+
         $pieces = \explode('-', $whole);
 
         $set = $pieces[0];

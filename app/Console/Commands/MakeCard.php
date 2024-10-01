@@ -3,10 +3,11 @@
 namespace App\Console\Commands;
 
 use App\CardNumber;
-use App\CardSpec;
 use App\Concept;
+use App\Contracts\Card\CardComponents;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Console\PromptsForMissingInput;
+use Illuminate\Support\Facades\Storage;
 
 class MakeCard extends Command implements PromptsForMissingInput
 {
@@ -49,11 +50,17 @@ class MakeCard extends Command implements PromptsForMissingInput
         }
     }
 
-    private function generateOne(CardSpec $spec): void
+    /**
+     * @group unary
+     */
+    private function generateOne(CardComponents $spec): void
     {
-        $spec->put();
+        $set = $spec->set();
         $card_number = $spec->cardNumber();
         $card_name = $spec->name();
+
+        Storage::disk('cards')->put("{$set}/{$card_number}.php", \implode("\n", \iterator_to_array($spec)));
+
         $this->info("{$card_number} {$card_name} created.");
     }
 

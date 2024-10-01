@@ -1,16 +1,24 @@
 <?php
 
-return [
-    'name' => 'Big-Box Store',
-    'concepts' => ['Vendor', 'Integrity:1d4'],
-    'image-prompt' => null,
+use App\CardAttributes\Concepts;
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'background' => \view('Vendor.background'),
+return new
+#[Title('Big-Box Store')]
+    #[Concepts('Vendor', 'Integrity:1d4')]
+    #[ImageCredit('Image by teravector on Freepik')]
+    #[FlavorText('Expect more. Live better. Simplify life. Get more done.')]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    'image-credit' => 'Image by teravector on Freepik',
-    'flavor-text' => 'Expect more. Live better. Simplify life. Get more done.',
-
-    'content' => <<<'HTML'
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(A-014.jpg)" source="https://www.freepik.com/free-vector/express-truck-delivering-goods-supermarket_4147963.htm" />
 
         <text y="500" filter="url(#solid)">
@@ -18,11 +26,12 @@ return [
 </text>
 
 <x-card.phaserule type="Draw" lines="4"><text>
-                <x-card.normalrule>Discard three cards from your hand.</x-card.normalrule>
-                <x-card.normalrule>Search your Library for two Item cards.</x-card.normalrule>
-                <x-card.normalrule>Reveal them, then put them in your hand.</x-card.normalrule>
-                <x-card.normalrule>Shuffle your library.</x-card.normalrule>
-                </text></x-card.phaserule>
+<x-card.normalrule>Discard 3 cards from your hand.</x-card.normalrule>
+<x-card.normalrule>Search your Library for 2 Item cards.</x-card.normalrule>
+<x-card.normalrule>Reveal them, then put them in your hand.</x-card.normalrule>
+<x-card.normalrule>Shuffle your library.</x-card.normalrule>
+</text></x-card.phaserule>
 
-HTML
-];
+HTML;
+        }
+    };

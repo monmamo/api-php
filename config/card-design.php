@@ -32,10 +32,17 @@ $viewbox['height'] = $trimbox['height'] - $trimbox['margin'] - $trimbox['margin'
 
 // The titlebox is at the bottom of the viewbox.
 
+$concept_icon_height = 80;
+$concept_icon_padding = 2;
+$concept_box_height = $concept_icon_height * 1.25;
+
+$title_height = 70;
+
 $titlebox = [
+    'title-height' => $title_height,
     'x' => $viewbox['x'],
     'width' => $viewbox['width'],
-    'height' => 70,
+    'height' => $concept_box_height + $title_height,
     'cardtype_baseline' => 30,
 ];
 
@@ -58,17 +65,13 @@ $hero = [
     ],
 ];
 
-$concept_icon_height = 80;
-$concept_icon_padding = 2;
-$concept_box_height = $concept_icon_height * 1.25;
-
 $concept = [
     'icon-size' => $concept_icon_height,
     'icon-padding' => $concept_icon_padding,
     'box-height' => $concept_box_height,
     'standard-height' => $concept_icon_height + $concept_icon_padding * 2,
-    'baseline' => $hero_height,
-    'topline' => $hero_height - $concept_box_height,
+    'baseline' => $titlebox['y'] + $concept_box_height,
+    'topline' => $titlebox['y'],
 ];
 
 return \compact('height', 'width', 'icon', 'trimbox', 'viewbox', 'titlebox', 'hero', 'primary_rule_height', 'secondary_rule_height', 'concept');
