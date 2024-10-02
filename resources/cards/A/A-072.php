@@ -1,22 +1,36 @@
 <?php
+// inspiration: Hooligans Jim and Cas PTCG card https://bulbapedia.bulbagarden.net/wiki/Hooligans_Jim_%26_Cas_(Dark_Explorers_95) 
 
-// inspiration: Hooligans Jim and Cas PTCG card https://bulbapedia.bulbagarden.net/wiki/Hooligans_Jim_%26_Cas_(Dark_Explorers_95)
-return [
-    'name' => 'Enforcer',
+use App\CardAttributes\Concepts;
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Mobster', 'Male', 'Integrity:1d4'],
-    'ai' => true,
-    'image-prompt' => null,
+return new
+#[Title('Enforcer')]
+#[Concepts('Mobster','Male','Integrity:1d4')]
+#[\App\CardAttributes\IsGeneratedImage]
+#[\App\CardAttributes\LocalHeroImage('A072.png')]
+#[FlavorText('FLAVOR_TEXT')]
+class implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'image-credit' => null,
-
-    'flavor-text' => null,
-    'background' => \view('Mobster.background'),
-    'prerequisites' => ['Limit 1 per player on the Battlefield.'],
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(A072.png)"  />
-<x-card.phaserule type="Upkeep" lines="5">
-    <text >
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
+            <x-card.concept.row>
+                <x-card.concept.card type="Mobster" x="0" width="190" />
+                <x-card.concept.card type="Male" x="190" width="190" />
+                <x-card.concept.card type="Integrity" x="380" width="230" >1d4</x-card.concept>
+                </x-card.concept.row>
+                <x-slot:small>
+                   Limit 1 per player on the Battlefield.
+                    </x-slot:small>                   
+                    <x-card.phaserule type="Upkeep" y="170" height="130">
+                        <text >
 <x-card.normalrule>You may choose a random card</x-card.normalrule>
 <x-card.normalrule>from an opponent's hand. The opponent </x-card.normalrule>
 <x-card.normalrule>must reveal that card to all players.</x-card.normalrule>
@@ -24,6 +38,6 @@ return [
 <x-card.normalrule>or shuffle it back into their Library.        </x-card.normalrule>
 </text>
 </x-card.phaserule>
-
-HTML
-];
+HTML;
+}
+};
