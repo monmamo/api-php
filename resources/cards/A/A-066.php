@@ -28,5 +28,5 @@ class implements CardComponents
 <x-card.normalrule>and all cards attached to that Monster.</x-card.normalrule>
     </text>
 HTML;
-}
+    }
 };

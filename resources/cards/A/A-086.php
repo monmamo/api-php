@@ -30,5 +30,5 @@ class implements CardComponents
 <x-card.normalrule>card actually discarded.</x-card.normalrule>
     </text>
 HTML;
-}
+    }
 };

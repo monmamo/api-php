@@ -22,11 +22,11 @@ class implements CardComponents
     {
         yield <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(A212.jpg)" />
-    
+
       <text y="70" filter="url(#solid)">
         <x-card.normalrule>Put a card from your Discard</x-card.normalrule>
             <x-card.normalrule>pile into your hand.</x-card.normalrule>
       </text>
 HTML;
-}
+    }
 };

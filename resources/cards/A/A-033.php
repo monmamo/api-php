@@ -1,24 +1,36 @@
 <?php
 
-return [
-    'name' => 'Wheel of Fortune',
+use App\CardAttributes\Concepts;
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Draw'],
+return new
+#[Title('Wheel of Fortune')]
 
-    'image-source' => 'https://www.freepik.com/free-psd/casino-roulette-icon-render_23877079.htm',
+    #[Concepts('Draw')]
 
-    'image-credit' => 'Image by freepik',
+    #[LocalHeroImage('hero/wheel-of-fortune.jpg')] // https://www.freepik.com/free-psd/casino-roulette-icon-render_23877079.htm
+    #[ImageCredit('Image by freepik')]
 
-    'flavor-text' => ["This isn't a game (show)."],
-    'background' => \view('Draw.background'),
+    #[FlavorText("This isn't a game (show).")]
 
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(hero/wheel-of-fortune.jpg)" />
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.phaserule type="Draw" lines="2">
         <text >
         <x-card.normalrule>Each player puts his hand on the</x-card.normalrule>
 <x-card.normalrule>bottom of his Library, then draws 7 cards.</x-card.normalrule>
     </text>
 </x-card.phaserule>
-HTML
-];
+HTML;
+        }
+    };

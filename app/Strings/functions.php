@@ -615,7 +615,7 @@ function explode_lines($source): \Traversable
         $iterator = new \AppendIterator();
 
         foreach ($source as $element) {
-            $iterator->append(explode_string_lines($element));
+            $iterator->append(explode_lines($element));
         }
         return $iterator;
     }
@@ -658,6 +658,9 @@ function clean(string $raw, ?\Closure $after_clean = null): string
     return $final_clean_value;
 }
 
+/**
+ * @group variadic
+ */
 function html(...$pieces): Htmlable
 {
     $content = [];

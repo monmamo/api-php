@@ -1,19 +1,28 @@
 <?php
 
-return [
-    'name' => 'Breeder',
+use App\CardAttributes\Concepts;
+use App\CardAttributes\DefaultCardAttributes;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Vendor', 'Integrity:1d4'],
+return new
+#[Title('Breeder')]
 
-    'image-prompt' => null,
+    #[Concepts('Vendor', 'Integrity:1d4')]
 
-    'background' => \view('Vendor.background'),
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    'content' => <<<'HTML'
-<text y="500" filter="url(#solid)">
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
+        <x-card.phaserule type="Draw" lines="2">
+                <text >
     <x-card.normalrule>Search your Library for a Monster card.</x-card.normalrule>
     <x-card.normalrule>Put that card in your hand.</x-card.normalrule>
-</text>
+</text></x-card.phaserule>
 
-HTML
-];
+HTML;
+        }
+    };

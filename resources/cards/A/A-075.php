@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Sheriff')]
-#[Concepts('Bystander','Integrity:2d6')]
+#[Concepts('Bystander', 'Integrity:2d6')]
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents
@@ -30,5 +30,5 @@ class implements CardComponents
 <x-card.normalrule>while this card is on the Battlefield.</x-card.normalrule>
 </text>
 HTML;
-}
+    }
 };

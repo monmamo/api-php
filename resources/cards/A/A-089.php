@@ -1,4 +1,5 @@
 <?php
+
 // Compare Hand Scope (A-115).
 // https://www.freepik.com/free-vector/flying-drone-camera-cartoon-vector-icon-illustration-object-technology-icon-concept-isolated-flat_25847529.htm
 
@@ -11,7 +12,7 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Spy Drone')]
-#[Concepts('Drone','Item','DamageCapacity:5','Level:5','Size:5','Speed:25')]
+#[Concepts('Drone', 'Item', 'DamageCapacity:5', 'Level:5', 'Size:5', 'Speed:25')]
 #[ImageCredit('Image by catalyststuff on Freepik')]
 #[FlavorText('Here\'s lookin\' at you, kid.')]
 class implements CardComponents
@@ -20,7 +21,7 @@ class implements CardComponents
 
     public function content(): \Traversable
     {
-       yield <<<'HTML'
+        yield <<<'HTML'
     <image class="hero" href="@local(A312.jpg)" />
 
     <x-card.phaserule type="Upkeep" lines="3"><text>
@@ -29,5 +30,5 @@ class implements CardComponents
             <x-card.normalrule>(Only you get to see the hand.)</x-card.normalrule>
         </text></x-card.phaserule>
 HTML;
-}
+    }
 };

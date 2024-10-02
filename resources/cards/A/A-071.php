@@ -25,5 +25,5 @@ class implements CardComponents
 <x-card.normalrule>If @dieroll(1,2) the effect has no effect.</x-card.normalrule>
     </text>
 HTML;
-}
+    }
 };

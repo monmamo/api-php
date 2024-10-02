@@ -1,24 +1,39 @@
 <?php
 
-return [
-    'name' => 'Caffeine',
+use App\CardAttributes\Concepts;
+use App\CardAttributes\CreditColor;
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\FlavorTextColor;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImagePrompt;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'credit-color' => '#000000',
+return new
+    #[Concepts('Mana')]
+    #[CreditColor('#000000')]
+    #[FlavorText('Because both adulting and monster battling are hard.')]
+    #[FlavorTextColor('#000000')]
+    #[ImageCredit('Image by macrovector on Freepik')]
+    #[ImagePrompt('cup of coffee')]
+    #[Title('Caffeine')]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    'concepts' => ['Mana'],
+        public function background()
+        {
+            // https://www.freepik.com/free-vector/realistic-cup-black-brewed-coffee-saucer-vector-illustration_23128948.htm"
+            return \App\Strings\html(
+                'image',
+                ['x' => 0, 'y' => 0,  'href' => \App\Card\localHeroUri('A028-full.jpg')],
+            );
+        }
 
-    'image-prompt' => 'cup of coffee',
-
-    'image-credit' => 'Image by macrovector on Freepik',
-
-    'flavor-text-color' => '#000000',
-
-    'flavor-text' => 'Because both adulting and monster battling are hard.',
-    'background' => <<<'HTML'
-<image x="0" y="0" href="@local(A028-full.jpg)" source="https://www.freepik.com/free-vector/realistic-cup-black-brewed-coffee-saucer-vector-illustration_23128948.htm" />
-HTML,
-
-    'content' => <<<'HTML'
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.cardrule height="200" background-opacity="0" >
 <x-card.normalrule>For any attempt to put this Monster to Sleep,</x-card.normalrule>
 <x-card.normalrule>roll 1d6. (Roll one die for each</x-card.normalrule>
@@ -26,5 +41,6 @@ HTML,
 <x-card.normalrule>@dieroll(5,6) The Monster remains awake.</x-card.normalrule>
 <x-card.normalrule>@dieroll(1,2) Discard this card.</x-card.normalrule>
 </x-card.cardrule>
-HTML
-];
+HTML;
+        }
+    };

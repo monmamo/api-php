@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use App\CardNumber;
 use App\Contracts\Card\CardComponents;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\View\Component;
 use Illuminate\View\View;
@@ -25,20 +26,6 @@ class Card extends Component //implements CardComponents
         public bool $omitCommon = false,
     ) {
         $this->cardName ??= $this->spec->name();
-
-        // Concepts array: preserve the sequence.
-        $this->concepts = \array_map(
-            function ($spec) {
-                if (\is_string($spec)) {
-                    $spec_pieces = \explode(':', $spec);
-                    $spec_pieces[1] ??= false;
-                    return $spec_pieces;
-                }
-
-                throw new \LogicException('Concepts must be strings');
-            },
-            $this->concepts ?? $this->spec->concepts(),
-        );
     }
 
     /**
@@ -48,12 +35,14 @@ class Card extends Component //implements CardComponents
     {
         $background = $this->spec->background() ?? match (true) {
             \count($this->concepts) === 0 => '<x-card.background />',
-            \Illuminate\Support\Facades\View::exists($this->concepts[0][0] . '.background') => $this->concepts[0][0] . '.background',
+            \Illuminate\Support\Facades\View::exists($this->concepts[0] . '.background') => $this->concepts[0][0] . '.background',
             default => '<x-card.background />'
         };
 
         yield match (true) {
             $background instanceof View => $background,
+            $background instanceof Htmlable => $background->toHtml(),
+            $background instanceof \Stringable => (string) $background,
             \is_string($background) => Blade::render($background, []),
             \is_null($background) => null
         };
@@ -87,11 +76,6 @@ class Card extends Component //implements CardComponents
     {
         return $this->cardNumber;
     }
-
-    /**
-     * @group nonary
-     */
-    public function conceptContent(): \Traversable {}
 
     /**
      * @group nonary

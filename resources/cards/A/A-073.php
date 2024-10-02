@@ -29,5 +29,5 @@ class implements CardComponents
 <x-card.normalrule>(even if they weren't needed to prevent damage).</x-card.normalrule>
     </text>
 HTML;
-}
+    }
 };

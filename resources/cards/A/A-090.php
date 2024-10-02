@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Five-Finger Discount')]
-#[Concepts('Draw','Criminal')]
+#[Concepts('Draw', 'Criminal')]
 #[ImageCredit('Adobe Stock #756008424')]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents
@@ -18,7 +18,7 @@ class implements CardComponents
 
     public function content(): \Traversable
     {
-       yield <<<'HTML'
+        yield <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(hero/AdobeStock_756008424.jpeg)"/>
 
     <text y="150" filter="url(#solid)">
@@ -27,5 +27,5 @@ class implements CardComponents
 <x-card.normalrule>to discard cards.</x-card.normalrule>
     </text>
 HTML;
-}
+    }
 };

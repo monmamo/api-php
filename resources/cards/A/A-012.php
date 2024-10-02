@@ -6,7 +6,7 @@ use App\CardAttributes\ImageCredit;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
- // https://game-icons.net/1x1/lorc/gift-trap.html
+// https://game-icons.net/1x1/lorc/gift-trap.html
 
 return new
 #[Title('Basic Lure')]

@@ -1,4 +1,5 @@
 <?php
+
 // inspiration: Fieldworker PTCG card https://bulbapedia.bulbagarden.net/wiki/Fieldworker_(EX_Legend_Maker_73)
 
 use App\CardAttributes\Concepts;
@@ -10,7 +11,7 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('TITLE')]
-#[Concepts('Bystander',"Male","Cumulative","Integrity:1")]
+#[Concepts('Bystander', 'Male', 'Cumulative', 'Integrity:1')]
 #[ImageCredit('Image by Freepik')]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents

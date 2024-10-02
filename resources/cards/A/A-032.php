@@ -1,21 +1,30 @@
 <?php
 
-return [
-    'name' => 'Cheerleader',
+use App\CardAttributes\Concepts;
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Bystander', 'Female', 'Cumulative', 'Integrity:1d4'],
+return new
+#[Title('Cheerleader')]
 
-    'image-prompt' => null,
+    #[Concepts('Bystander', 'Female', 'Cumulative', 'Integrity:1d4')]
 
-    'image-credit' => 'Image by freepik',
+#[LocalHeroImage('A032.jpg')] // https://www.freepik.com/free-vector/hand-drawn-cheerleader-cartoon-illustration_74884680.htm#fromView=image_search_similar&page=1&position=0&uuid=c5c5f2c3-37ff-4227-956f-33c0b507b00c
+    #[ImageCredit('Image by freepik')]
 
-    'flavor-text' => ['Go, go, go team go!'],
+    #[FlavorText('Go, go, go team go!')]
 
-    'background' => \view('Bystander.background'),
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    'content' => <<<'HTML'
-    <image x="0" y="0" class="hero" href="@local(A032.jpg)" source="https://www.freepik.com/free-vector/hand-drawn-cheerleader-cartoon-illustration_74884680.htm#fromView=image_search_similar&page=1&position=0&uuid=c5c5f2c3-37ff-4227-956f-33c0b507b00c"/>
-
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <text y="500" filter="url(#solid)">
     <x-card.smallrule>A player may have any number of Cheerleaders on the Battlefield.</x-card.smallrule>
     <x-card.smallrule>You may choose to make this card Male</x-card.smallrule>
@@ -28,5 +37,6 @@ return [
         <x-card.normalrule>do an additional 1d4 damage.</x-card.normalrule>
     </text>
 </x-card.phaserule>
-HTML
-];
+HTML;
+        }
+    };

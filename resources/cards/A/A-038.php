@@ -1,22 +1,36 @@
 <?php
 
-return [
-    'name' => 'Body Block',
+use App\CardAttributes\Concepts;
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Defense', 'Physical'],
+return new
+#[Title('Body Block')]
 
-    'image-prompt' => null,
+    #[Concepts('Defense', 'Physical')]
 
-    'image-credit' => 'Image by Freepik',
+#[LocalHeroImage('AS02.jpg')] // https://www.freepik.com/free-vector/jiu-jitsu-athletes-fighting_10369936.htm
 
-    'flavor-text' => [],
-    'background' => \view('Defense.background'),
-    'content' => <<<'HTML'
-    <image x="0" y="0" class="hero" href="@local(AS02.jpg)" source="https://www.freepik.com/free-vector/jiu-jitsu-athletes-fighting_10369936.htm"/>
+    #[ImageCredit('Image by Freepik')]
+
+    #[FlavorText([])]
+
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
     <x-card.phaserule type="Resolution" lines="1">
     <text >
         <x-card.normalrule>Prevent Size÷2 damage (rounded up).</x-card.normalrule>
 </text>
 </x-card.phaserule>
-HTML
-];
+HTML;
+        }
+    };

@@ -3,14 +3,14 @@
 use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
-use App\CardAttributes\ImageCredit;
+use App\CardAttributes\IsGeneratedImage;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Farmer\'s Market')]
-#[Concepts('Vendor','Integrity:1d4')]
-#[\App\CardAttributes\IsGeneratedImage]
+#[Concepts('Vendor', 'Integrity:1d4')]
+#[IsGeneratedImage]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents
 {
@@ -28,5 +28,5 @@ class implements CardComponents
 <x-card.normalrule>cards, then put them in your hand.</x-card.normalrule>
     </text>
 HTML;
-}
+    }
 };

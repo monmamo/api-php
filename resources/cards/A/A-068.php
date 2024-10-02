@@ -2,8 +2,6 @@
 
 use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
-use App\CardAttributes\ImageCredit;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
@@ -26,5 +24,5 @@ class implements CardComponents
 <x-card.normalrule>that Attack would have done.</x-card.normalrule>
         </text>
 HTML;
-}
+    }
 };

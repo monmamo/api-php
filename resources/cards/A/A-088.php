@@ -29,5 +29,5 @@ class implements CardComponents
 <x-card.normalrule>choose the one it attacks by dice roll.</x-card.normalrule>
         </text>
 HTML;
-}
+    }
 };

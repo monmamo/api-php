@@ -1,18 +1,31 @@
 <?php
 
-return [
-    'name' => 'Gene Pool',
+use App\CardAttributes\Concepts;
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Setup'],
+return new
+#[Title('Gene Pool')]
 
-    'image-prompt' => null,
+    #[Concepts('Setup')]
 
-    'image-credit' => 'Image by freepik',
+#[LocalHeroImage('hero/gene-pool.jpg')] // https://www.freepik.com/free-photo/dna-representation-concept_44999157.htm
 
-    'flavor-text' => [],
-    'background' => \view('Setup.background'),
-    'content' => <<<'HTML'
-<image x="-75" y="0" href="@local(hero/gene-pool.jpg)" source="https://www.freepik.com/free-photo/dna-representation-concept_44999157.htm" />
+    #[ImageCredit('Image by freepik')]
+
+    #[FlavorText([])]
+
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.phaserule type="Setup" lines="3">
         <text >
 <x-card.normalrule>Attach a Trait card to a Monster</x-card.normalrule>
@@ -20,5 +33,6 @@ return [
 <x-card.normalrule>You may play another card on this turn.</x-card.normalrule>
     </text>
 </x-card.phaserule>
-HTML
-];
+HTML;
+        }
+    };

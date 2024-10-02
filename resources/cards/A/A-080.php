@@ -26,5 +26,5 @@ class implements CardComponents
       <x-card.normalrule>from your Discard pile into your Library.</x-card.normalrule>
     </text>
 HTML;
-}
+    }
 };

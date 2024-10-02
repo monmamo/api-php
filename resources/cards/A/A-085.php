@@ -1,4 +1,5 @@
 <?php
+
 // https://www.freepik.com/free-vector/recycle-colorful-geometric-gradient-logo-vector_27230675.htm
 
 use App\CardAttributes\Concepts;
@@ -27,5 +28,5 @@ class implements CardComponents
 <x-card.normalrule>from your Discard pile into your Library.</x-card.normalrule>
 </text>
 HTML;
-}
+    }
 };

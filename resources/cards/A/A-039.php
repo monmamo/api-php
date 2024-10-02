@@ -1,20 +1,24 @@
 <?php
 
-return [
-    'name' => 'Absorb Water',
+use App\CardAttributes\Concepts;
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\Prerequisites;
+use App\CardAttributes\PrerequisiteY;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Trait'],
+return new
+#[Concepts('Trait')]
+#[Prerequisites('Requires Aquos.')]
+#[PrerequisiteY(400)]
+#[Title('Absorb Water')]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    'image-prompt' => null,
-
-    'image-credit' => null,
-
-    'prerequisites' => ['Requires Aquos.'],
-
-    'flavor-text' => [],
-    'background' => \view('Trait.background'),
-
-    'content' => <<<'HTML'
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <g class="svg-hero"><?= view('Aquos.icon') ?></g>
 
 <x-card.phaserule type="Resolution" height="175">
@@ -26,5 +30,6 @@ return [
 <x-card.smallrule>to the Discard of the player who owns them.</x-card.smallrule>
     </text>
 </x-card.phaserule>
-HTML
-];
+HTML;
+        }
+    };

@@ -1,4 +1,5 @@
 <?php
+
 // inspiration: Brock's Primeape's "Scram" power.
 
 use App\CardAttributes\Concepts;
@@ -29,5 +30,5 @@ class implements CardComponents
     <x-card.smallrule>This counts as Knocking Out the Monster.</x-card.smallrule>
 </text>
 HTML;
-}
+    }
 };

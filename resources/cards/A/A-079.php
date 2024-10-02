@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Rescue Drone')]
-#[Concepts('Drone','Item','DamageCapacity:5','Size:25','Speed:4')]
+#[Concepts('Drone', 'Item', 'DamageCapacity:5', 'Size:25', 'Speed:4')]
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents
@@ -25,5 +25,5 @@ class implements CardComponents
 <x-card.normalrule>and Rescue Drone into your Library.</x-card.normalrule>
 </text>
 HTML;
-}
+    }
 };

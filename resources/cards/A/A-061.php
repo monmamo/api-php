@@ -2,7 +2,6 @@
 
 use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;

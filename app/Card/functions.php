@@ -7,6 +7,19 @@ use App\Contracts\Card\CardComponents;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 
+/**
+ * @group unary
+ */
+function localHeroUri(string $filename): string
+{
+    $path = \resource_path("images/{$filename}");
+    \assert(\file_exists($path), "Image file not found: {$path}");
+    return 'data:image/jpg;base64,' . \base64_encode(\file_get_contents($path));
+};
+
+/**
+ * @group unary
+ */
 function make($spec): CardComponents
 {
     return match (true) {

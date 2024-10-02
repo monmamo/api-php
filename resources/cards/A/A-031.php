@@ -1,24 +1,38 @@
 <?php
 
-return [
-    'name' => 'Dual Cranial Horns',
+use App\CardAttributes\Concepts;
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\CardAttributes\PrerequisiteY;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Trait', 'Physical'],
+return new
+#[Title('Dual Cranial Horns')]
 
-    'image-prompt' => null,
+    #[Concepts('Trait', 'Physical')]
 
-    'image-credit' => 'Image by wirestock on Freepik',
+    #[LocalHeroImage('A064.jpg')] // https://www.freepik.com/free-photo/closeup-shot-beautiful-thompson-s-gazelle_10292458.htm
 
-    'flavor-text' => [],
+    #[ImageCredit('Image by wirestock on Freepik')]
 
-    'background' => \view('Trait.background'),
+    #[FlavorText([])]
+    #[PrerequisiteY(465)]
 
-    'content' => <<<'HTML'
-    <image x="0" y="0" class="hero" href="@local(A064.jpg)" source="https://www.freepik.com/free-photo/closeup-shot-beautiful-thompson-s-gazelle_10292458.htm" />
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
     <x-card.phaserule type="Resolution" lines="3"><text>
     <x-card.normalrule>Size +6.</x-card.normalrule>
 <x-card.normalrule>Gives the attack “Horn Attack”</x-card.normalrule>
 <x-card.normalrule>which does Speed×2 damage.</x-card.normalrule>
     </text></x-card.phaserule>
-HTML
-];
+HTML;
+        }
+    };

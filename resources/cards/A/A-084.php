@@ -29,5 +29,5 @@ class implements CardComponents
 <x-card.normalrule>The damage done is the sum of these rolls.</x-card.normalrule>
         </text>
 HTML;
-}
+    }
 };

@@ -26,5 +26,5 @@ class implements CardComponents
     <x-card.normalrule>Reveal those cards, then put them in your hand.</x-card.normalrule>
     </text>
 HTML;
-}
+    }
 };

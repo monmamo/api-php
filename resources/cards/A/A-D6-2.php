@@ -1,8 +1,6 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -28,5 +26,5 @@ class implements CardComponents
         </x-slot:small>
         <text>One 1d6 roll counts as @dieroll(2).</text>
 HTML;
-}
+    }
 };

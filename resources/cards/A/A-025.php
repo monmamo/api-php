@@ -1,18 +1,27 @@
 <?php
 
-return [
-    'name' => 'Busybody',
+use App\CardAttributes\Concepts;
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Draw'],
+return new
+#[Title('Busybody')]
 
-    'image-prompt' => null,
+    #[Concepts('Draw')]
 
-    'image-credit' => 'Image by Adobe: Stock #58908676',
+    #[LocalHeroImage('A025.jpeg')]
+    #[ImageCredit('Image by Adobe: Stock #58908676')]
 
-    'background' => \view('Draw.background'),
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(A025.jpeg)" />
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.phaserule type="Draw" lines="4">
 <text >
 <x-card.normalrule>Choose an opponent. That opponent</x-card.normalrule>
@@ -21,5 +30,6 @@ return [
     <x-card.normalrule>on the bottom of their Library.</x-card.normalrule>
 </text></x-card.phaserule>
 
-HTML
-];
+HTML;
+        }
+    };

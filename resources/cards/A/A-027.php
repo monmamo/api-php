@@ -1,19 +1,28 @@
 <?php
 
-return [
-    'name' => 'Natural Healing',
+use App\CardAttributes\Concepts;
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Trait'],
+return new
+    #[Title('Natural Healing')]
 
-    'image-prompt' => null,
+    #[Concepts('Trait')]
 
-    'image-credit' => 'Image by Lorc and sbed on Game-Icons.net',
+    #[ImageCredit('Image by Lorc and sbed on Game-Icons.net')]
 
-    'flavor-text' => ['When I get that feeling I want natural healing…'],
+    #[FlavorText('When I get that feeling I want natural healing…')]
 
-    'background' => \view('Trait.background'),
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    'content' => <<<'HTML'
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
     <g class="svg-hero">
         <rect height="512" width="512" fill="7C432F" rx="32" ry="32" />
         <path d="M196 496c-16.62 0-30-13.38-30-30V346H46c-16.62 0-30-13.38-30-30V196c0-16.62 13.38-30 30-30h120V46c0-16.62 13.38-30 30-30h120c16.62 0 30 13.38 30 30v120h120c16.62 0 30 13.38 30 30v120c0 16.62-13.38 30-30 30H346v120c0 16.62-13.38 30-30 30zm0-135h120l-60-60zm0-75h120l-60-60zm0-75h120l-60-60z" fill="#417505" fill-opacity="1"></path>
@@ -25,5 +34,6 @@ return [
             <x-card.normalrule>If this Monster is not Knocked Out,</x-card.normalrule>
             <x-card.normalrule>you may remove 1d6 damage from it. </x-card.normalrule>
             </text></x-card.phaserule>
-HTML
-];
+HTML;
+        }
+    };

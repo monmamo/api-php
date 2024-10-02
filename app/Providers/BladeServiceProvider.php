@@ -10,11 +10,7 @@ class BladeServiceProvider extends ServiceProvider
 {
     private function _directives(): \Traversable
     {
-        yield 'local' => function (string $filename) {
-            $path = \resource_path("images/{$filename}");
-            \assert(\file_exists($path), "Image file not found: {$path}");
-            return 'data:image/jpg;base64,' . \base64_encode(\file_get_contents($path));
-        };
+        yield 'local' => \App\Card\localHeroUri(...);
 
         yield 'cardspec' => fn (string $pieces) => \config('card-design.' . $pieces);
 

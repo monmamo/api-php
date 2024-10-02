@@ -1,24 +1,30 @@
 <?php
 
+use App\CardAttributes\Concepts;
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalBackgroundImage;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
+
 // inspiration: https://bulbapedia.bulbagarden.net/wiki/Canceling_Cologne_(Astral_Radiance_136)
 
-return [
-    'name' => 'Eau de Resistance',
+return new
+#[Concepts('Upkeep', 'Item')]
+#[FlavorText('A scent that monsters can\'t compete with.')]
+#[ImageCredit('Image by Freepik')]
+#[LocalBackgroundImage('fullsize/cologne.jpg')]
+#[Title('Eau de Resistance')]
+class implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'concepts' => ['Upkeep', 'Item'],
-
-    'image-prompt' => null,
-
-    'image-credit' => 'Image by Freepik',
-
-    'flavor-text' => [],
-    'background' => <<<'HTML'
-<image x="0" y="0" href="@local(fullsize/cologne.jpg)" />
-HTML,
-
-    'content' => <<<'HTML'
-    <text y="670" filter="url(#solid)">
-      <x-card.smallrule>Attach this card to a Monster on the Battlefield.</x-card.smallrule>
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
+    <text y="500" filter="url(#solid)">
+      <x-card.smallrule>{{ __('rules.attach-to-monster')}}</x-card.smallrule>
     </text>
 
 <x-card.phaserule type="Command" lines="2">
@@ -27,5 +33,6 @@ HTML,
             <x-card.normalrule>cannot be the target of an Attack.</x-card.normalrule>
 </text>
 </x-card.phaserule>
-HTML
-];
+HTML;
+    }
+};

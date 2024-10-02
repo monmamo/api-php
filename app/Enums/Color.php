@@ -13,6 +13,7 @@ enum Color: string
     case Black = '#000000';
     case Blue = '#0000FF';
     case Brown = '#A52A2A';
+    case Bystander = '#300030';
     case CalamityColor = 'orange';
     case CharacterColor = '#282828';
     case CharacterGradientBottom = '#010101';
@@ -27,6 +28,8 @@ enum Color: string
     case ItemColor = '#222222';
     case ItemGradientBottom = '#020202';
     case ItemGradientTop = '#424242';
+    case Master = '#000060';
+    case Mobster = '#600000';
     case Orange = '#FFA500';
     case Pink = '#FFC0CB';
     case PlaceColor = '#705420';
