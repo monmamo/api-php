@@ -1,15 +1,15 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Alertness')]
 
-    #[Concepts('Trait')]
+    #[Concept('Trait')]
     #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
 
     // alt hero: https://www.freepik.com/free-vector/cartoon-eyes_763685.htm

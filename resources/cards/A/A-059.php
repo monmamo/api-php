@@ -1,22 +1,34 @@
 <?php
 
-return [
-    'name' => 'Cunning',
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Dandruff'],
-'ai' => true,
-    'image-prompt' => null,
+return new
+#[Title('Dandruff')]
 
-    'image-credit' => '',
+    #[Concept('Bane')]
+#[IsGeneratedImage]
+#[LocalHeroImage('hero/dandruff.jpeg')]
 
-    'flavor-text' => [],
-    'background' => \view('Trait.background'),
-    'content' => <<<'HTML'
-    <image x="0" y="0" class="hero" href="@local(hero/dandruff.jpeg)" />
-    <x-card.phaserule type="Resolution" height="135">
-    <text>
-<x-card.normalrule>When this Monster takes a physical attack, </x-card.normalrule>
-<x-card.normalrule>the attacking Monster takes 1d6 damage.</x-card.normalrule>
+class implements CardComponents
+{
+    use DefaultCardAttributes;
+
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
+<x-card.phaserule type="Resolution" lines="3">
+<text>
+<x-card.normalrule>When this Monster takes a</x-card.normalrule>
+<x-card.normalrule>physical attack, the attacking</x-card.normalrule>
+<x-card.normalrule>Monster takes 1d6 damage.</x-card.normalrule>
 </text>
-    </x-card.phaserule>
-</x-card>
+</x-card.phaserule>
+
+HTML;
+    }
+};

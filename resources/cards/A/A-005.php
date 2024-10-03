@@ -1,14 +1,14 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
     #[Title('Community Center')]
-    #[Concepts('Facility')]
+    #[Concept('Facility')]
 #[FlavorText('Have a hot meal. Hang out with the boys.')]
 class implements CardComponents
 {

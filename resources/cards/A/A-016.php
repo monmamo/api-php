@@ -1,14 +1,14 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Large Brain')]
-    #[Concepts('Trait')]
+    #[Concept('Trait')]
 
     #[ImageCredit('Image by Lorc on Game-Icons.net')]
 

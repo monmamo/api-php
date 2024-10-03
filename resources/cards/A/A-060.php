@@ -1,15 +1,19 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
+use App\CardAttributes\LocalHeroImage;
+use App\CardAttributes\Prerequisites;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
+#[Prerequisites('Requires Pyros and Level 40.')]
 #[Title('Flamethrower Attack')]
-#[Concepts('Attack')]
+#[Concept('Attack')]
 #[FlavorText('Flamethrower the placeholder image.')]
+#[LocalHeroImage('hero/flamethrower.jpeg')]
 class implements CardComponents
 {
     use DefaultCardAttributes;
@@ -17,14 +21,20 @@ class implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <image x="0" y="0" class="hero" href="@local(hero/flamethrower.jpeg)" />
 
-    <text y="500" filter="url(#solid)">
-<x-card.smallrule>Requires Pyros and Level 40.</x-card.smallrule>
+<x-card.phaserule type="Command" y="550" lines="2">
+        <text >
 <x-card.normalrule>Discard any number of Fire cards </x-card.normalrule>
 <x-card.normalrule>attached to the Monster using this attack.</x-card.normalrule>
-<x-card.normalrule>Does 26d damage for each Fire card discarded.</x-card.normalrule>
+</text>
+    </x-card.phaserule>
+
+<x-card.phaserule type="Resolution" lines="2">
+        <text >
+<x-card.normalrule>Does 26d damage for </x-card.normalrule>
+<x-card.normalrule>each Fire card discarded.</x-card.normalrule>
     </text>
+    </x-card.phaserule>
 HTML;
     }
 };

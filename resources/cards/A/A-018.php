@@ -1,16 +1,16 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
-    // https://game-icons.net/1x1/delapouite/split-arrows.html
+// https://game-icons.net/1x1/delapouite/split-arrows.html
 
 return new
 #[Title('Evasiveness')]
-    #[Concepts('Trait')]
+    #[Concept('Trait')]
 #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
 
     class implements CardComponents

@@ -1,13 +1,13 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Welcome to Flavortext')]
-#[Concepts('Draw')]
+#[Concept('Draw')]
 class implements CardComponents
 {
     use DefaultCardAttributes;

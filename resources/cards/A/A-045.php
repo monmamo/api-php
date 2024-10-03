@@ -1,25 +1,37 @@
 <?php
 
-return [
-    'name' => 'Crooked Cop',
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Vendor', 'Criminal', 'Integrity:1d4'],
-    'ai' => true,
-    'image-prompt' => null,
+return new
+#[FlavorText(lines: 'The wall of silence is blue.', y: 450)]
+#[IsGeneratedImage]
+#[Concept('Mobster')]
+#[Concept('Integrity','1d4')]
+#[Title('Crooked Cop')]
+#[LocalHeroImage('A-045.jpg')]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    'flavor-text' => ['The wall of silence is blue.'],
-    'background' => \view('Vendor.background'),
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(A-045.jpg)" />
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.phaserule type="Draw" lines="6">
       <text >
-<x-card.normalrule>Choose an opponent. Choose</x-card.normalrule>
-<x-card.normalrule>random card from that opponent's hand.</x-card.normalrule>
-<x-card.normalrule>They must discard that card. Reveal cards</x-card.normalrule>
-<x-card.normalrule>from the top of your Library until an</x-card.normalrule>
+<x-card.normalrule>Choose an opponent. Choose a</x-card.normalrule>
+<x-card.normalrule>random card from that opponent's</x-card.normalrule>
+<x-card.normalrule>hand. They must discard that card. Reveal</x-card.normalrule>
+<x-card.normalrule>cards from the top of your Library until an</x-card.normalrule>
 <x-card.normalrule>Item card appears. Put that card in your hand.</x-card.normalrule>
 <x-card.normalrule>Shuffle the other cards back into your Library.</x-card.normalrule>
 </text>
 </x-card.phaserule>
-HTML
-];
+HTML;
+        }
+    };

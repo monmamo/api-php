@@ -1,21 +1,30 @@
 <?php
-return [
-    'name' => 'Brutality',
 
-    'concepts' => ['Trait'],
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'image-prompt' => null,
+return new
+#[Title('Brutality')]
 
-    'image-credit' => '',
+    #[Concept('Trait')]
+#[LocalHeroImage('TODO.png')]
 
-    'flavor-text' => [],
-    'background' => \view('Trait.background'),
-    'content' => <<<'HTML'
-<x-card.phaserule type="Resolution" y="135" height="135">
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
+<x-card.phaserule type="Resolution" lines="2">
     <text >
 <x-card.normalrule>When this Monster attacks,</x-card.normalrule>
 <x-card.normalrule>perform two rolls for every roll check.</x-card.normalrule>
     </text>
 </x-card.phaserule>
-HTML
-];
+HTML;
+        }
+    };

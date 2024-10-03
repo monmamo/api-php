@@ -1,15 +1,15 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Unknown Allergen')]
-    #[Concepts('Bane')]
+    #[Concept('Bane')]
     #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
     #[FlavorText('Get the tissues.')]
 

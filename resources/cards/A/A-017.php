@@ -1,14 +1,14 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 // inspiration: https://bulbapedia.bulbagarden.net/wiki/Caitlin_(Plasma_Blast_78)
 return new
 #[Title('Sleight of Hand')]
-#[Concepts('Draw')]
+#[Concept('Draw')]
     class implements CardComponents
     {
         use DefaultCardAttributes;

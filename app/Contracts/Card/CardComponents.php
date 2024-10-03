@@ -34,16 +34,6 @@ interface CardComponents extends HasName
     /**
      * @group nonary
      */
-    public function flavorText(): \Traversable;
-
-    /**
-     * @group nonary
-     */
-    public function flavorTextColor(): string;
-
-    /**
-     * @group nonary
-     */
     public function hero(): ?string;
 
     /**

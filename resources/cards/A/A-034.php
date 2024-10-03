@@ -1,23 +1,23 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\LocalHeroImage;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Gene Pool')]
 
-    #[Concepts('Setup')]
+    #[Concept('Setup')]
 
 #[LocalHeroImage('hero/gene-pool.jpg')] // https://www.freepik.com/free-photo/dna-representation-concept_44999157.htm
 
     #[ImageCredit('Image by freepik')]
 
-    #[FlavorText([])]
+
 
     class implements CardComponents
     {

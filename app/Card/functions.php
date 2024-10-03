@@ -2,8 +2,13 @@
 
 namespace App\Card;
 
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
 use App\CardNumber;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 
@@ -16,6 +21,62 @@ function localHeroUri(string $filename): string
     \assert(\file_exists($path), "Image file not found: {$path}");
     return 'data:image/jpg;base64,' . \base64_encode(\file_get_contents($path));
 };
+
+/**
+ * @implements \IteratorAggregate::getIterator
+ * @group nonary
+ */
+function makeNewCard(
+    string $card_name,
+    array $concepts,
+    array $flavor_text = [],
+    bool $no_content = false,
+    array $secondary_lines = [],
+    array $primary_lines = [],
+    ?string $background = null,
+): \Traversable {
+    yield '<?php';
+    yield 'return new';
+    yield \App\Strings\phpAttribute(Title::class, $card_name);
+
+    foreach ($concepts as $concept) {
+        yield \App\Strings\phpAttribute(Concept::class, $concept);
+    }
+    yield \App\Strings\phpAttribute(ImageCredit::class, 'Image by USER_NAME on SERVICE');
+
+    if (!$no_content) {
+        yield \App\Strings\phpAttribute(FlavorText::class, $flavor_text);
+        yield \App\Strings\phpAttribute(LocalHeroImage::class, 'TODO.png');
+    }
+
+    yield 'class implements \\App\\Contracts\\Card\\CardComponents {use \\App\\CardAttributes\\DefaultCardAttributes;';
+
+    yield \sprintf('public function background(){return %s;}', $background);
+
+    yield 'public function content():\\Traversable{yield <<<HTML';
+
+    if (!$no_content) {
+        $height = \count($secondary_lines) * 40 + \count($primary_lines) * 55;
+
+        yield "<x-card.cardrule height=\"{$height}\" >";
+
+        foreach ($secondary_lines as $line) {
+            yield "<x-card.smallrule>{$line}</x-card.smallrule>";
+        }
+
+        foreach ($primary_lines as $line) {
+            yield "<x-card.normalrule>{$line}</x-card.normalrule>";
+        }
+
+        if ($height === 0) {
+            yield '<x-card.normalrule>TODO</x-card.normalrule>';
+        }
+
+        yield '</x-card.cardrule>';
+    }
+    yield 'HTML;';
+    yield '}};';
+}
 
 /**
  * @group unary
@@ -46,70 +107,20 @@ function make($spec): CardComponents
             }
 
             /**
-             * @group nonary
-             */
-            public function concepts(): array
-            {
-                return $this->spec['concepts'] ?? [];
-            }
-
-            /**
-             * @group nonary
-             */
-            public function flavorText(): \Traversable
-            {
-                return new \ArrayIterator(Arr::wrap($this->spec['flavor-text'] ?? []));
-            }
-
-            /**
              * @implements \IteratorAggregate::getIterator
              * @group nonary
              */
             public function getIterator(): \Traversable
             {
-                $format_value = fn ($key, $value) => \sprintf("'%s' => %s,", $key, \json_encode($value));
-
-                yield '<?php';
-                yield 'return [';
-                yield $format_value('name', $this->card_name);
-                yield '';
-                yield $format_value('concepts', $this->concepts);
-                yield '';
-                yield $format_value('image-prompt', null);
-                yield '';
-                yield $format_value('image-credit', 'Image by USER_NAME on SERVICE');
-                yield '';
-
-                if (!$this->no_content) {
-                    yield $format_value('flavor-text', $this->flavor_text);
-                }
-                yield $format_value('background', $this->background);
-
-                yield "'content' => <<<HTML";
-
-                if (!$this->no_content) {
-                    yield '<image x="0" y="0" class="hero" href="@local(TODO.png)"  />';
-
-                    $height = \count($this->secondary_lines) * 40 + \count($this->primary_lines) * 55;
-
-                    yield "<x-card.cardrule height=\"{$height}\" >";
-
-                    foreach ($this->secondary_lines as $line) {
-                        yield "<x-card.smallrule>{$line}</x-card.smallrule>";
-                    }
-
-                    foreach ($this->primary_lines as $line) {
-                        yield "<x-card.normalrule>{$line}</x-card.normalrule>";
-                    }
-
-                    if ($height === 0) {
-                        yield '<x-card.normalrule>TODO</x-card.normalrule>';
-                    }
-
-                    yield '</x-card.cardrule>';
-                }
-                yield 'HTML';
-                yield '];';
+                yield from \App\Card\makeNewCard(
+                    card_name: $this->spec['card_name'],
+                    concepts: $this->spec['concepts'] ?? [],
+                    flavor_text: Arr::wrap($this->spec['flavor-text'] ?? []),
+                    no_content: $this->spec['no_content'] ?? false,
+                    secondary_lines: $this->spec['secondary_lines'] ?? [],
+                    primary_lines: $this->spec['primary_lines'] ?? [],
+                    background: $this->background(),
+                );
             }
 
             /**

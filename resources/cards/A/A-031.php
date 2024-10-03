@@ -1,24 +1,25 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\PrerequisiteY;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Dual Cranial Horns')]
 
-    #[Concepts('Trait', 'Physical')]
+    #[Concept('Trait')]
+#[Concept('Physical')]
 
     #[LocalHeroImage('A064.jpg')] // https://www.freepik.com/free-photo/closeup-shot-beautiful-thompson-s-gazelle_10292458.htm
 
     #[ImageCredit('Image by wirestock on Freepik')]
 
-    #[FlavorText([])]
+
     #[PrerequisiteY(465)]
 
     class implements CardComponents

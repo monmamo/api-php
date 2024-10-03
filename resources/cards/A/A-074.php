@@ -2,16 +2,16 @@
 
 // https://www.notion.so/monmamo/Shopping-Center-80a8d2a9d3764546a36f9bcea642fe4f?pvs=4#ee8b43f87ad949578920750b1fc2fe8b
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\IsGeneratedImage;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Shopping Center')]
-#[Concepts('Draw')]
+#[Concept('Draw')]
 #[IsGeneratedImage]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents

@@ -5,8 +5,8 @@
 @endpush
 
 <x-card  :$cardNumber card-name="99 Red Balloons" >
-    
-        'concepts' => ['Environment'], 
+
+        #[\App\Concept('Environment')]
         <x-card.phaserule type="Resolution" y="135" height="135">
             <text >
         <x-card.normalrule>For each Defense, roll 1d6. </x-card.normalrule>

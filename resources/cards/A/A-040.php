@@ -1,26 +1,38 @@
 <?php
 
-return [
-    'name' => 'Hardware Store',
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\CardAttributes\PrerequisiteY;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Vendor'],
+return new
+#[Title('Hardware Store')]
 
-    'image-prompt' => null,
+    #[Concept('Vendor')]
 
-    'image-credit' => 'Image by studio4rt on Freepik',
-    'image-source' => 'https://www.freepik.com/free-vector/tools-shop-showcase-assortment-painting-building-home-repair-renovation-carpentry-work-constructor-hardware-store-stand-with-housekeeping-equipment_25872060.htm',
-    'flavor-text' => [],
-    'background' => \view('Vendor.background'),
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(hero/hardware-store.jpg)"  />
+    #[LocalHeroImage('hero/hardware-store.jpg')]
+    #[ImageCredit('Image by studio4rt on Freepik')] // https://www.freepik.com/free-vector/tools-shop-showcase-assortment-painting-building-home-repair-renovation-carpentry-work-constructor-hardware-store-stand-with-housekeeping-equipment_25872060.htm
+
+#[PrerequisiteY(455)]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.phaserule type="Draw" lines="5">
     <text>
   <x-card.normalrule>Discard any number of cards from </x-card.normalrule>
-  <x-card.normalrule>your hand. For each card that you discarded, </x-card.normalrule>
-  <x-card.normalrule>search your Library for a Durable Item card. </x-card.normalrule>
-  <x-card.normalrule>Reveal it, then put it in your hand. </x-card.normalrule>
-  <x-card.normalrule>Shuffle your library.</x-card.normalrule>
+  <x-card.normalrule>your hand. For each card that you </x-card.normalrule>
+  <x-card.normalrule>discarded, search your Library for a </x-card.normalrule>
+  <x-card.normalrule>Durable Item card. Reveal it, then put </x-card.normalrule>
+  <x-card.normalrule>it in your hand. Shuffle your library.</x-card.normalrule>
     </text>
 </x-card.phaserule>
-HTML
-];
+HTML;
+        }
+    };

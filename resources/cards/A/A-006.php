@@ -1,16 +1,16 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\IsGeneratedImage;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
     #[Title('Biting')]
-    #[Concepts('Trait')]
+    #[Concept('Trait')]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
     #[FlavorText('What sharp teeth you have.')]

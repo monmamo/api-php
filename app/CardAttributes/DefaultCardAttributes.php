@@ -11,26 +11,13 @@ trait DefaultCardAttributes
 {
     private array $_concepts;
 
+    private $_flavor_text_attribute;
+
     private array $_flavor_text_lines;
 
     private array $_prerequisite_lines;
 
     private readonly \ReflectionClass $_reflection;
-
-    /**
-     * @group nonary
-     */
-    private function flavorTextLines(): array
-    {
-        return $this->_flavor_text_lines ??= \value(function () {
-            $attributes = $this->getAttributes(FlavorText::class);
-
-            if (\count($attributes) === 0) {
-                return [];
-            }
-            return $attributes[0]->getArguments();
-        });
-    }
 
     /**
      * @group nonary
@@ -66,21 +53,25 @@ trait DefaultCardAttributes
         return $this->_reflection ?? new \ReflectionClass($this);
     }
 
+    protected function withAttribute(string $class, $callback = null)
+    {
+        $attributes = $this->reflection()->getAttributes($class);
+
+        if (\count($attributes) > 0) {
+            $instance = $attributes[0]->newInstance();
+            return \is_null($callback) ? $instance : $callback($instance);
+        }
+    }
+
     /**
      * @group nonary
      */
     public function background()
     {
-        $attributes = $this->getAttributes(LocalBackgroundImage::class);
-
-        if (\count($attributes) > 0) {
-            return \App\Strings\html(
-                'image',
-                ['x' => 0, 'y' => 0,  'href' => \App\Card\localHeroUri($attributes[0]->getArguments()[0])],
-            );
-        }
-
-        return \view($this->concepts()[0] . '.background');
+        return $this->withAttribute(
+            LocalBackgroundImage::class,
+            fn ($attribute) => $attribute->render(),
+        ) ?? $this->concepts()[0]->background();
     }
 
     /**
@@ -97,14 +88,10 @@ trait DefaultCardAttributes
      */
     public function concepts(): array
     {
-        return $this->_concepts ??= \value(function () {
-            $attributes = $this->getAttributes(Concepts::class);
-
-            if (isset($attributes)) {
-                return $attributes[0]->getArguments();
-            }
-            return [];
-        });
+        return $this->_concepts ??= \array_map(
+            fn ($attribute) => $attribute->newInstance(),
+            $this->getAttributes(Concept::class),
+        );
     }
 
     /**
@@ -132,31 +119,9 @@ trait DefaultCardAttributes
     /**
      * @group nonary
      */
-    public function flavorText(): \Traversable
+    public function flavorTextAttribute(): ?FlavorText
     {
-        yield from $this->flavorTextLines();
-    }
-
-    /**
-     * @group nonary
-     */
-    public function flavorTextColor(): string
-    {
-        $attributes = $this->getAttributes(FlavorTextColor::class);
-
-        if (\count($attributes) > 0) {
-            return $attributes[0]->getArguments()[0];
-        }
-
-        return 'white';
-    }
-
-    /**
-     * @group nonary
-     */
-    public function flavorTextY(): int
-    {
-        return 510;
+        return $this->_flavor_text_attribute ??= $this->withAttribute(FlavorText::class);
     }
 
     /**
@@ -164,23 +129,12 @@ trait DefaultCardAttributes
      */
     public function hero(): ?string
     {
-        $attributes = $this->getAttributes(SvgHeroImage::class);
+        foreach ([SvgHeroImage::class, LocalHeroImage::class, ConceptIconHeroImage::class] as $class_fqn) {
+            $attributes = $this->getAttributes($class_fqn);
 
-        if (\count($attributes) > 0) {
-            return \App\Strings\html(
-                'svg',
-                ['class' => 'svg-hero'],
-                $attributes[0]->getArguments()[0],
-            );
-        }
-
-        $attributes = $this->getAttributes(LocalHeroImage::class);
-
-        if (\count($attributes) > 0) {
-            return \App\Strings\html(
-                'image',
-                ['x' => 0, 'y' => 0, 'class' => 'hero', 'href' => \App\Card\localHeroUri($attributes[0]->getArguments()[0])],
-            );
+            if (\count($attributes) > 0) {
+                return $attributes[0]->newInstance()->render();
+            }
         }
 
         return null;
@@ -191,6 +145,10 @@ trait DefaultCardAttributes
      */
     public function imageCredit(): ?string
     {
+        if (isset($this->imageCredit)) {
+            return $this->imageCredit;
+        }
+
         $attributes = $this->getAttributes(IsGeneratedImage::class);
 
         if (\count($attributes) > 0) {
@@ -232,7 +190,10 @@ trait DefaultCardAttributes
             return $attributes[0]->getArguments()[0];
         }
 
-        return 475 + 25 * \max(\count($this->flavorTextLines()), 1);
+        $flavor_text_attribute = $this->flavorTextAttribute();
+        $flavor_text_line_count = $flavor_text_attribute instanceof FlavorText ? \count($flavor_text_attribute->lines()) : 1;
+
+        return 475 + 25 * $flavor_text_line_count;
     }
 
     /**

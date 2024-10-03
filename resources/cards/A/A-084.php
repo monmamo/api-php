@@ -1,15 +1,15 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Bolt of Lightning')]
-#[Concepts('Attack')]
+#[Concept('Attack')]
 #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents
@@ -20,7 +20,7 @@ class implements CardComponents
     {
         yield <<<'HTML'
     <g class="svg-hero"><?= view('Energos.icon') ?></g>
-    
+
         <text y="500" filter="url(#solid)">
             <x-card.smallrule>Requires Energos.</x-card.smallrule>
 <x-card.normalrule>Discard all Electricity cards from the attacking </x-card.normalrule>

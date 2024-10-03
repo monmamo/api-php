@@ -1,17 +1,17 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\LocalHeroImage;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Wheel of Fortune')]
 
-    #[Concepts('Draw')]
+    #[Concept('Draw')]
 
     #[LocalHeroImage('hero/wheel-of-fortune.jpg')] // https://www.freepik.com/free-psd/casino-roulette-icon-render_23877079.htm
     #[ImageCredit('Image by freepik')]

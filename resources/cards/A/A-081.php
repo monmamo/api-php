@@ -2,16 +2,16 @@
 <?php
 // https://www.freepik.com/free-vector/recycle-colorful-geometric-gradient-logo-vector_27230675.htm
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Recycle')]
-#[Concepts('Draw')]
+#[Concept('Draw')]
 #[ImageCredit('Image by logturnal on Freepik')]
 #[FlavorText('Recycle today for a better upkeep phase tomorrow.')]
 class implements CardComponents

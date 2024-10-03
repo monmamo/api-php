@@ -1,16 +1,16 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\LocalHeroImage;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Busybody')]
 
-    #[Concepts('Draw')]
+    #[Concept('Draw')]
 
     #[LocalHeroImage('A025.jpeg')]
     #[ImageCredit('Image by Adobe: Stock #58908676')]

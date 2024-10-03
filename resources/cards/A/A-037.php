@@ -1,17 +1,18 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\LocalBackgroundImage;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 // inspiration: https://bulbapedia.bulbagarden.net/wiki/Canceling_Cologne_(Astral_Radiance_136)
 
 return new
-#[Concepts('Upkeep', 'Item')]
+#[Concept('Upkeep')]
+#[Concept('Item')]
 #[FlavorText('A scent that monsters can\'t compete with.')]
 #[ImageCredit('Image by Freepik')]
 #[LocalBackgroundImage('fullsize/cologne.jpg')]

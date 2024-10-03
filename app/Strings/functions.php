@@ -658,6 +658,14 @@ function clean(string $raw, ?\Closure $after_clean = null): string
     return $final_clean_value;
 }
 
+function phpAttribute($class_fqn, $value): string
+{
+    if (\is_null($value)) {
+        return '';
+    }
+    return \sprintf('#[%s(%s)]', $class_fqn, \json_encode($value));
+}
+
 /**
  * @group variadic
  */
@@ -689,4 +697,15 @@ function html(...$pieces): Htmlable
     }
 
     return new HtmlString($html);
+}
+
+function viewBox(float $width, float $height, float $x = 0, float $y = 0, float $horizontal_overflow = 0, float $vertical_overflow = 0): string
+{
+    return \sprintf(
+        '%d %d %d %d',
+        $x - $width * $horizontal_overflow,
+        $y - $height * $vertical_overflow,
+        $width * (1 + 2 * $horizontal_overflow),
+        $height * (1 + 2 * $vertical_overflow),
+    );
 }

@@ -1,15 +1,16 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImagePrompt;
 use App\CardAttributes\IsGeneratedImage;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
     #[Title('Bagman')]
-    #[Concepts('Vendor', 'Integrity:3')]
+    #[Concept('Vendor')]
+    #[Concept('Integrity','3')]
     #[IsGeneratedImage]
     #[ImagePrompt('dark man in a mask wearing a trenchcoat carrying a large tote bag')]
    class implements CardComponents

@@ -1,20 +1,18 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\CreditColor;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
-use App\CardAttributes\FlavorTextColor;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\ImagePrompt;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-    #[Concepts('Mana')]
+    #[Concept('Mana')]
     #[CreditColor('#000000')]
-    #[FlavorText('Because both adulting and monster battling are hard.')]
-    #[FlavorTextColor('#000000')]
+    #[FlavorText(lines:'Because both adulting and monster battling are hard.',color:'#000000')]
     #[ImageCredit('Image by macrovector on Freepik')]
     #[ImagePrompt('cup of coffee')]
     #[Title('Caffeine')]

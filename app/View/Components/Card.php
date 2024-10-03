@@ -11,8 +11,6 @@ use Illuminate\View\View;
 
 class Card extends Component //implements CardComponents
 {
-    private array $flavorTextLines;
-
     protected readonly CardNumber $card_number_parsed;
 
     public function __construct(
@@ -83,14 +81,6 @@ class Card extends Component //implements CardComponents
     public function creditColor(): string
     {
         return $this->spec->creditColor();
-    }
-
-    /**
-     * @group nonary
-     */
-    public function flavorTextColor(): string
-    {
-        return $this->spec->flavorTextColor();
     }
 
     /**

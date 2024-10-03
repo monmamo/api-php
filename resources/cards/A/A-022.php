@@ -1,15 +1,15 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Easter Egg')]
 
-    #[Concepts('Draw')]
+    #[Concept('Draw')]
 
     #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
 

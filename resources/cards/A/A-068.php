@@ -1,13 +1,13 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Intercept')]
-#[Concepts('Defense')]
+#[Concept('Defense')]
 class implements CardComponents
 {
     use DefaultCardAttributes;

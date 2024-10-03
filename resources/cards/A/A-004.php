@@ -1,15 +1,15 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
     #[Title('Alms for the Poor')]
-    #[Concepts('Draw')]
+    #[Concept('Draw')]
 
     #[FlavorText('Pay it forward even when it isn\'t cool.')]
 

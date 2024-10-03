@@ -1,16 +1,17 @@
 <?php
+
 // inspiration: PTCG Dark Primeape's \"Frenzy\" power
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Frenzy')]
-#[Concepts('Trait')]
+#[Concept('Trait')]
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents
@@ -19,7 +20,7 @@ class implements CardComponents
 
     public function content(): \Traversable
     {
-       yield <<<'HTML'
+        yield <<<'HTML'
 <x-card.phaserule type="Resolution" y="135" height="135">
     <text >
 <x-card.normalrule>If this Monster does any damage </x-card.normalrule>
@@ -28,5 +29,5 @@ class implements CardComponents
 </text>
 </x-card.phaserule>
 HTML;
-}
+    }
 };

@@ -1,23 +1,20 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 // image source https://game-icons.net/1x1/delapouite/spy.html
 
 return new
-    #[Title('Spy')]
-
-    #[Concepts('Mobster', 'Integrity:1d6')]
-
-    #[FlavorText('Loose lips sink championships.')]
-
-    #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
-
+#[Concept('Mobster')]
+#[Concept('Integrity','1d6')]
+#[FlavorText('Loose lips sink championships.')]
+#[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
+#[Title('Spy')]
     class implements CardComponents
     {
         use DefaultCardAttributes;

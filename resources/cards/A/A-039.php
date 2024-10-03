@@ -1,14 +1,14 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\Prerequisites;
 use App\CardAttributes\PrerequisiteY;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Concepts('Trait')]
+#[Concept('Trait')]
 #[Prerequisites('Requires Aquos.')]
 #[PrerequisiteY(400)]
 #[Title('Absorb Water')]

@@ -46,62 +46,20 @@ class CardSpec implements \IteratorAggregate, CardComponents
     }
 
     /**
-     * @group nonary
-     */
-    public function flavorText(): \Traversable
-    {
-        return new \ArrayIterator($this->flavor_text);
-    }
-
-    /**
      * @implements \IteratorAggregate::getIterator
      * @group nonary
      */
     public function getIterator(): \Traversable
     {
-        $format_value = fn ($key, $value) => \sprintf("'%s' => %s,", $key, \json_encode($value));
-
-        yield '<?php';
-        yield 'return [';
-        yield $format_value('name', $this->card_name);
-        yield '';
-        yield $format_value('concepts', $this->concepts);
-        yield '';
-        yield $format_value('image-prompt', null);
-        yield '';
-        yield $format_value('image-credit', 'Image by USER_NAME on SERVICE');
-        yield '';
-
-        if (!$this->no_content) {
-            yield $format_value('flavor-text', $this->flavor_text);
-        }
-        yield $format_value('background', $this->background);
-
-        yield "'content' => <<<HTML";
-
-        if (!$this->no_content) {
-            yield '<image x="0" y="0" class="hero" href="@local(TODO.png)"  />';
-
-            $height = \count($this->secondary_lines) * 40 + \count($this->primary_lines) * 55;
-
-            yield "<x-card.cardrule height=\"{$height}\" >";
-
-            foreach ($this->secondary_lines as $line) {
-                yield "<x-card.smallrule>{$line}</x-card.smallrule>";
-            }
-
-            foreach ($this->primary_lines as $line) {
-                yield "<x-card.normalrule>{$line}</x-card.normalrule>";
-            }
-
-            if ($height === 0) {
-                yield '<x-card.normalrule>TODO</x-card.normalrule>';
-            }
-
-            yield '</x-card.cardrule>';
-        }
-        yield 'HTML';
-        yield '];';
+        return \App\Card\makeNewCard(
+            card_name: $this->card_name,
+            concepts: $this->concepts,
+            flavor_text: $this->flavor_text,
+            no_content: $this->no_content,
+            secondary_lines: $this->secondary_lines,
+            primary_lines: $this->primary_lines,
+            background: $this->background,
+        );
     }
 
     /**

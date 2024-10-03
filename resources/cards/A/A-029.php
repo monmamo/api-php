@@ -1,16 +1,16 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\SvgHeroImage;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Oozing Effluvia')]
 
-    #[Concepts('Trait')]
+    #[Concept('Trait')]
 
     #[ImageCredit('Icon by Lorc from Game-Icons.net under CC BY 3.0')]
 

@@ -1,16 +1,17 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\PrerequisiteY;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Tackling')]
 
-    #[Concepts('Trait', 'Physical')]
+    #[Concept('Trait')]
+#[Concept('Physical')]
 
     #[ImageCredit('Icon by M. Oki Orlando via The Noun Project')]
 

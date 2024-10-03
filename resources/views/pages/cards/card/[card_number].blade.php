@@ -7,7 +7,7 @@ if (!\Illuminate\Support\Facades\View::exists("$card_number")) {
 }
 
 $card_number_object =  \App\CardNumber::make($card_number);
-$spec = require $card_number_object->getSpecFilePath();
+$spec = \App\Card\make($card_number);
 
 $previous = $card_number_object->makePrevious();
 $next = $card_number_object->makeNext();
@@ -26,7 +26,7 @@ $next = $card_number_object->makeNext();
 ?>
 <html>
   <head>
-    <title><?= $card_number ?> <?= $spec['name'] ?></title>
+    <title><?= $card_number ?> <?= $spec->name() ?></title>
   </head>
 <body>
 <div class="item buttons">

@@ -1,15 +1,18 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('TITLE')]
-#[Concepts('Bystander', 'Cumulative', 'Male', 'Integrity:1d4')]
+#[Concept('Bystander')]
+#[Concept('Cumulative')]
+#[Concept( 'Male')]
+#[Concept(  'Integrity','1d4')]
 #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
 #[FlavorText('I\'ve got a driver and that\'s a start.')]
 class implements CardComponents

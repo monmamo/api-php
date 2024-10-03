@@ -1,16 +1,16 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Boss')]
 
-    #[Concepts('Mobster')]
+    #[Concept('Mobster')]
 
     #[ImageCredit('Elements of image from Game-Icons.net')]
 

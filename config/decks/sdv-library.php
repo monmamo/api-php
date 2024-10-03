@@ -4,11 +4,12 @@ return [
     'name' => 'SDV Library',
 
     'cards' => [
-        'A-003' => 2, // Agility
         'A-004' => 2, // Alms for the Poor
+        'A-005' => 1, // Community Center
         'A-006' => 2, // Biting
         'A-007' => 1, // Spy
         'A-010' => 1, // Private Event
+        'A-013' => 1, // Baker's Dozen
         'A-014' => 2, // Big-Box Store
         'A-018' => 2, // Evasiveness
         'A-020' => 2, // Alertness

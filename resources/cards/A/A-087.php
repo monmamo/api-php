@@ -2,16 +2,19 @@
 
 // inspiration: Fieldworker PTCG card https://bulbapedia.bulbagarden.net/wiki/Fieldworker_(EX_Legend_Maker_73)
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('TITLE')]
-#[Concepts('Bystander', 'Male', 'Cumulative', 'Integrity:1')]
+#[Concept('Bystander')]
+#[Concept('Male')]
+#[Concept( 'Cumulative')]
+ #[Concept( 'Integrity','1')]
 #[ImageCredit('Image by Freepik')]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents
@@ -21,7 +24,7 @@ class implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <image x="0" y="0" class="hero" href="@local(hero/fieldworker.jpg)"  />
+    #[\App\CardAttributes\LocalHeroImage('hero/fieldworker.jpg')]
 
         <text y="500" filter="url(#solid)">
             <x-card.smallrule>A player may have any number of Fieldworkers on the Battlefield.</x-card.smallrule>

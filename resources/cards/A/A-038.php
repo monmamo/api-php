@@ -1,23 +1,24 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\LocalHeroImage;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Body Block')]
 
-    #[Concepts('Defense', 'Physical')]
+    #[Concept('Defense')]
+#[Concept('Physical')]
 
 #[LocalHeroImage('AS02.jpg')] // https://www.freepik.com/free-vector/jiu-jitsu-athletes-fighting_10369936.htm
 
     #[ImageCredit('Image by Freepik')]
 
-    #[FlavorText([])]
+
 
     class implements CardComponents
     {

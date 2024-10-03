@@ -3,16 +3,17 @@
 // Compare Hand Scope (A-115).
 // https://www.freepik.com/free-vector/flying-drone-camera-cartoon-vector-icon-illustration-object-technology-icon-concept-isolated-flat_25847529.htm
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Spy Drone')]
-#[Concepts('Drone', 'Item', 'DamageCapacity:5', 'Level:5', 'Size:5', 'Speed:25')]
+#[Concept('Drone')]
+#[Concept('Item', 'DamageCapacity:5', 'Level:5', 'Size:5', 'Speed:25')]
 #[ImageCredit('Image by catalyststuff on Freepik')]
 #[FlavorText('Here\'s lookin\' at you, kid.')]
 class implements CardComponents

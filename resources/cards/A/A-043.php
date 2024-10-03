@@ -1,21 +1,38 @@
 <?php
 
-return [
-    'name' => 'Creepy Guy in the Alley',
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Vendor', 'Integrity'],
+return new
+#[Title('Creepy Guy in the Alley')]
 
-    'image-prompt' => null,
+    #[Concept('Vendor', 'Integrity')]
 
-    'image-credit' => 'Image by USER_NAME on SERVICE',
+    #[LocalHeroImage('TODO.png')]
 
-    'flavor-text' => ['Psst. I got a great deal for you.'],
-    'background' => \view('Vendor.background'),
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
-<x-card.cardrule height="150" >
+    #[ImageCredit('Image by USER_NAME on SERVICE')]
+
+    #[FlavorText('Psst. I got a great deal for you.')]
+
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
+<x-card.phaserule type="Draw" lines="2">
+<text >
 <x-card.normalrule>Draw two cards</x-card.normalrule>
 <x-card.normalrule>from the bottom of your Library.</x-card.normalrule>
-</x-card.cardrule>
-HTML
-];
+</text>
+</x-card.phaserule>
+
+HTML;
+        }
+    };

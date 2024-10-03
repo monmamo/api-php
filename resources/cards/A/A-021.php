@@ -1,14 +1,15 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Breeder')]
 
-    #[Concepts('Vendor', 'Integrity:1d4')]
+    #[Concept('Vendor')]
+#[Concept('Integrity','1d4')]
 
     class implements CardComponents
     {

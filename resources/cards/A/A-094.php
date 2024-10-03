@@ -1,15 +1,15 @@
 <?php
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Binge')]
-#[Concepts('Draw')]
+#[Concept('Draw')]
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents
@@ -18,8 +18,8 @@ class implements CardComponents
 
     public function content(): \Traversable
     {
-       yield <<<'HTML'
-   
+        yield <<<'HTML'
+
     <text y="500" filter="url(#solid)">
         <x-card.smallrule>Put this card on the Battlefield.</x-card.smallrule>
 <x-card.smallrule>This card will remain on the Battlefield until it is discarded by rule.</x-card.smallrule>
@@ -38,5 +38,5 @@ class implements CardComponents
 </text>
 </x-card.phaserule>
 HTML;
-}
+    }
 };

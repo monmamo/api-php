@@ -18,6 +18,9 @@ enum Color: string
     case CharacterColor = '#282828';
     case CharacterGradientBottom = '#010101';
     case CharacterGradientTop = '#4f4f4f';
+    case Defense = '#00006D';
+    case DefenseGradientBottom = '#000039';
+    case DefenseGradientTop = '#0000A1';
     case DrawBackgroundColor = '#653294';
     case Energos = '#FFD700';
     case EnvironmentColor = '#003300';

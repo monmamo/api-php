@@ -2,17 +2,19 @@
 
 // inspiration: Hooligans Jim and Cas PTCG card https://bulbapedia.bulbagarden.net/wiki/Hooligans_Jim_%26_Cas_(Dark_Explorers_95)
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\IsGeneratedImage;
 use App\CardAttributes\LocalHeroImage;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Enforcer')]
-#[Concepts('Mobster', 'Male', 'Integrity:1d4')]
+#[Concept('Mobster')]
+#[Concept('Male')]
+#[Concept('Integrity','1d4')]
 #[IsGeneratedImage]
 #[LocalHeroImage('A072.png')]
 #[FlavorText('FLAVOR_TEXT')]
