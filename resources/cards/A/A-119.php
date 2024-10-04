@@ -1,22 +1,26 @@
 <?php
+// https://www.freepik.com/free-photo/brain-booster-pills-container-still-life_65114716.htm
 
-return [
-    'name' => 'Healing Elixir',
+return new
+#[\App\GeneralAttributes\Title('Healing Elixir')]
 
-    'concepts' => ['Item', 'Healing'],
+    #[\App\Concept('Item')]
+    #[\App\Concept( 'Healing')]
+    #[\App\CardAttributes\LocalHeroImage('A119.jpg')]
 
-    'image-prompt' => null,
-    'image-source' => 'https://www.freepik.com/free-photo/brain-booster-pills-container-still-life_65114716.htm',
-    'image-credit' => 'Image by freepik',
+    #[\App\CardAttributes\ImageCredit('Image by freepik')]
 
-    'flavor-text' => ['Does a monster good!'],
-    'background' => \view('Item.background'),
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(A119.jpg)"  />
-<x-card.phaserule type="Upkeep"  lines="3"><text >    
+    #[\App\CardAttributes\FlavorText('Does a monster good!')]
+
+    class implements \App\Contracts\Card\CardComponents {
+use \App\CardAttributes\DefaultCardAttributes;
+public function content(): \Traversable    {
+yield <<<'HTML'
+<x-card.phaserule type="Upkeep"  lines="3"><text >
 <x-card.normalrule>Discard any number of cards from</x-card.normalrule>
 <x-card.normalrule>your hand. For each card you discarded, </x-card.normalrule>
 <x-card.normalrule>remove 5 damage from one Monster.</x-card.normalrule>
-</text></x-card.phaserule> 
-HTML
-];
+</text></x-card.phaserule>
+HTML;
+}
+};

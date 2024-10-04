@@ -3,6 +3,7 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\LocalHeroImage;
+use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -14,7 +15,7 @@ return new
 
     #[LocalHeroImage('hero/hardware-store.jpg')]
     #[ImageCredit('Image by studio4rt on Freepik')] // https://www.freepik.com/free-vector/tools-shop-showcase-assortment-painting-building-home-repair-renovation-carpentry-work-constructor-hardware-store-stand-with-housekeeping-equipment_25872060.htm
-    #[\App\CardAttributes\Prerequisites(y:455)]
+    #[Prerequisites(y: 455)]
 
     class implements CardComponents
     {

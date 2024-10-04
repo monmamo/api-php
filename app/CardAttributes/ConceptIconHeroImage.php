@@ -2,10 +2,8 @@
 
 namespace App\CardAttributes;
 
-use Illuminate\Contracts\Support\Renderable;
-
 #[\Attribute(\Attribute::TARGET_CLASS)]
-class ConceptIconHeroImage implements Renderable
+class ConceptIconHeroImage extends SvgHeroImage
 {
     /**
      * Constructor.
@@ -18,19 +16,9 @@ class ConceptIconHeroImage implements Renderable
      */
     public function __construct(
         public string $slug,
-    ) {}
-
-    /**
-     * Get content as a string of HTML.
-     *
-     * @return string
-     */
-    public function render()
-    {
-        return \App\Strings\html(
-            'g',
-            ['class' => 'svg-hero'],
-            \view($this->slug . '.icon'),
+    ) {
+        parent::__construct(
+            code: \view($this->slug . '.icon'),
         );
     }
 }

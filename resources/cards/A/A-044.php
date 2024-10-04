@@ -3,6 +3,7 @@
 use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -12,7 +13,7 @@ return new
 #[ImageCredit('Icon by Carl Olsen on Game-Icons.net under CC BY 3.0')]
 #[Concept('Defense')]
 #[Title('Fire Shield')]
-#[\App\CardAttributes\Prerequisites(lines:'Requires Pyros.',y:460)]
+#[Prerequisites(lines: 'Requires Pyros.', y: 460)]
     class implements CardComponents
     {
         use DefaultCardAttributes;

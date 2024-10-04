@@ -1,5 +1,6 @@
 <?php
 
+use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
@@ -8,9 +9,9 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Concept('Trait')]
-#[\App\CardAttributes\Prerequisites(lines:'Requires Aquos.',y:400)]
+#[Prerequisites(lines: 'Requires Aquos.', y: 400)]
 #[Title('Absorb Water')]
-#[\App\CardAttributes\ConceptIconHeroImage('Aquos')]
+#[ConceptIconHeroImage('Aquos')]
     class implements CardComponents
     {
         use DefaultCardAttributes;

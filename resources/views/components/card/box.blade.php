@@ -1,11 +1,14 @@
 @props(['slug','rectFill'=>'#FFFFFF'])
 <?php
 extract(config("card-design.$slug")); // sets $x, $y, $width, $height
+assert(isset($x));
+assert(isset($y));
+assert(isset($width));
 $height = config("card-design.$slug.height");
 
 $rectFill = match(true) {
     is_string($rectFill) => $rectFill,
-    $rectFill === false => null,    
+    $rectFill === false => null,
 };
 
 $rect_attributes = [

@@ -11,9 +11,9 @@ return new
 #[Title('Biolure')]
 
     #[Concept('Trait')]
-    #[Concept( 'Lure')]
+    #[Concept('Lure')]
 
-#[Prerequisites(y:400)]
+#[Prerequisites(y: 400)]
     #[LocalHeroImage('TODO.png')]
 
     class implements CardComponents

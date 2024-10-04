@@ -1,18 +1,21 @@
 <?php
 
-return [
-    'name' => 'Insurance',
+return new
+#[\App\GeneralAttributes\Title('Insurance')]
 
     'concepts' => [],
 
-    'image-prompt' => null,
 
-    'image-credit' => 'Image by USER_NAME on SERVICE',
 
-    'flavor-text' => [],
+    #[\App\CardAttributes\ImageCredit('Image by USER_NAME on SERVICE')]
 
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
+
+
+    class implements \App\Contracts\Card\CardComponents {
+use \App\CardAttributes\DefaultCardAttributes;
+public function content(): \Traversable    {
+yield <<<'HTML'
+#[\App\CardAttributes\LocalHeroImage('TODO.png')]
 <x-card.cardrule height="245" >
 <x-card.smallrule>Put this card on the Battlefield before</x-card.smallrule>
 <x-card.smallrule>a Catastrophe card is played.</x-card.smallrule>
@@ -20,5 +23,6 @@ return [
 <x-card.normalrule>you may shuffle all or part of your</x-card.normalrule>
 <x-card.normalrule>Discard into your Library.</x-card.normalrule>
 </x-card.cardrule>
-HTML
-];
+HTML;
+}
+};

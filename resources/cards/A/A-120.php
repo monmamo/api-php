@@ -1,19 +1,18 @@
 <?php
+// https://www.freepik.com/free-psd/skin-product-isolated_158243292.htm
 
-return [
-    'name' => 'Healing Salve',
-
-    'concepts' => ['Item', 'healing'],
-
-    'image-prompt' => 'green jar of healing ointment',
-    'image-source' => 'https://www.freepik.com/free-psd/skin-product-isolated_158243292.htm',
-    'image-credit' => 'Image by freepik',
-
-    'flavor-text' => ['Does a monster good!'],
-    'background' => \view('Item.background'),
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(A120.png)" />
-
+return new
+    #[\App\GeneralAttributes\Title('Healing Salve')]
+    #[\App\Concept('Item')]
+    #[\App\Concept( 'Healing')]
+    #[\App\CardAttributes\LocalHeroImage('A120.jpg')]
+    #[\App\CardAttributes\ImagePrompt('green jar of healing ointment')]
+    #[\App\CardAttributes\ImageCredit('Image by freepik')]
+    #[\App\CardAttributes\FlavorText('Does a monster good!')]
+    class implements \App\Contracts\Card\CardComponents {
+use \App\CardAttributes\DefaultCardAttributes;
+public function content(): \Traversable    {
+yield <<<'HTML'
 <x-card.phaserule type="Upkeep" y="600" lines="1">
     <text>
         <x-card.normalrule>Attach this card to a Monster.</x-card.normalrule>
@@ -27,5 +26,6 @@ return [
         <x-card.normalrule>remove 3d6 damage from it.</x-card.normalrule>
     </text>
 </x-card.phaserule>
-HTML
-];
+HTML;
+}
+};

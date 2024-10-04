@@ -2,15 +2,15 @@
 
 // https://thenounproject.com/browse/icons/term/equals/ _original_width:847 _original_height:1058.75
 
-use App\CardAttributes\Concepts;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Equalizer 3')]
-#[Concepts('Draw')]
+#[Concept('Draw')]
 #[ImageCredit('Image by amantaka from Noun Project')]
 class implements CardComponents
 {

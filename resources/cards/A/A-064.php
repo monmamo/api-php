@@ -1,7 +1,9 @@
 <?php
 
+use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -10,8 +12,8 @@ return new
 #[Title('Energy Shield')]
 #[Concept('Defense')]
 #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
-#[\App\CardAttributes\ConceptIconHeroImage('Energos')]
-#[\App\CardAttributes\Prerequisites(lines:'Requires Energos.',y:460)]
+#[ConceptIconHeroImage('Energos')]
+#[Prerequisites(lines: 'Requires Energos.', y: 460)]
 class implements CardComponents
 {
     use DefaultCardAttributes;
@@ -28,6 +30,5 @@ class implements CardComponents
 </text>
 </x-card.phaserule>
 HTML;
-        }
-    };
-        
+    }
+};

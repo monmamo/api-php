@@ -1,8 +1,9 @@
 <?php
 
+use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
+use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -11,8 +12,8 @@ return new
 #[Title('Water Shield')]
 #[Concept('Defense')]
 #[ImageCredit('IMAGE_CREDIT')]
-#[\App\CardAttributes\ConceptIconHeroImage('Aquos')]
-#[\App\CardAttributes\Prerequisites(lines:'Requires Aquos.',y:460)]
+#[ConceptIconHeroImage('Aquos')]
+#[Prerequisites(lines: 'Requires Aquos.', y: 460)]
 
 class implements CardComponents
 {
@@ -30,6 +31,5 @@ class implements CardComponents
 </text>
 </x-card.phaserule>
 HTML;
-        }
-    };
-        
+    }
+};

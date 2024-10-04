@@ -8,6 +8,7 @@ use App\GeneralAttributes\Title;
 use App\Methods\Make\MakeFromConstructor;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Facades\Storage;
+use Traversable;
 
 #[\Attribute(\Attribute::TARGET_CLASS + \Attribute::IS_REPEATABLE)]
 class Concept implements HasIcon, Renderable
@@ -56,15 +57,33 @@ class Concept implements HasIcon, Renderable
     /**
      * @group unary
      */
-    private function _php(string $name): \Traversable
+    private function _php(string $name): Traversable
     {
         return require $this->_file("{$name}.php");
     }
 
     /**
+     * @group nonary
+     */
+    private function _renderBladePieces(): Traversable
+    {
+        yield \App\Strings\html('rect', ['x' => '0', 'y' => '0', 'width' => '512', 'height' => '640', 'fill' => '#ffffff', 'fill-opacity' => '50%']);
+        yield \App\Strings\html('g', ['fill' => $this->icon_color, 'fill-opacity' => 1], $this->icon());
+
+        if (isset($badge)) {
+            yield \App\Strings\html('g', ['class' => 'concept-icon-badge', 'fill' => '#000000', 'fill-opacity' => '1', 'filter' => 'url(#icon-overlay-shadow)'], \view($badge . '.icon'));
+        }
+
+        if ($this->value !== false) {
+            yield \App\Strings\html('text', ['class' => 'value', 'x' => '256px', 'y' => '440px', 'filter' => 'url(#icon-overlay-shadow)'], $this->value); //  'textLength' => '100%'
+        }
+        yield \App\Strings\html('text', ['class' => 'gloss', 'x' => '256px', 'y' => '590px'], $this->staticonLabel());
+    }
+
+    /**
      * @group unary
      */
-    private function _text(string $name): \Traversable
+    private function _text(string $name): Traversable
     {
         return new \ArrayIterator(\file($this->_file("{$name}.txt")));
     }
@@ -72,7 +91,7 @@ class Concept implements HasIcon, Renderable
     /**
      * @group nonary
      */
-    public static function all(): \Traversable
+    public static function all(): Traversable
     {
         return \collect(Storage::disk('concepts')->directories())->sort();
     }
@@ -110,19 +129,6 @@ class Concept implements HasIcon, Renderable
      */
     public function render()
     {
-        $blade
-            = \App\Strings\html('rect', ['x' => '0', 'y' => '0', 'width' => '512', 'height' => '640', 'fill' => '#ffffff', 'fill-opacity' => '50%'])
-            . \App\Strings\html('g', ['fill' => $this->icon_color, 'fill-opacity' => 1], $this->icon());
-
-        if (isset($badge)) {
-            $blade .= \App\Strings\html('g', ['class' => 'concept-icon-badge', 'fill' => '#000000', 'fill-opacity' => '1', 'filter' => 'url(#icon-overlay-shadow)'], \view($badge . '.icon'));
-        }
-
-        if ($this->value !== false) {
-            $blade .= \App\Strings\html('text', ['class' => 'value', 'x' => '256px', 'y' => '440px', 'filter' => 'url(#icon-overlay-shadow)'], $this->value); //  'textLength' => '100%'
-        }
-        $blade .= \App\Strings\html('text', ['class' => 'gloss', 'x' => '256px', 'y' => '590px'], $this->staticonLabel());
-
         $overflow_ratio = 0.25;
 
         $html = \App\Strings\html(
@@ -137,7 +143,11 @@ class Concept implements HasIcon, Renderable
                 'viewBox' => \App\Strings\viewBox(x: 0, y: 0, width: 512, height: 640, horizontal_overflow: $overflow_ratio),
                 'xmlns' => 'http://www.w3.org/2000/svg',
             ],
-            \App\Strings\html('g', ['class' => 'stat'], $blade),
+            \App\Strings\html(
+                'g',
+                ['class' => 'stat'],
+                \App\Strings\render(...$this->_renderBladePieces()),
+            ),
         );
 
         self::$group_x += \config('card-design.concept.icon-size');
@@ -155,7 +165,7 @@ class Concept implements HasIcon, Renderable
      *
      * @group nonary
      */
-    public function standardRule(): \Traversable
+    public function standardRule(): Traversable
     {
         $path = $this->_file('standard-rule.txt');
 

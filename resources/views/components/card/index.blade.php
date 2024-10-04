@@ -1,13 +1,29 @@
 <?php
+// no at-props here, they're defined in \App\View\Components\Card
 
+use App\CardNumber;
+use App\Contracts\Card\CardComponents;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\View\Component;
+use Illuminate\View\View;
 
-// no @props here, they're defined in \App\View\Components\Card
-// :width="config('card-design.width')" :height="config('card-design.height')"
 $rules_dy = 0;
+
+$background = $spec->background() ?? match (true) {
+    (\count($concepts) === 0) => '<'.'x-card.background'.' />',
+    \Illuminate\Support\Facades\View::exists($concepts[0] . '.background') => $concepts[0][0] . '.background',
+    default =>  '<'.'x-card.background'.' />'
+};
 ?>
 
-<x-svg :$dx :$dy :id="$cardNumber" :width="config('card-design.width')" :height="config('card-design.height')">
+<x-svg
+    :$dx
+    :$dy
+    :id="$cardNumber"
+    :width="config('card-design.width')"
+    :height="config('card-design.height')"
+>
 
     <title><?= $cardName ?></title>
 
@@ -17,12 +33,18 @@ $rules_dy = 0;
     @endonce
     @endunless
 
-    {{-- //////////////////////// --}}
-
     <rect id="absolute-bounds" x="0" y="0" width="@cardspec(width)" height="@cardspec(height)" fill-opacity="0" stroke="#808080" rx="75" />
 
     <?php
-    echo $background();
+    echo \App\Strings\render($background);
+
+    if (!\is_null($image_credit = $spec->imageCredit())) {
+        echo \App\Strings\html(
+            'text',
+            ['x' => '50%', 'y' => '50', 'class' => 'credit', 'text-anchor' => 'middle', 'alignment-baseline' => 'baseline',  'fill' => $creditColor()],
+            $image_credit,
+        )->toHtml();
+    }
 
     // The bodybox is the viewbox minus the titlebox.
     $bodybox_width = config("card-design.viewbox.width");
@@ -44,13 +66,12 @@ $rules_dy = 0;
             echo Blade::render($hero, []);
         }
 
-echo transform(
-    $spec->prerequisitesAttribute(),
-    fn($attribute) => $attribute->render()
-);
+        echo transform(
+            $spec->prerequisitesAttribute(),
+            fn($attribute) => $attribute->render()
+        );
 
-        foreach ($spec->content() as $piece)
-            echo Blade::render($piece, []);
+        echo \App\Strings\render(...$spec->content());
         ?>
     </svg>
 
@@ -59,19 +80,23 @@ echo transform(
         $text_x =  config('card-design.titlebox.text_x')(false);
 
         // Concept icons.
-        \App\Concept::setGroupCount(\count($spec->concepts())) ;
+        \App\Concept::setGroupCount(\count($spec->concepts()));
 
-        foreach ($spec->concepts() as $index => $concept) {
-            echo $concept->render();
+echo \App\Strings\render(...$spec->concepts());
+
+        foreach ($spec->getAttributes(\App\CardAttributes\PhaseRule::class) as $rule) {
+            echo $rule->newInstance()->render();
         }
+
+
         ?>
         <text x="<?= $text_x ?>" y="<?= config('card-design.concept.box-height') + config('card-design.titlebox.title-height') * 0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="baseline" fill-opacity="{{$titleboxOpacity}}"><?= $cardName ?></text>
     </x-card.box>
 
     <?php
-        $flavor_text_attribute =     $spec->flavorTextAttribute();
+    $flavor_text_attribute =     $spec->flavorTextAttribute();
 
-        if ($flavor_text_attribute instanceof  \Illuminate\Contracts\Support\Renderable)
+    if ($flavor_text_attribute instanceof  \Illuminate\Contracts\Support\Renderable)
         echo $flavor_text_attribute->render();
 
     $credit_y =  config('card-design.trimbox.y') + config('card-design.trimbox.height') - 5;

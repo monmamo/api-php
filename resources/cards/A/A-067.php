@@ -11,8 +11,8 @@ return new
 #[Title('TITLE')]
 #[Concept('Bystander')]
 #[Concept('Cumulative')]
-#[Concept( 'Male')]
-#[Concept(  'Integrity','1d4')]
+#[Concept('Male')]
+#[Concept('Integrity', '1d4')]
 #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
 #[FlavorText('I\'ve got a driver and that\'s a start.')]
 class implements CardComponents

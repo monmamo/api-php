@@ -14,7 +14,7 @@ return new
 #[Title('Enforcer')]
 #[Concept('Mobster')]
 #[Concept('Male')]
-#[Concept('Integrity','1d4')]
+#[Concept('Integrity', '1d4')]
 #[IsGeneratedImage]
 #[LocalHeroImage('A072.png')]
 #[FlavorText('FLAVOR_TEXT')]

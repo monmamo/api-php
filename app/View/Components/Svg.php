@@ -12,13 +12,6 @@ class Svg extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public int $height,
-        public int $width,
-        public ?string $id = null,
-        public int $dx = 0,
-        public int $dy = 0,
-        public ?int $x = null,
-        public ?int $y = null,
     ) {}
 
     /**

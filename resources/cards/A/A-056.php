@@ -1,7 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageCredit;
+use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -11,8 +11,7 @@ return new
 
     #[Concept('Trait')]
 
-#[\App\CardAttributes\Prerequisites(y:400)]
-
+#[Prerequisites(y: 400)]
 
     class implements CardComponents
     {

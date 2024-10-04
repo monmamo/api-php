@@ -10,7 +10,7 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Bagman')]
     #[Concept('Vendor')]
-    #[Concept('Integrity','3')]
+    #[Concept('Integrity', '3')]
     #[IsGeneratedImage]
     #[ImagePrompt('dark man in a mask wearing a trenchcoat carrying a large tote bag')]
    class implements CardComponents

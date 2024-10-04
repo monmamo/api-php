@@ -2,10 +2,10 @@
 
 namespace App\CardAttributes;
 
-use Illuminate\Contracts\Support\Renderable;
+use App\Renderable\Svg;
 
 #[\Attribute(\Attribute::TARGET_CLASS)]
-class SvgHeroImage implements Renderable
+class SvgHeroImage extends Svg
 {
     /**
      * Constructor.
@@ -18,20 +18,23 @@ class SvgHeroImage implements Renderable
      */
     public function __construct(
         public string $code,
-        public ?string $viewbox = null,
-    ) {}
+        public string $viewbox = '0 0 512 512',
+    ) {
+        static $hero_config;
+        $hero_config ??= \config('card-design.hero');
+        \extract($hero_config);
 
-    /**
-     * Get content as a string of HTML.
-     *
-     * @return string
-     */
-    public function render()
-    {
-        return \App\Strings\html(
-            'g',
-            ['class' => 'svg-hero'],
-            $this->code,
+        parent::__construct(
+            x: $x + ($width - $height) / 2,
+            y: $y,
+            width: $height,
+            height: $height,
+            viewBox: $this->viewbox,
+            svg: \App\Strings\html(
+                'g',
+                ['fill' => '#ffffff', 'fill-opacity' => 1],
+                $this->code,
+            ),
         );
     }
 }

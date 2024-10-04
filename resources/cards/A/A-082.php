@@ -10,7 +10,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Farmer\'s Market')]
 #[Concept('Vendor')]
-#[Concept('Integrity','1d4')]
+#[Concept('Integrity', '1d4')]
 #[IsGeneratedImage]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents

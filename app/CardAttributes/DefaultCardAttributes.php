@@ -4,43 +4,21 @@ namespace App\CardAttributes;
 
 use App\CardNumber;
 use App\Concept;
+use App\Concerns\Reflection;
 use App\GeneralAttributes\Title;
 
 #[\Attribute(\Attribute::TARGET_CLASS)]
 trait DefaultCardAttributes
 {
+    use Reflection;
+
     private array $_concepts;
 
     private $_flavor_text_attribute;
 
     private array $_flavor_text_lines;
 
-
-    private readonly \ReflectionClass $_reflection;
-
-
-    protected function getAttributes(string $class): array
-    {
-        return $this->reflection()->getAttributes($class);
-    }
-
-    /**
-     * @group nonary
-     */
-    protected function reflection(): \ReflectionClass
-    {
-        return $this->_reflection ?? new \ReflectionClass($this);
-    }
-
-    protected function withAttribute(string $class, $callback = null)
-    {
-        $attributes = $this->reflection()->getAttributes($class);
-
-        if (\count($attributes) > 0) {
-            $instance = $attributes[0]->newInstance();
-            return \is_null($callback) ? $instance : $callback($instance);
-        }
-    }
+    private $_prerequisites_attribute;
 
     /**
      * @group nonary
@@ -49,7 +27,7 @@ trait DefaultCardAttributes
     {
         return $this->withAttribute(
             LocalBackgroundImage::class,
-            fn($attribute) => $attribute->render(),
+            fn ($attribute) => $attribute->render(),
         ) ?? $this->concepts()[0]->background();
     }
 
@@ -68,7 +46,7 @@ trait DefaultCardAttributes
     public function concepts(): array
     {
         return $this->_concepts ??= \array_map(
-            fn($attribute) => $attribute->newInstance(),
+            fn ($attribute) => $attribute->newInstance(),
             $this->getAttributes(Concept::class),
         );
     }
@@ -151,26 +129,13 @@ trait DefaultCardAttributes
     }
 
     /**
-     * @implements \App\Contracts\HasName
-     */
-    public function set(): string
-    {
-        $attributes = $this->getAttributes(CardSet::class);
-        return \count($attributes) > 0 ? $attributes[0]->getArguments()[0] : 'Unknown';
-    }
-
-
-
-    private  $_prerequisites_attribute;
-
-    /**
      * @group nonary
      */
-    public function prerequisitesAttribute(): ?\App\CardAttributes\Prerequisites
+    public function prerequisitesAttribute(): ?Prerequisites
     {
-        return $this->_prerequisites_attribute ??=  \value(function () {
+        return $this->_prerequisites_attribute ??= \value(function () {
             $prerequisites = [];
-            $y = 475 + 25 * (transform($this->flavorTextAttribute(), fn($attribute): int => count($attribute->lines())) ?? 1);
+            $y = 475 + 25 * (\transform($this->flavorTextAttribute(), fn ($attribute): int => \count($attribute->lines())) ?? 1);
             $color = '#000000';
             $attributes = $this->getAttributes(Prerequisites::class);
 
@@ -185,7 +150,16 @@ trait DefaultCardAttributes
                 \array_push($prerequisites, ...Concept::make($slug)->standardRule());
             }
 
-            return new \App\CardAttributes\Prerequisites(lines: $prerequisites, y: $y, color: $color);
+            return new Prerequisites(lines: $prerequisites, y: $y, color: $color);
         });
+    }
+
+    /**
+     * @implements \App\Contracts\HasName
+     */
+    public function set(): string
+    {
+        $attributes = $this->getAttributes(CardSet::class);
+        return \count($attributes) > 0 ? $attributes[0]->getArguments()[0] : 'Unknown';
     }
 }

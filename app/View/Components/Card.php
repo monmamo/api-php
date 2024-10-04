@@ -4,8 +4,6 @@ namespace App\View\Components;
 
 use App\CardNumber;
 use App\Contracts\Card\CardComponents;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Support\Facades\Blade;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
@@ -24,47 +22,6 @@ class Card extends Component //implements CardComponents
         public bool $omitCommon = false,
     ) {
         $this->cardName ??= $this->spec->name();
-    }
-
-    /**
-     * @group nonary
-     */
-    private function _backgroundPieces(): \Traversable
-    {
-        $background = $this->spec->background() ?? match (true) {
-            \count($this->concepts) === 0 => '<x-card.background />',
-            \Illuminate\Support\Facades\View::exists($this->concepts[0] . '.background') => $this->concepts[0][0] . '.background',
-            default => '<x-card.background />'
-        };
-
-        yield match (true) {
-            $background instanceof View => $background,
-            $background instanceof Htmlable => $background->toHtml(),
-            $background instanceof \Stringable => (string) $background,
-            \is_string($background) => Blade::render($background, []),
-            \is_null($background) => null
-        };
-
-        if (!\is_null($image_credit = $this->spec->imageCredit())) {
-            yield \App\Strings\html(
-                'text',
-                ['x' => '50%', 'y' => '50', 'class' => 'credit', 'text-anchor' => 'middle', 'alignment-baseline' => 'baseline',  'fill' => $this->creditColor()],
-                $image_credit,
-            );
-        }
-    }
-
-    /**
-     * @group nonary
-     */
-    public function background()
-    {
-        $html = '';
-
-        foreach ($this->_backgroundPieces() as $piece) {
-            $html .= $piece;
-        }
-        return $html;
     }
 
     /**
@@ -106,7 +63,6 @@ class Card extends Component //implements CardComponents
     {
         return $this->cardName;
     }
-
 
     /**
      * Get the view / contents that represent the component.

@@ -1,18 +1,21 @@
 <?php
 
-return [
-    'name' => 'First Aid Kit',
+return new
+#[\App\GeneralAttributes\Title('First Aid Kit')]
 
-    'concepts' => ['Vendor'],
+    #[\App\Concept('Vendor')]
 
-    'image-prompt' => null,
 
-    'image-credit' => null,
 
-    'flavor-text' => [],
+    #[\App\CardAttributes\ImageCredit(null)]
+
+
     'background' => \view('Vendor.background'),
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(hero/first-aid-kit.jpg)"  />
+    class implements \App\Contracts\Card\CardComponents {
+use \App\CardAttributes\DefaultCardAttributes;
+public function content(): \Traversable    {
+yield <<<'HTML'
+#[\App\CardAttributes\LocalHeroImage('hero/first-aid-kit.jpg')]
 <x-card.phaserule type="Draw" height="165"><text>
 <x-card.normalrule>Search your Library or Discard </x-card.normalrule>
 <x-card.normalrule>for a Healing Item card.</x-card.normalrule>
@@ -20,5 +23,6 @@ return [
 <x-card.smallrule>If you searched your Library, shuffle it.</x-card.smallrule>
 </text></x-card.phaserule>
 
-HTML
-];
+HTML;
+}
+};

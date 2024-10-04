@@ -1,17 +1,29 @@
 <?php
 
-return [
-    'name' => 'Head Coach',
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Master', 'Coach', 'Male', 'Integrity:2d6'],
-    'ai' => true,
-    'image-prompt' => null,
-    'image-null' => null,
+return new
+#[Title('Head Coach')]
 
-    'flavor-text' => [],
-    'background' => \view('Bystander.background'),
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(A-055.png)"  />
+    #[Concept('Master')]
+    #[Concept('Coach')]
+    #[Concept('Male')]
+    #[Concept('Integrity', '2d6')]
+    #[IsGeneratedImage]
+    #[LocalHeroImage('A-055.png')]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
+
 
 <text y="500" filter="url(#solid)">
         <x-card.smallrule>Limit 1 per player on Battlefield. </x-card.smallrule>
@@ -28,5 +40,6 @@ return [
 <x-card.normalrule>at the bottom of your Library.</x-card.normalrule>
 </text>
 </x-card.phaserule>
-HTML
-];
+HTML;
+        }
+    };

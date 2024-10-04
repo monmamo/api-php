@@ -10,7 +10,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Big-Box Store')]
     #[Concept('Vendor')]
-#[Concept('Integrity','1d4')]
+#[Concept('Integrity', '1d4')]
     #[ImageCredit('Image by teravector on Freepik')]
     #[FlavorText('Expect more. Live better. Simplify life. Get more done.')]
     class implements CardComponents

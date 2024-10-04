@@ -1,18 +1,24 @@
 <?php
 
-return [
-    'name' => 'Nurse',
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\IsGeneratedImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Bystander', 'Female', 'Integrity:1d6'],
+return new
+#[Title('Nurse')]
+#[Concept('Bystander')]
+#[Concept('Female')]
+#[Concept('Integrity', '1d6')]
+#[IsGeneratedImage]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    'ai' => true,
-    'image-prompt' => null,
-
-    'image-credit' => null,
-
-    'flavor-text' => [],
-    'background' => \view('Bystander.background'),
-    'content' => <<<'HTML'
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <image x="0" y="0" class="hero" href="@local(A188.png)" />
 
     <text y="460" filter="url(#solid)">
@@ -40,5 +46,6 @@ return [
 </text>
 </x-card.phaserule>
 
-HTML
-];
+HTML;
+        }
+    };

@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\LocalHeroImage;
 use App\Concept;
@@ -17,8 +16,6 @@ return new
 #[LocalHeroImage('AS02.jpg')] // https://www.freepik.com/free-vector/jiu-jitsu-athletes-fighting_10369936.htm
 
     #[ImageCredit('Image by Freepik')]
-
-
 
     class implements CardComponents
     {

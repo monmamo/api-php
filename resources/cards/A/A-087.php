@@ -13,8 +13,8 @@ return new
 #[Title('TITLE')]
 #[Concept('Bystander')]
 #[Concept('Male')]
-#[Concept( 'Cumulative')]
- #[Concept( 'Integrity','1')]
+#[Concept('Cumulative')]
+ #[Concept('Integrity', '1')]
 #[ImageCredit('Image by Freepik')]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents

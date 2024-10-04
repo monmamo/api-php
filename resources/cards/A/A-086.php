@@ -1,8 +1,10 @@
 <?php
 
+use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
+use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -12,8 +14,8 @@ return new
 #[Concept('Trait')]
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('FLAVOR_TEXT')]
-#[\App\CardAttributes\ConceptIconHeroImage('Aquos')]
-#[\App\CardAttributes\Prerequisites(lines:['Requires Aquos.','Use when this Monster attacks or defends.'],y:460)]
+#[ConceptIconHeroImage('Aquos')]
+#[Prerequisites(lines: ['Requires Aquos.', 'Use when this Monster attacks or defends.'], y: 460)]
 class implements CardComponents
 {
     use DefaultCardAttributes;

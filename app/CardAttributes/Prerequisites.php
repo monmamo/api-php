@@ -12,7 +12,7 @@ class Prerequisites implements Renderable
 
     public function __construct(
         $lines = [],
-        public readonly int $y = 500, 
+        public readonly int $y = 500,
         public readonly string $color = '#000000',
     ) {
         $this->lines = Arr::wrap($lines);
@@ -37,8 +37,8 @@ class Prerequisites implements Renderable
                 'tspan',
                 [
                     'x' => '50%',
-                    'dy' => config('card-design.secondary_rule_height'),
-                    'class'=>"smallrule"
+                    'dy' => \config('card-design.secondary_rule_height'),
+                    'class' => 'smallrule',
                 ],
                 $line,
             );
@@ -47,9 +47,9 @@ class Prerequisites implements Renderable
         if (\count($tspans) > 0) {
             return \App\Strings\html(
                 'text',
-                [ 'y' => $this->y, 'filter' => 'url(#solid)'],
+                ['y' => $this->y, 'filter' => 'url(#solid)'],
                 ...$tspans,
-            );
+            )->toHtml();
         }
 
         return '';

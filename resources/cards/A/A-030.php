@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\IsGeneratedImage;
 use App\CardAttributes\LocalHeroImage;
 use App\Concept;
@@ -15,8 +14,6 @@ return new
 #[Concept('Physical')]
     #[IsGeneratedImage]
     #[LocalHeroImage('AT32.png')]
-
-
 
     class implements CardComponents
     {

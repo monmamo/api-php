@@ -1,20 +1,31 @@
 <?php
 
-return [
-    'name' => 'Offensive Coordinator',
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Bystander', 'Coach', 'Male', 'Integrity:1d6'],
-    'ai' => true,
-    'image-prompt' => null,
-    'image-source' => 'https://www.freepik.com/free-photo/football-trainer-teaching-his-pupils_32248887.htm',
+return new
+#[Title('Offensive Coordinator')]
 
-    'flavor-text' => [],
-    'background' => \view('Bystander.background'),
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(A189.jpg)"  />
+#[Concept('Bystander')]
+#[Concept('Coach')]
+ #[Concept('Male')]
+  #[Concept('Integrity', '1d6')]
+#[IsGeneratedImage]
 
+#[LocalHeroImage('A189.jpg')] // https://www.freepik.com/free-photo/football-trainer-teaching-his-pupils_32248887.htm
 
-<text y="575" filter="url(#solid)">
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
+<text y="500" filter="url(#solid)">
 <x-card.smallrule>Limit 1 per player on Battlefield. </x-card.smallrule>
 <x-card.smallrule>You must already have a Head Coach on the Battlefield</x-card.smallrule>
 <x-card.smallrule>to put this card on the Battlefield.</x-card.smallrule>
@@ -23,5 +34,6 @@ return [
 <x-card.normalrule>You may put the Attack cards you use</x-card.normalrule>
 <x-card.normalrule>at the bottom of your Library.</x-card.normalrule>
 </text>
-HTML
-];
+HTML;
+        }
+    };

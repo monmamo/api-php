@@ -10,7 +10,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Sheriff')]
 #[Concept('Bystander')]
-#[Concept('Integrity','2d6')]
+#[Concept('Integrity', '2d6')]
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents

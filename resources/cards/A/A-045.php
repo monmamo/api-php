@@ -12,7 +12,7 @@ return new
 #[FlavorText(lines: 'The wall of silence is blue.', y: 450)]
 #[IsGeneratedImage]
 #[Concept('Mobster')]
-#[Concept('Integrity','1d4')]
+#[Concept('Integrity', '1d4')]
 #[Title('Crooked Cop')]
 #[LocalHeroImage('A-045.jpg')]
     class implements CardComponents

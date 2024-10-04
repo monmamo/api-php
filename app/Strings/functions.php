@@ -14,13 +14,14 @@ use App\Facades\Handler;
 use App\GeneralAttributes\Gloss;
 use App\Options\NullOption;
 use Illuminate\Contracts\Support\Htmlable;
+use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Query\Builder as GenericBuilder;
 use Illuminate\Support\Arr;
-use Illuminate\Support\HtmlString;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\View\ComponentAttributeBag;
 use Illuminate\View\ComponentSlot;
 use SebastianBergmann\Exporter\Exporter;
@@ -97,8 +98,8 @@ function cat($glue = '', $prefix = '', $suffix = '', $transform = null): \Closur
  * @group unary
  *
  * @uses \app (Laravel) Gets an item from the available container instance.
- * @uses \json_encode (native) Returns the JSON representation of a value.
  * @uses \get_class (native) Returns the name of the class of an object.
+ * @uses \json_encode (native) Returns the JSON representation of a value.
  * @uses \sprintf (native) Returns a formatted string.
  */
 function objectRepresentation(object $value, bool $brief = false): string
@@ -171,11 +172,11 @@ function sql(mixed $other): string
  * @group factory
  * @group unary
  *
- * @uses \App\Strings\unwrap
- * @uses \implode (native) Joins array elements with a string.
- * @uses \array_map (native) Applies the callback to the elements of the given arrays.
  * @uses \App\Enums\Environments::rescue
  * @uses \App\Facades\Handler::glowWarning
+ * @uses \App\Strings\unwrap
+ * @uses \array_map (native) Applies the callback to the elements of the given arrays.
+ * @uses \implode (native) Joins array elements with a string.
  * @uses \is_null (native) Returns whether a variable is null.
  * @uses \is_numeric (native) Returns whether or not a variable is a number or a numeric string.
  * @uses \is_string (native) Returns whether a variable is a string.
@@ -261,8 +262,8 @@ function unwrapThen(callable $callback): \Closure
 /**
  * @group unary
  *
- * @uses \current
  * @uses \count (native) Returns the number of items in an array or Countable object.
+ * @uses \current
  * @uses \ReflectionAttribute::getArguments
  * @uses \ReflectionClass::__construct
  * @uses \ReflectionClass::getAttributes
@@ -299,8 +300,8 @@ function selectorRepresentation(mixed $value): string
  *
  * @uses \App\Strings\objectRepresentation
  * @uses \gettype (native) Returns the type of a variable.
- * @uses \strtolower (native) Makes a string lowercase.
  * @uses \json_encode (native) Returns the JSON representation of a value.
+ * @uses \strtolower (native) Makes a string lowercase.
  */
 function valueRepresentation(mixed $value, bool $verbose = false): string
 {
@@ -401,11 +402,11 @@ function titleUnwrapped(mixed $source_value): string
 /**
  * @group binary
  *
- * @uses \strlen (native) Returns the length of the given string.
+ * @uses \is_string (native) Returns whether a variable is a string.
  * @uses \str_ends_with (native) Returns whether the haystack string ends with the given needle.
  * @uses \str_starts_with (native) Returns whether the haystack string begins with the given needle.
+ * @uses \strlen (native) Returns the length of the given string.
  * @uses \substr (native) Returns part of a string.
- * @uses \is_string (native) Returns whether a variable is a string.
  */
 function trim(string $source, ?string $prefix = null, ?string $suffix = null, bool $assert_not_empty = false): string
 {
@@ -431,8 +432,8 @@ function trim(string $source, ?string $prefix = null, ?string $suffix = null, bo
  *
  * @group unary
  *
- * @uses \is_null
  * @uses \App\Strings\trim
+ * @uses \is_null
  */
 function nullIfEmpty(?string $string): ?string
 {
@@ -445,8 +446,8 @@ function nullIfEmpty(?string $string): ?string
 /**
  * @group unary
  *
- * @uses \assert (native) If enabled, and the given assertion is false, throws an exception.
  * @uses \App\Strings\trim
+ * @uses \assert (native) If enabled, and the given assertion is false, throws an exception.
  *
  * @throws \AssertionError
  */
@@ -465,8 +466,8 @@ function assertStringNotEmpty(string $string): void
  * @param string $haystack
  * @param iterable<string>|string $needles
  *
- * @uses \App\Strings\unwrap
  * @uses \App\Options\wrap
+ * @uses \App\Strings\unwrap
  */
 function startsWith(mixed $haystack, mixed $needles): bool
 {
@@ -539,9 +540,9 @@ function is(mixed $value, mixed $pattern): bool
 /**
  * @group variadic
  *
+ * @uses \array_filter
  * @uses \Illuminate\Support\Arr::flatten
  * @uses \implode (native) Joins array elements with a string.
- * @uses \array_filter
  */
 function message(...$pieces): string
 {
@@ -563,8 +564,8 @@ function isJson(string $string): bool
 /**
  * @group unary
  *
- * @uses \str_starts_with
  * @uses \str_ends_with
+ * @uses \str_starts_with
  */
 function isPlainString(string $string): bool
 {
@@ -578,8 +579,8 @@ function isPlainString(string $string): bool
  *
  * @param null|mixed $value
  *
- * @uses \App\Options\unwrap
  * @uses \app
+ * @uses \App\Options\unwrap
  */
 function unknown($value = null): string
 {
@@ -669,13 +670,61 @@ function phpAttribute($class_fqn, $value): string
 /**
  * @group variadic
  */
+function render(...$pieces): string
+{
+    $result = '';
+
+    foreach ($pieces as $piece) {
+        $result .= match (true) {
+            $piece instanceof Htmlable => $piece->toHtml(),
+            $piece instanceof Renderable => \App\Strings\render($piece->render()), // Renderable::render says it returns a string but doesn't enforce it.
+            $piece instanceof \Stringable => (string) $piece,
+            \is_string($piece) => Blade::render($piece, []),
+            \is_null($piece) => ''
+        };
+    }
+    return $result;
+}
+
+/**
+ * @group variadic
+ */
 function html(...$pieces): Htmlable
 {
+    if (\count($pieces) === 0) {
+        return new class() implements Htmlable
+        {
+            public function toHtml(): string
+            {
+                return '';
+            }
+        };
+    }
+
+    if (\count($pieces) === 1 && $pieces[0] instanceof Htmlable) {
+        return $pieces[0];
+    }
+
+    if (\count($pieces) === 1 && $pieces[0] instanceof Renderable) {
+        return new class($pieces[0]) implements Htmlable
+        {
+            public function __construct(
+                protected Renderable $renderable,
+            ) {}
+
+            public function toHtml(): string
+            {
+                return $this->renderable->render();
+            }
+        };
+    }
+
     $content = [];
     $attributes = [];
 
     foreach ($pieces as $index => $piece) {
         if ($index === 0) {
+            \assert(\is_string($piece));
             continue;
         }
 
@@ -691,12 +740,39 @@ function html(...$pieces): Htmlable
     }
 
     if (\count($content) === 0) {
-        $html = \sprintf('<%s %s />', $pieces[0], new ComponentAttributeBag($attributes));
-    } else {
-        $html = \sprintf('<%s %s>%s</%s>', $pieces[0], new ComponentAttributeBag($attributes), \implode('', $content), $pieces[0]);
+        return new class($pieces[0], $attributes) implements Htmlable
+        {
+            public function __construct(
+                public string $tag,
+                public array $attributes,
+            ) {}
+
+            public function toHtml(): string
+            {
+                return \sprintf('<%s %s />', $this->tag, new ComponentAttributeBag($this->attributes));
+            }
+        };
     }
 
-    return new HtmlString($html);
+    return new class($pieces[0], $attributes, $content) implements Htmlable
+    {
+        public function __construct(
+            public string $tag,
+            public array $attributes,
+            public array $content,
+        ) {}
+
+        public function toHtml(): string
+        {
+            return \sprintf(
+                '<%s %s>%s</%s>',
+                $this->tag,
+                new ComponentAttributeBag($this->attributes),
+                \App\Strings\render(...$this->content),
+                $this->tag,
+            );
+        }
+    };
 }
 
 function viewBox(float $width, float $height, float $x = 0, float $y = 0, float $horizontal_overflow = 0, float $vertical_overflow = 0): string

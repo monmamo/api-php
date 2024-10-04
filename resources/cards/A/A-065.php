@@ -5,6 +5,7 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -14,7 +15,7 @@ return new
 #[Concept('Trait')]
 #[IsGeneratedImage]
 #[FlavorText('Halitosis (A-110) is the least of your problems.')]
-#[\App\CardAttributes\Prerequisites(lines:'Requires Pyros.',y:460)]
+#[Prerequisites(lines: 'Requires Pyros.', y: 460)]
 class implements CardComponents
 {
     use DefaultCardAttributes;

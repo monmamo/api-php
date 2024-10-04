@@ -1,22 +1,35 @@
 <?php
 
-return [
-    'name' => 'Taxman',
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Mobster', 'Integrity:1d4'],
+return new
+#[Title('Taxman')]
 
-    'image-prompt' => null,
+    #[Concept('Mobster')]
+    #[Concept('Integrity', '2')]
 
-    'image-credit' => 'Image by macrovector on Freepik',
+    #[ImageCredit('Image by macrovector on Freepik')]
 
-    'flavor-text' => ['Declare the pennies on your eyes.'],
-    'background' => \view('Mobster.background'),
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(hero/taxman.jpg)"  />
+    #[FlavorText('Declare the pennies on your eyes.')]
+
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
+#[\App\CardAttributes\LocalHeroImage('hero/taxman.jpg')]
 <x-card.phaserule type="Resolution" lines="2">
     <text >
 <x-card.normalrule>Each player discards a card</x-card.normalrule><x-card.normalrule>from his hand or Library.</x-card.normalrule>
 </text>
 </x-card.phaserule>
-HTML
-];
+HTML;
+        }
+    };

@@ -9,7 +9,7 @@ return new
 #[Title('Breeder')]
 
     #[Concept('Vendor')]
-#[Concept('Integrity','1d4')]
+#[Concept('Integrity', '1d4')]
 
     class implements CardComponents
     {

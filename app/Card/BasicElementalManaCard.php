@@ -3,41 +3,42 @@
 namespace App\Card;
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
-use App\SvgIcon;
-
-
+use Illuminate\Support\Facades\Blade;
 
 class BasicElementalManaCard implements CardComponents
 {
     use DefaultCardAttributes;
 
+    /**
+     * @group nonary
+     */
     public function __construct(
         public readonly string $viewBox,
-        public readonly string $svg,
+        public $svg,
         public readonly string $title,
         public readonly string $imageCredit,
     ) {}
 
+    /**
+     * @group nonary
+     */
     public function background(): ?string
     {
-        $width = $height = 700; // config('card-design.viewbox.height') ;
+        $width = $height = 700;
 
-        $x = (\config('card-design.width') - $width) / 2;
-        $y = \config('card-design.viewbox.y');
-
-        $icon = new SvgIcon(
-            x: $x,
-            y: $y,
-            width: $width,
-            height: $height,
-            viewBox: $this->viewBox,
-            svg: $this->svg,
+        return Blade::render(
+            '<x-card.background fill="#000000" /><x-svg id="background-icon" :$x :$y :$height :$width :$viewBox>{{$svg}}</x-svg>',
+            [
+                'x' => (\config('card-design.width') - $width) / 2,
+                'y' => \config('card-design.viewbox.y'),
+                'height' => $height,
+                'width' => $width,
+                'viewBox' => $this->viewBox,
+                'svg' => $this->svg,
+            ],
         );
-
-        return '<x-card.background fill="#000000" />' . $icon->render();
     }
 
     /**
@@ -48,6 +49,9 @@ class BasicElementalManaCard implements CardComponents
         return [new Concept('Mana')];
     }
 
+    /**
+     * @group nonary
+     */
     public function name(): string
     {
         return $this->title;

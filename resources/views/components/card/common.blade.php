@@ -83,7 +83,7 @@ $debug_opacity = match(true) {
 
     rect.titlebox {
         fill: white;
-        
+
     }
 
     image.hero {
@@ -92,14 +92,6 @@ $debug_opacity = match(true) {
         text-align: center;
         height: 450px;
         width:610px;
-    }
-
-    .svg-hero {
-        position: absolute;            
-        transform: translate(@cardspec(hero.icon.translate.x)px,@cardspec(hero.icon.translate.y)px) scale(@cardspec(hero.icon.scale));
-        margin: 0;
-        fill: #ffffff;
-        fill-opacity: 1;
     }
 
     .standard-background-icon {

@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\LocalHeroImage;
 use App\Concept;
@@ -16,8 +15,6 @@ return new
 #[LocalHeroImage('hero/gene-pool.jpg')] // https://www.freepik.com/free-photo/dna-representation-concept_44999157.htm
 
     #[ImageCredit('Image by freepik')]
-
-
 
     class implements CardComponents
     {

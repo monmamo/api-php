@@ -12,7 +12,7 @@ use App\GeneralAttributes\Title;
 return new
     #[Concept('Mana')]
     #[CreditColor('#000000')]
-    #[FlavorText(lines:'Because both adulting and monster battling are hard.',color:'#000000')]
+    #[FlavorText(lines: 'Because both adulting and monster battling are hard.', color: '#000000')]
     #[ImageCredit('Image by macrovector on Freepik')]
     #[ImagePrompt('cup of coffee')]
     #[Title('Caffeine')]

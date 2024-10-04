@@ -1,6 +1,8 @@
 <?php
 
+use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -8,8 +10,8 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Flash of Lightning')]
     #[Concept('Skill')]
-    #[\App\CardAttributes\ConceptIconHeroImage('Energos')]
-    #[\App\CardAttributes\Prerequisites(lines:'Requires Energos.',y:430)]
+    #[ConceptIconHeroImage('Energos')]
+    #[Prerequisites(lines: 'Requires Energos.', y: 430)]
     class implements CardComponents
     {
         use DefaultCardAttributes;
