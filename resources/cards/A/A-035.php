@@ -2,20 +2,16 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\PrerequisiteY;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Tackling')]
-
-    #[Concept('Trait')]
+#[Concept('Trait')]
 #[Concept('Physical')]
-
-    #[ImageCredit('Icon by M. Oki Orlando via The Noun Project')]
-
-#[PrerequisiteY(420)]
+#[ImageCredit('Icon by M. Oki Orlando via The Noun Project')]
+#[\App\CardAttributes\Prerequisites(y:420)]
 
     class implements CardComponents
     {

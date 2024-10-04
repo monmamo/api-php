@@ -8,6 +8,8 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Flash of Lightning')]
     #[Concept('Skill')]
+    #[\App\CardAttributes\ConceptIconHeroImage('Energos')]
+    #[\App\CardAttributes\Prerequisites(lines:'Requires Energos.',y:430)]
     class implements CardComponents
     {
         use DefaultCardAttributes;
@@ -15,12 +17,6 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-        <g class="svg-hero"><?= view('Energos.icon') ?></g>
-
-    <text y="500" filter="url(#solid)">
-    <x-card.smallrule>Requires Energos.</x-card.smallrule>
-</text>
-
 <x-card.phaserule type="Resolution" lines="6"><text>
 <x-card.normalrule>Discard all Electricity cards attached</x-card.normalrule>
     <x-card.normalrule>to this Monster. Each other Monster</x-card.normalrule>

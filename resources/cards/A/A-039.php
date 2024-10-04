@@ -2,16 +2,15 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\Prerequisites;
-use App\CardAttributes\PrerequisiteY;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Concept('Trait')]
-#[Prerequisites('Requires Aquos.')]
-#[PrerequisiteY(400)]
+#[\App\CardAttributes\Prerequisites(lines:'Requires Aquos.',y:400)]
 #[Title('Absorb Water')]
+#[\App\CardAttributes\ConceptIconHeroImage('Aquos')]
     class implements CardComponents
     {
         use DefaultCardAttributes;
@@ -19,7 +18,6 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<g class="svg-hero"><?= view('Aquos.icon') ?></g>
 
 <x-card.phaserule type="Resolution" height="175">
     <text >

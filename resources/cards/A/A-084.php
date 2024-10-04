@@ -11,7 +11,8 @@ return new
 #[Title('Bolt of Lightning')]
 #[Concept('Attack')]
 #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
-#[FlavorText('FLAVOR_TEXT')]
+#[\App\CardAttributes\ConceptIconHeroImage('Energos')]
+#[\App\CardAttributes\Prerequisites(lines:'Requires Energos.',y:460)]
 class implements CardComponents
 {
     use DefaultCardAttributes;
@@ -19,15 +20,14 @@ class implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <g class="svg-hero"><?= view('Energos.icon') ?></g>
-
-        <text y="500" filter="url(#solid)">
-            <x-card.smallrule>Requires Energos.</x-card.smallrule>
-<x-card.normalrule>Discard all Electricity cards from the attacking </x-card.normalrule>
-<x-card.normalrule>Monster. Roll 2d6 for each Electricity card </x-card.normalrule>
-<x-card.normalrule>discarded from this Monster. </x-card.normalrule>
+<x-card.phaserule type="Resolution" lines="4">
+    <text >
+<x-card.normalrule>Discard all Electricity cards from the</x-card.normalrule>
+<x-card.normalrule>attacking Monster. Roll 2d6 for each </x-card.normalrule>
+<x-card.normalrule>Electricity card discarded from this Monster. </x-card.normalrule>
 <x-card.normalrule>The damage done is the sum of these rolls.</x-card.normalrule>
         </text>
+        </x-card.phaserule>
 HTML;
     }
 };

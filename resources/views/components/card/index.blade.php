@@ -44,21 +44,10 @@ $rules_dy = 0;
             echo Blade::render($hero, []);
         }
 
-        $y = $spec->prerequisiteY();
-
-        echo "<text y=\"{$y}\" filter=\"url(#solid)\">";
-        foreach ($spec->prerequisites() as $line) {
-            echo \App\Strings\html(
-                'tspan',
-                [
-                    'x' => '50%',
-                    'dy' => config('card-design.secondary_rule_height'),
-                    'class'=>"smallrule"
-                ],
-                $line,
-            );
-        }
-        echo '</text>';
+echo transform(
+    $spec->prerequisitesAttribute(),
+    fn($attribute) => $attribute->render()
+);
 
         foreach ($spec->content() as $piece)
             echo Blade::render($piece, []);

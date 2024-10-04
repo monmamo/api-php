@@ -107,13 +107,6 @@ class Card extends Component //implements CardComponents
         return $this->cardName;
     }
 
-    /**
-     * @group nonary
-     */
-    public function prerequisites(): \Traversable
-    {
-        return $this->spec->prerequisites();
-    }
 
     /**
      * Get the view / contents that represent the component.

@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\PrerequisiteY;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -12,9 +11,8 @@ return new
 
     #[Concept('Trait')]
 
-#[PrerequisiteY(400)]
+#[\App\CardAttributes\Prerequisites(y:400)]
 
-    #[ImageCredit('')]
 
     class implements CardComponents
     {

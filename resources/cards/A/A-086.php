@@ -12,6 +12,8 @@ return new
 #[Concept('Trait')]
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('FLAVOR_TEXT')]
+#[\App\CardAttributes\ConceptIconHeroImage('Aquos')]
+#[\App\CardAttributes\Prerequisites(lines:['Requires Aquos.','Use when this Monster attacks or defends.'],y:460)]
 class implements CardComponents
 {
     use DefaultCardAttributes;
@@ -19,11 +21,9 @@ class implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <g class="svg-hero"><?= view('Aquos.icon') ?></g>
-
-    <text y="500" filter="url(#solid)">
-        <x-card.smallrule>Requires Aquos.</x-card.smallrule>
-<x-card.smallrule>Use when this Monster attacks or defends.</x-card.smallrule>
+<x-card.phaserule type="Resolution" lines="4">
+    <text >
+<x-card.smallrule></x-card.smallrule>
 <x-card.normalrule>When resolving, discard 1d6 Water cards</x-card.normalrule>
 <x-card.normalrule>from this Monster. The defending or attacking </x-card.normalrule>
 <x-card.normalrule>Monster takes 1d6 damage for each Water </x-card.normalrule>

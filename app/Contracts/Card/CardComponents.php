@@ -44,10 +44,5 @@ interface CardComponents extends HasName
     /**
      * @group nonary
      */
-    public function prerequisites(): \Traversable;
-
-    /**
-     * @group nonary
-     */
     public function set(): string;
 }

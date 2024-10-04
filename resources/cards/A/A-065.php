@@ -14,6 +14,7 @@ return new
 #[Concept('Trait')]
 #[IsGeneratedImage]
 #[FlavorText('Halitosis (A-110) is the least of your problems.')]
+#[\App\CardAttributes\Prerequisites(lines:'Requires Pyros.',y:460)]
 class implements CardComponents
 {
     use DefaultCardAttributes;
@@ -22,8 +23,7 @@ class implements CardComponents
     {
         yield <<<'HTML'
 <image x="0" y="0" class="hero" href="@local(hero/firebreath.jpeg)" />
-
-    <x-slot:small>Requires Pyros.</x-slot:small>
+<x-card.phaserule type="Resolution" lines="6">
 <text>
 <x-card.normalrule>When this Monster attacks or defends</x-card.normalrule>
 <x-card.normalrule>and has 1+ Fire Mana cards attached & is </x-card.normalrule>
@@ -32,7 +32,7 @@ class implements CardComponents
 <x-card.normalrule>1d6-1 damage. If the defending/attacking Monster </x-card.normalrule>
 <x-card.normalrule>takes any damage, discard 1 Fire Mana card from this Monster.</x-card.normalrule>
     </text>
-
+    </x-card.phaserule>
 HTML;
     }
 };

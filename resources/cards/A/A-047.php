@@ -2,7 +2,7 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\LocalHeroImage;
-use App\CardAttributes\PrerequisiteY;
+use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -10,9 +10,10 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Biolure')]
 
-    #[Concept('Trait', 'Lure')]
+    #[Concept('Trait')]
+    #[Concept( 'Lure')]
 
-#[PrerequisiteY(455)]
+#[Prerequisites(y:400)]
     #[LocalHeroImage('TODO.png')]
 
     class implements CardComponents

@@ -73,7 +73,7 @@ $debug_opacity = match(true) {
     }
 
     .cardname {
-        font-family: 'Roboto Condensed';
+        font-family: 'Roboto Condensed', sans-serif;
         font-style: normal;
         font-size: 50px;
         font-weight: 500;
@@ -137,7 +137,7 @@ $debug_opacity = match(true) {
     }
 
            g.stat text.value {
-        font-family: 'Roboto Condensed';
+        font-family: 'Roboto Condensed', sans-serif;
         font-style: normal;
         font-size: 400px;
         fill: #000000;
@@ -152,7 +152,7 @@ text-anchor: middle;
 alignment-baseline: baseline;
     }
            g.stat text.gloss {
-        font-family: 'Roboto Condensed';
+        font-family: 'Roboto Condensed',sans-serif;
         font-style: normal;
         font-size: 100px;
         fill: #000000;
