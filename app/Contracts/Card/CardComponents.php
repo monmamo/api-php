@@ -3,6 +3,7 @@
 namespace App\Contracts\Card;
 
 use App\Contracts\HasName;
+use Illuminate\Contracts\Support\Renderable;
 
 interface CardComponents extends HasName
 {
@@ -34,7 +35,7 @@ interface CardComponents extends HasName
     /**
      * @group nonary
      */
-    public function hero(): ?string;
+    public function hero(): Renderable;
 
     /**
      * @group nonary

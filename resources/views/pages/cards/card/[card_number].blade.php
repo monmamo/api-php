@@ -49,9 +49,9 @@ $next = $card_number_object->makeNext();
   <div id="img-container"></div>
 
 <script>
-const dataHeader = 'data:image/svg+xml;charset=utf-8'
-const $svg = document.getElementById('svg-container').querySelector('svg')
-const $holder = document.getElementById('img-container')
+const dataHeader = 'data:image/svg+xml;charset=utf-8';
+const $svg = document.getElementById('svg-container').querySelector('svg'); // <svg> element
+const $holder = document.getElementById('img-container'); // <div> element
 
 const destroyChildren = $element => {
   while ($element.firstChild) {
@@ -72,7 +72,6 @@ const loadImage = async url => {
 const serializeAsXML = $e => (new XMLSerializer()).serializeToString($e)
 
 const encodeAsUTF8 = s => `${dataHeader},${encodeURIComponent(s)}`
-const encodeAsB64 = s => `${dataHeader};base64,${btoa(s)}`
 
 const convertSVGtoImg = async e => {
   const $btn = e.target
@@ -84,15 +83,14 @@ const convertSVGtoImg = async e => {
 
   const img = await loadImage(svgData)
 
+  // https://www.w3schools.com/jsref/dom_obj_canvas.asp
   const $canvas = document.createElement('canvas')
   $canvas.width = $svg.clientWidth
   $canvas.height = $svg.clientHeight
   $canvas.getContext('2d').drawImage(img, 0, 0, $svg.clientWidth, $svg.clientHeight)
 
-  const dataURL = await $canvas.toDataURL(`image/${format}`, 1.0)
-
   const $img = new Image($svg.clientWidth, $svg.clientHeight);
-  $img.src = dataURL;
+  $img.src = await $canvas.toDataURL(`image/${format}`, 1.0);
   $holder.appendChild($img);
 }
 

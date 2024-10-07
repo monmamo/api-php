@@ -3,6 +3,7 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImagePrompt;
 use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -13,6 +14,7 @@ return new
     #[Concept('Integrity', '3')]
     #[IsGeneratedImage]
     #[ImagePrompt('dark man in a mask wearing a trenchcoat carrying a large tote bag')]
+    #[Prerequisites(lines: ['You may play this card only if you have a', 'Mobster card on the Battlefield.'], y: 415)]
    class implements CardComponents
    {
        use DefaultCardAttributes;
@@ -31,12 +33,7 @@ HTML;
        {
            // custom flavor text
            yield <<<'HTML'
-<text x="200" y="230" class="credit" text-anchor="middle" alignment-baseline="baseline"><tspan x="50%" dy="25" class="flavor" text-anchor="middle" alignment-baseline="hanging" fill="#ffffff">Just collecting the dues.</tspan></text>
-
-<text y="400" filter="url(#solid)">
-                <x-card.normalrule>You may play this card only if you have a</x-card.normalrule>
-                <x-card.normalrule>Mobster card on the Battlefield.</x-card.normalrule>
-            </text>
+<text  y="360" class="credit" text-anchor="middle" alignment-baseline="baseline"><tspan x="70%" dy="25" class="flavor" text-anchor="middle" alignment-baseline="hanging" fill="#ffffff">Just collecting the dues.</tspan></text>
 
             <x-card.phaserule type="Draw" lines="5"><text>
                 <x-card.normalrule>Choose one opponent. Roll 1d6. That</x-card.normalrule>

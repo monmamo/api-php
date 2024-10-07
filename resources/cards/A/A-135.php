@@ -1,27 +1,32 @@
 <?php
+
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
+
 // https://www.freepik.com/free-vector/time-is-money-background_1014317.htm
 
 return new
-    #[\App\GeneralAttributes\Title('Investment')]
-    #[\App\Concept('Draw')]
-    #[\App\CardAttributes\ImageCredit('Image by photoroyalty on Freepik')]
-    #[\App\CardAttributes\FlavorText('Past performance is not indicative of future results.')]
-    class implements \App\Contracts\Card\CardComponents {
-use \App\CardAttributes\DefaultCardAttributes;
-public function content(): \Traversable    {
-yield <<<'HTML'
-    <image x="0" y="0" class="hero" href="@local(A135.jpg)" />
+    #[Title('Investment')]
+    #[Concept('Draw')]
+    #[ImageCredit('Image by photoroyalty on Freepik')]
+    #[FlavorText('Past performance is not indicative of future results.')]
+    #[LocalHeroImage('A135.jpg')]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    <x-card.phaserule type="Draw" y="610" lines="2"><text>
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
+    <x-card.cardrule  lines="2">
             <x-card.normalrule>Put any number of cards </x-card.normalrule>
                 <x-card.normalrule>facedown on the Battlefield.</x-card.normalrule>
-        </text></x-card.phaserule>
-
-        <x-card.phaserule type="Resolution" lines="2"><text>
-            <x-card.normalrule>Draw 1d6-1 cards for each facedown</x-card.normalrule>
-            <x-card.normalrule>card. Discard the facedown cards.</x-card.normalrule>
-        </text></x-card.phaserule>
-
+    </x-card.cardrule>
 HTML;
-}
-};
+        }
+    };

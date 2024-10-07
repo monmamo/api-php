@@ -62,16 +62,11 @@ $background = $spec->background() ?? match (true) {
     ?>
     <svg {{new \Illuminate\View\ComponentAttributeBag($bodybox_attributes)}}>
         <?php
-        if (\is_string($hero = $spec->hero())) {
-            echo Blade::render($hero, []);
-        }
-
-        echo transform(
-            $spec->prerequisitesAttribute(),
-            fn($attribute) => $attribute->render()
-        );
-
-        echo \App\Strings\render(...$spec->content());
+    echo \App\Strings\render(
+$spec->hero(),
+$spec->prerequisitesAttribute(),
+...$spec->content()
+);
         ?>
     </svg>
 
@@ -83,21 +78,13 @@ $background = $spec->background() ?? match (true) {
         \App\Concept::setGroupCount(\count($spec->concepts()));
 
 echo \App\Strings\render(...$spec->concepts());
-
-        foreach ($spec->getAttributes(\App\CardAttributes\PhaseRule::class) as $rule) {
-            echo $rule->newInstance()->render();
-        }
-
-
+echo \App\Strings\render(...$spec->getAttributes(\App\CardAttributes\PhaseRule::class) );
         ?>
         <text x="<?= $text_x ?>" y="<?= config('card-design.concept.box-height') + config('card-design.titlebox.title-height') * 0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="baseline" fill-opacity="{{$titleboxOpacity}}"><?= $cardName ?></text>
     </x-card.box>
 
     <?php
-    $flavor_text_attribute =     $spec->flavorTextAttribute();
-
-    if ($flavor_text_attribute instanceof  \Illuminate\Contracts\Support\Renderable)
-        echo $flavor_text_attribute->render();
+        echo \App\Strings\render(   $spec->flavorTextAttribute());
 
     $credit_y =  config('card-design.trimbox.y') + config('card-design.trimbox.height') - 5;
     ?>
@@ -111,7 +98,15 @@ echo \App\Strings\render(...$spec->concepts());
     <g class="debug">
         <x-card.rect slug="trimbox" fill-opacity="0" stroke-width=3 stroke="#FF0000" rx="25" />
         <x-card.rect slug="viewbox" fill-opacity="0" stroke-width=3 stroke="#2BA6DE" stroke-dasharray="1.44" rx="5" />
-        <x-card.rect slug="hero" fill-opacity="0" stroke-width=1 stroke="#2BA6DE" stroke-dasharray="1.44" />
+        <?php
+        $hero_attributes = [
+    'x' =>config("card-design.viewbox.x") + config("card-design.hero.x"),
+    'y' => config("card-design.viewbox.y") + config("card-design.hero.y"),
+    'width' => config("card-design.hero.width"),
+    'height' =>config("card-design.hero.height"),
+];
+?>
+<rect id="hero-rect"  slug="hero" fill-opacity="0" stroke-width=1 stroke="#2BA6DE" stroke-dasharray="1.44" {{new \Illuminate\View\ComponentAttributeBag($hero_attributes)}} />
         <line x1="25%" y1="0" x2="25%" y2="100%" class="info secondary" />
         <line x1="50%" y1="0" x2="50%" y2="100%" class="info" />
         <line x1="75%" y1="0" x2="75%" y2="100%" class="info secondary" />

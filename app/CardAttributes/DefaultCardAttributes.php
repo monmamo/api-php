@@ -6,6 +6,7 @@ use App\CardNumber;
 use App\Concept;
 use App\Concerns\Reflection;
 use App\GeneralAttributes\Title;
+use Illuminate\Contracts\Support\Renderable;
 
 #[\Attribute(\Attribute::TARGET_CLASS)]
 trait DefaultCardAttributes
@@ -84,17 +85,27 @@ trait DefaultCardAttributes
     /**
      * @group nonary
      */
-    public function hero(): ?string
+    public function hero(): Renderable
     {
         foreach ([SvgHeroImage::class, LocalHeroImage::class, ConceptIconHeroImage::class] as $class_fqn) {
             $attributes = $this->getAttributes($class_fqn);
 
             if (\count($attributes) > 0) {
-                return $attributes[0]->newInstance()->render();
+                try {
+                    return $attributes[0]->newInstance();
+                } catch (\Throwable $e) {
+                    \dd($e);
+                }
             }
         }
 
-        return null;
+        return new class() implements Renderable
+        {
+            public function render()
+            {
+                return '';
+            }
+        };
     }
 
     /**

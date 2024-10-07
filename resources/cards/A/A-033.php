@@ -9,15 +9,11 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Wheel of Fortune')]
-
+    #[Title('Wheel of Fortune')]
     #[Concept('Draw')]
-
     #[LocalHeroImage('hero/wheel-of-fortune.jpg')] // https://www.freepik.com/free-psd/casino-roulette-icon-render_23877079.htm
     #[ImageCredit('Image by freepik')]
-
     #[FlavorText("This isn't a game (show).")]
-
     class implements CardComponents
     {
         use DefaultCardAttributes;
@@ -25,10 +21,11 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Draw" lines="2">
+<x-card.phaserule type="Draw" lines="3">
         <text >
-        <x-card.normalrule>Each player puts his hand on the</x-card.normalrule>
-<x-card.normalrule>bottom of his Library, then draws 7 cards.</x-card.normalrule>
+        <x-card.normalrule>Each player puts his hand</x-card.normalrule>
+<x-card.normalrule>on the bottom of his Library, </x-card.normalrule>
+<x-card.normalrule>then draws 7 cards.</x-card.normalrule>
     </text>
 </x-card.phaserule>
 HTML;

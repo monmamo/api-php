@@ -8,11 +8,37 @@ $debug_opacity = match(true) {
     $debug === 'false' => 0,
     default => $debug
 };
+
+function includeFontFace($font_slug) {   
+    $font = config("fonts.$font_slug");
+    $font_name = $font['family'];
+    $font_format = $font['format'];
+    $font_unicode_range = $font['unicode-range'];
+    $font_weight = $font['weight'];
+    $font_style = $font['style'];
+    $base64String = $font['code'] ?? value(function() use ($font) {
+        $fileContent = file_get_contents($font['url']);
+if ($fileContent === false) 
+    throw new \Exception("Failed to download the file.");
+return base64_encode($fileContent);
+    });
+
+   return  "@font-face {
+  font-family: '$font_name';
+  font-style: $font_style;
+  font-weight: $font_weight;
+  src: url('data:application/font-woff;charset=utf-8;base64,$base64String') format('$font_format');
+  unicode-range: $font_unicode_range;
+}";
+}
+
 ?>
 
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Roboto");
-    @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed");
+    <?= includeFontFace('Roboto-latin-ext') ?>
+    <?= includeFontFace('Roboto-latin') ?>
+    <?= includeFontFace('Roboto-Condensed-latin-ext') ?>
+    <?= includeFontFace('Roboto-Condensed-latin') ?>
 
     text {
         font-family: 'Roboto', sans-serif;
@@ -32,8 +58,6 @@ $debug_opacity = match(true) {
     tspan.bodytext {
         font-style: normal;
         font-size: 30px;
-        font-weight: 400;
-        font-style: normal;
         text-align: center;
         text-anchor: middle;
         white-space: normal;
@@ -44,8 +68,6 @@ $debug_opacity = match(true) {
     .conceptrule {
         font-style: normal;
         font-size: 20px;
-        font-weight: 400;
-        font-style: normal;
         white-space: normal;
         text-anchor: middle;
         alignment-baseline: middle;
@@ -53,9 +75,7 @@ $debug_opacity = match(true) {
     }
 
     .smallrule {
-        font-style: normal;
         font-size: 20px;
-        font-weight: 400;
         font-style: normal;
         white-space: normal;
         text-align: center;
@@ -65,18 +85,14 @@ $debug_opacity = match(true) {
     }
 
     .cardtype {
-        font-style: normal;
         font-size: 30px;
-        font-weight: 500;
         font-style: normal;
         fill: black;
     }
 
     .cardname {
         font-family: 'Roboto Condensed', sans-serif;
-        font-style: normal;
         font-size: 50px;
-        font-weight: 500;
         font-style: normal;
         fill: black;
     }
@@ -121,8 +137,6 @@ $debug_opacity = match(true) {
     text.concept-type {
         font-style: normal;
         font-size: 30px;
-        font-weight: 500;
-        font-style: normal;
         fill: black;
         text-anchor: left;
         alignment-baseline: central;

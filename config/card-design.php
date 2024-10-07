@@ -10,7 +10,7 @@ $width = $dots_per_inch * 2.5;
 $height = $dots_per_inch * 3.5;
 
 $primary_rule_height = 35;
-$secondary_rule_height = 25;
+$secondary_rule_height = 30;
 
 $icon = [
     'size' => $icon_size,

@@ -1,23 +1,38 @@
 <?php
 
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
+
 return new
-#[\App\GeneralAttributes\Title('Felequess L48')]
+#[Title('Felequess L48')]
 
-    #[\App\Concept('Monster', 'Male', 'DamageCapacity:90', 'Level:48', 'Size:28', 'Speed:16', 'Multiplier:x4')]
+    #[Concept('Monster')]
+    #[Concept('Female')]
+    #[Concept('DamageCapacity', 90)]
+    #[Concept('Level', 48)]
+    #[Concept('Size', 28)]
+    #[Concept('Speed', 16)]
+    #[Concept('Multiplier:x4')]
+    #[LocalHeroImage('hero/felequos.png')]
 
+    #[IsGeneratedImage]
+    #[ImageCredit(null)]
 
-    #[\App\CardAttributes\IsGeneratedImage]
-    #[\App\CardAttributes\ImageCredit(null)]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    'background' => \view('Monster.background'),
-    class implements \App\Contracts\Card\CardComponents {
-use \App\CardAttributes\DefaultCardAttributes;
-public function content(): \Traversable    {
-yield <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(hero/felequos.png)" />
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.cardrule y="460" height="55" >
 <x-card.normalrule>Taxons: Felequos</x-card.normalrule>
 </x-card.cardrule>
 HTML;
-}
-};
+        }
+    };

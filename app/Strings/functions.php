@@ -676,11 +676,14 @@ function render(...$pieces): string
 
     foreach ($pieces as $piece) {
         $result .= match (true) {
+            $piece instanceof \ReflectionAttribute => \App\Strings\render($piece->newInstance()),
             $piece instanceof Htmlable => $piece->toHtml(),
             $piece instanceof Renderable => \App\Strings\render($piece->render()), // Renderable::render says it returns a string but doesn't enforce it.
             $piece instanceof \Stringable => (string) $piece,
             \is_string($piece) => Blade::render($piece, []),
-            \is_null($piece) => ''
+            \is_null($piece) => '',
+            \is_numeric($piece) => (string) $piece,
+            default => \dd($piece)
         };
     }
     return $result;

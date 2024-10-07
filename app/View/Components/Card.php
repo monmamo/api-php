@@ -41,14 +41,6 @@ class Card extends Component //implements CardComponents
     }
 
     /**
-     * @group nonary
-     */
-    public function hero(): ?string
-    {
-        return $this->spec->hero();
-    }
-
-    /**
      * @implements \App\Contracts\HasName
      */
     public function imageCredit(): ?string
@@ -65,7 +57,7 @@ class Card extends Component //implements CardComponents
     }
 
     /**
-     * Get the view / contents that represent the component.
+     * Returns the view / contents that represent the component.
      * This is a point where we can inject a value into the view.
      *
      * @group nonary

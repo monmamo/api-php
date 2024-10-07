@@ -4,7 +4,6 @@
 use Illuminate\View\ComponentSlot;
 use Illuminate\Support\Facades\Blade;
 
-
 $make_content = function ($content):string {
     $tspans = [];
     foreach (\App\Strings\explode_lines($content) as $content_line) {
@@ -47,5 +46,5 @@ $concept = \App\Concept::make($type);
         {{ view($badge.'.icon') }}
     </g>
     @endisset
-    {{$content}}
+    <?= $content ?>
 </svg>

@@ -39,6 +39,7 @@ class Concept implements HasIcon, Renderable
     public function __construct(
         string $type,
         $value = null,
+        protected ?string $caption = null,
     ) {
         $spec_pieces = \explode(':', $type);
         $this->type = $spec_pieces[0];
@@ -77,7 +78,7 @@ class Concept implements HasIcon, Renderable
         if ($this->value !== false) {
             yield \App\Strings\html('text', ['class' => 'value', 'x' => '256px', 'y' => '440px', 'filter' => 'url(#icon-overlay-shadow)'], $this->value); //  'textLength' => '100%'
         }
-        yield \App\Strings\html('text', ['class' => 'gloss', 'x' => '256px', 'y' => '590px'], $this->staticonLabel());
+        yield \App\Strings\html('text', ['class' => 'gloss', 'x' => '256px', 'y' => '590px'], $this->caption ?? $this->staticonLabel());
     }
 
     /**
@@ -123,7 +124,7 @@ class Concept implements HasIcon, Renderable
     }
 
     /**
-     * Get the evaluated contents of the object.
+     * Returns the evaluated contents of the object.
      *
      * @return string
      */

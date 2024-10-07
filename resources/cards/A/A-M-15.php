@@ -1,32 +1,50 @@
 <?php
 
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
+
 return new
-#[\App\GeneralAttributes\Title('Canor L38')]
+#[Title('Good Boy')]
 
-    #[\App\Concept('Monster', 'Male', 'DamageCapacity:70', 'Level:38', 'Size:18', 'Speed:10', 'Multiplier:x3')]
+      #[Concept('Monster')]
+      #[Concept('Male')]
+      #[Concept('DamageCapacity', 70)]
+      #[Concept('Level', 38)]
+      #[Concept('Size', 18)]
+      #[Concept('Speed', 10)]
+      #[Concept('Multiplier', 'x3')]
 
+      #[LocalHeroImage('hero/A-M-15.png')]
+    #[IsGeneratedImage]
+    #[ImageCredit(null)]
 
-    #[\App\CardAttributes\IsGeneratedImage]
-    #[\App\CardAttributes\ImageCredit(null)]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    'background' => \view('Monster.background'),
-    class implements \App\Contracts\Card\CardComponents {
-use \App\CardAttributes\DefaultCardAttributes;
-public function content(): \Traversable    {
-yield <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(hero/A-M-15.png)" />
-<x-card.cardrule y="460" height="55" >
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
+
+<x-card.cardrule y="400" height="55" >
 <x-card.normalrule>Taxons: Canos</x-card.normalrule>
 </x-card.cardrule>
 
 
-<x-card.phaserule type="Resolution" height="175">
+<x-card.phaserule type="Resolution" height="235">
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Resilience</text>
-<text  y="<?= config('card-design.titlebox.height')?>"  height="70">
+<text  y="<?= config('card-design.titlebox.title-height')?>" height="70">
+<x-card.normalrule>After applying attacks and defenses,</x-card.normalrule>
 <x-card.normalrule>If subject to a Bane, roll 1d6.</x-card.normalrule>
-<x-card.normalrule>@dieroll(6,5,4) The Bane has no effect.</x-card.normalrule>
+<x-card.normalrule>@dieroll(6,5,4) The Bane has no effect. If the</x-card.normalrule>
+<x-card.normalrule>Bane is attached, discard it.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;
-}
-};
+        }
+    };

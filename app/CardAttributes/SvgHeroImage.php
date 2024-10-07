@@ -2,39 +2,26 @@
 
 namespace App\CardAttributes;
 
-use App\Renderable\Svg;
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Support\Facades\Blade;
 
 #[\Attribute(\Attribute::TARGET_CLASS)]
-class SvgHeroImage extends Svg
+class SvgHeroImage implements Renderable
 {
-    /**
-     * Constructor.
-     *
-     * @group magic
-     * @group mutator
-     * @group unary
-     *
-     * @return void
-     */
-    public function __construct(
-        public string $code,
-        public string $viewbox = '0 0 512 512',
-    ) {
-        static $hero_config;
-        $hero_config ??= \config('card-design.hero');
-        \extract($hero_config);
+    public function __construct(public string $code, public string $viewbox = '0 0 512 512') {}
 
-        parent::__construct(
-            x: $x + ($width - $height) / 2,
-            y: $y,
-            width: $height,
-            height: $height,
-            viewBox: $this->viewbox,
-            svg: \App\Strings\html(
-                'g',
-                ['fill' => '#ffffff', 'fill-opacity' => 1],
-                $this->code,
-            ),
+    public function render()
+    {
+        return Blade::render(
+            '<x-card.hero-svg :$viewBox>{{$svg}}</x-card.hero-svg>',
+            [
+                'viewBox' => $this->viewbox,
+                'svg' => \App\Strings\html(
+                    'g',
+                    ['fill' => '#ffffff', 'fill-opacity' => 1],
+                    $this->code,
+                ),
+            ],
         );
     }
 }

@@ -1,27 +1,45 @@
 <?php
 
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImagePrompt;
+use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
+
 return new
-#[\App\GeneralAttributes\Title('Enerctigress L40')]
+#[Title('Enerctigress L40')]
 
-    #[\App\Concept('Monster', 'Female', 'DamageCapacity:70', 'Level:40', 'Size:20', 'Speed:10', 'Multiplier:x3')]
+    #[Concept('Monster')]
+     #[Concept('Female')]
+      #[Concept('DamageCapacity', 70)]
+       #[Concept('Level', 40)]
+        #[Concept('Size', 20)]
+         #[Concept('Speed', 10)]
+         #[Concept('Multiplier:x3')]
+         #[ImagePrompt('yellow electric tiger monster of weird zoology')]
 
+    #[IsGeneratedImage]
+    #[ImageCredit(null)]
+    #[LocalHeroImage('hero/A-M-06.png')]
 
-    #[\App\CardAttributes\IsGeneratedImage]
-    #[\App\CardAttributes\ImageCredit(null)]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    'background' => \view('Monster.background'),
-    class implements \App\Contracts\Card\CardComponents {
-use \App\CardAttributes\DefaultCardAttributes;
-public function content(): \Traversable    {
-yield <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(hero/A-M-06.png)" />
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
+
 <x-card.cardrule y="460" height="55" >
 <x-card.normalrule>Taxons: Energos, Tigros</x-card.normalrule>
 </x-card.cardrule>
 
-<x-card.phaserule type="Defense" height="175">
+<x-card.phaserule type="Defense" height="200">
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Thunder Roar</text>
-<text  y="<?= config('card-design.titlebox.height')?>"  height="70">
+<text  y="<?= config('card-design.titlebox.title-height')?>" height="70">
 <x-card.normalrule>Roll 1d6.</x-card.normalrule>
 <x-card.normalrule>@dieroll(6,5) Attack has no effect.</x-card.normalrule>
 <x-card.normalrule>@dieroll(4,3,2) Attack does only half its damage.</x-card.normalrule>
@@ -29,5 +47,5 @@ yield <<<'HTML'
 </x-card.phaserule>
 
 HTML;
-}
-};
+        }
+    };

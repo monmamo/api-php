@@ -1,25 +1,33 @@
 <?php
 
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
+
 return new
-#[\App\GeneralAttributes\Title('Lottery')]
+#[Title('Lottery')]
 
-    #[\App\Concept('Vendor')]
+    #[Concept('Vendor')]
+    #[LocalHeroImage('A146.jpg')] // https://www.freepik.com/free-vector/lottery-ticket-concept-illustration_171056284.htm
 
+    #[ImageCredit('Image by storyset on Freepik')]
 
-    'image-source' => 'https://www.freepik.com/free-vector/lottery-ticket-concept-illustration_171056284.htm',
-    #[\App\CardAttributes\ImageCredit('Image by storyset on Freepik')]
+    #[FlavorText("Can't win if you don't play!")]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    #[\App\CardAttributes\FlavorText("Can't win if you don't play!")]
-    'background' => \view('Vendor.background'),
-    class implements \App\Contracts\Card\CardComponents {
-use \App\CardAttributes\DefaultCardAttributes;
-public function content(): \Traversable    {
-yield <<<'HTML'
-#[\App\CardAttributes\LocalHeroImage('A146.jpg')]
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.phaserule type="Draw" lines="2"><text>
-        <x-card.normalrule>Discard 2+ cards from your hand.</x-card.normalrule>
-        <x-card.normalrule>Then draw that number plus two cards.</x-card.normalrule>
-    </text></x-card.phaserule>
+<x-card.normalrule>Discard 2+ cards from your hand.</x-card.normalrule>
+<x-card.normalrule>Then draw that number plus 2 cards.</x-card.normalrule>
+</text></x-card.phaserule>
 HTML;
-}
-};
+        }
+    };

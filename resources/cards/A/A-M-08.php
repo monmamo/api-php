@@ -1,20 +1,35 @@
 <?php
 
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
+
 return new
-#[\App\GeneralAttributes\Title('Energcanor L45')]
+#[Title('Energcanor L45')]
 
-    #[\App\Concept('Monster', 'Male', 'DamageCapacity:80', 'Level:45', 'Size:22', 'Speed:8', 'Multiplier:x3')]
+    #[Concept('Monster')]
+    #[Concept('Male')]
+    #[Concept('DamageCapacity', 80)]
+    #[Concept('Level', 45)]
+    #[Concept('Size', 22)]
+    #[Concept('Speed', 8)]
+    #[Concept('Multiplier:x3')]
 
+    #[IsGeneratedImage]
+    #[ImageCredit(null)]
+    #[LocalHeroImage('hero/A-M-08.png')]
 
-    #[\App\CardAttributes\IsGeneratedImage]
-    #[\App\CardAttributes\ImageCredit(null)]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    'background' => \view('Monster.background'),
-    class implements \App\Contracts\Card\CardComponents {
-use \App\CardAttributes\DefaultCardAttributes;
-public function content(): \Traversable    {
-yield <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(hero/A-M-08.png)" />
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.cardrule y="460" height="55" >
 <x-card.normalrule>Taxons: Energos, Canos</x-card.normalrule>
 </x-card.cardrule>
@@ -22,11 +37,11 @@ yield <<<'HTML'
 
 <x-card.phaserule type="Skill" height="175">
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Beast Mode</text>
-<text  y="<?= config('card-design.titlebox.height')?>"  height="70">
+<text  y="<?= config('card-design.titlebox.title-height')?>" height="70">
 <x-card.normalrule>Size +3 for each Energy Mana</x-card.normalrule>
 <x-card.normalrule>attached to this Monster.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;
-}
-};
+        }
+    };

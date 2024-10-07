@@ -1,22 +1,26 @@
 <?php
 
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\CardAttributes\Prerequisites;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
+
 return new
-#[\App\GeneralAttributes\Title('Financial Planner')]
+    #[Title('Financial Planner')]
+    #[Concept('Vendor')]
+    #[ImageCredit('Image by photoroyalty on Freepik')]
+    #[LocalHeroImage('A135.jpg')] // https://www.freepik.com/free-vector/time-is-money-background_1014317.htm
+    #[Prerequisites(y: 475)]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-    #[\App\Concept('Vendor')]
-
-
-
-    #[\App\CardAttributes\ImageCredit('Image by photoroyalty on Freepik')]
-    'image-source' => 'https://www.freepik.com/free-vector/time-is-money-background_1014317.htm',
-
-
-    'background' => \view('Vendor.background'),
-    class implements \App\Contracts\Card\CardComponents {
-use \App\CardAttributes\DefaultCardAttributes;
-public function content(): \Traversable    {
-yield <<<'HTML'
-#[\App\CardAttributes\LocalHeroImage('A135.jpg')]
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.phaserule type="Draw" lines="5" badge="Repeat">
     <text >
     <x-card.normalrule>Turn your Discard pile face-down,</x-card.normalrule>
@@ -27,5 +31,5 @@ yield <<<'HTML'
     </text>
 </x-card.phaserule>
 HTML;
-}
-};
+        }
+    };

@@ -1,21 +1,25 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageCredit;
+use App\CardAttributes\FlavorText;
 use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\LocalHeroImage;
+use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
+if (!\defined('PREREQUISITE')) {
+    \define('PREREQUISITE', \trans_choice('rules.monster-limit', 1));
+}
+
 return new
-#[Title('Personal Shopper')]
-
-    #[Concept('Vendor')]
-    #[Concept('Integrity', '1d4')]
-    #[IsGeneratedImage]
-
-    #[ImageCredit(null)]
-
+#[Title('Halitosis')]
+#[Concept('Bane')]
+#[IsGeneratedImage]
+#[FlavorText('They say that bad breath is better than no breath at all…')]
+#[LocalHeroImage('A110.jpg')]
+#[Prerequisites([PREREQUISITE])]
     class implements CardComponents
     {
         use DefaultCardAttributes;
@@ -23,15 +27,13 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-  <image class="hero" href="@local(hero/personal-shopper.jpg)" />
-
-  <x-card.phaserule type="Draw"  height="170">
-      <text >
-<x-card.normalrule>Search your deck for 1-3 Item cards.</x-card.normalrule>
-<x-card.normalrule>Show them to your opponent(s),</x-card.normalrule>
-<x-card.normalrule>and put them into your hand.</x-card.normalrule>
-<x-card.normalrule>Shuffle your deck afterward.</x-card.normalrule>
-</text></x-card.phaserule>
+<x-card.phaserule type="Resolution" height="135">
+  <text >
+<x-card.normalrule>When a Monster on this</x-card.normalrule>
+<x-card.normalrule>Monster’s team attacks or defends,</x-card.normalrule>
+<x-card.normalrule>reduce the damage done/prevented by 2d6.</x-card.normalrule>
+</text>
+</x-card.phaserule>
 HTML;
         }
     };

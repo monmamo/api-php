@@ -1,21 +1,25 @@
 <?php
 
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
+
 return new
-#[\App\GeneralAttributes\Title('First Aid Kit')]
+#[Title('First Aid Kit')]
+    #[Concept('Vendor')]
+    #[ImageCredit(null)]
+    #[LocalHeroImage('hero/first-aid-kit.jpg')]
 
-    #[\App\Concept('Vendor')]
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-
-
-    #[\App\CardAttributes\ImageCredit(null)]
-
-
-    'background' => \view('Vendor.background'),
-    class implements \App\Contracts\Card\CardComponents {
-use \App\CardAttributes\DefaultCardAttributes;
-public function content(): \Traversable    {
-yield <<<'HTML'
-#[\App\CardAttributes\LocalHeroImage('hero/first-aid-kit.jpg')]
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.phaserule type="Draw" height="165"><text>
 <x-card.normalrule>Search your Library or Discard </x-card.normalrule>
 <x-card.normalrule>for a Healing Item card.</x-card.normalrule>
@@ -24,5 +28,5 @@ yield <<<'HTML'
 </text></x-card.phaserule>
 
 HTML;
-}
-};
+        }
+    };

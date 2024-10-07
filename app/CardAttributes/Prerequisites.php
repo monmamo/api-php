@@ -24,7 +24,7 @@ class Prerequisites implements Renderable
     }
 
     /**
-     * Get content as a string of HTML.
+     * Returns content as a string of HTML.
      *
      * @return string
      */
@@ -37,10 +37,13 @@ class Prerequisites implements Renderable
                 'tspan',
                 [
                     'x' => '50%',
-                    'dy' => \config('card-design.secondary_rule_height'),
+                    'dy' => 25, // leave constant
                     'class' => 'smallrule',
                 ],
-                $line,
+                match (true) {
+                    \is_string($line) => $line,
+                    \is_callable($line) => $line(),
+                },
             );
         }
 
