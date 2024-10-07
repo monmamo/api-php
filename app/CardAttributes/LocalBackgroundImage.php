@@ -21,7 +21,7 @@ class LocalBackgroundImage implements Renderable
     ) {}
 
     /**
-     * Get content as a string of HTML.
+     * Returns content as a string of HTML.
      *
      * @return string
      */

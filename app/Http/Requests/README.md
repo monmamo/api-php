@@ -13,7 +13,7 @@ class StoreCONCEPTRequest extends FormRequest
     public function authorize(): bool{return false;}
 
     /**
-     * Get the validation rules that apply to the request.
+     * Returns the validation rules that apply to the request.
      * @return array<string, array<mixed>|\Illuminate\Contracts\Validation\ValidationRule|string>
      */
     public function rules(): array{return [];}
@@ -33,7 +33,7 @@ class UpdateCONCEPTRequest extends FormRequest
     public function authorize(): bool{return false;}
 
     /**
-     * Get the validation rules that apply to the request.
+     * Returns the validation rules that apply to the request.
      * @return array<string, array<mixed>|\Illuminate\Contracts\Validation\ValidationRule|string>
      */
     public function rules(): array{return [];}

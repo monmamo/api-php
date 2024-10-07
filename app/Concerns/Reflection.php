@@ -14,6 +14,9 @@ trait Reflection
         return $this->_reflection ?? new \ReflectionClass($this);
     }
 
+    /**
+     * @group binary
+     */
     protected function withAttribute(string $class, $callback = null)
     {
         $attributes = $this->reflection()->getAttributes($class);
@@ -21,11 +24,14 @@ trait Reflection
         if (\count($attributes) > 0) {
             $instance = $attributes[0]->newInstance();
             return \is_null($callback) ? $instance : $callback($instance);
-            }
-            }
+        }
+    }
 
-            public function getAttributes(string $class): array
-            {
-                return $this->reflection()->getAttributes($class);
-            }
+    /**
+     * @group unary
+     */
+    public function getAttributes(string $class): array
+    {
+        return $this->reflection()->getAttributes($class);
+    }
 }
