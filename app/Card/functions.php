@@ -34,6 +34,7 @@ function makeNewCard(
     array $secondary_lines = [],
     array $primary_lines = [],
     ?string $background = null,
+    ?string $image_credit = null,
 ): \Traversable {
     yield '<?php';
     yield 'return new';
@@ -42,7 +43,7 @@ function makeNewCard(
     foreach ($concepts as $concept) {
         yield \App\Strings\phpAttribute(Concept::class, $concept);
     }
-    yield \App\Strings\phpAttribute(ImageCredit::class, 'Image by USER_NAME on SERVICE');
+    yield \App\Strings\phpAttribute(ImageCredit::class, $image_credit ?? 'Image by USER_NAME on SERVICE');
 
     if (!$no_content) {
         yield \App\Strings\phpAttribute(FlavorText::class, $flavor_text);

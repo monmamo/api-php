@@ -33,10 +33,15 @@ $background = $spec->background() ?? match (true) {
     @endonce
     @endunless
 
-    <rect id="absolute-bounds" x="0" y="0" width="@cardspec(width)" height="@cardspec(height)" fill-opacity="0" stroke="#808080" rx="75" />
+    <defs>
+    <pattern id="background" viewBox="0 0 @cardspec(width) @cardspec(height)" width="100%" height="100%">
+<?= \App\Strings\render($background) ?>
+</pattern>
+</defs>
+
+<rect id="absolute-bounds" x="0" y="0" width="@cardspec(width)" height="@cardspec(height)" fill="url(#background)" rx="75" />
 
     <?php
-    echo \App\Strings\render($background);
 
     if (!\is_null($image_credit = $spec->imageCredit())) {
         echo \App\Strings\html(

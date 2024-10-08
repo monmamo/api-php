@@ -4,7 +4,6 @@ namespace App\Console\Commands;
 
 use App\CardNumber;
 use App\Concept;
-use App\Contracts\Card\CardComponents;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Console\PromptsForMissingInput;
 use Illuminate\Support\Facades\Storage;
@@ -51,20 +50,6 @@ class MakeCard extends Command implements PromptsForMissingInput
     }
 
     /**
-     * @group unary
-     */
-    private function generateOne(CardComponents $spec): void
-    {
-        $set = $spec->set();
-        $card_number = $spec->cardNumber();
-        $card_name = $spec->name();
-
-        Storage::disk('cards')->put("{$set}/{$card_number}.php", \implode("\n", \iterator_to_array($spec)));
-
-        $this->info("{$card_number} {$card_name} created.");
-    }
-
-    /**
      * Prompt for missing input arguments using the returned questions.
      *
      * @return array
@@ -82,6 +67,7 @@ class MakeCard extends Command implements PromptsForMissingInput
     public function handle(): void
     {
         $card_number = CardNumber::make($this->argument('card-number'));
+        $set = $card_number->set;
 
         $concepts = $this->option('concepts');
 
@@ -105,15 +91,13 @@ class MakeCard extends Command implements PromptsForMissingInput
         foreach ($this->argument('names') as $card_name) {
             $this->info("Creating card {$card_number} {$card_name}.");
 
-            $spec = $this->option('nocontent') ? new CardSpec(
+            $generator = $this->option('nocontent') ? \App\Card\makeNewCard(
                 card_name: $card_name,
-                card_number: $card_number,
                 concepts: $concepts,
                 no_content: true,
             )
-                : new CardSpec(
+                : \App\Card\makeNewCard(
                     card_name: $card_name,
-                    card_number: $card_number,
                     concepts: $concepts,
                     image_credit: $this->option('noimagecredit') ? null : \Laravel\Prompts\text('Image credit'),
                     flavor_text: $this->option('noflavor') ? [] : \iterator_to_array(self::_askMultiline('Flavor text')),
@@ -121,7 +105,9 @@ class MakeCard extends Command implements PromptsForMissingInput
                     primary_lines: $primary_lines = \iterator_to_array(self::_askMultiline('Primary text')),
                 );
 
-            $this->generateOne($spec);
+            Storage::disk('cards')->put("{$set}/{$card_number}.php", \implode("\n", \iterator_to_array($generator)));
+
+            $this->info("{$card_number} {$card_name} created.");
 
             $card_number = $card_number->makeNext();
         }

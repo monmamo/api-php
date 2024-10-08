@@ -664,7 +664,7 @@ function phpAttribute($class_fqn, $value): string
     if (\is_null($value)) {
         return '';
     }
-    return \sprintf('#[%s(%s)]', $class_fqn, \json_encode($value));
+    return \sprintf('#[\%s(%s)]', $class_fqn, \json_encode($value));
 }
 
 /**

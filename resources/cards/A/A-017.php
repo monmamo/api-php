@@ -16,12 +16,12 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Draw" lines="4"><text>
+<x-card.cardrule lines="4">
 <x-card.normalrule>Put any number of cards from your</x-card.normalrule>
     <x-card.normalrule>hand on the bottom of your Library in </x-card.normalrule>
     <x-card.normalrule>any order. Then, draw a card for each card</x-card.normalrule>
     <x-card.normalrule>you put on the bottom of your Library.</x-card.normalrule>
-</text></x-card.phaserule>
+</x-card.cardrule>
 HTML;
         }
     };
