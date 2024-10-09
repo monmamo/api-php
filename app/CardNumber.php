@@ -12,7 +12,7 @@ class CardNumber
     protected readonly string $format_string;
 
     public function __construct(
-        protected readonly string $set,
+        public readonly string $set,
         protected readonly ?string $series,
         protected readonly int $ordinal,
     ) {
@@ -32,6 +32,9 @@ class CardNumber
         return \sprintf($this->format_string, $this->ordinal);
     }
 
+    /**
+     * @group unary
+     */
     private static function getNextOrdinalInSeries(string $set, ?string $series): int
     {
         $existing_files = Storage::disk('cards')->listContents($set)

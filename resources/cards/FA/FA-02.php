@@ -1,22 +1,34 @@
 <?php
 
-return [
-    'name' => 'Apothecary',
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\CardAttributes\Prerequisites;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Vendor', 'Integrity'],
+return new
+#[Title('Apothecary')]
+#[Concept('Vendor')]
+#[Concept('Integrity')]
+#[ImageCredit('')]
+#[FlavorText([])]
+#[LocalHeroImage('TODO.png')]
+#[Prerequisites([])]
+class implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'image-prompt' => null,
-
-    'image-credit' => 'Image by USER_NAME on SERVICE',
-
-    'flavor-text' => [],
-    'background' => \view('Vendor.background'),
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
-<x-card.cardrule height="0" >
-<x-card.normalrule>Search your Library for 1 Healing card. </x-card.normalrule>
-<x-card.normalrule>Reveal the card, then put it in your hand. </x-card.normalrule>
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
+<x-card.cardrule height="165" >
+<x-card.normalrule>Search your Library for 1 Healing card.</x-card.normalrule>
+<x-card.normalrule>Reveal the card, then put it in your hand.</x-card.normalrule>
 <x-card.normalrule>Shuffle your Library afterwards.</x-card.normalrule>
 </x-card.cardrule>
-HTML
-];
+HTML;
+    }
+};

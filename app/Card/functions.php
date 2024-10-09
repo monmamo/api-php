@@ -5,6 +5,7 @@ namespace App\Card;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\LocalHeroImage;
+use App\CardAttributes\Prerequisites;
 use App\CardNumber;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -31,6 +32,7 @@ function makeNewCard(
     array $concepts,
     array $flavor_text = [],
     bool $no_content = false,
+    array $prerequisites = [],
     array $secondary_lines = [],
     array $primary_lines = [],
     ?string $background = null,
@@ -40,8 +42,12 @@ function makeNewCard(
     yield 'return new';
     yield \App\Strings\phpAttribute(Title::class, $card_name);
 
-    foreach ($concepts as $concept) {
-        yield \App\Strings\phpAttribute(Concept::class, $concept);
+    foreach ($concepts as $offset => $value) {
+        if (\is_int($offset)) {
+            yield \App\Strings\phpAttribute(Concept::class, $value);
+        } else {
+            yield \App\Strings\phpAttribute(Concept::class, $offset, $value);
+        }
     }
     yield \App\Strings\phpAttribute(ImageCredit::class, $image_credit ?? 'Image by USER_NAME on SERVICE');
 
@@ -50,9 +56,13 @@ function makeNewCard(
         yield \App\Strings\phpAttribute(LocalHeroImage::class, 'TODO.png');
     }
 
+    yield \App\Strings\phpAttribute(Prerequisites::class, $prerequisites);
+
     yield 'class implements \\App\\Contracts\\Card\\CardComponents {use \\App\\CardAttributes\\DefaultCardAttributes;';
 
-    yield \sprintf('public function background(){return %s;}', $background);
+    if (\is_string($background)) {
+        yield \sprintf('public function background(){return %s;}', $background);
+    }
 
     yield 'public function content():\\Traversable{yield <<<HTML';
 

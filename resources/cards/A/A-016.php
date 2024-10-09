@@ -18,10 +18,13 @@ return new
     {
         use DefaultCardAttributes;
 
-        public function background()
+        /**
+         * @implements \App\Contracts\Card\CardComponents::background
+         */
+        public function background(): \Traversable
         {
-            return <<<'HTML'
-<defs>
+            yield <<<'HTML'
+ <defs>
     <linearGradient x1="0" x2="1" y1="1" y2="0" id="trait-gradient">
         <stop offset="0%" stop-color="#9013fe" stop-opacity="1"></stop>
         <stop offset="100%" stop-color="#bd10e0" stop-opacity="1"></stop>

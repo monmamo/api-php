@@ -9,12 +9,6 @@ use Illuminate\View\Component;
 use Illuminate\View\View;
 
 $rules_dy = 0;
-
-$background = $spec->background() ?? match (true) {
-    (\count($concepts) === 0) => '<'.'x-card.background'.' />',
-    \Illuminate\Support\Facades\View::exists($concepts[0] . '.background') => $concepts[0][0] . '.background',
-    default =>  '<'.'x-card.background'.' />'
-};
 ?>
 
 <x-svg
@@ -35,7 +29,7 @@ $background = $spec->background() ?? match (true) {
 
     <defs>
     <pattern id="background" viewBox="0 0 @cardspec(width) @cardspec(height)" width="100%" height="100%">
-<?= \App\Strings\render($background) ?>
+<?= \App\Strings\render(...$spec->background()) ?>
 </pattern>
 </defs>
 

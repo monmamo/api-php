@@ -659,12 +659,12 @@ function clean(string $raw, ?\Closure $after_clean = null): string
     return $final_clean_value;
 }
 
-function phpAttribute($class_fqn, $value): string
+function phpAttribute($class_fqn, ...$values): string
 {
-    if (\is_null($value)) {
+    if (\count($values) === 0) {
         return '';
     }
-    return \sprintf('#[\%s(%s)]', $class_fqn, \json_encode($value));
+    return \sprintf('#[\%s(%s)]', $class_fqn, \substr(\json_encode($values), 1, -1));
 }
 
 /**
@@ -680,6 +680,7 @@ function render(...$pieces): string
             $piece instanceof Htmlable => $piece->toHtml(),
             $piece instanceof Renderable => \App\Strings\render($piece->render()), // Renderable::render says it returns a string but doesn't enforce it.
             $piece instanceof \Stringable => (string) $piece,
+            $piece instanceof \Closure => (string) $piece(),
             \is_string($piece) => Blade::render($piece, []),
             \is_null($piece) => '',
             \is_numeric($piece) => (string) $piece,

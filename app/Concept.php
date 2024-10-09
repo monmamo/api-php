@@ -97,6 +97,13 @@ class Concept implements HasIcon, Renderable
         return \collect(Storage::disk('concepts')->directories())->sort();
     }
 
+    public function hasBackground()
+    {
+        return \Illuminate\Support\Facades\View::exists($this->type . '.background');
+    }
+
+
+
     public function background()
     {
         return \view($this->type . '.background');

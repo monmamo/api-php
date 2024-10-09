@@ -1,19 +1,31 @@
 <?php
-#[\App\CardAttributes\Prerequisites(lines:['Requires Aquos.','Can be used only at an Ocean.'],y:460)]
-return [
-    'name' => 'Cresting Wave',
 
-    'concepts' => ['Attack'],
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\CardAttributes\Prerequisites;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'image-prompt' => null,
+return new
+#[Title('Cresting Wave')]
+#[Concept('Attack')]
+#[ImageCredit('')]
+#[FlavorText([])]
+#[LocalHeroImage('TODO.png')]
+#[Prerequisites(lines: ['Requires Aquos.', 'Can be used only at an Ocean.'], y: 460)]
+class implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'image-credit' => 'Image by USER_NAME on SERVICE',
-
-    'flavor-text' => [],
-    'background' => \view('Attack.background'),
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
+<x-card.cardrule height="55" >
 <x-card.normalrule>Summons a large wave, carrying the force of the ocean to sweep away opponents.</x-card.normalrule>
 </x-card.cardrule>
-HTML
-];
+HTML;
+    }
+};

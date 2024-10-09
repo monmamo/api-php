@@ -24,9 +24,9 @@ class CardSpec implements \IteratorAggregate, CardComponents
     /**
      * @group nonary
      */
-    public function background()
+    public function background(): \Traversable
     {
-        return $this->background;
+        yield $this->background;
     }
 
     /**

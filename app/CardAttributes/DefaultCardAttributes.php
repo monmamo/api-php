@@ -7,6 +7,7 @@ use App\Concept;
 use App\Concerns\Reflection;
 use App\GeneralAttributes\Title;
 use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Support\Facades\View;
 
 #[\Attribute(\Attribute::TARGET_CLASS)]
 trait DefaultCardAttributes
@@ -24,12 +25,17 @@ trait DefaultCardAttributes
     /**
      * @group nonary
      */
-    public function background()
+    public function background(): \Traversable
     {
-        return $this->withAttribute(
+        $concepts = $this->concepts();
+
+        yield $this->withAttribute(
             LocalBackgroundImage::class,
-            fn ($attribute) => $attribute->render(),
-        ) ?? $this->concepts()[0]->background();
+        ) ?? match (true) {
+            (\count($concepts) === 0) => '<' . 'x-card.background' . ' />',
+            $concepts[0]->hasBackground() => $concepts[0]->background(),
+            default => '<' . 'x-card.background' . ' />'
+        };
     }
 
     /**
@@ -47,7 +53,7 @@ trait DefaultCardAttributes
     public function concepts(): array
     {
         return $this->_concepts ??= \array_map(
-            fn ($attribute) => $attribute->newInstance(),
+            fn($attribute) => $attribute->newInstance(),
             $this->getAttributes(Concept::class),
         );
     }
@@ -146,7 +152,7 @@ trait DefaultCardAttributes
     {
         return $this->_prerequisites_attribute ??= \value(function () {
             $prerequisites = [];
-            $y = 475 + 25 * (\transform($this->flavorTextAttribute(), fn ($attribute): int => \count($attribute->lines())) ?? 1);
+            $y = 475 + 25 * (\transform($this->flavorTextAttribute(), fn($attribute): int => \count($attribute->lines())) ?? 1);
             $color = '#000000';
             $attributes = $this->getAttributes(Prerequisites::class);
 

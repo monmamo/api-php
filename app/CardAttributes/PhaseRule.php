@@ -87,6 +87,6 @@ class PhaseRule implements Renderable
             'x-svg',
             ['id' => "{$this->phase}-phaserule", 'x' => '0', 'y' => $y, 'width' => \config('card-design.viewbox.width'), 'height' => $height],
             ...$svg_content,
-        )->toHtml();
+        );
     }
 }

@@ -20,10 +20,13 @@ return new
     {
         use DefaultCardAttributes;
 
-        public function background()
+        /**
+         * @implements \App\Contracts\Card\CardComponents::background
+         */
+        public function background(): \Traversable
         {
             // https://www.freepik.com/free-vector/realistic-cup-black-brewed-coffee-saucer-vector-illustration_23128948.htm"
-            return \App\Strings\html(
+            yield \App\Strings\html(
                 'image',
                 ['x' => 0, 'y' => 0,  'href' => \App\Card\localHeroUri('A028-full.jpg')],
             );

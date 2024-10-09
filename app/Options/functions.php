@@ -33,6 +33,7 @@ use App\Facades\Request;
 use App\States\Immutable;
 use App\Strings\Title;
 use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -1380,4 +1381,17 @@ function getFilter(\ArrayAccess $source): Optional
 function getScope(\ArrayAccess $source): Optional
 {
     return \App\Options\wrap($source['scope'] ?? null);
+}
+
+function wrapRenderable(string $input): Renderable
+{
+    return new class($input) implements Renderable
+    {
+        public function __construct(private string $input) {}
+
+        public function render(): string
+        {
+            return $this->input;
+        }
+    };
 }

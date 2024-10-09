@@ -1,20 +1,34 @@
 <?php
 
-return [
-    'name' => 'healing Herb',
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\CardAttributes\Prerequisites;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Upkeep', 'Item', 'Healing'],
+return new
+#[Title('Canned Monster Food')]
+#[Concept('Item')]
+#[Concept('Food')]
+#[ImageCredit('')]
+#[FlavorText(['Meaty chunks in a thick, savory gravy.'])]
+#[LocalHeroImage('TODO.png')]
+#[Prerequisites([])]
+class implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'image-prompt' => 'A potion bottle with a green liquid inside.',
-
-    'image-credit' => 'Image by USER_NAME on SERVICE',
-
-    'flavor-text' => ['The best medicine is the one that tastes the worst.'],
-    'background' => \view('Upkeep.background'),
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(FA-08.png)"  />
-<x-card.cardrule height="0" >
-<x-card.normalrule>Attach this card to a Monster. After all attacks have been resolved (even if the Monster has been knocked out), roll 3d6. Remove that amount of damage from that Monster. If two or three of the rolls are 5 or higher, remove all Banes from that Monster.</x-card.normalrule>
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
+<x-card.cardrule height="165" >
+<x-card.normalrule>Upkeep phase: Attach Monstermeal to a Monster that is not Knocked Out.</x-card.normalrule>
+<x-card.normalrule>Declaration phase: This Monster may not attack or be attacked during this turn.</x-card.normalrule>
+<x-card.normalrule>Resolution phase: Discard this card. Remove 1d10-1d4 damage from this Monster.</x-card.normalrule>
 </x-card.cardrule>
-HTML
-];
+HTML;
+    }
+};

@@ -10,7 +10,7 @@ interface CardComponents extends HasName
     /**
      * @group nonary
      */
-    public function background();
+    public function background(): \Traversable;
 
     /**
      * @group nonary

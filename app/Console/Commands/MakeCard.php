@@ -27,6 +27,7 @@ class MakeCard extends Command implements PromptsForMissingInput
     {--c|concepts=*}
     {--I|noimagecredit}
     {--F|noflavor}
+    {--m|monster}
     {--S|nosecondary}
     {--P|noprimary}
     {--j|json : Take JSON input.}';
@@ -71,21 +72,48 @@ class MakeCard extends Command implements PromptsForMissingInput
 
         $concepts = $this->option('concepts');
 
-        if (!$this->option('nocontent')) {
-            $all_concepts = \collect(Concept::all());
+        if ($this->option('monster')) {
+            $concepts[] = 'Monster';
 
-            do {
-                $input = \Laravel\Prompts\suggest(
-                    'Additional Concept',
-                    fn ($value) => $all_concepts->filter(
-                        fn ($name) => \str_starts_with(\strtolower($name), \strtolower($value)),
-                    ),
+            $form = \Laravel\Prompts\form()
+                ->select(
+                    label: 'Male/Female?',
+                    options: ['Male', 'Female'],
+                )
+                ->text('Level', required: true, name: 'Level')
+                ->text('Damage Capacity', required: true, name: 'DamageCapacity')
+                ->text('Size', required: true, name: 'Size')
+                ->text('Speed', required: true, name: 'Speed')
+                ->select(
+                    label: 'Multiplier',
+                    name: 'Multiplier',
+                    options: ['x2', 'x3', 'x4'],
                 );
 
-                if (!empty($input)) {
-                    $concepts[] = $input;
+            foreach ($form->submit() as $key => $value) {
+                if (\is_int($key)) {
+                    $concepts[] = $value;
+                } else {
+                    $concepts[$key] = $value;
                 }
-            } while (!empty($input));
+            }
+        } else {
+            if (!$this->option('nocontent')) {
+                $all_concepts = \collect(Concept::all());
+
+                do {
+                    $input = \Laravel\Prompts\suggest(
+                        'Additional Concept',
+                        fn ($value) => $all_concepts->filter(
+                            fn ($name) => \str_starts_with(\strtolower($name), \strtolower($value)),
+                        ),
+                    );
+
+                    if (!empty($input)) {
+                        $concepts[] = $input;
+                    }
+                } while (!empty($input));
+            }
         }
 
         foreach ($this->argument('names') as $card_name) {
@@ -101,6 +129,7 @@ class MakeCard extends Command implements PromptsForMissingInput
                     concepts: $concepts,
                     image_credit: $this->option('noimagecredit') ? null : \Laravel\Prompts\text('Image credit'),
                     flavor_text: $this->option('noflavor') ? [] : \iterator_to_array(self::_askMultiline('Flavor text')),
+                    prerequisites: \iterator_to_array(self::_askMultiline('Prerequisites')),
                     secondary_lines: \iterator_to_array(self::_askMultiline('Secondary text')),
                     primary_lines: $primary_lines = \iterator_to_array(self::_askMultiline('Primary text')),
                 );

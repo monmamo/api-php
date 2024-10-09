@@ -20,11 +20,11 @@ return new
        use DefaultCardAttributes;
 
        /**
-        * @implements \App\Contracts\HasName
+        * @implements \App\Contracts\Card\CardComponents::background
         */
-       public function background()
+       public function background(): \Traversable
        {
-           return <<<'HTML'
+           yield <<<'HTML'
 <image x="0" y="0" href="@local(A-008-full.png)" />
 HTML;
        }

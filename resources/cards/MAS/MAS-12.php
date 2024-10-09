@@ -19,8 +19,6 @@ class implements CardComponents
 {
     use DefaultCardAttributes;
 
-    public function background(): void {}
-
     public function content(): \Traversable
     {
         yield <<<'HTML'
