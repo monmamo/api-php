@@ -1,19 +1,25 @@
 <?php
 
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
+
 return new
-#[\App\GeneralAttributes\Title('Hurricane')]
+#[Title('Hurricane')]
 
-    #[\App\Concept('Catastrophe')]
+    #[Concept('Catastrophe')]
 
+    #[FlavorText('Hope your Insurance (A-069) is paid up.')]
 
+    class implements CardComponents
+    {
+        use DefaultCardAttributes;
 
-
-    #[\App\CardAttributes\FlavorText('Hope your Insurance (A-069) is paid up.')]
-
-    class implements \App\Contracts\Card\CardComponents {
-use \App\CardAttributes\DefaultCardAttributes;
-public function content(): \Traversable    {
-yield <<<'HTML'
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(hero/hurricane.jpg)" />
     <text y="440" filter="url(#solid)">
     <x-card.smallrule>This card can be played only if Summer </x-card.smallrule>
@@ -29,5 +35,5 @@ yield <<<'HTML'
         <x-card.normalrule>into the Library.</x-card.normalrule>
     </text>
 HTML;
-}
-};
+        }
+    };

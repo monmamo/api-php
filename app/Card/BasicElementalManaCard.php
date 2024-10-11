@@ -5,7 +5,7 @@ namespace App\Card;
 use App\CardAttributes\DefaultCardAttributes;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
-use Illuminate\Support\Facades\Blade;
+use App\Facades\Blade;
 
 class BasicElementalManaCard implements CardComponents
 {
@@ -15,7 +15,6 @@ class BasicElementalManaCard implements CardComponents
      * @group nonary
      */
     public function __construct(
-        public readonly string $viewBox,
         public $svg,
         public readonly string $title,
         public readonly string $imageCredit,
@@ -24,18 +23,20 @@ class BasicElementalManaCard implements CardComponents
     /**
      * @group nonary
      */
-    public function background(): ?string
+    public function background(): \Traversable
     {
         $width = $height = 700;
 
-        return Blade::render(
-            '<x-card.background fill="#000000" /><x-svg id="background-icon" :$x :$y :$height :$width :$viewBox>{{$svg}}</x-svg>',
+        yield '<x-card.background fill="#000000" />';
+
+        yield Blade::deferRender(
+            '<x-svg id="background-icon" :$x :$y :$height :$width :$viewBox>{{$svg}}</x-svg>',
             [
                 'x' => (\config('card-design.width') - $width) / 2,
                 'y' => \config('card-design.viewbox.y'),
                 'height' => $height,
                 'width' => $width,
-                'viewBox' => $this->viewBox,
+                'viewBox' => '0 0 512 512',
                 'svg' => $this->svg,
             ],
         );
