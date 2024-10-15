@@ -1,7 +1,6 @@
 <x-guest-layout>
     <h1>Upcoming Events</h1>
 
-
     <h3>2024</h3>
 
     <div class="container">
