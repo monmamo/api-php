@@ -16,6 +16,8 @@ trait Reflection
 
     /**
      * @group binary
+     *
+     * @param null|mixed $callback
      */
     protected function withAttribute(string $class, $callback = null)
     {

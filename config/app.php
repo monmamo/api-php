@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'name' => \env('APP_NAME', 'Laravel'),
+    'name' => 'Monsters Masters & Mobsters',
 
     /*
     |--------------------------------------------------------------------------

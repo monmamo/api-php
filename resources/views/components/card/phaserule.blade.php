@@ -14,10 +14,7 @@ $make_content = function ($content):string {
     return Blade::render(\App\Strings\html('text', [], $tspans));
 };
 
-
 $slot_html = trim($slot->toHtml());
-
-
 
 $content = match (true) {
     $slot_html === '' =>  $make_content($lines),

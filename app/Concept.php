@@ -102,8 +102,6 @@ class Concept implements HasIcon, Renderable
         return \Illuminate\Support\Facades\View::exists($this->type . '.background');
     }
 
-
-
     public function background()
     {
         return \view($this->type . '.background');
