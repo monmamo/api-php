@@ -1,4 +1,6 @@
 <?php
+\Laravel\Folio\name('deck.print');
+
 // Serialize the listing to an array for x-card-sheet.
 $cards = [];
 foreach(config('decks.'.$id.'.cards') as $card_number => $count) {

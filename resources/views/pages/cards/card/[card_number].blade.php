@@ -24,23 +24,20 @@ $next = $card_number_object->makeNext();
 // \header('Content-Disposition: attachment; filename="'.$card_number.'.svg"');
 
 ?>
-<html>
-  <head>
-    <title><?= $card_number ?> <?= $spec->name() ?></title>
-  </head>
-<body>
-<div class="item buttons">
+<x-card-game-layout>
+<x-slot:page-title><?= $card_number ?> <?= $spec->name() ?></x-slot>
+<div class="btn-group" role="group" aria-label="Basic example">
   @isset($previous)
-  <a id="btn-previous" href="/cards/card/{{$previous}}">{{$previous}}</a>
+  <a id="btn-previous" type="button" class="btn btn-secondary" href="/cards/card/{{$previous}}">{{$previous}}</a>
     @endisset
-  <button id="btn-png" data-format="png">PNG</button>
-  <button id="btn-jpg" data-format="jpeg">JPG</button>
-  <button id="btn-webp" data-format="webp">WEBP</button>
+  <button id="btn-png" type="button" class="btn btn-secondary" data-format="png">PNG</button>
+  <button id="btn-jpg" type="button" class="btn btn-secondary" data-format="jpeg">JPG</button>
+  <button id="btn-webp" type="button" class="btn btn-secondary" data-format="webp">WEBP</button>
 
-  <a href="<?=  "vscode://file/".urlencode($card_number_object->getSpecFilePath()) ?>">Edit</a>
+  <a class="btn btn-warning" href="<?=  "vscode://file/".urlencode($card_number_object->getSpecFilePath()) ?>">Edit</a>
 
   @isset($next)
-  <a id="btn-next" href="/cards/card/{{$next}}">{{$next}}</a>
+  <a id="btn-next" type="button" class="btn btn-secondary" href="/cards/card/{{$next}}">{{$next}}</a>
     @endisset
 </div>
   <div id="svg-container" hx-get="#"  hx-trigger="dblclick" hx-target="#svg-container">
@@ -100,5 +97,5 @@ for (const btn of buttons) {
 }
     </script>
     @stack('debug')
-    </body>
-    </html>
+
+</x-card-game-layout>

@@ -18,7 +18,7 @@ class Vulpos implements Taxon
 {
     public static function rarity(): float
     {
-        return TODO;
+        return 0; //TODO
     }
 
     public static function sizeDelta(): float

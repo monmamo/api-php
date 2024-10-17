@@ -1,10 +1,24 @@
 <x-guest-layout>
+<x-slot:page-title>Upcoming Events</x-slot>
+
     <h1>Upcoming Events</h1>
 
     <h3>2024</h3>
 
     <div class="container">
         <div class="row">
+        <div class="card col-3">
+                <div class="card-body">
+                    <h5 class="card-title">Rou-Ga-Con</h5>
+                    <p class="card-text">Convention<br />October 19<br />Houma, LA<br>Rougarou Festival</p>
+                </div>
+            </div>
+        <div class="card col-3">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://www.facebook.com/events/1296252661750899">Little Wars Faire</h5>
+                    <p class="card-text">Convention<br />November 2<br />Baton Rouge, LA<br>Little Wars</p>
+                </div>
+            </div>
             <div class="card col-3">
                 <div class="card-body">
                     <h5 class="card-title"><a href="https://www.sttammanycollectorscon.com/">St. Tammany Collectors Con</a></h5>

@@ -178,5 +178,7 @@ function make($spec): CardComponents
         $spec instanceof CardNumber => \App\Card\make(require $spec->getSpecFilePath()),
 
         $spec instanceof CardComponents => $spec,
+
+        default => dd($spec)
     };
 }
