@@ -5,12 +5,16 @@ use Illuminate\View\ComponentAttributeBag;
 extract($attributes->getAttributes());
 
 try {
+    $width ??=  $size;
+    $height ??=  $size;
     $center ??= false;
     $dx = (float) ($dx ?? 0);
     $dy = (float) ($dy ?? 0);
     $x = (float) ($x ?? $dx * $width);
     $y = (float) ($y ?? $dy * $height);
-    $viewBox ??= "0 0 $width $height";
+    $viewBox ??= match(true) {
+        isset($icon) => "0 0 512 512",default => "0 0 $width $height"
+    };
 } catch (\ErrorException $e) {
     dump($attributes->getAttributes());
     throw $e;
@@ -23,5 +27,11 @@ $svg_attributes['version'] = "1.1";
 $svg_attributes['xml:space'] = "preserve";
 if (isset($id)) $svg_attributes['id'] = $id;
 
+$content = match(true) {
+    isset($icon) => \App\Strings\html('g',['fill'=>'#000000'], view("icons.$icon")),
+    isset($slot) => $slot,
+    default => null,
+}
+
 ?>
-<svg {{new \Illuminate\View\ComponentAttributeBag($svg_attributes)}}>{{$slot?? null}}</svg>
+<svg {{new \Illuminate\View\ComponentAttributeBag($svg_attributes)}}>{{$content}}</svg>

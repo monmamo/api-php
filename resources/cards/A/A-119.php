@@ -11,7 +11,7 @@ use App\GeneralAttributes\Title;
 // https://www.freepik.com/free-photo/brain-booster-pills-container-still-life_65114716.htm
 
 return new
-#[Title('Healing Elixir')]
+#[Title('Medicinal Compound')]
 
     #[Concept('Item')]
     #[Concept('Healing')]
@@ -19,7 +19,7 @@ return new
 
     #[ImageCredit('Image by freepik')]
 
-    #[FlavorText('Does a monster good!')]
+    #[FlavorText('Most efficacious in every case.')]
 
     class implements CardComponents
     {

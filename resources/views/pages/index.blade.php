@@ -10,7 +10,7 @@
 </figure>
 
     <p>Pokémon is Monsters Masters &amp; Mobsters for children.</p>
-    <p>The concept is simple: Trainable monsters and a culture of training and battling them. Pokemon takes that concept, constrains it in age appropriateness, and applies a simple formula: Anyone can be a Pokémon trainer, and anyone can become the Best Pokemon Master Ever. Monsters Masters &amp; Mobsters is about the concept, not a kid-friendly scoping of the concept. </p>
+    <p>The concept is simple: Trainable monsters and a culture of training and battling them. Pokémon takes that concept, constrains it in age appropriateness, and applies a simple formula: Anyone can be a Pokémon trainer, and anyone can become the Best Pokémon Master Ever. Monsters Masters &amp; Mobsters is about the concept, not a kid-friendly scoping of the concept. </p>
     <p>Also, whereas Pokémon and many of the concepts inspired by it come from Japan and are shaped largely by Japanese culture, Monsters Masters &amp; Mobsters is a uniquely American product. Our primary sources of inspiration come from the United States and its many peoples, lands and history.</p>
     </div>
 

@@ -48,6 +48,12 @@ return [
             'throw' => false,
         ],
 
+        'website' => [
+            'driver' => 'local',
+            'root' => \resource_path('views/pages'),
+            'throw' => false,
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => \storage_path('app/public'),

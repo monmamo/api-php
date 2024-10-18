@@ -9,9 +9,16 @@ $id = uniqid();
     </button>
     <div class="collapse" id="<?= $id ?>-collapse">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            @foreach($links as $href => $label)
-            <li><a href="<?= $href ?>" class="link-body-emphasis d-inline-flex text-decoration-none rounded"><?= $label ?></a></li>
-            @endforeach
+            <?php
+            foreach($links as $href => $label) {
+                if ($href[0] === '/') {
+                    $a_attributes = ['href' => $href];
+                } else {
+                    $a_attributes = ['hx-get' => "/fragment/$href", 'hx-target' => 'div#content', 'hx-trigger' => 'click'];
+                }
+                echo '<li><a ' . implode(' ', array_map(fn($k, $v) => "$k=\"$v\"", array_keys($a_attributes), $a_attributes)) . ' class="link-body-emphasis d-inline-flex text-decoration-none rounded">' . $label . '</a></li>';
+            }
+?>
         </ul>
     </div>
 </li>

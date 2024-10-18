@@ -1,5 +1,8 @@
 <?php
 
+namespace App;
+
+
 $dir = new \RecursiveDirectoryIterator(__DIR__);
 $ite = new \RecursiveIteratorIterator($dir);
 $files = new \RegexIterator(

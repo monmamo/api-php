@@ -6,20 +6,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/news">News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/lore">Lore</a>
-                        </li>
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Concepts</a>
-                        <ul class="dropdown-menu">
-                            @foreach(\App\Concept::all() as $concept)
-                            <li><a class="dropdown-item" href="#">{{$concept}}</a></li>
-                            @endforeach
-                        </ul>
-                        </li>
-
+    <x-nav.menu title="Home" :links="config('ui.home.links')" />
+    <x-nav.menu title="World" :links="config('ui.world.links')" />
+    <x-nav.menu title="Products" :links="config('ui.products.links')" />
+    <x-nav.menu title="Community" :links="config('ui.community.links')" />
                     </ul>
                 <a class="navbar-brand" href="https://www.facebook.com/people/Monsters-Masters-Mobsters/61559695048144/" aria-label="Facebook" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_136_3709)">
@@ -32,7 +22,7 @@
                     </clipPath>
                     </defs>
                     </svg>
-                    
+
                 </a>
                 <a class="navbar-brand" href="https://x.com/monmamoverse" aria-label="X" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_136_3753)">
@@ -44,7 +34,7 @@
                     </clipPath>
                     </defs>
                     </svg>
-                    
+
                 </a>
                 <a class="navbar-brand" href="https://www.instagram.com/monmamoverse" aria-label="Instagram" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_136_3697)">
@@ -58,7 +48,7 @@
                     </clipPath>
                     </defs>
                     </svg>
-                    
+
                 </a>
                 <a class="navbar-brand" href="/gallery" aria-label="Pinterest" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_136_3733)">
@@ -70,7 +60,7 @@
                     </clipPath>
                     </defs>
                     </svg>
-                    
+
                 </a>
             </div>
             <form class="d-flex" role="search">
