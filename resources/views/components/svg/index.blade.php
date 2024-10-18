@@ -5,6 +5,7 @@ use Illuminate\View\ComponentAttributeBag;
 extract($attributes->getAttributes());
 
 try {
+    $center ??= false;
     $dx = (float) ($dx ?? 0);
     $dy = (float) ($dy ?? 0);
     $x = (float) ($x ?? $dx * $width);

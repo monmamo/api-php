@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,12 +16,13 @@
     <meta property="og:description" content="Monsters Masters & Mobsters is a speculative fiction concept that incorporates elements of magical realism, professional sports and organized (and disorganized) crime.">
     <meta name="author" content="Monsters Masters & Mobsters LLC">
     <meta property="og:author" content="Monsters Masters & Mobsters LLC">
-    <meta name="image" content="https://assets.cdn.filesafe.space/3vVAHmly2NuweaJs74jQ/media/66874211e38553385d6e377a.png">
-    <meta property="og:image" content="https://assets.cdn.filesafe.space/3vVAHmly2NuweaJs74jQ/media/66874211e38553385d6e377a.png">
+    <meta name="image" content="<?= asset('public/logo-white-on-black.png') ?>">
+    <meta property="og:image" content="<?= asset('public/logo-white-on-black.png') ?>">
     <meta name="keywords" content="Monsters Masters & Mobsters, monsters, masters, mobsters, fantasy, speculative fiction,magical realism, storytelling, organized crime, professional sports, trainable monsters">
     <meta property="og:keywords" content="Monsters Masters & Mobsters, monsters, masters, mobsters, fantasy, speculative fiction,magical realism, storytelling, organized crime, professional sports, trainable monsters">
     <meta property="og:type" content="website">
     <meta property="twitter:type" content="website">
+    <link rel="icon" href="data:image/jpg;base64,<?= \base64_encode(\file_get_contents(resource_path("images/plain-logo-16.png"))) ?>" type="image/png">
 
     <style>
         .bd-placeholder-img {
