@@ -24,8 +24,15 @@ $next = $card_number_object->makeNext();
 // \header('Content-Disposition: attachment; filename="'.$card_number.'.svg"');
 
 ?>
-<x-card-game-layout>
+<x-guest-layout>
 <x-slot:page-title><?= $card_number ?> <?= $spec->name() ?></x-slot>
+
+<x-slot:leftbar>
+  <x-content-bar.section title="Card Sets" :links="config('ui.card_sets')" />
+  <x-content-bar.section title="Decks" :links="config('ui.decks')" />
+    </x-slot:leftbar>
+  
+
 <div class="btn-group" role="group" aria-label="Basic example">
   @isset($previous)
   <a id="btn-previous" type="button" class="btn btn-secondary" href="/cards/card/{{$previous}}">{{$previous}}</a>
@@ -98,4 +105,4 @@ for (const btn of buttons) {
     </script>
     @stack('debug')
 
-</x-card-game-layout>
+</x-guest-layout>
