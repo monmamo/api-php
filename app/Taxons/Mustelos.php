@@ -18,25 +18,16 @@ class Mustelos implements Taxon
 {
     public static function rarity(): float
     {
-        return 0; //TODO
+        return 1/30; //TODO
     }
 
     public static function sizeDelta(): float
     {
-        return 0;
+        return -0.5;
     }
 }
 
 // [[genus]] with [[Pronos]] form.
 // Weasel-forms, badger-forms.
-// Alternates:
-// Masculine:
-// Mustelor
-// Mustelander
-// Feminine:
-// Musteless
-// Mustelquin
-// Attributes:
 
-// Prefers:
-// size delta: -0.5
+

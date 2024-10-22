@@ -18,7 +18,7 @@ class Angelos implements Taxon
 {
     public static function rarity(): float
     {
-        return 0; //TODO
+        return 100; //TODO
     }
 
     public static function sizeDelta(): float

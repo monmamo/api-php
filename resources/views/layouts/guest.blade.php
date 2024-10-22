@@ -109,24 +109,22 @@
 ?>
 
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#page-toc" data-bs-smooth-scroll="true">
     <x-header />
 
-    <main class="container-fluid">
-        <div class="d-flex">
-            @isset($leftbar)
-            <div class="flex-shrink-0 p-3" style="width: 280px;">
-                <ul class="list-unstyled ps-0">
-                    {{$leftbar}}
-                </ul>
-            </div>
-
-            <div class="b-example-divider b-example-vr"></div>
-
-            @endisset
-            <div class="flex-grow-0">{{$slot}}</div>
+    <aside class="bd-sidebar">
+        @isset($leftbar)
+        <div class="flex-shrink-0 p-3" style="width: 280px;">
+            <ul class="list-unstyled ps-0">
+                {{$leftbar}}
+            </ul>
         </div>
-    </main>
+
+        <div class="b-example-divider b-example-vr"></div>
+
+        @endisset
+    </aside>
+    <main class="bd-main p-3">{{$slot}}</main>
 
     <x-footer />
 

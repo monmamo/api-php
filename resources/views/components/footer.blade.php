@@ -1,17 +1,17 @@
 <footer class="bd-footer py-2 mt-5 bg-dark-subtle ">
         <div class="container py-2 px-4 px-md-3 ">
             <div class="row">
-                <div class="col-lg-4 mb-3">
+                <div class="col-5 col-lg-3 mb-3">
                     <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="Homepage">
                         <x-application-mark height="150" />
                     </a>
                     <ul class="list-unstyled small">
                         <li>Monsters Masters &amp; Mobsters L.L.C.</li>
                         <li>Ponchatoula, Louisiana, U.S.A.</li>
-                        <li class="mt-2"><a href="/contact">Contact</a> &bull; <a href="/credits">Credits</a></li>
+                        <li class="mt-2"><a href="/people">People</a> &bull; <a href="/contact">Contact</a> &bull; <a href="/credits">Credits</a></li>
                     </ul>
                 </div>
-                <div class="col-6 col-lg-2 mb-3">
+                <div class="col-1 col-lg-2 mb-3">
                     <h5>Home</h5>
                     <ul class="list-unstyled">
                         @foreach(config('ui.home.links') as $spec)
@@ -19,7 +19,7 @@
                         @endforeach
                     </ul>
                 </div>
-                <div class="col-6 col-lg-2 mb-3">
+                <div class="col-2 col-lg-2 mb-3">
                     <h5>World of MonMaMo</h5>
                     <ul class="list-unstyled">
                     @foreach(config('ui.world.links') as $spec)
@@ -27,7 +27,7 @@
                         @endforeach
                     </ul>
                 </div>
-                <div class="col-6 col-lg-2 mb-3">
+                <div class="col-2 col-lg-2 mb-3">
                     <h5>Products</h5>
                     <ul class="list-unstyled">
                     @foreach(config('ui.products.links') as $spec)
@@ -35,7 +35,7 @@
                         @endforeach
                     </ul>
                 </div>
-                <div class="col-6 col-lg-2 mb-3">
+                <div class="col-2 col-lg-2 mb-3">
                     <h5>Community</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2">
