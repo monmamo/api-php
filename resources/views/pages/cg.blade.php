@@ -1,20 +1,5 @@
 <x-guest-layout>
     <?php
-    $card_sets = [];
-    foreach (\App\Enums\CardSet::cases() as $set) {
-        $card_sets['/cards/set/' . $set->value] = sprintf('%s (%s)', $set->name, $set->value);
-    }
-
-    $decks = [
-        '/cards/deck/sdv' => 'SDV',
-        '/cards/deck/pdv-energos' => 'PDV Energos',
-        '/cards/deck/pdv-pyros' => 'PDV Pyros',
-        '/cards/deck/pdv-aquos' => 'PDV Aquos',
-    ];
-    // foreach (\App\Enums\CardSet::cases() as $set ){
-    //     $card_sets['/cards/set/'.$set->value] = sprintf('%s (%s)', $set->name, $set->value);
-    // }
-
     // Won't include every concept, just the ones that are most important.
     $concepts = [
 '/concepts/Draw' => 'Draw',
@@ -33,8 +18,8 @@
 <x-content-bar.section title="Special Rules" :links="['card-game/bribery'=>'Integrity & Bribery','card-game/power-up'=>'Power Up','card-game/secret-play'=>'Secret Play','card-game/sucker-punch'=>'Sucker Punch']" />
 <x-content-bar.section title="Ways to Play" :links="['card-game/sdv'=>'Single-Deck Version','card-game/pdv'=>'Personal Deck Version','card-game/bf'=>'Battle Formats']" />
 <x-content-bar.section title="Concepts" :links="$concepts" />
-<x-content-bar.section title="Card Sets" :links="$card_sets" />
-<x-content-bar.section title="Decks" :links="$decks" />
+<x-content-bar.section title="Card Sets" :links="config('ui.card_sets')" />
+<x-content-bar.section title="Decks" :links="config('ui.decks')" />
 </x-slot:leftbar>
 
 <div id="content">

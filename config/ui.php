@@ -42,4 +42,17 @@ $community = [
     ],
 ];
 
-return \compact('home', 'world', 'products', 'community');
+$card_sets = [];
+foreach (\App\Enums\CardSet::cases() as $set) {
+    $card_sets['/cards/set/' . $set->value] = sprintf('%s (%s)', $set->name, $set->value);
+}
+
+$decks = [
+    '/cards/deck/sdv' => 'SDV',
+    '/cards/deck/pdv-energos' => 'PDV Energos',
+    '/cards/deck/pdv-pyros' => 'PDV Pyros',
+    '/cards/deck/pdv-aquos' => 'PDV Aquos',
+];
+
+
+return \compact('home', 'world', 'products', 'community','card_sets','decks');
