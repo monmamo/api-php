@@ -179,6 +179,6 @@ function make($spec): CardComponents
 
         $spec instanceof CardComponents => $spec,
 
-        default => dd($spec)
+        default => \dd($spec)
     };
 }

@@ -6,7 +6,7 @@ use App\Contracts\Skill;
 
 class MindGames implements Skill {}
 
-//source or inspiration:: Pokemon TCG Slowking L39 "Mind Games" power.
+//source or inspiration:: Pokémon TCG Slowking L39 "Mind Games" power.
 //Requires [[Psychos]].
 //# playable card::
 

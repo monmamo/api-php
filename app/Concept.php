@@ -8,6 +8,7 @@ use App\GeneralAttributes\Title;
 use App\Methods\Make\MakeFromConstructor;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\View;
 use Traversable;
 
 #[\Attribute(\Attribute::TARGET_CLASS + \Attribute::IS_REPEATABLE)]
@@ -97,11 +98,6 @@ class Concept implements HasIcon, Renderable
         return \collect(Storage::disk('concepts')->directories())->sort();
     }
 
-    public function hasBackground()
-    {
-        return \Illuminate\Support\Facades\View::exists($this->type . '.background');
-    }
-
     public function background()
     {
         return \view($this->type . '.background');
@@ -118,6 +114,11 @@ class Concept implements HasIcon, Renderable
             $attribute = $attributes[0] ?? throw new \LogicException();
             return $attribute->getArguments()[0]->value;
         });
+    }
+
+    public function hasBackground()
+    {
+        return View::exists($this->type . '.background');
     }
 
     /**

@@ -7,7 +7,6 @@ use App\Concept;
 use App\Concerns\Reflection;
 use App\GeneralAttributes\Title;
 use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Support\Facades\View;
 
 #[\Attribute(\Attribute::TARGET_CLASS)]
 trait DefaultCardAttributes
@@ -53,7 +52,7 @@ trait DefaultCardAttributes
     public function concepts(): array
     {
         return $this->_concepts ??= \array_map(
-            fn($attribute) => $attribute->newInstance(),
+            fn ($attribute) => $attribute->newInstance(),
             $this->getAttributes(Concept::class),
         );
     }
