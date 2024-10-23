@@ -32,22 +32,23 @@ class MakeConcept extends Command implements PromptsForMissingInput
         $slug = Str::studly($title);
 
         $form = \Laravel\Prompts\form()
-        ->textarea('Definition',name:'definition');
+            ->textarea('Definition', name: 'definition');
 
         $data = $form->submit();
-        
-$definition_html = '';
-        foreach(\App\Strings\explode_string_lines($data['definition']) as $line) {
+
+        $definition_html = '';
+
+        foreach (\App\Strings\explode_string_lines($data['definition']) as $line) {
             $definition_html .= \App\Strings\html('p', $line)->toHtml();
         }
 
         $disk = Storage::disk('concepts');
         $disk->makeDirectory($slug);
         $disk->put(
-            $slug. '/definition.html',
-            $definition_html
+            $slug . '/definition.html',
+            $definition_html,
         );
 
-        $this->info($slug. '/definition.html');
+        $this->info($slug . '/definition.html');
     }
 }

@@ -18,7 +18,7 @@ class Mustelos implements Taxon
 {
     public static function rarity(): float
     {
-        return 1/30; //TODO
+        return 1 / 30; //TODO
     }
 
     public static function sizeDelta(): float
@@ -29,5 +29,3 @@ class Mustelos implements Taxon
 
 // [[genus]] with [[Pronos]] form.
 // Weasel-forms, badger-forms.
-
-

@@ -1,5 +1,7 @@
 <?php
 
+use App\Enums\CardSet;
+
 $home = [
     'title' => 'Home',
     'url' => '/',
@@ -43,8 +45,9 @@ $community = [
 ];
 
 $card_sets = [];
-foreach (\App\Enums\CardSet::cases() as $set) {
-    $card_sets['/cards/set/' . $set->value] = sprintf('%s (%s)', $set->name, $set->value);
+
+foreach (CardSet::cases() as $set) {
+    $card_sets['/cards/set/' . $set->value] = \sprintf('%s (%s)', $set->name, $set->value);
 }
 
 $decks = [
@@ -54,5 +57,4 @@ $decks = [
     '/cards/deck/pdv-aquos' => 'PDV Aquos',
 ];
 
-
-return \compact('home', 'world', 'products', 'community','card_sets','decks');
+return \compact('home', 'world', 'products', 'community', 'card_sets', 'decks');

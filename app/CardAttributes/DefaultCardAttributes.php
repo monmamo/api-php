@@ -151,7 +151,7 @@ trait DefaultCardAttributes
     {
         return $this->_prerequisites_attribute ??= \value(function () {
             $prerequisites = [];
-            $y = 475 + 25 * (\transform($this->flavorTextAttribute(), fn($attribute): int => \count($attribute->lines())) ?? 1);
+            $y = 475 + 25 * (\transform($this->flavorTextAttribute(), fn ($attribute): int => \count($attribute->lines())) ?? 1);
             $color = '#000000';
             $attributes = $this->getAttributes(Prerequisites::class);
 

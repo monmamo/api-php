@@ -13,11 +13,11 @@ enum Hosts: string
     #[Environment(Environments::Development)]
     case Default = '';
 
-    #[Environment(Environments::Production)]
-    case Live = 'monmamo.com';
-
     #[Environment(Environments::Testing)]
     case Dev1 = 'jb1.localhost';
+
+    #[Environment(Environments::Production)]
+    case Live = 'monmamo.com';
 
     /**
      * Returns the environment of the host.
