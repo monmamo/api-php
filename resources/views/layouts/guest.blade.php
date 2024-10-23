@@ -25,6 +25,22 @@
     <link rel="icon" href="data:image/jpg;base64,<?= \base64_encode(\file_get_contents(resource_path("images/plain-logo-16.png"))) ?>" type="image/png">
 
     <style>
+        a:link {
+            text-decoration: none;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:active {
+            text-decoration: underline;
+        }
+
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -110,6 +126,7 @@
 
 
 <body data-bs-spy="scroll" data-bs-target="#page-toc" data-bs-smooth-scroll="true">
+
     <x-header />
 
     <aside class="bd-sidebar">
