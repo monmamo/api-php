@@ -35,4 +35,8 @@
 
     <p>Our <a target="_self" rel="noopener noreferrer" href="/events">Events</a> page lists the conventions and events that we plan to attend. Or contact us to schedule a personal meeting.</p>
 
+    <h4>Why does this website look like a work in progress?</h4>
+
+    <p>Because it's a work in progress. Like the world of Monsters Masters &amp; Mobsters, this website is constantly evolving. We appreciate your patience as we continue to develop and improve. In the meantime, please throw us some love (we also take money) on <x-social-link slug="patreon">Patreon</x-social-link>, <x-social-link slug="x">X</x-social-link>, <x-social-link slug="instagram">Instagram</x-social-link> or <x-social-link slug="facebook">Facebook</x-social-link>.</p>
+
 </x-guest-layout>

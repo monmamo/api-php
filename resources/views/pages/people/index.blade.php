@@ -20,6 +20,7 @@ Jay Bienvenu<br/><small>Creator, Curator and Canonist</small></h2>
 
 <p>We use icons from <a href="https://game-icons.net/">Game-Icons.net</a> and <a href="https://thenounproject.com/">The Noun Project</a>. Icons are used under a Creative Commons license. <!--The icons are used in the following ways:--></p>
 
+
 <h2>Card Game</h2>
 
 <p><strong>Hunter Andries</strong> Playtesting.</p>
@@ -31,8 +32,7 @@ Jay Bienvenu<br/><small>Creator, Curator and Canonist</small></h2>
 
 <p><strong>Gen Con 2024 First Exposure Playtest Hall:</strong> Ray, Jacob, Karl, Sutton, Derrick, Evelyn, Corrie and Jeremy.</p>
 
-Icon Credits
-Cumulative: estuhartono from the Noun Project.
+
 
 
 </x-guest-layout>

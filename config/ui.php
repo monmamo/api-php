@@ -39,8 +39,11 @@ $community = [
     'title' => 'Community',
     'links' => [
         ['/community" target="_blank" rel="noopener', 'Rules'],
-        ['https://deviantart.com/monmamo" target="_blank" rel="noopener', 'DeviantArt'],
-        ['https://github.com/monmamo" target="_blank" rel="noopener', 'GitHub'],
+        [config('external.deviantart').'" target="_blank" rel="noopener', 'DeviantArt'],
+        [config('external.discord').'" target="_blank" rel="noopener', 'Discord'],
+        [config('external.github').'" target="_blank" rel="noopener', 'GitHub'],
+        [config('external.patreon').'" target="_blank" rel="noopener', 'Patreon'],
+        [config('external.reddit').'" target="_blank" rel="noopener', 'Reddit'],
     ],
 ];
 

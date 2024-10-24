@@ -11,10 +11,13 @@ class Card extends Component //implements CardComponents
 {
     protected readonly CardNumber $card_number_parsed;
 
+    public float $height;
+
     public function __construct(
         public string $cardNumber,
         public ?CardComponents $spec,
         public ?string $cardName = null,
+        public ?float $width = null,
         public float $titleboxOpacity = 1,
         public mixed $concepts = null,
         public int $dx = 0,
@@ -22,6 +25,8 @@ class Card extends Component //implements CardComponents
         public bool $omitCommon = false,
     ) {
         $this->cardName ??= $this->spec->name();
+        $this->width ??= config('card-design.width');
+        $this->height ??= config('card-design.height') * $this->width / config('card-design.width');
     }
 
     /**

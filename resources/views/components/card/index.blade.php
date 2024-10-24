@@ -15,8 +15,9 @@ $rules_dy = 0;
     :$dx
     :$dy
     :id="$cardNumber"
-    :width="config('card-design.width')"
-    :height="config('card-design.height')"
+    :$width
+    :$height
+    viewBox="0 0 750 1050"
 >
 
     <title><?= $cardName ?></title>

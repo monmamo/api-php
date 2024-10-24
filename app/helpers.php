@@ -2,6 +2,8 @@
 
 namespace App;
 
+define('TODO', 'TODO');
+
 $dir = new \RecursiveDirectoryIterator(__DIR__);
 $ite = new \RecursiveIteratorIterator($dir);
 $files = new \RegexIterator(
