@@ -1,6 +1,5 @@
 <?php
 
-use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
@@ -26,10 +25,10 @@ HTML;
 };
 
 // 'flavor-text' => [
-//     'Touch is the best medicine.'    
+//     'Touch is the best medicine.'
 
 // <x-card :$cardNumber :$dx :$dy card-name="Masseuse">
-    
+
 //         'concepts' => ['Bystander'],
 //         'concepts' => ['Female'],
 //         'concepts' => ['Integrity'],
@@ -45,6 +44,3 @@ HTML;
 // <x-card.normalrule>of your Monsters that is not Knocked Out.</x-card.normalrule>
 // </text>
 // </x-card.phaserule>
-
-
-// </x-card>

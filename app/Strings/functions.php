@@ -712,6 +712,17 @@ function html(...$pieces): Htmlable
     if (\count($pieces) === 1 && $pieces[0] instanceof Renderable) {
         return new class($pieces[0]) implements Htmlable
         {
+            /**
+             * Constructor.
+             *
+             * @group magic
+             * @group mutator
+             * @group nonary|unary|variadic
+             *
+             * @uses parent::__construct
+             *
+             * @return void
+             */
             public function __construct(
                 protected Renderable $renderable,
             ) {}
@@ -746,6 +757,17 @@ function html(...$pieces): Htmlable
     if (\count($content) === 0) {
         return new class($pieces[0], $attributes) implements Htmlable
         {
+            /**
+             * Constructor.
+             *
+             * @group magic
+             * @group mutator
+             * @group nonary|unary|variadic
+             *
+             * @uses parent::__construct
+             *
+             * @return void
+             */
             public function __construct(
                 public string $tag,
                 public array $attributes,
@@ -760,6 +782,17 @@ function html(...$pieces): Htmlable
 
     return new class($pieces[0], $attributes, $content) implements Htmlable
     {
+        /**
+         * Constructor.
+         *
+         * @group magic
+         * @group mutator
+         * @group nonary|unary|variadic
+         *
+         * @uses parent::__construct
+         *
+         * @return void
+         */
         public function __construct(
             public string $tag,
             public array $attributes,

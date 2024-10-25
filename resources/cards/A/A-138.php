@@ -1,7 +1,7 @@
 <?php
+
 // https://www.freepik.com/free-vector/lottery-ticket-concept-illustration_171056284.htm
 
-use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
@@ -12,7 +12,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Mana Lottery')]
 #[Concept('Vendor')]
-#[Concept('Integrity',2)]
+#[Concept('Integrity', 2)]
 #[ImageCredit('Image by storyset on Freepik')]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents
@@ -34,9 +34,3 @@ class implements CardComponents
 HTML;
     }
 };
-
-
-
-
-
-    

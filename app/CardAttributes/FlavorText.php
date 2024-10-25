@@ -10,6 +10,17 @@ class FlavorText implements Renderable
 {
     protected readonly array $lines;
 
+    /**
+     * Constructor.
+     *
+     * @group magic
+     * @group mutator
+     * @group nonary|unary|variadic
+     *
+     * @uses parent::__construct
+     *
+     * @return void
+     */
     public function __construct(
         $lines,
         public readonly int $y = 510,

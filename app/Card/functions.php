@@ -99,6 +99,17 @@ function make($spec): CardComponents
         {
             protected readonly CardNumber $card_number_parsed;
 
+            /**
+             * Constructor.
+             *
+             * @group magic
+             * @group mutator
+             * @group nonary|unary|variadic
+             *
+             * @uses parent::__construct
+             *
+             * @return void
+             */
             public function __construct(public readonly array $spec) {}
 
             /**

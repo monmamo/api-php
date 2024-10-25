@@ -8,6 +8,17 @@ use Illuminate\Support\Facades\Blade;
 #[\Attribute(\Attribute::TARGET_CLASS)]
 class SvgHeroImage implements Renderable
 {
+    /**
+     * Constructor.
+     *
+     * @group magic
+     * @group mutator
+     * @group nonary|unary|variadic
+     *
+     * @uses parent::__construct
+     *
+     * @return void
+     */
     public function __construct(public string $code, public string $viewbox = '0 0 512 512') {}
 
     public function render()

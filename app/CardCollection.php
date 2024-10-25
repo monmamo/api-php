@@ -7,6 +7,17 @@ use App\View\Components\Card;
 
 class CardCollection extends \ArrayObject
 {
+    /**
+     * Constructor.
+     *
+     * @group magic
+     * @group mutator
+     * @group nonary|unary|variadic
+     *
+     * @uses parent::__construct
+     *
+     * @return void
+     */
     public function __construct(
         $set = '*',
         $id = '*',

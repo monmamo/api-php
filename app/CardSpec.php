@@ -8,6 +8,17 @@ class CardSpec implements \IteratorAggregate, CardComponents
 {
     protected readonly CardNumber $card_number_parsed;
 
+    /**
+     * Constructor.
+     *
+     * @group magic
+     * @group mutator
+     * @group nonary|unary|variadic
+     *
+     * @uses parent::__construct
+     *
+     * @return void
+     */
     public function __construct(
         protected readonly string $card_number,
         protected readonly string $card_name,
@@ -80,6 +91,8 @@ class CardSpec implements \IteratorAggregate, CardComponents
 
     /**
      * @group nonary
+     *
+     * @uses \App\CardNumber::make
      */
     public function set(): string
     {

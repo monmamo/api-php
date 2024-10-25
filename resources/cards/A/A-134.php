@@ -1,6 +1,5 @@
 <?php
 
-use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
@@ -31,7 +30,7 @@ HTML;
 
 // <x-card :$cardNumber :$dx :$dy card-name="Mana Recycle System">
 //     <image x="0" y="0" class="hero" href="@local(A212.jpg)" />
-    
+
 //         'concepts' => ['Vendor'],
 //         'concepts' => ['Integrity'],
 
@@ -42,5 +41,3 @@ HTML;
 // <x-card.normalrule>&bullet; Shuffle 3 basic Mana cards </x-card.normalrule>
 // <x-card.normalrule>from your Discard pile into your Library.</x-card.normalrule>
 // </text></x-card.phaserule>
-    
-// </x-card>

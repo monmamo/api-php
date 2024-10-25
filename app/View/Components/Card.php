@@ -13,6 +13,17 @@ class Card extends Component //implements CardComponents
 
     public float $height;
 
+    /**
+     * Constructor.
+     *
+     * @group magic
+     * @group mutator
+     * @group variadic
+     *
+     * @uses \config
+     *
+     * @return void
+     */
     public function __construct(
         public string $cardNumber,
         public ?CardComponents $spec,
@@ -25,8 +36,8 @@ class Card extends Component //implements CardComponents
         public bool $omitCommon = false,
     ) {
         $this->cardName ??= $this->spec->name();
-        $this->width ??= config('card-design.width');
-        $this->height ??= config('card-design.height') * $this->width / config('card-design.width');
+        $this->width ??= \config('card-design.width');
+        $this->height ??= \config('card-design.height') * $this->width / \config('card-design.width');
     }
 
     /**

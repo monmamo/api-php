@@ -1387,6 +1387,15 @@ function wrapRenderable(string $input): Renderable
 {
     return new class($input) implements Renderable
     {
+        /**
+         * Constructor.
+         *
+         * @group magic
+         * @group mutator
+         * @group unary
+         *
+         * @return void
+         */
         public function __construct(private string $input) {}
 
         public function render(): string

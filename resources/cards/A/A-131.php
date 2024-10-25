@@ -1,6 +1,5 @@
 <?php
 
-use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
@@ -28,7 +27,6 @@ HTML;
 // <x-card :$cardNumber :$dx :$dy card-name="Insurance Policy" >
 // 'concepts' => ['Vendor'],
 
-    
 //     <text y="500" filter="url(#solid)">
 // <x-card.smallrule>You can't play this card if you have any </x-card.smallrule>
 // <x-card.smallrule>cards in your hand other than this card. </x-card.smallrule>
@@ -38,5 +36,3 @@ HTML;
 // <x-card.normalrule>Show your hand to your opponent,</x-card.normalrule>
 //     <x-card.normalrule>then draw 5 cards.</x-card.normalrule>
 // </text></x-card.phaserule>
-// </x-card>
-
