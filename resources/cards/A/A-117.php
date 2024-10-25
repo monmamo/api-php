@@ -1,6 +1,5 @@
 <?php
 
-use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
@@ -9,10 +8,11 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('TODO')]
-#[Concept('TODO')]
+#[Title('Convenience Store')]
+#[Concept('Vendor')]
+#[Concept('Integrity', 4)]
 #[ImageCredit('IMAGE_CREDIT')]
-#[FlavorText('FLAVOR_TEXT')]
+#[FlavorText(lines: ['The quick stop for everything you forgot', 'at the Big-Box Store (A-014).'])]
 class implements CardComponents
 {
     use DefaultCardAttributes;
@@ -25,13 +25,7 @@ HTML;
     }
 };
 
-// 'flavor-text' => [    'The quick stop for everything you forgot'         'at the Big-Box Store (A-014).'],
-
-// <x-card :$cardNumber card-name="Convenience Store">
 //     <image x="0" y="0" class="hero" href="@local(A040.png)" />
-    
-//         'concepts' => ['Vendor'],
-//         'concepts' => ['Integrity'],
 
 //         <x-card.phaserule type="Draw" height="210" badge="Repeat">
 //             <text>
@@ -42,4 +36,3 @@ HTML;
 //                 <x-card.normalrule>{{__('rules.REDRAW')}}</x-card.normalrule>
 //             </text>
 //         </x-card.phaserule>
-// </x-card>

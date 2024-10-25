@@ -2,17 +2,16 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\LocalHeroImage;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Tornado')]
+#[Title('Sinkhole')]
 #[Concept('Catastrophe')]
 
 #[LocalHeroImage('TODO.png')]
-#[Prerequisites(['This card can be played only if Winter is in play.'])]
+
 class implements CardComponents
 {
     use DefaultCardAttributes;
@@ -20,13 +19,9 @@ class implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="165" >
-
+<x-card.cardrule height="110" >
+<x-card.normalrule>Each Monster in play that does not have some sort of flying ability immediately takes 20 damage.</x-card.normalrule>
 <x-card.normalrule>Each player discards 3 cards from the top of his Library.</x-card.normalrule>
-<x-card.normalrule>If the Place card in play is a Venue or Facility card, discard .</x-card.normalrule>
-<x-card.normalrule>Discard all Mobster and Bystander cards in play.</x-card.normalrule>
-<x-card.normalrule>Discard all Item cards in play.</x-card.normalrule>
-
 </x-card.cardrule>
 HTML;
     }

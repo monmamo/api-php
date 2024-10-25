@@ -80,12 +80,6 @@
                 <p>Players can set the conditions that need to be met before the battle can begin. For example, if the battle is a three-on-three battle, then each player must have three Monsters on the Battlefield before the battle can officially begin. </p>
                 <p>💡 The default format is a head-to-head battle with an equal number of Monsters on each team. New players should start with one Monster each while familiarizing themselves with the rules and gameplay, and expand play to include two or three Monsters per player as they become more familiar with the game. </p>
                 <p>See the Battle Formats section for details on battle formats and special rules.</p>
-                <h3 id="setup-draft">Draft Monsters</h3>
-                <p>In the <a href="/cg/sdv">Single-Deck Version</a>, the Monsters are outside of the Library because, unless players agree otherwise, only some Monsters will be in the game. </p>
-                <p>Players may decide for themselves how each player will get which Monster. Options include:</p>
-                <p>Put all Monsters face-up in the Battlefield and draft them, with one player at a time taking a Monster and putting it on your team.</p>
-                <p>Put the Monsters face-down in the Battlefield and choose them at random.</p>
-                <p>Once players have their Monsters, take the remaining Monsters and put them away from the Battlefield, such as back in the game box.</p>
                 <h3 id="setup-place-cards">Putting Cards Into the Battlefield</h3>
                 <p>The Setup phase proceeds as a series of turns in which each player makes one play per turn. The Setup phase cannot complete until the requirements of the agreed-upon battle format are met.</p>
                 <p>To determine who gets the first setup turn, each player rolls a die. The player who receives the highest number gets to go first. Play proceeds clockwise from there.</p>

@@ -7,7 +7,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Wolcanic Island')]
+#[Title('Volcanic Island')]
 #[ImageCredit('Image by USER_NAME on SERVICE')]
 #[Concept('Place')]
 #[Concept('Generic')]

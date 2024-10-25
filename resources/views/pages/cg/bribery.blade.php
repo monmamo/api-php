@@ -4,12 +4,7 @@
 
 {{-- Note: Content copied in resources/views/pages/cg/bribery.blade.php --}}
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/cg">Monsters Masters & Mobsters Card Game</a></li>
-    <li class="breadcrumb-item"><a href="/cg/rules">Rules</a></li>
-  </ol>
-</nav>
+<x-breadcrumbs :items="['/cg'=>'Monsters Masters & Mobsters Card Game', '/cg/rules'=>'Rules']" />
 
 <h1>Integrity and Bribery</h1>
 

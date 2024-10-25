@@ -19,6 +19,9 @@ enum Hosts: string
     #[Environment(Environments::Production)]
     case Live = 'monmamo.com';
 
+    #[Environment(Environments::Production)]
+    case Live2 = 'www.monmamo.com';
+
     /**
      * Returns the environment of the host.
      *

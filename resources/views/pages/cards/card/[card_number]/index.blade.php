@@ -23,15 +23,15 @@ $next = $card_number_object->makeNext();
 // if (isset($_REQUEST['download'] ))
 // \header('Content-Disposition: attachment; filename="'.$card_number.'.svg"');
 
+// x-slot:leftbar>
+// x-content-bar.section title="Card Sets" :links="config('ui.card_sets')" />
+// x-content-bar.section title="Decks" :links="config('ui.decks')" />
+// /x-slot:leftbar>
+
 ?>
 <x-guest-layout>
 <x-slot:page-title><?= $card_number ?> <?= $spec->name() ?></x-slot>
 
-<x-slot:leftbar>
-  <x-content-bar.section title="Card Sets" :links="config('ui.card_sets')" />
-  <x-content-bar.section title="Decks" :links="config('ui.decks')" />
-    </x-slot:leftbar>
-  
 
 <div class="btn-group" role="group" aria-label="Basic example">
   @isset($previous)

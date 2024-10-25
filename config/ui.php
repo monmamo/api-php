@@ -39,11 +39,11 @@ $community = [
     'title' => 'Community',
     'links' => [
         ['/community" target="_blank" rel="noopener', 'Rules'],
-        [config('external.deviantart').'" target="_blank" rel="noopener', 'DeviantArt'],
-        [config('external.discord').'" target="_blank" rel="noopener', 'Discord'],
-        [config('external.github').'" target="_blank" rel="noopener', 'GitHub'],
-        [config('external.patreon').'" target="_blank" rel="noopener', 'Patreon'],
-        [config('external.reddit').'" target="_blank" rel="noopener', 'Reddit'],
+        [\config('external.deviantart.url') . '" target="_blank" rel="noopener', 'DeviantArt'],
+        [\config('external.discord.url') . '" target="_blank" rel="noopener', 'Discord'],
+        [\config('external.github.url') . '" target="_blank" rel="noopener', 'GitHub'],
+        [\config('external.patreon.url') . '" target="_blank" rel="noopener', 'Patreon'],
+        [\config('external.reddit.url') . '" target="_blank" rel="noopener', 'Reddit'],
     ],
 ];
 

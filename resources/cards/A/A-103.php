@@ -1,17 +1,16 @@
 <?php
 
-use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
-use App\CardAttributes\ImageCredit;
+use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('TODO')]
+#[Title('Drinking Water Fountain')]
 #[Concept('TODO')]
-#[ImageCredit('IMAGE_CREDIT')]
+#[IsGeneratedImage]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents
 {
@@ -25,15 +24,6 @@ HTML;
     }
 };
 
-// @push('background') 
-// {{ view('Upkeep.background') }}
-// <x-card.image-credit>
-// #[\App\CardAttributes\IsGeneratedImage]
-// </x-card.image-credit>
-// @endpush
-
-// <x-card :$cardNumber card-name="Drinking Water Fountain">
-
 //   <image x="0" y="0" class="hero" href="@local(A307.png)" />
 
 //     <x-card.phaserule type="Upkeep" height="240">
@@ -46,5 +36,3 @@ HTML;
 // <x-card.normalrule>searched through your Library, shuffle it.          </x-card.normalrule>
 // </text>
 // </x-card.phaserule>
-
-// </x-card>

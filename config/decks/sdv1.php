@@ -1,7 +1,9 @@
 <?php
 
 return [
-    'name' => 'SDV Library',
+    'name' => 'Basic Common Deck',
+
+    'details' => \App\Strings\html('p', 'The deck designed to draw people into the Monsters Masters & Mobsters card game. Comes with 15 Monsters.'),
 
     'cards' => [
         'A-004' => 2, // Alms for the Poor

@@ -30,14 +30,13 @@ class BasicElementalManaCard implements CardComponents
         yield '<x-card.background fill="#000000" />';
 
         yield Blade::deferRender(
-            '<x-svg id="background-icon" :$x :$y :$height :$width :$viewBox>{{$svg}}</x-svg>',
+            '<x-svg id="background-icon" :$x :$y :$height :$width :$viewBox>' . $this->svg . '</x-svg>',
             [
                 'x' => (\config('card-design.width') - $width) / 2,
                 'y' => \config('card-design.viewbox.y'),
                 'height' => $height,
                 'width' => $width,
                 'viewBox' => '0 0 512 512',
-                'svg' => $this->svg,
             ],
         );
     }

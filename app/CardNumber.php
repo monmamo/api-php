@@ -11,6 +11,17 @@ class CardNumber
 
     protected readonly string $format_string;
 
+    /**
+     * Constructor.
+     *
+     * @group magic
+     * @group mutator
+     * @group nonary|unary|variadic
+     *
+     * @uses parent::__construct
+     *
+     * @return void
+     */
     public function __construct(
         public readonly string $set,
         protected readonly ?string $series,
@@ -59,14 +70,15 @@ class CardNumber
     /**
      * @group unary
      *
-     * @uses \App\CardNumber::make
+     * @uses \assert
+     * @uses \file_exists
+     * @uses \resource_path
      */
-    public function getSpecFilePath(): string
+    public function getSpecFilePath(): ?string
     {
         $filepath = \resource_path("cards/{$this->set}/{$this}.php");
         \assert(!empty($filepath));
-        \assert(\file_exists($filepath), 'file not found: ' . $filepath);
-        return $filepath;
+        return \file_exists($filepath) ? $filepath : null;
     }
 
     /**
@@ -77,6 +89,8 @@ class CardNumber
      * Card in a subset (e.g. 'A-XX-000')
      *
      * @group unary
+     *
+     * @uses \App\CardNumber::__construct
      */
     public static function make(string $whole): self
     {
@@ -101,6 +115,8 @@ class CardNumber
 
     /**
      * @group nonary
+     *
+     * @uses \App\CardNumber::__construct
      */
     public function makeNext(): self
     {
@@ -109,6 +125,8 @@ class CardNumber
 
     /**
      * @group nonary
+     *
+     * @uses \App\CardNumber::__construct
      */
     public function makePrevious(): self
     {

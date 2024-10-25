@@ -2,12 +2,7 @@
 
 <x-slot:page-title>Secret Play | Card Game</x-slot>
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/cg">Monsters Masters & Mobsters Card Game</a></li>
-    <li class="breadcrumb-item"><a href="/cg/rules">Rules</a></li>
-  </ol>
-</nav>
+<x-breadcrumbs :items="['/cg'=>'Monsters Masters & Mobsters Card Game', '/cg/rules'=>'Rules']" />
 
 
 <h1>Secret Play</h1>

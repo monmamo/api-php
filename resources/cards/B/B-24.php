@@ -8,7 +8,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Tornado')]
+#[Title('Ice Storm')]
 #[Concept('Catastrophe')]
 
 #[LocalHeroImage('TODO.png')]
@@ -21,12 +21,9 @@ class implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="165" >
-
-<x-card.normalrule>Each player discards 3 cards from the top of his Library.</x-card.normalrule>
-<x-card.normalrule>If the Place card in play is a Venue or Facility card, discard .</x-card.normalrule>
 <x-card.normalrule>Discard all Mobster and Bystander cards in play.</x-card.normalrule>
-<x-card.normalrule>Discard all Item cards in play.</x-card.normalrule>
-
+<x-card.normalrule>Discard all Item cards in play that are not attached to Monsters.</x-card.normalrule>
+<x-card.normalrule>Shuffle all Item cards in play that are attached to Monsters into the Library.</x-card.normalrule>
 </x-card.cardrule>
 HTML;
     }
