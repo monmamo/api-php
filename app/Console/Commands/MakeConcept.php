@@ -39,6 +39,7 @@ class MakeConcept extends Command implements PromptsForMissingInput
         $definition_html = '';
 
         foreach (\App\Strings\explode_string_lines($data['definition']) as $line) {
+            $line = preg_replace('/\[\[(.+?)\]\]/', '<a href="/concepts/$1">$1</a>', $line);
             $definition_html .= \App\Strings\html('p', $line)->toHtml();
         }
 
