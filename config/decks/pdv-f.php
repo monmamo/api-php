@@ -1,24 +1,34 @@
 <?php
 
 return [
+    'name' => 'Starter Fire Deck',
+    'details' => 'A basic deck of cards for the Pyros taxon.',
     'cards' => [
-        'A-025' => 2,
-        'A-072' => 2,
-        'A-120' => 2,
-        'A-125' => 2,
-        'A-231' => 2,
-        'A-293' => 2,
-        'A-306' => 2,
-        'A-310' => 5,
-        'A-F' => 6,
         'A-M-09' => 3,
         'A-M-10' => 3,
         'A-M-11' => 3,
         'A-M-12' => 3,
-        'A-S-03' => 2,
-        'A-S-05' => 3,
-        'A-S-06' => 2,
-        'A-S-07' => 2,
-        'A-S-08' => 2,
+
+        'A-153' => 3, // Fireball
+        'A-101' => 3, // Gather Fire
+        'A-044' => 4, // Fire Shield
+        'A-060' => 3, // Flamethrower Attack
+        'A-065' => 3, // Firebreath
+        'A-002' => 6, // Fire Mana
+
+        'A-006' => 2, // Biting
+        'A-027' => 2, // Natural Healing
+        'A-032' => 4, // Cheerleader
+        'A-033' => 2, // Wheel of Fortune
+        'A-035' => 2, // Tackling
+        'A-038' => 2, // Body Block
+        'A-041' => 2, // Body Slam
+        'A-077' => 2, // Round for the House
+        'A-081' => 2, // Recycle
+        'A-100' => 2, // Full Heal
+        'A-128' => 1, // Idiot Agents
+        'A-135' => 1, // Investment
+        'A-141' => 1, // Lottery
+        'A-145' => 1, // First Aid Kit
     ],
 ];
