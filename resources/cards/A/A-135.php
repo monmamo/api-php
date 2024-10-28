@@ -23,10 +23,18 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.cardrule  lines="2">
+        <x-card.phaserule y="500" type="Draw" lines="2"><text>
             <x-card.normalrule>Put any number of cards </x-card.normalrule>
                 <x-card.normalrule>facedown on the Battlefield.</x-card.normalrule>
-    </x-card.cardrule>
+    </text>
+</x-card.phaserule>
+
+<x-card.phaserule type="Resolution" lines="3"><text>
+            <x-card.normalrule>For each card you put facedown, </x-card.normalrule>
+                <x-card.normalrule>draw 1d4-1 cards. </x-card.normalrule>
+                <x-card.normalrule>Discard the facedown cards. </x-card.normalrule>
+    </text>
+</x-card.phaserule>
 HTML;
         }
     };

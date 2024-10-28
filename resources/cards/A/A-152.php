@@ -1,6 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\IsGeneratedImage;
 use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
@@ -10,9 +11,8 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Favorite Toy')]
 #[Concept('Item')]
-// #[App\CardAttributes\ImageCredit("")]
-// #[App\CardAttributes\FlavorText([])]
-#[LocalHeroImage('TODO.png')]
+#[IsGeneratedImage]
+#[LocalHeroImage('hero/A-152.png')]
 #[Prerequisites(lines: 'Attach this card to a Monster.')]
 class(__FILE__) implements CardComponents
 {

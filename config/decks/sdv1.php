@@ -18,7 +18,6 @@ return [
         'A-024' => 2, // Burglary
         'A-025' => 2, // Busybody
         'A-027' => 2, // Natural Healing
-        'A-028' => 2, // Caffeine
         'A-030' => 2, // Ramming
         'A-031' => 2, // Dual Cranial Horns
         'A-032' => 4, // Cheerleader
@@ -40,7 +39,7 @@ return [
         'A-108' => 2, // Grab Bag
         'A-110' => 1, // Personal Shopper
         'A-118' => 2, // Head Coach
-        'A-119' => 3, // Healing Elixir
+        'A-119' => 3, // Medicinal Compound
         'A-120' => 3, // Healing Salve
         'A-122' => 2, // Offensive Coordinator
         'A-124' => 1, // Nurse
@@ -54,6 +53,7 @@ return [
         'A-143' => 2, // Financial Planner
         'A-144' => 1, // Taxman
         'A-145' => 2, // First Aid Kit
+        'A-152' => 2, // Favorite Toy
         'A-M-01' => 1,
         'A-M-02' => 1,
         'A-M-03' => 1,

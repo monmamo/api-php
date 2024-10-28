@@ -3,7 +3,6 @@
 // https://www.notion.so/monmamo/Firebreath-570c6fc6a1b541928a7b4168293b2c6e?pvs=4#8b14c79fef304feaaacd808a2007baa7
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\IsGeneratedImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;

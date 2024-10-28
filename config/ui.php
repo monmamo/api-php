@@ -54,7 +54,7 @@ foreach (CardSet::cases() as $set) {
 }
 
 $decks = [
-    '/cards/deck/sdv' => 'SDV',
+    '/cards/deck/sdv1' => 'SDV',
     '/cards/deck/pdv-energos' => 'PDV Energos',
     '/cards/deck/pdv-pyros' => 'PDV Pyros',
     '/cards/deck/pdv-aquos' => 'PDV Aquos',

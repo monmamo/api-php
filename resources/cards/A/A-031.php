@@ -12,7 +12,8 @@ return new
 #[Title('Dual Cranial Horns')]
 #[Concept('Trait')]
 #[Concept('Physical')]
-#[Prerequisites(lines: [], y: 465)]
+#[Concept('Size', '+6')]
+#[Prerequisites(y: 490)]
 #[ImageCredit('Image by wirestock on Freepik')]
 #[LocalHeroImage('A064.jpg')] // https://www.freepik.com/free-photo/closeup-shot-beautiful-thompson-s-gazelle_10292458.htm
 
@@ -23,11 +24,12 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.phaserule type="Resolution" lines="3"><text>
-    <x-card.normalrule>Size +6.</x-card.normalrule>
-<x-card.normalrule>Gives the attack “Horn Attack”</x-card.normalrule>
-<x-card.normalrule>which does Speed×2 damage.</x-card.normalrule>
-    </text></x-card.phaserule>
+    <x-card.phaserule type="Attack" height="140">
+<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Horn Attack</text>
+<text  y="<?= config('card-design.titlebox.title-height')?>"  height="35">
+<x-card.normalrule>Does Speed×2 damage.</x-card.normalrule>
+</text>
+</x-card.phaserule>
 HTML;
         }
     };

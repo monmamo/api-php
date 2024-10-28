@@ -13,6 +13,9 @@ enum Hosts: string
     #[Environment(Environments::Development)]
     case Default = '';
 
+    #[Environment(Environments::Development)]
+    case Default2 = 'monmamo.test';
+
     #[Environment(Environments::Testing)]
     case Dev1 = 'jb1.localhost';
 

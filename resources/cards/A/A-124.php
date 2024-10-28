@@ -2,12 +2,12 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\IsGeneratedImage;
 use App\CardAttributes\Prerequisites;
-use App\CardAttributes\SvgHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
+
+// Note: Similar in pattern to Cheerleader (A-032).
 
 if (!\defined('PREREQUISITE')) {
     \define('PREREQUISITE', \trans_choice('rules.player-limit', 1));
@@ -17,12 +17,10 @@ return new
 #[Title('Nurse')]
 #[Concept('Bystander')]
 #[Concept('Female')]
-#[Concept('Integrity', '1d6')]
+#[Concept('Integrity', '4')]
 #[ImageCredit('Icon by InYoung Park from Noun Project')]
-// #[SvgHeroImage(,code:'')]
-//#[IsGeneratedImage]
-//#[\App\CardAttributes\LocalHeroImage('A188.jpg')]
-#[Prerequisites(y: 345, lines: [PREREQUISITE])]
+#[Prerequisites(y: 345, lines: [PREREQUISITE,'You may choose to make this card Male', 'when you put it on the Battlefield.'])]
+// #[SvgHeroImage(,code:'')] #[IsGeneratedImage] #[\App\CardAttributes\LocalHeroImage('A188.jpg')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -46,27 +44,13 @@ SVG;
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Upkeep" y="395" :lines="3">
-  <text >
-<x-card.normalrule x="55%">Choose a Monster on the Battlefield.</x-card.normalrule>
-<x-card.normalrule>Discard all cards other than Traits </x-card.normalrule>
-  <x-card.normalrule>attached to that Monster.</x-card.normalrule>
-</text>
+    <x-card.phaserule type="Resolution" height="130">
+        <text >
+    <x-card.normalrule>If a Monster did not attack in your</x-card.normalrule>
+        <x-card.normalrule>turn, you may remove 2d6 damage </x-card.normalrule>
+        <x-card.normalrule>and any Bane cards from it.</x-card.normalrule>
+    </text>
 </x-card.phaserule>
-
-<x-card.phaserule type="Command" y="545" :lines="2">
-  <text >
-<x-card.normalrule>The Monster cannot attack, </x-card.normalrule>
-<x-card.normalrule>be attacked, or use any Skills.</x-card.normalrule>
-</text>
-</x-card.phaserule>
-
-<x-card.phaserule type="Resolution" :lines="1">
-  <text >
-<x-card.normalrule x="55%">Remove all damage from the Monster.</x-card.normalrule>
-</text>
-</x-card.phaserule>
-
 HTML;
         }
     };

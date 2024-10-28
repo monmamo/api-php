@@ -4,21 +4,18 @@ use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\LocalHeroImage;
+use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Karma')]
-
-    #[Concept('Draw')]
-
+#[Concept('Draw')]
+#[FlavorText("It's a female monster.")]
+#[ImageCredit('ShutterStock #2389392699 by AnhSilhouetteArt')]
 #[LocalHeroImage('A139.jpg')]
-
-    #[ImageCredit('ShutterStock #2389392699 by AnhSilhouetteArt')]
-
-    #[FlavorText("It's a female monster.")]
-
+#[Prerequisites(lines: ['Cannot be played during the Setup phase.'], y: 490)]
+#[Title('Karma')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
