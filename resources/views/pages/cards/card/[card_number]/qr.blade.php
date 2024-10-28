@@ -13,25 +13,7 @@ if (!\Illuminate\Support\Facades\View::exists("$card_number")) {
 $card_number_object =  \App\CardNumber::make($card_number);
 $spec = \App\Card\make($card_number);
 
-$encoding_mode = 4; // byte encoding
-$size = 4; // size of the QR code
 
-$qr = new \App\QRCode('https://www.qrcode.com/');
+$qr = new \App\QRCode('https://monmamo.com/');
 
-
-echo $qr::generateSVGFrom($qr->getRawQRCode());
-
-$bestMatrix = null;
-$bestScore = 99999;
-$bestMask = -1;
-for ($index = 0; $index < 8; $index++) {
-    $matrix = $qr->getMaskedQRCode($index);
-    $penaltyScore =    $qr::getPenalty($matrix);
-    if ($penaltyScore < $bestScore) {
-        $bestScore = $penaltyScore;
-        $bestMatrix = $matrix;
-        $bestMask = $index;
-    }
-}
-
-echo $qr::generateSVGFrom($matrix);
+echo $qr::generateSVGFrom($qr->getBestQRCode());

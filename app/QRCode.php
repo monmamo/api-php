@@ -8,21 +8,6 @@ namespace App;
 
 class QRCode
 {
-    public const ALPHANUMERIC_RE = '/^[\dA-Z $%*+\-./:]*$/';
-
-    public const KANJI_RE = '/^[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}]*$/u';
-
-    public const LATIN1_RE = '/^[\x00-\xff]*$/';
-
-    public const LENGTH_BITS = [
-        [10, 12, 14],
-        [9, 11, 13],
-        [8, 16, 16],
-        [8, 10, 12],
-    ];
-
-    public const NUMERIC_RE = '/^\d*$/';
-
     // One day, we'll compute these values. But not today!
     protected int $codeword_count = 44;
 
@@ -30,9 +15,7 @@ class QRCode
 
     protected string $error_correction_level = 'L'; // low error correction
 
-    protected int $length_bits = 8;
-
-    protected static array $mask_functions;
+    protected readonly int $mode;
 
     public static array $EXP;
 
@@ -55,13 +38,9 @@ class QRCode
                 self::$EXP[$exponent % 255] = $value;
             }
         }
-
-        if (!isset(self::$mask_functions)) {
-            self::$mask_functions = [...self::_generateMaskFunctions()];
-        }
     }
 
-    private static function _div($a, $b)
+    private static function _div($a, $b): int
     {
         return self::$EXP[(self::$LOG[$a] + self::$LOG[$b] * 254) % 255];
     }
@@ -69,18 +48,6 @@ class QRCode
     private static function _emptyArray(int $size): array
     {
         return \array_fill(0, $size, 0);
-    }
-
-    private static function _generateMaskFunctions(): \Traversable
-    {
-        yield fn ($row, $column) => (($row + $column) & 1) === 0;
-        yield fn ($row, $column) => ($row & 1) === 0;
-        yield fn ($row, $column) => $column % 3 === 0;
-        yield fn ($row, $column) => ($row + $column) % 3 === 0;
-        yield fn ($row, $column) => ((($row >> 1) + \floor($column / 3)) & 1) === 0;
-        yield fn ($row, $column) => (($row * $column) & 1) + (($row * $column) % 3) === 0;
-        yield fn ($row, $column) => (((($row * $column) & 1) + (($row * $column) % 3)) & 1) === 0;
-        yield fn ($row, $column) => (((($row + $column) & 1) + (($row * $column) % 3)) & 1) === 0;
     }
 
     private static function _getLinePenalty(array $line)
@@ -106,9 +73,68 @@ class QRCode
         return $penalty;
     }
 
+    private static function _mask(int $index, int $row, int $column): bool
+    {
+        return match ($index) {
+            -1 => false,
+            0 => (($row + $column) & 1) === 0, // checkerboard
+            1 => ($row & 1) === 0, // horizontal stripes
+            2 => $column % 3 === 0, // vertical stripes
+            3 => ($row + $column) % 3 === 0, // diagonal stripes
+            4 => ((($row >> 1) + \floor($column / 3)) & 1) === 0, // "X" pattern
+            5 => (($row * $column) & 1) + (($row * $column) % 3) === 0,
+            6 => (((($row * $column) & 1) + (($row * $column) % 3)) & 1) === 0,
+            7 => (((($row + $column) & 1) + (($row * $column) % 3)) & 1) === 0
+        };
+    }
+
     private static function _mul($a, $b)
     {
         return $a && $b ? self::$EXP[(self::$LOG[$a] + self::$LOG[$b]) % 255] : 0;
+    }
+
+    private static function _overlay(array &$target, array $incoming, int $start = 0): array
+    {
+        foreach ($incoming as $index => $value) {
+            $target[$index + $start] = $value;
+        }
+        return $target;
+    }
+
+    private static function _placeFixedPatterns(array &$matrix): void
+    {
+        $size = \count($matrix);
+
+        // Placing the fixed patterns
+        // Finder patterns
+        foreach ([[0, 0], [$size - 7, 0], [0, $size - 7]] as $pos) {
+            self::fillArea($matrix, $pos[0], $pos[1], 7, 7);
+            self::fillArea($matrix, $pos[0] + 1, $pos[1] + 1, 5, 5, 0);
+            self::fillArea($matrix, $pos[0] + 2, $pos[1] + 2, 3, 3);
+        }
+        // Separators
+        self::fillArea($matrix, 7, 0, 8, 1, 0);
+        self::fillArea($matrix, 0, 7, 1, 7, 0);
+        self::fillArea($matrix, $size - 8, 0, 8, 1, 0);
+        self::fillArea($matrix, 0, $size - 8, 1, 7, 0);
+        self::fillArea($matrix, 7, $size - 8, 8, 1, 0);
+        self::fillArea($matrix, $size - 7, 7, 1, 7, 0);
+        // Alignment pattern
+        self::fillArea($matrix, $size - 9, $size - 9, 5, 5);
+        self::fillArea($matrix, $size - 8, $size - 8, 3, 3, 0);
+        $matrix[$size - 7][$size - 7] = 1;
+
+        // Timing patterns
+        for ($pos = 8; $pos < $size - 9; $pos += 2) {
+            $matrix[6][$pos] = 1;
+            $matrix[6][$pos + 1] = 0;
+            $matrix[$pos][6] = 1;
+            $matrix[$pos + 1][6] = 0;
+        }
+        $matrix[6][$size - 7] = 1;
+        $matrix[$size - 7][6] = 1;
+        // Dark module
+        $matrix[$size - 8][8] = 1;
     }
 
     private static function _polyMul(array $poly1, array $poly2)
@@ -146,15 +172,8 @@ class QRCode
             if ($rest[0]) {
                 $factor = self::_div($rest[0], $divisor[0]);
                 $subtr = self::_emptyArray(\count($rest));
-
-                foreach (self::_polyMul($divisor, [$factor]) as $index => $value) {
-                    $subtr[$index] = $value;
-                }
-                $rest = \array_slice(\array_map(
-                    fn ($value, $index) => $value ^ $subtr[$index],
-                    $rest,
-                    \array_keys($rest),
-                ), 1);
+                self::_overlay($subtr, self::_polyMul($divisor, [$factor]));
+                $rest = \array_slice(self::_xor($rest, $subtr), 1);
             } else {
                 $rest = \array_slice($rest, 1);
             }
@@ -165,7 +184,7 @@ class QRCode
     private function _textToCodewords(): array
     {
         $codewords = \array_fill(0, $this->codeword_count, null);
-        $byteData = $this->getByteData($this->length_bits, $this->data_codeword_count);
+        $byteData = $this->getByteData();
 
         foreach ($byteData as $index => $value) {
             $codewords[$index] = $value;
@@ -175,6 +194,11 @@ class QRCode
             $codewords[$index + $this->data_codeword_count] = $value;
         }
         return $codewords;
+    }
+
+    private static function _xor(array $a, array $b): array
+    {
+        return \array_map(fn ($a, $b) => $a ^ $b, $a, $b);
     }
 
     // This is the generator polynomial for the given degree
@@ -225,18 +249,39 @@ SVG;
         return $result;
     }
 
-    public function getByteData($lengthBits, $dataCodewords): array
+    public function getBestQRCode(): array
     {
-        $data = \array_fill(0, $dataCodewords, null); // needs to be array of bytes
-        $rightShift = (4 + $lengthBits) & 7;
+        $bestPenalty = \INF;
+        $bestMask = -1;
+        $bestMatrix = null;
+
+        for ($mask = 0; $mask < 8; ++$mask) {
+            $matrix = $this->getQRCode($mask);
+            $penalty = self::getPenalty($matrix);
+
+            if ($penalty < $bestPenalty) {
+                $bestPenalty = $penalty;
+                $bestMask = $mask;
+                $bestMatrix = $matrix;
+            }
+        }
+        return $bestMatrix;
+    }
+
+    public function getByteData(): array
+    {
+        $length_bits = $this->getLengthBits();
+
+        $data = \array_fill(0, $this->data_codeword_count, null); // needs to be array of bytes
+        $rightShift = (4 + $length_bits) & 7;
         $leftShift = 8 - $rightShift;
         $andMask = (1 << $rightShift) - 1;
-        $dataIndexStart = $lengthBits > 12 ? 2 : 1;
+        $dataIndexStart = $length_bits > 12 ? 2 : 1;
         $content_length = \strlen($this->text);
 
-        $data[0] = 64 /* byte mode */ + ($content_length >> ($lengthBits - 4));
+        $data[0] = 64 /* byte mode */ + ($content_length >> ($length_bits - 4));
 
-        if ($lengthBits > 12) {
+        if ($length_bits > 12) {
             $data[1] = ($content_length >> $rightShift) & 255;
         }
         $data[$dataIndexStart] = ($content_length & $andMask) << $leftShift;
@@ -246,7 +291,7 @@ SVG;
             $data[$index + $dataIndexStart] |= $byte >> $rightShift;
             $data[$index + $dataIndexStart + 1] = ($byte & $andMask) << $leftShift;
         }
-        $remaining = $dataCodewords - $content_length - $dataIndexStart - 1;
+        $remaining = $this->data_codeword_count - $content_length - $dataIndexStart - 1;
 
         for ($index = 0; $index < $remaining; ++$index) {
             $byte = $index & 1 ? 17 : 236;
@@ -269,78 +314,70 @@ SVG;
         return self::_polyRest($messagePoly, self::_getGeneratorPoly($degree));
     }
 
-    public function getEncodingMode()
-    {
-        return match (true) {
-            \preg_match(self::NUMERIC_RE, $this->text) => 0b0001,
-            \preg_match(self::ALPHANUMERIC_RE, $this->text) => 0b0010,
-            \preg_match(self::LATIN1_RE, $this->text) => 0b0100,
-            \preg_match(self::KANJI_RE, $this->text) => 0b1000,
-            default => 0b0111,
-        };
-    }
-
-    public function getFormatModules(int $maskIndex)
+    public function getFormatModules(int $mask_index)
     {
         $errorLevelIndex = \array_search($this->error_correction_level, ['M', 'L', 'H', 'Q'], true);
+
+        $formatPoly = \array_fill(0, 15, 0);
         $formatPoly[0] = $errorLevelIndex >> 1;
         $formatPoly[1] = $errorLevelIndex & 1;
-        $formatPoly[2] = $maskIndex >> 2;
-        $formatPoly[3] = ($maskIndex >> 1) & 1;
-        $formatPoly[4] = $maskIndex & 1;
+        $formatPoly[2] = $mask_index >> 2;
+        $formatPoly[3] = ($mask_index >> 1) & 1;
+        $formatPoly[4] = $mask_index & 1;
 
         $FORMAT_DIVISOR = [1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1];
 
-        foreach (self::_polyRest($formatPoly, $FORMAT_DIVISOR) as $i => $value) {
-            $formatPoly[$i + 5] = $value;
-        }
+        self::_overlay($formatPoly, self::_polyRest($formatPoly, $FORMAT_DIVISOR), 5);
 
-        $FORMAT_MASK = [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0];
-        return \array_map(
-            fn ($bit, $mask) => $bit ^ $mask,
-            $formatPoly,
-            $FORMAT_MASK,
-        );
+        return self::_xor($formatPoly, [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0]);
     }
 
     /**
      * ECI mode folds into byte mode.
      *
-     * @return void
+     * @group nonary
      */
-    public function getLengthBits($mode, $version)
+    public function getLengthBits(): int
     {
-        //
-        // Basically it's `Math.floor(Math.log2(mode))` but much faster
-        // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/clz32
-        $modeIndex = 31 - \floor(\log($mode, 2));
-        $bitsIndex = match (true) {
-            $version > 26 => 2,
-            $version > 9 => 1,
-            default => 0
-        };
-        return self::LENGTH_BITS[$modeIndex][$bitsIndex];
+        foreach (\config('qr') as $key => $spec) {
+            $match = \preg_match($spec['pattern'], $this->text);
+            \assert($match !== false, 'invalid pattern: ' . \json_encode($spec['pattern']));
+
+            if ($match) {
+                return $spec['length-bits']($this->version);
+            }
+        }
+        \dd($this->text);
     }
 
-    public function getMaskedMatrix(array $codewords, \Closure $maskFunction)
+    public function getMatrix(int $mask_index = -1)
     {
+        $codewords = $this->_textToCodewords();
         $matrix = $this->getNewMatrix();
 
-        foreach ($this->getModuleSequence() as $index => [$row, $column]) {
-            // Each codeword contains 8 modules, so shifting the index to the right by 3 gives the codeword's index.
-            $codeword = $codewords[$index >> 3] ?? null;
-            $bitShift = 7 - ($index & 7);
-            $moduleBit = ($codeword >> $bitShift) & 1;
-            $matrix[$row][$column] = $moduleBit ^ $maskFunction($row, $column);
-        }
-        return $matrix;
-    }
+        // NOTE This generates something that looks like a QR code but is not a valid one.
 
-    public function getMaskedQRCode($maskIndex)
-    {
-        $matrix = $this->getMaskedMatrix($this->_textToCodewords(), self::$mask_functions[$maskIndex]);
-        $this->placeFormatModules($matrix, $maskIndex);
-        $this->placeFixedPatterns($matrix);
+        $module_sequence_generator = $this->getModuleSequence();
+        $index = 0;
+
+        foreach ($codewords as $codeword) {
+            // Counting down from the leftmost bit.
+            for ($shift = 7; $shift >= 0; --$shift) {
+                $bit = ($codeword >> $shift) & 1;
+                [$row, $column] = $module_sequence_generator->current();
+                $matrix[$row][$column] = $bit ^ (self::_mask($mask_index, $row, $column) ? 1 : 0);
+                ++$index;
+                [$row, $column] = $module_sequence_generator->next();
+            }
+        }
+
+        // foreach ($this->getModuleSequence() as $index => [$row, $column]) {
+        //         // Each codeword contains 8 modules, so shifting the index to the right by 3 gives the codeword's index.
+        //         $codeword = $codewords[$index >> 3] ?? 0;
+        //         $bitShift = 7 - ($index & 7);
+        //         $moduleBit = ($codeword >> $bitShift) & 1;
+        //         $matrix[$row][$column] = $moduleBit; //;
+        //     }
         return $matrix;
     }
 
@@ -487,61 +524,12 @@ SVG;
         return $penalty;
     }
 
-    /**
-     * NOTE This generates something that looks like a QR code but is not a valid one.
-     */
-    public function getRawQRCode(): array
+    public function getQRCode(int $mask_index = -1)
     {
-        $codewords = $this->_textToCodewords();
-
-        $size = $this->getSize();
-        $qrCode = $this->getNewMatrix();
-        $moduleSequence = [...$this->getModuleSequence()];
-
-        // Placing the fixed patterns
-        // Finder patterns
-        foreach ([[0, 0], [$size - 7, 0], [0, $size - 7]] as $pos) {
-            self::fillArea($qrCode, $pos[0], $pos[1], 7, 7);
-            self::fillArea($qrCode, $pos[0] + 1, $pos[1] + 1, 5, 5, 0);
-            self::fillArea($qrCode, $pos[0] + 2, $pos[1] + 2, 3, 3);
-        }
-        // Separators
-        self::fillArea($qrCode, 7, 0, 8, 1, 0);
-        self::fillArea($qrCode, 0, 7, 1, 7, 0);
-        self::fillArea($qrCode, $size - 8, 0, 8, 1, 0);
-        self::fillArea($qrCode, 0, $size - 8, 1, 7, 0);
-        self::fillArea($qrCode, 7, $size - 8, 8, 1, 0);
-        self::fillArea($qrCode, $size - 7, 7, 1, 7, 0);
-        // Alignment pattern
-        self::fillArea($qrCode, $size - 9, $size - 9, 5, 5);
-        self::fillArea($qrCode, $size - 8, $size - 8, 3, 3, 0);
-        $qrCode[$size - 7][$size - 7] = 1;
-
-        // Timing patterns
-        for ($pos = 8; $pos < $this->version * 4 + 8; $pos += 2) {
-            $qrCode[6][$pos] = 1;
-            $qrCode[6][$pos + 1] = 0;
-            $qrCode[$pos][6] = 1;
-            $qrCode[$pos + 1][6] = 0;
-        }
-        $qrCode[6][$size - 7] = 1;
-        $qrCode[$size - 7][6] = 1;
-        // Dark module
-        $qrCode[$size - 8][8] = 1;
-
-        // Placing message and error data
-        $index = 0;
-
-        foreach ($codewords as $codeword) {
-            // Counting down from the leftmost bit
-            for ($shift = 7; $shift >= 0; --$shift) {
-                $bit = ($codeword >> $shift) & 1;
-                [$row, $column] = $moduleSequence[$index];
-                ++$index;
-                $qrCode[$row][$column] = $bit;
-            }
-        }
-        return $qrCode;
+        $matrix = $this->getMatrix($mask_index);
+        $this->placeFormatModules($matrix, $mask_index);
+        self::_placeFixedPatterns($matrix);
+        return $matrix;
     }
 
     public function getSize()
@@ -549,76 +537,33 @@ SVG;
         return $this->version * 4 + 17;
     }
 
-    public function placeFixedPatterns(array &$matrix): void
-    {
-        $size = \count($matrix);
-
-        // Placing the fixed patterns
-        // Finder patterns
-        foreach ([[0, 0], [$size - 7, 0], [0, $size - 7]] as $pos) {
-            self::fillArea($matrix, $pos[0], $pos[1], 7, 7);
-            self::fillArea($matrix, $pos[0] + 1, $pos[1] + 1, 5, 5, 0);
-            self::fillArea($matrix, $pos[0] + 2, $pos[1] + 2, 3, 3);
-        }
-        // Separators
-        self::fillArea($matrix, 7, 0, 8, 1, 0);
-        self::fillArea($matrix, 0, 7, 1, 7, 0);
-        self::fillArea($matrix, $size - 8, 0, 8, 1, 0);
-        self::fillArea($matrix, 0, $size - 8, 1, 7, 0);
-        self::fillArea($matrix, 7, $size - 8, 8, 1, 0);
-        self::fillArea($matrix, $size - 7, 7, 1, 7, 0);
-        // Alignment pattern
-        self::fillArea($matrix, $size - 9, $size - 9, 5, 5);
-        self::fillArea($matrix, $size - 8, $size - 8, 3, 3, 0);
-        $matrix[$size - 7][$size - 7] = 1;
-
-        // Timing patterns
-        for ($pos = 8; $pos < $this->version * 4 + 8; $pos += 2) {
-            $matrix[6][$pos] = 1;
-            $matrix[6][$pos + 1] = 0;
-            $matrix[$pos][6] = 1;
-            $matrix[$pos + 1][6] = 0;
-        }
-        $matrix[6][$size - 7] = 1;
-        $matrix[$size - 7][6] = 1;
-        // Dark module
-        $matrix[$size - 8][8] = 1;
-    }
-
     // WARNING: this function *mutates* the given matrix!
-    public function placeFormatModules(array &$matrix, int $maskIndex): void
+    public function placeFormatModules(array &$matrix, int $mask_index = -1): void
     {
+        if ($mask_index === -1) {
+            return;
+        }
+
         $matrix_length = \count($matrix);
-        $formatModules = $this->getFormatModules($maskIndex);
+        $formatModules = $this->getFormatModules($mask_index);
 
-        // matrix[8].set(formatModules.subarray(0, 6), 0);
-        foreach (\range(0, 6) as $i) {
-            $matrix[8][$i] = $formatModules[$i];
-        }
-
-        // matrix[8].set(formatModules.subarray(6, 8), 7);
-        foreach (\range(6, 8) as $i) {
-            $matrix[7][$i + 1] = $formatModules[$i];
-        }
-
-        // matrix[8].set(formatModules.subarray(7), matrix.length - 8);
-        foreach (\range(7, \count($formatModules) - 1) as $i) {
-            $matrix[7][$matrix_length - 8 - 7 + $i] = $formatModules[$i];
-        }
+        self::_overlay($matrix[8], \array_slice($formatModules, 0, 6), 0);
+        self::_overlay($matrix[8], \array_slice($formatModules, 6, 8), 7);
+        self::_overlay($matrix[8], \array_slice($formatModules, 7), $matrix_length - 8);
         $matrix[7][8] = $formatModules[8];
 
         // formatModules.subarray(0, 7).forEach(
-        //   (cell, index) => (matrix[matrix.length - index - 1][8] = cell)
+        //   (cell, index) => ()
         // );
-        foreach (\range(0, 7) as $i) {
-            $matrix[$matrix_length - 8 - 7 + $i][8] = $formatModules[$i];
+        foreach (\array_slice($formatModules, 0, 7) as $index => $cell) {
+            $matrix[$matrix_length - $index - 1][8] = $cell;
         }
 
         // formatModules.subarray(9).forEach(
         //     (cell, index) => (matrix[5 - index][8] = cell)
         //   );
-        foreach (\range(9, \count($formatModules) - 1) as $i) {
-            $matrix[$matrix_length - 8 - 7 + $i][8] = $formatModules[$i];
+        foreach (\array_slice($formatModules, 9) as $index => $cell) {
+            $matrix[5 - $index][8] = $cell;
         }
     }
 }
