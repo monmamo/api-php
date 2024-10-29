@@ -1,7 +1,7 @@
-
+@props(['specs'=>null])
 <?php
 $debug = env('DEBUG') ?? false;
-$debug_opacity = match(true) {
+$debug_opacity = match (true) {
     $debug === true => 1,
     $debug === false => 0,
     $debug === 'true' => 1,
@@ -9,38 +9,11 @@ $debug_opacity = match(true) {
     default => $debug
 };
 
-function includeFontFace($font_slug) {   
-    $font = config("fonts.$font_slug");
-    $font_name = $font['family'];
-    $font_format = $font['format'];
-    $font_unicode_range = $font['unicode-range'];
-    $font_weight = $font['weight'];
-    $font_style = $font['style'];
-    $base64String = $font['code'] ?? value(function() use ($font) {
-        $fileContent = file_get_contents($font['url']);
-if ($fileContent === false) 
-    throw new \Exception("Failed to download the file.");
-return base64_encode($fileContent);
-    });
-
-   return  "@font-face {
-  font-family: '$font_name';
-  font-style: $font_style;
-  font-weight: $font_weight;
-  src: url('data:application/font-woff;charset=utf-8;base64,$base64String') format('$font_format');
-  unicode-range: $font_unicode_range;
-}";
-}
 
 ?>
 
 <style>
-    <?= includeFontFace('Roboto-latin-ext') ?>
-    <?= includeFontFace('Roboto-latin') ?>
-    <?= includeFontFace('Roboto-Condensed-latin-ext') ?>
-    <?= includeFontFace('Roboto-Condensed-latin') ?>
-
-    text {
+    <?= \App\Card\includeFontFace('Roboto-latin-ext') ?><?= \App\Card\includeFontFace('Roboto-latin') ?><?= \App\Card\includeFontFace('Roboto-Condensed-latin-ext') ?><?= \App\Card\includeFontFace('Roboto-Condensed-latin') ?>text {
         font-family: 'Roboto', sans-serif;
     }
 
@@ -107,11 +80,11 @@ return base64_encode($fileContent);
         display: block;
         text-align: center;
         height: 450px;
-        width:610px;
+        width: 610px;
     }
 
     .standard-background-icon {
-        transform: translate(@cardspec(icon.translate.x)px,@cardspec(icon.translate.y)px) scale(@cardspec(icon.scale));
+        transform: translate(@cardspec(icon.translate.x)px, @cardspec(icon.translate.y)px) scale(@cardspec(icon.scale));
     }
 
     .debug {
@@ -127,11 +100,11 @@ return base64_encode($fileContent);
     }
 
     g.concept-icon {
-        transform: translate(3px,3px) scale(<?= 64/512 ?>);
+        transform: translate(3px, 3px) scale(<?= 64 / 512 ?>);
     }
 
     g.concept-icon-badge {
-        transform: translate(35px,35px) scale(<?= 32/512 ?>);
+        transform: translate(35px, 35px) scale(<?= 32 / 512 ?>);
     }
 
     text.concept-type {
@@ -142,32 +115,32 @@ return base64_encode($fileContent);
         alignment-baseline: central;
     }
 
-           g.stat text.value {
+    g.stat text.value {
         font-family: 'Roboto Condensed', sans-serif;
         font-style: normal;
         font-size: 400px;
         fill: #000000;
         paint-order: stroke;
-        font-width:200;
-stroke: #000000;
-stroke-width: 8px;
-stroke-linecap: butt;
-stroke-linejoin: miter;
-letter-spacing: -12px;
-text-anchor: middle;
-alignment-baseline: baseline;
+        font-width: 200;
+        stroke: #000000;
+        stroke-width: 8px;
+        stroke-linecap: butt;
+        stroke-linejoin: miter;
+        letter-spacing: -12px;
+        text-anchor: middle;
+        alignment-baseline: baseline;
     }
-           g.stat text.gloss {
-        font-family: 'Roboto Condensed',sans-serif;
+
+    g.stat text.gloss {
+        font-family: 'Roboto Condensed', sans-serif;
         font-style: normal;
         font-size: 100px;
         fill: #000000;
         paint-order: stroke;
-        font-width:200;
-text-anchor: middle;
-alignment-baseline: baseline;
+        font-width: 200;
+        text-anchor: middle;
+        alignment-baseline: baseline;
     }
-
 </style>
 
 <defs>
@@ -179,6 +152,21 @@ alignment-baseline: baseline;
         </feMerge>
     </filter>
 
-<filter id="icon-overlay-shadow" height="500%" width="500%" x="-100%" y="-100%"><feFlood flood-color="rgba(255, 255, 255, 1)" result="flood"></feFlood><feComposite in="flood" in2="SourceGraphic" operator="atop" result="composite"></feComposite><feGaussianBlur in="composite" stdDeviation="35" result="blur"></feGaussianBlur><feOffset dx="0" dy="0" result="offset"></feOffset><feComposite in="SourceGraphic" in2="offset" operator="over"></feComposite></filter><linearGradient x1="0" x2="1" y1="1" y2="0" id="shadow-gradient-0"><stop offset="0%" stop-color="#390303" stop-opacity="1"></stop><stop offset="100%" stop-color="#a10a0a" stop-opacity="1"></stop></linearGradient>
+    <filter id="icon-overlay-shadow" height="500%" width="500%" x="-100%" y="-100%">
+        <feFlood flood-color="rgba(255, 255, 255, 1)" result="flood"></feFlood>
+        <feComposite in="flood" in2="SourceGraphic" operator="atop" result="composite"></feComposite>
+        <feGaussianBlur in="composite" stdDeviation="35" result="blur"></feGaussianBlur>
+        <feOffset dx="0" dy="0" result="offset"></feOffset>
+        <feComposite in="SourceGraphic" in2="offset" operator="over"></feComposite>
+    </filter>
+    <linearGradient x1="0" x2="1" y1="1" y2="0" id="shadow-gradient-0">
+        <stop offset="0%" stop-color="#390303" stop-opacity="1"></stop>
+        <stop offset="100%" stop-color="#a10a0a" stop-opacity="1"></stop>
+    </linearGradient>
 
+    @foreach($specs??[] as $spec)
+    <pattern id="{{$spec->cardNumber()}}-background" viewBox="0 0 @cardspec(width) @cardspec(height)" width="100%" height="100%">
+<?= \App\Strings\render(...$spec->background()) ?>
+</pattern>
+    @endforeach
 </defs>

@@ -13,7 +13,7 @@ return new
     #[ImageCredit(null)]
     #[LocalHeroImage('hero/first-aid-kit.jpg')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

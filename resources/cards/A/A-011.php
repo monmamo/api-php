@@ -12,7 +12,7 @@ return new
     #[Concept('Skill')]
     #[ConceptIconHeroImage('Energos')]
     #[Prerequisites(lines: 'Requires Energos.', y: 430)]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

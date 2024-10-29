@@ -14,7 +14,7 @@ return new
 // #[App\CardAttributes\FlavorText([])]
 #[LocalHeroImage('TODO.png')]
 #[Prerequisites(lines: 'Attach this card to a Monster.')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

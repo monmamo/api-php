@@ -16,7 +16,7 @@ return new
 #[FlavorText(['A cavern with primarily earthen ruins below the surface of a mound, hill or mountain where ancient rulers and warriors would be laid to rest.'])]
 #[LocalHeroImage('TODO.png')]
 #[Prerequisites([])]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

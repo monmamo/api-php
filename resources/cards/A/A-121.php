@@ -13,7 +13,7 @@ return new
 #[Concept('Integrity', 4)]
 #[ImageCredit('Icon by archer7 from Noun Project')]
 #[FlavorText('FLAVOR_TEXT')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

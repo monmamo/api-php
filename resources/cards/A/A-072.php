@@ -18,7 +18,7 @@ return new
 #[IsGeneratedImage]
 #[LocalHeroImage('A072.png')]
 #[Prerequisites(y: 460, lines: ['Limit 1 per player on the Battlefield.'])]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

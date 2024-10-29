@@ -12,7 +12,7 @@ return new
 #[Concept('Mobster')]
 #[FlavorText('An associate of a Crime Family.')]
 #[ImageCredit('Image by USER_NAME on SERVICE')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

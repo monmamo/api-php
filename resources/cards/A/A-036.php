@@ -16,7 +16,7 @@ return new
 
     #[FlavorText('His way or the highway.')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

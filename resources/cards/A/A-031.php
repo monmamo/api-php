@@ -16,7 +16,7 @@ return new
 #[ImageCredit('Image by wirestock on Freepik')]
 #[LocalHeroImage('A064.jpg')] // https://www.freepik.com/free-photo/closeup-shot-beautiful-thompson-s-gazelle_10292458.htm
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

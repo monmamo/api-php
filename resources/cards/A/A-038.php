@@ -13,7 +13,7 @@ return new
     #[Concept('Physical')]
     #[LocalHeroImage('AS02.jpg')] // https://www.freepik.com/free-vector/jiu-jitsu-athletes-fighting_10369936.htm
     #[ImageCredit('Image by Freepik')]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

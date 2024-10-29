@@ -17,7 +17,7 @@ return new
     #[ImageCredit('Image by storyset on Freepik')]
 
     #[FlavorText("Can't win if you don't play!")]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

@@ -14,7 +14,7 @@ return new
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('FLAVOR_TEXT')]
 #[\App\CardAttributes\Prerequisites(lines:'Requires Floros.',y:460)]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

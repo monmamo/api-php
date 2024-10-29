@@ -15,7 +15,7 @@ return new
 #[LocalHeroImage('TODO.png')]
 #[Prerequisites(['Requires Pyros and Tail.'])]
 
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

@@ -15,7 +15,7 @@ return new
 #[Concept('Integrity', '2')]
 #[Prerequisites('Can replace any Bystander Cheerleader (A-032).')]
 #[ImageCredit('Image by USER_NAME on SERVICE')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

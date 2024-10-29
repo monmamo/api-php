@@ -18,7 +18,7 @@ return new
     #[FlavorText('What sharp teeth you have.')]
     #[LocalHeroImage('A006.png')]
     #[Prerequisites(y: 490)]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

@@ -12,7 +12,7 @@ return new
 #[Concept('Place')]
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('Prohibition only drives drunkenness behind doors and into dark places. - Mark Twain')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

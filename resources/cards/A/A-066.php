@@ -13,7 +13,7 @@ return new
 #[Concept('Catastrophe')]
 #[ImageCredit('Generated with StarryAI. Placeholder image.')]
 #[FlavorText('FLAVOR_TEXT')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

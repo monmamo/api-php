@@ -14,7 +14,7 @@ return new
 #[Concept('Attack')]
 #[FlavorText('Flamethrower the placeholder image.')]
 #[LocalHeroImage('hero/flamethrower.jpeg')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

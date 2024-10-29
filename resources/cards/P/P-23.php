@@ -11,7 +11,7 @@ return new
 #[ImageCredit('Image by USER_NAME on SERVICE')]
 #[Concept('Place')]
 #[Concept('Forest')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

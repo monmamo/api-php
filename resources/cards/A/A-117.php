@@ -13,7 +13,7 @@ return new
 #[Concept('Integrity', 4)]
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText(lines: ['The quick stop for everything you forgot', 'at the Big-Box Store (A-014).'])]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

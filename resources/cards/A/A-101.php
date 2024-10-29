@@ -14,7 +14,7 @@ return new
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('FLAVOR_TEXT')]
 #[ConceptIconHeroImage('Pyros')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

@@ -23,7 +23,7 @@ return new
 
     #[FlavorText(['Nice monster team you got there.', 'Would be a shame if something happened to it.'])]
     #[Prerequisites(y: 525, lines: [PREREQUISITE])]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

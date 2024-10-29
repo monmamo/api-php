@@ -14,7 +14,7 @@ return new
     #[LocalHeroImage('hero/wheel-of-fortune.jpg')] // https://www.freepik.com/free-psd/casino-roulette-icon-render_23877079.htm
     #[ImageCredit('Image by freepik')]
     #[FlavorText("This isn't a game (show).")]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

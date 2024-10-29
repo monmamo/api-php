@@ -21,7 +21,7 @@ return new
 
     #[FlavorText('Most efficacious in every case.')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

@@ -15,7 +15,7 @@ return new
 #[Concept('Integrity', '1d4')]
 #[Title('Crooked Cop')]
 #[LocalHeroImage('A-045.jpg')]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

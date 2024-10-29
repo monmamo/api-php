@@ -16,7 +16,7 @@ return new
 #[ImageCredit('Image by logturnal on Freepik')]
 #[FlavorText('Recycle today for a better upkeep phase tomorrow.')]
 #[LocalHeroImage('A212.jpg')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

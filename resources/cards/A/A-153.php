@@ -15,7 +15,7 @@ return new
 #[Concept('Attack')]
 #[IsGeneratedImage]
 #[Prerequisites(lines: 'Requires Pyros.', y: 460)]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

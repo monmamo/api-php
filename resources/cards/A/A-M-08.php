@@ -23,7 +23,7 @@ return new
     #[ImageCredit(null)]
     #[LocalHeroImage('hero/A-M-08.png')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

@@ -16,7 +16,7 @@ return new
 #[FlavorText('FLAVOR_TEXT')]
 #[ConceptIconHeroImage('Energos')]
 #[Prerequisites(lines: 'Requires Energos.', y: 460)]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

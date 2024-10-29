@@ -21,7 +21,7 @@ return new
     #[ImageCredit('Image by freepik')]
     #[FlavorText('Does a monster good!')]
     #[Prerequisites('Attach this card to a Monster.')]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

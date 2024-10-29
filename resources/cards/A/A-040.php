@@ -17,7 +17,7 @@ return new
     #[ImageCredit('Image by studio4rt on Freepik')] // https://www.freepik.com/free-vector/tools-shop-showcase-assortment-painting-building-home-repair-renovation-carpentry-work-constructor-hardware-store-stand-with-housekeeping-equipment_25872060.htm
     #[Prerequisites(y: 455)]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

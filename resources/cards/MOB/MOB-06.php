@@ -15,7 +15,7 @@ return new
 #[ImageCredit('')]
 #[FlavorText(['Highest ranking member of a Crime Family.'])]
 #[LocalHeroImage('TODO.png')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

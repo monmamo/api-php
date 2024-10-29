@@ -3,7 +3,6 @@
 namespace App\View\Components;
 
 use App\CardNumber;
-use App\Contracts\Card\CardComponents;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
@@ -12,6 +11,8 @@ class Card extends Component //implements CardComponents
     protected readonly CardNumber $card_number_parsed;
 
     public float $height;
+
+    public readonly \App\Contracts\Card\CardComponents $spec;
 
     /**
      * Constructor.
@@ -26,7 +27,6 @@ class Card extends Component //implements CardComponents
      */
     public function __construct(
         public string $cardNumber,
-        public ?CardComponents $spec,
         public ?string $cardName = null,
         public ?float $width = null,
         public float $titleboxOpacity = 1,
@@ -35,6 +35,9 @@ class Card extends Component //implements CardComponents
         public int $dy = 0,
         public bool $omitCommon = false,
     ) {
+        $this->card_number_parsed = CardNumber::make($this->cardNumber);
+        $this->spec = require $this->card_number_parsed->getSpecFilePath();
+
         $this->cardName ??= $this->spec->name();
         $this->width ??= \config('card-design.width');
         $this->height ??= \config('card-design.height') * $this->width / \config('card-design.width');
@@ -92,7 +95,6 @@ class Card extends Component //implements CardComponents
      */
     public function set(): string
     {
-        $this->card_number_parsed ??= CardNumber::make($this->cardNumber);
         return $this->card_number_parsed->set;
     }
 }

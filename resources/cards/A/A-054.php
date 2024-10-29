@@ -15,7 +15,7 @@ return new
     #[ImageCredit('Icon by Rafiico Creative from Noun Project')]
 #[Prerequisites(y: 455)]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

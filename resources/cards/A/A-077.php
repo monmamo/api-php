@@ -14,7 +14,7 @@ return new
 #[ImageCredit('Image by freepic.diller on Freepik')]
 #[LocalHeroImage('A231.jpg')]
 #[FlavorText(['Your favorite monster sports club had a great day', 'on the field. Let\'s celebrate!'])]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

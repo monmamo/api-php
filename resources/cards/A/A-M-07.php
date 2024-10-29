@@ -25,7 +25,7 @@ return new
     #[LocalHeroImage('hero/A-M-07.png')]
     #[ImagePrompt('yellow electric dog monster of weird zoology in a factory')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

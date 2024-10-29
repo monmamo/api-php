@@ -13,7 +13,7 @@ return new
 #[Concept('Integrity', '1d4')]
     #[ImageCredit('Image by teravector on Freepik')]
     #[FlavorText('Expect more. Live better. Simplify life. Get more done.')]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

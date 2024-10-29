@@ -16,7 +16,7 @@ return new
     #[ImageCredit('Image by photoroyalty on Freepik')]
     #[FlavorText('Past performance is not indicative of future results.')]
     #[LocalHeroImage('A135.jpg')]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

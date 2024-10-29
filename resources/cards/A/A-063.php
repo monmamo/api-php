@@ -14,7 +14,7 @@ return new
     #[ImageCredit('Image by photoroyalty on Freepik')]
     #[Concept('Vendor')]
     #[Title('Dividends')]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

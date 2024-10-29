@@ -23,7 +23,7 @@ return new
     #[IsGeneratedImage]
     #[ImagePrompt('lavender cat monster of weird zoology by a lake')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

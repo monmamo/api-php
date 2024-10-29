@@ -20,7 +20,7 @@ return new
     #[IsGeneratedImage]
     #[LocalHeroImage('hero/A-M-03.png')]
     #[ImagePrompt('brown cat of weird zoology swimming in a lake')]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

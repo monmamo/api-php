@@ -22,7 +22,7 @@ return new
     #[IsGeneratedImage]
     #[ImagePrompt('blue seal of weird zoology swimming in a lake, trees and mountains in the background')]
     #[ImageCredit(null)]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

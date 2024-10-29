@@ -18,7 +18,7 @@ return new
 
 #[LocalHeroImage('A189.jpg')] // https://www.freepik.com/free-photo/football-trainer-teaching-his-pupils_32248887.htm
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

@@ -15,7 +15,7 @@ return new
 #[Concept('Integrity', 2)]
 #[ImageCredit('Image by storyset on Freepik')]
 #[FlavorText('FLAVOR_TEXT')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 
@@ -23,7 +23,7 @@ class implements CardComponents
     {
         yield <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(A146.jpg)" />
-    <x-card.phaserule type="Draw" lines="6"><text>    
+    <x-card.phaserule type="Draw" lines="6"><text>
 <x-card.normalrule>Discard 2+ cards from your hand.</x-card.normalrule>
 <x-card.normalrule>Lay your hand aside. Draw twice as many</x-card.normalrule>
 <x-card.normalrule>cards as you discarded. You may reveal any</x-card.normalrule>

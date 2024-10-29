@@ -17,7 +17,7 @@ return new
 #[LocalHeroImage('A245.png')]
 #[FlavorText('I am the law.')]
 #[Prerequisites(['Limit 1 on Battlefield among all players.', 'You may choose to make this card Male or Female', 'when you put it on the Battlefield.'])]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

@@ -12,7 +12,7 @@ return new
 #[Concept('Trait')]
 #[ImageCredit('Adobe Stock #2910609')]
 #[FlavorText('FLAVOR_TEXT')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

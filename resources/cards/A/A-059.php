@@ -14,7 +14,7 @@ return new
 #[IsGeneratedImage]
 #[LocalHeroImage('hero/dandruff.jpeg')]
 
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

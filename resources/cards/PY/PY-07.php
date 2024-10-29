@@ -16,7 +16,7 @@ return new
 #[FlavorText([])]
 #[LocalHeroImage('TODO.png')]
 #[Prerequisites(['This card can be played only if the Place in play is a Forest and when a Monster uses an attack that results in the discarding of Fire cards.'])]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

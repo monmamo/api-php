@@ -20,7 +20,7 @@ return new
 #[FlavorText(['The best medicine is the one that tastes the worst.'])]
 #[LocalHeroImage('FA-08.png')]
 #[Prerequisites([])]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

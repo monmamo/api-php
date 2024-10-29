@@ -19,7 +19,7 @@ return new
 #[LocalHeroImage('TODO.png')]
 #[Prerequisites('Each player may have one Mascot card in play.')]
 #[Prerequisites('Can replace any Bystander Mascot (XX-00).')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

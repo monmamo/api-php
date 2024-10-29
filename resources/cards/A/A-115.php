@@ -15,7 +15,7 @@ return new
 #[Concept('Item')]
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('Here\'s lookin\' at you, kid.')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

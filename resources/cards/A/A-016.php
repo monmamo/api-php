@@ -14,7 +14,7 @@ return new
 
     // <image x="0" y="0" class="hero" href="AT28" /> pikisuperstar on Freepik   "source": "https://www.freepik.com/free-vector/hand-drawn-brain-cartoon-illustration_53573325.htm"
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

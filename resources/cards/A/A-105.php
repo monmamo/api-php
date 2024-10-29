@@ -19,7 +19,7 @@ return new
     #[LocalHeroImage('hero/tranquilizer-dart.jpg')]
     #[FlavorText('Ouuuuuch……')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

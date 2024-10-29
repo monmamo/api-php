@@ -13,7 +13,7 @@ return new
 
     #[ImageCredit('Image by Lorc from Game-Icons.net')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

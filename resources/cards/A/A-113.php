@@ -12,7 +12,7 @@ return new
 #[Concept('Venue')]
 #[ImageCredit('Shutterstock #2348597925')]
 #[FlavorText('FLAVOR_TEXT')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

@@ -12,7 +12,7 @@ return new
     #[Title('Monster Shelter')]
     #[Concept('Facility')]
     #[ImageCredit('Icon by Made by Made from the Noun Project')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

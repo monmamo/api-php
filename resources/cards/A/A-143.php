@@ -14,7 +14,7 @@ return new
     #[ImageCredit('Image by photoroyalty on Freepik')]
     #[LocalHeroImage('A135.jpg')] // https://www.freepik.com/free-vector/time-is-money-background_1014317.htm
     #[Prerequisites(y: 475)]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

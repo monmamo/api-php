@@ -14,7 +14,7 @@ return new
 #[Concept('Defense')]
 #[Title('Fire Shield')]
 #[Prerequisites(lines: 'Requires Pyros.', y: 460)]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

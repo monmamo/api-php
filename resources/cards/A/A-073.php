@@ -15,7 +15,7 @@ return new
 #[ConceptIconHeroImage('Aquos')]
 #[Prerequisites(lines: 'Requires Aquos.', y: 460)]
 
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

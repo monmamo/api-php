@@ -14,7 +14,7 @@ return new
     // #[\App\CardAttributes\ImageCredit('Image by USER_NAME on SERVICE')]
     #[FlavorText('Also called "airport security."')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

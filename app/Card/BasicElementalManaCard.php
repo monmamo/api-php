@@ -9,16 +9,19 @@ use App\Facades\Blade;
 
 class BasicElementalManaCard implements CardComponents
 {
-    use DefaultCardAttributes;
+    use DefaultCardAttributes{
+        __construct as construct;
+    }
 
     /**
      * @group nonary
      */
     public function __construct(
+        string $path,
         public $svg,
         public readonly string $title,
         public readonly string $imageCredit,
-    ) {}
+    ) {$this->construct($path);}
 
     /**
      * @group nonary
@@ -46,7 +49,7 @@ class BasicElementalManaCard implements CardComponents
      */
     public function concepts(): array
     {
-        return [new Concept('Mana')];
+        return [];
     }
 
     /**

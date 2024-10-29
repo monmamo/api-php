@@ -18,7 +18,7 @@ return new
     #[IsGeneratedImage('head coach standing on the sidelines with a clipboard, green jacket')]
     #[LocalHeroImage('A-055.png')]
     #[Prerequisites(y: 460, lines: ['Limit 1 per player on Battlefield.', 'You may choose to make this card Female', 'when you put it on the Battlefield.'])]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

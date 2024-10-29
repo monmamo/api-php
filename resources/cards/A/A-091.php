@@ -18,7 +18,7 @@ return new
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('He builds the hugest venues. Yuge ones.')]
 #[LocalBackgroundImage('A-091-full.png')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

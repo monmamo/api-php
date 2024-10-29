@@ -12,7 +12,7 @@ return new
     #[Concept('Trait')]
 #[LocalHeroImage('TODO.png')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

@@ -15,7 +15,7 @@ return new
     #[LocalHeroImage('A025.jpeg')]
     #[ImageCredit('Image by Adobe: Stock #58908676')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

@@ -16,7 +16,7 @@ return new
 #[FlavorText([])]
 #[LocalHeroImage('TODO.png')]
 #[Prerequisites(['You may play this card only if a First Aid card is in play.'])]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

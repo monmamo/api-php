@@ -24,7 +24,7 @@ return new
     #[ImageCredit(null)]
     #[ImagePrompt('blue and yellow otter of weird at the edge of the water on a beach')]
     #[LocalHeroImage('hero/A-M-02.png')]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

@@ -20,7 +20,7 @@ return new
 #[FlavorText('They say that bad breath is better than no breath at all…')]
 #[LocalHeroImage('A110.jpg')]
 #[Prerequisites([PREREQUISITE])]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

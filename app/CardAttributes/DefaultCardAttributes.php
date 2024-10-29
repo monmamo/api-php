@@ -21,6 +21,22 @@ trait DefaultCardAttributes
 
     private $_prerequisites_attribute;
 
+private readonly string $card_number;
+
+public function __construct($path){
+    $this->card_number =basename($path, '.php');
+}
+
+
+    /**
+     * @group nonary
+     */
+    public function cardNumber(): string
+    {
+        return $this->card_number;
+    }
+
+
     /**
      * @group nonary
      */
@@ -35,15 +51,6 @@ trait DefaultCardAttributes
             $concepts[0]->hasBackground() => $concepts[0]->background(),
             default => '<' . 'x-card.background' . ' />'
         };
-    }
-
-    /**
-     * @group nonary
-     */
-    public function cardNumber(): string
-    {
-        $attributes = $this->reflection()->getAttributes(CardFilePath::class);
-        return CardNumber::make($attributes[0]->getArguments()[0]);
     }
 
     /**

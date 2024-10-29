@@ -19,7 +19,7 @@ return new
     #[LocalHeroImage('A-055.png')]
     #[Prerequisites(['Limit 1 per player on Battlefield.', 'You must already have a Head Coach on the Battlefield', 'to put this card on the Battlefield.', 'You may choose to make this card Female', 'when you put it on the Battlefield.'])]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

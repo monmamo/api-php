@@ -16,7 +16,7 @@ return new
 #[Concept('Speed', '13')]
 #[Concept('Multiplier', 'x3')]
 #[ImageCredit('Image by USER_NAME on SERVICE')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

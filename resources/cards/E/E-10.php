@@ -11,7 +11,7 @@ return new
 #[Concept('Trait')]
 #[Concept('Hormone')]
 #[ImageCredit('Image by USER_NAME on SERVICE')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

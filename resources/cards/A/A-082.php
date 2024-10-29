@@ -13,7 +13,7 @@ return new
 #[Concept('Integrity', '1d4')]
 #[IsGeneratedImage]
 #[FlavorText('FLAVOR_TEXT')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

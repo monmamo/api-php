@@ -22,7 +22,7 @@ return new
 #[ImageCredit('Image by catalyststuff on Freepik')]
 #[FlavorText('Here\'s lookin\' at you, kid.')]
 #[LocalHeroImage('A312.jpg')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

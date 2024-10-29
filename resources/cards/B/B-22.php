@@ -13,7 +13,7 @@ return new
 
     #[FlavorText('Hope your Insurance (A-069) is paid up.')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

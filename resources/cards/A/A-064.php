@@ -14,7 +14,7 @@ return new
 #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
 #[ConceptIconHeroImage('Energos')]
 #[Prerequisites(lines: 'Requires Energos.', y: 460)]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

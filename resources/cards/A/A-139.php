@@ -19,7 +19,7 @@ return new
 
     #[FlavorText("It's a female monster.")]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

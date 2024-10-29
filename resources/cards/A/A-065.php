@@ -16,7 +16,7 @@ return new
 #[IsGeneratedImage]
 #[FlavorText('Halitosis (A-110) is the least of your problems.')]
 #[Prerequisites(lines: 'Requires Pyros.', y: 460)]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

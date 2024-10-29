@@ -29,7 +29,7 @@ foreach ($cards as $card_number => $count) {
                 Contains <?php echo $total_count; ?> cards. Click on a card name to view its details.
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/cg/decks/{{$id}}/print">Print This Deck</a>
+                <a class="nav-link" href="/cards/deck/{{$id}}/print">Print This Deck</a>
             </li>
         </ul>
 

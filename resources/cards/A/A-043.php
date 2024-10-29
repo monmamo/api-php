@@ -19,7 +19,7 @@ return new
 
     #[FlavorText('Psst. I got a great deal for you.')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

@@ -12,7 +12,7 @@ return new
 #[Concept('Bane')]
 #[ImageCredit('Image by Luis Prado via The Noun Project')]
 #[FlavorText('The smell is the least of your worries.')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

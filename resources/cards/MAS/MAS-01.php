@@ -12,7 +12,7 @@ return new
 #[Concept('Attack')]
 #[FlavorText(['Punch to the torso.'])]
 #[LocalHeroImage('TODO.png')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

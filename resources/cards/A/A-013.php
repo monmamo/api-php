@@ -11,7 +11,7 @@ return new
 
 #[Title('Baker\'s Dozen')]
     #[Concept('Draw')]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

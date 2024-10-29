@@ -7,30 +7,26 @@ use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
+// inspiration: https://bulbapedia.bulbagarden.net/wiki/Junk_Arm_(Triumphant_87)
+
 return new
-#[Title('TODO')]
-#[Concept('TODO')]
+#[Title('Junk from the Trunk')]
+#[Concept('Draw')]
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('FLAVOR_TEXT')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <text y="500" filter="url(#solid)">TODO</text>
+<x-card.phaserule type="Draw" lines="2">
+<text>
+<x-card.normalrule>Put an Item card from your </x-card.normalrule>
+<x-card.normalrule>Discard into your Library.</x-card.normalrule></text></x-card.phaserule>
+
 HTML;
     }
 };
 
-// {{-- This needs something to be more distinct from Junk Patrol (A-137). --}}
-
-// <x-card :$cardNumber :$dx :$dy card-name="Junk from the Trunk">
-
-//         'concepts' => ['Draw'],
-
-//         <x-card.phaserule type="Draw" lines="2">
-//                 <text>
-//                         <x-card.normalrule>Put an Item card from your </x-card.normalrule>
-//                                 <x-card.normalrule>Discard into your Library.</x-card.normalrule></text></x-card.phaserule>

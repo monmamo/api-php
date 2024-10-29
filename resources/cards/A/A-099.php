@@ -11,7 +11,7 @@ return new
     #[Concept('Environment')]
     #[ImageCredit('Icon by Lorc on Game-Icons.net under CC BY 3.0')]
 
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

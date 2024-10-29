@@ -25,7 +25,7 @@ return new
     #[IsGeneratedImage]
     #[ImageCredit(null)]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

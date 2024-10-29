@@ -13,7 +13,7 @@ return new
 
 #[LocalHeroImage('TODO.png')]
 #[Prerequisites(['This card can be played only if Winter is in play.'])]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

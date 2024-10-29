@@ -13,7 +13,7 @@ return new
 #[Concept('Criminal')]
 #[ImageCredit('Adobe Stock #756008424')]
 #[FlavorText('FLAVOR_TEXT')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

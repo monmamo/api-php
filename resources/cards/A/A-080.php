@@ -12,7 +12,7 @@ return new
 #[Concept('Draw')]
 #[ImageCredit('Image by logturnal on Freepik')]
 #[FlavorText('FLAVOR_TEXT')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

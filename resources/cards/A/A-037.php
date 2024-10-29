@@ -17,7 +17,7 @@ return new
 #[ImageCredit('Image by Freepik')]
 #[LocalBackgroundImage('fullsize/cologne.jpg')]
 #[Title('Eau de Resistance')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

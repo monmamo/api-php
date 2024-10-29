@@ -12,7 +12,7 @@ return new
     #[Concept('Facility')]
 #[FlavorText('Have a hot meal. Hang out with the boys.')]
 #[ImageCredit('Icon by Vectors Point from the Noun Project')] // https://thenounproject.com/icon/community-center-architecture-3017456/
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

@@ -19,7 +19,7 @@ return new
 
     #[FlavorText('Bears a striking resemblance to Frank Abagnale.')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

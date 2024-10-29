@@ -12,7 +12,7 @@ return new
 #[Concept('Draw')]
 #[ImageCredit('Image by wirestock on Freepik')]
 #[FlavorText('Who says money can\'t buy popularity?')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

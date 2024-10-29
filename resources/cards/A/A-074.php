@@ -14,7 +14,7 @@ return new
 #[Concept('Draw')]
 #[IsGeneratedImage]
 #[FlavorText('FLAVOR_TEXT')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

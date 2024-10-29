@@ -12,7 +12,7 @@ return new
 #[Concept('TODO')]
 #[IsGeneratedImage]
 #[FlavorText('FLAVOR_TEXT')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

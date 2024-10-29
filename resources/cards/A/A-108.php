@@ -13,7 +13,7 @@ return new
 #[LocalHeroImage('A108.jpg')]
   #[ImageCredit('Shutterstock #2348597925')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

@@ -15,7 +15,7 @@ return new
     #[LocalHeroImage('A004.jpg')] // https://www.freepik.com/free-photo/hand-pouring-food-birds_1713221.htm
     #[ImageCredit('Image by freepik')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

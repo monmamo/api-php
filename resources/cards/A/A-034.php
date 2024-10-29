@@ -16,7 +16,7 @@ return new
 
     #[ImageCredit('Image by freepik')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

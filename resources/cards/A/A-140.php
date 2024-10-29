@@ -14,7 +14,7 @@ return new
     //#[\App\CardAttributes\ImageCredit("Image by USER_NAME on SERVICE")]
     #[LocalHeroImage('TODO.png')]
     #[FlavorText('Now is not the time to panic.')]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

@@ -9,11 +9,9 @@ use App\GeneralAttributes\Title;
 
 return new
 #[ImageCredit('Icon by sbed on Game-Icons.net under CC BY 3.0')]
-#[Concept('Mana')]
-
 #[Title('Acid')]
 #[FlavorText('Corrosive substance that can dissolve materials.', 'It is often used in manufacturing and cleaning.')]
- class implements CardComponents
+ class(__FILE__) implements CardComponents
  {
      use DefaultCardAttributes;
 

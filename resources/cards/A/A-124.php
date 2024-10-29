@@ -23,7 +23,7 @@ return new
 //#[IsGeneratedImage]
 //#[\App\CardAttributes\LocalHeroImage('A188.jpg')]
 #[Prerequisites(y: 345, lines: [PREREQUISITE])]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

@@ -16,7 +16,7 @@ return new
 #[FlavorText([])]
 #[LocalHeroImage('TODO.png')]
 #[Prerequisites(lines: ['Requires Aquos.', 'Can be used only at an Ocean.'], y: 460)]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

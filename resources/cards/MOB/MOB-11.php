@@ -10,7 +10,7 @@ return new
 #[Title('Illicit Husbandry')]
 #[Concept('Facility')]
 #[ImageCredit('Image by USER_NAME on SERVICE')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

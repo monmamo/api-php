@@ -19,7 +19,7 @@ return new
 #[IsGeneratedImage]
 #[LocalHeroImage('hero/hypnotic-drone.jpeg')]
 #[Prerequisites(y: 470)]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 
@@ -28,7 +28,7 @@ class implements CardComponents
         yield <<<'HTML'
     <x-card.phaserule type="Resolution" lines="4"><text>
     <x-card.normalrule>If an opponent's Monster, Master,</x-card.normalrule>
-    <x-card.normalrule>Mobster or Bystander attempts any </x-card.normalrule> 
+    <x-card.normalrule>Mobster or Bystander attempts any </x-card.normalrule>
         <x-card.normalrule>attack, defense, skill or effect, you may choose</x-card.normalrule>
     <x-card.normalrule>to roll 1d6. If @dieroll(6,5), that move has no effect.</x-card.normalrule>
 </text></x-card.phaserule>

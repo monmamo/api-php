@@ -17,7 +17,7 @@ return new
 #[FlavorText(['Meaty chunks in a thick, savory gravy.'])]
 #[LocalHeroImage('TODO.png')]
 #[Prerequisites([])]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

@@ -14,7 +14,7 @@ return new
 #[ImageCredit('')]
 #[FlavorText(['Diagonal knifehand strike to the side of the head or neck.'])]
 #[LocalHeroImage('TODO.png')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

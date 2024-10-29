@@ -10,7 +10,7 @@ return new
     #[Title('Insurance')]
     #[ImageCredit('Image by USER_NAME on SERVICE')]
     #[LocalHeroImage('TODO.png')]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

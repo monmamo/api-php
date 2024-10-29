@@ -15,7 +15,7 @@ return new
     #[ImageCredit('Image by macrovector on Freepik')]
     #[FlavorText('Declare the pennies on your eyes.')]
     #[LocalHeroImage('hero/taxman.jpg')]
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

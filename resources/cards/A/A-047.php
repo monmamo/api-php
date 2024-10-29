@@ -16,7 +16,7 @@ return new
 #[Prerequisites(y: 400)]
     #[LocalHeroImage('TODO.png')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

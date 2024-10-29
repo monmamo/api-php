@@ -18,7 +18,7 @@ return new
 #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
 #[FlavorText('I\'ve got a driver and that\'s a start.')]
 #[Prerequisites(['A player may have any number of Drivers on the Battlefield.', 'You may make this card Female when you play it on the Battlefield.'])]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

@@ -14,10 +14,10 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Garlic')]
-#[Concept('Mana')]
+#[Concept('Material')]
 #[ImageCredit('Image by brgfx on Freepik')]
 #[FlavorText(lines: ['A clove a day keeps the doctor away.', '(And everyone else.)'])]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

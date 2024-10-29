@@ -12,7 +12,7 @@ return new
 #[Title('Equalizer 1')]
 #[Concept('Draw')]
 #[ImageCredit('Image by amantaka from Noun Project')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

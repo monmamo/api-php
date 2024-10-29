@@ -18,7 +18,7 @@ return new
 
     #[ImageCredit('Icon by Caro Asercion under CC BY 3.0')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

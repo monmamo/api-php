@@ -8,7 +8,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Welcome to Flavortext')]
 #[Concept('Draw')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

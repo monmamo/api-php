@@ -9,7 +9,8 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Sleight of Hand')]
 #[Concept('Draw')]
-    class implements CardComponents
+#[\App\CardAttributes\LocalHeroImage('TODO.png')]
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

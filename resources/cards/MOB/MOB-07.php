@@ -17,7 +17,7 @@ return new
 #[FlavorText([])]
 #[LocalHeroImage('TODO.png')]
 #[Prerequisites('Can replace any Cheerleader (A-032).')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

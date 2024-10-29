@@ -17,7 +17,7 @@ return new
 #[FlavorText([])]
 #[LocalHeroImage('TODO.png')]
 #[Prerequisites(['The Monster using this skill must have at least one Fire card attached.'])]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

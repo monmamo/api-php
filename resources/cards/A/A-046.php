@@ -13,7 +13,7 @@ return new
 
     #[ImageCredit('Icon by vecon from the Noun Project')] // https://thenounproject.com/icon/smiley-2896057/
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

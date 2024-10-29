@@ -12,7 +12,7 @@ return new
 #[Concept('Draw')]
 #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
 #[FlavorText('FLAVOR_TEXT')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

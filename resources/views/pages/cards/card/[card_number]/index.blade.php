@@ -48,7 +48,7 @@ $next = $card_number_object->makeNext();
     @endisset
 </div>
   <div id="svg-container" hx-get="#"  hx-trigger="dblclick" hx-target="#svg-container">
-  <x-card :cardNumber="$card_number" :$spec />
+  <x-card :cardNumber="$card_number" />
 </div>
   <div id="img-container"></div>
 

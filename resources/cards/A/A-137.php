@@ -7,30 +7,26 @@ use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
+
+
 return new
-#[Title('TODO')]
-#[Concept('TODO')]
+#[Title('Junk Patrol')]
+#[Concept('Vendor')]
+#[Concept('Integrity',1)]
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('FLAVOR_TEXT')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <text y="500" filter="url(#solid)">TODO</text>
+<x-card.phaserule type="Draw" lines="2">
+<text>
+<x-card.normalrule>Put up to 3 Item cards from your </x-card.normalrule>
+<x-card.normalrule>Discard into your Library.</x-card.normalrule></text></x-card.phaserule>
 HTML;
     }
 };
 
-// <x-card :$cardNumber :$dx :$dy card-name="Junk Patrol">
-
-//         'concepts' => ['Vendor'],
-
-//         <x-card.phaserule type="Draw" lines="2">
-//                 <text>
-//                         <x-card.normalrule>Put an Item card from your </x-card.normalrule>
-//                                 <x-card.normalrule>Discard into your hand.</x-card.normalrule></text></x-card.phaserule>
-
-// {{-- _inspiration": "https://bulbapedia.bulbagarden.net/wiki/Junk_Arm_(Triumphant_87) --}}

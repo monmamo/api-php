@@ -15,7 +15,7 @@ return new
     #[IsGeneratedImage]
     #[LocalHeroImage('AT32.png')]
 
-    class implements CardComponents
+    class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 

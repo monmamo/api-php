@@ -8,7 +8,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Intercept')]
 #[Concept('Defense')]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 
