@@ -3,7 +3,6 @@
 namespace App\Card;
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\Facades\Blade;
 
@@ -21,7 +20,9 @@ class BasicElementalManaCard implements CardComponents
         public $svg,
         public readonly string $title,
         public readonly string $imageCredit,
-    ) {$this->construct($path);}
+    ) {
+        $this->construct($path);
+    }
 
     /**
      * @group nonary

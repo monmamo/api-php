@@ -2,7 +2,6 @@
 
 namespace App\CardAttributes;
 
-use App\CardNumber;
 use App\Concept;
 use App\Concerns\Reflection;
 use App\GeneralAttributes\Title;
@@ -21,21 +20,12 @@ trait DefaultCardAttributes
 
     private $_prerequisites_attribute;
 
-private readonly string $card_number;
+    private readonly string $card_number;
 
-public function __construct($path){
-    $this->card_number =basename($path, '.php');
-}
-
-
-    /**
-     * @group nonary
-     */
-    public function cardNumber(): string
+    public function __construct($path)
     {
-        return $this->card_number;
+        $this->card_number = \basename($path, '.php');
     }
-
 
     /**
      * @group nonary
@@ -51,6 +41,14 @@ public function __construct($path){
             $concepts[0]->hasBackground() => $concepts[0]->background(),
             default => '<' . 'x-card.background' . ' />'
         };
+    }
+
+    /**
+     * @group nonary
+     */
+    public function cardNumber(): string
+    {
+        return $this->card_number;
     }
 
     /**

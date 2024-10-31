@@ -194,27 +194,28 @@ function make($spec): CardComponents
     };
 }
 
-
 function includeFontFace($font_slug)
 {
-    $font = config("fonts.$font_slug");
+    $font = \config("fonts.{$font_slug}");
     $font_name = $font['family'];
     $font_format = $font['format'];
     $font_unicode_range = $font['unicode-range'];
     $font_weight = $font['weight'];
     $font_style = $font['style'];
-    $base64String = $font['code'] ?? value(function () use ($font) {
-        $fileContent = file_get_contents($font['url']);
-        if ($fileContent === false)
-            throw new \Exception("Failed to download the file.");
-        return base64_encode($fileContent);
+    $base64String = $font['code'] ?? \value(function () use ($font) {
+        $fileContent = \file_get_contents($font['url']);
+
+        if ($fileContent === false) {
+            throw new \Exception('Failed to download the file.');
+        }
+        return \base64_encode($fileContent);
     });
 
-    return  "@font-face {
-  font-family: '$font_name';
-  font-style: $font_style;
-  font-weight: $font_weight;
-  src: url('data:application/font-woff;charset=utf-8;base64,$base64String') format('$font_format');
-  unicode-range: $font_unicode_range;
+    return "@font-face {
+  font-family: '{$font_name}';
+  font-style: {$font_style};
+  font-weight: {$font_weight};
+  src: url('data:application/font-woff;charset=utf-8;base64,{$base64String}') format('{$font_format}');
+  unicode-range: {$font_unicode_range};
 }";
 }

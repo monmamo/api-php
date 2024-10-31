@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use App\CardNumber;
+use App\Contracts\Card\CardComponents;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
@@ -12,7 +13,7 @@ class Card extends Component //implements CardComponents
 
     public float $height;
 
-    public readonly \App\Contracts\Card\CardComponents $spec;
+    public readonly CardComponents $spec;
 
     /**
      * Constructor.
