@@ -3,7 +3,6 @@
 // inspiration:: Erika's Hospitality PTCG card https://bulbapedia.bulbagarden.net/wiki/Erika%27s_Hospitality_(Team_Up_174)
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -13,7 +12,6 @@ return new
 #[Title('Hospitality')]
 #[Concept('Draw')]
 #[ImageCredit('IMAGE_CREDIT')]
-#[FlavorText('FLAVOR_TEXT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

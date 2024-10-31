@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -12,7 +11,6 @@ return new
 #[Concept('Vendor')]
 #[Concept('Integrity', '1d4')]
 #[IsGeneratedImage]
-#[FlavorText('FLAVOR_TEXT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

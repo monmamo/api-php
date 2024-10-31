@@ -8,15 +8,11 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Deathgrip')]
-
+    #[Title('Deathgrip')]
     #[Concept('Attack')]
-     #[Concept('Physical')]
-
+    #[Concept('Physical')]
     #[ImageCredit('Icon by iconixar from the Noun Project')]
-
-#[Prerequisites(y: 455)]
-
+    #[Prerequisites(y: 455)]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

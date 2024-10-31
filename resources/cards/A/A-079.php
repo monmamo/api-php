@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -12,7 +11,6 @@ return new
 #[Concept('Drone')]
 #[Concept('Item', 'DamageCapacity:5', 'Size:25', 'Speed:4')]
 #[ImageCredit('IMAGE_CREDIT')]
-#[FlavorText('FLAVOR_TEXT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -11,7 +10,6 @@ return new
 #[Title('Creative Academy')]
 #[Concept('Venue')]
 #[ImageCredit('Shutterstock #2348597925')]
-#[FlavorText('FLAVOR_TEXT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

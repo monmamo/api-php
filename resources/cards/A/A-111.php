@@ -8,14 +8,11 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Personal Shopper')]
-
+    #[Title('Personal Shopper')]
     #[Concept('Vendor')]
     #[Concept('Integrity', '1d4')]
     #[IsGeneratedImage]
-
     #[ImageCredit(null)]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

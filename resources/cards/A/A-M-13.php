@@ -9,8 +9,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Felequess L48')]
-
+    #[Title('Felequess L48')]
     #[Concept('Monster')]
     #[Concept('Female')]
     #[Concept('DamageCapacity', 90)]
@@ -19,10 +18,8 @@ return new
     #[Concept('Speed', 16)]
     #[Concept('Multiplier:x4')]
     #[LocalHeroImage('hero/felequos.png')]
-
     #[IsGeneratedImage]
     #[ImageCredit(null)]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

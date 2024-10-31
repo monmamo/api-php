@@ -9,8 +9,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Head Coach')]
-
+    #[Title('Head Coach')]
     #[Concept('Master')]
     #[Concept('Coach')]
     #[Concept('Male')]

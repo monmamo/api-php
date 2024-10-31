@@ -9,20 +9,17 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Regfelor L44')]
-
-    #[Concept('Monster', )]
+    #[Title('Regfelor L44')]
+    #[Concept('Monster',)]
     #[Concept('Male')]
-    #[Concept('DamageCapacity', 65, )]
+    #[Concept('DamageCapacity', 65,)]
     #[Concept('Level', 44)]
     #[Concept('Size', 17)]
     #[Concept('Speed', 10)]
     #[Concept('Multiplier', 'x2')]
-
     #[LocalHeroImage('hero/regfelor.png')]
     #[IsGeneratedImage]
     #[ImagePrompt('lavender cat monster of weird zoology by a lake')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

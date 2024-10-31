@@ -3,7 +3,6 @@
 // inspiration: Brock's Primeape's "Scram" power.
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -13,7 +12,6 @@ return new
 #[Title('Scram')]
 #[Concept('Skill')]
 #[ImageCredit('IMAGE_CREDIT')]
-#[FlavorText('FLAVOR_TEXT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

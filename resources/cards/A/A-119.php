@@ -11,16 +11,12 @@ use App\GeneralAttributes\Title;
 // https://www.freepik.com/free-photo/brain-booster-pills-container-still-life_65114716.htm
 
 return new
-#[Title('Medicinal Compound')]
-
+    #[Title('Medicinal Compound')]
     #[Concept('Item')]
     #[Concept('Healing')]
     #[LocalHeroImage('A119.jpg')]
-
     #[ImageCredit('Image by freepik')]
-
     #[FlavorText('Most efficacious in every case.')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

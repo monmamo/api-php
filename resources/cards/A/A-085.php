@@ -3,7 +3,6 @@
 // https://www.freepik.com/free-vector/recycle-colorful-geometric-gradient-logo-vector_27230675.htm
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -13,7 +12,6 @@ return new
 #[Title('Recycle Mana')]
 #[Concept('Draw')]
 #[ImageCredit('Image by logturnal on Freepik')]
-#[FlavorText('FLAVOR_TEXT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

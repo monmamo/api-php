@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\LocalHeroImage;
 use App\Concept;
@@ -13,10 +12,9 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Mana Recycle System')]
 #[Concept('Vendor')]
-#[Concept('Integrity',4)]
+#[Concept('Integrity', 4)]
 #[ImageCredit('Image by logturnal on Freepik')]
 #[LocalHeroImage('A212.jpg')]
-#[FlavorText('FLAVOR_TEXT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -35,5 +33,3 @@ class(__FILE__) implements CardComponents
 HTML;
     }
 };
-
-

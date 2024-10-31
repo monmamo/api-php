@@ -8,16 +8,13 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Offensive Coordinator')]
-
-#[Concept('Bystander')]
-#[Concept('Coach')]
- #[Concept('Male')]
-  #[Concept('Integrity', '1d6')]
-#[IsGeneratedImage]
-
-#[LocalHeroImage('A189.jpg')] // https://www.freepik.com/free-photo/football-trainer-teaching-his-pupils_32248887.htm
-
+    #[Title('Offensive Coordinator')]
+    #[Concept('Bystander')]
+    #[Concept('Coach')]
+    #[Concept('Male')]
+    #[Concept('Integrity', '1d6')]
+    #[IsGeneratedImage]
+    #[LocalHeroImage('A189.jpg')] // https://www.freepik.com/free-photo/football-trainer-teaching-his-pupils_32248887.htm
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

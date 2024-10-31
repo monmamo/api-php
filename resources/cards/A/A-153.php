@@ -4,6 +4,7 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -14,6 +15,7 @@ return new
 #[Concept('Attack')]
 #[IsGeneratedImage]
 #[Prerequisites(lines: 'Requires Pyros.', y: 460)]
+#[LocalHeroImage('hero/fireball.jpeg')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -21,10 +23,11 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(hero/firebreath.jpeg)" />
-<x-card.phaserule type="Resolution" lines="6">
+<x-card.phaserule type="Resolution" lines="3">
 <text>
-<x-card.normalrule>Discard any number of Fire cards attached to this Monster, Does 1d6 for each Fire card discarded.</x-card.normalrule>
+<x-card.normalrule>Discard any number of Fire (A-002) </x-card.normalrule>
+<x-card.normalrule>attached to this Monster. </x-card.normalrule>
+<x-card.normalrule>Does 1d6 for each Fire card discarded.</x-card.normalrule>
     </text>
     </x-card.phaserule>
 HTML;

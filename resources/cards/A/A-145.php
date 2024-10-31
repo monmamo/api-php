@@ -8,11 +8,10 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('First Aid Kit')]
+    #[Title('First Aid Kit')]
     #[Concept('Vendor')]
-    #[ImageCredit(null)]
+    #[ImageCredit('Image by Freepik')]
     #[LocalHeroImage('hero/first-aid-kit.jpg')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

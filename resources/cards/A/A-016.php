@@ -7,13 +7,10 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Large Brain')]
+    #[Title('Large Brain')]
     #[Concept('Trait')]
-
     #[ImageCredit('Image by Lorc on Game-Icons.net')]
-
     // <image x="0" y="0" class="hero" href="AT28" /> pikisuperstar on Freepik   "source": "https://www.freepik.com/free-vector/hand-drawn-brain-cartoon-illustration_53573325.htm"
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

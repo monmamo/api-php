@@ -10,7 +10,6 @@ return new
 #[Title('Tundra')]
 #[ImageCredit('Image by USER_NAME on SERVICE')]
 #[Concept('Place')]
-
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

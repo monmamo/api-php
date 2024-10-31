@@ -8,7 +8,6 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Wood')]
-
 #[Concept('Material')]
 #[ImageCredit('Icon by Delapouite on Game-Icons.net under CC BY 3.0')]
 class(__FILE__) implements CardComponents

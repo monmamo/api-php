@@ -10,21 +10,18 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Pyros Monster L35')]
-
+    #[Title('Red')]
     #[Concept('Monster')]
-#[Concept('Male')]
-#[Concept('DamageCapacity', 65)]
-#[Concept('Level', 35)]
-#[Concept('Size', 18)]
-#[Concept('Speed', 8)]
-#[Concept('Multiplier', 'x3')]
-#[LocalHeroImage('hero/A-M-10.jpeg')]
-
+    #[Concept('Male')]
+    #[Concept('DamageCapacity', 65)]
+    #[Concept('Level', 35)]
+    #[Concept('Size', 18)]
+    #[Concept('Speed', 8)]
+    #[Concept('Multiplier', 'x3')]
+    #[LocalHeroImage('hero/A-M-10.jpeg')]
     #[ImagePrompt('red panda of weird zoology shooting fire from its mouth')]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

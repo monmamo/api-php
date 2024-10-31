@@ -10,22 +10,17 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Creepy Guy in the Alley')]
+#[Concept('Vendor', 'Integrity')]
+#[LocalHeroImage('TODO.png')]
+#[ImageCredit('Image by USER_NAME on SERVICE')]
+#[FlavorText('Psst. I got a great deal for you.')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    #[Concept('Vendor', 'Integrity')]
-
-    #[LocalHeroImage('TODO.png')]
-
-    #[ImageCredit('Image by USER_NAME on SERVICE')]
-
-    #[FlavorText('Psst. I got a great deal for you.')]
-
-    class(__FILE__) implements CardComponents
+    public function content(): \Traversable
     {
-        use DefaultCardAttributes;
-
-        public function content(): \Traversable
-        {
-            yield <<<'HTML'
+        yield <<<'HTML'
 <x-card.phaserule type="Draw" lines="2">
 <text >
 <x-card.normalrule>Draw two cards</x-card.normalrule>
@@ -34,5 +29,5 @@ return new
 </x-card.phaserule>
 
 HTML;
-        }
-    };
+    }
+};

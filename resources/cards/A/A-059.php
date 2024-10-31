@@ -9,11 +9,9 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Dandruff')]
-
-    #[Concept('Bane')]
+#[Concept('Bane')]
 #[IsGeneratedImage]
 #[LocalHeroImage('hero/dandruff.jpeg')]
-
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

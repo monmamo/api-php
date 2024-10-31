@@ -9,9 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Mob Lockdown')]
 #[Concept('Catastrophe')]
-
 #[LocalHeroImage('TODO.png')]
-
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

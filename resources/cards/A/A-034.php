@@ -9,20 +9,16 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Gene Pool')]
-
-    #[Concept('Setup')]
-
+#[Concept('Setup')]
 #[LocalHeroImage('hero/gene-pool.jpg')] // https://www.freepik.com/free-photo/dna-representation-concept_44999157.htm
+#[ImageCredit('Image by freepik')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    #[ImageCredit('Image by freepik')]
-
-    class(__FILE__) implements CardComponents
+    public function content(): \Traversable
     {
-        use DefaultCardAttributes;
-
-        public function content(): \Traversable
-        {
-            yield <<<'HTML'
+        yield <<<'HTML'
 <x-card.phaserule type="Setup" lines="3">
         <text >
 <x-card.normalrule>Attach a Trait card to a Monster</x-card.normalrule>
@@ -31,5 +27,5 @@ return new
     </text>
 </x-card.phaserule>
 HTML;
-        }
-    };
+    }
+};

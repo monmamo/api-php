@@ -1,5 +1,4 @@
 <?php
-
 #[\App\CardAttributes\Prerequisites(lines:'Requires Floros.',y:460)]
 
 return [

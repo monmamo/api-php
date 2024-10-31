@@ -21,13 +21,11 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Draw" lines="3">
-        <text >
+<x-card.cardrule lines="3">
         <x-card.normalrule>Each player puts his hand</x-card.normalrule>
 <x-card.normalrule>on the bottom of his Library, </x-card.normalrule>
 <x-card.normalrule>then draws 7 cards.</x-card.normalrule>
-    </text>
-</x-card.phaserule>
+</x-card.cardrule>
 HTML;
         }
     };

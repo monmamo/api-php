@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -11,7 +10,6 @@ return new
 #[Title('Drinking Water Fountain')]
 #[Concept('TODO')]
 #[IsGeneratedImage]
-#[FlavorText('FLAVOR_TEXT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

@@ -5,12 +5,10 @@ use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\ImagePrompt;
-use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-
     #[CreditColor('#000000')]
     #[FlavorText(lines: 'Because both adulting and monster battling are hard.', color: '#000000')]
     #[ImageCredit('Image by macrovector on Freepik')]

@@ -8,18 +8,15 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Hurricane')]
+#[Concept('Catastrophe')]
+#[FlavorText('Hope your Insurance (A-069) is paid up.')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    #[Concept('Catastrophe')]
-
-    #[FlavorText('Hope your Insurance (A-069) is paid up.')]
-
-    class(__FILE__) implements CardComponents
+    public function content(): \Traversable
     {
-        use DefaultCardAttributes;
-
-        public function content(): \Traversable
-        {
-            yield <<<'HTML'
+        yield <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(hero/hurricane.jpg)" />
     <text y="440" filter="url(#solid)">
     <x-card.smallrule>This card can be played only if Summer </x-card.smallrule>
@@ -35,5 +32,5 @@ return new
         <x-card.normalrule>into the Library.</x-card.normalrule>
     </text>
 HTML;
-        }
-    };
+    }
+};

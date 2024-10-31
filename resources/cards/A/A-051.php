@@ -7,13 +7,10 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Waste Manager')]
-
+    #[Title('Waste Manager')]
     #[Concept('Bystander')]
     #[Concept('Integrity', '6')]
-
     #[ImageCredit('Icon by nangicon from Noun Project')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

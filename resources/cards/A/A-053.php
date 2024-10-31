@@ -8,17 +8,15 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Brutality')]
-
-    #[Concept('Trait')]
+#[Concept('Trait')]
 #[LocalHeroImage('TODO.png')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    class(__FILE__) implements CardComponents
+    public function content(): \Traversable
     {
-        use DefaultCardAttributes;
-
-        public function content(): \Traversable
-        {
-            yield <<<'HTML'
+        yield <<<'HTML'
 <x-card.phaserule type="Resolution" lines="2">
     <text >
 <x-card.normalrule>When this Monster attacks,</x-card.normalrule>
@@ -26,5 +24,5 @@ return new
     </text>
 </x-card.phaserule>
 HTML;
-        }
-    };
+    }
+};

@@ -16,14 +16,13 @@ return new
 #[Prerequisites(y: 490)]
 #[ImageCredit('Image by wirestock on Freepik')]
 #[LocalHeroImage('A064.jpg')] // https://www.freepik.com/free-photo/closeup-shot-beautiful-thompson-s-gazelle_10292458.htm
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    class(__FILE__) implements CardComponents
+    public function content(): \Traversable
     {
-        use DefaultCardAttributes;
-
-        public function content(): \Traversable
-        {
-            yield <<<'HTML'
+        yield <<<'HTML'
     <x-card.phaserule type="Attack" height="140">
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Horn Attack</text>
 <text  y="<?= config('card-design.titlebox.title-height')?>"  height="35">
@@ -31,5 +30,5 @@ return new
 </text>
 </x-card.phaserule>
 HTML;
-        }
-    };
+    }
+};

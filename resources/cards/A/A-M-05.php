@@ -9,19 +9,16 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Energos Monster L30')]
-
+    #[Title('Energos Monster L30')]
     #[Concept('Monster')]
     #[Concept('Female')]
     #[Concept('DamageCapacity', 60)]
-     #[Concept('Level', 30)]
-      #[Concept('Size', 16)]
-       #[Concept('Speed', 10)]
-        #[Concept('Multiplier:x3')]
-
+    #[Concept('Level', 30)]
+    #[Concept('Size', 16)]
+    #[Concept('Speed', 10)]
+    #[Concept('Multiplier:x3')]
     #[IsGeneratedImage]
     #[ImagePrompt('yellow electric rodent monster of weird zoology in a factory')]
-
     #[LocalHeroImage('hero/A-M-05.jpeg')]
     class(__FILE__) implements CardComponents
     {

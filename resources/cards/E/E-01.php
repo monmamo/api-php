@@ -8,7 +8,6 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Plastic')]
-
 #[Concept('Material')]
 #[ImageCredit('Image by USER_NAME on SERVICE')]
 class(__FILE__) implements CardComponents

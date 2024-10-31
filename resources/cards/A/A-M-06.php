@@ -10,21 +10,18 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Enerctigress L40')]
-
+    #[Title('Enerctigress L40')]
     #[Concept('Monster')]
-     #[Concept('Female')]
-      #[Concept('DamageCapacity', 70)]
-       #[Concept('Level', 40)]
-        #[Concept('Size', 20)]
-         #[Concept('Speed', 10)]
-         #[Concept('Multiplier:x3')]
-         #[ImagePrompt('yellow electric tiger monster of weird zoology')]
-
+    #[Concept('Female')]
+    #[Concept('DamageCapacity', 70)]
+    #[Concept('Level', 40)]
+    #[Concept('Size', 20)]
+    #[Concept('Speed', 10)]
+    #[Concept('Multiplier:x3')]
+    #[ImagePrompt('yellow electric tiger monster of weird zoology')]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
     #[LocalHeroImage('hero/A-M-06.png')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

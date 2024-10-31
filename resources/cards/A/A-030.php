@@ -8,13 +8,11 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Ramming')]
-
+    #[Title('Ramming')]
     #[Concept('Trait')]
-#[Concept('Physical')]
+    #[Concept('Physical')]
     #[IsGeneratedImage]
     #[LocalHeroImage('AT32.png')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

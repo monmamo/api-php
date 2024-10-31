@@ -9,16 +9,14 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Defensive Coordinator')]
-
+    #[Title('Defensive Coordinator')]
     #[Concept('Bystander')]
     #[Concept('Coach')]
-     #[Concept('Male')]
-      #[Concept('Integrity', '1d6')]
+    #[Concept('Male')]
+    #[Concept('Integrity', '1d6')]
     #[IsGeneratedImage]
     #[LocalHeroImage('A-055.png')]
     #[Prerequisites(['Limit 1 per player on Battlefield.', 'You must already have a Head Coach on the Battlefield', 'to put this card on the Battlefield.', 'You may choose to make this card Female', 'when you put it on the Battlefield.'])]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

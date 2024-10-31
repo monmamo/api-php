@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -11,7 +10,6 @@ return new
 #[Title('Insurance Policy')]
 #[Concept('Vendor')]
 #[ImageCredit('IMAGE_CREDIT')]
-#[FlavorText('FLAVOR_TEXT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -31,4 +29,3 @@ class(__FILE__) implements CardComponents
 HTML;
     }
 };
-

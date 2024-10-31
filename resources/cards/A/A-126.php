@@ -14,13 +14,11 @@ if (!\defined('PREREQUISITE')) {
 }
 
 return new
-#[Title('Neighborhood &#x201C;Protection&#x201D;')]
-
+    #[Title('Neighborhood &#x201C;Protection&#x201D;')]
     #[Concept('Mobster')]
-     #[Concept('Integrity', '4')]
-#[LocalHeroImage('A186.jpg')]
+    #[Concept('Integrity', '4')]
+    #[LocalHeroImage('A186.jpg')]
     #[ImageCredit('Image by fxquadro on Freepik')]
-
     #[FlavorText(['Nice monster team you got there.', 'Would be a shame if something happened to it.'])]
     #[Prerequisites(y: 525, lines: [PREREQUISITE])]
     class(__FILE__) implements CardComponents

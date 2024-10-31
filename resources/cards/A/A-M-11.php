@@ -10,8 +10,7 @@ use App\GeneralAttributes\Title;
 
 // https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FMonMaMo%2F4vvvGVlDFF.png?alt=media&token=6dddeb26-525f-4803-9565-1dc5086089cf
 return new
-#[Title('Pyros Monster L40')]
-
+    #[Title('Pyros Monster L40')]
     #[Concept('Monster')]
     #[Concept('Female')]
     #[Concept('DamageCapacity', 70)]
@@ -19,11 +18,9 @@ return new
     #[Concept('Size', 20)]
     #[Concept('Speed', 10)]
     #[Concept('Multiplier', 'x3')]
-
     #[LocalHeroImage('hero/A-M-11.png')]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

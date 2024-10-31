@@ -9,8 +9,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Pyrohystrix L45')]
-
+    #[Title('Pyrohystrix L45')]
     #[Concept('Monster')]
     #[Concept('Female')]
     #[Concept('DamageCapacity', 80)]
@@ -19,10 +18,8 @@ return new
     #[Concept('Speed', 8)]
     #[Concept('Multiplier', 'x4')]
     #[LocalHeroImage('hero/A-M-12.jpeg')]
-
     #[IsGeneratedImage]
     #[ImageCredit(null)]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

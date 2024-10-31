@@ -10,16 +10,14 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Lutress L35')]
-
+    #[Title('Lutress L35')]
     #[Concept('Monster')]
-     #[Concept('Female')]
-      #[Concept('DamageCapacity', 80)]
-      #[Concept('Level', 35)]
-       #[Concept('Size', 18)]
-        #[Concept('Speed', 8)]
-        #[Concept('Multiplier:x2')]
-
+    #[Concept('Female')]
+    #[Concept('DamageCapacity', 80)]
+    #[Concept('Level', 35)]
+    #[Concept('Size', 18)]
+    #[Concept('Speed', 8)]
+    #[Concept('Multiplier:x2')]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
     #[ImagePrompt('blue and yellow otter of weird at the edge of the water on a beach')]

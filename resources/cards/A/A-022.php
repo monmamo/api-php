@@ -8,18 +8,15 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Easter Egg')]
+#[Concept('Draw')]
+#[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    #[Concept('Draw')]
-
-    #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
-
-    class(__FILE__) implements CardComponents
+    public function content(): \Traversable
     {
-        use DefaultCardAttributes;
-
-        public function content(): \Traversable
-        {
-            yield <<<'HTML'
+        yield <<<'HTML'
     <defs>
         <filter id="egg-shadow" height="300%" width="300%" x="-100%" y="-100%">
             <feFlood flood-color="rgba(66, 121, 0, 1)" result="flood"></feFlood>
@@ -52,5 +49,5 @@ return new
         </text>
 
 HTML;
-        }
-    };
+    }
+};

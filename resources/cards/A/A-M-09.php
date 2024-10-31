@@ -10,20 +10,18 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Pyrorodent L30')]
-
+    #[Title('Pyrorodent L30')]
     #[Concept('Monster')]
-#[Concept('Male')]
-#[Concept('DamageCapacity', 60)]
-#[Concept('Level', 30)]
-#[Concept('Size', 13)]
-#[Concept('Speed', 17)]
-#[Concept('Multiplier:x2')]
-#[LocalHeroImage('hero/A-M-09.png')]
-#[ImagePrompt('red fire rodent monster of weird zoology next to a caldera')]
+    #[Concept('Male')]
+    #[Concept('DamageCapacity', 60)]
+    #[Concept('Level', 30)]
+    #[Concept('Size', 13)]
+    #[Concept('Speed', 17)]
+    #[Concept('Multiplier:x2')]
+    #[LocalHeroImage('hero/A-M-09.png')]
+    #[ImagePrompt('red fire rodent monster of weird zoology next to a caldera')]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

@@ -7,17 +7,15 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Breeder')]
-
-    #[Concept('Vendor')]
+#[Concept('Vendor')]
 #[Concept('Integrity', '4')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    class(__FILE__) implements CardComponents
+    public function content(): \Traversable
     {
-        use DefaultCardAttributes;
-
-        public function content(): \Traversable
-        {
-            yield <<<'HTML'
+        yield <<<'HTML'
         <x-card.phaserule type="Draw" lines="3">
                 <text >
     <x-card.normalrule>Search your Library for a Monster</x-card.normalrule>
@@ -26,5 +24,5 @@ return new
 </text></x-card.phaserule>
 
 HTML;
-        }
-    };
+    }
+};

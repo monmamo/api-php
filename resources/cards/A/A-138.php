@@ -3,7 +3,6 @@
 // https://www.freepik.com/free-vector/lottery-ticket-concept-illustration_171056284.htm
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -14,7 +13,6 @@ return new
 #[Concept('Vendor')]
 #[Concept('Integrity', 2)]
 #[ImageCredit('Image by storyset on Freepik')]
-#[FlavorText('FLAVOR_TEXT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

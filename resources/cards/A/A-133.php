@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -10,9 +9,8 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Mascot')]
 #[Concept('Bystander')]
-#[Concept('Integrity',2)]
+#[Concept('Integrity', 2)]
 #[ImageCredit('IMAGE_CREDIT')]
-#[FlavorText('FLAVOR_TEXT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

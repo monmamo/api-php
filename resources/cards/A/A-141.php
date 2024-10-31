@@ -9,13 +9,10 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Lottery')]
-
+    #[Title('Lottery')]
     #[Concept('Vendor')]
     #[LocalHeroImage('A146.jpg')] // https://www.freepik.com/free-vector/lottery-ticket-concept-illustration_171056284.htm
-
     #[ImageCredit('Image by storyset on Freepik')]
-
     #[FlavorText("Can't win if you don't play!")]
     class(__FILE__) implements CardComponents
     {

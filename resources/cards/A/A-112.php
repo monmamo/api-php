@@ -11,7 +11,6 @@ return new
 #[Title('Hacker')]
 #[Concept('TODO')]
 #[ImageCredit('IMAGE_CREDIT')]
-#[FlavorText('FLAVOR_TEXT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

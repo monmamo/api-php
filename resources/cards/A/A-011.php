@@ -2,6 +2,7 @@
 
 use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -12,6 +13,7 @@ return new
     #[Concept('Skill')]
     #[ConceptIconHeroImage('Energos')]
     #[Prerequisites(lines: 'Requires Energos.', y: 430)]
+    #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -20,10 +22,10 @@ return new
         {
             yield <<<'HTML'
 <x-card.phaserule type="Resolution" lines="6"><text>
-<x-card.normalrule>Discard all Electricity cards attached</x-card.normalrule>
-    <x-card.normalrule>to this Monster. Each other Monster</x-card.normalrule>
-    <x-card.normalrule>on the Battlefield takes 1d6 damage</x-card.normalrule>
-    <x-card.normalrule>for each Electricity card discarded.</x-card.normalrule>
+<x-card.normalrule>Discard all Electricity (A-003)</x-card.normalrule>
+    <x-card.normalrule>attached to this Monster. Each other</x-card.normalrule>
+    <x-card.normalrule>Monster on the Battlefield takes </x-card.normalrule>
+    <x-card.normalrule>1d6 damage for each Electricity discarded.</x-card.normalrule>
     <x-card.normalrule>Only this Monster may attack until &</x-card.normalrule>
     <x-card.normalrule>through this player’s next turn.</x-card.normalrule>
     </text></x-card.phaserule>

@@ -3,27 +3,25 @@
 // inspiration: Fieldworker PTCG card https://bulbapedia.bulbagarden.net/wiki/Fieldworker_(EX_Legend_Maker_73)
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('TITLE')]
-#[Concept('Bystander')]
-#[Concept('Male')]
-#[Concept('Cumulative')]
- #[Concept('Integrity', '1')]
-#[ImageCredit('Image by Freepik')]
-#[FlavorText('FLAVOR_TEXT')]
-class(__FILE__) implements CardComponents
-{
-    use DefaultCardAttributes;
-
-    public function content(): \Traversable
+    #[Title('TITLE')]
+    #[Concept('Bystander')]
+    #[Concept('Male')]
+    #[Concept('Cumulative')]
+    #[Concept('Integrity', '1')]
+    #[ImageCredit('Image by Freepik')]
+    class(__FILE__) implements CardComponents
     {
-        yield <<<'HTML'
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
     #[\App\CardAttributes\LocalHeroImage('hero/fieldworker.jpg')]
 
         <text y="500" filter="url(#solid)">
@@ -38,5 +36,5 @@ class(__FILE__) implements CardComponents
  </text>
 </x-card.phaserule>
 HTML;
-    }
-};
+        }
+    };

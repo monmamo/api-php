@@ -11,7 +11,7 @@ return new
 #[Title('Masseuse')]
 #[Concept('Bystander')]
 #[Concept('Female')]
-#[Concept('Integrity',2)]
+#[Concept('Integrity', 2)]
 #[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('Touch is the best medicine.')]
 class(__FILE__) implements CardComponents
@@ -36,5 +36,3 @@ class(__FILE__) implements CardComponents
 HTML;
     }
 };
-
-

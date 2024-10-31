@@ -7,9 +7,8 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[ImageCredit('Donut icon by Delapouite on Game-Icons.net under CC BY 3.0')]
-
-#[Title('Baker\'s Dozen')]
+    #[ImageCredit('Donut icon by Delapouite on Game-Icons.net under CC BY 3.0')]
+    #[Title('Baker\'s Dozen')]
     #[Concept('Draw')]
     class(__FILE__) implements CardComponents
     {

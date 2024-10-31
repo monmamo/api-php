@@ -8,13 +8,10 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Busybody')]
-
+    #[Title('Busybody')]
     #[Concept('Draw')]
-
     #[LocalHeroImage('A025.jpeg')]
     #[ImageCredit('Image by Adobe: Stock #58908676')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

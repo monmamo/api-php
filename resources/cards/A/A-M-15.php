@@ -9,20 +9,17 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Good Boy')]
-
-      #[Concept('Monster')]
-      #[Concept('Male')]
-      #[Concept('DamageCapacity', 70)]
-      #[Concept('Level', 38)]
-      #[Concept('Size', 18)]
-      #[Concept('Speed', 10)]
-      #[Concept('Multiplier', 'x3')]
-
-      #[LocalHeroImage('hero/A-M-15.png')]
+    #[Title('Good Boy')]
+    #[Concept('Monster')]
+    #[Concept('Male')]
+    #[Concept('DamageCapacity', 70)]
+    #[Concept('Level', 38)]
+    #[Concept('Size', 18)]
+    #[Concept('Speed', 10)]
+    #[Concept('Multiplier', 'x3')]
+    #[LocalHeroImage('hero/A-M-15.png')]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

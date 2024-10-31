@@ -10,21 +10,17 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Aquomusor L30')]
-
+    #[Title('Aquomusor L30')]
     #[Concept('Monster')]
     #[Concept('Male')]
     #[Concept('DamageCapacity', 70)]
     #[Concept('Level', 30)]
-     #[Concept('Size', 12)]
-     #[Concept('Speed', 20)]
-     #[Concept('Multiplier', 'x2')]
-
-     #[ImagePrompt('blue mouse of weird zoology swimming in a lake')]
-
+    #[Concept('Size', 12)]
+    #[Concept('Speed', 20)]
+    #[Concept('Multiplier', 'x2')]
+    #[ImagePrompt('blue mouse of weird zoology swimming in a lake')]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
-
     #[LocalHeroImage('hero/A-M-01.png')]
     class(__FILE__) implements CardComponents
     {

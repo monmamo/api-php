@@ -10,7 +10,6 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Ice Storm')]
 #[Concept('Catastrophe')]
-
 #[LocalHeroImage('TODO.png')]
 #[Prerequisites(['This card can be played only if Winter is in play.'])]
 class(__FILE__) implements CardComponents

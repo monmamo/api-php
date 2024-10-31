@@ -11,7 +11,7 @@ return new
 #[Title('Merchandizing')]
 #[Concept('Vendor')]
 #[ImageCredit('IMAGE_CREDIT')]
-#[FlavorText(['Where the real money from the concept is made.','- Mel Brooks (paraphrased)'])]
+#[FlavorText(['Where the real money from the concept is made.', '- Mel Brooks (paraphrased)'])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

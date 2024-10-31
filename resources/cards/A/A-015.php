@@ -1,16 +1,15 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
-use App\CardAttributes\LocalHeroImage;
 
 return new
     #[Title('Berserk')]
     #[Concept('Trait')]
     #[LocalHeroImage('TODO.png')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

@@ -5,6 +5,7 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -15,7 +16,8 @@ return new
 #[Concept('Trait')]
 #[IsGeneratedImage]
 #[FlavorText('Halitosis (A-110) is the least of your problems.')]
-#[Prerequisites(lines: 'Requires Pyros.', y: 460)]
+#[Prerequisites(lines: 'Requires Pyros.', y: 340)]
+#[LocalHeroImage('hero/firebreath.jpeg')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -23,15 +25,14 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(hero/firebreath.jpeg)" />
-<x-card.phaserule type="Resolution" lines="6">
+<x-card.phaserule type="Resolution" lines="5">
 <text>
-<x-card.normalrule>When this Monster attacks or defends</x-card.normalrule>
-<x-card.normalrule>and has 1+ Fire Mana cards attached & is </x-card.normalrule>
-<x-card.normalrule>not already consuming Fire Mana,</x-card.normalrule>
-<x-card.normalrule>the defending/attacking Monster takes </x-card.normalrule>
-<x-card.normalrule>1d6-1 damage. If the defending/attacking Monster </x-card.normalrule>
-<x-card.normalrule>takes any damage, discard 1 Fire Mana card from this Monster.</x-card.normalrule>
+<x-card.smallrule>When this Monster attacks or defends</x-card.smallrule>
+<x-card.smallrule>& has 1+ Fire (A-002) attached & is </x-card.smallrule>
+<x-card.smallrule>not already consuming Fire, the defending/</x-card.smallrule>
+<x-card.smallrule>attacking Monster takes 1d6-1 damage. </x-card.smallrule>
+<x-card.smallrule>If the defending/attacking Monster </x-card.smallrule>
+<x-card.smallrule>takes any damage, discard 1 Fire from this Monster.</x-card.smallrule>
     </text>
     </x-card.phaserule>
 HTML;

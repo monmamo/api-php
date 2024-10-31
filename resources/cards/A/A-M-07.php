@@ -10,8 +10,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Energos Monster L35')]
-
+    #[Title('Energos Monster L35')]
     #[Concept('Monster')]
     #[Concept('Male')]
     #[Concept('DamageCapacity', 65)]
@@ -19,12 +18,10 @@ return new
     #[Concept('Size', 12)]
     #[Concept('Speed', 18)]
     #[Concept('Multiplier:x2')]
-
     #[IsGeneratedImage]
     #[ImageCredit(null)]
     #[LocalHeroImage('hero/A-M-07.png')]
     #[ImagePrompt('yellow electric dog monster of weird zoology in a factory')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

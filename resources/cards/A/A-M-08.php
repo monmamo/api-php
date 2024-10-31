@@ -9,8 +9,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Energcanor L45')]
-
+    #[Title('Energcanor L45')]
     #[Concept('Monster')]
     #[Concept('Male')]
     #[Concept('DamageCapacity', 80)]
@@ -18,11 +17,9 @@ return new
     #[Concept('Size', 22)]
     #[Concept('Speed', 8)]
     #[Concept('Multiplier:x3')]
-
     #[IsGeneratedImage]
     #[ImageCredit(null)]
     #[LocalHeroImage('hero/A-M-08.png')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

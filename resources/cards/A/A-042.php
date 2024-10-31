@@ -10,15 +10,11 @@ use App\GeneralAttributes\Title;
 
 // inspiration Copycat PTCG card https://bulbapedia.bulbagarden.net/wiki/Copycat_(Raichu_Half_Deck_21)
 return new
-#[Title('Copycat')]
-
+    #[Title('Copycat')]
     #[Concept('Draw')]
-
     #[LocalHeroImage('TODO.png')]
     #[ImageCredit(null)]
-
     #[FlavorText('Bears a striking resemblance to Frank Abagnale.')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

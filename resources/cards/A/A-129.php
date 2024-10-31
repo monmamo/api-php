@@ -13,7 +13,6 @@ return new
     #[LocalHeroImage('TODO.png')]
     // #[\App\CardAttributes\ImageCredit('Image by USER_NAME on SERVICE')]
     #[FlavorText('Also called "airport security."')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

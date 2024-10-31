@@ -8,14 +8,11 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Biolure')]
-
+    #[Title('Biolure')]
     #[Concept('Trait')]
     #[Concept('Lure')]
-
-#[Prerequisites(y: 400)]
+    #[Prerequisites(y: 400)]
     #[LocalHeroImage('TODO.png')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

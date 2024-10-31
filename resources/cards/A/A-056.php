@@ -8,18 +8,15 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Slow Start')]
-
-    #[Concept('Trait')]
-
+#[Concept('Trait')]
 #[Prerequisites(y: 400)]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    class(__FILE__) implements CardComponents
+    public function content(): \Traversable
     {
-        use DefaultCardAttributes;
-
-        public function content(): \Traversable
-        {
-            yield <<<'HTML'
+        yield <<<'HTML'
 <text y="500" filter="url(#solid)">
 <x-card.smallrule>This card can be attached to a Monster only during the Setup Phase.</x-card.smallrule>
 <x-card.normalrule>During the first round of turns, </x-card.normalrule>
@@ -29,5 +26,5 @@ return new
 <x-card.normalrule>and Attacks do 2 additional damage.</x-card.normalrule>
 </text>
 HTML;
-        }
-    };
+    }
+};

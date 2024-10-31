@@ -14,7 +14,6 @@ return new
 #[FlavorText([])]
 #[LocalHeroImage('TODO.png')]
 #[Prerequisites(['Requires Pyros and Tail.'])]
-
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

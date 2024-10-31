@@ -11,7 +11,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Idiot Agents')]
 #[Concept('Vendor')]
-#[Concept('Integrity',1)]
+#[Concept('Integrity', 1)]
 #[ImageCredit('Celebrity likenesses impersonated.')]
 #[FlavorText('The less we hear from them, the better they are serving us.')]
 #[LocalHeroImage('A128.png')]
@@ -30,4 +30,3 @@ class(__FILE__) implements CardComponents
 HTML;
     }
 };
-

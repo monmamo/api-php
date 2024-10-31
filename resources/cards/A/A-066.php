@@ -2,7 +2,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -12,7 +11,6 @@ return new
 #[Title('Cruel Order')]
 #[Concept('Catastrophe')]
 #[ImageCredit('Generated with StarryAI. Placeholder image.')]
-#[FlavorText('FLAVOR_TEXT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

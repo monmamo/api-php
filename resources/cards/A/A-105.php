@@ -11,14 +11,13 @@ use App\GeneralAttributes\Title;
 // https://www.shutterstock.com/image-photo/3d-rendering-tranquilizer-dart-on-white-169987271
 
 return new
-#[Title('Tranquilizer Dart')]
-#[Concept('Bane')]
-#[Concept('Item')]
-#[Concept('Weapon')]
+    #[Title('Tranquilizer Dart')]
+    #[Concept('Bane')]
+    #[Concept('Item')]
+    #[Concept('Weapon')]
     #[ImageCredit('Shutterstock #169987271 by Inked Pixels')]
     #[LocalHeroImage('hero/tranquilizer-dart.jpg')]
     #[FlavorText('Ouuuuuch……')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

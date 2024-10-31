@@ -8,11 +8,10 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Unknown Allergen')]
+    #[Title('Unknown Allergen')]
     #[Concept('Bane')]
     #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
     #[FlavorText('Get the tissues.')]
-
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
