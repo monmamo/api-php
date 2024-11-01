@@ -9,20 +9,20 @@
         <div class="row">
         <div class="card col-3">
                 <div class="card-body">
-                    <h5 class="card-title">Rou-Ga-Con</h5>
-                    <p class="card-text">Convention<br />October 19<br />Houma, LA<br>Rougarou Festival</p>
-                </div>
-            </div>
-        <div class="card col-3">
-                <div class="card-body">
                     <h5 class="card-title"><a href="https://www.facebook.com/events/1296252661750899">Little Wars Faire</h5>
                     <p class="card-text">Convention<br />November 2<br />Baton Rouge, LA<br>Little Wars</p>
                 </div>
             </div>
             <div class="card col-3">
                 <div class="card-body">
+                    <h5 class="card-title"><a href="https://ebrpl.libguides.com/games/gameon">Game On! @ the Library</a></h5>
+                    <p class="card-text">Gaming Event<br />November 16<br />Baton Rouge, LA<br>EBRPL Main Branch</p>
+                </div>
+            </div>
+            <div class="card col-3">
+                <div class="card-body">
                     <h5 class="card-title"><a href="https://www.sttammanycollectorscon.com/">St. Tammany Collectors Con</a></h5>
-                    <p class="card-text">Convention<br />November 16-17<br />Mandeville, LA<br>Castine Center</p>
+                    <p class="card-text">Convention<br />November 17<br />Mandeville, LA<br>Castine Center</p>
                 </div>
             </div>
         </div>
@@ -68,6 +68,13 @@
                     <h5 class="card-title">Louisiana Comic Con</h5>
                     <p class="card-text">Convention<br />March 9<br />
                         Lafayette, LA<br />Cajundome Convention Center</p>
+                </div>
+            </div>
+            <div class="card col-3">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://www.southerngamefest.com/">Southern Board Game Fest</a></h5>
+                    <p class="card-text">Gaming Festival<br />March 29-30<br />
+                        Lafayette, LA<br />Downtown Convention Center</p>
                 </div>
             </div>
             <div class="card col-3">

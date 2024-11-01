@@ -6,7 +6,6 @@
                         <x-application-mark height="150" />
                     </a>
                     <ul class="list-unstyled small">
-                        <li>Monsters Masters &amp; Mobsters L.L.C.</li>
                         <li>Ponchatoula, Louisiana, U.S.A.</li>
                         <li class="mt-2"><a href="/people">People</a> &bull; <a href="/contact">Contact</a> <!--&bull; <a href="/credits">Credits</a --></li>
                     </ul>
