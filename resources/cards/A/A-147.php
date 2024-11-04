@@ -7,7 +7,7 @@ return new
     #[\App\GeneralAttributes\Title('Orchard')]
     #[\App\Concept('Place')]
     #[\App\CardAttributes\ImageCredit('Image elements by Delapouite and Lorc on Game-icons.net')]
-    class implements \App\Contracts\Card\CardComponents {
+    class(__FILE__) implements \App\Contracts\Card\CardComponents {
         use \App\CardAttributes\DefaultCardAttributes;
         public function content(): \Traversable
         {

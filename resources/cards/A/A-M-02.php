@@ -37,7 +37,7 @@ return new
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Roll Away</text>
 <text  y="<?= config('card-design.titlebox.title-height')?>" height="70">
 <x-card.normalrule>Prevent 12 damage plus</x-card.normalrule>
-<x-card.normalrule>1d6 damage for each Water Mana attached.</x-card.normalrule>
+<x-card.normalrule>1d6 damage for each Water (A-001) attached.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 

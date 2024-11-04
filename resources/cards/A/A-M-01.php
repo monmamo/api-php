@@ -37,7 +37,7 @@ return new
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" fill="black" text-anchor="middle" class="cardname" alignment-baseline="middle">Slippery When Wet</text>
 <text  y="<?= config('card-design.titlebox.title-height')?>"  height="70" fill="black">
 <x-card.normalrule>Takes no damage from Physical</x-card.normalrule>
-<x-card.normalrule>attacks when 1+ Water Mana attached.</x-card.normalrule>
+<x-card.normalrule>attacks when 1+ Water (A-001) attached.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 

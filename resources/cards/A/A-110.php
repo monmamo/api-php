@@ -31,7 +31,7 @@ return new
   <text >
 <x-card.normalrule>When a Monster on this</x-card.normalrule>
 <x-card.normalrule>Monster’s team attacks or defends,</x-card.normalrule>
-<x-card.normalrule>reduce the damage done/prevented by 2d6.</x-card.normalrule>
+<x-card.normalrule>reduce the damage done/prevented by 1d4.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;

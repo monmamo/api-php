@@ -34,8 +34,8 @@ return new
 <x-card.phaserule type="Skill" height="245">
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Saliva Spray</text>
 <text  y="<?= config('card-design.titlebox.title-height')?>" height="140">
-<x-card.normalrule>Discard 1+ Water Mana from this Monster.</x-card.normalrule>
-<x-card.normalrule>For each Water Mana discarded, roll 1d6.</x-card.normalrule>
+<x-card.normalrule>Discard 1+ Water (A-001) from this Monster.</x-card.normalrule>
+<x-card.normalrule>For each Water (A-001) discarded, roll 1d6.</x-card.normalrule>
 <x-card.normalrule>Attack does that much less damage,</x-card.normalrule>
 <x-card.normalrule>& that Monster takes that damage instead.</x-card.normalrule>
 </text>

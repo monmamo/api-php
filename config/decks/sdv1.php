@@ -37,7 +37,7 @@ return [
         'A-100' => 3, // Full Heal
         'A-105' => 2, // Tranquilizer Dart
         'A-108' => 2, // Grab Bag
-        'A-110' => 1, // Personal Shopper
+        'A-110' => 1, // Halitosis
         'A-118' => 2, // Head Coach
         'A-119' => 3, // Medicinal Compound
         'A-120' => 3, // Healing Salve

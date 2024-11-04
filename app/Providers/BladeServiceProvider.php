@@ -34,6 +34,8 @@ class BladeServiceProvider extends ServiceProvider
             );
         };
 
+        yield 'damage' => fn () => '&#x2764;';
+
         yield 'ai' => fn () => 'Generated image';
     }
 

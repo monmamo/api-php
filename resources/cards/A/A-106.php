@@ -8,8 +8,8 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Reconnaissance Team')]
-#[Concept('TODO')]
-#[ImageCredit('IMAGE_CREDIT')]
+#[Concept('Draw')]
+//#[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -17,15 +17,12 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <text y="500" filter="url(#solid)">TODO</text>
+<x-card.cardrule  height="130">
+<x-card.normalrule>Discard up to 2 Monster cards</x-card.normalrule>
+<x-card.normalrule>from your hand. Draw 3 cards for</x-card.normalrule>
+<x-card.normalrule>each card you discarded in this way.</x-card.normalrule>
+</x-card.cardrule>
 HTML;
     }
 };
 
-//   <x-card.phaserule type="Draw"  height="130">
-//     <text >
-// <x-card.normalrule>Discard up to 2 Monster cards</x-card.normalrule>
-// <x-card.normalrule>from your hand. Draw 3 cards for</x-card.normalrule>
-// <x-card.normalrule>each card you discarded in this way.</x-card.normalrule>
-// </text>
-// </x-card.phaserule>

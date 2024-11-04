@@ -3,6 +3,7 @@
 use App\Card\BasicElementalManaCard;
 
 return new BasicElementalManaCard(
+    path: __FILE__,
     viewBox: '35 10 30 95',
     title: 'Smoke',
     imageCredit: 'Icon by Fran Couto from Noun Project',

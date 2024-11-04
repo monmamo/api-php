@@ -31,21 +31,17 @@ HTML;
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <text y="500" filter="url(#solid)">TODO</text>
+             <x-card.phaserule type="Resolution"  lines="6">
+                 <text >
+                 <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
+ <x-card.normalrule>Roll 1d6. @dieroll(1,2) Discard this card.</x-card.normalrule>
+ <x-card.normalrule>@dieroll(3) Each other Monster takes 1 damage.</x-card.normalrule>
+ <x-card.normalrule>@dieroll(4) Each other Monster takes 2 damage.</x-card.normalrule>
+ <x-card.normalrule>@dieroll(5) Each other Monster takes 3 damage.</x-card.normalrule>
+ <x-card.normalrule>@dieroll(6) Each other Monster takes 4 damage.</x-card.normalrule>
+         </text>
+    </x-card.phaserule>
 HTML;
     }
 };
 
-//         <text y="500" filter="url(#solid)">
-//                 <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
-//                 </text >
-
-//             <x-card.phaserule type="Resolution" y="185" height="130">
-//                 <text >
-// <x-card.normalrule>Roll 1d6.</x-card.normalrule>
-// <x-card.normalrule>@dieroll(1,2) Discard this card.</x-card.normalrule>
-// <x-card.normalrule>@dieroll(3) Each other Monster takes 1 damage.</x-card.normalrule>
-// <x-card.normalrule>@dieroll(4) Each other Monster takes 2 damage.</x-card.normalrule>
-// <x-card.normalrule>@dieroll(5) Each other Monster takes 3 damage.</x-card.normalrule>
-// <x-card.normalrule>@dieroll(6) Each other Monster takes 4 damage.</x-card.normalrule>
-//         </text>

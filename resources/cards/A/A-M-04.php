@@ -36,8 +36,8 @@ return new
 <x-card.phaserule type="Attack" height="210">
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Water Jet</text>
 <text  y="<?= config('card-design.titlebox.title-height')?>" height="105">
-<x-card.normalrule>Discard 1+ Water Mana from this Monster.</x-card.normalrule>
-<x-card.normalrule>For each Water Mana discarded,</x-card.normalrule>
+<x-card.normalrule>Discard 1+ Water (A-001) from this Monster.</x-card.normalrule>
+<x-card.normalrule>For each Water (A-001) discarded,</x-card.normalrule>
 <x-card.normalrule>does 10 damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>

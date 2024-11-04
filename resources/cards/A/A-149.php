@@ -6,7 +6,7 @@ return new
     #[\App\GeneralAttributes\Title('Malevolence')]
     #[\App\Concept('Trait')]
     #[\App\CardAttributes\ImageCredit('Icon by vecon from the Noun Project')]
-    class implements \App\Contracts\Card\CardComponents {
+    class(__FILE__) implements \App\Contracts\Card\CardComponents {
         use \App\CardAttributes\DefaultCardAttributes;
         public function content(): \Traversable
         {

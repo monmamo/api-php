@@ -20,6 +20,7 @@ class BasicElementalManaCard implements CardComponents
         public $svg,
         public readonly string $title,
         public readonly string $imageCredit,
+        public readonly string $viewBox = '0 0 512 512',
     ) {
         $this->construct($path);
     }
@@ -40,7 +41,7 @@ class BasicElementalManaCard implements CardComponents
                 'y' => \config('card-design.viewbox.y'),
                 'height' => $height,
                 'width' => $width,
-                'viewBox' => '0 0 512 512',
+                'viewBox' => $this->viewBox,
             ],
         );
     }

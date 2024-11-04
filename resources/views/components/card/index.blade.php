@@ -27,9 +27,7 @@ $id = function (string $suffix) use ($cardNumber) {
     <title><?= $cardName ?></title>
 
     @unless($omitCommon)
-    @once
     <x-card.common :specs="[$spec]"/>
-    @endonce
     @endunless
 
 
