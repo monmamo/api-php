@@ -2,8 +2,6 @@
 
 <h2>Examples of Mobster Cards</h2>
 
-<x-card-image cardNumber="A-118" size="125" />
-
 <x-card-image cardNumber="A-007" size="125" />
 <x-card-image cardNumber="A-036" size="125" />
 <x-card-image cardNumber="A-045" size="125" />
