@@ -11,7 +11,6 @@ use App\Taxons\Attributes\MasculineMonsterName;
 use App\Taxons\Attributes\NeuterName;
 
 // [[size morphotype]]
-
 #[NeuterName('Megon')]
 #[MasculineAnthropeName('Megander')]
 #[MasculineMonsterName('Megor')]

@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -12,7 +11,6 @@ return new
     #[Concept('Trait')]
     #[Concept('Lure')]
     #[Prerequisites(y: 400)]
-    #[LocalHeroImage('TODO.png')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

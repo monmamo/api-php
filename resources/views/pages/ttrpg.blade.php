@@ -17,9 +17,7 @@ Create the fundamental rules and systems that will drive gameplay:
 - Combat and conflict resolution  
 - Magic/special abilities (if applicable)
 
-Focus on mechanics that reinforce your core concept and desired player experience. Keep things simple at first - you can always add complexity later.
-
-## Design Character Options
+Focus on mechanics that reinforce your core concept and desired player experience. Keep things simple at first - you can always add complexity later.## Design Character Options
 
 Develop the choices players will have for creating their characters:
 
@@ -28,9 +26,7 @@ Develop the choices players will have for creating their characters:
 - Equipment and resources
 - Character advancement
 
-Ensure options are balanced and support diverse playstyles.
-
-## Create the Setting
+Ensure options are balanced and support diverse playstyles.## Create the Setting
 
 Flesh out the world your game takes place in:
 
@@ -39,21 +35,13 @@ Flesh out the world your game takes place in:
 - History and lore
 - Creatures and antagonists
 
-Provide enough detail to inspire players and GMs, while leaving room for customization.
+Provide enough detail to inspire players and GMs, while leaving room for customization.## Write the Rules
 
-## Write the Rules
+Compile all your mechanics, character options, setting information, and gameplay procedures into a comprehensive rulebook. Focus on clarity, organization, and ease of reference during play.## Playtest Extensively  
 
-Compile all your mechanics, character options, setting information, and gameplay procedures into a comprehensive rulebook. Focus on clarity, organization, and ease of reference during play.
+Run multiple playtests with different groups to identify issues and refine the gameplay experience. Be open to feedback and willing to make major changes if needed[1][2].## Design Layout and Art
 
-## Playtest Extensively  
-
-Run multiple playtests with different groups to identify issues and refine the gameplay experience. Be open to feedback and willing to make major changes if needed[1][2].
-
-## Design Layout and Art
-
-Create an appealing visual presentation for your game materials. Consider commissioning artwork to bring your world to life[3].
-
-## Publish and Distribute
+Create an appealing visual presentation for your game materials. Consider commissioning artwork to bring your world to life[3].## Publish and Distribute
 
 Decide how you want to release your game - print, PDF, or both. Look into print-on-demand services or crowdfunding to cover production costs[3].
 

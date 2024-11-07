@@ -12,7 +12,7 @@ use App\GeneralAttributes\Requires;
 
 // Neither requires nor excludes [[Erect Posture]] and [[Prone Posture]].
 
-#[Gloss('Ability to crouch.')]
+#[\App\GeneralAttributes\Gloss('Ability to crouch.')]
 #[Requires(Limberness::class)]
 final class Crouching implements Feature
 {

@@ -11,7 +11,6 @@ use App\Taxons\Attributes\MasculineMonsterName;
 use App\Taxons\Attributes\NeuterName;
 
 // [[genus]]
-
 // Not to be confused with [[Faunos]].
 
 #[Gloss('Goat-forms with horns, a tail and hooves')]

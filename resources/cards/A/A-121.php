@@ -12,7 +12,7 @@ return new
 #[Concept('Vendor')]
 #[Concept('Integrity', 4)]
 #[ImageCredit('Icon by archer7 from Noun Project')]
-#[Prerequisites(y:425)]
+#[Prerequisites(y: 425)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -38,6 +38,5 @@ class(__FILE__) implements CardComponents
              </text>
          </x-card.phaserule>
 HTML;
-}
+    }
 };
-

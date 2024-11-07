@@ -15,7 +15,6 @@ use App\Taxons\Attributes\NeuterName;
 
 // image generation prompt:: foxlike, foxform
 // requires: [[Fur]], [[Long Tail]]
-
 #[NeuterName('Alopecon')]
 #[MasculineAnthropeName('Alopecander')]
 #[MasculineMonsterName('Alopecor')]

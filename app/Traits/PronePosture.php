@@ -8,9 +8,9 @@ use App\Taxons\Pronos;
 
 // variables:: Length
 
-#[Requires(Pronos::class)]
 // Excludes [[Erect Posture]].
 
+#[Requires(Pronos::class)]
 final class PronePosture implements Feature
 {
     public static function sizeDelta(): float

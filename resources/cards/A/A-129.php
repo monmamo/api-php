@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -10,8 +9,6 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Inappropriate Traffic Stop')]
     #[Concept('Draw')]
-    #[LocalHeroImage('TODO.png')]
-    // #[\App\CardAttributes\ImageCredit('Image by USER_NAME on SERVICE')]
     #[FlavorText('Also called "airport security."')]
     class(__FILE__) implements CardComponents
     {

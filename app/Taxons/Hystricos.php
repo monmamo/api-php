@@ -10,7 +10,6 @@ use App\Taxons\Attributes\MasculineMonsterName;
 use App\Taxons\Attributes\NeuterName;
 
 // [[genus]] of phylum [[Rodentos]] with [[Quilos]]
-
 #[NeuterName('Hystricon')]
 #[MasculineAnthropeName('Hystricander')]
 #[MasculineMonsterName('Hystricor')]

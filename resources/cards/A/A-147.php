@@ -1,14 +1,22 @@
 <?php
 
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
+
 // https://game-icons.net/1x1/lorc/shiny-apple.html
 // https://game-icons.net/1x1/delapouite/fruit-tree.html
 
 return new
-    #[\App\GeneralAttributes\Title('Orchard')]
-    #[\App\Concept('Place')]
-    #[\App\CardAttributes\ImageCredit('Image elements by Delapouite and Lorc on Game-icons.net')]
-    class(__FILE__) implements \App\Contracts\Card\CardComponents {
-        use \App\CardAttributes\DefaultCardAttributes;
+    #[Title('Orchard')]
+    #[Concept('Place')]
+    #[ImageCredit('Image elements by Delapouite and Lorc on Game-icons.net')]
+    class(__FILE__) implements CardComponents
+    {
+        use DefaultCardAttributes;
+
         public function content(): \Traversable
         {
             yield <<<'HTML'

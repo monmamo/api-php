@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -11,7 +10,6 @@ return new
 #[Title('Chest Thrust')]
 #[Concept('Attack')]
 #[FlavorText(['Punch to the torso.'])]
-#[LocalHeroImage('TODO.png')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

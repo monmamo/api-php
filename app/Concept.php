@@ -126,7 +126,11 @@ class Concept implements HasIcon, Renderable
      */
     public function icon(): Renderable
     {
-        return \view($this->type . '.icon');
+        try {
+            return \view($this->type . '.icon');
+        } catch (\Throwable $e) {
+            return \App\Strings\html('div', '[' . $e->getMessage() . ']');
+        }
     }
 
     /**

@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -13,10 +12,7 @@ return new
 #[Title('Canned Monster Food')]
 #[Concept('Item')]
 #[Concept('Food')]
-#[ImageCredit('')]
 #[FlavorText(['Meaty chunks in a thick, savory gravy.'])]
-#[LocalHeroImage('TODO.png')]
-#[Prerequisites([])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

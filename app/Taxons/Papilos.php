@@ -12,17 +12,13 @@ use App\Taxons\Attributes\NeuterName;
 
 // [[morphotype]] [[winged morphotype]]
 
-// Rarity::
+
 
 // automatic features:: [[Butterfly Wings]]
 #[Gloss('Butterfly-form.')]
-
 #[NeuterName('Papilon')]
-
 #[MasculineMonsterName('Papilor')]
-
 #[FeminineMonsterName('Papiless')]
-
 #[NeuterName('Papilon')]
 #[MasculineAnthropeName('Papilander')]
 #[MasculineMonsterName('Papilor')]

@@ -3,17 +3,12 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Fortress')]
-#[ImageCredit('')]
-#[FlavorText([])]
-#[LocalHeroImage('TODO.png')]
-#[Prerequisites([])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

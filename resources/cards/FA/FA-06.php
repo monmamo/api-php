@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -12,9 +11,6 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('First Aid Tax')]
 #[Concept('Upkeep')]
-#[ImageCredit('')]
-#[FlavorText([])]
-#[LocalHeroImage('TODO.png')]
 #[Prerequisites(['You may play this card only if a First Aid card is in play.'])]
 class(__FILE__) implements CardComponents
 {

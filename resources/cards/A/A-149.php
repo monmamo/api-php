@@ -1,13 +1,21 @@
 <?php
 
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
+
 // https://thenounproject.com/icon/smiley-2896096/
 
 return new
-    #[\App\GeneralAttributes\Title('Malevolence')]
-    #[\App\Concept('Trait')]
-    #[\App\CardAttributes\ImageCredit('Icon by vecon from the Noun Project')]
-    class(__FILE__) implements \App\Contracts\Card\CardComponents {
-        use \App\CardAttributes\DefaultCardAttributes;
+    #[Title('Malevolence')]
+    #[Concept('Trait')]
+    #[ImageCredit('Icon by vecon from the Noun Project')]
+    class(__FILE__) implements CardComponents
+    {
+        use DefaultCardAttributes;
+
         public function content(): \Traversable
         {
             yield <<<'HTML'

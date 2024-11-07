@@ -12,9 +12,9 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Hacker')]
 #[Concept('Mobster')]
-#[Concept('Integrity',8)]
+#[Concept('Integrity', 8)]
 #[ImageCredit('Icon by Designing Hub from Noun Project')]
-#[FlavorText(lines:['Hacking is getting other people to do strange things.', '- Steve Wozniak'])]
+#[FlavorText(lines: ['Hacking is getting other people to do strange things.', '- Steve Wozniak'])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

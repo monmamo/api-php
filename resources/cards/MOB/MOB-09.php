@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageCredit;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -14,7 +13,6 @@ return new
 #[Concept('Cumulative')]
 #[Concept('Integrity', '2')]
 #[Prerequisites('Can replace any Bystander Cheerleader (A-032).')]
-#[ImageCredit('Image by USER_NAME on SERVICE')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

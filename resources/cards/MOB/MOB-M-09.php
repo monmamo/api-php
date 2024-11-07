@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -19,7 +18,6 @@ return new
 #[Concept('Multiplier', 'x3')]
 #[ImageCredit('')]
 #[FlavorText([])]
-#[LocalHeroImage('TODO.png')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

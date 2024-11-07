@@ -14,7 +14,7 @@ use App\GeneralAttributes\Gloss;
 // Discard one Grass mana attached to this Monster
 // Digging Gloves https://bulbapedia.bulbagarden.net/wiki/Digging_Gloves_(Evolving_Skies_145)
 // playable card type:: [[Glove]]
-// The attacks of the Pokémon this card is attached to do 30 more damage to your opponent's Active [[Fighting]] Pokémon _(before applying Weakness and Resistance)_.
+
 
 #[Gloss('A Durable item that can be worn only on a Monster\'s anterior extremities.')]
 class Glove implements Item {}

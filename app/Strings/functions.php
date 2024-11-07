@@ -696,8 +696,13 @@ function render(...$pieces): string
 function html(...$pieces): Htmlable
 {
     if (\count($pieces) === 0) {
-        return new class() implements Htmlable
+        return new class() implements Htmlable, Renderable
         {
+            public function render(): string
+            {
+                return '';
+            }
+
             public function toHtml(): string
             {
                 return '';
@@ -710,7 +715,7 @@ function html(...$pieces): Htmlable
     }
 
     if (\count($pieces) === 1 && $pieces[0] instanceof Renderable) {
-        return new class($pieces[0]) implements Htmlable
+        return new class($pieces[0]) implements Htmlable, Renderable
         {
             /**
              * Constructor.
@@ -726,6 +731,11 @@ function html(...$pieces): Htmlable
             public function __construct(
                 protected Renderable $renderable,
             ) {}
+
+            public function render(): string
+            {
+                return $this->renderable->render();
+            }
 
             public function toHtml(): string
             {
@@ -755,7 +765,7 @@ function html(...$pieces): Htmlable
     }
 
     if (\count($content) === 0) {
-        return new class($pieces[0], $attributes) implements Htmlable
+        return new class($pieces[0], $attributes) implements Htmlable, Renderable
         {
             /**
              * Constructor.
@@ -773,6 +783,11 @@ function html(...$pieces): Htmlable
                 public array $attributes,
             ) {}
 
+            public function render(): string
+            {
+                return $this->toHtml();
+            }
+
             public function toHtml(): string
             {
                 return \sprintf('<%s %s />', $this->tag, new ComponentAttributeBag($this->attributes));
@@ -780,7 +795,7 @@ function html(...$pieces): Htmlable
         };
     }
 
-    return new class($pieces[0], $attributes, $content) implements Htmlable
+    return new class($pieces[0], $attributes, $content) implements Htmlable, Renderable
     {
         /**
          * Constructor.
@@ -798,6 +813,11 @@ function html(...$pieces): Htmlable
             public array $attributes,
             public array $content,
         ) {}
+
+        public function render(): string
+        {
+            return $this->toHtml();
+        }
 
         public function toHtml(): string
         {

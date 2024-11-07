@@ -8,7 +8,6 @@ use App\GeneralAttributes\Gloss;
 // Rarity:: {{calc: ((uuUwRY2_d))}} x [[]] x 3
 
 #[Gloss('[[Species]] of genus [[]] with [[Demonos]] form.')]
-
 class Lamis extends Hominos
 {
     public static function rarity(): float

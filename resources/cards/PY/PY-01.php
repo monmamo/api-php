@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -15,7 +14,6 @@ return new
 #[Concept('Attack')]
 #[ImageCredit('')]
 #[FlavorText([])]
-#[LocalHeroImage('TODO.png')]
 #[Prerequisites(['The Monster using this skill must have at least one Fire card attached.'])]
 class(__FILE__) implements CardComponents
 {

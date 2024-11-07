@@ -12,7 +12,6 @@ use App\Taxons\Attributes\NeuterName;
 // morphotype:: Dragon form. Subtaxon of  [[Erectos]]
 
 // image generation prompt:: [[needs representative image]]
-
 #[NeuterName('Dracon')]
 #[MasculineAnthropeName('Dracander')]
 #[MasculineMonsterName('Dracor')]

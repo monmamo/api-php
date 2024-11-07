@@ -15,7 +15,7 @@ use App\Taxons\Attributes\NeuterName;
 
 // Color: Yellow-Green
 
-// Poisons.
+
 
 #[NeuterName('Venenon')]
 #[MasculineAnthropeName('Venenander')]

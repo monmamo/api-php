@@ -8,9 +8,8 @@ use App\Taxons\Attributes\FeminineMonsterName;
 use App\Taxons\Attributes\MasculineAnthropeName;
 use App\Taxons\Attributes\MasculineMonsterName;
 use App\Taxons\Attributes\NeuterName;
-
+// [[Power]]. Sound.
 // Sound.
-
 #[NeuterName('Sonon')]
 #[MasculineAnthropeName('Sonander')]
 #[MasculineMonsterName('Sonor')]
@@ -20,7 +19,7 @@ class Sonos implements Taxon
 {
     public static function rarity(): float
     {
-        return 0; //TODO
+        return 70000; //TODO
     }
 
     public static function sizeDelta(): float
@@ -28,16 +27,3 @@ class Sonos implements Taxon
         return 0;
     }
 }
-
-// ,,,,
-// Alternates:
-// Masculine:
-// Sonor
-// Sonander
-// Feminine:
-// Soness
-// Sonquin
-// Attributes:
-
-// [[Power]]. Sound.
-// rarity: 700000

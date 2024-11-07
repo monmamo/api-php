@@ -11,6 +11,7 @@ use App\Taxons\Attributes\NeuterName;
 
 // genus:: Deer-forms.
 // supertaxons:: [[Ungulos]]
+// size delta:: [[Ungulos]]
 
 #[NeuterName('Cervon')]
 #[MasculineAnthropeName('Cervander')]
@@ -29,13 +30,3 @@ class Cervos extends Ungulos implements Taxon
         return 0;
     }
 }
-
-// Alternates:
-// Masculine:
-// Cervor
-// Feminine:
-// Cervess
-// Attributes:
-
-// Rarity:: [[]]
-// size delta:: [[Ungulos]]

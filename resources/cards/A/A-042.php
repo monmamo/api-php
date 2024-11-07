@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -12,7 +11,6 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Copycat')]
     #[Concept('Draw')]
-    #[LocalHeroImage('TODO.png')]
     #[ImageCredit(null)]
     #[FlavorText('Bears a striking resemblance to Frank Abagnale.')]
     class(__FILE__) implements CardComponents

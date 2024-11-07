@@ -10,12 +10,9 @@ use App\Taxons\Attributes\NeuterName;
 
 // A fox-like body style characterized by large ears.
 // Compare [[Vulpos]], [[Alopecos]].
-
 // image generation prompt:: foxlike, foxform
-
-// Rarity::
 // requires: [[Fur]], [[Long Tail]]
-// size delta:: [[]] + 1
+
 
 #[NeuterName('Fanacon')]
 #[MasculineAnthropeName('Fanacander')]

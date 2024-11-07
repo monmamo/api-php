@@ -27,9 +27,13 @@ class LocalHeroImage implements Renderable
      */
     public function render()
     {
-        return \App\Strings\html(
-            'image',
-            ['x' => 0, 'y' => 0, 'class' => 'hero', 'href' => \App\Card\localHeroUri($this->filename)],
-        );
+        try {
+            return \App\Strings\html(
+                'image',
+                ['x' => 0, 'y' => 0, 'class' => 'hero', 'href' => \App\Card\localHeroUri($this->filename)],
+            );
+        } catch (\Throwable $e) {
+            return '[' . $e->getMessage() . ']';
+        }
     }
 }

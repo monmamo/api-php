@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -14,10 +13,7 @@ return new
 #[Concept('Bystander')]
 #[Concept('Coach')]
 #[Concept('Male')]
- #[Concept('Integrity', '1d6')]
-#[ImageCredit('')]
-#[FlavorText([])]
-#[LocalHeroImage('TODO.png')]
+#[Concept('Integrity', '1d6')]
 #[Prerequisites(['Limit 1 per player on Battlefield.', 'You must already have a Head Coach on the Battlefield', 'to put this card on the Battlefield.', 'You may choose to make this card Female', 'when you put it on the Battlefield.'])]
 class(__FILE__) implements CardComponents
 {

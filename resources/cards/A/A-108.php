@@ -14,16 +14,16 @@ return new
   #[ImageCredit('Shutterstock #2348597925')]
   class(__FILE__) implements CardComponents
   {
-    use DefaultCardAttributes;
+      use DefaultCardAttributes;
 
-    public function content(): \Traversable
-    {
-      yield <<<'HTML'
+      public function content(): \Traversable
+      {
+          yield <<<'HTML'
   <x-card.cardrule lines="3">
   <x-card.normalrule>Reveal the top 7 cards of your Library.</x-card.normalrule>
 <x-card.normalrule>You may put any Item cards in your hand.</x-card.normalrule>
 <x-card.normalrule>Discard the rest.</x-card.normalrule>
 </x-card.cardrule>
 HTML;
-    }
+      }
   };

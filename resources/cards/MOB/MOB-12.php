@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -16,8 +15,7 @@ return new
 #[Concept('Integrity', '2')]
 #[ImageCredit('')]
 #[FlavorText([])]
-#[LocalHeroImage('TODO.png')]
-#[Prerequisites(['Each player may have one Mascot card in play.','Can replace any Bystander Mascot (XX-00).'])]
+#[Prerequisites(['Each player may have one Mascot card in play.', 'Can replace any Bystander Mascot (XX-00).'])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

@@ -2,8 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
-use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -11,8 +9,6 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Creepy Guy in the Alley')]
 #[Concept('Vendor', 'Integrity')]
-#[LocalHeroImage('TODO.png')]
-#[ImageCredit('Image by USER_NAME on SERVICE')]
 #[FlavorText('Psst. I got a great deal for you.')]
 class(__FILE__) implements CardComponents
 {

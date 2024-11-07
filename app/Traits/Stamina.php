@@ -8,7 +8,6 @@ use App\GeneralAttributes\Trainable;
 
 // variables:: Level
 // #[[innate attribute]]
-
 #[Trainable()]
 #[Gloss('General resistance to attacks.')]
 

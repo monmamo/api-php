@@ -11,7 +11,6 @@ use App\Taxons\Floros;
 // UPKEEP:: Remove 1d4 damage from each Monster on the Battlefield (both yours and your opponents').
 
 #[Requires(Floros::class)]
-
 final class TherapeuticDander implements Feature
 {
     public static function sizeDelta(): float

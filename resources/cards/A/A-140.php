@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -11,8 +10,6 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Last Resort')]
     #[Concept('Upkeep')]
-    //#[\App\CardAttributes\ImageCredit("Image by USER_NAME on SERVICE")]
-    #[LocalHeroImage('TODO.png')]
     #[FlavorText('Now is not the time to panic.')]
     class(__FILE__) implements CardComponents
     {

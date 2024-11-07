@@ -9,9 +9,7 @@ use App\GeneralAttributes\Trainable;
 // variables:: Level
 
 #[Gloss('A measure of a Monster\'s scent.')]
-
 #[Trainable]
-
 final class Odor implements Feature
 {
     public static function sizeDelta(): float

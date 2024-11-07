@@ -32,7 +32,10 @@ class MakeConcept extends Command implements PromptsForMissingInput
         $slug = Str::studly($title);
 
         $form = \Laravel\Prompts\form()
-            ->textarea('Definition', name: 'definition');
+            ->textarea('Definition', name: 'definition')
+            ->textarea('Icon', name: 'icon')
+            ->text('Icon Credit', name: 'icon_credit')
+            ->text('Icon Credit URL', name: 'icon_credit_url');
 
         $data = $form->submit();
 
@@ -45,11 +48,19 @@ class MakeConcept extends Command implements PromptsForMissingInput
 
         $disk = Storage::disk('concepts');
         $disk->makeDirectory($slug);
-        $disk->put(
-            $slug . '/definition.html',
-            $definition_html,
-        );
+        $put = function ($filename, $content) use ($disk, $slug): void {
+            $disk->put(
+                $slug . '/' . $filename,
+                $content,
+            );
+            $this->info($slug . '/' . $filename);
+        };
 
-        $this->info($slug . '/definition.html');
+        $put('definition.html', $definition_html);
+
+        if ($data['icon'] !== '') {
+            $put('icon.blade.php', $data['icon']);
+            $put('icon-credit.html', \App\Strings\html('a', ['href' => $data['icon_credit_url']], $data['icon_credit'])->toHtml());
+        }
     }
 }

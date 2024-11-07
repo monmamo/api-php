@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -16,7 +15,6 @@ return new
 #[Concept('Draw')]
 #[ImageCredit('')]
 #[FlavorText([])]
-#[LocalHeroImage('TODO.png')]
 #[Prerequisites([])]
 class(__FILE__) implements CardComponents
 {

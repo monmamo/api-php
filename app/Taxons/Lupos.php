@@ -12,7 +12,6 @@ use App\Taxons\Attributes\NeuterName;
 // [[Species]] of genus [[]] with [[Pronos]] form.
 // Attributes:
 // effect:: Tetrapod, Fur, Paw.
-
 // [[Alertness]]
 
 // image generation prompt:: wolflike, wolfform

@@ -12,17 +12,8 @@ use App\Taxons\Attributes\NeuterName;
 
 #[Gloss('Light and bioluminescence.')]
 
-// Alternates:
-// Masculine:
-// Lumor
-// Lumander
-// Feminine:
-// Lumess
-// Lumquin
-// Attributes:
-
 // Color: yellow
-// rarity::
+
 
 #[NeuterName('Lumon')]
 #[MasculineAnthropeName('Lumander')]

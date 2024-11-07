@@ -9,10 +9,9 @@ use App\Taxons\Sonos;
 
 // Excludes [[Cacophony]].
 
-// Pleasing voice.
-// benevolent
-#[Trainable]
 
+#[\App\GeneralAttributes\Gloss('Pleasing voice.')]
+#[Trainable]
 #[Requires(Sonos::class)]
 final class Euphony implements Feature
 {

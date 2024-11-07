@@ -27,5 +27,3 @@ class(__FILE__) implements CardComponents
 HTML;
     }
 };
-
-

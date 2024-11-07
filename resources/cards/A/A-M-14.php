@@ -10,9 +10,9 @@ use App\GeneralAttributes\Title;
 
 return new
     #[Title('Regfelor L44')]
-    #[Concept('Monster',)]
+    #[Concept('Monster' )]
     #[Concept('Male')]
-    #[Concept('DamageCapacity', 65,)]
+    #[Concept('DamageCapacity', 65 )]
     #[Concept('Level', 44)]
     #[Concept('Size', 17)]
     #[Concept('Speed', 10)]

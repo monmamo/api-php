@@ -13,7 +13,7 @@ return new
 #[Title('Personal Assistant')]
 #[Concept('Bystander')]
 #[Concept('Cumulative')]
-#[Concept('Integrity',2)]
+#[Concept('Integrity', 2)]
 #[ImageCredit('Image by freepik')]
 #[LocalHeroImage('hero/personal-assistant.jpg')]
 class(__FILE__) implements CardComponents

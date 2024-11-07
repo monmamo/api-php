@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -14,7 +13,6 @@ return new
 #[Concept('Catastrophe')]
 #[ImageCredit('')]
 #[FlavorText([])]
-#[LocalHeroImage('TODO.png')]
 #[Prerequisites(['This card can be played only if the Place in play is a Forest and when a Monster uses an attack that results in the discarding of Fire cards.'])]
 class(__FILE__) implements CardComponents
 {

@@ -1,12 +1,18 @@
 <?php
 
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
+
 return new
-    #[\App\GeneralAttributes\Title('UNNAMED MONSTER')]
-    #[\App\Concept('Monster')]
-    #[\App\CardAttributes\ImageCredit('Image by USER_NAME on SERVICE')]
-    #[\App\CardAttributes\LocalHeroImage('TODO.png')]
-    class (__FILE__) implements \App\Contracts\Card\CardComponents {
-        use \App\CardAttributes\DefaultCardAttributes;
+    #[Title('UNNAMED MONSTER')]
+    #[Concept('Monster')]
+    class(__FILE__) implements CardComponents
+    {
+        use DefaultCardAttributes;
+
         public function content(): \Traversable
         {
             yield <<<'HTML'

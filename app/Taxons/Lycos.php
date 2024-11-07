@@ -16,10 +16,6 @@ use App\Taxons\Attributes\NeuterName;
 #[FeminineAnthropeName('Lyx')]
 
 // image generation prompt:: wolflike, wolfform
-// image tags:: TODO
-
-// Rarity:: [[Canos]] x 30
-// size delta:: 0.5
 
 #[Gloss('Erect wolf-forms (compare [[Lupos]]).')]
 #[NeuterName('Lycon')]
@@ -31,12 +27,12 @@ class Lycos implements Taxon
 {
     public static function rarity(): float
     {
-        return 0; //TODO
+        return Canos::rarity() * 30; //TODO
     }
 
     public static function sizeDelta(): float
     {
-        return 0;
+        return 0.5;
     }
 }
 

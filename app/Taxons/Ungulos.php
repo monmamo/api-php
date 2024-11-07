@@ -9,7 +9,6 @@ use App\Taxons\Attributes\MasculineMonsterName;
 use App\Taxons\Attributes\NeuterName;
 
 #[Gloss('Hooved quadrupeds that cannot be ridden.')]
-
 #[NeuterName('Ungulon')]
 #[MasculineMonsterName('Ungulor')]
 #[FeminineMonsterName('Unguless')]
