@@ -14,7 +14,6 @@ use App\Taxons\Attributes\NeuterName;
 
 // Color: yellow
 
-
 #[NeuterName('Lumon')]
 #[MasculineAnthropeName('Lumander')]
 #[MasculineMonsterName('Lumor')]

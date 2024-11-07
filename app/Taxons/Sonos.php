@@ -8,6 +8,7 @@ use App\Taxons\Attributes\FeminineMonsterName;
 use App\Taxons\Attributes\MasculineAnthropeName;
 use App\Taxons\Attributes\MasculineMonsterName;
 use App\Taxons\Attributes\NeuterName;
+
 // [[Power]]. Sound.
 // Sound.
 #[NeuterName('Sonon')]

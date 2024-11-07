@@ -13,7 +13,6 @@ use App\Taxons\Attributes\NeuterName;
 // image generation prompt:: foxlike, foxform
 // requires: [[Fur]], [[Long Tail]]
 
-
 #[NeuterName('Fanacon')]
 #[MasculineAnthropeName('Fanacander')]
 #[MasculineMonsterName('Fanacor')]

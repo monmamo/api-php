@@ -13,13 +13,12 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Healing Herb')]
-#[Concept('Upkeep')]
 #[Concept('Item')]
 #[Concept('Healing')]
 #[ImageCredit('')]
 #[FlavorText(['The best medicine is the one that tastes the worst.'])]
 #[LocalHeroImage('FA-08.png')]
-#[Prerequisites([])]
+#[Prerequisites(['Attach this card to a Monster.'])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -27,10 +26,11 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="95" >
-<x-card.smallrule>Attach this card to a Monster.</x-card.smallrule>
+     <x-card.phaserule type="Upkeep" height="240">
+       <text >
 <x-card.normalrule>After all attacks have been resolved (even if the Monster has been knocked out), roll 3d6. Remove that amount of damage from that Monster. If two or three of the rolls are 5 or higher, remove all Banes from that Monster.</x-card.normalrule>
-</x-card.cardrule>
+</text>
+ </x-card.phaserule>
 HTML;
     }
 };

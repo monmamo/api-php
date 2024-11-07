@@ -15,8 +15,6 @@ use App\Taxons\Attributes\NeuterName;
 
 // Color: Yellow-Green
 
-
-
 #[NeuterName('Venenon')]
 #[MasculineAnthropeName('Venenander')]
 #[MasculineMonsterName('Venenor')]

@@ -1,18 +1,13 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
-use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Grenade')]
-#[Concept('Upkeep')]
 #[Concept('Weapon')]
-#[ImageCredit('')]
-#[FlavorText([])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -20,9 +15,13 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="0" >
-<x-card.normalrule>Choose a Monster on the Battlefield. That Monster takes 2d4 damage. The other Monsters on that team take 1d4 damage.</x-card.normalrule>
-</x-card.cardrule>
+     <x-card.phaserule type="Upkeep" height="240">
+       <text >
+<x-card.normalrule>Choose a Monster on the Battlefield. </x-card.normalrule>
+<x-card.normalrule>That Monster takes 2d4 damage. </x-card.normalrule>
+<x-card.normalrule>The other Monsters on that team take 1d4 damage.</x-card.normalrule>
+</text>
+ </x-card.phaserule>
 HTML;
     }
 };

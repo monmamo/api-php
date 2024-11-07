@@ -13,8 +13,6 @@ use App\GeneralAttributes\Gloss;
 // Weeding Gloves https://bulbapedia.bulbagarden.net/wiki/Weeding_Gloves_(Chilling_Reign_155)
 // Discard one Grass mana attached to this Monster
 // Digging Gloves https://bulbapedia.bulbagarden.net/wiki/Digging_Gloves_(Evolving_Skies_145)
-// playable card type:: [[Glove]]
-
 
 #[Gloss('A Durable item that can be worn only on a Monster\'s anterior extremities.')]
 class Glove implements Item {}

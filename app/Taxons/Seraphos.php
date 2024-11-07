@@ -18,26 +18,20 @@ class Seraphos implements Taxon
 {
     public static function rarity(): float
     {
-        return 0; //TODO
+        return Hominos::rarity() * 20;
     }
 
     public static function sizeDelta(): float
     {
-        return 0;
+        return Hominos::sizeDelta() + Angelos::sizeDelta();
     }
 }
 
 // [[Species]] of genus [[Hominos]] with  [[Angelos]].
 // Compare [[Cherubos]], [[Satanos]].
-// Alternates:
-// Masculine: Seraphor
-// Feminine: Seraphess
 // Attributes:
 // Requires: [[Angel Wings]]
-// rarity: {{calc: ((uuUwRY2_d)) * 20}}
 
 // Emotional Strength:: 100
 // Intelligence:: 100
 // Spiritual Strength:: 100
-// Assets:
-// Flaws:

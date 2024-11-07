@@ -11,7 +11,6 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Full Heal')]
-#[Concept('Upkeep')]
 #[Concept('Item')]
 #[Concept('Healing')]
 #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
@@ -23,8 +22,10 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule lines="1">
-<x-card.normalrule>Remove all Banes from any one Monster.</x-card.normalrule></x-card.cardrule>
+<x-card.phaserule type="Upkeep" lines="2"><text>
+<x-card.normalrule>Remove all Banes from any one Monster.</x-card.normalrule>
+<x-card.normalrule>Then discard this card.</x-card.normalrule>
+</text></x-card.phaserule>
 HTML;
     }
 };

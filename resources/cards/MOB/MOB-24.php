@@ -4,9 +4,8 @@ use App\CardAttributes\DefaultCardAttributes;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
-// inspiration: Energy Flow PTCG card https://bulbapedia.bulbagarden.net/wiki/Energy_Flow_(Gym_Heroes_122)
 return new
-#[Title('Mana Flow')]
+#[Title('Sniper')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -16,11 +15,12 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
      <x-card.phaserule type="Upkeep" height="240">
        <text >
-<x-card.normalrule>For each of your Monsters,</x-card.normalrule>
-<x-card.normalrule>you may return any number of Mana</x-card.normalrule>
-<x-card.normalrule>cards attached to it to your hand.</x-card.normalrule>
+<x-card.normalrule>Choose a Monster, Master, Mobster or Bystander on the Battlefield.</x-card.normalrule>
+<x-card.normalrule>Monster: That Monster takes 2d6 damage.</x-card.normalrule>
+<x-card.normalrule>Others: If 1d4 is 2,3,4, Exile the card. Discard all cards attached to that card.</x-card.normalrule>
 </text>
  </x-card.phaserule>
+
 HTML;
     }
 };

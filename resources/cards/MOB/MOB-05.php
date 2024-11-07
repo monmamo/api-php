@@ -1,17 +1,11 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
-use App\CardAttributes\ImageCredit;
-use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Defection')]
-#[Concept('Upkeep')]
-#[ImageCredit('')]
-#[FlavorText([])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -19,10 +13,13 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="55" >
+     <x-card.phaserule type="Upkeep" height="240">
+       <text >
 <x-card.normalrule>Choose a Mobster in play that is not a Boss. </x-card.normalrule>
-<x-card.normalrule>That card and all cards attached to it go to discard.</x-card.normalrule>
-</x-card.cardrule>
+<x-card.normalrule>Discard it and all cards attached to it.</x-card.normalrule>
+</text>
+ </x-card.phaserule>
+H
 HTML;
     }
 };

@@ -11,7 +11,6 @@ use App\GeneralAttributes\Title;
 // inspiration: https://bulbapedia.bulbagarden.net/wiki/Canceling_Cologne_(Astral_Radiance_136)
 
 return new
-#[Concept('Upkeep')]
 #[Concept('Item')]
 #[FlavorText('A scent that monsters can\'t compete with.')]
 #[ImageCredit('Image by Freepik')]

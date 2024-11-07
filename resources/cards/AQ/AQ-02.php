@@ -1,19 +1,13 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
-use App\CardAttributes\ImageCredit;
 use App\CardAttributes\Prerequisites;
-use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Sprinkler System')]
-#[Concept('Upkeep')]
-#[ImageCredit('')]
-#[FlavorText([])]
-#[Prerequisites([])]
+#[Prerequisites(['Put this card in the Battlefield.'])]
 class implements CardComponents
 {
     use DefaultCardAttributes;
@@ -21,9 +15,12 @@ class implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="40" >
+     <x-card.phaserule type="Upkeep" height="40">
+       <text >
 <x-card.smallrule>Discard all Fire and Fire-type cards on the Battlefield.</x-card.smallrule>
-</x-card.cardrule>
+</text>
+ </x-card.phaserule>
+H
 HTML;
     }
 };

@@ -12,8 +12,6 @@ use App\Taxons\Attributes\NeuterName;
 
 // [[morphotype]] [[winged morphotype]]
 
-
-
 // automatic features:: [[Butterfly Wings]]
 #[Gloss('Butterfly-form.')]
 #[NeuterName('Papilon')]

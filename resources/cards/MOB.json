@@ -1,0 +1,75 @@
+{
+    "name": "Mobsters",
+    "unassigned": [
+    {
+                "name": "Criminal Lawyer",
+                "card_type": "Mobster",
+                "body_text": "Upkeep phase: Choose a card in play. That card cannot be targeted by any card effects until the end of your next turn.",
+            }
+
+    {
+                "name": "Criminal Syndicate",
+                "card_type": "Facility",
+                "body_text": "Upkeep phase: Draw a card. You may take another Draw phase.",
+            }
+
+            {
+                "name": "Criminal Underworld",
+                "card_type": "Facility",
+                "body_text": "Upkeep phase: Draw a card. You may take another Draw phase.",
+            }
+
+            {
+                "name": "Instigator of Rebellion",
+                "card_type": "Mobster",
+                "body_text": "Whenever an opposing Monster attacks, roll 1d4. If 1, that attack does nothing. Instead, that opponent must shuffle that Monster and all cards attached to it into his or her Library.",
+                "image": {
+                    "filename": null,
+                    "credit": null,
+                    "source": null,
+                    "ai": false,
+                    "prompt": null
+                },
+                "flavor_text": null,
+                "_inspiration": "PTCG Misty's Gyarados's \"Rebellion\" power"
+            }
+
+
+
+        {
+                "name": "Coach Strike",
+                "card_type": "Mobster",
+            }
+
+
+            {
+                "name": "Leader of the Pack",
+                "card_type": "Mobster",
+                "stats": [
+                    "Boss"
+                ],
+                "image": {
+                    "filename": null,
+                    "credit": null,
+                    "source": null,
+                    "ai": false,
+                    "prompt": null
+                },
+                "flavor_text": "Highest ranking member of a Motorcycle Gang."
+            },
+            {
+                "name": "Acid Drone",
+                "card_type": "Drone",
+                "body_text": [
+                    "Upkeep phase: Once this card is in the Battlefield, you may attach this card to a Monster or Character on the Battlefield. Once attached, this card counts as a Acid mana. Apply applicable effects immediately.",
+                    "Upkeep phase: Once this card is in the Battlefield, you may have this card self-destruct. Each Monster on the Battlefield takes 1dR damage, where R = remaining damage capacity. Then place this card in Exile."
+                ],
+            <x-card.concept.staticon type="Size"    value="10" />
+            "speed": 10
+            },
+            {
+                "name": "Corrupt Legislator",
+                "card_type": "Mobster",
+            }
+        ]
+    }

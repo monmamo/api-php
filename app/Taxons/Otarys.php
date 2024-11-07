@@ -24,7 +24,7 @@ class Otarys implements Taxon
 {
     public static function rarity(): float
     {
-        return Pronos::rarity()*100000;
+        return Pronos::rarity() * 100000;
     }
 
     public static function sizeDelta(): float
