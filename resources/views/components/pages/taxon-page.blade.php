@@ -48,28 +48,28 @@ if (is_null($attribute)) {
 <?php } ?>      
                                     </tbody>
                                 </table>
-        
+
+</div>
+<div class="col-4">
+    <h4>Statistics</h4>
+
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th scope="col"><a href="/concepts/Rarity">Rarity</a></th>
+                <td>1 in <?= number_format( $class::rarity()) ?></td>
+            </tr>
+            <tr>
+                <th scope="col"><a href="/concepts/Size">Size Delta</a></th>
+                <td><?=  $class::sizeDelta() > 0 ? '+' : '' ?><?=  $class::sizeDelta() ?></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
                     </div>
-                    <div class="col-4">
-                        <h4>Statistics</h4>
-
-
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <th scope="col"><a href="/concepts/Rarity">Rarity</a></th>
-                                    <td>1 in <?= number_format( $class::rarity()) ?></td>
-                                </tr>
-                                <tr>
-                                    <th scope="col"><a href="/concepts/Size">Size Delta</a></th>
-                                    <td><?=  $class::sizeDelta() > 0 ? '+' : '' ?><?=  $class::sizeDelta() ?></td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-                                        </div>
-                                    </div>
+                </div>
 
 {{$slot}}
 </x-guest-layout>

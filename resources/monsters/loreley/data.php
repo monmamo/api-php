@@ -1,7 +1,3 @@
 <?php
 
-
-return new class {
-
-    
-}
+return new class() {};

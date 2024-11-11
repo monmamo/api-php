@@ -1,20 +1,23 @@
 <?php
 
-return [
-    'name' => 'Stealth',
+use App\CardAttributes\DefaultCardAttributes;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Trait'],
+return new
+#[Title('Stealth')]
+#[Concept('Trait')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'image-prompt' => null,
-
-    'image-credit' => 'Image by USER_NAME on SERVICE',
-
-    'flavor-text' => [],
-    'background' => null,
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
 <x-card.cardrule height="55" >
 <x-card.normalrule>When attacking, roll 1d6. If 6, do not apply declared Defense. Can be improved with Power Up.</x-card.normalrule>
 </x-card.cardrule>
-HTML
-];
+HTML;
+    }
+};

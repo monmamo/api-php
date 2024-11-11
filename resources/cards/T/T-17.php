@@ -1,20 +1,25 @@
 <?php
 
-return [
-    'name' => 'Blade Arms',
+use App\CardAttributes\DefaultCardAttributes;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Trait'],
+//  'flavor-text' => ['Adds a slashing effect to Pounce and physical attacks.'],
 
-    'image-prompt' => null,
+return new
+#[Title('Blade Arms')]
+#[Concept('Trait')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'image-credit' => 'Image by USER_NAME on SERVICE',
-
-    'flavor-text' => ['Adds a slashing effect to Pounce and physical attacks.'],
-    'background' => null,
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
-<x-card.cardrule height="0" >
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
+<x-card.cardrule height="55" >
 <x-card.normalrule>TODO</x-card.normalrule>
 </x-card.cardrule>
-HTML
-];
+HTML;
+    }
+};

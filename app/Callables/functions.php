@@ -706,4 +706,3 @@ function forwardSuffixedCall(object $target, string $suffix, string $method, mix
         return $target->{\App\Strings\trim(suffix: $suffix, source: $method)}(...$arguments);
     }
 }
-

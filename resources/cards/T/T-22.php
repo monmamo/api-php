@@ -1,21 +1,25 @@
 <?php
-#[\App\CardAttributes\Prerequisites(lines:'Requires Floros.',y:460)]
 
-return [
-    'name' => 'Therapeudic Dander',
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\Prerequisites;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Trait'],
+return new
+#[Title('Therapeudic Dander')]
+#[Concept('Trait')]
+#[Prerequisites(lines: 'Requires Floros.', y: 460)]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'image-prompt' => null,
-
-    'image-credit' => 'Image by USER_NAME on SERVICE',
-
-    'flavor-text' => [],
-    'background' => null,
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
-<x-card.cardrule height="95" >
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
+<x-card.cardrule height="55" >
 <x-card.normalrule>Upkeep phase:: Remove 1d4 damage from each Monster in play (both yours and your opponents').</x-card.normalrule>
 </x-card.cardrule>
-HTML
-];
+HTML;
+    }
+};

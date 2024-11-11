@@ -1,20 +1,25 @@
 <?php
 
-return [
-    'name' => 'Leapfrogging',
+use App\CardAttributes\DefaultCardAttributes;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Trait'],
+//     'image-prompt' => 'https://game-icons.net/1x1/delapouite/leapfrog.html',
 
-    'image-prompt' => 'https://game-icons.net/1x1/delapouite/leapfrog.html',
+return new
+#[Title('Leapfrogging')]
+#[Concept('Trait')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'image-credit' => 'Image by USER_NAME on SERVICE',
-
-    'flavor-text' => [],
-    'background' => null,
-    'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
 <x-card.cardrule height="55" >
 <x-card.normalrule>Dodge prevents all Ground damage.</x-card.normalrule>
 </x-card.cardrule>
-HTML
-];
+HTML;
+    }
+};

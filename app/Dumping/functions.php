@@ -177,6 +177,7 @@ function dumpLabeled(mixed $variables): array
     }
     return $variables_in_array;
 }
+
 /**
  * Use this instead of \dump. This gives us control over dumping by environment and situation.
  *
@@ -194,7 +195,6 @@ function dump(mixed ...$vars): array
 {
     if (\App\Dumping\inDumpingContext()) {
         foreach ($vars as $k => $v) {
-
             if ($v instanceof \Closure) {
                 $v = $v();
             }

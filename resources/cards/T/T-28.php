@@ -1,15 +1,25 @@
 <?php
 
-return [
-    'name' => 'Night Vision',
+use App\CardAttributes\DefaultCardAttributes;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-    'concepts' => ['Trait'],
+// 'https://game-icons.net/1x1/delapouite/night-vision.html',
 
-    'image-prompt' => 'https://game-icons.net/1x1/delapouite/night-vision.html',
+return new
+#[Title('Night Vision')]
+#[Concept('Trait')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'image-credit' => 'Image by USER_NAME on SERVICE',
-
-    'background' => null,
-    'content' => <<<'HTML'
-HTML
-];
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
+<x-card.cardrule height="55" >
+<x-card.normalrule>TODO</x-card.normalrule>
+</x-card.cardrule>
+HTML;
+    }
+};
