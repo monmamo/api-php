@@ -48,11 +48,5 @@ Decide how you want to release your game - print, PDF, or both. Look into print-
 Remember, game design is an iterative process. Be prepared to revise and refine your ideas multiple times as you develop your RPG. Most importantly, create a game you're passionate about and would love to play yourself.
 
 Citations:
-[1] https://www.reddit.com/r/rpg/comments/2f7761/creating_your_own_tabletop_rpg/
-[2] https://blog.worldanvil.com/worldanvil/interviews/how-to-create-an-rpg-system-from-scratch/
-[3] https://polyhedragames.com/?p=746
-[4] https://www.playrole.com
-[5] https://brokenpencil.com/columns/toolkit-make-your-own-tabletop-rpg/
-[6] https://www.dicebreaker.com/categories/roleplaying-game/how-to/how-to-make-rpg
 @endenv
 </x-guest-layout>

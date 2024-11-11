@@ -1,8 +1,7 @@
 
 @fragment('hero')
 <?php
-$path = resource_path("images/blog/pokemon-for-adults.webp");
-echo 'data:image/webp;base64,' . \base64_encode(\file_get_contents($path));
+echo \Illuminate\Support\Facades\Storage::disk('images')->imageToUri("blog/pokemon-for-adults.webp");
 ?>
 @endfragment
 

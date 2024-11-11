@@ -48,6 +48,12 @@ return [
             'throw' => false,
         ],
 
+        'images' => [
+            'driver' => 'local',
+            'root' => \resource_path('images'),
+            'throw' => false,
+        ],
+
         'website' => [
             'driver' => 'local',
             'root' => \resource_path('views/pages'),

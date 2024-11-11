@@ -9,7 +9,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-    #[Title('Energcanor L45')]
+    #[Title('Energlupor L45')]
     #[Concept('Monster')]
     #[Concept('Male')]
     #[Concept('DamageCapacity', 80)]
@@ -28,7 +28,7 @@ return new
         {
             yield <<<'HTML'
 <x-card.cardrule y="460" height="55" >
-<x-card.normalrule>Taxons: Energos, Canos</x-card.normalrule>
+<x-card.normalrule>Taxons: Energos, Lupos</x-card.normalrule>
 </x-card.cardrule>
 
 

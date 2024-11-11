@@ -1,9 +1,8 @@
-<?php
-\Laravel\Folio\name('taxons.show');
+<x-pages.taxon-page :$slug >
 
-?>
 
-<x-guest-layout>
-<h1>{{$name}}</h1>
-
-</x-guest-layout>
+    <h2>Examples of {{$slug}} Anthropes and Monsters</h2>
+    
+    <x-pages.taxon-gallery :$slug />
+      
+</x-pages.taxon-page>

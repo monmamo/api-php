@@ -27,7 +27,6 @@ use PHPUnit\Framework\Constraint\Constraint;
  * usage:
  * \App\Callables\BaseCallable::transform(arity:ARITY,seed:VALUE,transforms:TRANSFORMS  );
  *
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group sugar Consider implementing literally instead of using this method.
  * @group trinary
  * @group variadic
@@ -65,7 +64,6 @@ function _transform(int $arity, mixed $normal_transforms, $seed, $offset = null)
 }
 
 /**
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group variadic
  *
  * @param null|mixed $assertion_message
@@ -101,7 +99,6 @@ function asserter(
  * Method invoked when attempting invoke an inaccessible or undefined method of this class in an object context.
  * Dynamically passes a method to the underlying object.
  *
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group magic
  * @group magic-call-signature
  * @group variadic
@@ -151,7 +148,6 @@ function callByName(object $target, string $method, array $parameters)
  *
  * If the option is non-empty, the callable is applied, and if it returns true, the option itself is returned; otherwise, None is returned.
  *
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @implements \App\Contracts\Filterable::filter
  *
  * @uses \App\Constraints\evaluate
@@ -172,7 +168,6 @@ function filter(
  *
  * If the option is non-empty, the callable is applied, and if it returns false, the option itself is returned; otherwise, None is returned.
  *
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @implements \App\Contracts\Filterable::filterNot
  * @group trinary
  *
@@ -193,7 +188,6 @@ function filterNot(
  *
  * ❗ Assumes the using class is immutable and fluent. The callback needs to return $this.
  *
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group binary
  * @group fluent
  *
@@ -205,7 +199,6 @@ function ifNotNull(mixed $value, mixed $subject, \Closure $callback)
 }
 
 /**
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group transformative
  * @group unary
  *
@@ -237,7 +230,6 @@ function makeClosure(mixed $callable): \Closure
 }
 
 /**
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group multivalue
  * @group sequential
  * @group unary
@@ -278,7 +270,6 @@ function normalizeTransform(...$transforms): \Generator
 }
 
 /**
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group binary
  *
  * @uses \App\Callables\normalizeTransform
@@ -302,7 +293,6 @@ function reduce($seed, mixed $transforms)
  *
  * Do not replace this logic with \App\Callables\reduce.
  *
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group defered-call
  * @group sugar Consider implementing literally instead of using this method.
  * @group variadic
@@ -375,7 +365,6 @@ function run(
 /**
  * Runs the given callable if a condition is met.
  *
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group variadic
  *
  * @uses \App\Callables\run
@@ -398,7 +387,6 @@ function runIf(mixed $inner_method, mixed $arguments): void
 /**
  * Runs the given callable if the first argument is not null.
  *
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group variadic
  *
  * @uses \App\Callables\run
@@ -422,7 +410,6 @@ function runIfNotNull(mixed $inner_method, mixed $arguments): void
 /**
  * Runs the given callable unless a condition is met.
  *
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group variadic
  *
  * @uses \App\Callables\run
@@ -444,7 +431,6 @@ function runUnless(mixed $inner_method, mixed $arguments): void
 }
 
 /**
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group variadic
  *
  * @deprecated Implement literally.
@@ -459,8 +445,6 @@ function runVariadic(mixed $callable, ...$arguments)
 }
 
 /**
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
- *
  * @deprecated Implement literally.
  *
  * @group variadic
@@ -475,7 +459,6 @@ function runVariadicReturnsNothing(mixed $callable, ...$arguments): void {}
  * usage:
  * \App\Callables\BaseCallable::transform(arity:ARITY,seed:VALUE,transforms:TRANSFORMS  );
  *
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group trinary
  * @group variadic
  *
@@ -497,7 +480,6 @@ function transform(int $arity, mixed $transforms, $seed, $offset = null)
  * usage:
  * \App\Callables\BaseCallable::transform(arity:ARITY,seed:VALUE,transforms:TRANSFORMS  );
  *
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group sugar Consider implementing literally instead of using this method.
  * @group trinary
  * @group variadic
@@ -521,7 +503,6 @@ function transformBatch(mixed $transforms, mixed $items)
  *
  * Based on \Illuminate\Support\Traits\ForwardsCalls::forwardCallTo.
  *
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group unary
  *
  * @param mixed $source Object on which to resolve the method.
@@ -573,7 +554,6 @@ function runObjectMethod(mixed $source, string $method, array $parameters = [], 
  *
  * Should never throw an exception for a null value. If the value is null or undefined, simply do not call the callable.
  *
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group trinary
  *
  * @uses \App\Callables\transform
@@ -598,7 +578,6 @@ function withAll(mixed $source, mixed $callable, array $additional_arguments = [
 }
 
 /**
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
  * @group unary
  */
 function withEach(mixed $collection): object
@@ -653,7 +632,6 @@ function withEach(mixed $collection): object
         /**
          * Applies the callable to the value of the option if it is non-empty, and returns the return value of the callable directly.
          *
-         * @author Jay Bienvenu <jbienvenu@netshapers.com>
          * @implements \App\Contracts\Mappable::flatMap
          * @group unary
          *
@@ -719,8 +697,6 @@ function withEach(mixed $collection): object
 }
 
 /**
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
- *
  * @uses \App\Strings\trim
  * @uses \str_ends_with (native) Returns whether the haystack string ends with the given needle.
  */
@@ -731,30 +707,3 @@ function forwardSuffixedCall(object $target, string $suffix, string $method, mix
     }
 }
 
-/*
- * @author Jay Bienvenu <jbienvenu@netshapers.com>
- * @group functional
- * @group trinary
- */
-// public static function wrap(mixed $before, mixed $action, mixed $after): \Closure
-// {
-//     return
-//         /**
-//          * @group trinary
-//          * @uses \App\Callables\run
-//          * @uses \func_get_args (native) The arguments to this function in a sequential array.
-// * @throws \Throwable Any exception thrown out of \App\Callables\run.
-//          */
-//         static function () use ($before, $action, $after) {
-// \App\Callables\run(callable: $before);
-//             $result = \App\Callables\run(
-//                 callable: $action,
-//                 arguments_to_callable: \func_get_args(),
-//             );
-//             \App\Callables\run(
-//                 callable: $after,
-//                 arguments_to_callable: [$result],
-//             );
-//             return $result;
-//         };
-// }

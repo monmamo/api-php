@@ -22,7 +22,7 @@
     <meta property="og:keywords" content="Monsters Masters & Mobsters, monsters, masters, mobsters, fantasy, speculative fiction,magical realism, storytelling, organized crime, professional sports, trainable monsters">
     <meta property="og:type" content="website">
     <meta property="twitter:type" content="website">
-    <link rel="icon" href="data:image/jpg;base64,<?= \base64_encode(\file_get_contents(resource_path("images/plain-logo-16.png"))) ?>" type="image/png">
+    <link rel="icon" href="<?=\Illuminate\Support\Facades\Storage::disk('images')->imageToUri("plain-logo-16.png") ?>" type="image/png">
 
     <style>
         a:link {

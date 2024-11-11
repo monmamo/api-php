@@ -4,8 +4,8 @@ use Symfony\Component\Finder\Finder;
 
 resource_path();
 
-$taxons = collect(scandir(base_path('app/Taxons')))
-    ->filter(fn($file) => !in_array($file, ['.', '..','Attributes']))
+$taxons = collect(scandir(base_path('canon/Taxons')))
+    ->filter(fn($file) => str_ends_with($file, '.php'))
     ->map(fn($file) => str_replace('.php', '', $file));
 
 
@@ -22,12 +22,12 @@ $taxons = collect(scandir(base_path('app/Taxons')))
     <div class="container">
         <div class="row">
             @foreach ($taxons->splitIn(6) as $chunk)
-            <div class="col-2">
-                <ul>
+            <div class="col-sm-6 col-md-2 ">
+                <dl>
                     @foreach ($chunk as $taxon)
-                    <li><a href="/taxons">{{ $taxon }}</a></li>
+                    <dt><a href="/taxons/{{ $taxon }}">{{ $taxon }}</a></dt>
                     @endforeach
-                </ul>
+                </dl>
             </div>
             @endforeach
         </div>

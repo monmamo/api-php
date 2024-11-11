@@ -659,6 +659,9 @@ function clean(string $raw, ?\Closure $after_clean = null): string
     return $final_clean_value;
 }
 
+/**
+ * @group variadic
+ */
 function phpAttribute($class_fqn, ...$values): string
 {
     if (\count($values) === 0) {

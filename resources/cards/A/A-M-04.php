@@ -10,14 +10,14 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-    #[Title('Aquos Monster L45')]
+    #[Title('Aquotaror')]
     #[Concept('Monster')]
     #[Concept('Male')]
     #[Concept('DamageCapacity', 95)]
     #[Concept('Level', 45)]
     #[Concept('Size', 25)]
     #[Concept('Speed', 10)]
-    #[Concept('Multiplier:x4')]
+    #[Concept('Multiplier', 'x4')]
     #[LocalHeroImage('hero/A-M-04.jpeg')]
     #[IsGeneratedImage]
     #[ImagePrompt('blue seal of weird zoology swimming in a lake, trees and mountains in the background')]
@@ -30,7 +30,7 @@ return new
         {
             yield <<<'HTML'
 <x-card.cardrule y="460" height="55" >
-<x-card.normalrule>Taxons: Aquos, TODO</x-card.normalrule>
+<x-card.normalrule>Taxons: Aquos, Otarys</x-card.normalrule>
 </x-card.cardrule>
 
 <x-card.phaserule type="Attack" height="210">

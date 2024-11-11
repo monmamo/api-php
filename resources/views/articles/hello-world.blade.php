@@ -1,8 +1,7 @@
 
 @fragment('hero')
 <?php
-$path = resource_path("images/blog/hello-world.webp");
-echo 'data:image/webp;base64,' . \base64_encode(\file_get_contents($path));
+echo \Illuminate\Support\Facades\Storage::disk('images')->imageToUri("blog/hello-world.webp");
 ?>
 @endfragment
 
