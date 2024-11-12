@@ -8,6 +8,10 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\WingedMorphotype;
 
 // morphotype::
 // Excludes [[Wings]] and any [[spinal morphotype]].
@@ -18,15 +22,9 @@ use Canon\Taxons\Attributes\NeuterName;
 #[MasculineMonsterName('Flegeror')]
 #[FeminineAnthropeName('Flegerquin')]
 #[FeminineMonsterName('Flegeress')]
+#[Rarity('winged-morphotypes')]
+#[SizeDelta(0.1)]
 class Flegeros extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 10000;
-    }
-
-    public static function sizeDelta(): float
-    {
-        return 0.1;
-    }
+    use WingedMorphotype;
 }

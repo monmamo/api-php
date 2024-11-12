@@ -8,8 +8,10 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
-
-// [[genus]] with [[Pronos]] form
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Genus;
 
 #[Gloss('Seal-forms.')]
 
@@ -18,16 +20,14 @@ use Canon\Taxons\Attributes\NeuterName;
 #[MasculineMonsterName('Otaryr')]
 #[FeminineAnthropeName('Otaryquin')]
 #[FeminineMonsterName('Otaryss')]
-
+#[Rarity(Aquadys::class, Pronos::class, 1000)]
+#[SizeDelta(Aquadys::class, Pronos::class)]
 class Otarys extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return Pronos::rarity() * 100000;
-    }
+    use Genus;
 
-    public static function sizeDelta(): float
+    public static function phylum(): string
     {
-        return Pronos::sizeDelta();
+        return 'Aquadys';
     }
 }

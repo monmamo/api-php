@@ -2,33 +2,26 @@
 
 namespace Canon\Taxons;
 
+use App\GeneralAttributes\Gloss;
 use Canon\Taxons\Attributes\FeminineAnthropeName;
 use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\SizeMorphotype;
 
+#[Gloss('Titanic forms.')]
 #[NeuterName('Titanon')]
 #[MasculineAnthropeName('Titanander')]
 #[MasculineMonsterName('Titanor')]
 #[FeminineAnthropeName('Titanquin')]
 #[FeminineMonsterName('Titaness')]
+#[Rarity(1e7)]
+#[SizeDelta(1.5)]
 class Titanos extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 0; //TODO
-    }
+    use SizeMorphotype;
 }
-
-// Giant forms.
-
-// 3000000,2,
-// size morphotype:: Giant forms.
-// Alternates:
-// Masculine:
-// Titanor
-// Feminine:
-// Titaness
-// rarity:
-// size delta: 1

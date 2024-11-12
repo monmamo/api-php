@@ -2,13 +2,12 @@
 
 namespace Canon\Taxons;
 
-// ,"Felos , Lupos , Lutros , Otarys ",
-// [[posture morphotype]]
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\PostureMorphotype;
 
+#[Rarity(4 / 3)]
 final class Pronos extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 4 / 3;
-    }
+    use PostureMorphotype;
 }

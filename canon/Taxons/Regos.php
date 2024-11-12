@@ -8,6 +8,8 @@ use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
 use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Power;
 
 // Authority and justice.
 
@@ -53,5 +55,8 @@ use Canon\Taxons\Attributes\Rarity;
 #[MasculineMonsterName('Regor')]
 #[FeminineAnthropeName('Regquin')]
 #[FeminineMonsterName('Regess')]
-#[Rarity('essential-powers')]
-class Regos extends BaseTaxon {}
+#[Rarity('powers')]
+class Regos extends BaseTaxon
+{
+    use Power;
+}

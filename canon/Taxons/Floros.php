@@ -8,6 +8,9 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Power;
 
 // Color: Pink
 
@@ -17,10 +20,8 @@ use Canon\Taxons\Attributes\NeuterName;
 #[MasculineMonsterName('Floror')]
 #[FeminineAnthropeName('Florquin')]
 #[FeminineMonsterName('Floress')]
+#[Rarity('powers')]
 class Floros extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 200000;
-    }
+    use Power;
 }

@@ -8,6 +8,10 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Genus;
 
 // genus:: of  [[Silvadys]] with [[Pronos]] form
 // https://huggingface.co/datasets/monmamo/felos
@@ -25,11 +29,14 @@ use Canon\Taxons\Attributes\NeuterName;
 #[MasculineMonsterName('Feller')]
 #[FeminineAnthropeName('Felquin')]
 #[FeminineMonsterName('Felless')]
-
+#[Rarity(Silvadys::class)]
+#[SizeDelta(Silvadys::class)]
 class Felos extends BaseTaxon
 {
-    public static function rarity(): float
+    use Genus;
+
+    public static function phylum(): string
     {
-        return Silvadys * 15;
+        return 'Silvadys';
     }
 }

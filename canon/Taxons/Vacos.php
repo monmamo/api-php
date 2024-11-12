@@ -2,21 +2,20 @@
 
 namespace Canon\Taxons;
 
-use Canon\Taxons\Attributes\FeminineAnthropeName;
 use Canon\Taxons\Attributes\FeminineMonsterName;
-use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Morphotype;
 
 #[NeuterName('Vacon')]
-#[MasculineAnthropeName('Vacander')]
 #[MasculineMonsterName('Vacor')]
-#[FeminineAnthropeName('Vacquin')]
-#[FeminineMonsterName('Vacess')]
+#[FeminineMonsterName('Vackess')]
+#[Rarity(1e6)]
+#[SizeDelta(0.1)]
 class Vacos extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 0; //TODO
-    }
+    use Morphotype;
 }

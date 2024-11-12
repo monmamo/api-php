@@ -9,11 +9,11 @@ use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
 use Canon\Taxons\Attributes\Rarity;
 use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\BodyCoveringMorphotype;
 
-// Covered in quills.
-
-// ,Hystricos ,
-// [[Body Covering Form]]. Covered in quills.
+// , ,
+// [[ Form]]. Covered in quills.
 // Alternates:
 // Masculine: Quilor
 // Feminine: Quiless
@@ -27,4 +27,7 @@ use Canon\Taxons\Attributes\SizeDelta;
 #[FeminineMonsterName('Quiless')]
 #[Rarity(2000)]
 #[SizeDelta(0.2)]
-class Quilos extends BaseTaxon {}
+class Quilos extends BaseTaxon
+{
+    use BodyCoveringMorphotype;
+}

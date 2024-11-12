@@ -9,8 +9,8 @@ use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
 use Canon\Taxons\Attributes\Rarity;
-
-// [[morphotype]]. Saber-teeth.
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Morphotype;
 
 #[NeuterName('Smilon')]
 #[MasculineAnthropeName('Smilander')]
@@ -21,8 +21,5 @@ use Canon\Taxons\Attributes\Rarity;
 #[Gloss('Saber-teeth.')]
 class Smilos extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 0; //TODO
-    }
+    use Morphotype;
 }

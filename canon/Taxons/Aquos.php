@@ -2,11 +2,15 @@
 
 namespace Canon\Taxons;
 
+use App\GeneralAttributes\Gloss;
 use Canon\Taxons\Attributes\FeminineAnthropeName;
 use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Power;
 
 // essential power:: Water.
 
@@ -25,15 +29,14 @@ use Canon\Taxons\Attributes\NeuterName;
 // [[Water]] Compaction    2   Sharply raises Defense when hit by a [[Water]]-type move.   7
 // **Hydroelectric Power** You may make this Monster's Floodlight attack do 10 more damage for each Energy attached to this Monster but not used to pay for Floodlight's Energy cost. This power can't be used if this Monster is under any Special Condition. Lanturn L26.
 
+#[Gloss('Water powers.')]
 #[NeuterName('Aquon')]
 #[MasculineAnthropeName('Aquander')]
 #[MasculineMonsterName('Aquor')]
 #[FeminineAnthropeName('Aququin')]
 #[FeminineMonsterName('Aquess')]
+#[Rarity('powers')]
 class Aquos extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 70;
-    }
+    use Power;
 }

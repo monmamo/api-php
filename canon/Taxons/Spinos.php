@@ -10,19 +10,18 @@ use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
 use Canon\Taxons\Attributes\Rarity;
 use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\SpinalMorphotype;
 
-#[Gloss('Spinal morphotype:: Sharp horns protruding from the spine.')]
+#[Gloss('Sharp horns protruding from the spine.')]
 #[NeuterName('Spinon')]
 #[MasculineAnthropeName('Spinander')]
 #[MasculineMonsterName('Spinor')]
 #[FeminineAnthropeName('Spinquin')]
 #[FeminineMonsterName('Spiness')]
-#[Rarity(200000)]
-#[SizeDelta(0.3)]
+#[Rarity('spinal-morphotypes')]
+#[SizeDelta(0.25)]
 class Spinos extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 0; //TODO
-    }
+    use SpinalMorphotype;
 }

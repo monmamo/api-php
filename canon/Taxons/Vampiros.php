@@ -7,28 +7,24 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Genus;
 
 #[NeuterName('Vampiron')]
 #[MasculineAnthropeName('Vampirander')]
 #[MasculineMonsterName('Vampiror')]
 #[FeminineAnthropeName('Vampirquin')]
 #[FeminineMonsterName('Vampiress')]
+#[Rarity(Hominos::class, Demonos::class, 5)]
+#[SizeDelta(Hominos::class, Demonos::class)]
 class Vampiros extends BaseTaxon
 {
-    public static function rarity(): float
+    use Genus;
+
+    public static function phylum(): string
     {
-        return 0; //TODO
+        return 'Hominos';
     }
 }
-
-// species of genus Hominos with Demonos form.
-
-// ,"Hominos , Demonos ",
-// [[Species]] of genus [[Hominos]] with [[Demonos]] form.
-// Alternates:
-// Masculine:
-// Feminine:
-// Attributes:
-
-// rarity: {{calc: ((uuUwRY2_d))}} x [[Demonos]]
-// size delta:  [[Hominos]] + [[Demonos]]

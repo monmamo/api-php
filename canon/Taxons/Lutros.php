@@ -8,8 +8,10 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
-
-// genus:: of [[Pronos]]
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Genus;
 
 // image generation prompt:: otterlike, otterform
 // image tags:: otter
@@ -25,15 +27,14 @@ use Canon\Taxons\Attributes\NeuterName;
 #[MasculineMonsterName('Lutror')]
 #[FeminineAnthropeName('Lutrquin')]
 #[FeminineMonsterName('Lutress')]
+#[Rarity(Aquadys::class, Pronos::class)]
+#[SizeDelta(Aquadys::class, Pronos::class, 0.1)]
 class Lutros extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return Aquadys::rarity() / Aquadys::subtaxons()[self::class];
-    }
+    use Genus;
 
-    public static function sizeDelta(): float
+    public static function phylum(): string
     {
-        return Aquadys::sizeDelta();
+        return 'Aquadys';
     }
 }

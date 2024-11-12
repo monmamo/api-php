@@ -8,6 +8,9 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Species;
 
 // Prefers: [[Pronos]] [[Pilos]]
 // Prefers: [[Tail]]
@@ -18,16 +21,13 @@ use Canon\Taxons\Attributes\NeuterName;
 #[MasculineMonsterName('Grupor')]
 #[FeminineAnthropeName('Grupquin')]
 #[FeminineMonsterName('Grupess')]
-
+#[Rarity(Canos::class, 1e4)]
 class Grupos extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 1000000;
-    }
+    use Species;
 
-    public static function sizeDelta(): float
+    public static function genus(): string
     {
-        return 1.5;
+        return 'Canos';
     }
 }

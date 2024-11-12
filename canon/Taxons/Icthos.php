@@ -8,8 +8,10 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
-
-// [[Species]] of genus [[Hominos]].
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Genus;
 
 #[NeuterName('Icthon')]
 #[MasculineAnthropeName('Icthander')]
@@ -17,10 +19,15 @@ use Canon\Taxons\Attributes\NeuterName;
 #[FeminineAnthropeName('Icthquin')]
 #[FeminineMonsterName('Icthess')]
 #[Gloss('Amphibious fish-like anthropomorphs.')]
-class Icthos extends Hominos
+#[Rarity(Hominos::class, Aquadys::class)]
+#[SizeDelta(Hominos::class, Aquadys::class)]
+
+class Icthos extends BaseTaxon
 {
-    public static function rarity(): float
+    use Genus;
+
+    public static function phylum(): string
     {
-        return Hominos::rarity() * 500;
+        return 'Hominos';
     }
 }

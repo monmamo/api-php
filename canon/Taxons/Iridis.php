@@ -6,6 +6,9 @@ use Canon\Taxons\Attributes\FeminineAnthropeName;
 use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Power;
 
 // Color: Rainbow
 // [[legendary power]]
@@ -16,11 +19,8 @@ use Canon\Taxons\Attributes\MasculineMonsterName;
 #[MasculineMonsterName('Iridir')]
 #[FeminineAnthropeName('Iridiquin')]
 #[FeminineMonsterName('Iridess')]
-
+#[Rarity(800e6)]
 class Iridis extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 10000000000;
-    }
+    use Power;
 }

@@ -11,6 +11,8 @@ use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
 use Canon\Taxons\Attributes\Rarity;
 use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Species;
 
 // Species:: of genus [[Canos]] with form [[Erectos]]
 
@@ -23,6 +25,14 @@ use Canon\Taxons\Attributes\SizeDelta;
 #[FeminineAnthropeName('Alopecquin')]
 #[FeminineMonsterName('Alopex')]
 #[ImagePrompt('foxform humanoid primate monster of weird zoology')]
-#[Rarity(Silvadys::class, Erectos::class, 50000)]
-#[SizeDelta(Silvadys::class, Erectos::class, 1)]
-class Alopecos extends BaseTaxon {}
+#[Rarity(Vulpos::class, Erectos::class, 500)]
+#[SizeDelta(Vulpos::class, Erectos::class, 1)]
+class Alopecos extends BaseTaxon
+{
+    use Species;
+
+    public static function genus(): string
+    {
+        return 'Vulpos';
+    }
+}

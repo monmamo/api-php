@@ -6,6 +6,10 @@ use App\GeneralAttributes\Gloss;
 use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\SizeMorphotype;
 
 // ,Cherubos ,pygmy,
 
@@ -13,15 +17,9 @@ use Canon\Taxons\Attributes\NeuterName;
 #[NeuterName('Pygmyn')]
 #[MasculineMonsterName('Pygmyr')]
 #[FeminineMonsterName('Pygmyss')]
+#[Rarity(4)] // roughly 25% of all monsters
+#[SizeDelta(-1)]
 class Pygmys extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 4; // roughly 25% of all monsters
-    }
-
-    public static function sizeDelta(): float
-    {
-        return -1;
-    }
+    use SizeMorphotype;
 }

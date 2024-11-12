@@ -6,34 +6,30 @@ use App\GeneralAttributes\Gloss;
 use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Phylum;
 
-// Does not indicate rideability.
+// Does not imply size or rideability.
 
 #[Gloss('Hooved quadrupeds.')]
 #[NeuterName('Ungulon')]
 #[MasculineMonsterName('Ungulor')]
 #[FeminineMonsterName('Unguless')]
-final class Ungulos extends BaseTaxon
+#[Rarity('phyla')]
+class Ungulos extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 100;
-    }
+    use Phylum;
 
-    public static function sizeDelta(): float
+    public static function subtaxonRarity(string $fqn): float
     {
-        return 0; // does not imply size
-    }
-
-    public static function subtaxons(): array
-    {
-        return [
+        return match ($fqn) {
             Bovos::class => 0.27,
             Cervos::class => 0.1,
             Capros::class => 0.1,
             Suinos::class => 0.33,
             Equos::class => 0.1,
-            Dibos::class => 0.1,
-        ];
+            Dibos::class => 0.1
+        };
     }
 }

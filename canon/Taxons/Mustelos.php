@@ -8,23 +8,25 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Genus;
 
-// [[genus]]
 #[Gloss('Weasel-forms, badger-forms.')]
 #[NeuterName('Mustelon')]
 #[MasculineAnthropeName('Mustelander')]
 #[MasculineMonsterName('Mustelor')]
 #[FeminineAnthropeName('Mustelquin')]
 #[FeminineMonsterName('Musteless')]
+#[Rarity(Silvadys::class, Pronos::class)]
+#[SizeDelta(Silvadys::class, Pronos::class, -0.2)]
 class Mustelos extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return Pronos::rarity() * 30;
-    }
+    use Genus;
 
-    public static function sizeDelta(): float
+    public static function phylum(): string
     {
-        return Pronos::sizeDelta() - 0.2;
+        return 'Silvadys';
     }
 }

@@ -2,33 +2,29 @@
 
 namespace Canon\Taxons;
 
+use App\GeneralAttributes\Gloss;
 use Canon\Taxons\Attributes\FeminineAnthropeName;
 use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\WingedMorphotype;
 
-// winged morphotype Fairy-forms
-// generally smaller than normal:
-// with a pygmy profile, butterfly-like wings, and no tail.",Emphutos ,
-// #[[winged morphotype]] Fairy-forms, generally smaller than normal, with a pygmy profile, butterfly-like wings, and no tail.
+//  Generally smaller than normal, with a pygmy profile, butterfly-like wings, and no tail.
 
 // [[Fairy Wings]]
-
+#[Gloss('Fairy forms.')]
 #[NeuterName('Faeon')]
 #[MasculineAnthropeName('Faeander')]
 #[MasculineMonsterName('Faer')]
 #[FeminineAnthropeName('Faequin')]
 #[FeminineMonsterName('Faess')]
+#[Rarity('winged-morphotypes')]
+#[SizeDelta(-0.5)]
 class Faeos extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 300000;
-    }
-
-    public static function sizeDelta(): float
-    {
-        return -1;
-    }
+    use WingedMorphotype;
 }

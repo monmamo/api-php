@@ -8,6 +8,9 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\WingedMorphotype;
 
 // [[morphotype]] [[winged morphotype]]
 
@@ -21,10 +24,8 @@ use Canon\Taxons\Attributes\NeuterName;
 #[MasculineMonsterName('Papilor')]
 #[FeminineAnthropeName('Papilquin')]
 #[FeminineMonsterName('Papiless')]
+#[Rarity(400000)]
 class Papilos extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 400000;
-    }
+    use WingedMorphotype;
 }

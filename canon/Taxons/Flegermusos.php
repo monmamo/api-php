@@ -6,22 +6,24 @@ use App\GeneralAttributes\Gloss;
 use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
-
-// [[Species]] of genus [[Musos]] with [[Flegeros]] form.
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Species;
 
 #[Gloss('Flying mouse form, bat form.')]
 #[NeuterName('Flegermuson')]
 #[MasculineMonsterName('Flegermusor')]
 #[FeminineMonsterName('Flegermusess')]
-class Flegermusos extends Musos
-{
-    public static function rarity(): float
-    {
-        return parent::rarity() * 20;
-    }
+#[Rarity(Musos::class, Flegeros::class)]
+#[SizeDelta(Musos::class, Flegeros::class)]
 
-    public static function sizeDelta(): float
+class Flegermusos extends BaseTaxon
+{
+    use Species;
+
+    public static function genus(): string
     {
-        return parent::sizeDelta() + 0.25;
+        return 'Musos';
     }
 }

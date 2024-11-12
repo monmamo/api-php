@@ -8,32 +8,29 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Genus;
 
 // All: [[Long Tail]], [[Anterior Hooves]], [[Posterior Hooves]], [[Dual Cranial Horns]]
 // Females:  [[Milking]]
 
-// ,Ungulos ,Capros ,
-// . Cow-forms.
-// Alternatives:
-// Masculine: Bovor
-// Feminine: Bovess, Boquin
-
-// [[genus]] of phylum [[Ungulos]]
 #[Gloss('Cow-forms.')]
 #[NeuterName('Bovon')]
 #[MasculineAnthropeName('Bovander')]
 #[MasculineMonsterName('Bovor')]
 #[FeminineAnthropeName('Bovquin')]
 #[FeminineMonsterName('Bovess')]
-class Bovos extends Ungulos
-{
-    public static function rarity(): float
-    {
-        return Ungulos::rarity() / Ungulos::subtaxons()[self::class];
-    }
+#[Rarity(Ungulos::class)]
+#[SizeDelta(Ungulos::class, 0.7)]
 
-    public static function sizeDelta(): float
+class Bovos extends BaseTaxon
+{
+    use Genus;
+
+    public static function phylum(): string
     {
-        return Ungulos::sizeDelta() + 0.7;
+        return 'Ungulos';
     }
 }

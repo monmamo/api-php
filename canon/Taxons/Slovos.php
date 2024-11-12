@@ -9,10 +9,14 @@ use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
 use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Genus;
 
 // [[genus]].
 
-#[Rarity(400)]
+#[Rarity(Silvadys::class, Pronos::class)]
+#[SizeDelta(Silvadys::class, Pronos::class, -0.2)]
 #[Gloss('Sloth-forms, anteater-forms.')]
 #[NeuterName('Slovon')]
 #[MasculineAnthropeName('Slovander')]
@@ -21,8 +25,10 @@ use Canon\Taxons\Attributes\Rarity;
 #[FeminineMonsterName('Slovess')]
 class Slovos extends BaseTaxon
 {
-    public static function rarity(): float
+    use Genus;
+
+    public static function phylum(): string
     {
-        return 0; //TODO
+        return 'Silvadys';
     }
 }

@@ -16,7 +16,6 @@ $next = $card_number_object->makeNext();
 // if (isset($_REQUEST['png'] )) {
 //      \header('Content-Type: image/png');
 //      \header('Content-Disposition: attachment; filename="'.$card_number.'.png"');
-//         echo   \Spatie\Browsershot\Browsershot::html($view)->screenshot();
 //     return;
 // }
 

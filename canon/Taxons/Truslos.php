@@ -2,34 +2,33 @@
 
 namespace Canon\Taxons;
 
+use App\GeneralAttributes\Gloss;
 use Canon\Taxons\Attributes\FeminineAnthropeName;
 use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Genus;
 
+// species of genus Hominos.
+
+#[Gloss('Troll-forms.')]
 #[NeuterName('Truslon')]
 #[MasculineAnthropeName('Truslander')]
 #[MasculineMonsterName('Truslor')]
-#[FeminineAnthropeName('Truslquin')]
+#[FeminineAnthropeName('Truselquin')]
 #[FeminineMonsterName('Trusless')]
+#[Rarity(Hominos::class, 30)]
+#[SizeDelta(Hominos::class, -0.3)]
 class Truslos extends BaseTaxon
 {
-    public static function rarity(): float
+    use Genus;
+
+    public static function phylum(): string
     {
-        return 0; //TODO
+        return 'Hominos';
     }
 }
-
-// species of genus Hominos. Troll forms.
-// [[genus]]
-// ,Hominos ,
-// [[Species]] of genus [[Hominos]]. Troll forms.
-// Alternates:
-// Masculine: Trusell
-// Feminine: Trusless
-// Attributes:
-
-// Excludes:
-// rarity: {{calc: ((uuUwRY2_d)) * 30}}
-// size delta: ((qsC8F8tTR)) - 0.3

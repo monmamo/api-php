@@ -8,23 +8,25 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Genus;
 
-// [[genus]] of phylum [[Rodentos]] with [[Quilos]]
 #[NeuterName('Hystricon')]
 #[MasculineAnthropeName('Hystricander')]
 #[MasculineMonsterName('Hystricor')]
 #[FeminineAnthropeName('Hystricquin')]
 #[FeminineMonsterName('Hystrix')]
-#[Gloss('Porcupine forms.')]
-class Hystricos extends Rodentos
+#[Gloss('Quilled-rodent forms.')]
+#[Rarity(Rodentos::class, Quilos::class, 2)]
+#[SizeDelta(Rodentos::class, Quilos::class)]
+class Hystricos extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return Rodentos::rarity() * 10;
-    }
+    use Genus;
 
-    public static function sizeDelta(): float
+    public static function phylum(): string
     {
-        return 0.3;
+        return 'Rodentos';
     }
 }

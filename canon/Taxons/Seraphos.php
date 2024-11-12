@@ -9,10 +9,9 @@ use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
 use Canon\Taxons\Attributes\Rarity;
 use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Genus;
 
-// [[Species]] of genus [[Hominos]] with  [[Angelos]].
-// Compare [[Cherubos]], [[Satanos]].
-// Attributes:
 // Requires: [[Angel Wings]]
 
 // Emotional Strength:: 100
@@ -24,18 +23,14 @@ use Canon\Taxons\Attributes\SizeDelta;
 #[MasculineMonsterName('Seraphor')]
 #[FeminineAnthropeName('Seraphquin')]
 #[FeminineMonsterName('Seraphess')]
-#[Rarity('winged-morphotypes')]
-#[SizeDelta(Hominos::class, Angelos::class, 0.5)]
-
+#[SizeDelta(Hominos::class, Angelos::class, 2)]
+#[Rarity(Hominos::class, Angelos::class)]
 class Seraphos extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return Hominos::rarity() * 20;
-    }
+    use Genus;
 
-    public static function sizeDelta(): float
+    public static function phylum(): string
     {
-        return Hominos::sizeDelta() + Angelos::sizeDelta();
+        return 'Hominos';
     }
 }

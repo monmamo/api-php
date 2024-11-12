@@ -10,6 +10,8 @@ use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
 use Canon\Taxons\Attributes\Rarity;
 use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\WingedMorphotype;
 
 // winged morphotype::
 // prompt: angel mammal monster of weird zoology
@@ -22,4 +24,7 @@ use Canon\Taxons\Attributes\SizeDelta;
 #[FeminineMonsterName('Angeless')]
 #[Rarity('winged-morphotypes')]
 #[SizeDelta(0.3)]
-class Angelos extends BaseTaxon {}
+class Angelos extends BaseTaxon
+{
+    use WingedMorphotype;
+}

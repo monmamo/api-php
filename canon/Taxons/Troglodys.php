@@ -2,24 +2,24 @@
 
 namespace Canon\Taxons;
 
+use App\GeneralAttributes\Gloss;
+use Canon\Taxons\Attributes\FeminineAnthropeName;
+use Canon\Taxons\Attributes\FeminineMonsterName;
+use Canon\Taxons\Attributes\MasculineAnthropeName;
+use Canon\Taxons\Attributes\MasculineMonsterName;
+use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Phylum;
+
+#[Gloss('Anthropes and monsters that are generally know for or associated with living in caves.')]
+#[NeuterName('Troglodyn')]
+#[MasculineAnthropeName('Troglodyander')]
+#[MasculineMonsterName('Troglodyr')]
+#[FeminineAnthropeName('Troglodyquin')]
+#[FeminineMonsterName('Troglodyss')]
+#[Rarity('phyla')]
 class Troglodys extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 0; //TODO
-    }
+    use Phylum;
 }
-
-// species of genus Hominos. Cave-dwelling hominid.
-// [[genus]]
-// ,Hominos ,
-// [[Species]] of genus [[Hominos]]. Cave-dwelling hominid.
-// Alternates:
-// Masculine:
-// Troglodyr
-// Feminine:
-// Troglodyss
-// Attributes:
-
-// rarity: {{calc: ((uuUwRY2_d)) * 5}}
-// size delta: ((qsC8F8tTR))

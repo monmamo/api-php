@@ -7,6 +7,9 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Power;
 
 // Fire.
 
@@ -30,10 +33,8 @@ use Canon\Taxons\Attributes\NeuterName;
 #[MasculineMonsterName('Pyror')]
 #[FeminineAnthropeName('Pyrquin')]
 #[FeminineMonsterName('Pyress')]
+#[Rarity('powers')]
 class Pyros extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return 75;
-    }
+    use Power;
 }

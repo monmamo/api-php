@@ -8,25 +8,24 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\Genus;
 
-// Sheep-forms.
-// [[genus]] of phylum [[Ungulos]]
-
-#[Gloss('Cow-forms.')]
+#[Gloss('Sheep-forms.')]
 #[NeuterName('Dibon')]
 #[MasculineAnthropeName('Dibander')]
 #[MasculineMonsterName('Dibor')]
 #[FeminineAnthropeName('Dipquin')]
 #[FeminineMonsterName('Dibess')]
+#[Rarity(Ungulos::class)]
+#[SizeDelta(Ungulos::class, 0.7)]
 class Dibos extends Ungulos
 {
-    public static function rarity(): float
-    {
-        return Ungulos::rarity() / Ungulos::subtaxons()[self::class];
-    }
+    use Genus;
 
-    public static function sizeDelta(): float
+    public static function phylum(): string
     {
-        return Ungulos::sizeDelta() + 0.1;
+        return 'Ungulos';
     }
 }

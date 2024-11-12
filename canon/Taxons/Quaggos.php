@@ -2,25 +2,29 @@
 
 namespace Canon\Taxons;
 
+use App\GeneralAttributes\Gloss;
 use Canon\Taxons\Attributes\FeminineAnthropeName;
 use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Species;
 
-#[NeuterName('Zebron')]
-#[MasculineAnthropeName('Zebrander')]
-#[MasculineMonsterName('Zebror')]
-#[FeminineAnthropeName('Zebrquin')]
-#[FeminineMonsterName('Zebress')]
+#[Gloss('Zebra-forms.')]
+#[NeuterName('Quaggon')]
+#[MasculineAnthropeName('Quaggander')]
+#[MasculineMonsterName('Quaggor')]
+#[FeminineAnthropeName('Quaggquin')]
+#[FeminineMonsterName('Quaggess')]
+#[Rarity(Equos::class, 1000)]
 class Quaggos extends BaseTaxon
 {
-    public static function rarity(): float
+    use Species;
+
+    public static function genus(): string
     {
-        return 0; //TODO
+        return 'Equos';
     }
 }
-
-// Zebra forms
-
-// 100000,Equos ,zebra,Equos  x 10000

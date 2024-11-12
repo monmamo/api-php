@@ -8,12 +8,12 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
-
-// [[genus]] of phylum [[Rodentos]] with [[Pygmys]].
-// The most common [[genus]] of [[Pygmys]] [[Rodentos]].
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\Genus;
 
 // image generation prompt:: mouselike, mouseform, small rodent
-// image tags:: mouse
 
 #[Gloss('Mouse-forms, small rodents.')]
 #[NeuterName('Muson')]
@@ -21,15 +21,14 @@ use Canon\Taxons\Attributes\NeuterName;
 #[MasculineMonsterName('Musor')]
 #[FeminineAnthropeName('Musquin')]
 #[FeminineMonsterName('Musess')]
+#[Rarity(Rodentos::class, Pygmys::class, 2)]
+#[SizeDelta(Rodentos::class, Pygmys::class, -0.2)]
 class Musos extends BaseTaxon
 {
-    public static function rarity(): float
-    {
-        return Rodentos::sizeDelta() * Pygmys::rarity() * 2;
-    }
+    use Genus;
 
-    public static function sizeDelta(): float
+    public static function phylum(): string
     {
-        return Rodentos::sizeDelta() + Pygmys::sizeDelta() - 0.2;
+        return 'Rodentos';
     }
 }

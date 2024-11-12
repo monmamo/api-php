@@ -10,6 +10,8 @@ use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
 use Canon\Taxons\Attributes\Rarity;
 use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\BaseTaxon;
+use Canon\Taxons\Types\WingedMorphotype;
 
 // morphotype::
 
@@ -19,6 +21,9 @@ use Canon\Taxons\Attributes\SizeDelta;
 #[MasculineMonsterName('Zybubor')]
 #[FeminineAnthropeName('Zybubquin')]
 #[FeminineMonsterName('Zybubess')]
-#[Rarity(20000)]
-#[SizeDelta(-1.5)]
-class Zybubos extends BaseTaxon {}
+#[Rarity('winged-morphotypes')]
+#[SizeDelta(-1)]
+class Zybubos extends BaseTaxon
+{
+    use WingedMorphotype;
+}

@@ -8,11 +8,11 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
+use Canon\Taxons\Attributes\SizeDelta;
+use Canon\Taxons\Types\Species;
 
-// [[Species]] of genus [[]] with [[Pronos]] form.
-// Attributes:
-// effect:: Tetrapod, Fur, Paw.
-// [[Alertness]]
+// Fur, Paw. [[Alertness]]
 
 // image generation prompt:: wolflike, wolfform
 
@@ -22,15 +22,15 @@ use Canon\Taxons\Attributes\NeuterName;
 #[FeminineAnthropeName('Lupquin')]
 #[FeminineMonsterName('Lupess')]
 #[Gloss('Wolf-forms. Resembles a wolf or has wolflike properties.')]
+#[Rarity(Canos::class, Pronos::class)]
+#[SizeDelta(Canos::class, Pronos::class, 0.1)]
+
 class Lupos extends Canos
 {
-    public static function rarity(): float
-    {
-        return Canos::rarity() * 3;
-    }
+    use Species;
 
-    public static function sizeDelta(): float
+    public static function genus(): string
     {
-        return Canos::sizeDelta() + 0.2;
+        return 'Canos';
     }
 }

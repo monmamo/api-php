@@ -6,22 +6,14 @@ use Illuminate\Support\Str;
 
 $class = "\\Canon\\Taxons\\$slug";
 if (!class_exists($class)) abort(404);
-
-$class_attribute = function(string $fqn) use ($class) {
-    static $class_attributes;
-    $class_attributes ??= new \ReflectionClass($class);
-    $attributes = $class_attributes->getAttributes($fqn);
-    if (count($attributes) == 0) return null;
-    return $attributes[0]->newInstance();
-};
 ?>
 
 <x-guest-layout>
-    <x-breadcrumbs :items="['/taxons'=>'Taxons']" />    
+    <x-breadcrumbs :items="['/taxons'=>'Taxons']" />
 
 <h1><?= Str::headline($slug) ?></h1>
 
-<p>{{ $class_attribute(\App\GeneralAttributes\Gloss::class)?->gloss }}</p>
+<p>{{ $class::gloss() }}</p>
 
 <div="container">
     <div class="row">
@@ -36,16 +28,16 @@ foreach([
     \Canon\Taxons\Attributes\MasculineMonsterName::class => 'Masculine Monster',
     \Canon\Taxons\Attributes\FeminineMonsterName::class => 'Feminine Monster'
     ] as $fqn => $label) {
-$attribute = $class_attribute($fqn);
+$attribute = $class::classAttribute($fqn);
 if (is_null($attribute)) {
     continue;
 }
 ?>
-                <tr>                
+                <tr>
                     <th scope="col"><?= $label ?></th>
                     <td><?= $attribute->name ?></td>
                     </tr>
-<?php } ?>      
+<?php } ?>
                                     </tbody>
                                 </table>
 
@@ -56,6 +48,10 @@ if (is_null($attribute)) {
 
     <table class="table">
         <tbody>
+        <tr>
+                <th scope="col">Type</th>
+                <td><?=  $class::typeString() ?></td>
+            </tr>
             <tr>
                 <th scope="col"><a href="/concepts/Rarity">Rarity</a></th>
                 <td>1 in <?= number_format( $class::rarity()) ?></td>
