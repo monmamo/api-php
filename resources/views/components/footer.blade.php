@@ -7,7 +7,7 @@
                     </a>
                     <ul class="list-unstyled small">
                         <li>Ponchatoula, Louisiana, U.S.A.</li>
-                        <li class="mt-2"><a href="/people">People</a> &bull; <a href="/contact">Contact</a> <!--&bull; <a href="/credits">Credits</a --></li>
+                        <li class="mt-2"><a href="/people">People/Credits</a> &bull; <a href="/contact">Contact</a> <!--&bull; <a href="/credits">Credits</a --></li>
                     </ul>
                 </div>
                 <div class="col-sm-1 col-md-1 col-lg-2 mb-3">

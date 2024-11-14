@@ -143,7 +143,6 @@ trait PipelineFunctionality
 
     /**
      * Compare self::then.
-     * TODO If there is a context, propagate it.
      *
      * @group variadic
      *

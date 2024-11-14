@@ -12,7 +12,7 @@ return [
     'flavor-text' => [],
     'background' => \view('Catastrophe.background'),
     'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
+
 <text y="500">
 <x-card.normalrule>Each player discards 3 cards from the top of his Library.</x-card.normalrule>
 <x-card.normalrule>If the Place card on the Battlefield is a Venue or Facility card, discard it.</x-card.normalrule>

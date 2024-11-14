@@ -76,9 +76,8 @@ const serializeAsXML = $e => (new XMLSerializer()).serializeToString($e)
 
 const encodeAsUTF8 = s => `${dataHeader},${encodeURIComponent(s)}`
 
-const convertSVGtoImg = async e => {
+const convertSVGtoImg = format => async e => {
   const $btn = e.target
-  const format = $btn.dataset.format ?? 'png'
 
   destroyChildren($holder)
 
@@ -99,7 +98,7 @@ const convertSVGtoImg = async e => {
 
 const buttons = [...document.querySelectorAll('[data-format]')]
 for (const btn of buttons) {
-  btn.onclick = convertSVGtoImg
+  btn.onclick = convertSVGtoImg(btn.dataset.format)
 }
     </script>
     @stack('debug')

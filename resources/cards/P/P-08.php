@@ -13,7 +13,7 @@ return [
     'flavor-text' => [],
     'background' => \view('Environment.background'),
     'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
+
 <x-card.cardrule height="0" >
 <x-card.normalrule>Has no effect in an Enclosed Venue.</x-card.normalrule>
 <x-card.normalrule>Resolution phase: Add 1d6 damage to any damage caused by a Water or Fire mana card.</x-card.normalrule>

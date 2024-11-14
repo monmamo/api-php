@@ -12,7 +12,7 @@ return [
     'flavor-text' => ['Just like an old movie theater.'],
     'background' => \view('Environment.background'),
     'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
+
 <x-card.cardrule height="315" >
 <x-card.smallrule></x-card.smallrule>
 <x-card.normalrule>Upkeep phase: This card may be removed by</x-card.normalrule>

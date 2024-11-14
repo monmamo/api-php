@@ -12,7 +12,7 @@ return [
     'flavor-text' => [],
     'background' => \view('Bane.background'),
     'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
+
 <text y="500">
 <x-card.normalrule>You may play this Bane only with an Attack.</x-card.normalrule>
     <x-card.normalrule>Limit 2 per Monster.</x-card.normalrule>

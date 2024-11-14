@@ -97,7 +97,7 @@ trait DefaultCardAttributes
      */
     public function hero(): Renderable
     {
-        foreach ([SvgHeroImage::class, LocalHeroImage::class, ConceptIconHeroImage::class] as $class_fqn) {
+        foreach ([LocalHeroImage::class, ConceptIconHeroImage::class] as $class_fqn) {
             $attributes = $this->getAttributes($class_fqn);
 
             if (\count($attributes) > 0) {

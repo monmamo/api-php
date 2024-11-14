@@ -25,7 +25,7 @@ use Canon\Taxons\Types\BodyCoveringMorphotype;
 #[MasculineMonsterName('Quilor')]
 #[FeminineAnthropeName('Quilquin')]
 #[FeminineMonsterName('Quiless')]
-#[Rarity(2000)]
+#[Rarity('body-covering')]
 #[SizeDelta(0.2)]
 class Quilos extends BaseTaxon
 {

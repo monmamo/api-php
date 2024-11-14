@@ -1,17 +1,5 @@
 <?php
-
-$data = config('decks.' . $id);
-
-if ($data === null) {
-    exit("Error loading configuration for deck {$id}.");
-}
-
-\extract($data);
-
-$total_count = 0;
-foreach ($cards as $card_number => $count) {
-    $total_count += $count;
-}
+$deck = new \Canon\Deck($id);
 
 ?>
 <x-guest-layout>
@@ -26,7 +14,7 @@ foreach ($cards as $card_number => $count) {
 
         <ul class="nav">
             <li class="nav-item">
-                Contains <?php echo $total_count; ?> cards. Click on a card name to view its details.
+                Contains <?php echo $deck->count(); ?> cards. Click on a card name to view its details.
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/cards/deck/{{$id}}/print">Print This Deck</a>
@@ -39,7 +27,7 @@ foreach ($cards as $card_number => $count) {
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" hx-boost="true" hx-target="#right-section" hx-swap="innerHTML">
 
                         <?php
-                        foreach ($cards as $card_number => $count) {
+                        foreach ($deck->distinctCards as $card_number => $card_info) {
                             $card_info = \App\Card\make($card_number);
                         ?>
                             <li><a href="/cards/card/<?php echo $card_number; ?>/svg" class="card-link link-body-emphasis d-inline-flex text-decoration-none rounded"><?php echo $count; ?> <?php echo $card_number; ?> <?php echo $card_info->name() ?? ''; ?> </a></li>

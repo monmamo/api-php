@@ -13,7 +13,7 @@ return [
     'flavor-text' => [''],
     'background' => \view('Environment.background'),
     'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
+
 <x-card.cardrule height="95" >
 <x-card.smallrule></x-card.smallrule>
 <x-card.normalrule>Resolution phase: For each Attack where the Defense does not prevent all damage, add 3 damage.</x-card.normalrule>

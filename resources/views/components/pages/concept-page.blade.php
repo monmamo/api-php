@@ -2,6 +2,7 @@
 <x-scripts.popover />
 
 <?php
+
 use Illuminate\Support\Str;
 
 $path = resource_path("concepts/$slug/definition.html");
@@ -12,25 +13,27 @@ $icon_credit_path = resource_path("concepts/$slug/icon-credit.html");
 ?>
 
 <x-guest-layout>
-    <x-breadcrumbs :items="['/concepts'=>'Concepts']" />    
-        
-        <?php
-if(file_exists($icon)) {
-    ?>    
-<x-svg size="256" viewBox="0 0 512 512"><g fill="#000000"><?= file_get_contents($icon) ?></g></x-svg>
-<?php
-}
-?>
+    <x-breadcrumbs :items="['/concepts'=>'Concepts']" />
 
-<h1><?= Str::headline($slug) ?></h1>
-<? 
-echo file_get_contents($path);
-if(file_exists($icon)&&file_exists($icon_credit_path)) {
+    <?php
+    if (file_exists($icon)) {
     ?>
-<p>Icon credit: <?= file_get_contents($icon_credit_path) ?></p>
-     <?php
-}
-?>
+        <x-svg size="256" viewBox="0 0 512 512">
+            <g fill="#000000"><?= file_get_contents($icon) ?></g>
+        </x-svg>
+    <?php
+    }
+    ?>
 
-{{$slot}}
+    <h1><?= Str::headline($slug) ?></h1>
+    <?php
+    echo file_get_contents($path);
+    if (file_exists($icon) && file_exists($icon_credit_path)) {
+    ?>
+        <p>Icon credit: <?= file_get_contents($icon_credit_path) ?></p>
+    <?php
+    }
+    ?>
+
+    {{$slot}}
 </x-guest-layout>

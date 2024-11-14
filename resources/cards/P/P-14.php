@@ -13,7 +13,7 @@ return [
     'flavor-text' => [],
     'background' => \view('Draw.background'),
     'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
+
 <x-card.cardrule height="55" >
 <x-card.normalrule>Search your Library for a Place card, reveal it, and put it in your hand. Then shuffle your Library.</x-card.normalrule>
 </x-card.cardrule>

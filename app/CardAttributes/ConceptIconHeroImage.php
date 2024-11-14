@@ -2,8 +2,11 @@
 
 namespace App\CardAttributes;
 
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Support\Facades\Blade;
+
 #[\Attribute(\Attribute::TARGET_CLASS)]
-class ConceptIconHeroImage extends SvgHeroImage
+class ConceptIconHeroImage implements Renderable
 {
     /**
      * Constructor.
@@ -16,9 +19,18 @@ class ConceptIconHeroImage extends SvgHeroImage
      */
     public function __construct(
         public string $slug,
-    ) {
-        parent::__construct(
-            code: \view($this->slug . '.icon'),
+    ) {}
+
+    /**
+     * @group nonary
+     */
+    public function render()
+    {
+        return Blade::render(
+            '<x-card.hero-svg><g fill="#ffffff" fill-opacity="1">{{ \view($slug . \'.icon\') }}</g></x-card.hero-svg>',
+            [
+                'slug' => $this->slug,
+            ],
         );
     }
 }

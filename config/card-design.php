@@ -6,8 +6,12 @@ $icon_size = 512;
 
 $dots_per_inch = 300;
 
-$width = $dots_per_inch * 2.5;
-$height = $dots_per_inch * 3.5;
+$width_inches = 2.5;
+$height_inches = 3.5;
+$physical = ['unit' => 'in', 'width' => $width_inches, 'height' => $height_inches];
+
+$width = $dots_per_inch * $width_inches;
+$height = $dots_per_inch * $height_inches;
 
 $primary_rule_height = 35;
 $secondary_rule_height = 30;
@@ -74,7 +78,7 @@ $concept = [
     'topline' => $titlebox['y'],
 ];
 
-return \compact('height', 'width', 'icon', 'trimbox', 'viewbox', 'titlebox', 'hero', 'primary_rule_height', 'secondary_rule_height', 'concept');
+return \compact('physical', 'height', 'width', 'icon', 'trimbox', 'viewbox', 'titlebox', 'hero', 'primary_rule_height', 'secondary_rule_height', 'concept');
 [
     'CARD_TITLE_FONT_SIZE' => 48,
     'CARD_TITLE_FONT_COLOR' => '#000000',

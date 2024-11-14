@@ -28,5 +28,3 @@ class(__FILE__) implements CardComponents
 HTML;
     }
 };
-
-//     <image x="0" y="0" class="hero" href="@local(TODO.png)" />

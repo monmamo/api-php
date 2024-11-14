@@ -20,7 +20,7 @@ return new
 #[Concept('Integrity', '4')]
 #[ImageCredit('Icon by InYoung Park from Noun Project')]
 #[Prerequisites(y: 345, lines: [PREREQUISITE, 'You may choose to make this card Male', 'when you put it on the Battlefield.'])]
-// #[SvgHeroImage(,code:'')] #[IsGeneratedImage] #[\App\CardAttributes\LocalHeroImage('A188.jpg')]
+// #[\App\CardAttributes\LocalHeroImage('A188.jpg')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

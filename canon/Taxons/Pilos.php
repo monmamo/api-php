@@ -7,6 +7,7 @@ use Canon\Taxons\Attributes\FeminineMonsterName;
 use Canon\Taxons\Attributes\MasculineAnthropeName;
 use Canon\Taxons\Attributes\MasculineMonsterName;
 use Canon\Taxons\Attributes\NeuterName;
+use Canon\Taxons\Attributes\Rarity;
 use Canon\Taxons\Types\BaseTaxon;
 use Canon\Taxons\Types\BodyCoveringMorphotype;
 
@@ -26,6 +27,7 @@ use Canon\Taxons\Types\BodyCoveringMorphotype;
 #[MasculineMonsterName('Pilor')]
 #[FeminineAnthropeName('Pilquin')]
 #[FeminineMonsterName('Piless')]
+#[Rarity('body-covering')]
 class Pilos extends BaseTaxon
 {
     use BodyCoveringMorphotype;

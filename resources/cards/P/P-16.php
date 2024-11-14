@@ -12,7 +12,7 @@ return [
     'flavor-text' => [''],
     'background' => \view('Environment.background'),
     'content' => <<<'HTML'
-<image x="0" y="0" class="hero" href="@local(TODO.png)"  />
+
 <x-card.phaserule type="Resolution" height="140"><text>
 <x-card.normalrule>For each Skill that is declared for a </x-card.normalrule>
 <x-card.normalrule>Monster to use, roll 1d4. </x-card.normalrule>

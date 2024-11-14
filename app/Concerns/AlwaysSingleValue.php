@@ -64,8 +64,6 @@ trait AlwaysSingleValue
     /**
      * Retrieves the item at the given offset.
      *
-     * TODO Return a ThrowingOption instead.
-     *
      * @implements \ArrayAccess::offsetGet
      * @group accessor
      * @group accessor-by-key

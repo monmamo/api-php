@@ -698,123 +698,19 @@ function render(...$pieces): string
  */
 function html(...$pieces): Htmlable
 {
-    if (\count($pieces) === 0) {
-        return new class() implements Htmlable, Renderable
-        {
-            public function render(): string
-            {
-                return '';
-            }
-
-            public function toHtml(): string
-            {
-                return '';
-            }
-        };
-    }
-
-    if (\count($pieces) === 1 && $pieces[0] instanceof Htmlable) {
-        return $pieces[0];
-    }
-
-    if (\count($pieces) === 1 && $pieces[0] instanceof Renderable) {
-        return new class($pieces[0]) implements Htmlable, Renderable
-        {
-            /**
-             * Constructor.
-             *
-             * @group magic
-             * @group mutator
-             * @group nonary|unary|variadic
-             *
-             * @uses parent::__construct
-             *
-             * @return void
-             */
-            public function __construct(
-                protected Renderable $renderable,
-            ) {}
-
-            public function render(): string
-            {
-                return $this->renderable->render();
-            }
-
-            public function toHtml(): string
-            {
-                return $this->renderable->render();
-            }
-        };
-    }
-
-    $content = [];
-    $attributes = [];
-
-    foreach ($pieces as $index => $piece) {
-        if ($index === 0) {
-            \assert(\is_string($piece));
-            continue;
-        }
-
-        if (\is_null($piece)) {
-            continue;
-        }
-
-        if (\is_array($piece)) {
-            $attributes = \array_merge($attributes, $piece);
-            continue;
-        }
-        $content[] = $piece;
-    }
-
-    if (\count($content) === 0) {
-        return new class($pieces[0], $attributes) implements Htmlable, Renderable
-        {
-            /**
-             * Constructor.
-             *
-             * @group magic
-             * @group mutator
-             * @group nonary|unary|variadic
-             *
-             * @uses parent::__construct
-             *
-             * @return void
-             */
-            public function __construct(
-                public string $tag,
-                public array $attributes,
-            ) {}
-
-            public function render(): string
-            {
-                return $this->toHtml();
-            }
-
-            public function toHtml(): string
-            {
-                return \sprintf('<%s %s />', $this->tag, new ComponentAttributeBag($this->attributes));
-            }
-        };
-    }
-
-    return new class($pieces[0], $attributes, $content) implements Htmlable, Renderable
+    return new class($pieces) implements Htmlable, Renderable
     {
         /**
          * Constructor.
          *
          * @group magic
          * @group mutator
-         * @group nonary|unary|variadic
-         *
-         * @uses parent::__construct
+         * @group unary
          *
          * @return void
          */
         public function __construct(
-            public string $tag,
-            public array $attributes,
-            public array $content,
+            protected array $pieces,
         ) {}
 
         public function render(): string
@@ -824,17 +720,49 @@ function html(...$pieces): Htmlable
 
         public function toHtml(): string
         {
+            if (\count($this->pieces) === 0) {
+                return '';
+            }
+
+            if (\count($this->pieces) === 1) {
+                return \App\Strings\render($this->pieces[0]);
+            }
+
+            $tag = \array_shift($this->pieces);
+            \assert(\is_string($tag));
+            $content = [];
+            $attributes = [];
+
+            foreach ($this->pieces as $index => $piece) {
+                if (\is_null($piece)) {
+                    continue;
+                }
+
+                if (\is_array($piece)) {
+                    $attributes = \array_merge($attributes, $piece);
+                    continue;
+                }
+                $content[] = $piece;
+            }
+
+            if (\count($content) === 0) {
+                return \sprintf('<%s %s />', $tag, new ComponentAttributeBag($attributes));
+            }
+
             return \sprintf(
                 '<%s %s>%s</%s>',
-                $this->tag,
-                new ComponentAttributeBag($this->attributes),
-                \App\Strings\render(...$this->content),
-                $this->tag,
+                $tag,
+                new ComponentAttributeBag($attributes),
+                \App\Strings\render(...$content),
+                $tag,
             );
         }
     };
 }
 
+/**
+ * @group variadic
+ */
 function viewBox(float $width, float $height, float $x = 0, float $y = 0, float $horizontal_overflow = 0, float $vertical_overflow = 0): string
 {
     return \sprintf(
@@ -844,4 +772,17 @@ function viewBox(float $width, float $height, float $x = 0, float $y = 0, float 
         $width * (1 + 2 * $horizontal_overflow),
         $height * (1 + 2 * $vertical_overflow),
     );
+}
+
+/**
+ * @group binary
+ */
+function rarity(float $value, bool $brief = false): string
+{
+    return match (true) {
+        $value >= 1e9 => '1 in ' . \number_format($value / 1e9, 1) . ($brief ? 'B' : ' billion'),
+        $value >= 1e6 => '1 in ' . \number_format($value / 1e6, 1) . ($brief ? 'M' : ' million'),
+        $value > 10 => '1 in ' . \number_format($value),
+        $value >= 1 => \number_format(100 / $value) . '%',
+    };
 }

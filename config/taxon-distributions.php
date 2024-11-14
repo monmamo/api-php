@@ -81,8 +81,8 @@ return [
     'body-covering' => [
         'rarity' => 2,
         'taxons' => new DistributionArray([
-            Pilos::class => 0.5,
-            Quilos::class => 0.1,
+            Pilos::class => 0.4,
+            Quilos::class => 1e-4,
         ]),
     ],
 
