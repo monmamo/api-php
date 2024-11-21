@@ -115,9 +115,44 @@ function make($spec): CardComponents
             /**
              * @group nonary
              */
-            public function background(): ?string
+            public function background(): \Traversable
             {
-                return $this->spec['background'] ?? null;
+                if (isset($this->spec['background']))
+                    yield  $this->spec['background'];
+            }
+
+            /**
+             * @group nonary
+             */
+            public function concepts(): array
+            {
+                return $this->spec['concepts'];
+            }
+
+            public function creditColor(): string
+            {
+                return 'white';
+            }
+
+            /**
+             * @group nonary
+             */
+            public function hero(): \Illuminate\Contracts\Support\Renderable
+            {
+                return new class() implements \Illuminate\Contracts\Support\Renderable
+                {
+                    public function render()
+                    {
+                        return '';
+                    }
+                };
+            }
+            /**
+             * @group nonary
+             */
+            public function content(): \Traversable
+            {
+                yield from $this->spec['content'];
             }
 
             /**
@@ -125,7 +160,7 @@ function make($spec): CardComponents
              */
             public function cardNumber(): string
             {
-                return $this->spec['card_number'];
+                return  $this->spec['card_number'] ?? dd($this->spec);
             }
 
             /**

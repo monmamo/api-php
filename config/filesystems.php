@@ -44,7 +44,7 @@ return [
 
         'concepts' => [
             'driver' => 'local',
-            'root' => \resource_path('concepts'),
+            'root' => \base_path('canon/concepts'),
             'throw' => false,
         ],
 

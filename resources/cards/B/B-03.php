@@ -1,18 +1,23 @@
 <?php
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-return [
-    'name' => 'Hyperhidrosis',
+return new
+    #[Title('Hyperhidrosis')]
+    #[Concept('Bane')]
+    #[FlavorText('Excessive sweating.')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'concepts' => ['Bane'],
-
-    'image-prompt' => null,
-
-    'image-credit' => 'Image by USER_NAME on SERVICE',
-
-    'flavor-text' => ['Excessive sweating.'],
-    'background' => \view('Bane.background'),
-    'content' => <<<'HTML'
-
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
 <text y="500" filter="url(#solid)">
         <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
         </text >
@@ -22,5 +27,7 @@ return [
 TODO
     </text>
 </x-card.phaserule>
-HTML
-];
+
+HTML;
+}
+};

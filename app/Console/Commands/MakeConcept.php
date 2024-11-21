@@ -46,7 +46,7 @@ class MakeConcept extends Command implements PromptsForMissingInput
             $definition_html .= \App\Strings\html('p', $line)->toHtml();
         }
 
-        $disk = Storage::disk('concepts');
+        $disk = \App\Concept::disk();
         $disk->makeDirectory($slug);
         $put = function ($filename, $content) use ($disk, $slug): void {
             $disk->put(

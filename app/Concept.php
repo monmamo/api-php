@@ -53,7 +53,7 @@ class Concept implements HasIcon, Renderable
      */
     private function _file(string $name): string
     {
-        return \resource_path("concepts/{$this->type}/{$name}");
+        return self::disk()->path("{$this->type}/{$name}");
     }
 
     /**
@@ -87,7 +87,14 @@ class Concept implements HasIcon, Renderable
      */
     private function _text(string $name): Traversable
     {
+
+
         return new \ArrayIterator(\file($this->_file("{$name}.txt")));
+    }
+
+public static function disk(): \Illuminate\Contracts\Filesystem\Filesystem
+    {
+        return Storage::disk('concepts');
     }
 
     /**
@@ -95,7 +102,7 @@ class Concept implements HasIcon, Renderable
      */
     public static function all(): Traversable
     {
-        return \collect(Storage::disk('concepts')->directories())->sort();
+        return \collect(self::disk()->directories())->sort();
     }
 
     public function background()

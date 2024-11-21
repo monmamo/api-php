@@ -2,6 +2,17 @@
 
 namespace Canon;
 
+/**
+ * @group variadic
+ */
+function concepts(): \Traversable
+{
+    return \collect(\scandir(\base_path('canon/concepts')));
+};
+
+/**
+ * @group variadic
+ */
 function taxons(): \Traversable
 {
     return \collect(\scandir(\base_path('canon/Taxons')))

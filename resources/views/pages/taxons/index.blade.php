@@ -4,9 +4,7 @@ use Symfony\Component\Finder\Finder;
 
 resource_path();
 
-$taxons = collect(scandir(base_path('canon/Taxons')))
-    ->filter(fn($file) => str_ends_with($file, '.php'))
-    ->map(fn($file) => str_replace('.php', '', $file));
+$taxons = \Canon\taxons();
 
 
 // {{ route('taxons.show',['slug'=> $taxon]) }}

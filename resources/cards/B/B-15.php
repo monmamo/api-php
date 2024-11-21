@@ -1,15 +1,23 @@
 <?php
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-return [
-    'name' => 'Scurvy',
+// https://en.wikipedia.org/wiki/Rabies
 
-    'concepts' => ['Bane'],
+return new
+    #[Title('Yuck')]
+    #[Concept('Bane')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'image-prompt' => null,
-
-    'image-credit' => 'Image by USER_NAME on SERVICE',
-
-    'background' => \view('Bane.background'),
-    'content' => <<<'HTML'
-HTML
-];
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
+<x-card.cardrule lines="1" >No Consumable may be attached to or used by this Monster.</x-card.cardrule>
+HTML;}};

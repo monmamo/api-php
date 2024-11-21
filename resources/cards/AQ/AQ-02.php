@@ -8,7 +8,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Sprinkler System')]
 #[Prerequisites(['Put this card in the Battlefield.'])]
-class implements CardComponents
+class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 

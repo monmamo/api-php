@@ -3,13 +3,16 @@
 
 <?php
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
-$path = resource_path("concepts/$slug/definition.html");
+$filesystem = \App\Concept::disk();
+
+$path = $filesystem->path("$slug/definition.html");
 if (!file_exists($path)) abort(404);
 
-$icon = resource_path("concepts/$slug/icon.blade.php");
-$icon_credit_path = resource_path("concepts/$slug/icon-credit.html");
+$icon = $filesystem->path("$slug/icon.blade.php");
+$icon_credit_path = $filesystem->path("$slug/icon-credit.html");
 ?>
 
 <x-guest-layout>

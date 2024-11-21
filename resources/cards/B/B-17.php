@@ -1,15 +1,23 @@
 <?php
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-return [
-    'name' => 'Diarrhea',
+// https://en.wikipedia.org/wiki/Diarrhea
 
-    'concepts' => ['Bane'],
+return new
+    #[Title('Diarrhea')]
+    #[Concept('Bane')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'image-prompt' => null,
-
-    'image-credit' => 'Image by USER_NAME on SERVICE',
-
-    'background' => \view('Bane.background'),
-    'content' => <<<'HTML'
-HTML
-];
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
+<x-card.cardrule height="0" >For all Monsters, Attack -1d6 and Defense -1d6.</x-card.cardrule>
+HTML;}};

@@ -1,18 +1,22 @@
 <?php
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-return [
-    'name' => 'Sunken Eye',
+return new
+    #[Title('Sunken Eye')]
+    #[Concept('Bane')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'concepts' => ['Bane'],
-
-    'image-prompt' => null,
-
-    'image-credit' => 'Image by USER_NAME on SERVICE',
-
-    'flavor-text' => [],
-    'background' => \view('Bane.background'),
-    'content' => <<<'HTML'
-
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
 <text y="500">
 <x-card.normalrule>You may play this Bane only with an Attack.</x-card.normalrule>
     <x-card.normalrule>Limit 2 per Monster.</x-card.normalrule>
@@ -23,5 +27,6 @@ return [
 TODO
 </text>
 </x-card.phaserule>
-HTML
-];
+HTML;
+}
+};

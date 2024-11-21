@@ -12,7 +12,7 @@ if (View::exists("$type.card")) {
 } else {
 
     $concept = \App\Concept::make($type);
-    $rule_path = resource_path("concepts/$type/standard-rule.txt");
+    $rule_path = \App\Concept::disk()->path("$type/standard-rule.txt");
 $rule_lines = file_exists($rule_path) ? file($rule_path) : [];
 $width ??= config("card-design.viewbox.width");
 $height = max(config("card-design.concept.standard-height"),count($rule_lines)*25+25);
@@ -34,8 +34,8 @@ $height = max(config("card-design.concept.standard-height"),count($rule_lines)*2
 
 <use href="#<?= $type ?>-card" x="<?= $x ?? 0 ?>" y="<?= $y+$index*60+$rules_dy ?>" />
 
-<?php 
-if (is_null($x)) 
-$rules_dy += $height; 
+<?php
+if (is_null($x))
+$rules_dy += $height;
 }
  ?>

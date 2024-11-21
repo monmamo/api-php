@@ -82,7 +82,7 @@ enum CardSet: string
         if (\preg_match($pattern, $filename, $matches) !== 1) {
             return null;
         }
-        return \App\Card\make($matches[1]);
+        return \App\Card\make(\App\CardNumber::make($matches[1]));
     }
 
     /**

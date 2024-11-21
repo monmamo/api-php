@@ -1,12 +1,12 @@
 <?php
 \Laravel\Folio\render(function (\Illuminate\View\View $view) {
 
-    $term = trim(request('term'));
+    $term = strtolower(trim(request('term')));
 
-    $card_number_object = \App\CardNumber::make($term);
-    if (is_string($card_number_object->getSpecFilePath()))
-        return view('pages.cards.card.[card_number].index', ['card_number' => $term]);
 
+$search_list = json_decode(file_get_contents(resource_path('search.json')), true);
+if (array_key_exists($term,$search_list))
+return redirect($search_list[$term]);
 
     $results = [];
     if ($term) {

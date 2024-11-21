@@ -1,17 +1,23 @@
 <?php
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
-return [
-    'name' => 'Uncontrollable Empathy',
+return new
+    #[Title('Uncontrollable Empathy')]
+    #[Concept('Bane')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-    'concepts' => ['Bane'],
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
 
-    'image-prompt' => null,
-
-    'image-credit' => 'Image by USER_NAME on SERVICE',
-
-    'flavor-text' => [],
-    'background' => \view('Bane.background'),
-    'content' => <<<'HTML'
 
 <text y="500" filter="url(#solid)">
         <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
@@ -22,5 +28,7 @@ return [
     <x-card.normalrule>Reduce Attack damage by Size/2.</x-card.normalrule>
 </text>
 </x-card.phaserule>
-HTML
-];
+
+HTML;
+}
+};

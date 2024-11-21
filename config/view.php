@@ -5,7 +5,7 @@ use App\Enums\CardSet;
 // View Storage Paths
 $paths = [
     \resource_path('views'),
-    \resource_path('concepts'),
+    \base_path('canon/concepts'),
 ];
 
 foreach (CardSet::cases() as $set) {

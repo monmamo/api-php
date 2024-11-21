@@ -9,7 +9,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Full Heal')]
+#[Title('Allergy Relief')]
 #[Concept('Item')]
 #[Concept('Healing')]
 #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
