@@ -28,7 +28,7 @@ return new
         {
             yield <<<'HTML'
 <x-card.cardrule y="460" height="55" >
-<x-card.normalrule>Taxons: Pyros, Hystrix</x-card.normalrule>
+<x-card.normalrule>Taxons: Pyros, Hystricos</x-card.normalrule>
 </x-card.cardrule>
 
 <x-card.phaserule type="Attack" height="175">

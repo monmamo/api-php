@@ -1,23 +1,44 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImagePrompt;
+use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('UNNAMED MONSTER')]
-#[Concept('Monster')]
-class(__FILE__) implements CardComponents
-{
-    use DefaultCardAttributes;
-
-    public function content(): \Traversable
+    #[Title('Bluefairy')]
+    #[Concept('Monster')]
+    #[Concept('Male')]
+    #[Concept('DamageCapacity', 55)]
+    #[Concept('Level', 30)]
+    #[Concept('Size', 13)]
+    #[Concept('Speed', 21)]
+    #[Concept('Multiplier', 'x2')]
+    #[LocalHeroImage('hero/A-M-17.jpeg')]
+    #[IsGeneratedImage]
+    #[ImageCredit(null)]
+    class(__FILE__) implements CardComponents
     {
-        yield <<<'HTML'
-<x-card.cardrule height="0" >
-<x-card.normalrule>TODO</x-card.normalrule>
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
+<x-card.cardrule y="460" height="55" >
+<x-card.normalrule>Taxons: Carmos</x-card.normalrule>
 </x-card.cardrule>
+
+<x-card.phaserule type="Skill" height="210">
+<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Irresistible Cuteness</text>
+<text  y="<?= config('card-design.titlebox.title-height')?>" height="105">
+<x-card.normalrule>Master, Mobster and Bystander cards</x-card.normalrule>
+<x-card.normalrule>have no effect.</x-card.normalrule>
+</text>
+</x-card.phaserule>
 HTML;
-    }
-};
+        }
+    };
