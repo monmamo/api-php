@@ -14,7 +14,7 @@ return new
 #[Concept('Attack')]
 #[ImageCredit('')]
 #[FlavorText([])]
-#[Prerequisites(['The Monster using this skill must have at least one Fire card attached.'])]
+#[Prerequisites(['The Monster using this skill must have at least one Fire (A-002) attached.'])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -23,7 +23,8 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="55" >
-<x-card.normalrule>Discard any number of Fire cards from this monster. This attack does 2d4 damage for each Fire card discarded.</x-card.normalrule>
+<x-card.normalrule>Discard any number of Fire (A-002) from this Monster. <x-card.normalrule>
+<x-card.normalrule>This attack does 2d4 @damage for each Fire (A-002) discarded.</x-card.normalrule>
 </x-card.cardrule>
 HTML;
     }

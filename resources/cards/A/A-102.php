@@ -45,7 +45,7 @@ class(__FILE__) implements CardComponents
 <x-card.phaserule type="Resolution"  y="700" height="135">
     <text >
 <x-card.normalrule>Reduce Attack damage</x-card.normalrule>
-<x-card.normalrule>done by all other Monsters by 3.</x-card.normalrule>
+<x-card.normalrule>done by all other Monsters by 1.</x-card.normalrule>
             </text>
         </x-card.phaserule>
 HTML;

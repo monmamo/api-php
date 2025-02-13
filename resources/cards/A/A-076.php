@@ -11,7 +11,6 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Scram')]
 #[Concept('Skill')]
-#[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

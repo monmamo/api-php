@@ -13,7 +13,7 @@ return new
 #[Concept('DamageCapacity', '65')]
 #[Concept('Size', '16')]
 #[Concept('Speed', '12')]
-#[Concept('Multiplier', 'x3')]
+#[Concept('Boost', '3')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

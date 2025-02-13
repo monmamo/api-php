@@ -11,7 +11,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('TITLE')]
 #[\App\Concept('Draw')]
-#[ImageCredit('IMAGE_CREDIT')]
+//#[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents
 {

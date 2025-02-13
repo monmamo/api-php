@@ -22,7 +22,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<text y="500" filter="url(#solid)">
+<text y="480" filter="url(#solid)">
 <x-card.smallrule>Limit 1 per player on Battlefield. </x-card.smallrule>
 <x-card.smallrule>You must already have a Head Coach on the Battlefield</x-card.smallrule>
 <x-card.smallrule>to put this card on the Battlefield.</x-card.smallrule>

@@ -30,7 +30,7 @@ class(__FILE__) implements CardComponents
 <x-card.smallrule>When this Monster attacks or defends</x-card.smallrule>
 <x-card.smallrule>& has 1+ Fire (A-002) attached & is </x-card.smallrule>
 <x-card.smallrule>not already consuming Fire, the defending/</x-card.smallrule>
-<x-card.smallrule>attacking Monster takes 1d6-1 damage. </x-card.smallrule>
+<x-card.smallrule>attacking Monster takes 1d6-1 @damage. </x-card.smallrule>
 <x-card.smallrule>If the defending/attacking Monster </x-card.smallrule>
 <x-card.smallrule>takes any damage, discard 1 Fire from this Monster.</x-card.smallrule>
     </text>

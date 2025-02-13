@@ -13,7 +13,7 @@ return new
 #[Concept('Catastrophe')]
 #[ImageCredit('')]
 #[FlavorText([])]
-#[Prerequisites(['This card can be played only if the Place in play is a Forest and when a Monster uses an attack that results in the discarding of Fire cards.'])]
+#[Prerequisites(['This card can be played only if the Place in play is a Forest and when a Monster uses an attack that results in the discarding of Fire (A-002)s.'])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

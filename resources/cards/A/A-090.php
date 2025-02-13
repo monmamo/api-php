@@ -20,11 +20,11 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(hero/AdobeStock_756008424.jpeg)"/>
 
-    <text y="150" filter="url(#solid)">
-<x-card.normalrule>Play a Vendor card.</x-card.normalrule>
+    <x-card.cardrule height="200" >
+    <x-card.normalrule>Play a Vendor card.</x-card.normalrule>
 <x-card.normalrule>You may ignore any requirement</x-card.normalrule>
 <x-card.normalrule>to discard cards.</x-card.normalrule>
-    </text>
+</x-card.cardrule>
 HTML;
     }
 };

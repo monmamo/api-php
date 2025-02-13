@@ -38,7 +38,7 @@ HTML;
             <text >
 <x-card.normalrule>For 1d6 turns, once</x-card.normalrule>
 <x-card.normalrule>all other effects have been resolved,</x-card.normalrule>
-<x-card.normalrule>this Monster takes 1d6 damage.</x-card.normalrule>
+<x-card.normalrule>this Monster takes 2 @damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;

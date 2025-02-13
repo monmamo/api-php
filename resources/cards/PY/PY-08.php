@@ -24,7 +24,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="55" >
-<x-card.normalrule>Draw phase:: You may attach a Fire card from your Refuse to one of your Pyros Monsters. If this succeeds, put 4 damage on that Monster.</x-card.normalrule>
+<x-card.normalrule>Draw phase:: You may attach a Fire (A-002) from your Refuse to one of your Pyros Monsters. If this succeeds, put 4 @damage on that Monster.</x-card.normalrule>
 </x-card.cardrule>
 HTML;
     }

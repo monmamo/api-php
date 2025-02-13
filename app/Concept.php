@@ -45,7 +45,7 @@ class Concept implements HasIcon, Renderable
         $spec_pieces = \explode(':', $type);
         $this->type = $spec_pieces[0];
         $this->value = $value ?? $spec_pieces[1] ?? false;
-        $this->icon_color = $this->value === false ? 'black' : '#808080';
+        $this->icon_color = $this->value === false ? 'black' : '#C0C0C0';
     }
 
     /**

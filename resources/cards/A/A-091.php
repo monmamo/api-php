@@ -15,7 +15,7 @@ return new
 #[Concept('Male')]
 #[Concept('Integrity', '1d4')]
 #[IsGeneratedImage]
-#[ImageCredit('IMAGE_CREDIT')]
+//#[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('He builds the hugest venues. Yuge ones.')]
 #[LocalBackgroundImage('A-091-full.png')]
 class(__FILE__) implements CardComponents
@@ -26,8 +26,8 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
         <text y="130" filter="url(#solid)">
-<x-card.normalrule>Discard five cards from your Hand</x-card.normalrule>
-<x-card.normalrule>to play a Venue card from your Hand.</x-card.normalrule>
+<x-card.normalrule>Discard 5 cards from your Hand</x-card.normalrule>
+<x-card.normalrule>to search your Library for a Venue card and play it immediately.</x-card.normalrule>
 </text>
 HTML;
     }

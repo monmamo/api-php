@@ -24,10 +24,15 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="2"><text>
+<text y="480" filter="url(#solid)">
+<x-card.smallrule>Limit 1 per player on Battlefield. </x-card.smallrule>
+<x-card.smallrule>You must already have a Head Coach on the Battlefield</x-card.smallrule>
+<x-card.smallrule>to put this card on the Battlefield.</x-card.smallrule>
+<x-card.smallrule>You may choose to make this card Female</x-card.smallrule>
+<x-card.smallrule>when you put it on the Battlefield.</x-card.smallrule>
 <x-card.normalrule>You may put the Defense cards you use</x-card.normalrule>
 <x-card.normalrule>at the bottom of your Library.</x-card.normalrule>
-</text></x-card.phaserule>
+</text>
 HTML;
         }
     };

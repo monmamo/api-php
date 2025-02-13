@@ -9,12 +9,15 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-    #[Title('TITLE')]
+    #[Title('Fieldworker')]
     #[Concept('Bystander')]
     #[Concept('Male')]
     #[Concept('Cumulative')]
     #[Concept('Integrity', '1')]
-    #[ImageCredit('Image by Freepik')]
+    #[Concept('DamageCapacity', 11)]
+    #[Concept('Size', 4)]
+    #[Concept('Speed', 3)]
+     #[ImageCredit('Image by Freepik')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -28,7 +31,7 @@ return new
             <x-card.smallrule>A player may have any number of Fieldworkers on the Battlefield.</x-card.smallrule>
         </text>
 
-<x-card.phaserule type="Draw" y="170" height="130">
+<x-card.phaserule type="Draw" height="130">
     <text >
         <x-card.normalrule>Draw up to 2 cards for each</x-card.normalrule>
         <x-card.normalrule>of your Fieldworkers.</x-card.normalrule>

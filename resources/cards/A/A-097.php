@@ -11,7 +11,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Frenzy')]
 #[Concept('Trait')]
-#[ImageCredit('IMAGE_CREDIT')]
+//#[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -21,9 +21,9 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.phaserule type="Resolution" y="135" height="135">
     <text >
-<x-card.normalrule>If this Monster does any damage </x-card.normalrule>
-<x-card.normalrule>while it is Confused (even to itself), </x-card.normalrule>
-<x-card.normalrule>it does 1d4 more damage.</x-card.normalrule>
+<x-card.normalrule>If this Monster does any damage</x-card.normalrule>
+<x-card.normalrule>while it is Confused (even to itself),</x-card.normalrule>
+<x-card.normalrule>it does +1d4 @damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;

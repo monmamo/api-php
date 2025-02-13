@@ -7,7 +7,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-    #[Title('99 Red Balloons')]
+    #[Title('Balloons')]
     #[Concept('Environment')]
     #[ImageCredit('Icon by Lorc on Game-Icons.net under CC BY 3.0')]
     class(__FILE__) implements CardComponents
@@ -29,9 +29,9 @@ HTML;
         {
             yield <<<'HTML'
 <x-card.cardrule :lines="2">
-            <x-card.normalrule>For each Defense, roll 1d6. </x-card.normalrule>
+<x-card.normalrule>For each Defense, roll 1d6.</x-card.normalrule>
 <x-card.normalrule>If @dieroll(1), the Defense does nothing.</x-card.normalrule>
-        </x-card.cardrule>
+</x-card.cardrule>
 HTML;
         }
     };

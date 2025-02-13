@@ -12,11 +12,11 @@ return new
     #[Title('Pyrohystrix L45')]
     #[Concept('Monster')]
     #[Concept('Female')]
-    #[Concept('DamageCapacity', 80)]
+    #[Concept('DamageCapacity', 20)]
     #[Concept('Level', 45)]
-    #[Concept('Size', 25)]
-    #[Concept('Speed', 8)]
-    #[Concept('Multiplier', 'x4')]
+    #[Concept('Size', 6)]
+    #[Concept('Speed', 2)]
+    #[Concept('Boost', '4')]
     #[LocalHeroImage('hero/A-M-12.jpeg')]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
@@ -34,7 +34,7 @@ return new
 <x-card.phaserule type="Attack" height="175">
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Hot Quills</text>
 <text  y="<?= config('card-design.titlebox.title-height')?>" height="70">
-<x-card.normalrule>Does 6d6 damage.</x-card.normalrule>
+<x-card.normalrule>Does 3d6 @damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 

@@ -7,8 +7,8 @@ use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
-if (!\defined('PREREQUISITE')) {
-    \define('PREREQUISITE', \trans_choice('rules.player-limit', 1));
+if (!\defined('PLAYER_LIMIT_PREREQUISITE')) {
+    \define('PLAYER_LIMIT_PREREQUISITE', \trans_choice('rules.player-limit', 1));
 }
 
 return new
@@ -17,7 +17,7 @@ return new
 #[Concept('Female')]
 #[Concept('Integrity', '4')]
 #[ImageCredit('Icon by InYoung Park from Noun Project')]
-#[Prerequisites(y: 345, lines: [PREREQUISITE, 'You may choose to make this card Male', 'when you put it on the Battlefield.'])]
+#[Prerequisites(y: 345, lines: [PLAYER_LIMIT_PREREQUISITE, 'You may choose to make this card Male', 'when you put it on the Battlefield.'])]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -41,12 +41,12 @@ SVG;
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.phaserule type="Resolution" height="130">
-        <text >
-    <x-card.normalrule>If a Monster did not attack in your</x-card.normalrule>
-        <x-card.normalrule>turn, you may remove 2d6 damage </x-card.normalrule>
-        <x-card.normalrule>and any Bane cards from it.</x-card.normalrule>
-    </text>
+<x-card.phaserule type="Resolution" height="130">
+<text >
+<x-card.normalrule>For each of your Monsters that did not attack,</x-card.normalrule>
+<x-card.normalrule>you may restore 2 @damage or</x-card.normalrule>
+<x-card.normalrule>remove one Bane card from it.</x-card.normalrule>
+</text>
 </x-card.phaserule>
 HTML;
         }

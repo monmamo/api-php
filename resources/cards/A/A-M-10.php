@@ -13,11 +13,11 @@ return new
     #[Title('Red')]
     #[Concept('Monster')]
     #[Concept('Male')]
-    #[Concept('DamageCapacity', 65)]
+    #[Concept('DamageCapacity', 14)]
     #[Concept('Level', 35)]
-    #[Concept('Size', 18)]
-    #[Concept('Speed', 8)]
-    #[Concept('Multiplier', 'x3')]
+    #[Concept('Size', 5)]
+    #[Concept('Speed', 2)]
+    #[Concept('Boost', '3')]
     #[LocalHeroImage('hero/A-M-10.jpeg')]
     #[ImagePrompt('red panda of weird zoology shooting fire from its mouth')]
     #[IsGeneratedImage]
@@ -37,7 +37,7 @@ return new
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Flaming Tail</text>
 <text  y="<?= config('card-design.titlebox.title-height')?>" height="105">
 <x-card.normalrule>Once per turn, you may search your</x-card.normalrule>
-<x-card.normalrule>Library or Discard for a Fire Mana</x-card.normalrule>
+<x-card.normalrule>Library or Discard for a Fire (A-002)</x-card.normalrule>
 <x-card.normalrule>and attach it to this Monster.</x-card.normalrule>
 </text>
 </x-card.phaserule>

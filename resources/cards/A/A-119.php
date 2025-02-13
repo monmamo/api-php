@@ -27,7 +27,7 @@ return new
 <x-card.phaserule type="Upkeep"  lines="3"><text >
 <x-card.normalrule>Discard any number of cards from</x-card.normalrule>
 <x-card.normalrule>your hand. For each card you</x-card.normalrule>
-<x-card.normalrule>discarded remove 5 damage from 1 Monster.</x-card.normalrule>
+<x-card.normalrule>discarded restore 2 @damage to 1 Monster.</x-card.normalrule>
 </text></x-card.phaserule>
 HTML;
         }

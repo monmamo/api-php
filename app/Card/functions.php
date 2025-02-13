@@ -35,6 +35,7 @@ function makeNewCard(
     array $prerequisites = [],
     array $secondary_lines = [],
     array $primary_lines = [],
+    ?string $icon = null,
     ?string $background = null,
     ?string $image_credit = null,
 ): \Traversable {
@@ -65,6 +66,8 @@ function makeNewCard(
     }
 
     yield 'public function content():\\Traversable{yield <<<HTML';
+
+    if (is_string($icon)) yield $icon;
 
     if (!$no_content) {
         $height = \count($secondary_lines) * 40 + \count($primary_lines) * 55;

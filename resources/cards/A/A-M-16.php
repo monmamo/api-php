@@ -13,11 +13,11 @@ return new
     #[Title('Greybeast')]
     #[Concept('Monster')]
     #[Concept('Male')]
-    #[Concept('DamageCapacity', 85)]
+    #[Concept('DamageCapacity', 22)]
     #[Concept('Level', 42)]
-    #[Concept('Size', 20)]
-    #[Concept('Speed', 8)]
-    #[Concept('Multiplier', 'x3')]
+    #[Concept('Size', 5)]
+    #[Concept('Speed', 2)]
+    #[Concept('Boost', '3')]
     #[LocalHeroImage('hero/A-M-16.png')]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
@@ -37,7 +37,7 @@ return new
 <text  y="<?= config('card-design.titlebox.title-height')?>" height="105">
 <x-card.normalrule>Every Monster that does not use an</x-card.normalrule>
 <x-card.normalrule>Attack, Defense or Skill during the turn</x-card.normalrule>
-<x-card.normalrule>takes 3 damage.</x-card.normalrule>
+<x-card.normalrule>loses 3 @damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;

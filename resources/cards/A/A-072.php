@@ -15,6 +15,9 @@ return new
 #[Concept('Mobster')]
 #[Concept('Male')]
 #[Concept('Integrity', '1d4')]
+#[Concept('DamageCapacity', 14)]
+#[Concept('Size', 5)]
+#[Concept('Speed', 4)]
 #[IsGeneratedImage]
 #[LocalHeroImage('A072.png')]
 #[Prerequisites(y: 460, lines: ['Limit 1 per player on the Battlefield.'])]
@@ -29,9 +32,9 @@ class(__FILE__) implements CardComponents
 <text >
 <x-card.normalrule>You may choose a random card</x-card.normalrule>
 <x-card.normalrule>from an opponent's hand.</x-card.normalrule>
-<x-card.normalrule>The opponent  must reveal that card to.</x-card.normalrule>
+<x-card.normalrule>The opponent must reveal that card to</x-card.normalrule>
 <x-card.normalrule>all players. You may have that player discard</x-card.normalrule>
-<x-card.normalrule>that card or shuffle it back into their Library.        </x-card.normalrule>
+<x-card.normalrule>that card or shuffle it back into their Library.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;

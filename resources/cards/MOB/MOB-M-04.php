@@ -15,7 +15,7 @@ return new
 #[Concept('DamageCapacity', '70')]
 #[Concept('Size', '12')]
 #[Concept('Speed', '21')]
-#[Concept('Multiplier', 'x3')]
+#[Concept('Boost', '3')]
 #[ImageCredit('')]
 #[FlavorText([])]
 class(__FILE__) implements CardComponents

@@ -22,8 +22,8 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="55" >
-<x-card.normalrule>Search your Library for a Pyros Monster. </x-card.normalrule>
-<x-card.normalrule>Reveal it, then put it in your hand. </x-card.normalrule>
+<x-card.normalrule>Search your Library for a Pyros Monster.</x-card.normalrule>
+<x-card.normalrule>Reveal it, then put it in your hand.</x-card.normalrule>
 <x-card.normalrule>Then, shuffle your Library.</x-card.normalrule>
 </x-card.cardrule>
 HTML;

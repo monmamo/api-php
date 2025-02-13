@@ -22,6 +22,6 @@ class(__FILE__) implements CardComponents
 <x-card.cardrule height="0" >
 Discard all Mobster and Bystander cards in play.
 Draw phase: Discard 1 card from your Library before taking any other action.
-Resolution phase: After resolving all other effects, each Monster in play takes 1d4 damage.
+Resolution phase: After resolving all other effects, each Monster in play takes 1d4 @damage.
 </x-card.cardrule>
 HTML;}};

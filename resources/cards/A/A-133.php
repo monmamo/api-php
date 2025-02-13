@@ -10,7 +10,10 @@ return new
 #[Title('Mascot')]
 #[Concept('Bystander')]
 #[Concept('Integrity', 2)]
-#[ImageCredit('IMAGE_CREDIT')]
+#[Concept('DamageCapacity', 10)]
+#[Concept('Size', 3)]
+#[Concept('Speed', 3)]
+//#[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -26,8 +29,8 @@ class(__FILE__) implements CardComponents
 
 <x-card.phaserule type="Resolution" lines="2">
     <text >
-<x-card.normalrule>Your Monster's attacks </x-card.normalrule>
-    <x-card.normalrule>do an additional 1d4 damage.</x-card.normalrule>
+    <x-card.normalrule>Your Monsters’ Attacks</x-card.normalrule>
+        <x-card.normalrule>do +1 @damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 

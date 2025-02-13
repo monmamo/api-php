@@ -22,7 +22,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="55" >
-<x-card.normalrule>Discard any number of Smoke cards attached to this Monster. Prevent 1d10 damage for each Smoke card discarded.</x-card.normalrule>
+<x-card.normalrule>Discard any number of Smoke cards attached to this Monster. Prevent 1d10 @damage for each Smoke card discarded.</x-card.normalrule>
 </x-card.cardrule>
 HTML;
     }

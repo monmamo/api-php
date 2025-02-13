@@ -12,11 +12,11 @@ return new
     #[Title('Aquofeless L40')]
     #[Concept('Monster')]
     #[Concept('Female')]
-    #[Concept('DamageCapacity', 90)]
+    #[Concept('DamageCapacity', 23)]
     #[Concept('Level', 40)]
-    #[Concept('Size', 20)]
-    #[Concept('Speed', 10)]
-    #[Concept('Multiplier:x3')]
+    #[Concept('Size', 5)]
+    #[Concept('Speed', 3)]
+    #[Concept('Boost',3)]
     #[IsGeneratedImage]
     #[LocalHeroImage('hero/A-M-03.png')]
     #[ImagePrompt('brown cat of weird zoology swimming in a lake')]
@@ -35,8 +35,8 @@ return new
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Saliva Spray</text>
 <text  y="<?= config('card-design.titlebox.title-height')?>" height="140">
 <x-card.normalrule>Discard 1+ Water (A-001) from this Monster.</x-card.normalrule>
-<x-card.normalrule>For each Water (A-001) discarded, roll 1d6.</x-card.normalrule>
-<x-card.normalrule>Attack does that much less damage,</x-card.normalrule>
+<x-card.normalrule>For each Water (A-001) discarded,</x-card.normalrule>
+<x-card.normalrule>Attack does 1 @damage less damage,</x-card.normalrule>
 <x-card.normalrule>& that Monster takes that damage instead.</x-card.normalrule>
 </text>
 </x-card.phaserule>

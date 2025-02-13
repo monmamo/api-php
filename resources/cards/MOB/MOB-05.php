@@ -15,7 +15,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
      <x-card.phaserule type="Upkeep" height="240">
        <text >
-<x-card.normalrule>Choose a Mobster in play that is not a Boss. </x-card.normalrule>
+<x-card.normalrule>Choose a Mobster in play that is not a Boss.</x-card.normalrule>
 <x-card.normalrule>Discard it and all cards attached to it.</x-card.normalrule>
 </text>
  </x-card.phaserule>

@@ -20,10 +20,10 @@ return new
         {
             yield <<<'HTML'
 
-<x-card.phaserule type="Resolution" height="175">
+<x-card.phaserule type="Resolution" height="190">
     <text >
-<x-card.normalrule>If hit by an Attack that results in </x-card.normalrule>
-<x-card.normalrule>the attacker discarding Water, </x-card.normalrule>
+<x-card.normalrule>If hit by an Attack that results in the</x-card.normalrule>
+<x-card.normalrule>attacker discarding Water (A-001),</x-card.normalrule>
 <x-card.normalrule>attach those cards to this Monster.</x-card.normalrule>
 <x-card.smallrule>When those cards are discarded, they go </x-card.smallrule>
 <x-card.smallrule>to the Discard of the player who owns them.</x-card.smallrule>

@@ -22,8 +22,8 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.phaserule type="Resolution" lines="2"><text>
-<x-card.normalrule>If this Monster doesn't attack, </x-card.normalrule>
-<x-card.normalrule>remove 5 damage.</x-card.normalrule>
+<x-card.normalrule>If this Monster doesn't attack,</x-card.normalrule>
+<x-card.normalrule>restore 2 @damage.</x-card.normalrule>
 </text></x-card.phaserule>
 HTML;
     }

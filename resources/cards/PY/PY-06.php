@@ -20,7 +20,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="55" >
-<x-card.normalrule>Does 2d10 damage.</x-card.normalrule>
+<x-card.normalrule>Does 2d10 @damage.</x-card.normalrule>
 </x-card.cardrule>
 HTML;
     }

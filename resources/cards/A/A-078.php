@@ -29,7 +29,7 @@ class(__FILE__) implements CardComponents
 
         <text x="345" y="30" text-anchor="middle" class="cardtype" alignment-baseline="hanging">ATTACK</text>
         <text x="345" y="90" text-anchor="middle" class="cardname" alignment-baseline="middle">Bite</text>
-        <text x="345" y="140" text-anchor="middle" font-size="30px" alignment-baseline="baseline">Does Speed×3 damage.</text>
+        <text x="345" y="140" text-anchor="middle" font-size="30px" alignment-baseline="baseline">Does Speed×Boost damage.</text>
     </svg>
 HTML;
     }

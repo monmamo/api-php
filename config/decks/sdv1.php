@@ -42,10 +42,8 @@ return [
         'A-119' => 3, // Medicinal Compound
         'A-120' => 3, // Healing Salve
         'A-122' => 2, // Offensive Coordinator
-        'A-124' => 1, // Nurse
         'A-126' => 1, // Neighborhood "Protection"
         'A-129' => 1, // Inappropriate Traffic Stop
-        'A-135' => 3, // Investment
         'A-139' => 2, // Karma
         'A-140' => 2, // Last Resort
         'A-141' => 3, // Lottery
@@ -54,20 +52,25 @@ return [
         'A-144' => 1, // Taxman
         'A-145' => 2, // First Aid Kit
         'A-152' => 2, // Favorite Toy
-        'A-M-05' => 1,
+
+        'A-124' => 1, // Nurse
+        'A-135' => 3, // Investment
+        // female monsters
+        'A-M-05' => 1, 
         'A-M-06' => 1,
-        'A-M-09' => 1,
         'A-M-11' => 1,
         'A-M-12' => 1,
         'A-M-13' => 1,
+        'A-M-18' => 1,
+        'A-M-21' => 1,
+        // male monsters
+        'A-M-08' => 1,
+        'A-M-09' => 1,
         'A-M-14' => 1,
         'A-M-15' => 1,
         'A-M-16' => 1,
         'A-M-17' => 1,
-        'A-M-18' => 1,
         'A-M-19' => 1,
         'A-M-20' => 1,
-        // 'A-M-03' => 1,
-        // 'A-M-04' => 1,
     ],
 ];

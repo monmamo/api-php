@@ -20,10 +20,9 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.phaserule type="Resolution" lines="2">
+    <x-card.phaserule type="Resolution" lines="1">
     <text >
-        <x-card.normalrule>Prevent Size÷2 damage</x-card.normalrule>
-        <x-card.normalrule>(rounded up).</x-card.normalrule>
+        <x-card.normalrule>Prevent Size-1d6 @damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;

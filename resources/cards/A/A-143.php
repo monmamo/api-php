@@ -10,7 +10,7 @@ use App\GeneralAttributes\Title;
 
 return new
     #[Title('Financial Planner')]
-    #[Concept('Vendor')]
+    #[Concept('Bystander')]
     #[ImageCredit('Image by photoroyalty on Freepik')]
     #[LocalHeroImage('A135.jpg')] // https://www.freepik.com/free-vector/time-is-money-background_1014317.htm
     #[Prerequisites(y: 475)]
@@ -21,13 +21,11 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Draw" lines="5" badge="Repeat">
+<x-card.phaserule type="Upkeep" lines="3" >
     <text >
-    <x-card.normalrule>Turn your Discard pile face-down,</x-card.normalrule>
-<x-card.normalrule>shuffle it, and draw 1d4 cards from it</x-card.normalrule>
-<x-card.normalrule>without looking at them.</x-card.normalrule>
-<x-card.normalrule>Shuffle those cards into your Library.</x-card.normalrule>
-<x-card.normalrule>{{ __('rules.REDRAW') }}</x-card.normalrule>
+    <x-card.normalrule>You may put one card of your</x-card.normalrule>
+<x-card.normalrule>choice from your Discard pile</x-card.normalrule>
+<x-card.normalrule>on the bottom of your Library.</x-card.normalrule>
     </text>
 </x-card.phaserule>
 HTML;

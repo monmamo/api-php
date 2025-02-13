@@ -12,11 +12,11 @@ return new
     #[Title('Spike')]
     #[Concept('Monster')]
     #[Concept('Female')]
-    #[Concept('DamageCapacity', 76)]
+    #[Concept('DamageCapacity', 18)]
     #[Concept('Level', 40)]
-    #[Concept('Size', 20)]
-    #[Concept('Speed', 14)]
-    #[Concept('Multiplier:x3')]
+    #[Concept('Size', 5)]
+    #[Concept('Speed', 3)]
+    #[Concept('Boost',3)]
     #[IsGeneratedImage]
     #[LocalHeroImage('hero/A-M-18.jpeg')]
     class(__FILE__) implements CardComponents
@@ -33,7 +33,7 @@ return new
 <x-card.phaserule type="Attack" height="140">
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Ball of Pain</text>
 <text  y="<?= config('card-design.titlebox.title-height')?>" height="70">
-<x-card.normalrule>Does Speed+3d6 damage.</x-card.normalrule>
+<x-card.normalrule>Does Speed+3d6 @damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 

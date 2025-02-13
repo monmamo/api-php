@@ -21,7 +21,7 @@ return [
 <x-card.normalrule>from their hand to one</x-card.normalrule>
 <x-card.normalrule>of their Monsters, if the</x-card.normalrule>
 <x-card.normalrule>Monster does not have Psychos or Gouros,</x-card.normalrule>
-<x-card.normalrule>that Monster takes 4 damage.</x-card.normalrule>
+<x-card.normalrule>that Monster takes 4 @damage.</x-card.normalrule>
 </x-card.cardrule>
 HTML
 ];

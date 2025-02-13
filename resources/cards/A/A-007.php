@@ -11,6 +11,9 @@ use App\GeneralAttributes\Title;
 return new
     #[Concept('Mobster')]
     #[Concept('Integrity', '1d6')]
+    #[Concept('DamageCapacity', 13)]
+    #[Concept('Size', 4)]
+    #[Concept('Speed', 4)]
     #[FlavorText('Loose lips sink championships.')]
     #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')] // https://game-icons.net/1x1/delapouite/spy.html
     #[Title('Spy')]

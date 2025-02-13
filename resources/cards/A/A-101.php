@@ -19,9 +19,10 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <text y="610" filter="url(#solid)">
-<x-card.normalrule>Transfer a Fire card (A-002) from your Discard</x-card.normalrule>
-<x-card.normalrule>pile to one of your Pyros Monsters.</x-card.normalrule>
+    <text y="550" filter="url(#solid)">
+<x-card.normalrule>Transfer a Fire (A-002)</x-card.normalrule>
+<x-card.normalrule>from your Discard pile</x-card.normalrule>
+<x-card.normalrule>to one of your Pyros Monsters.</x-card.normalrule>
     </text>
 HTML;
     }

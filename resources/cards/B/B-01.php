@@ -24,7 +24,8 @@ class(__FILE__) implements CardComponents
 
         <x-card.phaserule type="Resolution" y="135" height="100">
             <text >
-                <x-card.normalrule>If this Monster is wearing a Garment, it takes 1d4 damage.</x-card.normalrule>
+                <x-card.normalrule>If this Monster is wearing a Garment,</x-card.normalrule> 
+                <x-card.normalrule>it takes 1d4 @damage.</x-card.normalrule>
             </text>
         </x-card.phaserule>
 HTML;}};

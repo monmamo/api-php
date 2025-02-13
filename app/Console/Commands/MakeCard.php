@@ -27,6 +27,7 @@ class MakeCard extends Command implements PromptsForMissingInput
     {--c|concepts=*}
     {--I|noimagecredit}
     {--F|noflavor}
+    {--i|heroicon}
     {--m|monster}
     {--S|nosecondary}
     {--P|noprimary}
@@ -85,8 +86,8 @@ class MakeCard extends Command implements PromptsForMissingInput
                 ->text('Size', required: true, name: 'Size')
                 ->text('Speed', required: true, name: 'Speed')
                 ->select(
-                    label: 'Multiplier',
-                    name: 'Multiplier',
+                    label: 'Boost',
+                    name: 'Boost',
                     options: ['x2', 'x3', 'x4'],
                 );
 
@@ -123,10 +124,12 @@ class MakeCard extends Command implements PromptsForMissingInput
                 card_name: $card_name,
                 concepts: $concepts,
                 no_content: true,
-            )
+                icon: $this->option('heroicon') ? '<x-card.hero-svg></x-card.hero-svg>' : null,
+                )
                 : \App\Card\makeNewCard(
                     card_name: $card_name,
                     concepts: $concepts,
+                    icon: $this->option('heroicon') ? '<x-card.hero-svg></x-card.hero-svg>' : null,
                     image_credit: $this->option('noimagecredit') ? null : \Laravel\Prompts\text('Image credit'),
                     flavor_text: $this->option('noflavor') ? [] : \iterator_to_array(self::_askMultiline('Flavor text')),
                     prerequisites: \iterator_to_array(self::_askMultiline('Prerequisites')),

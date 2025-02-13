@@ -18,7 +18,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="55" >
-<x-card.normalrule>Upkeep phase:: Remove 1d4 damage from each Monster in play (both yours and your opponents').</x-card.normalrule>
+<x-card.normalrule>Upkeep phase:: Remove 1d4 @damage from each Monster in play (both yours and your opponents').</x-card.normalrule>
 </x-card.cardrule>
 HTML;
     }

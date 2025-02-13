@@ -38,8 +38,8 @@ HTML;
         {
             yield <<<'HTML'
 <x-card.phaserule type="Resolution" lines="2"><text>
-<x-card.normalrule>Size +3. </x-card.normalrule>
-<x-card.normalrule>Attack base damage +5.</x-card.normalrule>
+<x-card.normalrule>Size +1.</x-card.normalrule>
+<x-card.normalrule>Attack base damage +1.</x-card.normalrule>
 </text></x-card.phaserule>
 
 HTML;

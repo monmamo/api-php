@@ -9,11 +9,11 @@ use App\GeneralAttributes\Title;
 // https://game-icons.net/1x1/lorc/gift-trap.html
 
 return new
-#[Concept('Draw')]
-#[Concept('Item')]
-#[Concept('Lure')]
-#[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
-#[Title('Basic Lure')]
+    #[Concept('Draw')]
+    #[Concept('Item')]
+    #[Concept('Lure')]
+    #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
+    #[Title('Basic Lure')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -26,8 +26,8 @@ return new
 <x-card.phaserule type="Draw" lines="4"><text>
     <x-card.normalrule>Roll 1d6. If @dieroll(6,5,4),</x-card.normalrule>
     <x-card.normalrule>you may search your Library for a</x-card.normalrule>
-    <x-card.normalrule>Monster card. Reveal that/those card(s). </x-card.normalrule>
-    <x-card.normalrule>Put that/those card(s) in your hand.</x-card.normalrule>
+    <x-card.normalrule>Monster card. Reveal that card.</x-card.normalrule>
+    <x-card.normalrule>Put that card in your hand.</x-card.normalrule>
 </text></x-card.phaserule>
 HTML;
         }

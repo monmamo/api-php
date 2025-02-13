@@ -21,7 +21,7 @@ class(__FILE__) implements CardComponents
 
     <text y="610" filter="url(#solid)">
 <x-card.normalrule>Attempt to remove an Item from this Monster</x-card.normalrule>
-<x-card.normalrule>succeeds only if 1d6 equals @dieroll(5,6).</x-card.normalrule>
+<x-card.normalrule>succeeds only if 1d6 exceeds Boost.</x-card.normalrule>
 </text>
 HTML;
     }

@@ -24,8 +24,8 @@ class(__FILE__) implements CardComponents
 <x-card.phaserule type="Resolution" lines="4">
     <text >
 <x-card.normalrule>Discard all Electricity (A-003) from the</x-card.normalrule>
-<x-card.normalrule>attacking Monster. Roll 2d6 for each </x-card.normalrule>
-<x-card.normalrule>Electricity discarded from this Monster. </x-card.normalrule>
+<x-card.normalrule>attacking Monster. Roll 1d6 for each</x-card.normalrule>
+<x-card.normalrule>Electricity discarded.</x-card.normalrule>
 <x-card.normalrule>The damage done is the sum of these rolls.</x-card.normalrule>
         </text>
         </x-card.phaserule>

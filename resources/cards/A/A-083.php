@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Farmer\'s Refuse')]
 #[Concept('Draw')]
-#[ImageCredit('IMAGE_CREDIT')]
+//#[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -19,7 +19,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <text y="100" filter="url(#solid)">
     <x-card.normalrule>Discard any number of cards from your hand.</x-card.normalrule>
-    <x-card.normalrule>For each card discarded, search your Discard </x-card.normalrule>
+    <x-card.normalrule>For each card discarded, search your Discard</x-card.normalrule>
     <x-card.normalrule>for a Monster or Mana card.</x-card.normalrule>
     <x-card.normalrule>Reveal those cards, then put them in your hand.</x-card.normalrule>
     </text>

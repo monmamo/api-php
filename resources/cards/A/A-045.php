@@ -9,12 +9,15 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[FlavorText(lines: 'The wall of silence is blue.', y: 450)]
-#[IsGeneratedImage]
-#[Concept('Mobster')]
-#[Concept('Integrity', '1d4')]
-#[Title('Crooked Cop')]
-#[LocalHeroImage('A-045.jpg')]
+    #[FlavorText(lines: 'The wall of silence is blue.', y: 450)]
+    #[IsGeneratedImage]
+    #[Concept('Mobster')]
+    #[Concept('Integrity', '1d4')]
+    #[Concept('DamageCapacity', 14)]
+    #[Concept('Size', 5)]
+    #[Concept('Speed', 3)]
+    #[Title('Crooked Cop')]
+    #[LocalHeroImage('A-045.jpg')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

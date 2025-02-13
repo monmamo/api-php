@@ -13,9 +13,12 @@ return [
     'flavor-text' => [],
     'background' => \view('Facility.background'),
     'content' => <<<'HTML'
-
-<x-card.cardrule height="55" >
-<x-card.normalrule>Resolution phase: After all attacks and skills are resolved, remove 4 damage from each of your Monsters that is not Knocked Out.</x-card.normalrule>
-</x-card.cardrule>
+<x-card.phaserule type="Resolution" lines="4">
+<text >
+<x-card.normalrule>After all attacks and skills are resolved,</x-card.normalrule>
+<x-card.normalrule>for each Monster that did not attack,</x-card.normalrule>
+<x-card.normalrule>you may restore 2 @damage.</x-card.normalrule>
+</text>
+</x-card.phaserule>
 HTML
 ];

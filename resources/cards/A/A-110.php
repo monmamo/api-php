@@ -9,8 +9,8 @@ use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
-if (!\defined('PREREQUISITE')) {
-    \define('PREREQUISITE', \trans_choice('rules.monster-limit', 1));
+if (!\defined('MONSTER_LIMIT_PREREQUISITE')) {
+    \define('MONSTER_LIMIT_PREREQUISITE', \trans_choice('rules.monster-limit', 1));
 }
 
 return new
@@ -19,7 +19,7 @@ return new
 #[IsGeneratedImage]
 #[FlavorText('They say that bad breath is better than no breath at all…')]
 #[LocalHeroImage('A110.jpg')]
-#[Prerequisites([PREREQUISITE])]
+#[Prerequisites([MONSTER_LIMIT_PREREQUISITE])]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

@@ -13,11 +13,11 @@ return new
     #[Title('Lutress L35')]
     #[Concept('Monster')]
     #[Concept('Female')]
-    #[Concept('DamageCapacity', 80)]
+    #[Concept('DamageCapacity', 20)]
     #[Concept('Level', 35)]
-    #[Concept('Size', 18)]
-    #[Concept('Speed', 8)]
-    #[Concept('Multiplier:x2')]
+    #[Concept('Size', 5)]
+    #[Concept('Speed', 2)]
+    #[Concept('Boost',2)]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
     #[ImagePrompt('blue and yellow otter of weird at the edge of the water on a beach')]
@@ -36,8 +36,8 @@ return new
 <x-card.phaserule type="Defense" height="175">
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Roll Away</text>
 <text  y="<?= config('card-design.titlebox.title-height')?>" height="70">
-<x-card.normalrule>Prevent 12 damage plus</x-card.normalrule>
-<x-card.normalrule>1d6 damage for each Water (A-001) attached.</x-card.normalrule>
+<x-card.normalrule>Prevent 3 @damage plus</x-card.normalrule>
+<x-card.normalrule>1 @damage for each Water (A-001) attached.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 

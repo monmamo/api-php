@@ -10,7 +10,6 @@ return new
 #[Title('Rescue Drone')]
 #[Concept('Drone')]
 #[Concept('Item', 'DamageCapacity:5', 'Size:25', 'Speed:4')]
-#[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

@@ -27,8 +27,8 @@ return new
     <x-card.phaserule type="Resolution" :lines="3">
         <text >
 <x-card.normalrule>Your Monsters' attacks</x-card.normalrule>
-<x-card.normalrule>do 1d6 more damage and</x-card.normalrule>
-<x-card.normalrule>defenses prevent 1d6 more damage.</x-card.normalrule>
+<x-card.normalrule>do +Boost @damage &</x-card.normalrule>
+<x-card.normalrule>defenses prevent +Boost @damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;

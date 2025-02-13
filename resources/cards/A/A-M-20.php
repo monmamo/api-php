@@ -13,11 +13,11 @@ return new
     #[Title('Grumpus')]
     #[Concept('Monster')]
     #[Concept('Male')]
-    #[Concept('DamageCapacity', 87)]
+    #[Concept('DamageCapacity', 22)]
     #[Concept('Level', 41)]
-    #[Concept('Size', 23)]
-    #[Concept('Speed', 9)]
-    #[Concept('Multiplier', 'x3')]
+    #[Concept('Size', 6)]
+    #[Concept('Speed', 3)]
+    #[Concept('Boost', '3')]
     #[LocalHeroImage('hero/A-M-20.jpeg')]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
@@ -32,10 +32,11 @@ return new
 <x-card.normalrule>Taxons: Hominos, Gouros</x-card.normalrule>
 </x-card.cardrule>
 
-<x-card.phaserule type="Trait" height="210">
+<x-card.phaserule type="Trait" height="170">
+<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Needs a Friend</text>
 <text  y="<?= config('card-design.titlebox.title-height')?>" height="35">
-<x-card.normalrule>Increase Speed by 5 for </x-card.normalrule>
-<x-card.normalrule>each Cheerleader on your team.</x-card.normalrule>
+<x-card.normalrule>Increase Speed by 1 for</x-card.normalrule>
+<x-card.normalrule>each Bystander on your team.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;

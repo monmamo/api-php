@@ -28,7 +28,7 @@ return new
     <x-card.phaserule type="Attack" height="140">
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Bite</text>
 <text  y="<?= config('card-design.titlebox.title-height')?>"  height="35">
-<x-card.normalrule>Does Speed×3 damage.</x-card.normalrule>
+<x-card.normalrule>Does 3×Speed @damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;

@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Binge')]
 #[Concept('Draw')]
-#[ImageCredit('IMAGE_CREDIT')]
+//#[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -25,7 +25,7 @@ class(__FILE__) implements CardComponents
 
 <x-card.phaserule type="Draw" y="70" height="58">
     <text >
-<x-card.normalrule>Draw 7 cards. </x-card.normalrule>
+<x-card.normalrule>Draw 7 cards.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 

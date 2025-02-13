@@ -6,21 +6,21 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Brutality')]
-#[Concept('Trait')]
-class(__FILE__) implements CardComponents
-{
-    use DefaultCardAttributes;
-
-    public function content(): \Traversable
+    #[Title('Brutality')]
+    #[Concept('Trait')]
+    class(__FILE__) implements CardComponents
     {
-        yield <<<'HTML'
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.phaserule type="Resolution" lines="2">
-    <text >
-<x-card.normalrule>When this Monster attacks,</x-card.normalrule>
-<x-card.normalrule>perform two rolls for every roll check.</x-card.normalrule>
-    </text>
+<text >
+<x-card.normalrule>Multiply damage done</x-card.normalrule>
+<x-card.normalrule>by Attacks by Boost.</x-card.normalrule>
+</text>
 </x-card.phaserule>
 HTML;
-    }
-};
+        }
+    };

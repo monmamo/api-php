@@ -21,7 +21,7 @@ class(__FILE__) implements CardComponents
 
 <x-card.cardrule height="130" >
 <x-card.normalrule>Each player shuffles all</x-card.normalrule>
-<x-card.normalrule>discarded cards into his or her Library. </x-card.normalrule>
+<x-card.normalrule>discarded cards into his or her Library.</x-card.normalrule>
 <x-card.normalrule>This card goes into Exile.</x-card.normalrule>
 </x-card.cardrule>
 HTML;

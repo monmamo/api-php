@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Recall the Wounded')]
 #[Concept('Upkeep')]
-#[ImageCredit('IMAGE_CREDIT')]
+//#[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -19,7 +19,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
  <x-card.phaserule type="Upkeep"  height="150"><text >
         <x-card.normalrule>Shuffle your Knocked Out Monsters</x-card.normalrule>
-        <x-card.normalrule>into your Library. </x-card.normalrule>
+        <x-card.normalrule>into your Library.</x-card.normalrule>
         <x-card.smallrule>The Monsters still count as Knocked Out for</x-card.smallrule>
             <x-card.smallrule>the purpose of resolving the match.</x-card.smallrule>
     </text></x-card.phaserule>

@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Fortitude')]
 #[Concept('Trait')]
-#[ImageCredit('IMAGE_CREDIT')]
+//#[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -17,9 +17,9 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Resolution" y="135" height="135">
-    <text >
-<x-card.normalrule>When attacked, prevent 2d6 damage.</x-card.normalrule>
+<x-card.phaserule type="Resolution" height="70">
+<text >
+<x-card.normalrule>When using a Defense, prevent additional Boost damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;

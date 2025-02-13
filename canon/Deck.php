@@ -39,6 +39,11 @@ class Deck
         yield from \array_chunk($this->cards, $size);
     }
 
+    public function __get(string $key)
+    {
+        return \config('decks.' . $this->id.'.'.$key);
+    }
+
     public function count(): int
     {
         return \count($this->cards);

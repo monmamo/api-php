@@ -68,7 +68,7 @@
                     <li><a href="/concepts/Speed">Speed</a>: A number indicating the relative speed of the Monster.</li>
                     <li>Biological sex of the monster (male or female).</li>
                     <li>Taxons: Attributes that determine the core genetic properties of the Monster.</li>
-                    <li>Multiplier: Indicates the number of cards that a Monster can fetch on a Draw phase. Also applies to some skills.</li>
+                    <li>Boost: Indicates the number of cards that a Monster can fetch on a Draw phase. Also applies to some skills.</li>
                     <li>Innate skill, if the Monster has one.</li>
                 </ul>
 

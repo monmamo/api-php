@@ -27,7 +27,7 @@ class(__FILE__) implements CardComponents
         <text >
         <x-card.normalrule>When this Monster uses Pounce or</x-card.normalrule>
 <x-card.normalrule>a Physical attack, the attack does</x-card.normalrule>
-<x-card.normalrule>an additional Speed damage to the  </x-card.normalrule>
+<x-card.normalrule>an additional Speed damage to the</x-card.normalrule>
 <x-card.normalrule>defending Monster. After that damage is</x-card.normalrule>
 <x-card.normalrule>resolved, this Monster takes Speed damage.</x-card.normalrule>
 <text ></x-card.phaserule>

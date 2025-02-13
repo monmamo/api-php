@@ -16,7 +16,7 @@ class(__FILE__) implements CardComponents
      <x-card.phaserule type="Upkeep" height="240">
        <text >
 <x-card.normalrule>Choose a Monster, Master, Mobster or Bystander on the Battlefield.</x-card.normalrule>
-<x-card.normalrule>Monster: That Monster takes 2d6 damage.</x-card.normalrule>
+<x-card.normalrule>Monster: That Monster takes 2d6 @damage.</x-card.normalrule>
 <x-card.normalrule>Others: If 1d4 is 2,3,4, Exile the card. Discard all cards attached to that card.</x-card.normalrule>
 </text>
  </x-card.phaserule>

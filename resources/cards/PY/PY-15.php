@@ -22,7 +22,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="55" >
-<x-card.normalrule>Discard at least one Smoke and at least one Water card attached to this Monster. Prevent 1d6 damage for each Smoke or Water card discarded.</x-card.normalrule>
+<x-card.normalrule>Discard at least one Smoke and at least one Water card attached to this Monster. Prevent 1d6 @damage for each Smoke or Water card discarded.</x-card.normalrule>
 </x-card.cardrule>
 HTML;
     }

@@ -9,7 +9,6 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Flee')]
 #[Concept('Defense')]
-#[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

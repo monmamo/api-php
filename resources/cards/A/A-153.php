@@ -25,9 +25,9 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.phaserule type="Resolution" lines="3">
 <text>
-<x-card.normalrule>Discard any number of Fire (A-002) </x-card.normalrule>
-<x-card.normalrule>attached to this Monster. </x-card.normalrule>
-<x-card.normalrule>Does 1d6 for each Fire card discarded.</x-card.normalrule>
+<x-card.normalrule>Discard any number of Fire (A-002)</x-card.normalrule>
+<x-card.normalrule>attached to this Monster.</x-card.normalrule>
+<x-card.normalrule>Does Boost @damage for each Fire discarded.</x-card.normalrule>
     </text>
     </x-card.phaserule>
 HTML;

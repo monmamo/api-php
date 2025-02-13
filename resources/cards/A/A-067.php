@@ -28,7 +28,7 @@ class(__FILE__) implements CardComponents
 
     <x-card.phaserule type="Draw" lines="3">
 <text >
-<x-card.normalrule>You may take one additional </x-card.normalrule>
+<x-card.normalrule>You may take one additional</x-card.normalrule>
 <x-card.normalrule>Draw phase. If you do, put this card</x-card.normalrule>
 <x-card.normalrule>at the bottom of your Library.</x-card.normalrule>
 </text>

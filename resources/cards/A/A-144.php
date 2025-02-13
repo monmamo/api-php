@@ -9,9 +9,12 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Taxman')]
+    #[Title('Taxman')]
     #[Concept('Mobster')]
     #[Concept('Integrity', '2')]
+    #[Concept('DamageCapacity', 11)]
+    #[Concept('Size', 3)]
+    #[Concept('Speed', 2)]
     #[ImageCredit('Image by macrovector on Freepik')]
     #[FlavorText('Declare the pennies on your eyes.')]
     #[LocalHeroImage('hero/taxman.jpg')]

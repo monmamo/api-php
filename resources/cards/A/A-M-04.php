@@ -13,11 +13,11 @@ return new
     #[Title('Aquotaror')]
     #[Concept('Monster')]
     #[Concept('Male')]
-    #[Concept('DamageCapacity', 95)]
+    #[Concept('DamageCapacity', 24)]
     #[Concept('Level', 45)]
-    #[Concept('Size', 25)]
-    #[Concept('Speed', 10)]
-    #[Concept('Multiplier', 'x4')]
+    #[Concept('Size', 6)]
+    #[Concept('Speed', 3)]
+    #[Concept('Boost', 4)]
     #[LocalHeroImage('hero/A-M-04.jpeg')]
     #[IsGeneratedImage]
     #[ImagePrompt('blue seal of weird zoology swimming in a lake, trees and mountains in the background')]
@@ -38,7 +38,7 @@ return new
 <text  y="<?= config('card-design.titlebox.title-height')?>" height="105">
 <x-card.normalrule>Discard 1+ Water (A-001) from this Monster.</x-card.normalrule>
 <x-card.normalrule>For each Water (A-001) discarded,</x-card.normalrule>
-<x-card.normalrule>does 10 damage.</x-card.normalrule>
+<x-card.normalrule>does 3 @damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;

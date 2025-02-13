@@ -16,8 +16,8 @@ return new
         {
             yield <<<'HTML'
 <x-card.phaserule type="Resolution" lines="2"><text>
-            <x-card.normalrule>Increase speed by 1 </x-card.normalrule>
-            <x-card.normalrule>for each 10 points of damage taken.</x-card.normalrule>
+            <x-card.normalrule>Increase Speed by 1</x-card.normalrule>
+            <x-card.normalrule>for each 4 @damage taken.</x-card.normalrule>
         </text></x-card.phaserule>
 HTML;
         }

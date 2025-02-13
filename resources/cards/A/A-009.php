@@ -29,7 +29,7 @@ class(__FILE__) implements CardComponents
         <x-card.phaserule type="Resolution" lines="3"><text>
         <x-card.normalrule>For each Electricity discarded,</x-card.normalrule>
         <x-card.normalrule>the attacking or defending Monster</x-card.normalrule>
-        <x-card.normalrule>takes 1d6 damage.</x-card.normalrule>
+        <x-card.normalrule>takes 1d6 @damage.</x-card.normalrule>
 </text></x-card.phaserule>
 HTML;
     }

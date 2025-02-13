@@ -32,7 +32,7 @@ return new
     <text>
         <x-card.normalrule>If this Monster did not</x-card.normalrule>
         <x-card.normalrule>take any damage on this turn,</x-card.normalrule>
-        <x-card.normalrule>remove 3d6 damage from it.</x-card.normalrule>
+        <x-card.normalrule>restore 2d4 @damage to it.</x-card.normalrule>
     </text>
 </x-card.phaserule>
 HTML;

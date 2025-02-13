@@ -11,7 +11,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Junk from the Trunk')]
 #[Concept('Draw')]
-#[ImageCredit('IMAGE_CREDIT')]
+//#[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -21,8 +21,10 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.phaserule type="Draw" lines="2">
 <text>
-<x-card.normalrule>Put an Item card from your </x-card.normalrule>
-<x-card.normalrule>Discard into your Library.</x-card.normalrule></text></x-card.phaserule>
+<x-card.normalrule>Put an Item card from your</x-card.normalrule>
+<x-card.normalrule>Discard into your Library.</x-card.normalrule>
+</text>
+</x-card.phaserule>
 
 HTML;
     }

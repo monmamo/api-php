@@ -4,13 +4,13 @@ $deck = new \Canon\Deck($id);
 ?>
 <x-guest-layout>
 
-    <x-slot:page-title><?= $name ?> | Card Game</x-slot>
+    <x-slot:page-title><?= $deck->name ?> | Card Game</x-slot>
 
         <x-breadcrumbs :items="['/cg'=>'Monsters Masters & Mobsters Card Game', '/cg/rules'=>'Rules','/cg/decks'=>'Available Decks']" />
 
-        <h1><?= $name ?></h1>
+        <h1><?= $deck->name ?></h1>
 
-        {{$details}}
+        {{$deck->details}}
 
         <ul class="nav">
             <li class="nav-item">
@@ -30,7 +30,7 @@ $deck = new \Canon\Deck($id);
                         foreach ($deck->distinctCards as $card_number => $card_info) {
                             $card_info = \App\Card\make($card_number);
                         ?>
-                            <li><a href="/cards/card/<?php echo $card_number; ?>/svg" class="card-link link-body-emphasis d-inline-flex text-decoration-none rounded"><?php echo $count; ?> <?php echo $card_number; ?> <?php echo $card_info->name() ?? ''; ?> </a></li>
+                            <li><a href="/cards/card/<?php echo $card_number; ?>/svg" class="card-link link-body-emphasis d-inline-flex text-decoration-none rounded"><?php echo 'count'; ?> <?php echo $card_number; ?> <?php echo $card_info->name() ?? ''; ?> </a></li>
                         <?php } ?>
 
                     </ul>

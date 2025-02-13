@@ -11,7 +11,7 @@ return new
 #[Title('Convenience Store')]
 #[Concept('Vendor')]
 #[Concept('Integrity', 4)]
-#[ImageCredit('IMAGE_CREDIT')]
+//#[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText(lines: ['The quick stop for everything you forgot', 'at the Big-Box Store (A-014).'])]
 class(__FILE__) implements CardComponents
 {

@@ -18,8 +18,8 @@ class(__FILE__) implements CardComponents
      <x-card.phaserule type="Upkeep" height="240">
        <text >
 <x-card.normalrule>Attach this card to one of those cards.</x-card.normalrule>
-<x-card.normalrule>Choose one opponent. That opponent must </x-card.normalrule>
-<x-card.normalrule>show you their hand. </x-card.normalrule>
+<x-card.normalrule>Choose one opponent. That opponent must</x-card.normalrule>
+<x-card.normalrule>show you their hand.</x-card.normalrule>
 <x-card.normalrule>(Only you get to see the hand.)</x-card.normalrule>
 </text>
  </x-card.phaserule>

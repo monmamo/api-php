@@ -13,6 +13,9 @@ return new
 #[Title('Hacker')]
 #[Concept('Mobster')]
 #[Concept('Integrity', 8)]
+#[Concept('DamageCapacity', 10)]
+#[Concept('Size', 3)]
+#[Concept('Speed', 2)]
 #[ImageCredit('Icon by Designing Hub from Noun Project')]
 #[FlavorText(lines: ['Hacking is getting other people to do strange things.', '- Steve Wozniak'])]
 class(__FILE__) implements CardComponents

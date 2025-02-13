@@ -15,9 +15,9 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<g class="svg-hero">
+<x-card.hero-svg><g fill="#ffffff" fill-opacity="1">
 <path d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z"></path>
-</g>
+    </g></x-card.hero-svg>
 
 <x-slot:small>
     You may apply this to any 1d6 roll, be it your own or another player's.
