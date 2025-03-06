@@ -25,7 +25,7 @@ class(__FILE__) implements CardComponents
 </g>
 </x-svg>
 
-<text y="500" filter="url(#solid)">
+<text y="495" filter="url(#solid)">
         <x-card.smallrule>Put this card on the Battlefield during your Upkeep phase.</x-card.smallrule>
 </text>
 

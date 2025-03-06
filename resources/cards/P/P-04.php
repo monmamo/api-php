@@ -12,7 +12,6 @@ return [
     'flavor-text' => [],
     'background' => \view('Environment.background'),
     'content' => <<<'HTML'
-
 <x-card.cardrule height="0" >
 
 <x-card.normalrule>Discard this card if the Place changes.</x-card.normalrule>

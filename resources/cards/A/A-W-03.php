@@ -6,8 +6,9 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[\App\Concept('Item')]
 #[Title('Grenade')]
+#[\App\Concept('Attack')]
+#[\App\Concept('Item')]
 #[Concept('Weapon')]
 #[\App\CardAttributes\ImageCredit("Icon by Ivanda arief budiarto from Noun Project")]
 class(__FILE__) implements CardComponents
@@ -50,7 +51,7 @@ class(__FILE__) implements CardComponents
  <path d="m68.223 25.918c0 4.4023-6.8359 4.4023-6.8359 0 0-4.4023 6.8359-4.4023 6.8359 0z"/>
  </g></x-card.hero-svg>
 
-    <x-card.phaserule type="Attack" height="130">
+    <x-card.phaserule type="Resolution" lines="3">
     <text >
 <x-card.normalrule>Choose a team.</x-card.normalrule>
 <x-card.normalrule>Each Character on that team</x-card.normalrule>

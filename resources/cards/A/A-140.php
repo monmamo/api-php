@@ -17,7 +17,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<text y="500" filter="url(#solid)">
+<text y="495" filter="url(#solid)">
 <x-card.normalrule>Discard your hand.</x-card.normalrule>
 <x-card.normalrule>Then remove all Damage</x-card.normalrule>
 <x-card.normalrule>from one of your Characters.</x-card.normalrule>

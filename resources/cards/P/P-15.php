@@ -12,7 +12,6 @@ return [
     'flavor-text' => [''],
     'background' => \view('Place.background'),
     'content' => <<<'HTML'
-
 <x-card.cardrule height="95" >
 <x-card.smallrule></x-card.smallrule>
 <x-card.normalrule></x-card.normalrule>

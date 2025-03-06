@@ -29,7 +29,6 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-
 <x-card.cardrule y="460" height="55" >
 <x-card.normalrule>Taxons: Energos, Tigros</x-card.normalrule>
 </x-card.cardrule>

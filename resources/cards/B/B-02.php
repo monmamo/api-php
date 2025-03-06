@@ -17,9 +17,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-
-
-<text y="500" filter="url(#solid)">
+<text y="495" filter="url(#solid)">
         <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
         </text >
 

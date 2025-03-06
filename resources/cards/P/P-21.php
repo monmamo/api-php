@@ -12,7 +12,6 @@ return [
     'flavor-text' => ['Just like an old movie theater.'],
     'background' => \view('Environment.background'),
     'content' => <<<'HTML'
-
 <x-card.cardrule height="315" >
 <x-card.smallrule></x-card.smallrule>
 <x-card.normalrule>Upkeep phase: This card may be removed by</x-card.normalrule>

@@ -19,7 +19,6 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-
 <x-card.phaserule type="Resolution" height="190">
     <text >
 <x-card.normalrule>If hit by an Attack that results in the</x-card.normalrule>

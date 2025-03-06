@@ -25,7 +25,6 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-
 <x-card.phaserule type="Resolution" lines="2">
     <text >
 <x-card.normalrule>Each player discards a card</x-card.normalrule>

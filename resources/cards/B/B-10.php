@@ -18,7 +18,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<text y="500" filter="url(#solid)">
+<text y="495" filter="url(#solid)">
 <x-card.normalrule>Discard all Mobster and Bystander cards on the Battlefield.</x-card.normalrule>
 <x-card.normalrule>Discard all Item cards on the Battlefield.</x-card.normalrule>
 </text>

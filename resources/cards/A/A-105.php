@@ -12,12 +12,12 @@ use App\GeneralAttributes\Title;
 
 return new
     #[Title('Tranquilizer Dart')]
-    #[Concept('Bane')]
+    #[Concept('Attack')]
     #[Concept('Item')]
     #[Concept('Weapon')]
     #[ImageCredit('Shutterstock #169987271 by Inked Pixels')]
     #[LocalHeroImage('hero/tranquilizer-dart.jpg')]
-    #[FlavorText('Ouuuuuch……')]
+    #[FlavorText('I think something just stung me……')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -25,17 +25,11 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-
-<text y="500" filter="url(#solid)">
-        <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
-        </text >
-
-    <x-card.phaserule type="Upkeep"  height="100">
-        <text >
-<x-card.normalrule>For 1d4 turns (including this one),</x-card.normalrule>
-<x-card.normalrule>apply Paralysis.</x-card.normalrule>
-</text>
-</x-card.phaserule>
+        <x-card.phaserule type="Resolution" lines="3"><text>
+        <x-card.normalrule>For 1d4 turns hence, the</x-card.normalrule>
+<x-card.normalrule>attacked Character cannot attack,</x-card.normalrule> 
+<x-card.normalrule>cannot defend, and has Speed of 0.</x-card.normalrule>
+</text></x-card.phaserule>
 HTML;
         }
     };

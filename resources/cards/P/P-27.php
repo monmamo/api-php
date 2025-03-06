@@ -16,7 +16,6 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-
 HTML;
     }
 };

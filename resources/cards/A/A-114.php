@@ -26,7 +26,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<text y="500" filter="url(#solid)">
+<text y="495" filter="url(#solid)">
     <x-card.smallrule>A player may have any number of Personal Assistants on the</x-card.smallrule>
         <x-card.smallrule>Battlefield. You may choose to make this card Male or Female</x-card.smallrule>
         <x-card.smallrule>when you put it on the Battlefield.</x-card.smallrule>

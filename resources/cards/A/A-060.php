@@ -21,7 +21,6 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-
 <x-card.phaserule type="Command" y="515" lines="2">
         <text >
 <x-card.normalrule>Discard any number of Fire (A-002)</x-card.normalrule>

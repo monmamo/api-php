@@ -27,7 +27,7 @@ return new
             yield <<<'HTML'
     #[\App\CardAttributes\LocalHeroImage('hero/fieldworker.jpg')]
 
-        <text y="500" filter="url(#solid)">
+        <text y="495" filter="url(#solid)">
             <x-card.smallrule>A player may have any number of Fieldworkers on the Battlefield.</x-card.smallrule>
         </text>
 

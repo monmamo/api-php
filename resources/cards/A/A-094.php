@@ -17,8 +17,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-
-    <text y="500" filter="url(#solid)">
+    <text y="495" filter="url(#solid)">
         <x-card.smallrule>Put this card on the Battlefield.</x-card.smallrule>
 <x-card.smallrule>This card will remain on the Battlefield until it is discarded by rule.</x-card.smallrule>
 </text>

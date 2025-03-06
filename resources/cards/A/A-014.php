@@ -22,7 +22,7 @@ return new
             yield <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(A-014.jpg)" source="https://www.freepik.com/free-vector/express-truck-delivering-goods-supermarket_4147963.htm" />
 
-        <text y="500" filter="url(#solid)">
+        <text y="495" filter="url(#solid)">
         <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </text>
 

@@ -12,7 +12,6 @@ return [
     'flavor-text' => [''],
     'background' => \view('Facility.background'),
     'content' => <<<'HTML'
-
 <x-card.cardrule height="95" >
 <x-card.smallrule></x-card.smallrule>
 <x-card.normalrule>Resolution phase: Reduce the base value of all Attacks by half.</x-card.normalrule>
