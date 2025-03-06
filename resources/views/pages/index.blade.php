@@ -37,7 +37,7 @@
 
     <p class="lead mb-4">We envision Monsters Masters &amp; Mobsters as a leading brand in the fantasy and speculative fiction genre, known for our originality and creativity. We strive to transport our audience into a realm of imagination and wonder, creating a community of enthusiasts who can connect and share their love for this genre.</p>
 
-    <p class="lead mb-4">As of October 2024, there are no products for Monsters Masters &amp; Mobsters available for sale. The vision for products includes books, artwork, games and other forms of merchandise.</p>
+    <p class="lead mb-4">As of March 2025, there are no products for Monsters Masters &amp; Mobsters available for sale. The vision for products includes books, artwork, games and other forms of merchandise.</p>
   </div>
 </div>
 
