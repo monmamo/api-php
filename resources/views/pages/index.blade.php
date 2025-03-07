@@ -1,7 +1,7 @@
 <x-guest-layout>
     <div class="text-center">
         <div class="container">
-            <img src="{{url('/images/homepage-hero.png')}}" class="img-fluid border rounded-3 shadow-lg mb-4" alt="MonMaMo Billboard" width="1920" height="1080" loading="lazy">
+            <img src="/public/images/homepage-hero.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="MonMaMo Billboard" width="1920" height="1080" loading="lazy">
           </div>
         </div>
 
