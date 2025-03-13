@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\IsGeneratedImage;
 use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -17,8 +16,8 @@ return new
     #[Concept('Size', 6)]
     #[Concept('Speed', 2)]
     #[Concept('Boost', '4')]
-    #[LocalHeroImage('hero/A-M-12.jpeg')]
-    #[IsGeneratedImage]
+    #[LocalHeroImage('hero/A-M-12.png')]
+    #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
     #[ImageCredit(null)]
     class(__FILE__) implements CardComponents
     {
