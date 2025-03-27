@@ -26,6 +26,7 @@ class(__FILE__) implements CardComponents
 <x-card.cardrule lines="2">
 <x-card.normalrule>Put a card from your Discard</x-card.normalrule>
 <x-card.normalrule>pile into your hand.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
     }

@@ -28,6 +28,7 @@ class(__FILE__) implements CardComponents
         <text y="130" filter="url(#solid)">
 <x-card.normalrule>Discard 5 cards from your Hand</x-card.normalrule>
 <x-card.normalrule>to search your Library for a Venue card and play it immediately.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </text>
 HTML;
     }

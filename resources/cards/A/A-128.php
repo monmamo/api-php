@@ -26,6 +26,7 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>Choose an opponent.</x-card.normalrule>
 <x-card.normalrule>That opponent removes all Monster cards</x-card.normalrule>
 <x-card.normalrule>from his Library and puts them in Discard.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

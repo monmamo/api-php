@@ -21,7 +21,8 @@ class(__FILE__) implements CardComponents
 <x-card.smallrule>cards in your hand other than this card.</x-card.smallrule>
 <x-card.normalrule>Show your hand to your opponent,</x-card.normalrule>
     <x-card.normalrule>then draw 5 cards.</x-card.normalrule>
-</text></x-card.phaserule>
+    <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+    </text></x-card.phaserule>
 HTML;
     }
 };

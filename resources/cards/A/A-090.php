@@ -24,6 +24,7 @@ class(__FILE__) implements CardComponents
     <x-card.normalrule>Play a Vendor card.</x-card.normalrule>
 <x-card.normalrule>You may ignore any requirement</x-card.normalrule>
 <x-card.normalrule>to discard cards.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
     }

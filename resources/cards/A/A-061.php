@@ -21,8 +21,9 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(A-002.jpg)" source="https://www.freepik.com/free-photo/throwing-money-air-being-happy_10978858.htm" />
 
-<x-card.phaserule type="Draw" lines="1"><text>
+<x-card.phaserule type="Draw" lines="2"><text>
     <x-card.normalrule>Every player may draw up to 5 cards.</x-card.normalrule>
+    <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

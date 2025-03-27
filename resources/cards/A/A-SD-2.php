@@ -23,6 +23,7 @@ class(__FILE__) implements CardComponents
 <text>
 <x-card.normalrule>Shuffle your hand into your Library.</x-card.normalrule>
 <x-card.normalrule>Then draw 1d6 cards.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
     </text>
 HTML;
     }

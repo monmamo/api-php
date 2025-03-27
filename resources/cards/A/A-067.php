@@ -10,7 +10,7 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Driver')]
-#[Concept('Bystander')]
+#[Concept('Mobster')]
 #[Concept('Cumulative')]
 #[Concept('Male')]
 #[Concept('Integrity', '2')]

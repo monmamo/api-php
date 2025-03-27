@@ -17,6 +17,7 @@ return new
     #[Concept('Speed', 2)]
     #[Concept('Boost', '4')]
     #[LocalHeroImage('hero/A-M-12.png')]
+    #[\App\CardAttributes\ImagePrompt('firey porcupine of weird zoology')]
     #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
     #[ImageCredit(null)]
     class(__FILE__) implements CardComponents

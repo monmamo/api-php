@@ -21,10 +21,11 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule lines="3">
+<x-card.cardrule lines="4">
         <x-card.normalrule>Each player puts his hand</x-card.normalrule>
 <x-card.normalrule>on the bottom of his Library,</x-card.normalrule>
 <x-card.normalrule>then draws 7 cards.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
         }

@@ -35,7 +35,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-2 col-md-2 col-lg-2 mb-3">
-                    <h5>Community</h5>
+                    <h5>Social</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2">
                         <a class="navbar-brand" href="https://www.facebook.com/people/Monsters-Masters-Mobsters/61559695048144/" aria-label="Facebook" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,6 +87,9 @@
 
                 </a>
                         </li>
+                    </ul>
+                    <h5>Community</h5>
+                    <ul class="list-unstyled">
                     @foreach(config('ui.community.links') as $spec)
                         <li class="mb-2"><a href="<?= $spec[0] ?>"><?= $spec[1] ?></a></li>
                         @endforeach

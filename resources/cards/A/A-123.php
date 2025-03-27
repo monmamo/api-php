@@ -24,6 +24,7 @@ class(__FILE__) implements CardComponents
 <x-card.smallrule>4 or fewer other cards in your hand.</x-card.smallrule>
 <x-card.normalrule>Draw a card for each opposing Monster</x-card.normalrule>
 <x-card.normalrule>on the Battlefield.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text>
 HTML;
     }

@@ -18,9 +18,10 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(hero/well-bye.jpg)" />
 
-<text y="80" filter="url(#solid)">
-    <x-card.normalrule>Discard this Monster</x-card.normalrule>
-    <x-card.normalrule>and all cards attached to it.</x-card.normalrule>
+    <text y="495" filter="url(#solid)">
+    <x-card.normalrule>Discard the Monster and all cards</x-card.normalrule>
+    <x-card.normalrule>attached to it.</x-card.normalrule>
+    <x-card.smallrule>This counts as Knocking Out the Monster.</x-card.smallrule>
 </text>
 HTML;
     }

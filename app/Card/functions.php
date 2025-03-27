@@ -13,6 +13,14 @@ use App\GeneralAttributes\Title;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 
+function cardNumber($source):string{
+    return match(true){
+        is_string($source) => $source,
+        $source instanceof CardNumber => $source->cardNumber(),
+        default => dd($source)
+    };
+}
+
 /**
  * @group unary
  */

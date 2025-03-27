@@ -18,10 +18,12 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Draw" lines="2">
+<x-card.phaserule type="Draw" lines="4">
 <text >
-<x-card.normalrule>Draw 2 cards</x-card.normalrule>
-<x-card.normalrule>from the bottom of your Library.</x-card.normalrule>
+<x-card.normalrule>Cut your deck.</x-card.normalrule>
+<x-card.normalrule>Draw the top 2 cards of the bottom half.</x-card.normalrule>
+<x-card.normalrule>Put the top half back on top of the bottom half.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </text>
 </x-card.phaserule>
 

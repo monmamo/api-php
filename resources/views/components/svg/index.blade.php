@@ -8,10 +8,11 @@ try {
     $width ??=  $size;
     $height ??=  $size;
     $center ??= false;
+    $padding ??= 0;
     $dx = (float) ($dx ?? 0);
     $dy = (float) ($dy ?? 0);
-    $x = (float) ($x ?? $dx * $width);
-    $y = (float) ($y ?? $dy * $height);
+    $x = (float) ($x ?? $dx * ($width + $padding)) ;
+    $y = (float) ($y ?? $dy * ($height+ $padding));
     $viewBox ??= match(true) {
         isset($icon) => "0 0 512 512",default => "0 0 $width $height"
     };

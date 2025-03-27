@@ -28,6 +28,7 @@ return new
 <x-card.normalrule>Show them to your opponent(s),</x-card.normalrule>
 <x-card.normalrule>and put them into your hand.</x-card.normalrule>
 <x-card.normalrule>Shuffle your deck afterward.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
         }

@@ -10,6 +10,11 @@ use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
+// <x-card.cardrule y="495"  :lines="3">
+// <x-card.smallrule :source="\App\Concept::make('Trait')->standardRule()" />
+// </x-card.cardrule>
+
+
 return new
     #[Title('Biting')]
     #[Concept('Trait')]
@@ -25,6 +30,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
+
     <x-card.phaserule type="Attack" height="140">
 <text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Bite</text>
 <text  y="<?= config('card-design.titlebox.title-height')?>"  height="35">

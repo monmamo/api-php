@@ -27,7 +27,8 @@ class(__FILE__) implements CardComponents
         <x-card.normalrule>card. Reveal it, then put it in your hand.</x-card.normalrule>
         <x-card.normalrule>{{__('rules.SHUFFLE')}}</x-card.normalrule>
         <x-card.normalrule>{{__('rules.REDRAW')}}</x-card.normalrule>
-    </text>
+        <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+        </text>
 </x-card.phaserule>
 HTML;
     }

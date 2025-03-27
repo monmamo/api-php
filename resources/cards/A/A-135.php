@@ -24,15 +24,15 @@ return new
         {
             yield <<<'HTML'
         <x-card.phaserule y="500" type="Draw" lines="2"><text>
-            <x-card.normalrule>Put any number of cards</x-card.normalrule>
-                <x-card.normalrule>facedown on the Battlefield.</x-card.normalrule>
+        <x-card.smallrule>Put this card in front of you. Put any number</x-card.smallrule>
+        <x-card.smallrule>of cards facedown on the Battlefield.</x-card.smallrule>
     </text>
 </x-card.phaserule>
 
 <x-card.phaserule type="Resolution" lines="3"><text>
             <x-card.normalrule>For each card you put facedown,</x-card.normalrule>
                 <x-card.normalrule>draw 1d4-1 cards.</x-card.normalrule>
-                <x-card.normalrule>Discard the facedown cards.</x-card.normalrule>
+                <x-card.normalrule>Discard this card & the facedown cards.</x-card.normalrule>
     </text>
 </x-card.phaserule>
 HTML;

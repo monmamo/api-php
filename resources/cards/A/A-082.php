@@ -25,7 +25,8 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>For each card discarded, search your Library</x-card.normalrule>
 <x-card.normalrule>for a Monster or Mana card. Reveal those</x-card.normalrule>
 <x-card.normalrule>cards, then put them in your hand.</x-card.normalrule>
-    </text>
+<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+</text>
 HTML;
     }
 };

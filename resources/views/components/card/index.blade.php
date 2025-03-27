@@ -22,6 +22,7 @@ $id = function (string $suffix) use ($cardNumber) {
     :id="$cardNumber"
     :$width
     :$height
+    :$padding
     viewBox="0 0 750 1050">
 
     <title><?= $cardName ?></title>

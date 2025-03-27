@@ -164,7 +164,10 @@ $debug_opacity = match (true) {
         <stop offset="100%" stop-color="#a10a0a" stop-opacity="1"></stop>
     </linearGradient>
 
-    @foreach($specs??[] as $spec)
+    @foreach($specs??[] as $spec_raw)
+    @php
+    $spec = \App\Card\make($spec_raw);
+    @endphp
     <pattern id="{{$spec->cardNumber()}}-background" viewBox="0 0 @cardspec(width) @cardspec(height)" width="100%" height="100%">
 <?= \App\Strings\render(...$spec->background()) ?>
 </pattern>

@@ -21,12 +21,13 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <x-card.phaserule type="Draw" lines="4"><text>
+    <x-card.phaserule type="Draw" lines="5"><text>
         <x-card.normalrule>The player with the fewest cards</x-card.normalrule>
         <x-card.normalrule>in their hand can draw 1 card.</x-card.normalrule>
         <x-card.normalrule>Once they have done so,</x-card.normalrule>
         <x-card.normalrule>you may draw up to 3 cards.</x-card.normalrule>
-    </text></x-card.phaserule>
+        <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+            </text></x-card.phaserule>
 HTML;
     }
 };

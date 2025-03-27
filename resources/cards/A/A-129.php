@@ -22,6 +22,7 @@ return new
 <x-card.normalrule>Discard any number of Item cards you find</x-card.normalrule>
 <x-card.normalrule>there. The owner of the Library shuffles</x-card.normalrule>
 <x-card.normalrule>the other cards back into their deck.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
         }

@@ -23,7 +23,8 @@ class(__FILE__) implements CardComponents
      <x-card.phaserule type="Draw" lines="3"><text>
          <x-card.normalrule>Discard a card from your hand</x-card.normalrule>
          <x-card.normalrule>to take a card of your choice from your Library.</x-card.normalrule>
-     </text></x-card.phaserule>
+         <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+         </text></x-card.phaserule>
 HTML;
     }
 };

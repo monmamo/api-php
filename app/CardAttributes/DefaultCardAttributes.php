@@ -154,25 +154,26 @@ trait DefaultCardAttributes
      */
     public function prerequisitesAttribute(): ?Prerequisites
     {
-        return $this->_prerequisites_attribute ??= \value(function () {
-            $prerequisites = [];
-            $y = 475 + 25 * (\transform($this->flavorTextAttribute(), fn ($attribute): int => \count($attribute->lines())) ?? 1);
-            $color = '#000000';
-            $attributes = $this->getAttributes(Prerequisites::class);
+        return null;
+        // return $this->_prerequisites_attribute ??= \value(function () {
+        //     $prerequisites = [];
+        //     $y = 475 + 25 * (\transform($this->flavorTextAttribute(), fn ($attribute): int => \count($attribute->lines())) ?? 1);
+        //     $color = '#000000';
+        //     $attributes = $this->getAttributes(Prerequisites::class);
 
-            if (\count($attributes) > 0) {
-                $object = $attributes[0]->newInstance();
-                $prerequisites = $object->lines();
-                $y = $object->y;
-                $color = $object->color;
-            }
+        //     if (\count($attributes) > 0) {
+        //         $object = $attributes[0]->newInstance();
+        //         $prerequisites = $object->lines();
+        //         $y = $object->y;
+        //         $color = $object->color;
+        //     }
 
-            foreach ($this->concepts() as $slug) {
-                \array_push($prerequisites, ...Concept::make($slug)->standardRule());
-            }
+        //     foreach ($this->concepts() as $slug) {
+        //         \array_push($prerequisites, ...Concept::make($slug)->standardRule());
+        //     }
 
-            return new Prerequisites(lines: $prerequisites, y: $y, color: $color);
-        });
+        //     return new Prerequisites(lines: $prerequisites, y: $y, color: $color);
+        // });
     }
 
     /**

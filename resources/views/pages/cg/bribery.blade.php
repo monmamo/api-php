@@ -4,7 +4,7 @@
 
 {{-- Note: Content copied in resources/views/pages/cg/bribery.blade.php --}}
 
-<x-breadcrumbs :items="['/cg'=>'Monsters Masters & Mobsters Card Game', '/cg/rules'=>'Rules']" />
+<x-breadcrumbs :items="['/cg'=>'Battle Card Game', '/cg/rules'=>'Rules']" />
 
 <h1>Integrity and Bribery</h1>
 

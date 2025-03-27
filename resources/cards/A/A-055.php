@@ -10,7 +10,6 @@ use App\GeneralAttributes\Title;
 
 return new
     #[Title('Defensive Coordinator')]
-    #[Concept('Bystander')]
     #[Concept('Coach')]
     #[Concept('Male')]
     #[Concept('Integrity', '1d6')]

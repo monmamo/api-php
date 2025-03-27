@@ -25,7 +25,8 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>and always uses Pounce and Dodge.</x-card.normalrule>
 <x-card.normalrule>If facing multiple Monsters,</x-card.normalrule>
 <x-card.normalrule>choose the one it attacks by dice roll.</x-card.normalrule>
-        </text>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+</text>
 HTML;
     }
 };

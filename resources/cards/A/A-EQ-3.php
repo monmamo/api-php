@@ -25,6 +25,7 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>Choose an opponent.</x-card.normalrule>
 <x-card.normalrule>Draw cards until you have the same number</x-card.normalrule>
 <x-card.normalrule>of cards in your hand as that opponent.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
         </text>
 HTML;
     }

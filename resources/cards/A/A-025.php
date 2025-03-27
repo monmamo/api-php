@@ -19,12 +19,13 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Draw" lines="4">
+<x-card.phaserule type="Draw" lines="5">
 <text >
 <x-card.normalrule>Choose an opponent. That opponent</x-card.normalrule>
     <x-card.normalrule>reveals their hand. Choose one card.</x-card.normalrule>
     <x-card.normalrule>The opponent puts that card</x-card.normalrule>
     <x-card.normalrule>on the bottom of their Library.</x-card.normalrule>
+    <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 
 HTML;

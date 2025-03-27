@@ -35,6 +35,7 @@ return new
     <x-card.normalrule>Reveal any cards you select, then put them</x-card.normalrule>
     <x-card.normalrule>in your hand. Shuffle your library.</x-card.normalrule>
     <x-card.normalrule>&bull; Discard a Durable card to draw two cards.</x-card.normalrule>
+    <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
     </text>
 </x-card.phaserule>
 HTML;

@@ -21,7 +21,6 @@ return new
     #[Concept('DamageCapacity', 10)]
     #[Concept('Size', 3)]
     #[Concept('Speed', 5)]
-    #[Prerequisites(lines: ['A player may have any number of Cheerleaders on the Battlefield.', 'You may choose to make this card Male', 'when you put it on the Battlefield.'])]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -29,10 +28,13 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="2">
+<x-card.phaserule type="Resolution" lines="5">
     <text >
-    <x-card.normalrule>Your Monsters’ Attacks</x-card.normalrule>
-        <x-card.normalrule>do +1 @damage.</x-card.normalrule>
+    <x-card.smallrule>A player may have any number of Cheerleaders</x-card.normalrule>
+    <x-card.smallrule>on the Battlefield. You may choose to make this</x-card.normalrule>
+    <x-card.smallrule>card Male when you put it on the Battlefield.</x-card.normalrule>
+    <x-card.normalrule>Monster Attacks do +1 @damage.</x-card.normalrule>
+        <x-card.smallrule>(regardless of who played this card).</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;

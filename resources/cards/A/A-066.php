@@ -20,11 +20,11 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(A066.jpeg)" />
 
-        <text>
-<x-card.normalrule>Discard the highest-level Monster</x-card.normalrule>
+    <x-card.cardrule :lines="3">
+    <x-card.normalrule>Discard the highest-level Monster</x-card.normalrule>
 <x-card.normalrule>of each opponent</x-card.normalrule>
 <x-card.normalrule>and all cards attached to that Monster.</x-card.normalrule>
-    </text>
+    </x-card.cardrule>
 HTML;
     }
 };

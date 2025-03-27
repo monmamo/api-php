@@ -28,6 +28,7 @@ return new
 <x-card.normalrule>health on his Monsters.</x-card.normalrule>
 <x-card.normalrule>The player with the highest</x-card.normalrule>
 <x-card.normalrule>shuffles his hand into his Library.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
         }

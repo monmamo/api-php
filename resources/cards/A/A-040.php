@@ -21,14 +21,15 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Draw" lines="5">
+<x-card.phaserule type="Draw" lines="6">
     <text>
   <x-card.normalrule>Discard any number of cards from</x-card.normalrule>
   <x-card.normalrule>your hand. For each card that you</x-card.normalrule>
   <x-card.normalrule>discarded, search your Library for a</x-card.normalrule>
   <x-card.normalrule>Durable Item card. Reveal it, then put</x-card.normalrule>
   <x-card.normalrule>it in your hand. Shuffle your library.</x-card.normalrule>
-    </text>
+  <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+  </text>
 </x-card.phaserule>
 HTML;
         }

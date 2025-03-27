@@ -39,14 +39,15 @@ class(__FILE__) implements CardComponents
     <rect x="180" y="350" width="250" height="35" fill="#FFFFFF" fill-opacity="1" />
 </g>
 
-        <text y="490" filter="url(#solid)">
+        <text y="460" filter="url(#solid)">
             <x-card.normalrule>Search your Library for a card that makes a</x-card.normalrule>
             <x-card.normalrule>cultural reference. Reveal the card. Explain</x-card.normalrule>
             <x-card.normalrule>the reference. If nobody can disprove you,</x-card.normalrule>
             <x-card.normalrule>put the card in your hand.</x-card.normalrule>
             <x-card.normalrule>Otherwise discard the card.</x-card.normalrule>
             <x-card.normalrule>Then shuffle your Library.</x-card.normalrule>
-        </text>
+            <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+            </text>
 
 HTML;
     }

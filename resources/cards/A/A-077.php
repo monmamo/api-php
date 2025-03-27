@@ -21,11 +21,13 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule lines="3">
+<x-card.cardrule lines="4">
 <x-card.normalrule>Each player, including you,</x-card.normalrule>
 <x-card.normalrule>may choose to draw a card.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 <x-card.normalrule>{{ __('rules.REDRAW') }}</x-card.normalrule>
 </x-card.phaserule>
 HTML;
     }
 };
+

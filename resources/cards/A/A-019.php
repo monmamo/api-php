@@ -30,13 +30,10 @@ HTML;
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<text y="495" filter="url(#solid)">
-    <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
-    </text >
-
-    <x-card.phaserule type="Resolution" height="135">
+    <x-card.phaserule type="Resolution" height="170">
             <text >
-<x-card.normalrule>For 1d6 turns, once</x-card.normalrule>
+            <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
+            <x-card.normalrule>For 1d6 turns, once</x-card.normalrule>
 <x-card.normalrule>all other effects have been resolved,</x-card.normalrule>
 <x-card.normalrule>this Monster takes 2 @damage.</x-card.normalrule>
 </text>

@@ -23,6 +23,7 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>Transfer a Fire (A-002)</x-card.normalrule>
 <x-card.normalrule>from your Discard pile</x-card.normalrule>
 <x-card.normalrule>to one of your Pyros Monsters.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
     </text>
 HTML;
     }

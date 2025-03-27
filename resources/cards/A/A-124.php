@@ -49,7 +49,7 @@ SVG;
             yield <<<'HTML'
 <x-card.phaserule type="Resolution" lines="4">
 <text >
-<x-card.normalrule>After all attacks and skills are resolved,</x-card.normalrule>
+<x-card.normalrule x="55%">After all attacks and skills are resolved,</x-card.normalrule>
 <x-card.normalrule>for each Monster that did not attack,</x-card.normalrule>
 <x-card.normalrule>you may restore 2 @damage or</x-card.normalrule>
 <x-card.normalrule>remove one Bane card from it.</x-card.normalrule>

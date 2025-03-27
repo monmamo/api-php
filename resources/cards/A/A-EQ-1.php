@@ -24,7 +24,8 @@ class(__FILE__) implements CardComponents
 <text>
 <x-card.normalrule>All players shuffle their hand into</x-card.normalrule>
 <x-card.normalrule>their deck and draw up to 4 cards.</x-card.normalrule>
-    </text>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+</text>
 HTML;
     }
 };

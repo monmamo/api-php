@@ -32,6 +32,7 @@ class(__FILE__) implements CardComponents
     <text >
 <x-card.normalrule>Roll 1d6.</x-card.normalrule>
 <x-card.normalrule>If @dieroll(1,2), discard your hand and this card.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text>
 </x-card.phaserule>
 HTML;

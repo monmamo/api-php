@@ -24,6 +24,7 @@ class(__FILE__) implements CardComponents
 <text y="100" filter="url(#solid)">
 <x-card.normalrule>Shuffle up to 5 Mana cards</x-card.normalrule>
 <x-card.normalrule>from your Discard pile into your Library.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text>
 HTML;
     }

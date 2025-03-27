@@ -35,6 +35,7 @@ class Card extends Component //implements CardComponents
         public int $dx = 0,
         public int $dy = 0,
         public bool $omitCommon = false,
+        public int $padding = 0,
     ) {
         $this->card_number_parsed = CardNumber::make($this->cardNumber);
         $this->spec = require $this->card_number_parsed->getSpecFilePath();

@@ -23,7 +23,8 @@ class(__FILE__) implements CardComponents
 <text>
 <x-card.normalrule>Search your Library for an Item card.</x-card.normalrule>
 <x-card.normalrule>Reveal it. Then put it in your hand.</x-card.normalrule>
-    </text>
+<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+</text>
 </x-card.phaserule>
 HTML;
     }

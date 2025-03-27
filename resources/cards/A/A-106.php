@@ -21,6 +21,7 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>Discard up to 2 Monster cards</x-card.normalrule>
 <x-card.normalrule>from your hand. Draw 3 cards for</x-card.normalrule>
 <x-card.normalrule>each card you discarded in this way.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
     }

@@ -17,9 +17,9 @@ return new
     #[Concept('Size', 4)]
     #[Concept('Speed', 3)]
     #[Concept('Boost',3)]
-    #[IsGeneratedImage]
     #[ImagePrompt('yellow electric rodent monster of weird zoology in a factory')]
-    #[LocalHeroImage('hero/A-M-05.jpeg')]
+    #[LocalHeroImage('hero/A-M-05.png')]
+    #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

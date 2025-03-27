@@ -23,16 +23,11 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <text y="495" filter="url(#solid)">
-      <x-card.smallrule>{{ __('rules.attach-to-monster')}}</x-card.smallrule>
-    </text>
-
-<x-card.phaserule type="Command" lines="2">
-    <text >
-        <x-card.normalrule>For 1d4 turns, this Monster</x-card.normalrule>
+        <text y="500" filter="url(#solid)">
+        <x-card.smallrule>{{ __('rules.attach-to-monster')}}</x-card.smallrule>
+    <x-card.normalrule>For 1d4 turns, this Monster</x-card.normalrule>
             <x-card.normalrule>cannot be the target of an Attack.</x-card.normalrule>
 </text>
-</x-card.phaserule>
 HTML;
     }
 };
