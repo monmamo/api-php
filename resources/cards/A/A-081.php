@@ -23,7 +23,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule lines="2">
+<x-card.cardrule lines="3">
 <x-card.normalrule>Put a card from your Discard</x-card.normalrule>
 <x-card.normalrule>pile into your hand.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />

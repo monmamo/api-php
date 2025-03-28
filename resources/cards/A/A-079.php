@@ -9,7 +9,11 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Rescue Drone')]
 #[Concept('Drone')]
-#[Concept('Item', 'DamageCapacity:5', 'Size:25', 'Speed:4')]
+#[Concept('Item')]
+#[Concept('DamageCapacity', 10)]
+#[Concept('Level', 5)]
+#[Concept('Size', 25)]
+#[Concept('Speed', 4)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -17,7 +21,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<text y="140" filter="url(#solid)">
+<text y="500" filter="url(#solid)">
 <x-card.normalrule>Choose one of your Monsters on the Battlefield.</x-card.normalrule>
 <x-card.normalrule>Shuffle that Monster, all cards attached to it,</x-card.normalrule>
 <x-card.normalrule>and Rescue Drone into your Library.</x-card.normalrule>

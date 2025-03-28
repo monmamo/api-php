@@ -17,7 +17,7 @@
 
 <h4>Hate random booster packs? So do we.</h4>
 <p>
-    When you buy a MonMaMoCS booster pack, you will know what you’re getting. It will br printed on the package. Our card database has every card that is commercially available, making it easy to look up all details, rulings and errata for any card.
+    When you buy a MonMaMoCS booster pack, you will know what you’re getting. It will be printed on the package. Our card database has every card that is commercially available, making it easy to look up all details, rulings and errata for any card.
 </p>
 
 <h4>Your cards will be just as playable 20 years from now as they are today.</h4>

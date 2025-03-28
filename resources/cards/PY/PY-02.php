@@ -25,6 +25,7 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>Search your Library for a Pyros Monster.</x-card.normalrule>
 <x-card.normalrule>Reveal it, then put it in your hand.</x-card.normalrule>
 <x-card.normalrule>Then, shuffle your Library.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
     }

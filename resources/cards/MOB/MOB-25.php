@@ -19,6 +19,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.cardrule height="55" >
 <x-card.normalrule>Choose one opponent. That opponent may search their Library for a Weapon. You may search your Library for a Food item.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
     }

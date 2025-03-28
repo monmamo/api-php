@@ -24,6 +24,7 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>any number of distinct Mana cards</x-card.normalrule>
 <x-card.normalrule>& put them into your hand.</x-card.normalrule>
 <x-card.normalrule>Shuffle your Library.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </x-card.cardrule>
 HTML;
     }

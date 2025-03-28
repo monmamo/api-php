@@ -18,8 +18,8 @@ return new
     #[Concept('Size', 4)]
     #[Concept('Speed', 5)]
     #[Concept('Boost', '2')]
-    #[LocalHeroImage('hero/A-M-17.jpeg')]
-    #[IsGeneratedImage]
+    #[LocalHeroImage('hero/A-M-17.jpg')]
+    #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
     #[ImageCredit(null)]
     class(__FILE__) implements CardComponents
     {

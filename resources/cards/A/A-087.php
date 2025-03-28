@@ -18,6 +18,7 @@ return new
     #[Concept('Size', 4)]
     #[Concept('Speed', 3)]
      #[ImageCredit('Image by Freepik')]
+     #[\App\CardAttributes\LocalHeroImage('hero/fieldworker.jpg')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -25,8 +26,6 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    #[\App\CardAttributes\LocalHeroImage('hero/fieldworker.jpg')]
-
         <text y="495" filter="url(#solid)">
             <x-card.smallrule>A player may have any number of Fieldworkers on the Battlefield.</x-card.smallrule>
         </text>

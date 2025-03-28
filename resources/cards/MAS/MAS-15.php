@@ -25,6 +25,7 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>the same name as a Monster in your Discard.</x-card.normalrule>
 <x-card.normalrule>Reveal that/those card(s). Put that/those</x-card.normalrule>
 <x-card.normalrule>card(s) in your hand. Shuffle your Library.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
     }

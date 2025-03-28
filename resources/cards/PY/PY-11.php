@@ -23,7 +23,8 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="55" >
-<x-card.normalrule>Attach up to 2 [[Fire]] cards from your hand to 1 of your Monsters. If you do, draw 3 cards.</x-card.normalrule>
+<x-card.normalrule>Attach up to 2 Fire (A-002) cards from your hand to 1 of your Monsters. If you do, draw 3 cards.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
     }

@@ -72,16 +72,17 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
     <div class="d-flex flex-row">
         <div class="p-2"><x-card cardNumber="A-M-15" width="200"/></div>
         <div class="p-2"><x-card cardNumber="A-M-16" width="200"/></div>
-        <div class="p-2"><x-card cardNumber="A-M-17" width="200"/></div>
         <div class="p-2"><x-card cardNumber="A-M-18" width="200"/></div>
+        <div class="p-2"><x-card cardNumber="A-M-19" width="200"/></div>
     </div>  
     <div class="d-flex flex-row">
-        <div class="p-2"><x-card cardNumber="A-M-19" width="200"/></div>
         <div class="p-2"><x-card cardNumber="A-M-20" width="200"/></div>
         <div class="p-2"><x-card cardNumber="A-M-21" width="200"/></div>
+        <div class="p-2"><x-card cardNumber="A-152" width="200"/></div>
+        <div class="p-2"><x-card cardNumber="A-153" width="200"/></div>
     </div>
 {{--
-Work in progress: A-M-05
+Work in progress: A-M-17
 
     <p>These are the cards we will work on next:</p>
 

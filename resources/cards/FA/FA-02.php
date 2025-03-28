@@ -20,6 +20,7 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>Search your Library for 1 Healing card.</x-card.normalrule>
 <x-card.normalrule>Reveal the card, then put it in your hand.</x-card.normalrule>
 <x-card.normalrule>Shuffle your Library afterwards.</x-card.normalrule>
+<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </x-card.cardrule>
 HTML;
     }
