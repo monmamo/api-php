@@ -9,7 +9,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-    #[Title('Felequess L48')]
+    #[Title('Kitpony')]
     #[Concept('Monster')]
     #[Concept('Female')]
     #[Concept('DamageCapacity', 23)]
@@ -19,6 +19,7 @@ return new
     #[Concept('Boost',4)]
     #[LocalHeroImage('hero/felequos.png')]
     #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
     #[ImageCredit(null)]
     class(__FILE__) implements CardComponents
     {
@@ -27,7 +28,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule y="460" height="55" >
+<x-card.cardrule y="530" height="55" >
 <x-card.normalrule>Taxons: Felequos</x-card.normalrule>
 </x-card.cardrule>
 HTML;

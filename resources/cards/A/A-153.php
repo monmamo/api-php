@@ -11,18 +11,18 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Fireball')]
-#[Concept('Attack')]
-#[IsGeneratedImage]
-#[Prerequisites(lines: 'Requires Pyros.', y: 460)]
-#[LocalHeroImage('hero/fireball.jpeg')]
-class(__FILE__) implements CardComponents
-{
-    use DefaultCardAttributes;
-
-    public function content(): \Traversable
+    #[Title('Fireball')]
+    #[Concept('Attack')]
+    #[IsGeneratedImage]
+    #[Prerequisites(lines: 'Requires Pyros.', y: 460)]
+    #[LocalHeroImage('hero/fireball.jpeg')]
+    class(__FILE__) implements CardComponents
     {
-        yield <<<'HTML'
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.phaserule type="Resolution" lines="3">
 <text>
 <x-card.normalrule>Discard any number of Fire (A-002)</x-card.normalrule>
@@ -31,5 +31,11 @@ class(__FILE__) implements CardComponents
     </text>
     </x-card.phaserule>
 HTML;
-    }
-};
+
+            yield \App\Strings\html(
+                'text',
+                ['x' => '50%', 'y' => '270', 'transform' => 'rotate(-30,375,270)', 'text-anchor' => 'middle', 'dominant-baseline' => "central", 'font-family' => "'Roboto Condensed', sans-serif", 'font-size' => "80px", 'fill' => '#ffffff', 'stroke' => '#000000', 'stroke-width' => '2'],
+                'ART IN PROGRESS',
+            )->toHtml();
+        }
+    };

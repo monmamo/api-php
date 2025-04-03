@@ -13,6 +13,7 @@ return new
     #[Concept('Male')]
     #[Concept('Integrity', '1d6')]
     #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
     #[LocalHeroImage('A189.jpg')] // https://www.freepik.com/free-photo/football-trainer-teaching-his-pupils_32248887.htm
     class(__FILE__) implements CardComponents
     {

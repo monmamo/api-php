@@ -12,6 +12,7 @@ return new
     #[Concept('Trait')]
     #[Concept('Physical')]
     #[IsGeneratedImage]
+    #[\App\CardAttributes\ImageIsPrototype]
     #[LocalHeroImage('AT32.png')]
     class(__FILE__) implements CardComponents
     {

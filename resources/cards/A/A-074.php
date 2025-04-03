@@ -11,17 +11,19 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Shopping Center')]
 #[Concept('Draw')]
-#[IsGeneratedImage]
+//#[IsGeneratedImage]
+//#[\App\CardAttributes\ImageIsPrototype]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 
     public function content(): \Traversable
     {
+        // <image x="0" y="0" class="hero" href="@local(A246.jpeg)" />
         yield <<<'HTML'
-    <image x="0" y="0" class="hero" href="@local(A246.jpeg)" />
+    
 
-<text>
+    <text y="570" filter="url(#solid)">
 <x-card.normalrule>Draw phase (every player): You may search</x-card.normalrule>
 <x-card.normalrule>your Library for a Vendor card and play it</x-card.normalrule>
 <x-card.normalrule>immediately. If you do so, return the card</x-card.normalrule>

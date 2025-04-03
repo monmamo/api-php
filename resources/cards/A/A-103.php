@@ -10,6 +10,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Drinking Water Fountain')]
 #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
 #[LocalHeroImage('A307.png')]
 #[Prerequisites(['Put this card in the Battlefield.'])]
 class(__FILE__) implements CardComponents

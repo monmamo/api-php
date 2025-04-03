@@ -19,6 +19,7 @@ return new
 #[Concept('Size', 5)]
 #[Concept('Speed', 4)]
 #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
 #[LocalHeroImage('A072.png')]
 #[Prerequisites(y: 460, lines: ['Limit 1 per player on the Battlefield.'])]
 class(__FILE__) implements CardComponents

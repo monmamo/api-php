@@ -12,6 +12,7 @@ return new
 #[Title('Favorite Toy')]
 #[Concept('Item')]
 #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
 #[LocalHeroImage('hero/A-152.png')]
 #[Prerequisites(lines: 'Attach this card to a Monster.')]
 class(__FILE__) implements CardComponents

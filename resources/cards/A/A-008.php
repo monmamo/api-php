@@ -13,6 +13,7 @@ return new
     #[Concept('Vendor')]
     #[Concept('Integrity', '3')]
     #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
     #[ImagePrompt('dark man in a mask wearing a trenchcoat carrying a large tote bag')]
     #[Prerequisites(lines: ['You may play this card only if you have a', 'Mobster card on the Battlefield.'], y: 415)]
     class(__FILE__) implements CardComponents

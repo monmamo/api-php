@@ -15,6 +15,7 @@ return new
 #[Title('Firebreath')]
 #[Concept('Trait')]
 #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
 #[FlavorText('Halitosis (A-110) is the least of your problems.')]
 #[Prerequisites(lines: 'Requires Pyros.', y: 340)]
 #[LocalHeroImage('hero/firebreath.jpeg')]

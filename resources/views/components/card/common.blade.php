@@ -28,16 +28,6 @@ $debug_opacity = match (true) {
         white-space: normal;
     }
 
-    tspan.bodytext {
-        font-style: normal;
-        font-size: 30px;
-        text-align: center;
-        text-anchor: middle;
-        white-space: normal;
-        fill: black;
-        alignment-baseline: middle;
-    }
-
     .conceptrule {
         font-style: normal;
         font-size: 20px;
@@ -63,16 +53,8 @@ $debug_opacity = match (true) {
         fill: black;
     }
 
-    .cardname {
-        font-family: 'Roboto Condensed', sans-serif;
-        font-size: 50px;
-        font-style: normal;
-        fill: black;
-    }
-
     rect.titlebox {
         fill: white;
-
     }
 
     image.hero {

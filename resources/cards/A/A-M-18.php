@@ -18,6 +18,7 @@ return new
     #[Concept('Speed', 3)]
     #[Concept('Boost',3)]
     #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
     #[LocalHeroImage('hero/A-M-18.jpeg')]
     class(__FILE__) implements CardComponents
     {
@@ -26,13 +27,13 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule y="400" height="55" >
+<x-card.cardrule y="530" height="55" >
 <x-card.normalrule>Taxons: Aquos, Hystricos</x-card.normalrule>
 </x-card.cardrule>
 
 <x-card.phaserule type="Attack" height="140">
-<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Ball of Pain</text>
-<text  y="<?= config('card-design.titlebox.title-height')?>" height="70">
+    <text>
+<x-card.skilltitle>Ball of Pain</x-card.skilltitle>
 <x-card.normalrule>Does Speed+3d6 @damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>

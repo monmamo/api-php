@@ -162,10 +162,14 @@ public static function disk(): \Illuminate\Contracts\Filesystem\Filesystem
                 'xmlns' => 'http://www.w3.org/2000/svg',
             ],
             \App\Strings\html(
+                'a',
+                ['href' => "http://monmamo.com/concepts/$this->type", 'target' => '_blank', 'rel' => 'noopener noreferrer'],
+            \App\Strings\html(
                 'g',
                 ['class' => 'stat'],
                 \App\Strings\render(...$this->_renderBladePieces()),
             ),
+        ),
         );
 
         self::$group_x += \config('card-design.concept.icon-size');

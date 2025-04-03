@@ -10,7 +10,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-    #[Title('Energos Monster L35')]
+    #[Title('Canibuzz')]
     #[Concept('Monster')]
     #[Concept('Male')]
     #[Concept('DamageCapacity', 16)]
@@ -19,6 +19,7 @@ return new
     #[Concept('Speed', 5)]
     #[Concept('Boost',2)]
     #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
     #[ImageCredit(null)]
     #[LocalHeroImage('hero/A-M-07.png')]
     #[ImagePrompt('yellow electric dog monster of weird zoology in a factory')]
@@ -29,15 +30,15 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule y="460" height="55" >
+<x-card.cardrule y="530" height="55" >
 <x-card.normalrule>Taxons: Energos, Canos</x-card.normalrule>
 </x-card.cardrule>
 
 
 <x-card.phaserule type="Skill" height="175">
-<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Puppy Power</text>
-<text  y="<?= config('card-design.titlebox.title-height')?>" height="70">
-<x-card.normalrule>You may transfer Energy Mana between</x-card.normalrule>
+    <text>
+<x-card.skilltitle>Puppy Power</x-card.skilltitle>
+<x-card.normalrule>You may transfer Electricity (A-003) between</x-card.normalrule>
 <x-card.normalrule>this Monster & any other Energos Monster.</x-card.normalrule>
 </text>
 </x-card.phaserule>

@@ -36,4 +36,13 @@ trait Reflection
     {
         return $this->reflection()->getAttributes($class);
     }
+
+    /**
+     * @group unary
+     */
+    public function hasAttribute(string $class): bool
+    {
+        return \count($this->getAttributes($class)) > 0;
+    }
+
 }

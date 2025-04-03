@@ -26,14 +26,14 @@ return new
         use DefaultCardAttributes;
 
         public function content(): \Traversable
-        {
+        { 
             yield <<<'HTML'
-<x-card.cardrule y="460" height="55" >
+<x-card.cardrule y="530" height="55" >
 <x-card.normalrule>Taxons: Gouros</x-card.normalrule>
 </x-card.cardrule>
 
 <x-card.phaserule type="Resolution" height="210">
-<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Nightmare Fuel</text>
+<x-card.skilltitle>Nightmare Fuel</x-card.skilltitle>
 <text  y="<?= config('card-design.titlebox.title-height')?>" height="105">
 <x-card.normalrule>Every Monster that does not use an</x-card.normalrule>
 <x-card.normalrule>Attack, Defense or Skill during the turn</x-card.normalrule>
@@ -41,5 +41,11 @@ return new
 </text>
 </x-card.phaserule>
 HTML;
+
+yield \App\Strings\html(
+    'text',
+    ['x' => '50%', 'y' => '270','transform'=>'rotate(-30,375,270)', 'text-anchor' => 'middle', 'dominant-baseline'=>"central" ,'font-family'=>"'Roboto Condensed', sans-serif" , 'font-size'=>"80px", 'fill' => '#ffffff','stroke'=>'#000000','stroke-width'=>'2'],
+    'ART IN PROGRESS',
+)->toHtml();
         }
     };

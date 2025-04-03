@@ -17,6 +17,7 @@ return new
 #[Concept('Size', 5)]
 #[Concept('Speed', 3)]
 #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
 #[LocalHeroImage('A245.png')]
 #[FlavorText('I am the law.')]
 #[Prerequisites(['Limit 1 on Battlefield among all players.', 'You may choose to make this card Male or Female', 'when you put it on the Battlefield.'])]

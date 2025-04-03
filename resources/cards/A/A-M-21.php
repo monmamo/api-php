@@ -20,6 +20,7 @@ return new
     #[Concept('Boost', '3')]
     #[LocalHeroImage('hero/A-M-21.png')]
     #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
     #[ImageCredit(null)]
     class(__FILE__) implements CardComponents
     {
@@ -28,13 +29,13 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule y="460" height="55" >
+<x-card.cardrule y="530" height="55" >
 <x-card.normalrule>Taxons: Canos, Lumos</x-card.normalrule>
 </x-card.cardrule>
 
 <x-card.phaserule type="Trait" height="150">
-<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Soothing Glow</text>
-<text  y="<?= config('card-design.titlebox.title-height')?>" height="105">
+    <text>
+<x-card.skilltitle>Soothing Glow</x-card.skilltitle>
 <x-card.normalrule>Reduce Speed of all other Monsters by 2.</x-card.normalrule>
 </text>
 </x-card.phaserule>

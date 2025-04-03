@@ -9,7 +9,9 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Grotesque Mouth')]
 #[Concept('Trait')]
+#[Concept('Size', '+1')]
 #[ImageCredit('Adobe Stock #2910609')]
+#[\App\CardAttributes\LocalHeroImage('hero/AdobeStock_2910609.jpeg')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -17,20 +19,10 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <image x="0" y="0" class="hero" href="@local(hero/AdobeStock_2910609.jpeg)" />
-
-    <text y="500" filter="url(#solid)">
-    <x-card.normalrule>Size +1.</x-card.normalrule>
-    </text>
-
-    <svg id="titlebox" x="50" y="630" width="550" height="165" viewBox="0 0 550 165">
-        <rect x="0" y="0" width="550" height="165" fill="#FFFFFF" fill-opacity="0.75" />
-        <x-card.titlebox.icon card-type="Attack" />
-
-        <text x="345" y="30" text-anchor="middle" class="cardtype" alignment-baseline="hanging">ATTACK</text>
-        <text x="345" y="90" text-anchor="middle" class="cardname" alignment-baseline="middle">Bite</text>
-        <text x="345" y="140" text-anchor="middle" font-size="30px" alignment-baseline="baseline">Does Speed×Boost damage.</text>
-    </svg>
+        <x-card.phaserule type="Attack" height="140"><text>
+<x-card.skilltitle>Bite</x-card.skilltitle>
+<x-card.normalrule>Does 3×Speed @damage.</x-card.normalrule>
+        </text></x-card.phaserule>
 HTML;
     }
 };

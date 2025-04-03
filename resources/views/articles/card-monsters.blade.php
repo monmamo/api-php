@@ -78,20 +78,22 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
     <div class="d-flex flex-row">
         <div class="p-2"><x-card cardNumber="A-M-20" width="200"/></div>
         <div class="p-2"><x-card cardNumber="A-M-21" width="200"/></div>
-        <div class="p-2"><x-card cardNumber="A-152" width="200"/></div>
-        <div class="p-2"><x-card cardNumber="A-153" width="200"/></div>
     </div>
-{{--
-Work in progress: A-M-17
-
-    <p>These are the cards we will work on next:</p>
-
     <div class="d-flex flex-row">
         <div class="p-2"><x-card cardNumber="A-006" width="200"/></div>
         <div class="p-2"><x-card cardNumber="A-023" width="200"/></div>
         <div class="p-2"><x-card cardNumber="A-030" width="200"/></div>
         <div class="p-2"><x-card cardNumber="A-031" width="200"/></div>
     </div>
+
+    <div class="d-flex flex-row">
+        <div class="p-2"><x-card cardNumber="A-059" width="200"/></div>
+        <div class="p-2"><x-card cardNumber="A-152" width="200"/></div>
+        <div class="p-2"><x-card cardNumber="A-153" width="200"/></div>
+    </div>
+{{--
+    <p>These are the cards we will work on next:</p>
+
     <div class="d-flex flex-row">
         <div class="p-2"><x-card cardNumber="A-032" width="200"/></div>
         <div class="p-2"><x-card cardNumber="A-035" width="200"/></div>

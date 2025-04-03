@@ -9,7 +9,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-    #[Title('Energlupor L45')]
+    #[Title('Cuddles')]
     #[Concept('Monster')]
     #[Concept('Male')]
     #[Concept('DamageCapacity', 20)]
@@ -18,6 +18,7 @@ return new
     #[Concept('Speed', 2)]
     #[Concept('Boost',3)]
     #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
     #[ImageCredit(null)]
     #[LocalHeroImage('hero/A-M-08.png')]
     class(__FILE__) implements CardComponents
@@ -27,15 +28,15 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule y="460" height="55" >
+<x-card.cardrule y="530" height="55" >
 <x-card.normalrule>Taxons: Energos, Lupos</x-card.normalrule>
 </x-card.cardrule>
 
 
 <x-card.phaserule type="Skill" height="175">
-<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Beast Mode</text>
-<text  y="<?= config('card-design.titlebox.title-height')?>" height="70">
-<x-card.normalrule>Size +1 for each Energy Mana</x-card.normalrule>
+<text>
+<x-card.skilltitle>Beast Mode</x-card.skilltitle>
+<x-card.normalrule>Size +1 for each Electricity (A-003)</x-card.normalrule>
 <x-card.normalrule>attached to this Monster.</x-card.normalrule>
 </text>
 </x-card.phaserule>

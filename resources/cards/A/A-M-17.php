@@ -28,16 +28,16 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule y="460" height="55" >
+<x-card.cardrule y="530" height="55" >
 <x-card.normalrule>Taxons: Carmos</x-card.normalrule>
 </x-card.cardrule>
 
-<x-card.phaserule type="Skill" height="210">
-<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Irresistible Cuteness</text>
-<text  y="<?= config('card-design.titlebox.title-height')?>" height="105">
-<x-card.normalrule>Master, Mobster and Bystander cards</x-card.normalrule>
-<x-card.normalrule>have no effect.</x-card.normalrule>
-</text>
+<x-card.phaserule type="Skill" height="170">
+    <text>
+<x-card.skilltitle>Irresistible Cuteness</x-card.skilltitle>
+<x-card.normalrule>Master, Mobster and Bystander</x-card.normalrule>
+<x-card.normalrule>cards have no effect.</x-card.normalrule>
+        </text>
 </x-card.phaserule>
 HTML;
         }

@@ -11,6 +11,7 @@ return new
 #[Concept('Vendor')]
 #[Concept('Integrity', '1d4')]
 #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

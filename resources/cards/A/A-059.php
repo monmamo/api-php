@@ -8,17 +8,18 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Dandruff')]
-#[Concept('Bane')]
-#[IsGeneratedImage]
-#[LocalHeroImage('hero/dandruff.jpeg')]
-class(__FILE__) implements CardComponents
-{
-    use DefaultCardAttributes;
-
-    public function content(): \Traversable
+    #[Title('Dandruff')]
+    #[Concept('Bane')]
+    #[IsGeneratedImage]
+    #[\App\CardAttributes\ImageIsPrototype]
+    #[LocalHeroImage('hero/dandruff.jpeg')]
+    class(__FILE__) implements CardComponents
     {
-        yield <<<'HTML'
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.phaserule type="Resolution" lines="3">
 <text>
 <x-card.normalrule>When this Monster takes a</x-card.normalrule>
@@ -28,5 +29,5 @@ class(__FILE__) implements CardComponents
 </x-card.phaserule>
 
 HTML;
-    }
-};
+        }
+    };

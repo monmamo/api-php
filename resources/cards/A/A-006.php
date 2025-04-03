@@ -19,6 +19,7 @@ return new
     #[Title('Biting')]
     #[Concept('Trait')]
     #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
     #[ImageCredit(null)]
     #[FlavorText('What sharp teeth you have.')]
     #[LocalHeroImage('A006.png')]
@@ -30,13 +31,11 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-
-    <x-card.phaserule type="Attack" height="140">
-<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Bite</text>
-<text  y="<?= config('card-design.titlebox.title-height')?>"  height="35">
+<x-card.phaserule type="Attack" height="140"><text>
+<x-card.skilltitle>Bite</x-card.skilltitle>
 <x-card.normalrule>Does 3×Speed @damage.</x-card.normalrule>
-</text>
-</x-card.phaserule>
+        </text></x-card.phaserule>
+
 HTML;
         }
     };

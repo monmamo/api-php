@@ -9,7 +9,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-    #[Title('Aquofeless L40')]
+    #[Title('Seaweed')]
     #[Concept('Monster')]
     #[Concept('Female')]
     #[Concept('DamageCapacity', 23)]
@@ -18,6 +18,7 @@ return new
     #[Concept('Speed', 3)]
     #[Concept('Boost',3)]
     #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
     #[LocalHeroImage('hero/A-M-03.png')]
     #[ImagePrompt('brown cat of weird zoology swimming in a lake')]
     class(__FILE__) implements CardComponents
@@ -32,8 +33,8 @@ return new
 </x-card.cardrule>
 
 <x-card.phaserule type="Skill" height="245">
-<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Saliva Spray</text>
-<text  y="<?= config('card-design.titlebox.title-height')?>" height="140">
+    <text>
+<x-card.skilltitle>Saliva Spray</x-card.skilltitle>
 <x-card.normalrule>Discard 1+ Water (A-001) from this Monster.</x-card.normalrule>
 <x-card.normalrule>For each Water (A-001) discarded,</x-card.normalrule>
 <x-card.normalrule>Attack does 1 @damage less damage,</x-card.normalrule>

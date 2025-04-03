@@ -17,6 +17,7 @@ return new
 #[Title('Halitosis')]
 #[Concept('Bane')]
 #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
 #[FlavorText('They say that bad breath is better than no breath at all…')]
 #[LocalHeroImage('A110.jpg')]
 #[Prerequisites([MONSTER_LIMIT_PREREQUISITE])]

@@ -20,6 +20,7 @@ return new
     #[Concept('Boost', '4')]
     #[LocalHeroImage('hero/A-M-19.jpeg')]
     #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
     #[ImagePrompt('blue selkie of weird zoology swimming in a lake, trees and mountains in the background')]
     #[ImageCredit(null)]
     class(__FILE__) implements CardComponents
@@ -29,13 +30,13 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule y="460" height="55" >
+<x-card.cardrule y="530" height="55" >
 <x-card.normalrule>Taxons: Aquos, Selkos</x-card.normalrule>
 </x-card.cardrule>
 
 <x-card.phaserule type="Trait" height="210">
-<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Smooth Skin</text>
-<text  y="<?= config('card-design.titlebox.title-height')?>" height="35">
+    <text>
+<x-card.skilltitle>Smooth Skin</x-card.skilltitle>
 <x-card.normalrule>Physical Defense prevents +2d6 @damage.</x-card.normalrule>
 </text>
 </x-card.phaserule>

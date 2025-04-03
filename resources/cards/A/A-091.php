@@ -15,6 +15,7 @@ return new
 #[Concept('Male')]
 #[Concept('Integrity', '1d4')]
 #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
 //#[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('He builds the hugest venues. Yuge ones.')]
 #[LocalBackgroundImage('A-091-full.png')]

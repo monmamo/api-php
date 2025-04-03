@@ -43,7 +43,7 @@ $id = function (string $suffix) use ($cardNumber) {
             $image_credit,
         )->toHtml();
     }
-
+    
     // The bodybox is the viewbox minus the titlebox.
     $bodybox_width = config("card-design.viewbox.width");
     $bodybox_height = config("card-design.viewbox.height") - config("card-design.titlebox.height");
@@ -58,14 +58,22 @@ $id = function (string $suffix) use ($cardNumber) {
     ];
 
     ?>
+
     <svg {{new \Illuminate\View\ComponentAttributeBag($bodybox_attributes)}}>
-        <?php
+    
+        <text x="0" y="50"         font-family="'Roboto Condensed', sans-serif"
+        font-size="50px"
+        font-style="normal"
+ fill="#ffffff" stroke="#ffffff" alignment-baseline="baseline" ><?= $cardName ?></text>
+
+<?php
         echo \App\Strings\render(
             $spec->hero(),
             $spec->prerequisitesAttribute(),
             ...$spec->content()
         );
         ?>
+
     </svg>
 
     <x-card.box slug="titlebox">
@@ -76,16 +84,23 @@ $id = function (string $suffix) use ($cardNumber) {
         \App\Concept::setGroupCount(\count($spec->concepts()));
 
         echo \App\Strings\render(...$spec->concepts());
-        echo \App\Strings\render(...$spec->getAttributes(\App\CardAttributes\PhaseRule::class));
-        ?>
-        <text x="<?= $text_x ?>" y="<?= config('card-design.concept.box-height') + config('card-design.titlebox.title-height') * 0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="baseline" fill-opacity="{{$titleboxOpacity}}"><?= $cardName ?></text>
+        ?>        
     </x-card.box>
 
     <?php
     echo \App\Strings\render($spec->flavorTextAttribute());
 
     $credit_y =  config('card-design.trimbox.y') + config('card-design.trimbox.height') - 5;
-    ?>
+
+
+    if ($spec->hasAttribute(\App\CardAttributes\ImageIsPrototype::class)) {
+            echo \App\Strings\html(
+            'text',
+            ['x' => '50%', 'y' => '370','transform'=>'rotate(-30,375,370)', 'text-anchor' => 'middle', 'dominant-baseline'=>"central" ,'font-family'=>"'Roboto Condensed', sans-serif" , 'font-size'=>"120px", 'fill' => '#000000','stroke'=>'#ffffff','fill-opacity' => '0.20', 'stroke-opacity' => '0.20'],
+            'PROTOTYPE',
+        )->toHtml();
+        }
+?>
 
     <g class="credit" fill="{{$creditColor()}}">
         <text x="<?= config('card-design.viewbox.x') ?>" y="<?= $credit_y ?>" text-anchor="start" alignment-baseline="top">&#169; Monsters Masters &amp; Mobsters LLC</text>

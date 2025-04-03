@@ -11,6 +11,7 @@ use App\GeneralAttributes\Title;
 return new
     #[FlavorText(lines: 'The wall of silence is blue.', y: 450)]
     #[IsGeneratedImage]
+    #[\App\CardAttributes\ImageIsPrototype]
     #[Concept('Mobster')]
     #[Concept('Integrity', '1d4')]
     #[Concept('DamageCapacity', 14)]

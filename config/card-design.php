@@ -43,10 +43,9 @@ $concept_box_height = $concept_icon_height * 1.25;
 $title_height = 70;
 
 $titlebox = [
-    'title-height' => $title_height,
     'x' => $viewbox['x'],
     'width' => $viewbox['width'],
-    'height' => $concept_box_height + $title_height,
+    'height' => $concept_box_height ,
     'cardtype_baseline' => 30,
 ];
 
@@ -60,7 +59,7 @@ $hero_height = 450;
 
 $hero = [
     'x' => 0,
-    'y' => 0, // $viewbox['y'],
+    'y' => $title_height, // $viewbox['y'],
     'width' => $hero_width,
     'height' => $hero_height,
     'icon' => [
@@ -79,47 +78,3 @@ $concept = [
 ];
 
 return \compact('physical', 'height', 'width', 'icon', 'trimbox', 'viewbox', 'titlebox', 'hero', 'primary_rule_height', 'secondary_rule_height', 'concept');
-[
-    'CARD_TITLE_FONT_SIZE' => 48,
-    'CARD_TITLE_FONT_COLOR' => '#000000',
-    'CARD_TITLE_FONT_FAMILY' => 'Arial',
-    'CARD_TITLE_FONT_WEIGHT' => 'bold',
-    'CARD_TITLE_FONT_ALIGN' => 'center',
-    'CARD_TITLE_FONT_LINE_HEIGHT' => 1.5,
-    'CARD_TITLE_FONT_MARGIN_TOP' => 0,
-    'CARD_TITLE_FONT_MARGIN_BOTTOM' => 0,
-
-    'CARD_BODY_FONT_SIZE' => 24,
-    'CARD_BODY_FONT_COLOR' => '#000000',
-    'CARD_BODY_FONT_FAMILY' => 'Arial',
-    'CARD_BODY_FONT_WEIGHT' => 'normal',
-    'CARD_BODY_FONT_ALIGN' => 'left',
-    'CARD_BODY_FONT_LINE_HEIGHT' => 1.5,
-    'CARD_BODY_FONT_MARGIN_TOP' => 0,
-    'CARD_BODY_FONT_MARGIN_BOTTOM' => 0,
-
-    'CARD_ICON_MARGIN_TOP' => 0,
-    'CARD_ICON_MARGIN_BOTTOM' => 0,
-    'CARD_ICON_MARGIN_LEFT' => 0,
-    'CARD_ICON_MARGIN_RIGHT' => 0,
-
-    'CARD_ICON_BORDER_RADIUS' => 0,
-    'CARD_ICON_BORDER_WIDTH' => 0,
-    'CARD_ICON_BORDER_COLOR' => '#000000',
-
-    'CARD_ICON_BACKGROUND_COLOR' => '#FFFFFF',
-
-    'CARD_TITLEBOX_BACKGROUND_COLOR' => '#FFFFFF',
-    'CARD_TITLEBOX_BORDER_RADIUS' => 0,
-    'CARD_TITLEBOX_BORDER_WIDTH' => 0,
-    'CARD_TITLEBOX_BORDER_COLOR' => '#000000',
-
-    'CARD_BODYBOX_BACKGROUND_COLOR' => '#FFFFFF',
-    'CARD_BODYBOX_BORDER_RADIUS' => 0,
-    'CARD_BODYBOX_BORDER_WIDTH' => 0,
-    'CARD_BODYBOX_BORDER_COLOR' => '#000000',
-
-    'CARD_BACKGROUND_COLOR' => '#FFFFFF',
-    'CARD_BORDER_RADIUS' => 0,
-    'CARD_BORDER_WIDTH',
-];

@@ -27,12 +27,12 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule y="460" height="55" >
+<x-card.cardrule y="530" height="55" >
 <x-card.normalrule>Taxons: Pyros, Hystricos</x-card.normalrule>
 </x-card.cardrule>
 
 <x-card.phaserule type="Attack" height="175">
-<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Hot Quills</text>
+<x-card.skilltitle>Hot Quills</x-card.skilltitle>
 <text  y="<?= config('card-design.titlebox.title-height')?>" height="70">
 <x-card.normalrule>Does 3d6 @damage.</x-card.normalrule>
 </text>

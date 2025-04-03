@@ -23,7 +23,7 @@ class FlavorText implements Renderable
      */
     public function __construct(
         $lines,
-        public readonly int $y = 510,
+        public readonly int $y = 580,
         public readonly string $color = '#ffffff',
     ) {
         $this->lines = Arr::wrap($lines);

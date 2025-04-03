@@ -147,6 +147,8 @@ trait DefaultCardAttributes
         if (\count($attributes) > 0) {
             return $attributes[0]->getArguments()[0];
         }
+
+        throw new \LogicException('No title attribute found');
     }
 
     /**

@@ -17,6 +17,7 @@ return new
 #[Concept('Size', 2)]
 #[Concept('Speed', 3)]
 #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
 #[LocalHeroImage('hero/hypnotic-drone.jpeg')]
 #[Prerequisites(y: 470)]
 class(__FILE__) implements CardComponents

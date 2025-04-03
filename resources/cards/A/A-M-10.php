@@ -21,6 +21,7 @@ return new
     #[LocalHeroImage('hero/A-M-10.jpeg')]
     #[ImagePrompt('red panda of weird zoology shooting fire from its mouth')]
     #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
     #[ImageCredit(null)]
     class(__FILE__) implements CardComponents
     {
@@ -29,13 +30,13 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule y="460" height="55" >
+<x-card.cardrule y="530" height="55" >
 <x-card.normalrule>Taxons: Pyros, Aracunos</x-card.normalrule>
 </x-card.cardrule>
 
 <x-card.phaserule type="Upkeep" height="210">
-<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Flaming Tail</text>
-<text  y="<?= config('card-design.titlebox.title-height')?>" height="105">
+    <text>
+<x-card.skilltitle>Flaming Tail</x-card.skilltitle>
 <x-card.normalrule>Once per turn, you may search your</x-card.normalrule>
 <x-card.normalrule>Library or Discard for a Fire (A-002)</x-card.normalrule>
 <x-card.normalrule>and attach it to this Monster.</x-card.normalrule>

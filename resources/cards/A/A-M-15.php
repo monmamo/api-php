@@ -19,6 +19,7 @@ return new
     #[Concept('Boost', '3')]
     #[LocalHeroImage('hero/A-M-15.png')]
     #[IsGeneratedImage]
+#[\App\CardAttributes\ImageIsPrototype]
     #[ImageCredit(null)]
     class(__FILE__) implements CardComponents
     {
@@ -33,8 +34,8 @@ return new
 
 
 <x-card.phaserule type="Resolution" height="235">
-<text x="<?= config('card-design.titlebox.text_x')(false) ?>" y="<?= config('card-design.titlebox.title-height')*0.7 ?>" text-anchor="middle" class="cardname" alignment-baseline="middle">Resilience</text>
-<text  y="<?= config('card-design.titlebox.title-height')?>" height="70">
+<text>
+<x-card.skilltitle>Resilience</x-card.skilltitle>
 <x-card.normalrule>After applying attacks and defenses,</x-card.normalrule>
 <x-card.normalrule>If subject to a Bane, roll 1d6.</x-card.normalrule>
 <x-card.normalrule>@dieroll(6,5,4) The Bane has no effect. If the</x-card.normalrule>
