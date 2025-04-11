@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -12,11 +11,9 @@ use App\GeneralAttributes\Title;
 
 return new
     #[Title('Tranquilizer Dart')]
-    #[Concept('Attack')]
     #[Concept('Item')]
     #[Concept('Weapon')]
     #[ImageCredit('Shutterstock #169987271 by Inked Pixels')]
-    #[LocalHeroImage('hero/tranquilizer-dart.jpg')]
     #[FlavorText('I think something just stung me……')]
     class(__FILE__) implements CardComponents
     {
@@ -25,9 +22,15 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
+            <x-card.hero.local>hero/tranquilizer-dart.jpg</x-card.hero.local>
+
+            <x-card.phaserule type="Upkeep" y="580" lines="1"><text >
+<x-card.normalrule>Attach this card to a Character.</x-card.normalrule>
+</text></x-card.phaserule>
+
         <x-card.phaserule type="Resolution" lines="3"><text>
         <x-card.normalrule>For 1d4 turns hence, the</x-card.normalrule>
-<x-card.normalrule>attacked Character cannot attack,</x-card.normalrule> 
+<x-card.normalrule>affected Character cannot attack,</x-card.normalrule> 
 <x-card.normalrule>cannot defend, and has Speed of 0.</x-card.normalrule>
 </text></x-card.phaserule>
 HTML;

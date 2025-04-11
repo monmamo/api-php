@@ -38,7 +38,7 @@
 </p>
 
 <ul>
-    <li><a href="/cg">The MonMaMo Battle Card Game</a>, a traditional monster-battle TCG/CCG.</li>
+    <li><a href="/cg">Our traditional monster-battle TCG/CCG.</a></li>
     <li>Other pure card gamnes.</li>
     <li>Board games that use cards.</li>
     <li>Role-playing games, where cards can stand in for complex character sheets.</li>
@@ -126,30 +126,6 @@
     </div>
     </div>
 
-    <h1>Decks</h1>
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-md-6 ">
-                <h4>Single-Deck Variants</h4>
-                <dl>
-                    <dt><a href="/cards/deck/sdv1">Basic Common Deck</a></dt>
-                </dl>
-            </div>
-            <div class="col-sm-6 col-md-6 ">
-                <h4>Personal-Deck Variants</h4>
-                <dl>
-                    <dt><a href="/cards/deck/pdv-e">Energos Starter Deck</a></dt>
-                    <dt><a href="/cards/deck/pdv-f">Pyros Starter Deck</a></dt>
-                    <dt><a href="/cards/deck/pdv-w">Aquos Starter Deck</a></dt>
-                    <dt><a href="/cards/deck/pdv-m">Mobster Starter Deck</a></dt>
-                </dl>
-            </div>
-        </div>
-        </div>
-    
-    </div>
 </div>
 
 

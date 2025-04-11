@@ -17,7 +17,6 @@ return new
 #[Concept('Healing')]
 #[ImageCredit('')]
 #[FlavorText(['The best medicine is the one that tastes the worst.'])]
-#[LocalHeroImage('FA-08.png')]
 #[Prerequisites(['Attach this card to a Monster.'])]
 class(__FILE__) implements CardComponents
 {
@@ -26,7 +25,9 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-     <x-card.phaserule type="Upkeep" height="240">
+<x-card.hero.local>FA-08.png</x-card.hero.local>
+
+<x-card.phaserule type="Upkeep" height="240">
        <text >
 <x-card.normalrule>After all attacks have been resolved (even if the Monster has been knocked out), roll 3d6. Remove that amount of damage from that Monster. If two or three of the rolls are 5 or higher, remove all Banes from that Monster.</x-card.normalrule>
 </text>

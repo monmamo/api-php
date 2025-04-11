@@ -1,8 +1,8 @@
 <x-guest-layout>
 
-<x-slot:page-title>Sucker Punch | Card Game</x-slot>
+<x-slot:page-title>Sucker Punch | Classic Monster Battle Card Game</x-slot>
 
-<x-breadcrumbs :items="['/cg'=>'Monsters Masters & Mobsters Card Game', '/cg/rules'=>'Rules']" />
+<x-breadcrumbs :items="['/cg'=>'Classic Monster Battle Card Game', '/cg/rules'=>'Rules']" />
 
 <h1>Sucker Punch</h1>
 

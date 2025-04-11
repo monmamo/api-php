@@ -1,16 +1,17 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Grenade')]
-#[\App\Concept('Attack')]
-#[\App\Concept('Item')]
+#[Concept('Attack')]
+#[Concept('Item')]
 #[Concept('Weapon')]
-#[\App\CardAttributes\ImageCredit("Icon by Ivanda arief budiarto from Noun Project")]
+#[ImageCredit('Icon by Ivanda arief budiarto from Noun Project')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -18,7 +19,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.hero-svg y="-150" scale="2" viewBox="-5.0 -10.0 110.0 135.0"><g fill="#ffffff">
+<x-card.hero.svg y="-150" scale="2" viewBox="-5.0 -10.0 110.0 135.0"><g fill="#ffffff">
  <path d="m61.387 25.918c0 1.5508-2.3477 1.1406-3.3164 1.1406h-3.5156v-2.2773h3.5156c0.97266 0 3.3164-0.41016 3.3164 1.1406z"/>
  <path d="m54.551 31.613v2.7109c-0.56641-0.22656-1.3125-0.33594-1.9141-0.42188 0-0.21875-3.5078-0.35156-3.7812-0.35156-1.2695 0-2.5312 0.33984-3.7812 0.33984-0.5625 0.28125-1.3438 0.14844-1.9141 0.43359v-2.7109z"/>
  <path d="m65.453 45.238c-1.1836-0.17188-2.3828-0.32031-3.5664-0.45703-0.17188-1.4922-0.36328-2.9609-0.58203-4.4102 1.6523 1.3828 3.0234 3.0273 4.1484 4.8633z"/>
@@ -49,7 +50,7 @@ class(__FILE__) implements CardComponents
  <path d="m45.438 20.223h6.8359v9.1133h-6.8359z"/>
  <path d="m64.805 20.223c-3.25 0-5.9062 2.8359-5.6836 6.082 0.21875 3.1875 3.1289 5.6211 6.3047 5.2773 2.9688-0.32422 5.2305-2.9961 5.0664-5.9766-0.16016-2.9805-2.7031-5.3828-5.6875-5.3828zm0 9.1133c-4.4023 0-4.4023-6.8359 0-6.8359 4.4023 0 4.4023 6.8359 0 6.8359z"/>
  <path d="m68.223 25.918c0 4.4023-6.8359 4.4023-6.8359 0 0-4.4023 6.8359-4.4023 6.8359 0z"/>
- </g></x-card.hero-svg>
+ </g></x-card.hero.svg>
 
     <x-card.phaserule type="Resolution" lines="3">
     <text >

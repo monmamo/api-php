@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -11,7 +10,6 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Hardware Store')]
     #[Concept('Vendor')]
-    #[LocalHeroImage('hero/hardware-store.jpg')]
     #[ImageCredit('Image by studio4rt on Freepik')] // https://www.freepik.com/free-vector/tools-shop-showcase-assortment-painting-building-home-repair-renovation-carpentry-work-constructor-hardware-store-stand-with-housekeeping-equipment_25872060.htm
     #[Prerequisites(y: 455)]
     class(__FILE__) implements CardComponents
@@ -21,6 +19,8 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
+            <x-card.hero.local>hero/hardware-store.jpg</x-card.hero.local>
+            
 <x-card.phaserule type="Draw" lines="6">
     <text>
   <x-card.normalrule>Discard any number of cards from</x-card.normalrule>

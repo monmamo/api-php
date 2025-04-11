@@ -3,6 +3,7 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
 use App\CardAttributes\LocalBackgroundImage;
 use App\Concept;
@@ -15,7 +16,7 @@ return new
 #[Concept('Male')]
 #[Concept('Integrity', '1d4')]
 #[IsGeneratedImage]
-#[\App\CardAttributes\ImageIsPrototype]
+#[ImageIsPrototype]
 //#[ImageCredit('IMAGE_CREDIT')]
 #[FlavorText('He builds the hugest venues. Yuge ones.')]
 #[LocalBackgroundImage('A-091-full.png')]

@@ -1,8 +1,8 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -15,7 +15,7 @@ return new
     #[Concept('Male')]
     #[Concept('Integrity', '2d6')]
     #[IsGeneratedImage('head coach standing on the sidelines with a clipboard, green jacket')]
-    #[LocalHeroImage('A-055.png')]
+    #[ImageIsPrototype]
     #[Prerequisites(y: 460, lines: ['Limit 1 per player on Battlefield.', 'You may choose to make this card Female', 'when you put it on the Battlefield.'])]
     class(__FILE__) implements CardComponents
     {
@@ -24,6 +24,8 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
+    <x-card.hero.local>A-055.png</x-card.hero.local>
+
     <x-card.phaserule type="Resolution" :lines="3">
         <text >
 <x-card.normalrule>Your Monsters' attacks</x-card.normalrule>

@@ -10,14 +10,19 @@ use App\CardNumber;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
+use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 
-function cardNumber($source):string{
-    return match(true){
-        is_string($source) => $source,
+/**
+ * @group unary
+ */
+function cardNumber($source): string
+{
+    return match (true) {
+        \is_string($source) => $source,
         $source instanceof CardNumber => $source->cardNumber(),
-        default => dd($source)
+        default => \dd($source)
     };
 }
 
@@ -75,7 +80,9 @@ function makeNewCard(
 
     yield 'public function content():\\Traversable{yield <<<HTML';
 
-    if (is_string($icon)) yield $icon;
+    if (\is_string($icon)) {
+        yield $icon;
+    }
 
     if (!$no_content) {
         $height = \count($secondary_lines) * 40 + \count($primary_lines) * 55;
@@ -105,139 +112,145 @@ function makeNewCard(
  */
 function make($spec): CardComponents
 {
-    return match (true) {
-        \is_array($spec) => new class($spec) implements \IteratorAggregate, CardComponents
-        {
-            protected readonly CardNumber $card_number_parsed;
-
-            /**
-             * Constructor.
-             *
-             * @group magic
-             * @group mutator
-             * @group nonary|unary|variadic
-             *
-             * @uses parent::__construct
-             *
-             * @return void
-             */
-            public function __construct(public readonly array $spec) {}
-
-            /**
-             * @group nonary
-             */
-            public function background(): \Traversable
+    try {
+        return match (true) {
+            \is_array($spec) => new class($spec) implements \IteratorAggregate, CardComponents
             {
-                if (isset($this->spec['background']))
-                    yield  $this->spec['background'];
-            }
+                protected readonly CardNumber $card_number_parsed;
 
-            /**
-             * @group nonary
-             */
-            public function concepts(): array
-            {
-                return $this->spec['concepts'];
-            }
+                /**
+                 * Constructor.
+                 *
+                 * @group magic
+                 * @group mutator
+                 * @group nonary|unary|variadic
+                 *
+                 * @uses parent::__construct
+                 *
+                 * @return void
+                 */
+                public function __construct(public readonly array $spec) {}
 
-            public function creditColor(): string
-            {
-                return 'white';
-            }
-
-            /**
-             * @group nonary
-             */
-            public function hero(): \Illuminate\Contracts\Support\Renderable
-            {
-                return new class() implements \Illuminate\Contracts\Support\Renderable
+                /**
+                 * @group nonary
+                 */
+                public function background(): \Traversable
                 {
-                    public function render()
-                    {
-                        return '';
+                    if (isset($this->spec['background'])) {
+                        yield $this->spec['background'];
                     }
-                };
-            }
-            /**
-             * @group nonary
-             */
-            public function content(): \Traversable
-            {
-                yield from $this->spec['content'];
-            }
+                }
 
-            /**
-             * @group nonary
-             */
-            public function cardNumber(): string
-            {
-                return  $this->spec['card_number'] ?? dd($this->spec);
-            }
+                /**
+                 * @group nonary
+                 */
+                public function cardNumber(): string
+                {
+                    return $this->spec['card_number'] ?? \dd($this->spec);
+                }
 
-            /**
-             * @implements \IteratorAggregate::getIterator
-             * @group nonary
-             */
-            public function getIterator(): \Traversable
-            {
-                yield from \App\Card\makeNewCard(
-                    card_name: $this->spec['card_name'],
-                    concepts: $this->spec['concepts'] ?? [],
-                    flavor_text: Arr::wrap($this->spec['flavor-text'] ?? []),
-                    no_content: $this->spec['no_content'] ?? false,
-                    secondary_lines: $this->spec['secondary_lines'] ?? [],
-                    primary_lines: $this->spec['primary_lines'] ?? [],
-                    background: $this->background(),
-                );
-            }
+                /**
+                 * @group nonary
+                 */
+                public function concepts(): array
+                {
+                    return $this->spec['concepts'];
+                }
 
-            /**
-             * @group nonary
-             */
-            public function imageCredit(): ?string
-            {
-                return $this->spec['image-credit'] ?? null;
-            }
+                /**
+                 * @group nonary
+                 */
+                public function content(): \Traversable
+                {
+                    yield from $this->spec['content'];
+                }
 
-            /**
-             * @implements \App\Contracts\HasName
-             */
-            public function name(): string
-            {
-                return $this->spec['name'];
-            }
+                public function creditColor(): string
+                {
+                    return 'white';
+                }
 
-            public function put(): void
-            {
-                $set = $this->set();
-                $card_number = $this->cardNumber();
-                $card_name = $this->name();
+                /**
+                 * @implements \IteratorAggregate::getIterator
+                 * @group nonary
+                 */
+                public function getIterator(): \Traversable
+                {
+                    yield from \App\Card\makeNewCard(
+                        card_name: $this->spec['card_name'],
+                        concepts: $this->spec['concepts'] ?? [],
+                        flavor_text: Arr::wrap($this->spec['flavor-text'] ?? []),
+                        no_content: $this->spec['no_content'] ?? false,
+                        secondary_lines: $this->spec['secondary_lines'] ?? [],
+                        primary_lines: $this->spec['primary_lines'] ?? [],
+                        background: $this->background(),
+                    );
+                }
 
-                Storage::disk('cards')->put("{$set}/{$card_number}.php", \implode("\n", \iterator_to_array($this)));
-            }
+                /**
+                 * @group nonary
+                 */
+                public function hero(): Renderable
+                {
+                    return new class() implements Renderable
+                    {
+                        public function render()
+                        {
+                            return '';
+                        }
+                    };
+                }
 
-            /**
-             * @group nonary
-             */
-            public function set(): string
-            {
-                $this->card_number_parsed ??= CardNumber::make($this->cardNumber());
-                return $this->card_number_parsed->set;
-            }
-        },
+                /**
+                 * @group nonary
+                 */
+                public function imageCredit(): ?string
+                {
+                    return $this->spec['image-credit'] ?? null;
+                }
 
-        \is_string($spec) => match (true) {
-            \file_exists($spec) => \App\Card\make(require $spec),
-            default => \App\Card\make(CardNumber::make($spec)),
-            // throw new \InvalidArgumentException('Invalid spec source'),
-        },
+                /**
+                 * @implements \App\Contracts\HasName
+                 */
+                public function name(): string
+                {
+                    return $this->spec['name'];
+                }
 
-        $spec instanceof CardNumber => \App\Card\make(require $spec->getSpecFilePath()),
+                public function put(): void
+                {
+                    $set = $this->set();
+                    $card_number = $this->cardNumber();
+                    //$card_name = $this->name();
 
-        $spec instanceof CardComponents => $spec,
+                    Storage::disk('cards')->put("{$set}/{$card_number}.php", \implode("\n", \iterator_to_array($this)));
+                }
 
-        default => \dd($spec)
-    };
+                /**
+                 * @group nonary
+                 */
+                public function set(): string
+                {
+                    $this->card_number_parsed ??= CardNumber::make($this->cardNumber());
+                    return $this->card_number_parsed->set;
+                }
+            },
+
+            \is_string($spec) => match (true) {
+                \file_exists($spec) => \App\Card\make(require $spec),
+                default => \App\Card\make(CardNumber::make($spec)),
+                // throw new \InvalidArgumentException('Invalid spec source'),
+            },
+
+            $spec instanceof CardNumber => \App\Card\make(require $spec->getSpecFilePath()),
+
+            $spec instanceof CardComponents => $spec,
+
+            default => \dd($spec)
+        };
+    } catch (\Throwable $e) {
+        \dd($spec, $spec->getSpecFilePath(), $e);
+    }
 }
 
 function includeFontFace($font_slug)

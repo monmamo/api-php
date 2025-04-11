@@ -1,7 +1,7 @@
 <x-guest-layout>
 
 <x-slot:page-title>Power Up | Card Game</x-slot>
-<x-breadcrumbs :items="['/cg'=>'Monsters Masters & Mobsters Card Game', '/cg/rules'=>'Rules']" />
+<x-breadcrumbs :items="['/cg'=>'Classic Monster Battle Card Game', '/cg/rules'=>'Rules']" />
 
 <h1>Power Up</h1>
 

@@ -1,6 +1,3 @@
-<?php
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -108,12 +105,12 @@
 ?>
 
 
-<body data-bs-spy="scroll" data-bs-target="#page-toc" data-bs-smooth-scroll="true">
+<body> {{-- data-bs-spy="scroll" data-bs-target="#page-toc" data-bs-smooth-scroll="true" --}}
 
     <x-header />
 
-    <aside class="bd-sidebar">
-        @isset($leftbar)
+    @isset($leftbar)
+    <aside>
         <div class="flex-shrink-0 p-3" style="width: 280px;">
             <ul class="list-unstyled ps-0">
                 {{$leftbar}}
@@ -122,9 +119,25 @@
 
         <div class="b-example-divider b-example-vr"></div>
 
-        @endisset
     </aside>
-    <main class="bd-main p-3">{{$slot}}</main>
+    @endisset
+
+    @isset($nav)
+    {{$title}}
+    @endisset
+
+@isset($nav)
+<div class="row">
+    <div class="col-9">
+        <div class="p-3">{{$slot}}</div>
+    </div>
+    <div class="col-3">
+        <nav id="page-toc" class="h-100 flex-column align-items-stretch border-end"><nav class="nav nav-pills flex-column">{{$nav}}</nav></nav>
+    </div>
+</div>
+@else
+<main class="p-3">{{$slot}}</main>
+@endisset
 
     <x-footer />
 

@@ -2,6 +2,7 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -12,7 +13,7 @@ return new
     #[Concept('Vendor')]
     #[Concept('Integrity', '1d4')]
     #[IsGeneratedImage]
-#[\App\CardAttributes\ImageIsPrototype]
+#[ImageIsPrototype]
     #[ImageCredit(null)]
     class(__FILE__) implements CardComponents
     {

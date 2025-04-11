@@ -9,6 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Chest Thrust')]
 #[Concept('Attack')]
+#[Concept('Level', 20)]
 #[FlavorText(['Punch to the torso.'])]
 class(__FILE__) implements CardComponents
 {

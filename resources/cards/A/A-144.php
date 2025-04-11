@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -17,7 +16,6 @@ return new
     #[Concept('Speed', 2)]
     #[ImageCredit('Image by macrovector on Freepik')]
     #[FlavorText('Declare the pennies on your eyes.')]
-    #[LocalHeroImage('hero/taxman.jpg')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -25,7 +23,9 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="2">
+    <x-card.hero.local>hero/taxman.jpg</x-card.hero.local>
+
+    <x-card.phaserule type="Resolution" lines="2">
     <text >
 <x-card.normalrule>Each player discards a card</x-card.normalrule>
 <x-card.normalrule>from his hand or Library.</x-card.normalrule>

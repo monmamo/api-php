@@ -10,15 +10,15 @@ return [
         'A-M-04' => 3,
 
         'A-001' => 10, // Water Mana
-        'A-073' => 4, // Water Shield
-        'A-086' => 4, // Water Pulse
+        'A-D-04' => 4, // Water Shield
+        'A-T-24' => 4, // Water Pulse
 
-        'A-006' => 3, // Biting
-        'A-027' => 3, // Natural Healing
+        'A-T-01' => 3, // Biting
+        'A-T-08' => 3, // Natural Healing
         'A-032' => 4, // Cheerleader
         'A-033' => 2, // Wheel of Fortune
-        'A-035' => 2, // Tackling
-        'A-038' => 2, // Body Block
+        'A-T-12' => 2, // Tackling
+        'A-D-01' => 2, // Body Block
         'A-041' => 2, // Body Slam
         'A-051' => 1, // Waste Manager
         'A-077' => 2, // Round for the House

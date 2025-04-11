@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -20,7 +19,6 @@ return new
     #[Concept('DamageCapacity', 15)]
     #[Concept('Size', 5)]
     #[Concept('Speed', 2)]
-    #[LocalHeroImage('A186.jpg')]
     #[ImageCredit('Image by fxquadro on Freepik')]
     #[FlavorText(['Nice monster team you got there.', 'Would be a shame if something happened to it.'])]
     #[Prerequisites(y: 525, lines: [PLAYER_LIMIT_PREREQUISITE])]
@@ -31,6 +29,8 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
+    <x-card.hero.local>A186.jpg</x-card.hero.local>
+
     <x-card.phaserule type="Draw" lines="3">
         <text>
             <x-card.normalrule>During your opponents' Draw phase,</x-card.normalrule>

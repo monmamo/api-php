@@ -16,6 +16,10 @@ $id = function (string $suffix) use ($cardNumber) {
 
 ?>
 
+@if($link)
+<a href="/cards/card/{{$cardNumber}}">
+@endif
+
 <x-svg
     :$dx
     :$dy
@@ -30,7 +34,6 @@ $id = function (string $suffix) use ($cardNumber) {
     @unless($omitCommon)
     <x-card.common :specs="[$spec]"/>
     @endunless
-
 
     <rect id="absolute-bounds" x="0" y="0" width="@cardspec(width)" height="@cardspec(height)" fill="url(#{{$cardNumber}}-background)" rx="75" />
 
@@ -61,11 +64,6 @@ $id = function (string $suffix) use ($cardNumber) {
 
     <svg {{new \Illuminate\View\ComponentAttributeBag($bodybox_attributes)}}>
     
-        <text x="0" y="50"         font-family="'Roboto Condensed', sans-serif"
-        font-size="50px"
-        font-style="normal"
- fill="#ffffff" stroke="#ffffff" alignment-baseline="baseline" ><?= $cardName ?></text>
-
 <?php
         echo \App\Strings\render(
             $spec->hero(),
@@ -73,6 +71,11 @@ $id = function (string $suffix) use ($cardNumber) {
             ...$spec->content()
         );
         ?>
+
+<text x="0" y="50"         font-family="'Roboto Condensed', sans-serif"
+font-size="50px"
+font-style="normal"
+fill="#ffffff" stroke="#ffffff" alignment-baseline="baseline" ><?= $cardName ?></text>
 
     </svg>
 
@@ -100,6 +103,8 @@ $id = function (string $suffix) use ($cardNumber) {
             'PROTOTYPE',
         )->toHtml();
         }
+
+        
 ?>
 
     <g class="credit" fill="{{$creditColor()}}">
@@ -107,6 +112,25 @@ $id = function (string $suffix) use ($cardNumber) {
         <text x="70%" y="<?= $credit_y ?>" text-anchor="middle" alignment-baseline="top"><?php echo \date('Y-m-d'); ?></text>
         <text x="<?= config('card-design.viewbox.x') + config('card-design.viewbox.width') ?>" y="<?= $credit_y ?>" text-anchor="end" alignment-baseline="top"><?php echo $cardNumber; ?></text>
     </g>
+
+    <?php
+        if ($spec->hasAttribute(\App\CardAttributes\ImageInDevelopment::class)) {
+            echo \App\Strings\html(
+                'text',
+                ['x' => '50%', 'y' => '340', 'transform' => 'rotate(-30,375,340)', 'text-anchor' => 'middle', 'dominant-baseline' => "central", 'font-family' => "'Roboto Condensed', sans-serif", 'font-size' => "80px", 'fill' => '#ffffff', 'stroke' => '#000000', 'stroke-width' => '2'],
+                'ART IN PROGRESS',
+            )->toHtml();
+        }
+
+    if ($spec->hasAttribute(\App\CardAttributes\IsIncomplete::class)) {
+            echo \App\Strings\html(
+            'text',
+            ['x' => '50%', 'y' => '50%', 'transform' => 'rotate(-30,375,525)', 'text-anchor' => 'middle', 'dominant-baseline' => "central", 'font-family' => "'Roboto Condensed', sans-serif", 'font-size' => "120px", 'fill' => '#ffffff', 'stroke' => '#000000', 'stroke-width' => '2'],
+            'INCOMPLETE',
+        )->toHtml();
+        }
+
+    ?>
 
     <g class="debug">
         <x-card.rect slug="trimbox" fill-opacity="0" stroke-width=3 stroke="#FF0000" rx="25" />
@@ -125,3 +149,7 @@ $id = function (string $suffix) use ($cardNumber) {
         <line x1="75%" y1="0" x2="75%" y2="100%" class="info secondary" />
     </g>
 </x-svg>
+
+@if($link)
+</a>
+@endif

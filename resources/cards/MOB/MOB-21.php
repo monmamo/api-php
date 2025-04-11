@@ -12,7 +12,6 @@ return new
 #[Concept('Bane')]
 #[Concept('Item')]
 #[Concept('Weapon')]
-#[LocalHeroImage('A306.png')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -20,6 +19,8 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
+<x-card.hero.local>A306.png</x-card.hero.local>
+
 <x-card.cardrule height="110" >
 <x-card.normalrule>For 1d4 turns (including this one),</x-card.normalrule>
 <x-card.normalrule>apply Confusion.</x-card.normalrule>

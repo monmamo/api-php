@@ -5,7 +5,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -15,7 +14,7 @@ return new
 #[Concept('Draw')]
 #[ImageCredit('Image by logturnal on Freepik')]
 #[FlavorText('Recycle today for a better upkeep phase tomorrow.')]
-#[LocalHeroImage('A212.jpg')]
+
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -23,6 +22,8 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
+<x-card.hero.local>A212.jpg</x-card.hero.local>
+
 <x-card.cardrule lines="3">
 <x-card.normalrule>Put a card from your Discard</x-card.normalrule>
 <x-card.normalrule>pile into your hand.</x-card.normalrule>

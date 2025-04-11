@@ -186,4 +186,12 @@ trait DefaultCardAttributes
         $attributes = $this->getAttributes(CardSet::class);
         return \count($attributes) > 0 ? $attributes[0]->getArguments()[0] : 'Unknown';
     }
+
+    /**
+     * @group nonary
+     */
+    public function webpageContent(): \Traversable
+    {
+        return new \EmptyIterator();
+    }
 }

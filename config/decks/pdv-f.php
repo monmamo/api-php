@@ -11,17 +11,17 @@ return [
 
         'A-153' => 3, // Fireball
         'A-101' => 3, // Gather Fire
-        'A-044' => 4, // Fire Shield
+        'A-D-03' => 4, // Fire Shield
         'A-060' => 3, // Flamethrower Attack
-        'A-065' => 3, // Firebreath
+        'A-T-22' => 3, // Firebreath
         'A-002' => 6, // Fire Mana
 
-        'A-006' => 2, // Biting
-        'A-027' => 2, // Natural Healing
+        'A-T-01' => 2, // Biting
+        'A-T-08' => 2, // Natural Healing
         'A-032' => 4, // Cheerleader
         'A-033' => 2, // Wheel of Fortune
-        'A-035' => 2, // Tackling
-        'A-038' => 2, // Body Block
+        'A-T-12' => 2, // Tackling
+        'A-D-01' => 2, // Body Block
         'A-041' => 2, // Body Slam
         'A-077' => 2, // Round for the House
         'A-081' => 2, // Recycle

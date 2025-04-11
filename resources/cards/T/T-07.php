@@ -8,6 +8,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Lure Defense')]
 #[Concept('Defense')]
+#[Concept('Level', 40)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

@@ -2,9 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\ImagePrompt;
-use App\CardAttributes\IsGeneratedImage;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -18,8 +15,7 @@ return new
     #[Concept('Size', 4)]
     #[Concept('Speed', 5)]
     #[Concept('Boost', '2')]
-    #[LocalHeroImage('hero/A-M-17.jpg')]
-    #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
+    #[ImageCredit('Image by Merry Shuporna Biswas')]
     #[ImageCredit(null)]
     class(__FILE__) implements CardComponents
     {
@@ -28,7 +24,9 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule y="530" height="55" >
+    <x-card.hero.local>hero/A-M-17.jpg</x-card.hero.local>
+
+    <x-card.cardrule y="530" height="55" >
 <x-card.normalrule>Taxons: Carmos</x-card.normalrule>
 </x-card.cardrule>
 

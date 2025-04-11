@@ -2,13 +2,17 @@
 
 namespace App\Enums;
 
+use App\CardNumber;
 use App\CardSetAttributes\CardSeries;
 use App\Contracts\Card\CardComponents;
-use App\GeneralAttributes\Title;
+use App\Contracts\HasTitleMethod;
+use App\EnumReference;
+use App\Strings\InlineText;
+use App\Strings\Title;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 
-enum CardSet: string
+enum CardSet: string implements HasTitleMethod
 {
     // case Acadie = 'ACD';
 
@@ -23,6 +27,38 @@ enum CardSet: string
 
     #[Title('Base Card Set')]
     case Base = 'A';
+
+    /**
+     * @group unary
+     */
+    private function _makeCard(string $filename): ?CardComponents
+    {
+        $pattern = \sprintf('/^%s\/(%s-[A-Z0-9-]+)\.php$/U', $this->value, $this->value);
+
+        if (\preg_match($pattern, $filename, $matches) !== 1) {
+            return null;
+        }
+        return \App\Card\make(CardNumber::make($matches[1]));
+    }
+
+    /**
+     * @group nonary
+     *
+     * @param null|mixed $take
+     */
+    public function cards($take = null): Collection
+    {
+        $files = new Collection(Storage::disk('cards')->files($this->value));
+
+        $files_selected = match (true) {
+            \is_callable($take) => $take($files),
+            \is_null($take) => $files,
+        };
+
+        return $files_selected
+            ->map($this->_makeCard(...))
+            ->filter(fn ($value): bool => $value instanceof CardComponents);
+    }
 
     // case COSMO = 'COSMO';
 
@@ -73,27 +109,10 @@ enum CardSet: string
     // case TraitsAndAbilities = 'T';
 
     /**
-     * @group unary
-     */
-    private function _makeCard(string $filename): ?CardComponents
-    {
-        $pattern = \sprintf('/^%s\/(%s-[A-Z0-9-]+)\.php$/U', $this->value, $this->value);
-
-        if (\preg_match($pattern, $filename, $matches) !== 1) {
-            return null;
-        }
-        return \App\Card\make(\App\CardNumber::make($matches[1]));
-    }
-
-    /**
      * @group nonary
      */
-    public function cards(): Collection
+    public function title(): InlineText
     {
-        $files = new Collection(Storage::disk('cards')->files($this->value));
-
-        return $files
-            ->map($this->_makeCard(...))
-            ->filter(fn ($value): bool => $value instanceof CardComponents);
+        return EnumReference::make($this)->title();
     }
 }

@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Creepy Guy in the Alley')]
 #[Concept('Vendor')]
-#[Concept('Integrity','2')]
+#[Concept('Integrity', '2')]
 #[FlavorText('Psst. I got a great deal for you.')]
 class(__FILE__) implements CardComponents
 {

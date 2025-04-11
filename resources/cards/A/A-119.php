@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -14,7 +13,6 @@ return new
     #[Title('Medicinal Compound')]
     #[Concept('Item')]
     #[Concept('Healing')]
-    #[LocalHeroImage('A119.jpg')]
     #[ImageCredit('Image by freepik')]
     #[FlavorText('Most efficacious in every case.')]
     class(__FILE__) implements CardComponents
@@ -24,10 +22,14 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Upkeep"  lines="3"><text >
-<x-card.normalrule>Discard any number of cards from</x-card.normalrule>
-<x-card.normalrule>your hand. For each card you</x-card.normalrule>
-<x-card.normalrule>discarded restore 2 @damage to 1 Monster.</x-card.normalrule>
+    <x-card.hero.local>A119.jpg</x-card.hero.local>
+
+    <x-card.phaserule type="Upkeep"  lines="5"><text >
+<x-card.normalrule>Discard any number of cards </x-card.normalrule>
+<x-card.normalrule>from your hand.</x-card.normalrule> 
+<x-card.normalrule>For each card you discarded,</x-card.normalrule>
+<x-card.normalrule>restore 2 @damage to 1 Monster.</x-card.normalrule>
+<x-card.smallrule>You may use this effect across multiple Monsters.</x-card.smallrule>
 </text></x-card.phaserule>
 HTML;
         }

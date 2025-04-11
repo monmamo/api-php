@@ -2,18 +2,17 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Prerequisites('Requires Pyros and Level 40.', y: 440)]
+#[Prerequisites('Requires Pyros.', y: 440)]
 #[Title('Flamethrower Attack')]
 #[Concept('Attack')]
+#[Concept('Level', 40)]
 #[ImageCredit('Flamethrower the placeholder image.')]
-#[LocalHeroImage('hero/flamethrower.jpeg')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -21,7 +20,9 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Command" y="515" lines="2">
+<x-card.hero.local>hero/flamethrower.jpeg</x-card.hero.local>
+
+<x-card.phaserule type="Command" y="565" lines="2">
         <text >
 <x-card.normalrule>Discard any number of Fire (A-002)</x-card.normalrule>
 <x-card.normalrule>attached to the Monster using this attack.</x-card.normalrule>

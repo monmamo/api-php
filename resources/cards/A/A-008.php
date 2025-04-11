@@ -1,6 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\ImagePrompt;
 use App\CardAttributes\IsGeneratedImage;
 use App\CardAttributes\Prerequisites;
@@ -13,7 +14,7 @@ return new
     #[Concept('Vendor')]
     #[Concept('Integrity', '3')]
     #[IsGeneratedImage]
-#[\App\CardAttributes\ImageIsPrototype]
+#[ImageIsPrototype]
     #[ImagePrompt('dark man in a mask wearing a trenchcoat carrying a large tote bag')]
     #[Prerequisites(lines: ['You may play this card only if you have a', 'Mobster card on the Battlefield.'], y: 415)]
     class(__FILE__) implements CardComponents

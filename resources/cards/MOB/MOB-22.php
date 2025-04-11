@@ -9,7 +9,6 @@ use App\GeneralAttributes\Title;
 return new
 #[Title("Boss's Orders")]
 #[Concept('Bane')]
-#[LocalHeroImage('TODO.png')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -17,6 +16,8 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
+<x-card.hero.local>TODO.png</x-card.hero.local>
+
 <x-card.cardrule height="95" >
 <x-card.smallrule>You may use this card only if you have a Boss card in play.</x-card.smallrule>
 <x-card.normalrule>This Monster may not use any Attack while it is in play.</x-card.normalrule>

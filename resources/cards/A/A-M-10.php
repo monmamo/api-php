@@ -2,9 +2,9 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\ImagePrompt;
 use App\CardAttributes\IsGeneratedImage;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -18,10 +18,9 @@ return new
     #[Concept('Size', 5)]
     #[Concept('Speed', 2)]
     #[Concept('Boost', '3')]
-    #[LocalHeroImage('hero/A-M-10.jpeg')]
     #[ImagePrompt('red panda of weird zoology shooting fire from its mouth')]
     #[IsGeneratedImage]
-#[\App\CardAttributes\ImageIsPrototype]
+#[ImageIsPrototype]
     #[ImageCredit(null)]
     class(__FILE__) implements CardComponents
     {
@@ -30,7 +29,9 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule y="530" height="55" >
+    <x-card.hero.local>hero/A-M-10.jpeg</x-card.hero.local>
+
+    <x-card.cardrule y="530" height="55" >
 <x-card.normalrule>Taxons: Pyros, Aracunos</x-card.normalrule>
 </x-card.cardrule>
 

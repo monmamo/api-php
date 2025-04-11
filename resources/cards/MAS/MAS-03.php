@@ -10,6 +10,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Forehead Strike')]
 #[Concept('Attack')]
+#[Concept('Level', 20)]
 #[ImageCredit('')]
 #[FlavorText(['Vertical knifehand strike to the head.'])]
 class(__FILE__) implements CardComponents

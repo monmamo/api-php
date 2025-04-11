@@ -15,6 +15,8 @@ $spec = \App\Card\make($number);
 $previous = $number_object->makePrevious();
 $next = $number_object->makeNext();
 
+$set_slug = $number_object->set;
+
 
 // if (isset($_REQUEST['png'] )) {
 //      \header('Content-Type: image/png');
@@ -33,13 +35,14 @@ $next = $number_object->makeNext();
 
 <x-guest-layout>
     <x-slot:page-title><?= $number ?> <?= $spec->name() ?></x-slot>
-    <x-breadcrumbs :items="['/cards'=>'Card System']" />
+    <x-breadcrumbs :items="['/cards'=>'Card System','/cards/set/'.$set_slug=>\App\Enums\CardSet::from($set_slug)->title()]" />
 
     
     <div class="d-flex justify-content-between w-100">
         <div class="w-100">
             <h1><?= $spec->name() ?> <span class="badge text-bg-secondary"><?= $number ?></span></h1>
             <?= \App\Strings\render(...$spec->concepts()); ?>
+            <?= \App\Strings\render(...$spec->webpageContent()); ?>
         </div>
     <div class="flex-shrink-1 align-items-end">
         <div class="gap-2">
@@ -104,9 +107,13 @@ $next = $number_object->makeNext();
           $canvas.height = $svg.clientHeight
           $canvas.getContext('2d').drawImage(img, 0, 0, $svg.clientWidth, $svg.clientHeight)
         
-          const $img = new Image($svg.clientWidth, $svg.clientHeight);
-          $img.src = await $canvas.toDataURL(`image/${format}`, 1.0);
-          $holder.appendChild($img);
+          //const $img = new Image($svg.clientWidth, $svg.clientHeight);
+          //$img.src = await $canvas.toDataURL(`image/${format}`, 1.0);
+          //$holder.appendChild($img);
+          const imgsrc = await $canvas.toDataURL(`image/${format}`, 1.0);
+const blob = await fetch(imgsrc).then(r => r.blob());
+var blobUrl = URL.createObjectURL(blob);
+window.location.replace(blobUrl);
         }
         
         const buttons = [...document.querySelectorAll('[data-format]')]

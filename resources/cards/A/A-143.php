@@ -2,17 +2,17 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
+// https://www.freepik.com/free-vector/time-is-money-background_1014317.htm
+
 return new
     #[Title('Financial Planner')]
     #[Concept('Bystander')]
     #[ImageCredit('Image by photoroyalty on Freepik')]
-    #[LocalHeroImage('A135.jpg')] // https://www.freepik.com/free-vector/time-is-money-background_1014317.htm
     #[Prerequisites(y: 475)]
     class(__FILE__) implements CardComponents
     {
@@ -21,7 +21,9 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Upkeep" lines="3" >
+    <x-card.hero.local>A135.jpg</x-card.hero.local> 
+
+    <x-card.phaserule type="Upkeep" lines="3" >
     <text >
     <x-card.normalrule>You may put one card of your</x-card.normalrule>
 <x-card.normalrule>choice from your Discard pile</x-card.normalrule>

@@ -10,6 +10,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Low Block')]
 #[Concept('Defense')]
+#[Concept('Level', 25)]
 #[ImageCredit('')]
 #[FlavorText([])]
 class(__FILE__) implements CardComponents

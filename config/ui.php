@@ -30,8 +30,11 @@ $products = [
     'links' => [
         ['/cards', 'Card System'],
         ['/cg', 'Battle Card Game'],
-        ['/ttrpg', 'Tabletop Role Playing Game'],
-        ['/orpg', 'Online Role Playing Game'],
+        //['/ms', 'Mean Streets Card Game'],
+        //['/rlr', 'Raid on Leaser Ridge'],
+        //['/rcs', 'Race for the Championship'],
+        // ['/ttrpg', 'Tabletop Role Playing Game'],
+        // ['/orpg', 'Online Role Playing Game'],
     ],
 ];
 
@@ -39,7 +42,7 @@ $community = [
     'title' => 'Community',
     'links' => [
         ['/community" target="_blank" rel="noopener', 'Rules'],
-      //  [\config('external.deviantart.url') . '" target="_blank" rel="noopener', 'DeviantArt'],
+        //  [\config('external.deviantart.url') . '" target="_blank" rel="noopener', 'DeviantArt'],
         [\config('external.discord.url') . '" target="_blank" rel="noopener', 'Discord'],
         [\config('external.github.url') . '" target="_blank" rel="noopener', 'GitHub'],
         [\config('external.patreon.url') . '" target="_blank" rel="noopener', 'Patreon'],

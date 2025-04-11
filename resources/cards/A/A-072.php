@@ -3,8 +3,8 @@
 // inspiration: Hooligans Jim and Cas PTCG card https://bulbapedia.bulbagarden.net/wiki/Hooligans_Jim_%26_Cas_(Dark_Explorers_95)
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -19,8 +19,7 @@ return new
 #[Concept('Size', 5)]
 #[Concept('Speed', 4)]
 #[IsGeneratedImage]
-#[\App\CardAttributes\ImageIsPrototype]
-#[LocalHeroImage('A072.png')]
+#[ImageIsPrototype]
 #[Prerequisites(y: 460, lines: ['Limit 1 per player on the Battlefield.'])]
 class(__FILE__) implements CardComponents
 {
@@ -29,6 +28,8 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
+<x-card.hero.local>A072.png</x-card.hero.local>
+
 <x-card.phaserule type="Upkeep" lines="5">
 <text >
 <x-card.normalrule>You may choose a random card</x-card.normalrule>

@@ -1,8 +1,8 @@
 <x-guest-layout>
 
-<x-slot:page-title>Single-Deck Version | Card Game</x-slot>
+<x-slot:page-title>Single-Deck Version | Classic Monster Battle Card Game</x-slot>
 
-<x-breadcrumbs :items="['/cg'=>'Monsters Masters & Mobsters Card Game', '/cg/rules'=>'Rules']" />
+<x-breadcrumbs :items="['/cg'=>'Classic Monster Battle Card Game', '/cg/rules'=>'Rules']" />
 
 
 <h1>Particular Rules for Single-Deck Play</h1>

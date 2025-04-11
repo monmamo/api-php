@@ -9,7 +9,7 @@ return [
         'A-045' => 2, // Crooked Cop
         'A-072' => 3, // Enforcer
         'A-112' => 1, // Hacker
-        "A-126" => 2, // Neighborhood "Protection"
+        'A-126' => 2, // Neighborhood "Protection"
         'A-144' => 1, // Taxman
         'A-067' => 2, // Driver
         'A-128' => 2, // Idiot Agents
@@ -18,13 +18,13 @@ return [
 
         'A-024' => 3, // Burglary
         'A-033' => 2, // Wheel of Fortune
-        'A-035' => 2, // Tackling
-        'A-038' => 3, // Body Block
+        'A-T-12' => 2, // Tackling
+        'A-D-01' => 3, // Body Block
         'A-041' => 3, // Body Slam
         'A-077' => 2, // Round for the House
         'A-081' => 3, // Recycle
         'A-129' => 2, // Inappropriate Traffic Stop
-// A-090 Five-Finger Discount
+        // A-090 Five-Finger Discount
 
         'A-105' => 2, // Tranquilizer Dart
         'A-W-01' => 2, // Pistol

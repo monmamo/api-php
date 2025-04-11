@@ -2,8 +2,8 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -16,11 +16,10 @@ return new
     #[Concept('Level', 45)]
     #[Concept('Size', 6)]
     #[Concept('Speed', 2)]
-    #[Concept('Boost',3)]
+    #[Concept('Boost', 3)]
     #[IsGeneratedImage]
-#[\App\CardAttributes\ImageIsPrototype]
+#[ImageIsPrototype]
     #[ImageCredit(null)]
-    #[LocalHeroImage('hero/A-M-08.png')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -28,7 +27,9 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule y="530" height="55" >
+            <x-card.hero.local>hero/A-M-08.png</x-card.hero.local>
+
+            <x-card.cardrule y="530" height="55" >
 <x-card.normalrule>Taxons: Energos, Lupos</x-card.normalrule>
 </x-card.cardrule>
 

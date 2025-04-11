@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -15,7 +14,6 @@ return new
     #[Concept('Draw')]
     #[ImageCredit('Image by photoroyalty on Freepik')]
     #[FlavorText('Past performance is not indicative of future results.')]
-    #[LocalHeroImage('A135.jpg')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -23,7 +21,9 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-        <x-card.phaserule y="500" type="Draw" lines="2"><text>
+            <x-card.hero.local>A135.jpg</x-card.hero.local>
+            
+        <x-card.phaserule y="565" type="Draw" lines="2"><text>
         <x-card.smallrule>Put this card in front of you. Put any number</x-card.smallrule>
         <x-card.smallrule>of cards facedown on the Battlefield.</x-card.smallrule>
     </text>

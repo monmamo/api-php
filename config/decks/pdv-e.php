@@ -10,17 +10,17 @@ return [
         'A-M-08' => 3,
 
         'A-003' => 8, // Energy Mana
-        'A-009' => 3, // Spark Attack
+        'A-T-02' => 3, // Spark Attack
         'A-011' => 3, // Flash of Lightning
-        'A-064' => 4, // Energy Shield
+        'A-D-03' => 4, // Energy Shield
         'A-084' => 3, // Bolt of Lightning
 
-        'A-006' => 2, // Biting
-        'A-027' => 2, // Natural Healing
+        'A-T-01' => 2, // Biting
+        'A-T-08' => 2, // Natural Healing
         'A-032' => 4, // Cheerleader
         'A-033' => 2, // Wheel of Fortune
-        'A-035' => 2, // Tackling
-        'A-038' => 2, // Body Block
+        'A-T-12' => 2, // Tackling
+        'A-D-01' => 2, // Body Block
         'A-041' => 2, // Body Slam
         'A-077' => 2, // Round for the House
         'A-081' => 3, // Recycle

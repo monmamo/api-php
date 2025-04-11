@@ -31,8 +31,8 @@ HTML;
                         'use',
                         [
                             'href' => '#donut',
-                            'x' => $donut_x + $dx * $donut_width + config("card-design.hero.x"),
-                            'y' => $donut_y + $dy * $donut_height + config("card-design.hero.y"),
+                            'x' => $donut_x + $dx * $donut_width + \config('card-design.hero.x'),
+                            'y' => $donut_y + $dy * $donut_height + \config('card-design.hero.y'),
                             'width' => $donut_width,
                             'height' => $donut_height,
                             'fill' => '#fff',
@@ -46,8 +46,8 @@ HTML;
                 'use',
                 [
                     'href' => '#donut',
-                    'x' => (\config('card-design.hero.width') - $donut_width) / 2 + config("card-design.hero.x"),
-                    'y' => $donut_y + 3 * $donut_height + config("card-design.hero.y"),
+                    'x' => (\config('card-design.hero.width') - $donut_width) / 2 + \config('card-design.hero.x'),
+                    'y' => $donut_y + 3 * $donut_height + \config('card-design.hero.y'),
                     'width' => $donut_width,
                     'height' => $donut_height,
                     'fill' => '#fff',

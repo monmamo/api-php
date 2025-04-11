@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -18,7 +17,6 @@ return new
     #[Concept('Size', 4)]
     #[Concept('Speed', 3)]
     #[ImageCredit('Image by freepik')]
-    #[LocalHeroImage('hero/personal-assistant.jpg')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -26,16 +24,19 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<text y="495" filter="url(#solid)">
+    <x-card.hero.local>hero/personal-assistant.jpg</x-card.hero.local>
+
+    <text y="540" filter="url(#solid)">
     <x-card.smallrule>A player may have any number of Personal Assistants on the</x-card.smallrule>
         <x-card.smallrule>Battlefield. You may choose to make this card Male or Female</x-card.smallrule>
         <x-card.smallrule>when you put it on the Battlefield.</x-card.smallrule>
     </text>
 
-    <x-card.phaserule type="Draw" lines="2" badge="Repeat">
+    <x-card.phaserule type="Draw" lines="3">
         <text>
         <x-card.normalrule>Search your Library for any card.</x-card.normalrule>
         <x-card.normalrule>Shuffle your Library afterwards.</x-card.normalrule>
+        <x-card.normalrule>Gives 1 additional Draw action.</x-card.normalrule>
     </text>
 </x-card.phaserule>
 HTML;

@@ -2,10 +2,10 @@
 
 namespace App\Console\Commands;
 
+use App\Contracts\Card\CardComponents;
+use App\Enums\CardSet;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Console\PromptsForMissingInput;
-use Illuminate\Support\Facades\Storage;
-use League\Flysystem\StorageAttributes;
 
 class ListCardSet extends Command implements PromptsForMissingInput
 {
@@ -33,12 +33,12 @@ class ListCardSet extends Command implements PromptsForMissingInput
         $code = $this->argument('id');
 
         $count = 0;
-        foreach (\App\Enums\CardSet::from($code)->cards() as $card_spec) {
-            assert($card_spec instanceof \App\Contracts\Card\CardComponents);
-            $this->info(\sprintf('%-7s %-30s %s', $card_spec->cardNumber(),$card_spec->name(),$card_spec->concepts()[0]->title()));
-            $count++;
-        }
 
+        foreach (CardSet::from($code)->cards() as $card_spec) {
+            \assert($card_spec instanceof CardComponents);
+            $this->info(\sprintf('%-7s %-30s %s', $card_spec->cardNumber(), $card_spec->name(), $card_spec->concepts()[0]->title()));
+            ++$count;
+        }
 
         $this->info(\sprintf('%u cards', $count));
     }

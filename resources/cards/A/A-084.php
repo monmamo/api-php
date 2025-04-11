@@ -11,6 +11,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Bolt of Lightning')]
 #[Concept('Attack')]
+#[Concept('Level', 15)]
 #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
 #[ConceptIconHeroImage('Energos')]
 #[Prerequisites(lines: 'Requires Energos.', y: 460)]

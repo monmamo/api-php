@@ -27,7 +27,7 @@ class ConceptIconHeroImage implements Renderable
     public function render()
     {
         return Blade::render(
-            '<x-card.hero-svg><g fill="#ffffff" fill-opacity="1">{{ \view($slug . \'.icon\') }}</g></x-card.hero-svg>',
+            '<x-card.hero.svg><g fill="#ffffff" fill-opacity="1">{{ \view($slug . \'.icon\') }}</g></x-card.hero.svg>',
             [
                 'slug' => $this->slug,
             ],

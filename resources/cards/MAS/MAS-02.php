@@ -10,6 +10,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Face Thrust')]
 #[Concept('Attack')]
+#[Concept('Level', 20)]
 #[ImageCredit('')]
 #[FlavorText(['Punch to the face.'])]
 class(__FILE__) implements CardComponents

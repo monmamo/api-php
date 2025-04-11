@@ -10,6 +10,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Tickle')]
 #[Concept('Attack')]
+#[Concept('Level', 20)]
 #[ImageCredit('')]
 #[FlavorText([])]
 class(__FILE__) implements CardComponents

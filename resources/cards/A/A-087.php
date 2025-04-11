@@ -4,6 +4,7 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -18,7 +19,7 @@ return new
     #[Concept('Size', 4)]
     #[Concept('Speed', 3)]
      #[ImageCredit('Image by Freepik')]
-     #[\App\CardAttributes\LocalHeroImage('hero/fieldworker.jpg')]
+     #[LocalHeroImage('hero/fieldworker.jpg')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

@@ -2,8 +2,8 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -17,9 +17,8 @@ return new
 #[Title('Halitosis')]
 #[Concept('Bane')]
 #[IsGeneratedImage]
-#[\App\CardAttributes\ImageIsPrototype]
+#[ImageIsPrototype]
 #[FlavorText('They say that bad breath is better than no breath at all…')]
-#[LocalHeroImage('A110.jpg')]
 #[Prerequisites([MONSTER_LIMIT_PREREQUISITE])]
     class(__FILE__) implements CardComponents
     {
@@ -28,6 +27,8 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
+            <x-card.hero.local>A110.jpg</x-card.hero.local>
+            
 <x-card.phaserule type="Resolution" height="135">
   <text >
 <x-card.normalrule>When a Monster on this</x-card.normalrule>

@@ -1,15 +1,11 @@
 <?php
+
 use App\CardAttributes\DefaultCardAttributes;
 use App\Contracts\Card\CardComponents;
 use App\Facades\Blade;
 
-
-return new
-class(
-    path: __FILE__,
-    svg: \view('Attack.icon'),
-    imageCredit: '',
-) implements \App\Contracts\Card\CardComponents {
+return new class(path: __FILE__, svg: \view('Attack.icon'), imageCredit: '') implements CardComponents
+{
     use DefaultCardAttributes{
         __construct as construct;
     }
@@ -54,7 +50,6 @@ class(
     {
         return [];
     }
-
 
     /**
      * @group nonary

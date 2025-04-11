@@ -1,8 +1,9 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\FlavorText;
+use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -11,8 +12,8 @@ return new
     #[Title('Dandruff')]
     #[Concept('Bane')]
     #[IsGeneratedImage]
-    #[\App\CardAttributes\ImageIsPrototype]
-    #[LocalHeroImage('hero/dandruff.jpeg')]
+    #[ImageIsPrototype]
+    #[FlavorText('Make it snow.')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -20,6 +21,8 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
+                    <x-card.hero.local>hero/dandruff.jpeg</x-card.hero.local>
+
 <x-card.phaserule type="Resolution" lines="3">
 <text>
 <x-card.normalrule>When this Monster takes a</x-card.normalrule>

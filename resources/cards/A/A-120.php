@@ -6,8 +6,6 @@ use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\ImagePrompt;
-use App\CardAttributes\LocalHeroImage;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -16,11 +14,9 @@ return new
     #[Title('Healing Salve')]
     #[Concept('Item')]
     #[Concept('Healing')]
-    #[LocalHeroImage('A120.png')]
     #[ImagePrompt('green jar of healing ointment')]
     #[ImageCredit('Image by freepik')]
     #[FlavorText('Does a monster good!')]
-    #[Prerequisites('Attach this card to a Monster.')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -28,11 +24,18 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="3">
+    <x-card.hero.local>A120.png</x-card.hero.local>
+
+    <x-card.phaserule type="Upkeep" y="590" lines="2">
     <text>
-        <x-card.normalrule>If this Monster did not</x-card.normalrule>
-        <x-card.normalrule>take any damage on this turn,</x-card.normalrule>
-        <x-card.normalrule>restore 2d4 @damage to it.</x-card.normalrule>
+    <x-card.normalrule>Attach this card to a Monster. That</x-card.normalrule>
+    <x-card.normalrule>Monster cannot attack on this turn.</x-card.normalrule>
+    </text>
+</x-card.phaserule>
+
+    <x-card.phaserule type="Resolution" lines="1">
+    <text>
+        <x-card.normalrule>Restore Size @damage to this Monster.</x-card.normalrule>
     </text>
 </x-card.phaserule>
 HTML;
