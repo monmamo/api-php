@@ -2,9 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\Concept;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Console\PromptsForMissingInput;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class MakeConcept extends Command implements PromptsForMissingInput
@@ -46,7 +46,7 @@ class MakeConcept extends Command implements PromptsForMissingInput
             $definition_html .= \App\Strings\html('p', $line)->toHtml();
         }
 
-        $disk = \App\Concept::disk();
+        $disk = Concept::disk();
         $disk->makeDirectory($slug);
         $put = function ($filename, $content) use ($disk, $slug): void {
             $disk->put(

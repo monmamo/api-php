@@ -45,7 +45,7 @@ $title_height = 70;
 $titlebox = [
     'x' => $viewbox['x'],
     'width' => $viewbox['width'],
-    'height' => $concept_box_height ,
+    'height' => $concept_box_height,
     'cardtype_baseline' => 30,
 ];
 

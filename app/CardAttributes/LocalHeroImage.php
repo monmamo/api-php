@@ -30,7 +30,7 @@ class LocalHeroImage implements Renderable
         try {
             return \App\Strings\html(
                 'image',
-                ['x' =>  config("card-design.hero.x"), 'y' => config("card-design.hero.y"), 'class' => 'hero', 'href' => \App\Card\localHeroUri($this->filename)],
+                ['x' => \config('card-design.hero.x'), 'y' => \config('card-design.hero.y'), 'class' => 'hero', 'href' => \App\Card\localHeroUri($this->filename)],
             );
         } catch (\Throwable $e) {
             return '[' . $e->getMessage() . ']';

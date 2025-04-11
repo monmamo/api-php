@@ -5,7 +5,6 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Console\PromptsForMissingInput;
 use Illuminate\Support\Facades\Storage;
-use League\Flysystem\StorageAttributes;
 
 class ListDeck extends Command implements PromptsForMissingInput
 {
@@ -39,9 +38,8 @@ class ListDeck extends Command implements PromptsForMissingInput
         foreach ($list as $card_number => $count) {
             $total_count += $count;
             $spec = \App\Card\make($card_number);
-            $this->info(\sprintf('%5u %-7s %s', $count,$card_number,$spec->name()));
+            $this->info(\sprintf('%5u %-7s %s', $count, $card_number, $spec->name()));
         }
-
 
         $this->info(\sprintf('%5u TOTAL', $total_count));
     }

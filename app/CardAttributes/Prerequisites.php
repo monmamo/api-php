@@ -35,6 +35,29 @@ class Prerequisites implements Renderable
     }
 
     /**
+     * Constructor.
+     *
+     * @group magic
+     * @group mutator
+     * @group nonary|unary|variadic
+     *
+     * @uses parent::__construct
+     *
+     * @return void
+     */
+    public static function monsterLimit(
+        $limit = 1,
+        int $y = 500,
+        string $color = '#000000',
+    ) {
+        return new self(
+            lines: \trans_choice('rules.monster-limit', $limit),
+            y: $y,
+            color: $color,
+        );
+    }
+
+    /**
      * Returns content as a string of HTML.
      *
      * @return string
@@ -67,28 +90,5 @@ class Prerequisites implements Renderable
         }
 
         return '';
-    }
-
-      /**
-     * Constructor.
-     *
-     * @group magic
-     * @group mutator
-     * @group nonary|unary|variadic
-     *
-     * @uses parent::__construct
-     *
-     * @return void
-     */
-    public static function monsterLimit(
-        $limit=1,
-         int $y = 500,
-         string $color = '#000000',
-    ) {
-        return new self(
-            lines: \trans_choice('rules.monster-limit', $limit),
-            y:$y,
-            color:$color
-        );
     }
 }

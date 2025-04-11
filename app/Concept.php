@@ -6,6 +6,7 @@ use App\Contracts\HasIcon;
 use App\GeneralAttributes\Color;
 use App\GeneralAttributes\Title;
 use App\Methods\Make\MakeFromConstructor;
+use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\View;
@@ -87,14 +88,7 @@ class Concept implements HasIcon, Renderable
      */
     private function _text(string $name): Traversable
     {
-
-
         return new \ArrayIterator(\file($this->_file("{$name}.txt")));
-    }
-
-public static function disk(): \Illuminate\Contracts\Filesystem\Filesystem
-    {
-        return Storage::disk('concepts');
     }
 
     /**
@@ -123,6 +117,17 @@ public static function disk(): \Illuminate\Contracts\Filesystem\Filesystem
         });
     }
 
+    /**
+     * @group nonary
+     */
+    public static function disk(): Filesystem
+    {
+        return Storage::disk('concepts');
+    }
+
+    /**
+     * @group nonary
+     */
     public function hasBackground()
     {
         return View::exists($this->type . '.background');
@@ -163,13 +168,13 @@ public static function disk(): \Illuminate\Contracts\Filesystem\Filesystem
             ],
             \App\Strings\html(
                 'a',
-                ['href' => "http://monmamo.com/concepts/$this->type", 'target' => '_blank', 'rel' => 'noopener noreferrer'],
-            \App\Strings\html(
-                'g',
-                ['class' => 'stat'],
-                \App\Strings\render(...$this->_renderBladePieces()),
+                ['href' => "http://monmamo.com/concepts/{$this->type}", 'target' => '_blank', 'rel' => 'noopener noreferrer'],
+                \App\Strings\html(
+                    'g',
+                    ['class' => 'stat'],
+                    \App\Strings\render(...$this->_renderBladePieces()),
+                ),
             ),
-        ),
         );
 
         self::$group_x += \config('card-design.concept.icon-size');

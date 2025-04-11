@@ -124,12 +124,12 @@ class MakeCard extends Command implements PromptsForMissingInput
                 card_name: $card_name,
                 concepts: $concepts,
                 no_content: true,
-                icon: $this->option('heroicon') ? '<x-card.hero-svg></x-card.hero-svg>' : null,
-                )
+                icon: $this->option('heroicon') ? '<x-card.hero.svg></x-card.hero.svg>' : null,
+            )
                 : \App\Card\makeNewCard(
                     card_name: $card_name,
                     concepts: $concepts,
-                    icon: $this->option('heroicon') ? '<x-card.hero-svg></x-card.hero-svg>' : null,
+                    icon: $this->option('heroicon') ? '<x-card.hero.svg></x-card.hero.svg>' : null,
                     image_credit: $this->option('noimagecredit') ? null : \Laravel\Prompts\text('Image credit'),
                     flavor_text: $this->option('noflavor') ? [] : \iterator_to_array(self::_askMultiline('Flavor text')),
                     prerequisites: \iterator_to_array(self::_askMultiline('Prerequisites')),

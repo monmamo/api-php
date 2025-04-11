@@ -44,5 +44,4 @@ trait Reflection
     {
         return \count($this->getAttributes($class)) > 0;
     }
-
 }
