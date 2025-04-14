@@ -15,7 +15,7 @@ return new
     #[Concept('Integrity', '1d6')]
     #[IsGeneratedImage('head coach standing on the sidelines with a clipboard, green jacket')]
     #[ImageIsPrototype]
-    #[Prerequisites(['Limit 1 per player on Battlefield.', 'You must already have a Head Coach on the Battlefield', 'to put this card on the Battlefield.', 'You may choose to make this card Female', 'when you put it on the Battlefield.'])]
+    #[Prerequisites(['Limit 1 per player on Battlefield.', 'You must already have a Master on the Battlefield', 'to put this card on the Battlefield.', 'You may choose to make this card Female', 'when you put it on the Battlefield.'])]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -27,7 +27,7 @@ return new
 
             <x-card.cardrule lines="6">
 <x-card.smallrule>Limit 1 per player on Battlefield. </x-card.smallrule>
-<x-card.smallrule>You must already have a Head Coach on the Battlefield</x-card.smallrule>
+<x-card.smallrule>You must already have a Master on the Battlefield</x-card.smallrule>
 <x-card.smallrule>to put this card on the Battlefield.</x-card.smallrule>
 <x-card.smallrule>You may choose to make this card Female</x-card.smallrule>
 <x-card.smallrule>when you put it on the Battlefield.</x-card.smallrule>

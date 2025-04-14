@@ -15,6 +15,11 @@ interface CardComponents extends HasName
     /**
      * @group nonary
      */
+    public function cardNameColor(): string;
+
+    /**
+     * @group nonary
+     */
     public function cardNumber(): string;
 
     /**
@@ -32,10 +37,6 @@ interface CardComponents extends HasName
      */
     public function creditColor(): string;
 
-    /**
-     * @group nonary
-     */
-    public function hero(): Renderable;
 
     /**
      * @group nonary

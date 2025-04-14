@@ -46,6 +46,20 @@ trait DefaultCardAttributes
     /**
      * @group nonary
      */
+    public function cardNameColor(): string
+    {
+        $attributes = $this->getAttributes(CardNameColor::class);
+
+        if (\count($attributes) > 0) {
+            return $attributes[0]->getArguments()[0];
+        }
+
+        return 'white';
+    }
+
+    /**
+     * @group nonary
+     */
     public function cardNumber(): string
     {
         return $this->card_number;
@@ -92,31 +106,6 @@ trait DefaultCardAttributes
         return $this->_flavor_text_attribute ??= $this->withAttribute(FlavorText::class);
     }
 
-    /**
-     * @group nonary
-     */
-    public function hero(): Renderable
-    {
-        foreach ([LocalHeroImage::class, ConceptIconHeroImage::class] as $class_fqn) {
-            $attributes = $this->getAttributes($class_fqn);
-
-            if (\count($attributes) > 0) {
-                try {
-                    return $attributes[0]->newInstance();
-                } catch (\Throwable $e) {
-                    \dd($e);
-                }
-            }
-        }
-
-        return new class() implements Renderable
-        {
-            public function render()
-            {
-                return '';
-            }
-        };
-    }
 
     /**
      * @implements \App\Contracts\HasName

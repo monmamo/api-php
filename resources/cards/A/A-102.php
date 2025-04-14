@@ -1,5 +1,7 @@
 <?php
 
+use App\CardAttributes\CardNameColor;
+use App\CardAttributes\CreditColor;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
@@ -16,6 +18,8 @@ return new
 #[Title('Garlic')]
 #[Concept('Material')]
 #[ImageCredit('Image by brgfx on Freepik')]
+#[CreditColor('#000000')]
+#[CardNameColor('#000000')]
 #[FlavorText(lines: ['A clove a day keeps the doctor away.', '(And everyone else.)'])]
 class(__FILE__) implements CardComponents
 {

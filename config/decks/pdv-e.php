@@ -21,7 +21,7 @@ return [
         'A-033' => 2, // Wheel of Fortune
         'A-T-12' => 2, // Tackling
         'A-D-01' => 2, // Body Block
-        'A-041' => 2, // Body Slam
+        'A-A-01' => 2, // Body Slam
         'A-077' => 2, // Round for the House
         'A-081' => 3, // Recycle
         'A-100' => 2, // Full Heal

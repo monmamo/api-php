@@ -23,7 +23,7 @@ return new
 #[Concept('Speed', 5)]
 #[ImageCredit('Icon by InYoung Park from Noun Project')]
 #[Prerequisites(y: 345, lines: [PLAYER_LIMIT_PREREQUISITE, 'You may choose to make this card Male', 'when you put it on the Battlefield.'])]
-// #[\App\CardAttributes\LocalHeroImage('A188.jpg')]
+// A188.jpg
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

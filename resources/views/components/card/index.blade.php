@@ -66,7 +66,6 @@ $id = function (string $suffix) use ($cardNumber) {
     
 <?php
         echo \App\Strings\render(
-            $spec->hero(),
             $spec->prerequisitesAttribute(),
             ...$spec->content()
         );
@@ -75,7 +74,7 @@ $id = function (string $suffix) use ($cardNumber) {
 <text x="0" y="50"         font-family="'Roboto Condensed', sans-serif"
 font-size="50px"
 font-style="normal"
-fill="#ffffff" stroke="#ffffff" alignment-baseline="baseline" ><?= $cardName ?></text>
+fill="{{$cardNameColor()}}" stroke="{{$cardNameColor()}}" alignment-baseline="baseline" ><?= $cardName ?></text>
 
     </svg>
 

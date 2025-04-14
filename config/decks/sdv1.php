@@ -3,31 +3,21 @@
 return [
     'name' => 'Basic Common Deck',
 
-    'details' => \App\Strings\html('p', 'The deck designed to draw people into the Monsters Masters & Mobsters card game. Comes with 15 Monsters.'),
+    'details' => \App\Strings\html('p', 'The deck designed to draw people into the Monsters Masters & Mobsters Battle Card Game. Comes with 6 Masters, 15 Monsters and 80 other cards.'),
+
+    //'A-004' => 2, // Alms for the Poor
+    // 'A-025' => 2, // Busybody
+    // 'A-MO-03' => 2, // Enforcer
 
     'cards' => [
-        //'A-004' => 2, // Alms for the Poor
-        'A-T-01' => 2, // Biting
-        'A-007' => 1, // Spy
         'A-013' => 1, // Baker's Dozen
         'A-014' => 2, // Big-Box Store
-        'A-T-05' => 2, // Evasiveness
-        'A-T-06' => 2, // Alertness
         'A-024' => 2, // Burglary
-        // 'A-025' => 2, // Busybody
-        'A-T-08' => 2, // Natural Healing
-        'A-T-10' => 2, // Ramming
-        'A-T-11' => 2, // Dual Cranial Horns
         'A-032' => 3, // Cheerleader
         'A-033' => 2, // Wheel of Fortune
-        'A-T-12' => 2, // Tackling
-        'A-D-01' => 3, // Body Block
-        'A-041' => 3, // Body Slam
-        'A-045' => 2, // Crooked Cop
+        'A-051' => 1, // Waste Manager
         'A-055' => 2, // Defensive Coordinator
         'A-063' => 1, // Dividends
-        'A-067' => 2, // Driver
-        // 'A-072' => 2, // Enforcer
         'A-075' => 1, // Sheriff
         'A-077' => 3, // Round for the House
         'A-081' => 4, // Recycle
@@ -36,22 +26,40 @@ return [
         'A-105' => 2, // Tranquilizer Dart
         'A-108' => 2, // Grab Bag
         'A-110' => 1, // Halitosis
-        'A-118' => 2, // Head Coach
         'A-119' => 2, // Medicinal Compound
         'A-120' => 2, // Healing Salve
         'A-122' => 2, // Offensive Coordinator
-        'A-126' => 1, // Neighborhood "Protection"
+        'A-124' => 1, // Nurse
+        'A-135' => 2, // Investment
         'A-139' => 2, // Karma
         'A-140' => 2, // Last Resort
         'A-141' => 2, // Lottery
-        'A-051' => 1, // Waste Manager
         'A-143' => 1, // Financial Planner
-        'A-144' => 1, // Taxman
         'A-145' => 2, // First Aid Kit
         'A-152' => 2, // Favorite Toy
+        'A-A-01' => 3, // Body Slam
+        'A-D-01' => 3, // Body Block
+        'A-MO-10' => 2, // Crooked Cop
+        'A-MO-05' => 1, // Neighborhood "Protection"
+        'A-MO-06' => 1, // Taxman
+        'A-MO-07' => 1, // Spy
+        'A-MO-08' => 2, // Driver
+        'A-T-01' => 2, // Biting
+        'A-T-05' => 2, // Evasiveness
+        'A-T-06' => 2, // Alertness
+        'A-T-08' => 2, // Natural Healing
+        'A-T-10' => 2, // Ramming
+        'A-T-11' => 2, // Dual Cranial Horns
+        'A-T-12' => 2, // Tackling
 
-        'A-124' => 1, // Nurse
-        'A-135' => 2, // Investment
+        // Masters
+        'A-MA-01' => 1,
+        'A-MA-02' => 1,
+        'A-MA-03' => 1,
+        'A-MA-04' => 1,
+        'A-MA-05' => 1,
+        'A-MA-06' => 1,
+
         // female monsters
         'A-M-05' => 1,
         'A-M-06' => 1,

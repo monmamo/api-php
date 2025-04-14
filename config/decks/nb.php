@@ -38,7 +38,7 @@ return [
         'A-052' => 4, // Deathgrip
         'A-T-17' => 1, // Brutality
         'A-T-25' => 4, // Focus
-        'A-041' => 4, // Body Slam
+        'A-A-01' => 4, // Body Slam
         // 'A-066'=>1, // Cruel Order
         // 'A-093'=>1, // Flee
 
@@ -50,7 +50,7 @@ return [
         'A-033' => 2, // Wheel of Fortune
         'A-043' => 3, // Creepy Guy in the Alley
         'A-063' => 1, // Dividends
-        'A-072' => 3, // Enforcer
+        'A-MO-03' => 3, // Enforcer
         'A-077' => 4, // Round for the House
         'A-090' => 2, // Five-Finger Discount
         'A-106' => 1, // Reconnaisance Team
@@ -58,7 +58,7 @@ return [
         'A-081' => 4, // Recycle
         'A-135' => 1, // Investment
         'A-139' => 1, // Karma
-        'A-144' => 1, // Taxman
+        'A-MO-06' => 1, // Taxman
         'A-075' => 1, // Sheriff
 
         'A-NB-01' => 6, // Battle

@@ -37,7 +37,23 @@ $set_slug = $number_object->set;
     <x-slot:page-title><?= $number ?> <?= $spec->name() ?></x-slot>
     <x-breadcrumbs :items="['/cards'=>'Card System','/cards/set/'.$set_slug=>\App\Enums\CardSet::from($set_slug)->title()]" />
 
-    
+      {{--
+      <div class="gap-2">
+        @isset($previous)
+        <a id="btn-previous" type="button" class="btn btn-secondary" href="/cards/card/{{$previous}}">{{$previous}}</a>
+          @endisset
+        <button type="button" class="btn btn-secondary export" data-format="png">PNG</button>
+        <button type="button" class="btn btn-secondary export" data-format="jpeg">JPG</button>
+        <button type="button" class="btn btn-secondary export" data-format="webp">WEBP</button>
+      
+        <a class="btn btn-warning" href="<?=  "vscode://file/".urlencode($number_object->getSpecFilePath()) ?>">Edit</a>
+      
+        @isset($next)
+        <a id="btn-next" type="button" class="btn btn-secondary" href="/cards/card/{{$next}}">{{$next}}</a>
+          @endisset
+      </div>
+--}}
+
     <div class="d-flex justify-content-between w-100">
         <div class="w-100">
             <h1><?= $spec->name() ?> <span class="badge text-bg-secondary"><?= $number ?></span></h1>
@@ -45,20 +61,6 @@ $set_slug = $number_object->set;
             <?= \App\Strings\render(...$spec->webpageContent()); ?>
         </div>
     <div class="flex-shrink-1 align-items-end">
-        <div class="gap-2">
-            @isset($previous)
-            <a id="btn-previous" type="button" class="btn btn-secondary" href="/cards/card/{{$previous}}">{{$previous}}</a>
-              @endisset
-            <button id="btn-png" type="button" class="btn btn-secondary" data-format="png">PNG</button>
-            <button id="btn-jpg" type="button" class="btn btn-secondary" data-format="jpeg">JPG</button>
-            <button id="btn-webp" type="button" class="btn btn-secondary" data-format="webp">WEBP</button>
-          
-            {{--<a class="btn btn-warning" href="<?=  "vscode://file/".urlencode($number_object->getSpecFilePath()) ?>">Edit</a>--}}
-          
-            @isset($next)
-            <a id="btn-next" type="button" class="btn btn-secondary" href="/cards/card/{{$next}}">{{$next}}</a>
-              @endisset
-          </div>
             <div class="pt-2" id="svg-container" hx-get="#"  hx-trigger="dblclick" hx-target="#svg-container">
             <x-card :cardNumber="$number" width="400"/>
           </div>
@@ -66,6 +68,13 @@ $set_slug = $number_object->set;
           </div>
                  
     </div>
+
+    <ul  class="dropdown-menu" id="img-menu" style="display: none; position: absolute; background: white; border: 1px solid black; list-style: none; padding: 5px;">
+      <li class="open-svg">SVG</li>
+        <li data-format="png">PNG</li>
+      <li data-format="jpeg">JPG</li>
+      <li data-format="webp">WEBP</li>
+    </ul>
 
     <script>
         const dataHeader = 'data:image/svg+xml;charset=utf-8';
@@ -113,13 +122,31 @@ $set_slug = $number_object->set;
           const imgsrc = await $canvas.toDataURL(`image/${format}`, 1.0);
 const blob = await fetch(imgsrc).then(r => r.blob());
 var blobUrl = URL.createObjectURL(blob);
-window.location.replace(blobUrl);
+window.location.assign(blobUrl);
         }
-        
-        const buttons = [...document.querySelectorAll('[data-format]')]
-        for (const btn of buttons) {
+
+        for (const btn of [...document.querySelectorAll('[data-format]')]) {
           btn.onclick = convertSVGtoImg(btn.dataset.format)
         }
+
+        for (const btn of [...document.querySelectorAll('.open-svg')]) {
+          btn.onclick = e => {
+            window.location.assign( '/cards/card/{{$number}}/svg');
+          };
+        }
+
+  const customMenu = document.getElementById('img-menu');
+
+  $svg.addEventListener('contextmenu', (event) => {
+    event.preventDefault();
+    customMenu.style.top = `${event.clientY}px`;
+    customMenu.style.left = `${event.clientX}px`;
+    customMenu.style.display = 'block';
+  });
+
+  document.addEventListener('click', () => {
+    customMenu.style.display = 'none';
+  });
             </script>  
 
     @stack('debug')

@@ -12,6 +12,7 @@ return new
 #[Title('Antennae')]
 #[Concept('Trait')]
 #[Concept('Size', '+1')]
+#[Concept('Cost', 1)]
 #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')] // https://game-icons.net/1x1/lorc/long-antennae-bug.html
 class(__FILE__) implements CardComponents
 {

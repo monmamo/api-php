@@ -4,14 +4,14 @@ return [
     'name' => 'Starter Mobster Deck',
     'details' => 'A basic deck of cards for playing as a Mobster.',
     'cards' => [
-        'A-007' => 2, // Spy
-        'A-036' => 1, // Boss
-        'A-045' => 2, // Crooked Cop
-        'A-072' => 3, // Enforcer
-        'A-112' => 1, // Hacker
-        'A-126' => 2, // Neighborhood "Protection"
-        'A-144' => 1, // Taxman
-        'A-067' => 2, // Driver
+        'A-MO-07' => 2, // Spy
+        'A-MO-01' => 1, // Boss
+        'A-MO-10' => 2, // Crooked Cop
+        'A-MO-03' => 3, // Enforcer
+        'A-MO-04' => 1, // Hacker
+        'A-MO-05' => 2, // Neighborhood "Protection"
+        'A-MO-06' => 1, // Taxman
+        'A-MO-08' => 2, // Driver
         'A-128' => 2, // Idiot Agents
 
         'A-089' => 1, // Spy Drone
@@ -20,7 +20,7 @@ return [
         'A-033' => 2, // Wheel of Fortune
         'A-T-12' => 2, // Tackling
         'A-D-01' => 3, // Body Block
-        'A-041' => 3, // Body Slam
+        'A-A-01' => 3, // Body Slam
         'A-077' => 2, // Round for the House
         'A-081' => 3, // Recycle
         'A-129' => 2, // Inappropriate Traffic Stop

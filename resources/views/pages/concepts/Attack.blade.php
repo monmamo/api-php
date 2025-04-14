@@ -2,11 +2,9 @@
 
 <h2>Examples of Attack Cards</h2>
 
-<x-card-image cardNumber="A-041" size="125" />
-<x-card-image cardNumber="A-052" size="125" />
-<x-card-image cardNumber="A-060" size="125" />
-<x-card-image cardNumber="A-084" size="125" />
-<x-card-image cardNumber="A-153" size="125" />
+@for($i = 1; $i <= 5; $i++)
+<x-card-image :link="true" cardNumber="A-A-{{sprintf('%02d',$i)}}" size="125" />
+    @endfor
 {{--
 <x-card-image cardNumber="AQ-01" size="125" />
 <x-card-image cardNumber="MAS-01" size="125" />

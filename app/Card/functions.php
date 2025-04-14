@@ -4,7 +4,6 @@ namespace App\Card;
 
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\CardAttributes\Prerequisites;
 use App\CardNumber;
 use App\Concept;
@@ -67,7 +66,6 @@ function makeNewCard(
 
     if (!$no_content) {
         yield \App\Strings\phpAttribute(FlavorText::class, $flavor_text);
-        yield \App\Strings\phpAttribute(LocalHeroImage::class, 'TODO.png');
     }
 
     yield \App\Strings\phpAttribute(Prerequisites::class, $prerequisites);
@@ -144,6 +142,14 @@ function make($spec): CardComponents
                 /**
                  * @group nonary
                  */
+                public function cardNameColor(): string
+                {
+                    return 'white';
+                }
+
+                /**
+                 * @group nonary
+                 */
                 public function cardNumber(): string
                 {
                     return $this->spec['card_number'] ?? \dd($this->spec);
@@ -165,6 +171,9 @@ function make($spec): CardComponents
                     yield from $this->spec['content'];
                 }
 
+                /**
+                 * @group nonary
+                 */
                 public function creditColor(): string
                 {
                     return 'white';
@@ -187,19 +196,6 @@ function make($spec): CardComponents
                     );
                 }
 
-                /**
-                 * @group nonary
-                 */
-                public function hero(): Renderable
-                {
-                    return new class() implements Renderable
-                    {
-                        public function render()
-                        {
-                            return '';
-                        }
-                    };
-                }
 
                 /**
                  * @group nonary

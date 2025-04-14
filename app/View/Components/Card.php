@@ -49,6 +49,14 @@ class Card extends Component //implements CardComponents
     /**
      * @group nonary
      */
+    public function cardNameColor(): string
+    {
+        return $this->spec->cardNameColor();
+    }
+
+    /**
+     * @group nonary
+     */
     public function cardNumber(): string
     {
         return $this->cardNumber;

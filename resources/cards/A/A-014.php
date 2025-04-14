@@ -7,6 +7,8 @@ use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
+// https://www.freepik.com/free-vector/express-truck-delivering-goods-supermarket_4147963.htm
+
 return new
 #[Title('Big-Box Store')]
     #[Concept('Vendor')]
@@ -20,8 +22,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <image x="0" y="0" class="hero" href="@local(A-014.jpg)" source="https://www.freepik.com/free-vector/express-truck-delivering-goods-supermarket_4147963.htm" />
-
+                <x-card.hero.local>A-014.jpg</x-card.hero.local>
 
 <x-card.phaserule type="Draw" lines="5"><text>
 <x-card.normalrule>Discard 3 cards from your hand.</x-card.normalrule>
