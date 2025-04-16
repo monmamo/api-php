@@ -26,7 +26,7 @@ Jay Bienvenu<br/><small>Creator, Curator and Canonist</small></h2>
 <p><strong>Merry Shuporna Biswas</strong> Card art.</p>
     <p><strong>Eric Martin</strong> Card art.</p>
 
-<h2><a href="/cg">Battle Card Game</a></h2>
+<h2><a href="/cg">{{__('cg')}}</a></h2>
 
 <p><strong>Hunter Andries</strong> Playtesting.</p>
 <p><strong>Josh Bellagh</strong> Playtesting and emotional support.</p>

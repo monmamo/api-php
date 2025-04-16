@@ -9,8 +9,10 @@ if (!class_exists($class)) abort(404);
 ?>
 
 <x-guest-layout>
-    <x-breadcrumbs :items="['/taxons'=>'Taxons']" />
-
+    <x-breadcrumbs>
+        <x-breadcrumbs.crumb url="/taxons">Taxons</x-breadcrumbs.crumb>
+    </x-breadcrumbs>
+    
 <h1><?= Str::headline($slug) ?></h1>
 
 <p>{{ $class::gloss() }}</p>

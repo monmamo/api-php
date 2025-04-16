@@ -14,8 +14,10 @@ return $selection;
 
     <x-slot:page-title>{{$set->title()}} | Card System</x-slot>
     
-    <x-breadcrumbs :items="['/cards'=>'Card System']" />
-
+    <x-breadcrumbs>
+        <x-breadcrumbs.crumb url="/cards">Card System</x-breadcrumbs.crumb>
+    </x-breadcrumbs>
+    
         <h1>{{$set->title()}}</h1>
 
 @foreach ($selection  as $card_info) 

@@ -4,7 +4,10 @@
 
 {{-- Note: Content copied in resources/views/pages/cg/bribery.blade.php --}}
 
-<x-breadcrumbs :items="['/cg'=>'Battle Card Game', '/cg/rules'=>'Rules']" />
+<x-breadcrumbs>
+    <x-breadcrumbs.crumb url="/cg">{{__('cg')}}</x-breadcrumbs.crumb>
+    <x-breadcrumbs.crumb url="/cg/rules">Rules</x-breadcrumbs.crumb>
+</x-breadcrumbs>
 
 <h1>Integrity and Bribery</h1>
 

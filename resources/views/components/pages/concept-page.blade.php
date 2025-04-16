@@ -16,8 +16,11 @@ $icon_credit_path = $filesystem->path("$slug/icon-credit.html");
 ?>
 
 <x-guest-layout>
-    <x-breadcrumbs :items="['/concepts'=>'Concepts']" />
 
+        <x-breadcrumbs>
+            <x-breadcrumbs.crumb url="/concepts">Concepts</x-breadcrumbs.crumb>
+        </x-breadcrumbs>
+        
     <?php
     if (file_exists($icon)) {
     ?>

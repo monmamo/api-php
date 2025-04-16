@@ -27,7 +27,7 @@
 
     <h4>Tell me about the world of Monsters Masters &amp; Mobsters.</h4>
 
-    <p class="lead mb-4">Check out our <a target="_self" rel="noopener noreferrer" href="/lore">Lore</a> blog. Start <a target="_self" rel="noopener noreferrer" href="https://monmamo.com/post/world-of-monmamo">here</a>. Also check out our <a target="_self" rel="noopener noreferrer" href="https://monmamo.com/post/world-of-monmamo">image gallery on Pinterest</a>.</p>
+    <p class="lead mb-4">Check out our <a target="_self" rel="noopener noreferrer" href="/lore">Lore</a> blog. Start <a target="_self" rel="noopener noreferrer" href="/post/world-of-monmamo">here</a>. Also check out our <a target="_self" rel="noopener noreferrer" href="/post/world-of-monmamo">image gallery on Pinterest</a>.</p>
 
     <h4>Where can I meet you in person?</h4>
 

@@ -10,7 +10,7 @@
 
 //
     ?>
-    <x-slot:page-title>Battle Card Game</x-slot>
+    <x-slot:page-title>{{__('cg')}}</x-slot>
 
 <x-slot:leftbar>
 <x-content-bar.section title="General Rules" :links="['card-game/layout' => 'Layout', 'card-game/card' => 'Card Elements', 'card-game/play' => 'Gameplay & Objectives','card-game/setup' => 'Setup Phase','card-game/draw' => 'Draw Phase','card-game/upkeep' => 'Upkeep Phase','card-game/command' => 'Command Phase','card-game/resolution' => 'Resolution Phase','card-game/dice'=>'Resolving Dice Effects']" />

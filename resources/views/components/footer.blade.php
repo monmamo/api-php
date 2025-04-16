@@ -1,3 +1,5 @@
+
+
 <footer class="bd-footer py-2 mt-5 bg-dark-subtle ">
         <div class="container py-2 px-4 px-md-3 ">
             <div class="row">
@@ -14,7 +16,7 @@
                     <h5>Home</h5>
                     <ul class="list-unstyled">
                         @foreach(config('ui.home.links') as $spec)
-                        <li class="mb-2"><a href="<?= $spec[0] ?>"><?= $spec[1] ?></a></li>
+                        <x-footer.item :$spec />
                         @endforeach
                     </ul>
                 </div>
@@ -22,16 +24,16 @@
                     <h5>World of MonMaMo</h5>
                     <ul class="list-unstyled">
                     @foreach(config('ui.world.links') as $spec)
-                        <li class="mb-2"><a href="<?= $spec[0] ?>"><?= $spec[1] ?></a></li>
-                        @endforeach
+                    <x-footer.item :$spec />
+                    @endforeach
                     </ul>
                 </div>
                 <div class="col-sm-2 col-md-2 col-lg-2 mb-3">
                     <h5>Products</h5>
                     <ul class="list-unstyled">
                     @foreach(config('ui.products.links') as $spec)
-                        <li class="mb-2"><a href="<?= $spec[0] ?>"><?= $spec[1] ?></a></li>
-                        @endforeach
+                    <x-footer.item :$spec />
+                    @endforeach
                     </ul>
                 </div>
                 <div class="col-sm-2 col-md-2 col-lg-2 mb-3">

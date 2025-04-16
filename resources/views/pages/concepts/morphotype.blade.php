@@ -1,6 +1,10 @@
 <x-guest-layout>
     <x-breadcrumbs :items="['/concepts'=>'Concepts']" />    
 
+<x-breadcrumbs>
+    <x-breadcrumbs.crumb url="/concepts">Concepts</x-breadcrumbs.crumb>
+</x-breadcrumbs>
+        
 <h1>morphotype</h1>
 
         <p>In biology, a <dfn>morphotype</dfn> refers to a group of organisms within a species that share distinct morphological characteristics, setting them apart from other groups within the same species. These differences can be in shape, size, color, or other structural features. Morphotypes are often used to describe variations that are not significant enough to warrant classification as separate species or subspecies. For example, in microbiology, bacterial strains within a single species that exhibit different morphological traits are considered different morphotypes.  </p>

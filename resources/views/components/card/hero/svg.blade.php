@@ -1,3 +1,10 @@
+{{--
+DERECATED
+  use \App\CardAttributes\CardTools;
+   yield $this->svgHeroImage('FILE.jpg');
+--}}
+
+
 @props(['scale'=>1,'viewBox'=>'0 0 512 512','y'=>70])
 <?php
 $height = config('card-design.hero.height')*$scale;

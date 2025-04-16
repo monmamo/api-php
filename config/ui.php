@@ -29,7 +29,7 @@ $products = [
     'title' => 'Products',
     'links' => [
         ['/cards', 'Card System'],
-        ['/cg', 'Battle Card Game'],
+        ['cg'],
         //['/ms', 'Mean Streets Card Game'],
         //['/rlr', 'Raid on Leaser Ridge'],
         //['/rcs', 'Race for the Championship'],

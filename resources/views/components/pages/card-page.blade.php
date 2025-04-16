@@ -35,7 +35,10 @@ $set_slug = $number_object->set;
 
 <x-guest-layout>
     <x-slot:page-title><?= $number ?> <?= $spec->name() ?></x-slot>
-    <x-breadcrumbs :items="['/cards'=>'Card System','/cards/set/'.$set_slug=>\App\Enums\CardSet::from($set_slug)->title()]" />
+    <x-breadcrumbs>
+      <x-breadcrumbs.crumb url="/cards">Card System</x-breadcrumbs.crumb>
+      <x-breadcrumbs.crumb url="/cards/set/{{$set_slug}}">{{\App\Enums\CardSet::from($set_slug)->title()}}</x-breadcrumbs.crumb>
+    </x-breadcrumbs>
 
       {{--
       <div class="gap-2">
