@@ -7,4 +7,4 @@ if (!\Illuminate\Support\Facades\View::exists("$card_number")) {
 }
 
 ?>
-<x-pages.card-page :number="$card_number" />
+<x-card-page :number="$card_number" />

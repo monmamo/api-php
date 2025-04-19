@@ -81,6 +81,14 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
     </div>
     <div class="d-flex flex-row">
         <div class="p-2"><x-card :link="true" cardNumber="A-T-01" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-02" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-03" width="200"/></div>
+    </div>
+    <div class="d-flex flex-row">
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-06" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-07" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-10" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-11" width="200"/></div>
     </div>
 {{--
     <p>These are the cards we will work on next:</p>

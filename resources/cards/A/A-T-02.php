@@ -1,8 +1,8 @@
 <?php
 
-use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImageIsPrototype;
+use App\CardAttributes\IsGeneratedImage;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -12,8 +12,8 @@ return new
     #[Title('Sparking')]
     #[Concept('Trait')]
     #[Concept('Cost', 2)]
-    #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
-    #[ConceptIconHeroImage('Energos')]
+    #[IsGeneratedImage]
+    #[ImageIsPrototype]
     #[Prerequisites(lines: 'Requires Energos.', y: 360)]
 class(__FILE__) implements CardComponents
 {
@@ -21,8 +21,10 @@ class(__FILE__) implements CardComponents
 
     public function content(): \Traversable
     {
+        yield '<x-card.hero.local>hero/A-T-02.png</x-card.hero.local>';
+
         yield <<<'HTML'
-    <x-card.phaserule y="500" type="Command" lines="2"><text>
+    <x-card.phaserule y="550" type="Command" lines="2"><text>
         <x-card.normalrule>You may discard any number of</x-card.normalrule>
         <x-card.normalrule>Electricity (A-003) from this Monster.</x-card.normalrule>
     </text></x-card.phaserule>

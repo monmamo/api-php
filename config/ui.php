@@ -44,8 +44,8 @@ $community = [
         ['/community" target="_blank" rel="noopener', 'Rules'],
         //  [\config('external.deviantart.url') . '" target="_blank" rel="noopener', 'DeviantArt'],
         [\config('external.discord.url') . '" target="_blank" rel="noopener', 'Discord'],
-        [\config('external.github.url') . '" target="_blank" rel="noopener', 'GitHub'],
         [\config('external.patreon.url') . '" target="_blank" rel="noopener', 'Patreon'],
+        [\config('external.github.url') . '" target="_blank" rel="noopener', 'GitHub'],
         [\config('external.reddit.url') . '" target="_blank" rel="noopener', 'Reddit'],
     ],
 ];
