@@ -4,6 +4,8 @@ namespace Canon;
 
 class Deck
 {
+    public readonly array $cardCounts;
+
     public readonly array $cards;
 
     public readonly array $distinctCards;
@@ -17,15 +19,18 @@ class Deck
         }
         $cards = [];
         $distinctCards = [];
+        $cardCounts = [];
 
         foreach (\config('decks.' . $id . '.cards') as $card_number => $count) {
             $distinctCards[$card_number] = \App\Card\make($card_number);
+            $cardCounts[$card_number] = $count;
 
             for ($i = 0; $i < $count; ++$i) {
                 $cards[] = $card_number;
             }
         }
         $this->cards = $cards;
+        $this->cardCounts = $cardCounts;
         $this->distinctCards = $distinctCards;
     }
 

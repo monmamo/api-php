@@ -1,6 +1,7 @@
 <?php
 
 use App\CardAttributes\CardNameColor;
+use App\CardAttributes\CardTools;
 use App\CardAttributes\CreditColor;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\IsGeneratedImage;
@@ -20,7 +21,7 @@ return new
 #[CardNameColor('#000000')]
 class(__FILE__) implements CardComponents
 {
-    use DefaultCardAttributes;
+    use CardTools;
     use DefaultCardAttributes;
 
     /**
@@ -28,9 +29,7 @@ class(__FILE__) implements CardComponents
      */
     public function background(): \Traversable
     {
-        yield <<<'HTML'
-<image x="0" y="0" href="@local(fullsize/A-MA-06.jpeg)" />
-HTML;
+        yield $this->fullSizeBackground('fullsize/A-MA-06.jpeg');
     }
 
     public function content(): \Traversable

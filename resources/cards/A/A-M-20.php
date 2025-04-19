@@ -29,9 +29,7 @@ return new
             yield <<<'HTML'
     <x-card.hero.local>hero/A-M-20.jpeg</x-card.hero.local>
 
-    <x-card.cardrule y="530" height="55" >
-<x-card.normalrule>Taxons: Hominos, Gouros</x-card.normalrule>
-</x-card.cardrule>
+    <x-card.taxons>Hominos, Gouros</x-card.taxons>
 
 <x-card.phaserule type="Trait" height="170">
     <text>

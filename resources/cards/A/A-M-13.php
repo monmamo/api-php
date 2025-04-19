@@ -29,9 +29,7 @@ return new
             yield <<<'HTML'
     <x-card.hero.local>hero/felequos.png</x-card.hero.local>
 
-    <x-card.cardrule y="530" height="55" >
-<x-card.normalrule>Taxons: Felequos</x-card.normalrule>
-</x-card.cardrule>
+    <x-card.taxons>Felequos</x-card.taxons>
 HTML;
         }
     };

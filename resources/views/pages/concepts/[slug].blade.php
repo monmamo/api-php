@@ -1,1 +1,1 @@
-<x-pages.concept-page :$slug />
+<x-concept-page :$slug />

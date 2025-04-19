@@ -14,6 +14,7 @@ return new
     #[Concept('Lure')]
     #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
     #[Title('Basic Lure')]
+    #[Concept('Cost', 3)]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

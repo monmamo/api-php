@@ -1,15 +1,15 @@
 <x-guest-layout>
 
-<x-slot:page-title>Card Game</x-slot>
+<x-slot:page-title>{{__('cg')}}</x-slot>
 
 
-<h1>Classic Monster Battle Card Game</h1>
+<h1>{{__('cg')}}</h1>
 
-<p>The Card Game takes inspiration from several games before it, but is built from scratch to be easy to learn, easy to play yet infinitely expandable. </p>
+<p>The {{__('cg')}} takes inspiration from several games before it, but is built from scratch to be easy to learn, easy to play yet infinitely expandable. </p>
 
 <p>The general objective of the game is to defeat your opponent(s) by guiding your monsters in attacks against your opponents’ monsters.</p>
 
-<p>The Classic Monster Battle Card Game can be played with <a href="/cg/pdv">each player having their own deck</a>, as most trading- and collecible-card games are played, or <a href="/cg/sdv">with each player drawing from a single shared deck</a>. The <a href="/cg/sdv">single-deck version</a> allows players to experience the game with a single deck of cards, freeing them from the pressures of constructing a specialized deck and making it perfect for casual play or for those new to the game.</p>
+<p>The {{__('cg')}} can be played with <a href="/cg/pdv">each player having their own deck</a>, as most trading- and collecible-card games are played, or <a href="/cg/sdv">with each player drawing from a single shared deck</a>. The <a href="/cg/sdv">single-deck version</a> allows players to experience the game with a single deck of cards, freeing them from the pressures of constructing a specialized deck and making it perfect for casual play or for those new to the game.</p>
 
 
 <ul class="nav">

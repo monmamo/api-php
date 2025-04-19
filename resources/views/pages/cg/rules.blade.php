@@ -1,6 +1,6 @@
 <x-guest-layout>
 
-<x-slot:page-title>Classic Monster Battle Card Game Rules</x-slot>
+<x-slot:page-title>{{__('cg')}} Rules</x-slot>
 
 <x-slot:title>
 </x-slot:title>
@@ -23,8 +23,11 @@
 </x-nav.group>
 </x-slot:nav>
 
-<x-breadcrumbs :items="['/cg'=>'Classic Monster Battle Card Game']" />
-<h1>Classic Monster Battle Card Game Rules</h1>
+<x-breadcrumbs>
+    <x-breadcrumbs.crumb url="/cg">{{__('cg')}}</x-breadcrumbs.crumb>
+</x-breadcrumbs>
+
+    <h1>{{__('cg')}} Rules</h1>
 
 <div  id="game-layout">
 <h2>Game Layout</h2>
@@ -91,11 +94,23 @@
 </div>
 <h3 id="setup-format">Battle Format and Objective</h3>
 <p>The Card Game supports multiple ways of playing the game:</p>
-<p>Players can compete as individuals or as teams.</p>
-<p>Players can set the objective of the game, such as victory being that a certain numbers of Monsters are knocked out.</p>
-<p>Players can set the conditions that need to be met before the battle can begin. For example, if the battle is a three-on-three battle, then each player must have three Monsters on the Battlefield before the battle can officially begin. </p>
+<ul>
+<li>Players can compete as individuals or as teams.</li>
+<li>Players can set the objective of the game, such as victory being that a certain numbers of Monsters are knocked out.</li>
+<li>Players can set the conditions that need to be met before the battle can begin. For example, if the battle is a three-on-three battle, then each player must have three Monsters on the Battlefield before the battle can officially begin. </li>
+</p>
+
+<p>For new or inexperienced players, we recommend that you start with the following format:</p>
+<ul>
+<li>Two players.</li>
+<li>Each player starts with one Master and two Monsters on the Battlefield.</li>
+<li>Additional Monsters <strong>cannot</strong> be added to the Battlefield as the game progresses.</li>
+<li>Only Monsters can attack, though Masters, Mobsters and Bystanders can be attacked.</li>
+<ul>
+
 <p>💡 The default format is a head-to-head battle with an equal number of Monsters on each team. New players should start with one Monster each while familiarizing themselves with the rules and gameplay, and expand play to include two or three Monsters per player as they become more familiar with the game. </p>
 <p>See the Battle Formats section for details on battle formats and special rules.</p>
+
 <h3 id="setup-place-cards">Putting Cards Into the Battlefield</h3>
 <p>The Setup phase proceeds as a series of turns in which each player makes one play per turn. The Setup phase cannot complete until the requirements of the agreed-upon battle format are met.</p>
 <p>To determine who gets the first setup turn, each player rolls a die. The player who receives the highest number gets to go first. Play proceeds clockwise from there.</p>

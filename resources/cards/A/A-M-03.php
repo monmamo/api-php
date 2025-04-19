@@ -18,7 +18,7 @@ return new
     #[Concept('Speed', 3)]
     #[Concept('Boost', 3)]
     #[IsGeneratedImage]
-#[ImageIsPrototype]
+    #[ImageIsPrototype]
     #[ImagePrompt('brown cat of weird zoology swimming in a lake')]
     class(__FILE__) implements CardComponents
     {
@@ -29,9 +29,7 @@ return new
             yield <<<'HTML'
     <x-card.hero.local>hero/A-M-03.png</x-card.hero.local>
 
-    <x-card.cardrule y="400" height="55" >
-<x-card.normalrule>Taxons: Aquos, Felos</x-card.normalrule>
-</x-card.cardrule>
+    <x-card.taxons>Aquos, Felos</x-card.taxons>
 
 <x-card.phaserule type="Skill" height="245">
     <text>

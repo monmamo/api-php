@@ -1,5 +1,6 @@
 <?php
 
+use App\CardAttributes\CardTools;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
@@ -16,13 +17,14 @@ return new
     #[ImageCredit('Image by freepik')]
 class(__FILE__) implements CardComponents
 {
+    use CardTools;
     use DefaultCardAttributes;
 
     public function content(): \Traversable
     {
-        yield <<<'HTML'
-        <x-card.hero.local>A004.jpg</x-card.hero.local>
+        yield $this->localHeroImage('A004.jpg');
 
+        yield <<<'HTML'
     <x-card.phaserule type="Draw" lines="5"><text>
         <x-card.normalrule>The player with the fewest cards</x-card.normalrule>
         <x-card.normalrule>in their hand can draw 1 card.</x-card.normalrule>

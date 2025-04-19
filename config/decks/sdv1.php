@@ -3,8 +3,6 @@
 return [
     'name' => 'Basic Common Deck',
 
-    'details' => \App\Strings\html('p', 'The deck designed to draw people into the Monsters Masters & Mobsters Battle Card Game. Comes with 6 Masters, 15 Monsters and 80 other cards.'),
-
     //'A-004' => 2, // Alms for the Poor
     // 'A-025' => 2, // Busybody
     // 'A-MO-03' => 2, // Enforcer
@@ -48,7 +46,7 @@ return [
         'A-T-05' => 2, // Evasiveness
         'A-T-06' => 2, // Alertness
         'A-T-08' => 2, // Natural Healing
-        'A-T-10' => 2, // Ramming
+        'A-T-09' => 2, // Oozing Affluvia
         'A-T-11' => 2, // Dual Cranial Horns
         'A-T-12' => 2, // Tackling
 

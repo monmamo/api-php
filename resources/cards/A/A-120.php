@@ -14,6 +14,7 @@ return new
     #[Title('Healing Salve')]
     #[Concept('Item')]
     #[Concept('Healing')]
+    #[Concept('Cost', 3)]
     #[ImagePrompt('green jar of healing ointment')]
     #[ImageCredit('Image by freepik')]
     #[FlavorText('Does a monster good!')]

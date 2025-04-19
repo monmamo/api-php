@@ -17,6 +17,8 @@ use Illuminate\Http\Request;
  */
 final class AuthManager extends StandardAuthManager
 {
+    private ?Guard $_portal_guard = null;
+
     /**
      * Constructor. Creates a new Auth manager instance.
      *

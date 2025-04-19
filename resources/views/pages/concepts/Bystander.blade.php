@@ -1,4 +1,4 @@
-<x-pages.concept-page slug="Bystander">
+<x-concept-page slug="Bystander">
 
     <h2>Examples of Bystander Cards</h2>
     
@@ -12,5 +12,5 @@
     <x-card-image :link="true" cardNumber="A-133" size="125" />
     <x-card-image :link="true" cardNumber="A-143" size="125" />
     
-    </x-pages.concept-page>
+    </x-concept-page>
     

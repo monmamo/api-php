@@ -1,4 +1,4 @@
-<x-pages.concept-page slug="Item">
+<x-concept-page slug="Item">
 
     <h2>Examples of Item Cards</h2>
 
@@ -21,5 +21,5 @@
     <x-card-image cardNumber="MAS-11" size="125" />
     @endenv
 
-    </x-pages.concept-page>
+    </x-concept-page>
     

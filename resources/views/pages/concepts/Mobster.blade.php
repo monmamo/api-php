@@ -1,4 +1,4 @@
-<x-pages.concept-page slug="Mobster">
+<x-concept-page slug="Mobster">
 
 <h2>Examples of Mobster Cards</h2>
 
@@ -6,4 +6,4 @@
 <x-card-image :link="true" cardNumber="A-MO-{{sprintf('%02d',$i)}}" size="125" />
     @endfor
 
-</x-pages.concept-page>
+</x-concept-page>

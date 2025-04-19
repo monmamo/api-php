@@ -1,9 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -13,8 +11,6 @@ return new
     #[Concept('Item')]
     #[Concept('Weapon')]
     #[ImageCredit('Icon by Skoll on Game-Icons.net')]
-    #[FlavorText([])]
-    #[Prerequisites([])]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

@@ -1,4 +1,4 @@
-<x-pages.concept-page slug="Bane">
+<x-concept-page slug="Bane">
 
     <h2>Examples of Bane Cards</h2>
     
@@ -9,4 +9,4 @@
 <x-card-image cardNumber="A-110" size="125" />
 
 
-</x-pages.concept-page>
+</x-concept-page>

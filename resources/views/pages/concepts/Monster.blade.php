@@ -1,4 +1,4 @@
-<x-pages.concept-page slug="Monster">
+<x-concept-page slug="Monster">
 
 <h2>Examples of Monster Cards</h2>
 
@@ -19,4 +19,4 @@
 <x-card-image cardNumber="A-M-15" size="125" />
 
 
-</x-pages.concept-page>
+</x-concept-page>

@@ -2,7 +2,7 @@
 
 return [
     'name' => 'Starter Mobster Deck',
-    'details' => 'A basic deck of cards for playing as a Mobster.',
+
     'cards' => [
         'A-MO-07' => 2, // Spy
         'A-MO-01' => 1, // Boss

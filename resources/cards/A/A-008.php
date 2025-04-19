@@ -1,5 +1,6 @@
 <?php
 
+use App\CardAttributes\CardTools;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\ImagePrompt;
@@ -19,6 +20,7 @@ return new
     #[Prerequisites(lines: ['You may play this card only if you have a', 'Mobster card on the Battlefield.'], y: 415)]
     class(__FILE__) implements CardComponents
     {
+        use CardTools;
         use DefaultCardAttributes;
 
         /**
@@ -26,9 +28,7 @@ return new
          */
         public function background(): \Traversable
         {
-            yield <<<'HTML'
-<image x="0" y="0" href="@local(A-008-full.png)" />
-HTML;
+            yield $this->fullSizeBackground('A-008-full.png');
         }
 
         public function content(): \Traversable

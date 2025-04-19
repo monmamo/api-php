@@ -9,8 +9,8 @@ use App\GeneralAttributes\Title;
 // source or inspiration:: https://bulbapedia.bulbagarden.net/wiki/Yell_Horn_(Darkness_Ablaze_173)
 return new
 #[Title('Cacophonous Horn')]
-
 #[Concept('Item')]
+#[Concept('Cost', 3)]
 #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
 class(__FILE__) implements CardComponents
 {

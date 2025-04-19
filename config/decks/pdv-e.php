@@ -1,8 +1,9 @@
 <?php
 
+// TODO Add an Electricity Master card.
+
 return [
     'name' => 'Starter Electricity Deck',
-    'details' => 'A basic deck of cards for the Energos taxon.',
     'cards' => [
         'A-M-05' => 3,
         'A-M-06' => 3,
@@ -13,7 +14,7 @@ return [
         'A-T-02' => 3, // Spark Attack
         'A-011' => 3, // Flash of Lightning
         'A-D-03' => 4, // Energy Shield
-        'A-084' => 3, // Bolt of Lightning
+        'A-A-04' => 3, // Bolt of Lightning
 
         'A-T-01' => 2, // Biting
         'A-T-08' => 2, // Natural Healing

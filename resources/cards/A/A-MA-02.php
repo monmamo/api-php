@@ -1,5 +1,6 @@
 <?php
 
+use App\CardAttributes\CardTools;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
@@ -20,6 +21,7 @@ return new
 #[Prerequisites(y: 460, lines: ['Limit 1 per player on Battlefield.'])]
 class(__FILE__) implements CardComponents
 {
+    use CardTools;
     use DefaultCardAttributes;
 
     /**
@@ -27,9 +29,7 @@ class(__FILE__) implements CardComponents
      */
     public function background(): \Traversable
     {
-        yield <<<'HTML'
-<image x="0" y="0" href="@local(fullsize/A-MA-02.png)" />
-HTML;
+        yield $this->fullSizeBackground('fullsize/A-MA-02.png');
     }
 
     public function content(): \Traversable

@@ -31,9 +31,7 @@ return new
             yield <<<'HTML'
     <x-card.hero.local>hero/A-M-04.jpeg</x-card.hero.local>
 
-    <x-card.cardrule y="530" height="55" >
-<x-card.normalrule>Taxons: Aquos, Otarys</x-card.normalrule>
-</x-card.cardrule>
+    <x-card.taxons>Aquos, Otarys</x-card.taxons>
 
 <x-card.phaserule type="Attack" height="210">
     <text>

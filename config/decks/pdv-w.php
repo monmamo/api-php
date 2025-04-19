@@ -1,8 +1,10 @@
 <?php
 
+// TODO Add a Water Master card.
+
 return [
     'name' => 'Starter Water Deck',
-    'details' => 'A basic deck of cards for the Aquos taxon.',
+    
     'cards' => [
         'A-M-01' => 3,
         'A-M-02' => 3,

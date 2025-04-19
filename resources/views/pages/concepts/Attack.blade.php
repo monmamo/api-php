@@ -1,4 +1,4 @@
-<x-pages.concept-page slug="Attack">
+<x-concept-page slug="Attack">
 
 <h2>Examples of Attack Cards</h2>
 
@@ -20,4 +20,4 @@
 <x-card-image cardNumber="PY-16" size="125" />
 --}}
 
-</x-pages.concept-page>
+</x-concept-page>

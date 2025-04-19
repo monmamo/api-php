@@ -1,4 +1,4 @@
-<x-pages.concept-page slug="Environment">
+<x-concept-page slug="Environment">
     <h2>Examples of Environment Cards</h2>
 
 
@@ -12,4 +12,4 @@
     <x-card-image cardNumber="P-S-03" size="125" />
     <x-card-image cardNumber="P-S-04" size="125" />
     
-</x-pages.concept-page>
+</x-concept-page>

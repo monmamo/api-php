@@ -168,7 +168,7 @@ class Concept implements HasIcon, Renderable
             ],
             \App\Strings\html(
                 'a',
-                ['href' => "http://monmamo.com/concepts/{$this->type}", 'target' => '_blank', 'rel' => 'noopener noreferrer'],
+                ['href' => "/concepts/{$this->type}", 'target' => '_blank', 'rel' => 'noopener noreferrer'],
                 \App\Strings\html(
                     'g',
                     ['class' => 'stat'],

@@ -1,4 +1,4 @@
-<x-pages.taxon-page :$slug >
+<x-taxon-page :$slug >
 
 
     <h2>Examples of {{$slug}} Anthropes and Monsters</h2>
@@ -19,7 +19,7 @@
   }
         </script>
 
-    <x-pages.taxon-gallery :$slug />
+    <x-taxon-gallery :$slug />
 
-</x-pages.taxon-page>
+</x-taxon-page>
 

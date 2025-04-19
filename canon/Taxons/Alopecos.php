@@ -33,6 +33,6 @@ class Alopecos extends BaseTaxon
 
     public static function genus(): string
     {
-        return 'Vulpos';
+        return Vulpos::class;
     }
 }

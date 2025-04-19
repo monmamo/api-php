@@ -12,6 +12,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Hand Scope')]
 #[Concept('Item')]
+#[Concept('Cost', 2)]
 #[FlavorText('Here\'s lookin\' at you, kid.')]
 class(__FILE__) implements CardComponents
 {

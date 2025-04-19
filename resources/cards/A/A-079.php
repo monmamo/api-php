@@ -13,6 +13,7 @@ return new
 #[Concept('Level', 5)]
 #[Concept('Size', 25)]
 #[Concept('Speed', 4)]
+#[Concept('Cost', 4)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -20,11 +21,11 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<text y="500" filter="url(#solid)">
-<x-card.normalrule>Choose one of your Monsters on the Battlefield.</x-card.normalrule>
+    <x-card.cardrule lines="3" >
+    <x-card.normalrule>Choose one of your Monsters on the Battlefield.</x-card.normalrule>
 <x-card.normalrule>Shuffle that Monster, all cards attached to it,</x-card.normalrule>
 <x-card.normalrule>and Rescue Drone into your Library.</x-card.normalrule>
-</text>
+</x-card.cardrule>
 HTML;
     }
 };

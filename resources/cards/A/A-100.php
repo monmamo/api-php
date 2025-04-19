@@ -14,6 +14,7 @@ return new
 #[Title('Allergy Relief')]
 #[Concept('Item')]
 #[Concept('Healing')]
+#[Concept('Cost', 2)]
 #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
 class(__FILE__) implements CardComponents
 {

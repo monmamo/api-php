@@ -18,6 +18,7 @@ return new
 #[Concept('Level', 5)]
 #[Concept('Size', 2)]
 #[Concept('Speed', 6)]
+#[Concept('Cost', 3)]
 #[ImageCredit('Image by catalyststuff on Freepik')]
 #[FlavorText('Here\'s lookin\' at you, kid.')]
 class(__FILE__) implements CardComponents

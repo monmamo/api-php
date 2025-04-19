@@ -13,7 +13,8 @@ return new
     #[Title('Tranquilizer Dart')]
     #[Concept('Item')]
     #[Concept('Weapon')]
-    #[ImageCredit('Shutterstock #169987271 by Inked Pixels')]
+    #[Concept('Cost', 3)]
+        #[ImageCredit('Shutterstock #169987271 by Inked Pixels')]
     #[FlavorText('I think something just stung me……')]
     class(__FILE__) implements CardComponents
     {

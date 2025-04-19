@@ -1,9 +1,11 @@
 <x-guest-layout>
 
-<x-slot:page-title>Single-Deck Version | Classic Monster Battle Card Game</x-slot>
+<x-slot:page-title>Single-Deck Version | {{__('cg')}}</x-slot>
 
-<x-breadcrumbs :items="['/cg'=>'Classic Monster Battle Card Game', '/cg/rules'=>'Rules']" />
-
+<x-breadcrumbs>
+    <x-breadcrumbs.crumb url="/cg">{{__('cg')}}</x-breadcrumbs.crumb>
+    <x-breadcrumbs.crumb url="/cg/rules">Rules</x-breadcrumbs.crumb>
+</x-breadcrumbs>
 
 <h1>Particular Rules for Single-Deck Play</h1>
 

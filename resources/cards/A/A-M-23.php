@@ -30,9 +30,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
     
 
-<x-card.cardrule y="530" height="55" >
-<x-card.normalrule>Taxons: Unknown</x-card.normalrule>
-</x-card.cardrule>
+<x-card.taxons>Unknown</x-card.taxons>
 
 <x-card.cardrule height="55" >
 <x-card.normalrule>On exposure:

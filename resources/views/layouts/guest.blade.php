@@ -122,7 +122,7 @@
     </aside>
     @endisset
 
-    @isset($nav)
+    @isset($title)
     {{$title}}
     @endisset
 

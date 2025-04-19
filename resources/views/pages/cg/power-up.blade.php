@@ -1,7 +1,11 @@
 <x-guest-layout>
 
 <x-slot:page-title>Power Up | Card Game</x-slot>
-<x-breadcrumbs :items="['/cg'=>'Classic Monster Battle Card Game', '/cg/rules'=>'Rules']" />
+
+<x-breadcrumbs>
+    <x-breadcrumbs.crumb url="/cg">{{__('cg')}}</x-breadcrumbs.crumb>
+    <x-breadcrumbs.crumb url="/cg/rules">Rules</x-breadcrumbs.crumb>
+</x-breadcrumbs>
 
 <h1>Power Up</h1>
 

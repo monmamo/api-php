@@ -1,4 +1,4 @@
-<x-pages.concept-page slug="Place">
+<x-concept-page slug="Place">
 
     <h2>Examples of Place Cards</h2>
 
@@ -15,5 +15,5 @@
 @endenv
 
 
-    </x-pages.concept-page>
+    </x-concept-page>
     

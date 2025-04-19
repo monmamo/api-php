@@ -29,9 +29,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
     <x-card.hero.local>hero/A-M-22.jpeg</x-card.hero.local>
 
-<x-card.cardrule y="530" height="55" >
-<x-card.normalrule>Taxons: Canos</x-card.normalrule>
-</x-card.cardrule>
+<x-card.taxons>Canos</x-card.taxons>
 
 <x-card.cardrule height="55" >
 <x-card.normalrule>On exposure, trigger Security Check.</x-card.normalrule>

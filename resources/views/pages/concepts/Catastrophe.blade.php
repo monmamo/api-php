@@ -1,4 +1,4 @@
-<x-pages.concept-page slug="Catastrophe">
+<x-concept-page slug="Catastrophe">
 
 
 <h2>Examples of Catastrophe Cards</h2>
@@ -15,4 +15,4 @@
 
 
 
-</x-pages.concept-page>
+</x-concept-page>
