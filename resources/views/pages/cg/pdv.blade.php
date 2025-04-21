@@ -34,7 +34,7 @@
 
 <p>For right-handed players, we recommend making the Discard pile to the right of your Library and the Exile pile to the right of the Discard pile. For left-handed players, we recommend making the Discard pile to the left of your Library and the Exile pile to the left of the Discard pile.</p>
 
-<h2>Setup Phase</h2>
+<h2><a href="/cg/rules#setup">Setup Phase</a></h2>
 
 <p>Since your Monsters are in your Library rather than the common Library, you can put Monsters into play along with the other cards listed in the Base Rules.</p>
 

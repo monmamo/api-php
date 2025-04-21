@@ -1,0 +1,1 @@
+<x-svg size="30" viewBox="0 0 512 512"><g fill="#000000">{{view(($slot).".icon")}}</g></x-svg>

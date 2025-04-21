@@ -38,7 +38,7 @@
 </p>
 
 <ul>
-    <li><a href="/cg">Our traditional monster-battle TCG/CCG.</a></li>
+    <li><a href="/cg">Classic Card Duel</a>, our traditional monster-battle TCG/CCG.</li>
     <li>Other pure card gamnes.</li>
     <li>Board games that use cards.</li>
     <li>Role-playing games, where cards can stand in for complex character sheets.</li>
@@ -47,30 +47,47 @@
     <li>Whatever we think of next.</li>
 </ul>
 
-        <img src="/public/images/card-parts.png" style="float: right;" alt="Illustration of the parts of a card" width="500" loading="lazy">
+<h4>"It fits the system."</h4>
+<p><a href="https://www.lego.com/en-us">LEGO</a> is one of the most popular toys ever because it is built around one basic form and one basic mechanic. The Card System ensures that MonMaMo cards can be used across MonMaMo products. Your starter Duel deck will become the foundation of the custom decks that you make yourself. The Card System gives you an ability to customize your MonMaMo games that few games or toys offer.</p>
 
-        <h1>Anatomy of the Card</h1>
-        <h4>Card Name</h4>
-            <p>The Card Name names what the card represents: a Monster, a character, a place, some sort of action, etc. </p>
-            <p>All cards with the same Card Name are considered to be the same thing, even if the specific text or any other attribute is different. Different cards (differentiated by Card Number) may have the same Card Name. For example, there are cases where two different cards can have the same Card Name but differing Card Types. </p>
-            <p>Cards can represent specific characters or concepts in the Monsters Masters & Mobsters universe (a named Anthrope, a named Monster, a specific place, etc.). In those cases, only one of the card may be on the Battlefield at any particular part in time.</p>
-            <h4><a href="#concepts">Card Concepts</a></h4>
-            <p>Concepts define properties, abilities and usage of the card each card can have any number of Concepts.</p> 
 
-            <h4>Card Text</h4>
-            <p>The Card Text indicates specific information associated with the card, including:</p>
-            <ul>
-                <li>How many of the card may be on the Battlefield at any particular part in time.</li>
-            <li>Specific rules that apply to the use of that card.</li>
-            <li>Values of various statistics associated with the card.</li>
-            </ul>
+<img src="/public/images/card-parts.png" style="float: right;" alt="Illustration of the parts of a card" width="500" loading="lazy">
 
-            <h4>Flavor Text</h4>
-            <p>Flavor Text has no effect on the mechanics of the game, but adds "flavor" to the card through lore, characterization, wit, and sometimes references to pop culture.</p>
-            <h4>Card Number</h4>
-            <p>Finally, the Card Number uniquely identifies the card among all cards in the Monsters Masters & Mobsters Card System.  As with Flavor Text, the Card Number has no effect on the mechanics of the game. Every card with the same number is considered to be the same card for the purpose of rules.</p>
+<h1>Anatomy of the Card</h1>
+<h4>Card Name</h4>
+    <p>The Card Name names what the card represents: a Monster, a character, a place, some sort of action, etc. </p>
+    <p>All cards with the same Card Name are considered to be the same thing, even if the specific text or any other attribute is different. Different cards (differentiated by Card Number) may have the same Card Name. For example, there are cases where two different cards can have the same Card Name but differing Card Types. </p>
+    <p>Cards can represent specific characters or concepts in the Monsters Masters & Mobsters universe (a named Anthrope, a named Monster, a specific place, etc.). In those cases, only one of the card may be on the Battlefield at any particular part in time.</p>
+
+    <h4><a href="#concepts">Card Concepts</a></h4>
+    <p>Concepts define properties, abilities and usage of the card. Each card can have any number of Concepts. Concepts are designed to work across the many games that can use the Card System.</p> 
+
+    <h4>Card Text</h4>
+    <p>The Card Text indicates specific information associated with the card, including:</p>
+    <ul>
+        <li>How many of the card may be on the Battlefield at any particular part in time.</li>
+    <li>Specific rules that apply to the use of that card.</li>
+    <li>Values of various statistics associated with the card.</li>
+    </ul>
+
+    <h4>Flavor Text</h4>
+    <p>Flavor Text has no effect on the mechanics of the game, but adds "flavor" to the card through lore, characterization, wit, and sometimes references to pop culture.</p>
+    <h4>Card Number</h4>
+    <p>Finally, the Card Number uniquely identifies the card among all cards in the Monsters Masters & Mobsters Card System.  As with Flavor Text, the Card Number has no effect on the mechanics of the game. Every card with the same number is considered to be the same card for the purpose of rules.</p>
             
-
+    <h3>Common Concepts</h3>
+    <p>Cards that share the same concept share the same properties, abilities and usage. The following are some of the common concepts that can be found on cards:</p>
+    <ul>
+        <li><x-links.concept name="DamageCapacity">Damage Capacity</x-links.concept>: The amount of damage that the character or item represented by the card can take in battle. The points applied to this concept are called "damage points." Anything with a Damage Capacity, also called "HP," can be attacked, take damage, and be knocked out if the amount of damage it takes exceeds its Damage Capacity.</li>
+        <li><x-links.concept name="Level">Level</x-links.concept>: A number indicating the relative experience of the character or item. Some cards can be attached to or played with a particular character or item only if the Level of the target exceeds the Level of the attached or played card.</li>
+        <li><x-links.concept name="Size">Size</x-links.concept>: A number indicating the relative size of the character or item. Characters and items that have a Size automatically have the Pounce attack, which does an amount of damage equal to the Size.</li>
+        <li><x-links.concept name="Speed">Speed</x-links.concept>: A number indicating the relative speed of the character or item. Characters and items that have a Speed automatically have the Dodge defense, which prevents an amount of damage equal to the Speed.</li>
+        <li>Biological sex of the character (male or female).</li>
+        <li>Taxons: Attributes that determine the core genetic properties of a character.</li>
+        <li><x-links.concept>Boost</x-links.concept>: Indicates the number of cards that a Monster can fetch on a Draw phase. Also applies to some skills.</li>
+        
+    </ul>
+    
 <h1 id="concepts">Common Types of Cards</h1>
 
 

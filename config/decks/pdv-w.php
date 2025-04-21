@@ -4,7 +4,7 @@
 
 return [
     'name' => 'Starter Water Deck',
-    
+
     'cards' => [
         'A-M-01' => 3,
         'A-M-02' => 3,

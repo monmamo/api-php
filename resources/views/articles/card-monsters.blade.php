@@ -15,9 +15,7 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
 @endfragment
 
 @fragment('content')
-<p>We need to replace several AI-generated  on the following cards with art created by . 
-    
-<p>Monsters Masters & Mobsters wants YOU to draw monsters for our games! We have 21 images of Pokemon-style monsters to move from AI-generated prototypes or stock images to real art. The images will be used as hero images on standard 3.5&times;2.5 cards. Monsters Masters & Mobsters is intended for adults and older teens, so we're looking for styles that are less cartoonish and more graphic-novel.
+<p>Monsters Masters & Mobsters wants YOU to draw monsters for our games! We have several images of Pokemon-style monsters to move from AI-generated prototypes or stock images to real art. The images will be used as hero images on standard 3.5&times;2.5 cards. Monsters Masters & Mobsters is intended for adults and older teens, so we're looking for styles that are less cartoonish and more graphic-novel.
 </p>    
 
 <p>We're paying USD 50 per piece, paid through PayPal or a suitable alternative.</p>
@@ -27,11 +25,12 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
 <li>Replicate the monster in the prototype image in your own style.</li>
 <li>Put the monster in an appropriate setting or pose. (You do not need to copy the background in the existing image.)</li>
 <li>Make sure that the monster and its pose or setting is appropriate for the type of the monster and tghe context of the card. (For example, if the monster has a particular skill, the image must reflect or otherwise not contradict that skill.)</li>
+<li>Communication about your project will take place on our <a href="{{config('external-urls.discord.url')}}">Discord server</a> or through email.
 </ul>
 
 <p>Deliverables:</p>
 <ul>
-    <ll>PSD, SVG, PNG or JPG.</li>
+    <li>PSD, SVG, PNG or JPG.</li>
     <li>The resolution of the image on the cards is 610 by 450. Your image must be at least 800 by 600. </li>
 </ul>
 

@@ -44,7 +44,7 @@ if (is_null($attribute)) {
                                 </table>
 
 </div>
-<div class="col-4">
+<div class="col-8">
     <h4>Statistics</h4>
 
 
@@ -55,11 +55,11 @@ if (is_null($attribute)) {
                 <td><?=  $class::typeString() ?></td>
             </tr>
             <tr>
-                <th scope="col"><a href="/concepts/Rarity">Rarity</a></th>
-                <td>1 in <?= number_format( $class::rarity()) ?></td>
+                <th scope="col"><x-links.concept>Rarity</x-links.concept></th>
+                <td><?= \App\Strings\rarity( $class::rarity()) ?></td>
             </tr>
             <tr>
-                <th scope="col"><a href="/concepts/Size">Size Delta</a></th>
+                <th scope="col"><x-links.concept name="Size">Size Delta</x-links.concept></th>
                 <td><?=  $class::sizeDelta() > 0 ? '+' : '' ?><?=  $class::sizeDelta() ?></td>
             </tr>
         </tbody>

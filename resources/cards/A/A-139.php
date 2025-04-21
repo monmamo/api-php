@@ -12,7 +12,6 @@ return new
 #[Concept('Draw')]
 #[FlavorText("It's a female monster.")]
 #[ImageCredit('ShutterStock #2389392699 by AnhSilhouetteArt')]
-#[Prerequisites(lines: ['Cannot be played during the Setup phase.'], y: 490)]
 #[Title('Karma')]
     class(__FILE__) implements CardComponents
     {
@@ -23,10 +22,11 @@ return new
             yield <<<'HTML'
 <x-card.hero.local>A139.jpg</x-card.hero.local>
 
-<x-card.cardrule lines="4">
+<x-card.cardrule lines="5.5">
+    <x-card.smallrule>Cannot be played during the Setup phase.</x-card.smallrule>
 <x-card.normalrule>Each player adds up the remaining</x-card.normalrule>
 <x-card.normalrule>health on his Monsters.</x-card.normalrule>
-<x-card.normalrule>The player with the highest</x-card.normalrule>
+<x-card.normalrule>The player with the highest total</x-card.normalrule>
 <x-card.normalrule>shuffles his hand into his Library.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>

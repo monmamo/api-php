@@ -9,7 +9,7 @@ return [
         'icon' => TODO,
     ],
     'discord' => [
-        'url' => 'https://discord.gg/TODO',
+        'url' => 'https://discord.gg/6xnKrysJQ2',
         'name' => 'Discord',
         'icon' => TODO,
     ],
