@@ -9,7 +9,6 @@ use App\CardNumber;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
-use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 
@@ -196,7 +195,6 @@ function make($spec): CardComponents
                     );
                 }
 
-
                 /**
                  * @group nonary
                  */
@@ -217,7 +215,7 @@ function make($spec): CardComponents
                 {
                     $set = $this->set();
                     $card_number = $this->cardNumber();
-                    //$card_name = $this->name();
+                    // $card_name = $this->name();
 
                     Storage::disk('cards')->put("{$set}/{$card_number}.php", \implode("\n", \iterator_to_array($this)));
                 }

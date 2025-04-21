@@ -36,7 +36,10 @@ $id = function (string $suffix) use ($cardNumber) {
     @endunless
 
     <rect id="absolute-bounds" x="0" y="0" width="@cardspec(width)" height="@cardspec(height)" fill="url(#{{$cardNumber}}-background)" rx="75" />
-
+{{--
+    <x-svg.logos.card-system-logo />
+<use href="#card-system-logo" x="600" y="0" style="fill:#ffffff;stroke:#ffffff;opacity:0.25" />
+--}}
     <?php
 
     if (!\is_null($image_credit = $spec->imageCredit())) {

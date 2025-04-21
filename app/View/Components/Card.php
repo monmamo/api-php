@@ -7,7 +7,7 @@ use App\Contracts\Card\CardComponents;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
-class Card extends Component //implements CardComponents
+class Card extends Component // implements CardComponents
 {
     protected readonly CardNumber $card_number_parsed;
 

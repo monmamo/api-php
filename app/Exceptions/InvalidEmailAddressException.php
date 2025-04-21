@@ -46,6 +46,6 @@ final class InvalidEmailAddressException extends \LogicException implements Prov
      */
     public function getSolution(): Solution
     {
-        return new class('Check the dumped variables.') extends BaseSolution {}; //RunnableSolution
+        return new class('Check the dumped variables.') extends BaseSolution {}; // RunnableSolution
     }
 }

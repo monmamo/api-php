@@ -159,7 +159,7 @@ final class Handler extends Facade
             throw new RecursionException($iteration_count);
         }
 
-        //glow($label, MessageLevels::INFO, $content);
+        // glow($label, MessageLevels::INFO, $content);
 
         --$iteration_count;
     }
@@ -283,7 +283,7 @@ final class Handler extends Facade
      */
     public static function logWarning(mixed $label, array $content = []): void
     {
-        //glow($label, MessageLevels::WARNING, $content);
+        // glow($label, MessageLevels::WARNING, $content);
     }
 
     /**

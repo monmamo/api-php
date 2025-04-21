@@ -68,7 +68,7 @@ return [
     |
     */
 
-    'debug' => true, //(bool) \env('APP_DEBUG', false),
+    'debug' => true, // (bool) \env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -166,7 +166,7 @@ return [
         AuthServiceProvider::class,
 
         // Laravel Framework Service Providers...
-        //Illuminate\Broadcasting\BroadcastServiceProvider::class,
+        // Illuminate\Broadcasting\BroadcastServiceProvider::class,
         BusServiceProvider::class,
         CacheServiceProvider::class,
         ConsoleSupportServiceProvider::class,
@@ -181,7 +181,7 @@ return [
         PaginationServiceProvider::class,
         PipelineServiceProvider::class,
         QueueServiceProvider::class,
-        //Illuminate\Redis\RedisServiceProvider::class,
+        // Illuminate\Redis\RedisServiceProvider::class,
         PasswordResetServiceProvider::class,
         SessionServiceProvider::class,
         TranslationServiceProvider::class,

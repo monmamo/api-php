@@ -3,7 +3,7 @@
 return [
     'name' => 'Basic Common Deck',
 
-    //'A-004' => 2, // Alms for the Poor
+    // 'A-004' => 2, // Alms for the Poor
     // 'A-025' => 2, // Busybody
     // 'A-MO-03' => 2, // Enforcer
 

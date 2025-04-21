@@ -10,7 +10,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Herbal Scent')]
 #[Concept('Trait')]
-//#[ImageCredit('IMAGE_CREDIT')]
+// #[ImageCredit('IMAGE_CREDIT')]
 #[Prerequisites(lines: 'Requires Floros.', y: 460)]
 class(__FILE__) implements CardComponents
 {

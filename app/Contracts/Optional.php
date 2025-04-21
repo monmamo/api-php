@@ -8,7 +8,7 @@ namespace App\Contracts;
  * Don't extend \Stringable or \ArrayAccess. Consumers of Optional items should test for matches.
  * Don't extend \App\Contracts\Normalizable.
  */
-interface Optional //extends Deferable, Dumps, Emptyable, Filterable, Foldable, HasProperties, Mappable,  TransformativeInvoker
+interface Optional // extends Deferable, Dumps, Emptyable, Filterable, Foldable, HasProperties, Mappable,  TransformativeInvoker
 {
     /**
      * Returns this option if non-empty, or the passed option otherwise.

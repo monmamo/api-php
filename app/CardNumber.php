@@ -62,7 +62,7 @@ class CardNumber
             })
             ->toArray();
 
-        $existing_files[] = 0; //ensure there is at least one element in the array
+        $existing_files[] = 0; // ensure there is at least one element in the array
 
         return \max($existing_files) + 1;
     }

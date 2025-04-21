@@ -55,7 +55,7 @@ function _transform(int $arity, mixed $normal_transforms, $seed, $offset = null)
                 'seed' => $seed,
                 'offset' => $offset,
             ]);
-            //TODO Add a check for an exception that merely breaks from the loop.
+            // TODO Add a check for an exception that merely breaks from the loop.
             throw $exception;
         }
     }

@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -17,6 +16,5 @@ class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 
-//    <x-card.hero.local>hero/dire-form.png</x-card.hero.local>
-
+    //    <x-card.hero.local>hero/dire-form.png</x-card.hero.local>
 };

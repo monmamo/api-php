@@ -78,7 +78,7 @@ trait Logging
      */
     public function glow(): void
     {
-        //glow($this->_message, $this->_severity, [...$this->context()]);
+        // glow($this->_message, $this->_severity, [...$this->context()]);
     }
 
     /**

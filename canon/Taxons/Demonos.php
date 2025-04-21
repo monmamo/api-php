@@ -13,7 +13,7 @@ use Canon\Taxons\Attributes\SizeDelta;
 use Canon\Taxons\Types\BaseTaxon;
 use Canon\Taxons\Types\WingedMorphotype;
 
-//"Satanos , Vampiros , Lamis "
+// "Satanos , Vampiros , Lamis "
 // long, powerful tail
 // weak wings
 // long horns

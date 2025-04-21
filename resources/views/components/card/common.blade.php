@@ -8,8 +8,6 @@ $debug_opacity = match (true) {
     $debug === 'false' => 0,
     default => $debug
 };
-
-
 ?>
 
 <style>

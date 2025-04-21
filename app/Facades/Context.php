@@ -65,7 +65,7 @@ class Context extends Facade
      */
     public static function dumpItem(string $label, mixed $value): void
     {
-        //context($label, $value);
+        // context($label, $value);
     }
 
     /**
@@ -77,7 +77,7 @@ class Context extends Facade
     public static function dumpItems(mixed $content): void
     {
         foreach (self::yieldContext(item: $content) as $label => $value) {
-            //context($label, $value);
+            // context($label, $value);
         }
     }
 

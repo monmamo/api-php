@@ -62,7 +62,7 @@ enum EnvironmentProperties: string
     public static function host(): Hosts
     {
         try {
-            $host = self::ServerName->value() ?? self::ServerAddress->value() ?? throw new HttpException(statusCode: Http::HTTP_BAD_REQUEST, message: 'unable to determine host: '); //.json_encode($_SERVER)
+            $host = self::ServerName->value() ?? self::ServerAddress->value() ?? throw new HttpException(statusCode: Http::HTTP_BAD_REQUEST, message: 'unable to determine host: '); // .json_encode($_SERVER)
             \assert(\is_string($host));
 
             // trim and remove port number from host

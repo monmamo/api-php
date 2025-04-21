@@ -12,7 +12,7 @@ use Canon\Taxons\Types\BaseTaxon;
 use Canon\Taxons\Types\Genus;
 
 // horse, horsemonster, horsecharacter, horse_character, equine, equinemonster, equinecharacter, equine_character
-//Quaggos
+// Quaggos
 
 #[Gloss('Horse-form.')]
 #[NeuterName('Equon')]

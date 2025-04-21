@@ -178,7 +178,7 @@ final class DateTimeOption implements Castable, HasValue, Normalizable, Optional
      */
     public function equals(mixed $value): bool
     {
-        //TODO implement
+        // TODO implement
         return false;
     }
 

@@ -5,7 +5,6 @@ namespace App\CardAttributes;
 use App\Concept;
 use App\Concerns\Reflection;
 use App\GeneralAttributes\Title;
-use Illuminate\Contracts\Support\Renderable;
 
 #[\Attribute(\Attribute::TARGET_CLASS)]
 trait DefaultCardAttributes
@@ -105,7 +104,6 @@ trait DefaultCardAttributes
     {
         return $this->_flavor_text_attribute ??= $this->withAttribute(FlavorText::class);
     }
-
 
     /**
      * @implements \App\Contracts\HasName

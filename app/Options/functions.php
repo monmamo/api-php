@@ -613,7 +613,7 @@ function fromOffsetOfArrayAccess(\ArrayAccess $source, mixed $offset): Optional
             //     $callable($value);
             // }
         }
-    } //foreach
+    } // foreach
 
     if (\count($subkeys) !== 1) {
         return new class($result_cache) extends \ArrayIterator implements \OuterIterator, Deferable, Dumps, Emptyable, Filterable, Foldable, Mappable, Optional
