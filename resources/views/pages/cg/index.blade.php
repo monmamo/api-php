@@ -2,8 +2,12 @@
 
 <x-slot:page-title>{{__('cg')}}</x-slot>
 
+<div class="text-center">
+  <div class="container">
+      <img src="@publicimage(ccd-banner.jpg)" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Classic Card Duel Billboard" width="1920" height="1080" loading="lazy">
+    </div>
+  </div>
 
-<h1>{{__('cg')}}</h1>
 
 <p>The {{__('cg')}} takes inspiration from several games before it, but is built from scratch to be easy to learn, easy to play yet infinitely expandable. </p>
 

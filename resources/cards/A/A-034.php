@@ -6,7 +6,7 @@ use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
-https://www.freepik.com/free-photo/dna-representation-concept_44999157.htm
+// https://www.freepik.com/free-photo/dna-representation-concept_44999157.htm
 
 return new
 #[Title('Gene Pool')]

@@ -7,7 +7,7 @@ use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
-https://www.freepik.com/free-psd/casino-roulette-icon-render_23877079.htm
+// https://www.freepik.com/free-psd/casino-roulette-icon-render_23877079.htm
 
 return new
     #[Title('Wheel of Fortune')]

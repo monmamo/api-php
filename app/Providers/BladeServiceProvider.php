@@ -37,6 +37,12 @@ class BladeServiceProvider extends ServiceProvider
         yield 'damage' => fn () => '&#x2764;';
 
         yield 'ai' => fn () => 'Generated image';
+
+         yield 'publicimage' => match(\App\Facades\Environment::getFacadeRoot()) {
+            \App\Enums\Environments::Development => fn (string $filename) => "/images/{$filename}",
+            \App\Enums\Environments::Production => fn (string $filename) => "/public/images/{$filename}",
+
+         };
     }
 
     private function _stringables(): \Traversable

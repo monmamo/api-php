@@ -49,6 +49,9 @@ enum Color: string
     case TraitColor = '#400060';
     case White = '#FFFFFF';
     case Yellow = '#FFFF00';
+    case Skill = '#6d006d';
+    case SkillGradientBottom = '#390039';
+    case SkillGradientTop = '#A100A1';
 
     /**
      * @group unary

@@ -21,7 +21,7 @@ class(__FILE__) implements CardComponents
 
 <x-card.phaserule type="Command"  height="135">
 <text >
-<x-card.normalrule>Choose a Monster on the Battlefield.</x-card.normalrule>
+<x-card.normalrule x="55%">Choose a Monster on the Battlefield.</x-card.normalrule>
 <x-card.normalrule>That Monster may not use a Defense</x-card.normalrule>
 <x-card.normalrule>during this turn.</x-card.normalrule>
 </text>

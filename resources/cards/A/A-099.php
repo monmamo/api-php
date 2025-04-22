@@ -7,7 +7,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-    #[Title('Balloons')]
+    #[Title('Loose Balloons')]
     #[Concept('Environment')]
     #[ImageCredit('Icon by Lorc on Game-Icons.net under CC BY 3.0')]
     class(__FILE__) implements CardComponents

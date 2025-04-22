@@ -3,7 +3,7 @@
 
 <div class="text-center">
     <div class="container">
-        <img src="/public/images/card-hero.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Card System Billboard" width="1920" height="1080" loading="lazy">
+        <img src="@publicimage(card-hero.png)" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Card System Billboard" width="1920" height="1080" loading="lazy">
       </div>
     </div>
 
@@ -17,7 +17,7 @@
 
 <h4>Hate random booster packs? So do we.</h4>
 <p>
-    When you buy a MonMaMoCS booster pack, you will know what you’re getting. It will be printed on the package. Our card database has every card that is commercially available, making it easy to look up all details, rulings and errata for any card.
+    When you buy a pack of cards in the Card System, you will know what you’re getting. It will be printed on the package. Our card database has every card that is commercially available, making it easy to look up all details, rulings and errata for any card.
 </p>
 
 <h4>Your cards will be just as playable 20 years from now as they are today.</h4>
@@ -51,7 +51,7 @@
 <p><a href="https://www.lego.com/en-us">LEGO</a> is one of the most popular toys ever because it is built around one basic form and one basic mechanic. The Card System ensures that MonMaMo cards can be used across MonMaMo products. Your starter Duel deck will become the foundation of the custom decks that you make yourself. The Card System gives you an ability to customize your MonMaMo games that few games or toys offer.</p>
 
 
-<img src="/public/images/card-parts.png" style="float: right;" alt="Illustration of the parts of a card" width="500" loading="lazy">
+<img src="@publicimage(card-parts.png)" style="float: right;" alt="Illustration of the parts of a card" width="250" loading="lazy">
 
 <h1>Anatomy of the Card</h1>
 <h4>Card Name</h4>
@@ -93,6 +93,14 @@
 
 <h4>Character Cards</h4>
 
+<div class="container pb-2">
+    <div class="d-flex flex-row">
+      <div class="pe-2"><x-card :link="true" cardNumber="A-M-05" width="100"/></div>
+      <div class="pe-2"><x-card :link="true" cardNumber="A-MA-01" width="100"/></div>
+      <div class="pe-2"><x-card :link="true" cardNumber="A-MO-01" width="100"/></div>
+      <div class="pe-2"><x-card :link="true" cardNumber="A-032" width="100"/></div>
+  </div>
+</div>
 <p>
     Character cards represent the beings in the Monsters Masters & Mobsters universe. They have a name, a type, a power, and a set of statistics. They may also have a special ability or abilities. Specific types of characters include <a href="/concepts/Monster">Monster</a>, <a href="/concepts/Master">Master</a>, <a href="/concepts/Mobster">Mobster</a>, and <a href="/concepts/Mobster">Bystander</a>.
 </p>
@@ -101,10 +109,26 @@
 
 <h4><a href="/concepts/Trait">Trait Cards</a></h4>
 
+<div class="container pb-2">
+<div class="d-flex flex-row">
+    <div class="pe-2"><x-card :link="true" cardNumber="A-T-01" width="100"/></div>
+    <div class="pe-2"><x-card :link="true" cardNumber="A-T-02" width="100"/></div>
+    <div class="pe-2"><x-card :link="true" cardNumber="A-T-03" width="100"/></div>
+</div>
+</div>
+
 <p>Trait cards give Monster cards additional abilities or modify statistics of the card.</p>
 
 <h4>Skill Cards</h4>
 
+<div class="container pb-2">
+    <div class="d-flex flex-row">
+        <div class="pe-2"><x-card :link="true" cardNumber="A-A-01" width="100"/></div>
+        <div class="pe-2"><x-card :link="true" cardNumber="A-D-01" width="100"/></div>
+        <div class="pe-2"><x-card :link="true" cardNumber="A-104" width="100"/></div>
+    </div>
+    </div>
+    
 <p>Skill cards enable Monsters to produce various effects, for example:</p>
 <ul>
 <li>Causing Damage to one or more Monsters.</li>
@@ -117,15 +141,48 @@
 
 <h4>Drawing Cards</h4>
 
-            <p>Cards of the <a href="/concepts/Draw">Draw</a> concept allow a player to draw additional cards from their deck. Another concept called <a href="/concepts/Vendor">Vendor</a> also allows a player to draw cards but results in the Vendor card being put on the bottom of the Library, increasing reusability and reducing the dreaded inability to draw what the player needs because of discarded draw cards.</p>
+<div class="container pb-2">
+    <div class="d-flex flex-row">
+        <div class="pe-2"><x-card :link="true" cardNumber="A-077" width="100"/></div>
+        <div class="pe-2"><x-card :link="true" cardNumber="A-014" width="100"/></div>
+        <div class="pe-2"><x-card :link="true" cardNumber="A-008" width="100"/></div>
+        <div class="pe-2"><x-card :link="true" cardNumber="A-MO-08" width="100"/></div>
+    </div>
+    </div>
 
-            <h4>Item Cards</h4>
+<p>Cards of the <a href="/concepts/Draw">Draw</a> concept allow a player to draw additional cards from their deck. Another concept called <a href="/concepts/Vendor">Vendor</a> also allows a player to draw cards but results in the Vendor card being put on the bottom of the Library, increasing reusability and reducing the dreaded inability to draw what the player needs because of discarded draw cards.</p>
 
-            <p>Item cards represent objects that can be used by Characters. They may have a one-time use or may be reusable. Items may be used to increase the power of a Monster, to heal a Monster, to change the Weather, or to produce other effects.</p>
+<h4>Item Cards</h4>
 
-            <h4>Other Types</h4>
+<div class="container pb-2">
+    <div class="d-flex flex-row">
+        <div class="pe-2"><x-card :link="true" cardNumber="A-152" width="100"/></div>
+        <div class="pe-2"><x-card :link="true" cardNumber="A-119" width="100"/></div>
+        <div class="pe-2"><x-card :link="true" cardNumber="A-012" width="100"/></div>
+        <div class="pe-2"><x-card :link="true" cardNumber="A-105" width="100"/></div>
+    </div>
+    </div>
+
+<p>Item cards represent objects that can be used by Characters. They may have a one-time use or may be reusable. Items may be used to increase the power of a Monster, to heal a Monster, to change the Weather, or to produce other effects.</p>
+
+<h4>And Many More</h4>
+
+<div class="container pb-2">
+    <div class="d-flex flex-row">
+        <div class="pe-2"><x-card :link="true" cardNumber="A-059" width="100"/></div>
+        <div class="pe-2"><x-card :link="true" cardNumber="A-142" width="100"/></div>
+        <div class="pe-2"><x-card :link="true" cardNumber="A-071" width="100"/></div>
+        <div class="pe-2"><x-card :link="true" cardNumber="A-099" width="100"/></div>
+        <div class="pe-2"><x-card :link="true" cardNumber="A-028" width="100"/></div>
+    </div>
+    </div>
+
+
+{{--
+<h4>Other Types</h4>
 
 <p>You can use <a href="/concepts/Bane">Bane</a> cards to inflict something nasty on a Monster and <a href="/concepts/Catastrophe">Catastrophe</a> cards to inflict something nasty on everyone. </p>
+--}}
 
 <h1>Card Sets</h1>
 
