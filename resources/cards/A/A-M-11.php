@@ -2,9 +2,7 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\ImagePrompt;
-use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -19,10 +17,8 @@ return new
     #[Concept('Size', 5)]
     #[Concept('Speed', 3)]
     #[Concept('Boost', '3')]
-    #[IsGeneratedImage]
+    #[ImageCredit('Image by Merry Shuporna Biswas')]
     #[ImagePrompt('fire monster of weird zoology with a flaming tail')]
-#[ImageIsPrototype]
-    #[ImageCredit(null)]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

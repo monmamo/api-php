@@ -9,10 +9,11 @@ use App\Contracts\HasTitleMethod;
 use App\EnumReference;
 use App\Strings\InlineText;
 use App\Strings\Title;
+use Countable;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 
-enum CardSet: string implements HasTitleMethod
+enum CardSet: string implements Countable, HasTitleMethod
 {
     // case Acadie = 'ACD';
 
@@ -24,41 +25,6 @@ enum CardSet: string implements HasTitleMethod
 
     // #[Title('Banes and Catastrophes Card Set')]
     // case BanesAndCatastrophes = 'B';
-
-    #[Title('Base Card Set')]
-    case Base = 'A';
-
-    /**
-     * @group unary
-     */
-    private function _makeCard(string $filename): ?CardComponents
-    {
-        $pattern = \sprintf('/^%s\/(%s-[A-Z0-9-]+)\.php$/U', $this->value, $this->value);
-
-        if (\preg_match($pattern, $filename, $matches) !== 1) {
-            return null;
-        }
-        return \App\Card\make(CardNumber::make($matches[1]));
-    }
-
-    /**
-     * @group nonary
-     *
-     * @param null|mixed $take
-     */
-    public function cards($take = null): Collection
-    {
-        $files = new Collection(Storage::disk('cards')->files($this->value));
-
-        $files_selected = match (true) {
-            \is_callable($take) => $take($files),
-            \is_null($take) => $files,
-        };
-
-        return $files_selected
-            ->map($this->_makeCard(...))
-            ->filter(fn ($value): bool => $value instanceof CardComponents);
-    }
 
     // case COSMO = 'COSMO';
 
@@ -107,6 +73,49 @@ enum CardSet: string implements HasTitleMethod
 
     // #[Title('Traits and Abilities Card Set')]
     // case TraitsAndAbilities = 'T';
+
+    #[Title('Base Card Set')]
+    case Base = 'A';
+
+    /**
+     * @group unary
+     */
+    private function _makeCard(string $filename): ?CardComponents
+    {
+        $pattern = \sprintf('/^%s\/(%s-[A-Z0-9-]+)\.php$/U', $this->value, $this->value);
+
+        if (\preg_match($pattern, $filename, $matches) !== 1) {
+            return null;
+        }
+        return \App\Card\make(CardNumber::make($matches[1]));
+    }
+
+    /**
+     * @group unary
+     *
+     * @param null|mixed $take
+     */
+    public function cards($take = null): Collection
+    {
+        $files = new Collection(Storage::disk('cards')->files($this->value));
+
+        $files_selected = match (true) {
+            \is_callable($take) => $take($files),
+            \is_null($take) => $files,
+        };
+
+        return $files_selected
+            ->map($this->_makeCard(...))
+            ->filter(fn ($value): bool => $value instanceof CardComponents);
+    }
+
+    /**
+     * @group nonary
+     */
+    public function count(): int
+    {
+        return \count($this->cards());
+    }
 
     /**
      * @group nonary

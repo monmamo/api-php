@@ -69,10 +69,14 @@ trait DefaultCardAttributes
      */
     public function concepts(): array
     {
-        return $this->_concepts ??= \array_map(
+        $concepts = $this->_concepts ??= \array_map(
             fn ($attribute) => $attribute->newInstance(),
             $this->getAttributes(Concept::class),
         );
+        \array_walk($concepts, function ($concept): void {
+            \assert($concept instanceof Concept);
+        });
+        return $concepts;
     }
 
     /**

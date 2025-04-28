@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -15,7 +14,6 @@ return new
     #[Concept('Size', 3)]
     #[Concept('Speed', 2)]
     #[ImageCredit('Image by macrovector on Freepik')]
-    #[FlavorText('Declare the pennies on your eyes.')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -23,9 +21,11 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.hero.local>hero/taxman.jpg</x-card.hero.local>
+<x-card.hero.local>hero/taxman.jpg</x-card.hero.local>
 
-    <x-card.phaserule type="Resolution" lines="2">
+<x-card.flavortext>Declare the pennies on your eyes.</x-card.flavortext>
+
+<x-card.phaserule type="Resolution" lines="2">
     <text >
 <x-card.normalrule>Each player discards a card</x-card.normalrule>
 <x-card.normalrule>from his hand or Library.</x-card.normalrule>

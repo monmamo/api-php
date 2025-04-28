@@ -1,6 +1,5 @@
 <?php
 
-use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\Prerequisites;
@@ -9,7 +8,6 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[ConceptIconHeroImage('Pyros')]
 #[ImageCredit('Icon by Carl Olsen on Game-Icons.net under CC BY 3.0')]
 #[Concept('Defense')]
 #[Concept('Level', 20)]
@@ -22,6 +20,8 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
+<x-card.hero.svg>{{ \view('Pyros.icon') }}</x-card.hero.svg>
+
 <x-card.phaserule type="Resolution" lines="4">
     <text >
 <x-card.normalrule>For each Fire (A-002) attached to</x-card.normalrule>

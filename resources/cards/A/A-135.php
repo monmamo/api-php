@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -13,7 +12,6 @@ return new
     #[Title('Investment')]
     #[Concept('Draw')]
     #[ImageCredit('Image by photoroyalty on Freepik')]
-    #[FlavorText('Past performance is not indicative of future results.')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -22,6 +20,8 @@ return new
         {
             yield <<<'HTML'
             <x-card.hero.local>A135.jpg</x-card.hero.local>
+
+<x-card.flavortext>Past performance is not indicative of future results.</x-card.flavortext>
             
         <x-card.phaserule y="565" type="Draw" lines="2"><text>
         <x-card.smallrule>Put this card in front of you. Put any number</x-card.smallrule>

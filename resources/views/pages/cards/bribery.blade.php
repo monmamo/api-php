@@ -5,8 +5,7 @@
 {{-- Note: Content copied in resources/views/pages/cg/bribery.blade.php --}}
 
 <x-breadcrumbs>
-    <x-breadcrumbs.crumb url="/cg">{{__('cg')}}</x-breadcrumbs.crumb>
-    <x-breadcrumbs.crumb url="/cg/rules">Rules</x-breadcrumbs.crumb>
+    <x-breadcrumbs.crumb url="/cards">Card System</x-breadcrumbs.crumb>
 </x-breadcrumbs>
 
 <h1>Integrity and Bribery</h1>

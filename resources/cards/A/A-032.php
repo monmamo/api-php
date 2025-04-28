@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -16,7 +15,6 @@ return new
     #[Concept('Cumulative')]
     #[Concept('Integrity', '2')]
     #[ImageCredit('Image by freepik')]
-    #[FlavorText('Go, go, go team go!')]
     #[Concept('DamageCapacity', 10)]
     #[Concept('Size', 3)]
     #[Concept('Speed', 5)]
@@ -27,7 +25,9 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-            <x-card.hero.local>A032.jpg</x-card.hero.local>
+<x-card.hero.local>A032.jpg</x-card.hero.local>
+
+<x-card.flavortext>Go, go, go team go!</x-card.flavortext>
 
 <x-card.phaserule type="Resolution" lines="5">
     <text >

@@ -3,7 +3,6 @@
 // https://www.freepik.com/free-vector/recycle-colorful-geometric-gradient-logo-vector_27230675.htm
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -13,7 +12,6 @@ return new
 #[Title('Recycle')]
 #[Concept('Draw')]
 #[ImageCredit('Image by logturnal on Freepik')]
-#[FlavorText('Recycle today for a better upkeep phase tomorrow.')]
 
 class(__FILE__) implements CardComponents
 {
@@ -23,6 +21,8 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.hero.local>A212.jpg</x-card.hero.local>
+
+<x-card.flavortext>Recycle today for a better upkeep phase tomorrow.</x-card.flavortext>
 
 <x-card.cardrule lines="3">
 <x-card.normalrule>Put a card from your Discard</x-card.normalrule>

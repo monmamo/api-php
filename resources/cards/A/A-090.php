@@ -18,7 +18,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <image x="0" y="0" class="hero" href="@local(hero/AdobeStock_756008424.jpeg)"/>
+            <x-card.hero.local>hero/AdobeStock_756008424.jpeg</x-card.hero.local>
 
     <x-card.cardrule height="200" >
     <x-card.normalrule>Play a Vendor card.</x-card.normalrule>

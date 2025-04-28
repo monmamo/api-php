@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -12,7 +11,6 @@ return new
     #[Title('Copycat')]
     #[Concept('Draw')]
     #[ImageCredit(null)]
-    #[FlavorText('Bears a striking resemblance to Frank Abagnale.')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -20,6 +18,8 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
+<x-card.flavortext>Bears a striking resemblance to Frank Abagnale.</x-card.flavortext>
+
 <x-card.phaserule type="Draw" lines="5">
 <text >
 <x-card.normalrule>Shuffle your hand into your Library.</x-card.normalrule>

@@ -11,7 +11,9 @@ $debug_opacity = match (true) {
 ?>
 
 <style>
-    <?= \App\Card\includeFontFace('Roboto-latin-ext') ?><?= \App\Card\includeFontFace('Roboto-latin') ?><?= \App\Card\includeFontFace('Roboto-Condensed-latin-ext') ?><?= \App\Card\includeFontFace('Roboto-Condensed-latin') ?>text {
+    <?= \App\Card\includeFontFace('Roboto-latin-ext') ?><?= \App\Card\includeFontFace('Roboto-latin') ?><?= \App\Card\includeFontFace('Roboto-Condensed-latin-ext') ?><?= \App\Card\includeFontFace('Roboto-Condensed-latin') ?>
+    
+    text {
         font-family: 'Roboto', sans-serif;
     }
 
@@ -95,22 +97,6 @@ $debug_opacity = match (true) {
         alignment-baseline: central;
     }
 
-    g.stat text.value {
-        font-family: 'Roboto Condensed', sans-serif;
-        font-style: normal;
-        font-size: 400px;
-        fill: #000000;
-        paint-order: stroke;
-        font-width: 200;
-        stroke: #000000;
-        stroke-width: 8px;
-        stroke-linecap: butt;
-        stroke-linejoin: miter;
-        letter-spacing: -12px;
-        text-anchor: middle;
-        alignment-baseline: baseline;
-    }
-
     g.stat text.gloss {
         font-family: 'Roboto Condensed', sans-serif;
         font-style: normal;
@@ -132,13 +118,7 @@ $debug_opacity = match (true) {
         </feMerge>
     </filter>
 
-    <filter id="icon-overlay-shadow" height="500%" width="500%" x="-100%" y="-100%">
-        <feFlood flood-color="rgba(255, 255, 255, 1)" result="flood"></feFlood>
-        <feComposite in="flood" in2="SourceGraphic" operator="atop" result="composite"></feComposite>
-        <feGaussianBlur in="composite" stdDeviation="35" result="blur"></feGaussianBlur>
-        <feOffset dx="0" dy="0" result="offset"></feOffset>
-        <feComposite in="SourceGraphic" in2="offset" operator="over"></feComposite>
-    </filter>
+    
     <linearGradient x1="0" x2="1" y1="1" y2="0" id="shadow-gradient-0">
         <stop offset="0%" stop-color="#390303" stop-opacity="1"></stop>
         <stop offset="100%" stop-color="#a10a0a" stop-opacity="1"></stop>
@@ -149,7 +129,7 @@ $debug_opacity = match (true) {
     $spec = \App\Card\make($spec_raw);
     @endphp
     <pattern id="{{$spec->cardNumber()}}-background" viewBox="0 0 @cardspec(width) @cardspec(height)" width="100%" height="100%">
-<?= \App\Strings\render(...$spec->background()) ?>
+        <?= \App\Strings\render(...$spec->background()) ?>
 </pattern>
     @endforeach
 </defs>

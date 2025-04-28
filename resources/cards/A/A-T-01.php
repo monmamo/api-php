@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
@@ -21,7 +20,6 @@ return new
     #[IsGeneratedImage]
 #[ImageIsPrototype]
     #[ImageCredit(null)]
-    #[FlavorText('What sharp teeth you have.')]
     #[Prerequisites(y: 490)]
     class(__FILE__) implements CardComponents
     {
@@ -30,9 +28,11 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.hero.local>A006.png</x-card.hero.local>
+<x-card.hero.local>A006.png</x-card.hero.local>
 
-    <x-card.phaserule type="Attack" height="140"><text>
+<x-card.flavortext>What sharp teeth you have.</x-card.flavortext>
+
+<x-card.phaserule type="Attack" height="140"><text>
 <x-card.skilltitle>Bite</x-card.skilltitle>
 <x-card.normalrule>Does 3×Speed @damage.</x-card.normalrule>
         </text></x-card.phaserule>

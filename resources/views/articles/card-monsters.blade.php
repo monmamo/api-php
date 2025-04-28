@@ -63,18 +63,14 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
         <div class="p-2"><x-card :link="true" cardNumber="A-M-09" width="200"/></div>
     </div>
     <div class="d-flex flex-row">
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-10" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-11" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-13" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-14" width="200"/></div>
-    </div>  
-    <div class="d-flex flex-row">
         <div class="p-2"><x-card :link="true" cardNumber="A-M-15" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-16" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-18" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-19" width="200"/></div>
     </div>  
     <div class="d-flex flex-row">
+        <div class="p-2"><x-card :link="true" cardNumber="A-M-18" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-M-19" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-20" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-21" width="200"/></div>
     </div>
@@ -115,5 +111,12 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
     <div class="d-flex flex-row">
         <div class="p-2"><x-card :link="true" cardNumber="A-079" width="200"/></div>
     </div>
+
+Merry's portfolio
+A-M-05
+A-M-11
+A-M-12
+A-M-17
+A-A-05
 --}}
     @endfragment

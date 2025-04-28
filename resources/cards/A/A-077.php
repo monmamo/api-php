@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -11,7 +10,6 @@ return new
 #[Title('Round for the House')]
 #[Concept('Draw')]
 #[ImageCredit('Image by freepic.diller on Freepik')]
-#[FlavorText(['Your favorite monster sports club had a great day', 'on the field. Let\'s celebrate!'])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -19,7 +17,12 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-        <x-card.hero.local>A231.jpg</x-card.hero.local>
+<x-card.hero.local>A231.jpg</x-card.hero.local>
+
+<x-card.flavortext y="535">
+<x-card.flavortext.line>Your favorite monster sports club had a great day</x-card.flavortext.line>
+<x-card.flavortext.line>on the field. Time to celebrate!</x-card.flavortext.line>
+    </x-card.flavortext>
         
 <x-card.cardrule lines="4">
 <x-card.normalrule>Each player, including you,</x-card.normalrule>

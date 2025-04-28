@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -9,7 +8,6 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Inappropriate Traffic Stop')]
     #[Concept('Draw')]
-    #[FlavorText('Also called "airport security."')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -17,7 +15,9 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule  lines="4">
+<x-card.flavortext>Also called "airport security."</x-card.flavortext>
+
+    <x-card.cardrule  lines="4">
 <x-card.normalrule>Look at the top 5 cards of any Library.</x-card.normalrule>
 <x-card.normalrule>Discard any number of Item cards you find</x-card.normalrule>
 <x-card.normalrule>there. The owner of the Library shuffles</x-card.normalrule>

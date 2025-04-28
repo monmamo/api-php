@@ -1,6 +1,5 @@
 <?php
 
-use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
@@ -10,7 +9,6 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Water Shield')]
 #[Concept('Defense')]
-#[ConceptIconHeroImage('Aquos')]
 #[Concept('Level', 20)]
 #[Prerequisites(lines: 'Requires Aquos.', y: 460)]
 class(__FILE__) implements CardComponents
@@ -20,7 +18,9 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="4">
+            <x-card.hero.svg>{{ \view('Aquos.icon') }}</x-card.hero.svg>
+
+            <x-card.phaserule type="Resolution" lines="4">
     <text >
 <x-card.normalrule>For each Water (A-001) attached to</x-card.normalrule>
 <x-card.normalrule>this Monster, prevent Boost @damage.</x-card.normalrule>

@@ -24,7 +24,7 @@ class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
 
-    //<x-card.hero.local>hero/A-M-22.jpeg</x-card.hero.local>
+    // <x-card.hero.local>hero/A-M-22.jpeg</x-card.hero.local>
     public function content(): \Traversable
     {
         yield <<<'HTML'

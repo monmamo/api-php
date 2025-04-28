@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -16,7 +15,6 @@ return new
     #[Concept('Cost', '?')]
 
     #[ImageCredit('Icon by Skoll on Game-Icons.net')]
-    #[FlavorText('Most efficacious in every case.')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -30,6 +28,8 @@ return new
 <path d="M268.678 150.338C262.388 149.949 256.087 149.752 249.785 149.748C204.508 149.748 162.079 159.42 130.323 176.975C100.296 193.573 83.755 215.013 83.755 237.409C83.755 259.804 100.295 281.209 130.323 297.843C135.291 300.586 140.547 303.123 146.01 305.473C148.73 292.691 154.683 280.821 163.3 270.997Z"  fill="#b39028" fill-opacity="1"></path>
 <path d="M369.248 297.878C399.275 281.28 415.816 259.84 415.816 237.444C415.816 218.274 403.656 199.774 381.236 184.421L301.782 320.551C326.992 316.126 350.044 308.426 369.19 297.845Z"  fill="#b39028" fill-opacity="1"></path>
     </x-card.hero.local>
+
+<x-card.flavortext>Most efficacious in every case.</x-card.flavortext>
 
     <x-card.phaserule type="Upkeep"  lines="5"><text >
 <x-card.smallrule>If playing this card from your hand,</x-card.smallrule>

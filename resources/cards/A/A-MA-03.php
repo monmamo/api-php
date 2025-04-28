@@ -15,7 +15,7 @@ return new
 #[Concept('DamageCapacity', 13)]
 #[Concept('Size', 4)]
 #[Concept('Speed', 4)]
-#[IsGeneratedImage([])]
+#[IsGeneratedImage('xx')]
 #[ImageIsPrototype]
 class(__FILE__) implements CardComponents
 {

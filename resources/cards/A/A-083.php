@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Farmer\'s Refuse')]
 #[Concept('Draw')]
-//#[ImageCredit('IMAGE_CREDIT')]
+// #[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

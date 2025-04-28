@@ -10,7 +10,7 @@ return new
 #[Title('Junk Patrol')]
 #[Concept('Vendor')]
 #[Concept('Integrity', 1)]
-//#[ImageCredit('IMAGE_CREDIT')]
+// #[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

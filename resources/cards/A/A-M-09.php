@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\ImagePrompt;
 use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
@@ -20,7 +19,6 @@ return new
     #[Concept('Boost', 2)]
     #[ImagePrompt('red fire rodent monster of weird zoology next to a caldera')]
     #[IsGeneratedImage]
-#[ImageIsPrototype]
     #[ImageCredit(null)]
     class(__FILE__) implements CardComponents
     {
@@ -42,5 +40,11 @@ return new
 </text>
 </x-card.phaserule>
 HTML;
+
+            yield \App\Strings\html(
+                'text',
+                ['x' => '50%', 'y' => '270', 'transform' => 'rotate(-30,375,270)', 'text-anchor' => 'middle', 'dominant-baseline' => 'central', 'font-family' => "'Roboto Condensed', sans-serif", 'font-size' => '80px', 'fill' => '#ffffff', 'stroke' => '#000000', 'stroke-width' => '2'],
+                'ART IN PROGRESS',
+            )->toHtml();
         }
     };

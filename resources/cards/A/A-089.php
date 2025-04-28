@@ -4,7 +4,6 @@
 // https://www.freepik.com/free-vector/flying-drone-camera-cartoon-vector-icon-illustration-object-technology-icon-concept-isolated-flat_25847529.htm
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -20,7 +19,6 @@ return new
 #[Concept('Speed', 6)]
 #[Concept('Cost', 3)]
 #[ImageCredit('Image by catalyststuff on Freepik')]
-#[FlavorText('Here\'s lookin\' at you, kid.')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -28,8 +26,10 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-        <x-card.hero.local>A312.jpg</x-card.hero.local>
-        
+<x-card.hero.local>A312.jpg</x-card.hero.local>
+
+<x-card.flavortext>Here's lookin' at you, kid.</x-card.flavortext>
+
 <x-card.phaserule type="Upkeep" lines="3"><text>
     <x-card.normalrule>You may ask one opponent</x-card.normalrule>
     <x-card.normalrule>to show you their hand.</x-card.normalrule>

@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
@@ -14,7 +13,7 @@ return new
 #[Concept('Cumulative')]
 #[Concept('Integrity', '2')]
 #[ImageCredit('')]
-#[FlavorText([])]
+
 #[Prerequisites(['Each player may have one Mascot card in play.', 'Can replace any Bystander Mascot (XX-00).'])]
 class(__FILE__) implements CardComponents
 {

@@ -3,14 +3,12 @@
 return [
     'name' => 'Basic Common Deck',
 
-    // 'A-004' => 2, // Alms for the Poor
-    // 'A-025' => 2, // Busybody
-    // 'A-MO-03' => 2, // Enforcer
-
     'cards' => [
+        'A-004' => 2, // Alms for the Poor
         'A-013' => 1, // Baker's Dozen
         'A-014' => 2, // Big-Box Store
         'A-024' => 2, // Burglary
+        'A-025' => 1, // Busybody
         'A-032' => 3, // Cheerleader
         'A-033' => 2, // Wheel of Fortune
         'A-051' => 1, // Waste Manager
@@ -23,21 +21,21 @@ return [
         'A-100' => 3, // Allergy Relief
         'A-105' => 2, // Tranquilizer Dart
         'A-108' => 2, // Grab Bag
-        'A-110' => 1, // Halitosis
         'A-119' => 2, // Medicinal Compound
         'A-120' => 2, // Healing Salve
         'A-122' => 2, // Offensive Coordinator
         'A-124' => 1, // Nurse
+        'A-061' => 2, // Make It Rain
         'A-135' => 2, // Investment
         'A-139' => 2, // Karma
-        'A-140' => 2, // Last Resort
         'A-141' => 2, // Lottery
         'A-143' => 1, // Financial Planner
         'A-145' => 2, // First Aid Kit
         'A-152' => 2, // Favorite Toy
         'A-A-01' => 3, // Body Slam
         'A-D-01' => 3, // Body Block
-        'A-MO-10' => 2, // Crooked Cop
+        'A-MO-10' => 1, // Crooked Cop
+        'A-MO-03' => 1, // Enforcer
         'A-MO-05' => 1, // Neighborhood "Protection"
         'A-MO-06' => 1, // Taxman
         'A-MO-07' => 1, // Spy
@@ -51,12 +49,12 @@ return [
         'A-T-12' => 2, // Tackling
 
         // Masters
-        'A-MA-01' => 1,
-        'A-MA-02' => 1,
+        // 'A-MA-01' => 1,
+        // 'A-MA-02' => 1,
         'A-MA-03' => 1,
-        'A-MA-04' => 1,
-        'A-MA-05' => 1,
-        'A-MA-06' => 1,
+        // 'A-MA-04' => 1,
+        // 'A-MA-05' => 1,
+        // 'A-MA-06' => 1,
 
         // female monsters
         'A-M-05' => 1,

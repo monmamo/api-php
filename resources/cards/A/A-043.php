@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -10,7 +9,6 @@ return new
 #[Title('Creepy Guy in the Alley')]
 #[Concept('Vendor')]
 #[Concept('Integrity', '2')]
-#[FlavorText('Psst. I got a great deal for you.')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -18,6 +16,8 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
+<x-card.flavortext>Psst. I got a great deal for you.</x-card.flavortext>
+
 <x-card.phaserule type="Draw" lines="4">
 <text >
 <x-card.normalrule>Cut your deck.</x-card.normalrule>

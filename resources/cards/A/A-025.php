@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -11,7 +10,6 @@ return new
     #[Title('Busybody')]
     #[Concept('Draw')]
     #[ImageCredit('Image by Adobe: Stock #58908676')]
-    #[FlavorText('Mind your own business.')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -19,7 +17,9 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-            <x-card.hero.local>A025.jpeg</x-card.hero.local>
+<x-card.hero.local>A025.jpeg</x-card.hero.local>
+
+<x-card.flavortext>Mind your own business.</x-card.flavortext>
 
 <x-card.phaserule type="Draw" lines="5">
 <text >

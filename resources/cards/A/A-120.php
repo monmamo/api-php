@@ -3,7 +3,6 @@
 // https://www.freepik.com/free-psd/skin-product-isolated_158243292.htm
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\ImagePrompt;
 use App\Concept;
@@ -17,7 +16,6 @@ return new
     #[Concept('Cost', 3)]
     #[ImagePrompt('green jar of healing ointment')]
     #[ImageCredit('Image by freepik')]
-    #[FlavorText('Does a monster good!')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -26,6 +24,8 @@ return new
         {
             yield <<<'HTML'
     <x-card.hero.local>A120.png</x-card.hero.local>
+
+<x-card.flavortext>Does a monster good!</x-card.flavortext>
 
     <x-card.phaserule type="Upkeep" y="590" lines="2">
     <text>

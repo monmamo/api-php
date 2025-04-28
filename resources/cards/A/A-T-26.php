@@ -10,7 +10,7 @@ return new
 #[Title('Fortitude')]
 #[Concept('Trait')]
 #[Concept('Cost', 2)]
-//#[ImageCredit('IMAGE_CREDIT')]
+// #[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

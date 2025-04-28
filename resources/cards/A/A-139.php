@@ -1,16 +1,13 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Concept('Draw')]
-#[FlavorText("It's a female monster.")]
 #[ImageCredit('ShutterStock #2389392699 by AnhSilhouetteArt')]
 #[Title('Karma')]
     class(__FILE__) implements CardComponents
@@ -21,6 +18,8 @@ return new
         {
             yield <<<'HTML'
 <x-card.hero.local>A139.jpg</x-card.hero.local>
+
+<x-card.flavortext>It's a female monster.</x-card.flavortext>
 
 <x-card.cardrule lines="5.5">
     <x-card.smallrule>Cannot be played during the Setup phase.</x-card.smallrule>

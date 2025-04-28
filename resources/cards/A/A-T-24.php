@@ -1,6 +1,5 @@
 <?php
 
-use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
@@ -11,7 +10,6 @@ return new
 #[Title('Water Pulse')]
 #[Concept('Trait')]
 #[Concept('Cost', 3)]
-#[ConceptIconHeroImage('Aquos')]
 #[Prerequisites(lines: ['Requires Aquos.', 'Use when this Monster attacks or defends.'], y: 400)]
 class(__FILE__) implements CardComponents
 {
@@ -20,7 +18,9 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="4">
+            <x-card.hero.svg>{{ \view('Aquos.icon') }}</x-card.hero.svg>
+
+            <x-card.phaserule type="Resolution" lines="4">
     <text >
 <x-card.normalrule>When resolving, discard 1d6 Water</x-card.normalrule>
 <x-card.normalrule>(A-001) from this Monster. The</x-card.normalrule>

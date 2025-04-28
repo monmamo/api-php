@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
 use App\CardAttributes\Prerequisites;
@@ -18,7 +17,6 @@ return new
 #[Concept('Bane')]
 #[IsGeneratedImage]
 #[ImageIsPrototype]
-#[FlavorText('They say that bad breath is better than no breath at all…')]
 #[Prerequisites([MONSTER_LIMIT_PREREQUISITE])]
     class(__FILE__) implements CardComponents
     {
@@ -27,8 +25,10 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-            <x-card.hero.local>A110.jpg</x-card.hero.local>
-            
+<x-card.hero.local>A110.jpg</x-card.hero.local>
+
+<x-card.flavortext>They say that bad breath is better than no breath at all…</x-card.flavortext>
+
 <x-card.phaserule type="Resolution" height="135">
   <text >
 <x-card.normalrule>When a Monster on this</x-card.normalrule>

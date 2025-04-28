@@ -1,23 +1,22 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('clone monster L45')]
+#[Title('Motorcycle Gang monster L48')]
 #[Concept('Monster')]
 #[Concept('Male')]
-#[Concept('Level', '45')]
-#[Concept('DamageCapacity', '70')]
-#[Concept('Size', '12')]
-#[Concept('Speed', '21')]
+#[Concept('Level', '48')]
+#[Concept('DamageCapacity', '80')]
+#[Concept('Size', '23')]
+#[Concept('Speed', '8')]
 #[Concept('Boost', '3')]
 #[ImageCredit('')]
-#[FlavorText([])]
+
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

@@ -1,6 +1,5 @@
 <?php
 
-use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
@@ -12,7 +11,6 @@ return new
 #[Prerequisites(lines: 'Requires Aquos.', y: 400)]
 #[Title('Absorb Water')]
 #[Concept('Cost', 2)]
-#[ConceptIconHeroImage('Aquos')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -20,7 +18,9 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Resolution" height="190">
+            <x-card.hero.svg>{{ \view('Aquos.icon') }}</x-card.hero.svg>
+
+            <x-card.phaserule type="Resolution" height="190">
     <text >
 <x-card.normalrule>If hit by an Attack that results in the</x-card.normalrule>
 <x-card.normalrule>attacker discarding Water (A-001),</x-card.normalrule>

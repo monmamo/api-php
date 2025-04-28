@@ -1,6 +1,5 @@
 <?php
 
-use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\Prerequisites;
@@ -13,7 +12,6 @@ return new
 #[Concept('Attack')]
 #[Concept('Level', 15)]
 #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
-#[ConceptIconHeroImage('Energos')]
 #[Prerequisites(lines: 'Requires Energos.', y: 460)]
 class(__FILE__) implements CardComponents
 {
@@ -22,7 +20,9 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="4">
+            <x-card.hero.svg>{{ \view('Energos.icon') }}</x-card.hero.svg>
+
+            <x-card.phaserule type="Resolution" lines="4">
     <text >
 <x-card.normalrule>Discard all Electricity (A-003) from the</x-card.normalrule>
 <x-card.normalrule>attacking Monster. Roll 1d6 for each</x-card.normalrule>

@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -11,7 +10,6 @@ return new
 #[Title('Make It Rain')]
 #[Concept('Draw')]
 #[ImageCredit('Image by wirestock on Freepik')]
-#[FlavorText('Who says money can\'t buy popularity?')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -19,7 +17,9 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <image x="0" y="0" class="hero" href="@local(A-002.jpg)" source="https://www.freepik.com/free-photo/throwing-money-air-being-happy_10978858.htm" />
+<x-card.hero.local source="https://www.freepik.com/free-photo/throwing-money-air-being-happy_10978858.htm">A-002.jpg</x-card.hero.local>
+
+<x-card.flavortext>Who says money can't buy popularity?</x-card.flavortext>
 
 <x-card.phaserule type="Draw" lines="2"><text>
     <x-card.normalrule>Every player may draw up to 5 cards.</x-card.normalrule>

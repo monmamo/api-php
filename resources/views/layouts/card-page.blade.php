@@ -6,6 +6,7 @@
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
+$number = Str::of($number)->trim()->upper()->replace(' ', '')->toString();
 $filesystem = \App\Concept::disk();
 
 
@@ -17,6 +18,7 @@ $next = $number_object->makeNext();
 
 $set_slug = $number_object->set;
 
+$concepts = $spec->concepts();
 
 // if (isset($_REQUEST['png'] )) {
 //      \header('Content-Type: image/png');
@@ -60,7 +62,10 @@ $set_slug = $number_object->set;
     <div class="d-flex justify-content-between w-100">
         <div class="w-100">
             <h1><?= $spec->name() ?> <span class="badge text-bg-secondary"><?= $number ?></span></h1>
-            <?= \App\Strings\render(...$spec->concepts()); ?>
+            <h2>Concepts</h2>
+            @foreach($concepts as $index => $concept)
+            <p><x-icons.inline.concept size="30" :$concept /> {{$concept->type}}</p>
+            @endforeach
             <?= \App\Strings\render(...$spec->webpageContent()); ?>
         </div>
     <div class="flex-shrink-1 align-items-end">

@@ -57,10 +57,10 @@ foreach (CardSet::cases() as $set) {
 }
 
 $decks = [
-    '/cards/deck/sdv1' => 'SDV',
-    '/cards/deck/pdv-energos' => 'PDV Energos',
-    '/cards/deck/pdv-pyros' => 'PDV Pyros',
-    '/cards/deck/pdv-aquos' => 'PDV Aquos',
+    '/cg/decks/sdv1' => 'SDV',
+    '/cg/decks/pdv-energos' => 'PDV Energos',
+    '/cg/decks/pdv-pyros' => 'PDV Pyros',
+    '/cg/decks/pdv-aquos' => 'PDV Aquos',
 ];
 
 return \compact('home', 'world', 'products', 'community', 'card_sets', 'decks');

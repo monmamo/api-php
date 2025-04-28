@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -11,7 +10,6 @@ return new
 #[Title('Flatus')]
 #[Concept('Bane')]
 #[ImageCredit('Image by Luis Prado via The Noun Project')]
-#[FlavorText('The smell is the least of your worries.')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -31,7 +29,9 @@ HTML;
     public function content(): \Traversable
     {
         yield <<<'HTML'
-             <x-card.phaserule type="Resolution"  lines="2">
+<x-card.flavortext>The smell is the least of your worries.</x-card.flavortext>
+
+<x-card.phaserule type="Resolution"  lines="2">
                  <text >
                  <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
  <x-card.normalrule>Roll 1d6. @dieroll(1,2) Discard this card.</x-card.normalrule>

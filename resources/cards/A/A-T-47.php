@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\IsIncomplete;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -11,7 +10,6 @@ return new
 #[IsIncomplete]
 #[Title('Fragrance')]
 #[Concept('Trait')]
-#[FlavorText('Thank you for bathing your monster.')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -19,6 +17,8 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
+<x-card.flavortext>Thank you for bathing your monster.</x-card.flavortext>
+
 <x-card.cardrule lines="6">
 <x-card.normalrule>Fragrance Strength: 1d6</x-card.normalrule>
 <x-card.normalrule>(rolled at attach; can be increased by Power Up)</x-card.normalrule>

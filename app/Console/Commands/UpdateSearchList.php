@@ -39,13 +39,15 @@ class UpdateSearchList extends Command
         foreach (CardSet::cases() as $set) {
             $list[\strtolower($set->name)] = '/cards/set/' . $set->value;
 
-            try {
-                foreach (CardSet::from($set->value)->cards() as $card_spec) {
+            foreach (CardSet::from($set->value)->cards() as $card_spec) {
+                try {
                     $card_number = $card_spec->cardNumber();
                     $list[\strtolower($card_number)] = '/cards/card/' . $card_number;
                     $list[\strtolower($card_spec->name())] = '/cards/card/' . $card_number;
+                } catch (\Throwable $e) {
+                    $this->error($card_spec->getSpecFilePath() . ': ' . $e->getMessage());
+                    continue;
                 }
-            } catch (\Throwable $e) {
             }
         }
 

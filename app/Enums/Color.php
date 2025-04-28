@@ -46,12 +46,12 @@ enum Color: string
     case Purple = '#800080';
     case Pyros = '#FFA457';
     case Red = '#FF0000';
-    case TraitColor = '#400060';
-    case White = '#FFFFFF';
-    case Yellow = '#FFFF00';
     case Skill = '#6d006d';
     case SkillGradientBottom = '#390039';
     case SkillGradientTop = '#A100A1';
+    case TraitColor = '#400060';
+    case White = '#FFFFFF';
+    case Yellow = '#FFFF00';
 
     /**
      * @group unary

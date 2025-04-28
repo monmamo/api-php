@@ -3,7 +3,7 @@
 
 <div class="text-center">
     <div class="container">
-        <img src="@publicimage(card-hero.png)" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Card System Billboard" width="1920" height="1080" loading="lazy">
+        <img src="@publicimage(card-hero.jpg)" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Card System Billboard" width="1920" height="1080" loading="lazy">
       </div>
     </div>
 
@@ -39,7 +39,7 @@
 
 <ul>
     <li><a href="/cg">Classic Card Duel</a>, our traditional monster-battle TCG/CCG.</li>
-    <li>Other pure card gamnes.</li>
+    <li>Other pure card games.</li>
     <li>Board games that use cards.</li>
     <li>Role-playing games, where cards can stand in for complex character sheets.</li>
     <li>Card-based miniatures games.</li>
@@ -57,7 +57,7 @@
 <h4>Card Name</h4>
     <p>The Card Name names what the card represents: a Monster, a character, a place, some sort of action, etc. </p>
     <p>All cards with the same Card Name are considered to be the same thing, even if the specific text or any other attribute is different. Different cards (differentiated by Card Number) may have the same Card Name. For example, there are cases where two different cards can have the same Card Name but differing Card Types. </p>
-    <p>Cards can represent specific characters or concepts in the Monsters Masters & Mobsters universe (a named Anthrope, a named Monster, a specific place, etc.). In those cases, only one of the card may be on the Battlefield at any particular part in time.</p>
+    <p>Cards can represent specific characters or concepts in the Monsters Masters & Mobsters universe (a named Anthrope, a named Monster, a specific place, etc.). In those cases, only one of the card may be on the Battlefield at any particular moment in time.</p>
 
     <h4><a href="#concepts">Card Concepts</a></h4>
     <p>Concepts define properties, abilities and usage of the card. Each card can have any number of Concepts. Concepts are designed to work across the many games that can use the Card System.</p> 

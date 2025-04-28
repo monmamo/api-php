@@ -13,6 +13,9 @@ $id = function (string $suffix) use ($cardNumber) {
     return $cardNumber . '-' . $suffix;
 };
 
+$concept_icon_size = 80;
+$concepts = $spec->concepts();
+$concept_x_0 = \config('card-design.viewbox.width') / 2 - $concept_icon_size * count($concepts) / 2;
 
 ?>
 
@@ -83,13 +86,16 @@ fill="{{$cardNameColor()}}" stroke="{{$cardNameColor()}}" alignment-baseline="ba
 
     <x-card.box slug="titlebox">
         <?php
-        $text_x =  config('card-design.titlebox.text_x')(false);
+        $text_x =  $titlebox['text_x'] = fn (bool $has_icon) => $viewbox['width'] / 2 + ($has_icon ? $titlebox['height'] / 2 : 0);
 
-        // Concept icons.
-        \App\Concept::setGroupCount(\count($spec->concepts()));
-
-        echo \App\Strings\render(...$spec->concepts());
         ?>        
+@foreach($concepts as $index => $concept)
+@php
+$x = $concept_x_0 + $index * $concept_icon_size ;
+@endphp
+<x-icons.inline.concept :$concept :size="$concept_icon_size" :$x /> 
+        <text class="gloss" x="{{$x+$concept_icon_size/2}}" y="{{$concept_icon_size+10}}px" font-family="'Roboto Condensed', sans-serif" font-style="normal" font-size="15px" fill="#000000" paint-order="stroke" font-width="200" text-anchor="middle" alignment-baseline="baseline"          >{{$concept->label()}}</text>
+@endforeach        
     </x-card.box>
 
     <?php

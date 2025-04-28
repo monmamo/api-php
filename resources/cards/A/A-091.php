@@ -1,8 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
-use App\CardAttributes\ImageCredit;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
 use App\CardAttributes\LocalBackgroundImage;
@@ -17,8 +15,6 @@ return new
 #[Concept('Integrity', '1d4')]
 #[IsGeneratedImage]
 #[ImageIsPrototype]
-//#[ImageCredit('IMAGE_CREDIT')]
-#[FlavorText('He builds the hugest venues. Yuge ones.')]
 #[LocalBackgroundImage('A-091-full.png')]
 class(__FILE__) implements CardComponents
 {
@@ -27,7 +23,9 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-  <x-card.cardrule lines="4">
+<x-card.flavortext>He builds the hugest venues. Yuge ones.</x-card.flavortext>
+
+<x-card.cardrule lines="4">
   <x-card.normalrule>Discard 5 cards from your Hand</x-card.normalrule>
 <x-card.normalrule>to search your Library for a</x-card.normalrule>
 <x-card.normalrule>Venue card and play it immediately.</x-card.normalrule>

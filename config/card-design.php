@@ -52,7 +52,6 @@ $titlebox = [
 $titlebox['cardname_baseline'] = $titlebox['height'] - $titlebox['cardtype_baseline'];
 
 $titlebox['y'] = $viewbox['y'] + $viewbox['height'] - $titlebox['height'];
-$titlebox['text_x'] = fn (bool $has_icon) => $viewbox['width'] / 2 + ($has_icon ? $titlebox['height'] / 2 : 0);
 
 $hero_width = $viewbox['width'];
 $hero_height = 450;

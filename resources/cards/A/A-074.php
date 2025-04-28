@@ -11,8 +11,8 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Shopping Center')]
 #[Concept('Draw')]
-//#[IsGeneratedImage]
-//#[\App\CardAttributes\ImageIsPrototype]
+// #[IsGeneratedImage]
+// #[\App\CardAttributes\ImageIsPrototype]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

@@ -13,7 +13,6 @@ return new
 #[Concept('DamageCapacity', 10)]
 #[Concept('Size', 3)]
 #[Concept('Speed', 3)]
-//#[ImageCredit('IMAGE_CREDIT')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
