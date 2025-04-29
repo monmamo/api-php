@@ -157,7 +157,7 @@ function make($spec): CardComponents
                 /**
                  * @group nonary
                  */
-                public function concepts(): array
+                public function concepts(...$names): array
                 {
                     return $this->spec['concepts'];
                 }
@@ -193,6 +193,14 @@ function make($spec): CardComponents
                         primary_lines: $this->spec['primary_lines'] ?? [],
                         background: $this->background(),
                     );
+                }
+
+                /**
+                 * @group nonary
+                 */
+                public function hasConcept(string $name): bool
+                {
+                    return false;
                 }
 
                 /**

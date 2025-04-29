@@ -4,6 +4,7 @@ namespace App\Enums;
 
 use App\CardNumber;
 use App\CardSetAttributes\CardSeries;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\Contracts\HasTitleMethod;
 use App\EnumReference;
@@ -91,22 +92,47 @@ enum CardSet: string implements Countable, HasTitleMethod
     }
 
     /**
-     * @group unary
+     * Some filters are on the whole collection; some are on the individual cards.
      *
-     * @param null|mixed $take
+     * @group unary
      */
-    public function cards($take = null): Collection
+    public function cards(): Collection
     {
-        $files = new Collection(Storage::disk('cards')->files($this->value));
+        $cards = [];
 
-        $files_selected = match (true) {
-            \is_callable($take) => $take($files),
-            \is_null($take) => $files,
+        foreach (Storage::disk('cards')->files($this->value) as $filename) {
+            $card = $this->_makeCard($filename);
+
+            if ($card instanceof CardComponents) {
+                $cards[] = $card;
+            }
+        }
+
+        return new class($cards) extends Collection
+        {
+            public function __construct(array $items)
+            {
+                parent::__construct($items);
+            }
+
+            public function filterByName(string $name): static
+            {
+                if ($name === '') {
+                    return $this;
+                }
+                return $this->filter(fn (CardComponents $card) => \str_contains(\strtolower($card->name()), \strtolower($name)));
+            }
+
+            public function filterByConcepts(array $concepts): static
+            {
+                if (\count($concepts) === 0) {
+                    return $this;
+                }
+                return $this->filter(
+                    fn (CardComponents $card) => !empty(\array_intersect(\array_map(fn (Concept $concept) => $concept->type, $card->concepts()), $concepts)),
+                );
+            }
         };
-
-        return $files_selected
-            ->map($this->_makeCard(...))
-            ->filter(fn ($value): bool => $value instanceof CardComponents);
     }
 
     /**

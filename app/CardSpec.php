@@ -51,7 +51,7 @@ class CardSpec implements \IteratorAggregate, CardComponents
     /**
      * @group nonary
      */
-    public function concepts(): array
+    public function concepts(...$names): array
     {
         return $this->concepts;
     }

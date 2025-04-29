@@ -24,7 +24,7 @@ interface CardComponents extends HasName
     /**
      * @group nonary
      */
-    public function concepts(): array;
+    public function concepts(...$names): array;
 
     /**
      * @group nonary
@@ -35,6 +35,11 @@ interface CardComponents extends HasName
      * @group nonary
      */
     public function creditColor(): string;
+
+    /**
+     * @group nonary
+     */
+    public function hasConcept(string $name): bool;
 
     /**
      * @group nonary

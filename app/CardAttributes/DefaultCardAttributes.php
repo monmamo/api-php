@@ -26,6 +26,17 @@ trait DefaultCardAttributes
         $this->card_number = \basename($path, '.php');
     }
 
+    private function _concepts(): array
+    {
+        return $this->_concepts ??= \array_map(
+            fn ($attribute) => $attribute->newInstance(),
+            $this->getAttributes(Concept::class),
+        );
+        // \array_walk($concepts, function ($concept): void {
+        //     \assert($concept instanceof Concept);
+        // });
+    }
+
     /**
      * @group nonary
      */
@@ -67,16 +78,15 @@ trait DefaultCardAttributes
     /**
      * @group nonary
      */
-    public function concepts(): array
+    public function concepts(...$names): array
     {
-        $concepts = $this->_concepts ??= \array_map(
-            fn ($attribute) => $attribute->newInstance(),
-            $this->getAttributes(Concept::class),
-        );
-        \array_walk($concepts, function ($concept): void {
-            \assert($concept instanceof Concept);
+        if (\count($names) === 0) {
+            return $this->_concepts();
+        }
+
+        return \array_filter($this->_concepts(), function ($concept) use ($names) {
+            return \in_array($concept->name(), $names, true);
         });
-        return $concepts;
     }
 
     /**
@@ -107,6 +117,19 @@ trait DefaultCardAttributes
     public function flavorTextAttribute(): ?FlavorText
     {
         return $this->_flavor_text_attribute ??= $this->withAttribute(FlavorText::class);
+    }
+
+    /**
+     * @group nonary
+     */
+    public function hasConcept(string $name): bool
+    {
+        foreach ($this->_concepts() as $concept) {
+            if ($concept->name() === $name) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**

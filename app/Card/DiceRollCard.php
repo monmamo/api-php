@@ -40,11 +40,14 @@ HTML;
     /**
      * @group nonary
      */
-    public function concepts(): array
+    public function concepts(...$names): array
     {
         return [];
     }
 
+    /**
+     * @group nonary
+     */
     public function content(): \Traversable
     {
         $hero_svg = $this->heroSvg();
@@ -60,6 +63,14 @@ HTML;
         <x-card.normalrule>One 1d6 roll counts as @dieroll({$value}).</x-card.normalrule>
     </x-card.cardrule>
 HTML;
+    }
+
+    /**
+     * @group nonary
+     */
+    public function hasConcept(string $name): bool
+    {
+        return false;
     }
 
     abstract public function heroSvg(): string;

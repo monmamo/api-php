@@ -46,7 +46,7 @@ return new class(path: __FILE__, svg: \view('Attack.icon'), imageCredit: '') imp
     /**
      * @group nonary
      */
-    public function concepts(): array
+    public function concepts(...$names): array
     {
         return [];
     }
