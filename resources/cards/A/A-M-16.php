@@ -18,6 +18,7 @@ return new
     #[Concept('Boost', '3')]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
+    #[\App\CardAttributes\ImageInDevelopment()]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -38,11 +39,5 @@ return new
 </text>
 </x-card.phaserule>
 HTML;
-
-            yield \App\Strings\html(
-                'text',
-                ['x' => '50%', 'y' => '270', 'transform' => 'rotate(-30,375,270)', 'text-anchor' => 'middle', 'dominant-baseline' => 'central', 'font-family' => "'Roboto Condensed', sans-serif", 'font-size' => '80px', 'fill' => '#ffffff', 'stroke' => '#000000', 'stroke-width' => '2'],
-                'ART IN PROGRESS',
-            )->toHtml();
         }
     };

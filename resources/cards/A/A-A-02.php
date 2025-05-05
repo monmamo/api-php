@@ -13,7 +13,6 @@ return new
     #[Concept('Physical')]
     #[Concept('Level', 40)]
         #[ImageCredit('Icon by iconixar from the Noun Project')]
-    #[Prerequisites(y: 455)]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

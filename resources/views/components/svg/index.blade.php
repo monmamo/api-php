@@ -27,6 +27,7 @@ $svg_attributes['xmlns:xlink'] = "http://www.w3.org/1999/xlink";
 $svg_attributes['version'] = "1.1";
 $svg_attributes['xml:space'] = "preserve";
 if (isset($id)) $svg_attributes['id'] = $id;
+if (isset($class)) $svg_attributes['class'] = $class;
 
 $content = match(true) {
     isset($icon) => \App\Strings\html('g',['fill'=>'#000000'], view("icons.$icon")),

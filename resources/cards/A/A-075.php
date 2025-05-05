@@ -17,7 +17,6 @@ return new
 #[Concept('Speed', 3)]
 #[IsGeneratedImage]
 #[ImageIsPrototype]
-#[Prerequisites(['Limit 1 on Battlefield among all players.', 'You may choose to make this card Male or Female', 'when you put it on the Battlefield.'])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -29,10 +28,13 @@ class(__FILE__) implements CardComponents
 
 <x-card.flavortext>I am the law.</x-card.flavortext>
 
+
     <text y="600" filter="url(#solid)">
-<x-card.normalrule>Discard all Mobster cards on the Battlefield.</x-card.normalrule>
-<x-card.normalrule>No more Mobster or Criminal cards can be</x-card.normalrule>
-<x-card.normalrule>played while this card is on the Battlefield.</x-card.normalrule>
+<x-card.smallrule>Limit 1 on Battlefield among all players.</x-card.smallrule>
+<x-card.smallrule>You may choose to make this card Male or Female</x-card.smallrule>
+<x-card.smallrule>when you put it on the Battlefield.</x-card.smallrule>
+<x-card.normalrule>Mobster and Criminal cards cannot use</x-card.normalrule>
+<x-card.normalrule>effects while this card is on the Battlefield.</x-card.normalrule>
 </text>
 HTML;
     }

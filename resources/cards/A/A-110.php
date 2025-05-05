@@ -8,16 +8,13 @@ use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
-if (!\defined('MONSTER_LIMIT_PREREQUISITE')) {
-    \define('MONSTER_LIMIT_PREREQUISITE', \trans_choice('rules.monster-limit', 1));
-}
+//;
 
 return new
 #[Title('Halitosis')]
 #[Concept('Bane')]
 #[IsGeneratedImage]
 #[ImageIsPrototype]
-#[Prerequisites([MONSTER_LIMIT_PREREQUISITE])]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -28,6 +25,11 @@ return new
 <x-card.hero.local>A110.jpg</x-card.hero.local>
 
 <x-card.flavortext>They say that bad breath is better than no breath at all…</x-card.flavortext>
+
+<x-card.cardrule y="585" lines="1" >
+<x-card.normalrule>{{ \trans_choice('rules.monster-limit', 1)}}</x-card.normalrule>
+</x-card.cardrule>
+
 
 <x-card.phaserule type="Resolution" height="135">
   <text >

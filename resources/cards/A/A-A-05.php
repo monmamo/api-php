@@ -12,9 +12,9 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Fireball')]
     #[Concept('Attack')]
+    #[Concept('Pyros')]
     #[Concept('Level', 25)]
     #[ImageCredit('Image by Merry Shuporna Biswas')]
-    #[Prerequisites(lines: 'Requires Pyros.', y: 460)]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -23,6 +23,9 @@ return new
         {
             yield <<<'HTML'
     <x-card.hero.local>hero/A-A-05.jpg</x-card.hero.local>
+
+    <x-card.flavortext>If you can Dodge a wrench, you can Dodge a Fireball.</x-card.flavortext>
+
 
     <x-card.phaserule type="Resolution" lines="3">
 <text>

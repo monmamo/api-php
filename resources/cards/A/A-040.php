@@ -11,7 +11,6 @@ return new
     #[Title('Hardware Store')]
     #[Concept('Vendor')]
     #[ImageCredit('Image by studio4rt on Freepik')] // https://www.freepik.com/free-vector/tools-shop-showcase-assortment-painting-building-home-repair-renovation-carpentry-work-constructor-hardware-store-stand-with-housekeeping-equipment_25872060.htm
-    #[Prerequisites(y: 455)]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -21,7 +20,9 @@ return new
             yield <<<'HTML'
             <x-card.hero.local>hero/hardware-store.jpg</x-card.hero.local>
             
-<x-card.phaserule type="Draw" lines="6">
+<x-card.flavortext>Trailer hitch demagnetizers, automatic circumcisers...</x-card.flavortext>
+
+<x-card.phaserule type="Draw" height="225">
     <text>
   <x-card.normalrule>Discard any number of cards from</x-card.normalrule>
   <x-card.normalrule>your hand. For each card that you</x-card.normalrule>

@@ -12,7 +12,6 @@ return new
 #[Concept('Attack')]
 #[Concept('Level', 15)]
 #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
-#[Prerequisites(lines: 'Requires Energos.', y: 460)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -22,9 +21,14 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
             <x-card.hero.svg>{{ \view('Energos.icon') }}</x-card.hero.svg>
 
+            <x-card.cardrule y="515" lines="1" >
+<x-card.normalrule>Requires Energos.</x-card.normalrule>
+</x-card.cardrule>
+
+
             <x-card.phaserule type="Resolution" lines="4">
     <text >
-<x-card.normalrule>Discard all Electricity (A-003) from the</x-card.normalrule>
+<x-card.normalrule x="55%">Discard all Electricity (A-003) from the</x-card.normalrule>
 <x-card.normalrule>attacking Monster. Roll 1d6 for each</x-card.normalrule>
 <x-card.normalrule>Electricity discarded.</x-card.normalrule>
 <x-card.normalrule>The damage done is the sum of these rolls.</x-card.normalrule>

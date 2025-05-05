@@ -19,7 +19,6 @@ return new
 #[Concept('Boost', '1')]
 #[ImageCredit('Generated image')]
 
-#[Prerequisites([])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

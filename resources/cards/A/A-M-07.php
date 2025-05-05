@@ -20,7 +20,7 @@ return new
     #[Concept('Boost', 2)]
     #[IsGeneratedImage]
 #[ImageIsPrototype]
-    #[ImageCredit(null)]
+    #[\App\CardAttributes\ImageInDevelopment()]
     #[ImagePrompt('yellow electric dog monster of weird zoology in a factory')]
     class(__FILE__) implements CardComponents
     {
@@ -32,7 +32,6 @@ return new
     <x-card.hero.local>hero/A-M-07.png</x-card.hero.local>
 
     <x-card.taxons>Energos, Canos</x-card.taxons>
-
 
 <x-card.phaserule type="Skill" height="175">
     <text>

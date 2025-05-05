@@ -9,8 +9,8 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Water Shield')]
 #[Concept('Defense')]
+#[Concept('Aquos')]
 #[Concept('Level', 20)]
-#[Prerequisites(lines: 'Requires Aquos.', y: 460)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

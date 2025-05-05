@@ -18,8 +18,7 @@ return new
     #[Concept('Speed', 4)]
     #[Concept('Boost', 2)]
     #[ImagePrompt('red fire rodent monster of weird zoology next to a caldera')]
-    #[IsGeneratedImage]
-    #[ImageCredit(null)]
+    #[ImageCredit('Image by Merry Shuporna Biswas')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -27,10 +26,9 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.hero.local>hero/A-M-09.png</x-card.hero.local>
+    <x-card.hero.local>hero/A-M-09.jpg</x-card.hero.local>
 
     <x-card.taxons>Pyros, Musos</x-card.taxons>
-
 
 <x-card.phaserule type="Upkeep" height="175">
     <text>
@@ -41,10 +39,5 @@ return new
 </x-card.phaserule>
 HTML;
 
-            yield \App\Strings\html(
-                'text',
-                ['x' => '50%', 'y' => '270', 'transform' => 'rotate(-30,375,270)', 'text-anchor' => 'middle', 'dominant-baseline' => 'central', 'font-family' => "'Roboto Condensed', sans-serif", 'font-size' => '80px', 'fill' => '#ffffff', 'stroke' => '#000000', 'stroke-width' => '2'],
-                'ART IN PROGRESS',
-            )->toHtml();
         }
     };

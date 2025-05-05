@@ -10,7 +10,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($cards as $card_info)
+        @forelse ($cards as $card_info)
         <tr>
             <td><a href="/cards/card/{{$card_info->cardNumber()}}">{{$card_info->cardNumber()}}</a></td>
             <td><a href="/cards/card/{{$card_info->cardNumber()}}">{{$card_info->name()}}</a></td>
@@ -23,6 +23,8 @@
                 @endforeach
             </td>
         </tr>
-        @endforeach
+        @empty
+    <tr><td>No matches.</td></tr>
+        @endforelse
     </tbody>
 </table>

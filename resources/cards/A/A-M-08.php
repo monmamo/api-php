@@ -20,6 +20,7 @@ return new
     #[IsGeneratedImage]
 #[ImageIsPrototype]
     #[ImageCredit(null)]
+    #[\App\CardAttributes\ImageInDevelopment()]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

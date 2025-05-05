@@ -17,7 +17,6 @@ return new
     #[IsGeneratedImage]
 #[ImageIsPrototype]
     #[ImagePrompt('dark man in a mask wearing a trenchcoat carrying a large tote bag')]
-    #[Prerequisites(lines: ['You may play this card only if you have a', 'Mobster card on the Battlefield.'], y: 415)]
     class(__FILE__) implements CardComponents
     {
         use CardTools;
@@ -36,6 +35,11 @@ return new
             // custom flavor text
             yield <<<'HTML'
 <text  y="360" class="credit" text-anchor="middle" alignment-baseline="baseline"><tspan x="70%" dy="25" class="flavor" text-anchor="middle" alignment-baseline="hanging" fill="#ffffff">Just collecting the dues.</tspan></text>
+
+<x-card.cardrule y="450" lines="2" >
+<x-card.normalrule>You may play this card only if you have a</x-card.normalrule>
+<x-card.normalrule>Mobster card on the Battlefield.</x-card.normalrule>
+</x-card.cardrule>
 
 <x-card.phaserule type="Draw" lines="6"><text>
 <x-card.normalrule>Choose one opponent. Roll 1d6. That</x-card.normalrule>

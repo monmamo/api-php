@@ -30,6 +30,7 @@ $concept_x_0 = \config('card-design.viewbox.width') / 2 - $concept_icon_size * c
     :$width
     :$height
     :$padding
+    class="has-context-menu"
     viewBox="0 0 750 1050">
 
     <title><?= $cardName ?></title>
@@ -45,13 +46,6 @@ $concept_x_0 = \config('card-design.viewbox.width') / 2 - $concept_icon_size * c
 --}}
     <?php
 
-    if (!\is_null($image_credit = $spec->imageCredit())) {
-        echo \App\Strings\html(
-            'text',
-            ['x' => '50%', 'y' => '50', 'class' => 'credit', 'text-anchor' => 'middle', 'alignment-baseline' => 'baseline',  'fill' => $creditColor()],
-            $image_credit,
-        )->toHtml();
-    }
     
     // The bodybox is the viewbox minus the titlebox.
     $bodybox_width = config("card-design.viewbox.width");
@@ -116,9 +110,13 @@ $x = $concept_x_0 + $index * $concept_icon_size ;
 ?>
 
     <g class="credit" fill="{{$creditColor()}}">
+        
+        <text x="<?= config('card-design.viewbox.x') ?>" y="<?= config('card-design.viewbox.y') ?>" class="credit" text-anchor="start" alignment-baseline="top" >{{$spec->system()}}</text>
+        <text x="<?= config('card-design.viewbox.x')+config('card-design.viewbox.width') ?>" y="<?= config('card-design.viewbox.y') ?>" class="credit" text-anchor="end" alignment-baseline="top" >{{$spec->imageCredit()}}</text>
+        
         <text x="<?= config('card-design.viewbox.x') ?>" y="<?= $credit_y ?>" text-anchor="start" alignment-baseline="top">&#169; Monsters Masters &amp; Mobsters LLC</text>
-        <text x="70%" y="<?= $credit_y ?>" text-anchor="middle" alignment-baseline="top"><?php echo \date('Y-m-d'); ?></text>
-        <text x="<?= config('card-design.viewbox.x') + config('card-design.viewbox.width') ?>" y="<?= $credit_y ?>" text-anchor="end" alignment-baseline="top"><?php echo $cardNumber; ?></text>
+        <text x="70%" y="<?= $credit_y ?>" text-anchor="middle" alignment-baseline="top">{{ \date('Y-m-d') }}</text>
+        <text x="<?= config('card-design.viewbox.x') + config('card-design.viewbox.width') ?>" y="<?= $credit_y ?>" text-anchor="end" alignment-baseline="top">{{ $cardNumber }}</text>
     </g>
 
     <?php
@@ -143,6 +141,7 @@ $x = $concept_x_0 + $index * $concept_icon_size ;
     <g class="debug">
         <x-card.rect slug="trimbox" fill-opacity="0" stroke-width=3 stroke="#FF0000" rx="25" />
         <x-card.rect slug="viewbox" fill-opacity="0" stroke-width=3 stroke="#2BA6DE" stroke-dasharray="1.44" rx="5" />
+        <x-card.rect slug="titlebox" fill-opacity="0" stroke-width=3 stroke="#2BA6DE"    />
         <?php
         $hero_attributes = [
             'x' => config("card-design.viewbox.x") + config("card-design.hero.x"),

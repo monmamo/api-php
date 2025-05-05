@@ -67,6 +67,15 @@ trait DefaultCardAttributes
         return 'white';
     }
 
+
+    /**
+     * @group nonary
+     */
+    public function system(): string
+    {
+        return "ALL GAMES";
+    }
+
     /**
      * @group nonary
      */

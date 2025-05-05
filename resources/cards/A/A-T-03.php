@@ -1,6 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
@@ -12,15 +13,14 @@ return new
     #[Concept('Trait')]
     #[Concept('Speed', '+?')]
     #[Concept('Cost', 3)]
-    #[IsGeneratedImage]
-    #[ImageIsPrototype]
+    #[ImageCredit('Image by Nilanjan Malakar')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 
         public function content(): \Traversable
         {
-            yield '<x-card.hero.local>hero/A-T-03.jpeg</x-card.hero.local>';
+            yield '<x-card.hero.local>hero/A-T-03.jpg</x-card.hero.local>';
 
             yield <<<'HTML'
 <x-card.phaserule type="Resolution" lines="2"><text>

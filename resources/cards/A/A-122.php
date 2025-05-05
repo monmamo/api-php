@@ -17,7 +17,6 @@ return new
     #[Concept('Integrity', '1d6')]
     #[IsGeneratedImage('head coach standing on the sidelines with a clipboard, green jacket')]
 #[ImageIsPrototype]
-#[Prerequisites(['Limit 1 per player on Battlefield.', 'You must already have a Master on the Battlefield', 'to put this card on the Battlefield.', 'You may choose to make this card Female', 'when you put it on the Battlefield.'])]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

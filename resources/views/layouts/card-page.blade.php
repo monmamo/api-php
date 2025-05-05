@@ -64,100 +64,29 @@ $concepts = $spec->concepts();
             <h1><?= $spec->name() ?> <span class="badge text-bg-secondary"><?= $number ?></span></h1>
             <h2>Concepts</h2>
             @foreach($concepts as $index => $concept)
-            <p><x-icons.inline.concept size="30" :$concept /> {{$concept->type}}</p>
+            <p><svg width="30" height="30"><x-icons.inline.concept size="30" :$concept /></svg> {{$concept->type}}</p>
             @endforeach
             <?= \App\Strings\render(...$spec->webpageContent()); ?>
         </div>
     <div class="flex-shrink-1 align-items-end">
-            <div class="pt-2" id="svg-container" hx-get="#"  hx-trigger="dblclick" hx-target="#svg-container">
+            <div class="pt-2" hx-get="#"  hx-trigger="dblclick" hx-target="svg.has-context-menu">
             <x-card :cardNumber="$number" width="400"/>
           </div>
-            <div id="img-container"></div>
+            
           </div>
                  
     </div>
 
-    <ul  class="dropdown-menu" id="img-menu" style="display: none; position: absolute; background: white; border: 1px solid black; list-style: none; padding: 5px;">
-      <li class="open-svg">SVG</li>
-        <li data-format="png">PNG</li>
-      <li data-format="jpeg">JPG</li>
-      <li data-format="webp">WEBP</li>
-    </ul>
+<x-svg-context-menu />
 
-    <script>
-        const dataHeader = 'data:image/svg+xml;charset=utf-8';
-        const $svg = document.getElementById('svg-container').querySelector('svg'); // <svg> element
-        const $holder = document.getElementById('img-container'); // <div> element
-        
-        const destroyChildren = $element => {
-          while ($element.firstChild) {
-            const $lastChild = $element.lastChild ?? false
-            if ($lastChild) $element.removeChild($lastChild)
-          }
-        }
-        
-        const loadImage = async url => {
-          const $img = document.createElement('img')
-          $img.src = url
-          return new Promise((resolve, reject) => {
-            $img.onload = () => resolve($img)
-            $img.onerror = reject
-          })
-        }
-        
-        const serializeAsXML = $e => (new XMLSerializer()).serializeToString($e)
-        
-        const encodeAsUTF8 = s => `${dataHeader},${encodeURIComponent(s)}`
-        
-        const convertSVGtoImg = format => async e => {
-          const $btn = e.target
-        
-          destroyChildren($holder)
-        
-          const svgData = encodeAsUTF8(serializeAsXML($svg))
-        
-          const img = await loadImage(svgData)
-        
-          // https://www.w3schools.com/jsref/dom_obj_canvas.asp
-          const $canvas = document.createElement('canvas')
-          $canvas.width = $svg.clientWidth
-          $canvas.height = $svg.clientHeight
-          $canvas.getContext('2d').drawImage(img, 0, 0, $svg.clientWidth, $svg.clientHeight)
-        
-          //const $img = new Image($svg.clientWidth, $svg.clientHeight);
-          //$img.src = await $canvas.toDataURL(`image/${format}`, 1.0);
-          //$holder.appendChild($img);
-          const imgsrc = await $canvas.toDataURL(`image/${format}`, 1.0);
-const blob = await fetch(imgsrc).then(r => r.blob());
-var blobUrl = URL.createObjectURL(blob);
-window.location.assign(blobUrl);
-        }
-
-        for (const btn of [...document.querySelectorAll('[data-format]')]) {
-          btn.onclick = convertSVGtoImg(btn.dataset.format)
-        }
-
-        for (const btn of [...document.querySelectorAll('.open-svg')]) {
-          btn.onclick = e => {
-            window.location.assign( '/cards/card/{{$number}}/svg');
-          };
-        }
-
-  const customMenu = document.getElementById('img-menu');
-
-  $svg.addEventListener('contextmenu', (event) => {
-    event.preventDefault();
-    customMenu.style.top = `${event.clientY}px`;
-    customMenu.style.left = `${event.clientX}px`;
-    customMenu.style.display = 'block';
-  });
-
-  document.addEventListener('click', () => {
-    customMenu.style.display = 'none';
-  });
-            </script>  
+<script>
+      for (const btn of [...document.querySelectorAll('.open-svg')]) {
+      btn.onclick = e => {
+        window.location.assign( '/cards/card/{{$number}}/svg');
+      };
+    }
+</script>
 
     @stack('debug')
-
 
 </x-guest-layout>

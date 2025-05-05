@@ -10,9 +10,9 @@ use App\GeneralAttributes\Title;
 return new
 #[ImageCredit('Icon by Carl Olsen on Game-Icons.net under CC BY 3.0')]
 #[Concept('Defense')]
+#[Concept('Pyros')]
 #[Concept('Level', 20)]
 #[Title('Fire Shield')]
-#[Prerequisites(lines: 'Requires Pyros.', y: 460)]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

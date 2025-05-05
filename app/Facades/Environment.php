@@ -68,20 +68,24 @@ final class Environment extends Facade
      */
     public static function is(...$environments): bool
     {
-        \assert(
-            self::getFacadeRoot() instanceof Environments,
-            \App\Strings\expectationMessage(
-                expectation: Environments::class,
-                value: self::getFacadeRoot(),
-            ),
-        );
+        \assert(self::getFacadeRoot() instanceof Environments);
 
         $environment = self::getFacadeRoot()->value;
 
         if (\count($environments) > 0) {
             $patterns = \is_array($environments[0]) ? $environments[0] : $environments;
 
-            return Str::is($patterns, $environment);
+            foreach ($patterns as $pattern) {
+                $pattern = match(true) {
+                    $pattern instanceof Environments => $pattern->value,
+                    \is_string($pattern) => $pattern,
+                    default => \App\Strings\unwrap($pattern),
+                };
+                
+                if ($pattern === $environment) {
+                    return true;
+                }
+            }
         }
 
         return false;

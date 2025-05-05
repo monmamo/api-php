@@ -10,10 +10,9 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Energy Shield')]
 #[Concept('Defense')]
+#[Concept('Energos')]
 #[Concept('Level', 20)]
 #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
-
-#[Prerequisites(lines: 'Requires Energos.', y: 460)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

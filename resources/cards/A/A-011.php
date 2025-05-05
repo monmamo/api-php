@@ -10,7 +10,6 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Flash of Lightning')]
     #[Concept('Skill')]
-    #[Prerequisites(lines: 'Requires Energos.', y: 430)]
     #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
     class(__FILE__) implements CardComponents
     {
@@ -20,6 +19,10 @@ return new
         {
             yield <<<'HTML'
 <x-card.hero.svg>{{ \view('Energos.icon') }}</x-card.hero.svg>
+
+<x-card.cardrule y="470" lines="1" >
+<x-card.normalrule>Requires Energos.</x-card.normalrule>
+</x-card.cardrule>
 
             <x-card.phaserule type="Resolution" lines="6"><text>
 <x-card.normalrule>Discard all Electricity (A-003)</x-card.normalrule>
