@@ -12,7 +12,7 @@ return new
     #[Concept('Draw')]
     #[Concept('Item')]
     #[Concept('Lure')]
-    #[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
+    #[ImageCredit('Icon by Lorc on Game-Icons.net')]
     #[Title('Basic Lure')]
     #[Concept('Cost', 3)]
     class(__FILE__) implements CardComponents

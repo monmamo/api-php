@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Keen Eye')]
 #[Concept('Trait')]
-#[ImageCredit('Image by Lorc on Game-Icons.net')]
+#[ImageCredit('Icon by Lorc on Game-Icons.net')]
 #[Concept('Cost', 3)]
     class(__FILE__) implements CardComponents
     {

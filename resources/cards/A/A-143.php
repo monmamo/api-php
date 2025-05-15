@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -13,7 +12,6 @@ return new
     #[Title('Financial Planner')]
     #[Concept('Bystander')]
     #[ImageCredit('Image by photoroyalty on Freepik')]
-    #[Prerequisites(y: 475)]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

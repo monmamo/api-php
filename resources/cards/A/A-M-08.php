@@ -2,6 +2,7 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImageInDevelopment;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
@@ -20,7 +21,7 @@ return new
     #[IsGeneratedImage]
 #[ImageIsPrototype]
     #[ImageCredit(null)]
-    #[\App\CardAttributes\ImageInDevelopment()]
+    #[ImageInDevelopment()]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

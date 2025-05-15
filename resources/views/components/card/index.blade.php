@@ -66,7 +66,6 @@ $concept_x_0 = \config('card-design.viewbox.width') / 2 - $concept_icon_size * c
     
 <?php
         echo \App\Strings\render(
-            $spec->prerequisitesAttribute(),
             ...$spec->content()
         );
         ?>
@@ -78,6 +77,7 @@ fill="{{$cardNameColor()}}" stroke="{{$cardNameColor()}}" alignment-baseline="ba
 
     </svg>
 
+    @if(count($concepts) > 0)
     <x-card.box slug="titlebox">
         <?php
         $text_x =  $titlebox['text_x'] = fn (bool $has_icon) => $viewbox['width'] / 2 + ($has_icon ? $titlebox['height'] / 2 : 0);
@@ -91,14 +91,15 @@ $x = $concept_x_0 + $index * $concept_icon_size ;
         <text class="gloss" x="{{$x+$concept_icon_size/2}}" y="{{$concept_icon_size+10}}px" font-family="'Roboto Condensed', sans-serif" font-style="normal" font-size="15px" fill="#000000" paint-order="stroke" font-width="200" text-anchor="middle" alignment-baseline="baseline"          >{{$concept->label()}}</text>
 @endforeach        
     </x-card.box>
+    @endif
 
     <?php
-    echo \App\Strings\render($spec->flavorTextAttribute());
+    // echo \App\Strings\render($spec->flavorTextAttribute());
 
     $credit_y =  config('card-design.trimbox.y') + config('card-design.trimbox.height') - 5;
 
 
-    if ($spec->hasAttribute(\App\CardAttributes\ImageIsPrototype::class)) {
+    if (\App\Reflection\hasAttribute($spec,\App\CardAttributes\ImageIsPrototype::class)) {
             echo \App\Strings\html(
             'text',
             ['x' => '50%', 'y' => '370','transform'=>'rotate(-30,375,370)', 'text-anchor' => 'middle', 'dominant-baseline'=>"central" ,'font-family'=>"'Roboto Condensed', sans-serif" , 'font-size'=>"120px", 'fill' => '#000000','stroke'=>'#ffffff','fill-opacity' => '0.20', 'stroke-opacity' => '0.20'],
@@ -120,7 +121,7 @@ $x = $concept_x_0 + $index * $concept_icon_size ;
     </g>
 
     <?php
-        if ($spec->hasAttribute(\App\CardAttributes\ImageInDevelopment::class)) {
+        if (\App\Reflection\hasAttribute($spec,\App\CardAttributes\ImageInDevelopment::class)) {
             echo \App\Strings\html(
                 'text',
                 ['x' => '50%', 'y' => '340', 'transform' => 'rotate(-30,375,340)', 'text-anchor' => 'middle', 'dominant-baseline' => "central", 'font-family' => "'Roboto Condensed', sans-serif", 'font-size' => "80px", 'fill' => '#ffffff', 'stroke' => '#000000', 'stroke-width' => '2'],
@@ -128,7 +129,7 @@ $x = $concept_x_0 + $index * $concept_icon_size ;
             )->toHtml();
         }
 
-    if ($spec->hasAttribute(\App\CardAttributes\IsIncomplete::class)) {
+    if (\App\Reflection\hasAttribute($spec,\App\CardAttributes\IsIncomplete::class)) {
             echo \App\Strings\html(
             'text',
             ['x' => '50%', 'y' => '50%', 'transform' => 'rotate(-30,375,525)', 'text-anchor' => 'middle', 'dominant-baseline' => "central", 'font-family' => "'Roboto Condensed', sans-serif", 'font-size' => "120px", 'fill' => '#ffffff', 'stroke' => '#000000', 'stroke-width' => '2'],

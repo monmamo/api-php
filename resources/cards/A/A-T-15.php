@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -11,7 +10,6 @@ return new
     #[Concept('Trait')]
     #[Concept('Lure')]
     #[Concept('Cost', 3)]
-    #[Prerequisites(y: 400)]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

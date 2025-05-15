@@ -9,10 +9,10 @@ use App\GeneralAttributes\Title;
 // https://game-icons.net/1x1/delapouite/split-arrows.html
 
 return new
-#[Title('Evasiveness')]
+    #[Title('Evasiveness')]
     #[Concept('Trait')]
     #[Concept('Cost', 3)]
-#[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
+    #[ImageCredit('Image by Delapouite on Game-Icons.net')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

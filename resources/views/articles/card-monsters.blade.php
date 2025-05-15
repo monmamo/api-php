@@ -24,7 +24,7 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
 <ul>
 <li>Replicate the monster in the prototype image in your own style.</li>
 <li>Put the monster in an appropriate setting or pose. (You do not need to copy the background in the existing image.)</li>
-<li>Make sure that the monster and its pose or setting is appropriate for the type of the monster and tghe context of the card. (For example, if the monster has a particular skill, the image must reflect or otherwise not contradict that skill.)</li>
+<li>Make sure that the monster and its pose or setting is appropriate for the type of the monster and the context of the card. (For example, if the monster has a particular skill, the image must reflect or otherwise not contradict that skill.)</li>
 <li>Communication about your project will take place on our <a href="{{config('external-urls.discord.url')}}">Discord server</a> or through email.
 </ul>
 
@@ -50,26 +50,19 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
 <p>These are the cards we are working on now:</p>
 
    <div class="container">
-      <div class="d-flex flex-row">
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-01" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-02" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-03" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-04" width="200"/></div>
-    </div>
     <div class="d-flex flex-row">
         <div class="p-2"><x-card :link="true" cardNumber="A-M-06" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-07" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-08" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-13" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-M-14" width="200"/></div>
     </div>
     <div class="d-flex flex-row">
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-14" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-15" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-16" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-18" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-M-19" width="200"/></div>
     </div>
     <div class="d-flex flex-row">
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-19" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-20" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-21" width="200"/></div>
     </div>
@@ -109,12 +102,5 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
     <div class="d-flex flex-row">
         <div class="p-2"><x-card :link="true" cardNumber="A-079" width="200"/></div>
     </div>
-
-Merry's portfolio
-A-M-05
-A-M-11
-A-M-12
-A-M-17
-A-A-05
---}}
+    --}}
     @endfragment

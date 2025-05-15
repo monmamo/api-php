@@ -7,7 +7,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-    #[ImageCredit('Icon by sbed on Game-Icons.net under CC BY 3.0')]
+    #[ImageCredit('Icon by sbed on Game-Icons.net')]
     #[Title('Acid')]
     #[FlavorText(['Corrosive substance that can dissolve materials.', 'It is often used in manufacturing and cleaning.'])]
     class(__FILE__) implements CardComponents

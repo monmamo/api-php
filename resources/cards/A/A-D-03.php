@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -12,7 +11,7 @@ return new
 #[Concept('Defense')]
 #[Concept('Energos')]
 #[Concept('Level', 20)]
-#[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
+#[ImageCredit('Icon by Lorc on Game-Icons.net')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

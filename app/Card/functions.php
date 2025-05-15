@@ -13,6 +13,20 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 
 /**
+ * @group binary
+ */
+function dimension($source, bool $in_inches = false): float
+{
+    $base_value = match (true) {
+        \is_string($source) => \config('card-design.' . $source) ,
+        \is_numeric($source) => $source,
+        default => \dd($source)
+    };
+
+    return $in_inches ? $base_value / \config('card-design.dots_per_inch') : $base_value;
+}
+
+/**
  * @group unary
  */
 function cardNumber($source): string

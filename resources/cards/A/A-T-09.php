@@ -10,7 +10,7 @@ return new
 #[Title('Oozing Effluvia')]
 #[Concept('Trait')]
 #[Concept('Cost', 3)]
-#[ImageCredit('Icon by Lorc from Game-Icons.net under CC BY 3.0')]
+#[ImageCredit('Icon by Lorc from Game-Icons.net')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

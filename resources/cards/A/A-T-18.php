@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -12,7 +11,6 @@ return new
 #[Concept('Trait')]
 #[ImageCredit('Icon by Rafiico Creative from Noun Project')]
 #[Concept('Cost', 3)]
-#[Prerequisites(y: 455)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

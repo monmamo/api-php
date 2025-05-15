@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Hard Reset')]
 #[Concept('Draw')]
-#[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
+#[ImageCredit('Image by Delapouite on Game-Icons.net')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

@@ -11,6 +11,7 @@ return new
     #[Concept('Attack')]
     #[Concept('Physical')]
     #[Concept('Level', 10)]
+    #[Concept('Cost', 3)]
     #[ImageCredit('Icon by M. Oki Orlando via The Noun Project')]
 
     // icon is 28 => 650x450

@@ -10,7 +10,7 @@ return new
 #[Title('Agility')]
 #[Concept('Trait')]
 #[Concept('Physical')]
-#[ImageCredit('Image by DarkZaitzev on Game-Icons.net under CC BY 3.0')]
+#[ImageCredit('Image by DarkZaitzev on Game-Icons.net')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

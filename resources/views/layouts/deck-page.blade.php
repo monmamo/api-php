@@ -6,7 +6,7 @@ if(isset($_GET['print'])) {
     ?>
 <html>
 @foreach($deck->chunk( 9) as $chunk)
-<x-card-sheet :cards="$chunk" :distinct_cards="$deck->distinctCards" />
+<x-card-sheet :cards="$chunk"  />
     @endforeach
 </html>
 <?php
@@ -16,7 +16,7 @@ if(isset($_GET['print'])) {
 else if(isset($_GET['png'])) {
     ?>
 <html>
-    <x-card-sheet :abreast="ceil(sqrt($deck->count()))" :cards="$deck->cards" :distinct_cards="$deck->distinctCards" />
+    <x-card-sheet :abreast="ceil(sqrt($deck->count()))" :cards="$deck->cards"  />
 
 <script>
 document.addEventListener('DOMContentLoaded', convertSVGtoImg('png'), false);

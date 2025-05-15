@@ -66,7 +66,9 @@ $concepts = $spec->concepts();
             @foreach($concepts as $index => $concept)
             <p><svg width="30" height="30"><x-icons.inline.concept size="30" :$concept /></svg> {{$concept->type}}</p>
             @endforeach
+            @if(method_exists($spec, 'webpageContent'))
             <?= \App\Strings\render(...$spec->webpageContent()); ?>
+            @endif
         </div>
     <div class="flex-shrink-1 align-items-end">
             <div class="pt-2" hx-get="#"  hx-trigger="dblclick" hx-target="svg.has-context-menu">

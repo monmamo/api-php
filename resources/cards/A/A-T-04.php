@@ -11,7 +11,7 @@ return new
     #[Concept('Trait')]
     #[Concept('Size', '+1')]
     #[Concept('Cost', 2)]
-    #[ImageCredit('Image by Lorc on Game-Icons.net')]
+    #[ImageCredit('Icon by Lorc on Game-Icons.net')]
     // <image x="0" y="0" class="hero" href="AT28" /> pikisuperstar on Freepik   "source": "https://www.freepik.com/free-vector/hand-drawn-brain-cartoon-illustration_53573325.htm"
     class(__FILE__) implements CardComponents
     {

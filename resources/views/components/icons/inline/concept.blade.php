@@ -1,7 +1,10 @@
-@props(['fill','badge','value','concept','x'=>0,'size'])
+@props(['fill','badge','value','concept'=>null,'x'=>0,'y'=>0,'size'])
 
 <?php
-assert(!isset($concept) || $concept instanceof \App\Concept);
+$concept = match(true) {
+    $concept instanceof \App\Concept => $concept,
+    is_string($concept) => new \App\Concept($concept)
+};
 
 $badge ??= $concept->badge ?? null;
 $value ??= $concept->value ?? false;
@@ -23,6 +26,14 @@ if ($value!==false) {
     $viewBox = \App\Strings\viewBox(width: 512, height: 512);
 }
 
+$debug = env('DEBUG') ?? false;
+$debug_opacity = match (true) {
+    $debug === true => 1,
+    $debug === false => 0,
+    $debug === 'true' => 1,
+    $debug === 'false' => 0,
+    default => $debug
+};
 ?>
 
 @once
@@ -32,6 +43,9 @@ if ($value!==false) {
 @endonce
 
 <symbol id="{{$concept->type}}-symbol" width="{{$width}}" height="{{$size}}" viewBox="{{$viewBox}}">
+    <g fill-opacity="<?= $debug_opacity ?>">
+        <rect x="0" y="0" width="100%" height="100%" fill="#FFFF00" />
+    </g>
     <g fill="{{$fill}}" fill-opacity="1">{{view(($type).".icon")}}</g>
 
     @isset($badge) 
@@ -43,4 +57,4 @@ if ($value!==false) {
         @endif
 
 </symbol>
-<use href="#{{$concept->type}}-symbol" x="{{$actual_x}}" y="0" width="{{$width}}" height="{{$size}}" class="concept-icon" />
+<use href="#{{$concept->type}}-symbol" x="{{$actual_x}}" y="{{$y}}" width="{{$width}}" height="{{$size}}" class="concept-icon" />

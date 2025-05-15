@@ -3,14 +3,11 @@
 namespace App\CardAttributes;
 
 use App\Concept;
-use App\Concerns\Reflection;
 use App\GeneralAttributes\Title;
 
 #[\Attribute(\Attribute::TARGET_CLASS)]
 trait DefaultCardAttributes
 {
-    use Reflection;
-
     private array $_concepts;
 
     private $_flavor_text_attribute;
@@ -19,18 +16,24 @@ trait DefaultCardAttributes
 
     private $_prerequisites_attribute;
 
-    private readonly string $card_number;
+    private readonly \ReflectionClass $_reflection;
 
+    /**
+     * @group unary
+     */
     public function __construct($path)
     {
         $this->card_number = \basename($path, '.php');
     }
 
+    /**
+     * @group nonary
+     */
     private function _concepts(): array
     {
         return $this->_concepts ??= \array_map(
             fn ($attribute) => $attribute->newInstance(),
-            $this->getAttributes(Concept::class),
+            \App\Reflection\getAttributes($this, Concept::class),
         );
         // \array_walk($concepts, function ($concept): void {
         //     \assert($concept instanceof Concept);
@@ -40,11 +43,20 @@ trait DefaultCardAttributes
     /**
      * @group nonary
      */
+    protected function reflection(): \ReflectionClass
+    {
+        return $this->_reflection ?? new \ReflectionClass($this);
+    }
+
+    /**
+     * @group nonary
+     */
     public function background(): \Traversable
     {
         $concepts = $this->concepts();
 
-        yield $this->withAttribute(
+        yield \App\Reflection\withAttribute(
+            $this,
             LocalBackgroundImage::class,
         ) ?? match (true) {
             (\count($concepts) === 0) => '<' . 'x-card.background' . ' />',
@@ -58,22 +70,13 @@ trait DefaultCardAttributes
      */
     public function cardNameColor(): string
     {
-        $attributes = $this->getAttributes(CardNameColor::class);
+        $attributes = $this->reflection()->getAttributes(CardNameColor::class);
 
         if (\count($attributes) > 0) {
             return $attributes[0]->getArguments()[0];
         }
 
         return 'white';
-    }
-
-
-    /**
-     * @group nonary
-     */
-    public function system(): string
-    {
-        return "ALL GAMES";
     }
 
     /**
@@ -111,7 +114,7 @@ trait DefaultCardAttributes
      */
     public function creditColor(): string
     {
-        $attributes = $this->getAttributes(CreditColor::class);
+        $attributes = $this->reflection()->getAttributes(CreditColor::class);
 
         if (\count($attributes) > 0) {
             return $attributes[0]->getArguments()[0];
@@ -150,13 +153,13 @@ trait DefaultCardAttributes
             return $this->imageCredit;
         }
 
-        $attributes = $this->getAttributes(IsGeneratedImage::class);
+        $attributes = $this->reflection()->getAttributes(IsGeneratedImage::class);
 
         if (\count($attributes) > 0) {
             return 'Generated image';
         }
 
-        $attributes = $this->getAttributes(ImageCredit::class);
+        $attributes = $this->reflection()->getAttributes(ImageCredit::class);
         return \count($attributes) > 0 ? $attributes[0]->getArguments()[0] : null;
     }
 
@@ -165,7 +168,7 @@ trait DefaultCardAttributes
      */
     public function name(): string
     {
-        $attributes = $this->getAttributes(Title::class);
+        $attributes = $this->reflection()->getAttributes(Title::class);
 
         if (\count($attributes) > 0) {
             return $attributes[0]->getArguments()[0];
@@ -184,7 +187,7 @@ trait DefaultCardAttributes
         //     $prerequisites = [];
         //     $y = 475 + 25 * (\transform($this->flavorTextAttribute(), fn ($attribute): int => \count($attribute->lines())) ?? 1);
         //     $color = '#000000';
-        //     $attributes = $this->getAttributes(Prerequisites::class);
+        //     $attributes = $this->reflection()->getAttributes(Prerequisites::class);
 
         //     if (\count($attributes) > 0) {
         //         $object = $attributes[0]->newInstance();
@@ -206,8 +209,16 @@ trait DefaultCardAttributes
      */
     public function set(): string
     {
-        $attributes = $this->getAttributes(CardSet::class);
+        $attributes = $this->reflection()->getAttributes(CardSet::class);
         return \count($attributes) > 0 ? $attributes[0]->getArguments()[0] : 'Unknown';
+    }
+
+    /**
+     * @group nonary
+     */
+    public function system(): string
+    {
+        return 'ALL GAMES';
     }
 
     /**

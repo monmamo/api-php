@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -13,7 +12,6 @@ return new
 #[Concept('Physical')]
 #[Concept('Cost', 3)]
 #[ImageCredit('Icon by M. Oki Orlando via The Noun Project')]
-#[Prerequisites(y: 420)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

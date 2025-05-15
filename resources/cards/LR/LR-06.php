@@ -1,0 +1,35 @@
+<?php
+
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
+use App\CardAttributes\Prerequisites;
+use App\CardAttributes\RaidCardAttributes;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
+
+return new
+#[Title('Floor Plan')]
+#[Concept('Cost', 7)]
+#[ImageCredit('Icon by Graphtend from Noun Project')]
+#[Prerequisites([])]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
+    use RaidCardAttributes { RaidCardAttributes::system insteadof DefaultCardAttributes; }
+
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
+
+
+<x-card.hero.svg viewBox="-5.0 -10.0 110.0 135.0">
+ <path d="m10.184 11.109c-2.5352 0-4.6289 2.0938-4.6289 4.6289v68.52c0 2.5352 2.0938 4.6289 4.6289 4.6289h61.113c2.2695 0 4.4453-0.90234 6.0508-2.5078l14.586-14.586c1.6094-1.6016 2.5117-3.7812 2.5117-6.0469v-50.004c0-2.5352-2.0938-4.6328-4.6289-4.6328zm79.633 3.707c0.53516 0 0.92578 0.39453 0.92578 0.92578v50.004c0 0.3125-0.03125 0.62109-0.089844 0.92578h-13.797c-2.5352 0-4.6289 2.0938-4.6289 4.6289v13.793c-0.30078 0.058594-0.60937 0.089844-0.92187 0.089844h-61.121c-0.53516 0-0.92578-0.39453-0.92578-0.92578v-68.516c0-0.53516 0.39453-0.92578 0.92578-0.92578h79.629zm-74.996 3.7031c-1.0234 0-1.8555 0.82812-1.8555 1.8516v59.258c0 1.0234 0.82812 1.8516 1.8516 1.8516h50c1.0234 0 1.8516-0.82812 1.8516-1.8516l0.003906-31.48c0-1.0234-0.83203-1.8516-1.8516-1.8516h-12.965v-25.926c0-1.0234-0.82812-1.8516-1.8516-1.8516zm59.254 0c-1.0234 0-1.8516 0.82812-1.8516 1.8516v40.742c0 1.0234 0.82812 1.8516 1.8516 1.8516 1.0234 0 1.8516-0.82812 1.8516-1.8516v-40.742c0-1.0234-0.82812-1.8516-1.8516-1.8516zm-57.402 3.7031h13.887v24.074h-13.887zm17.594 0h13.887v24.074h-13.891zm-17.594 27.777h31.48v18.523c0 1.0234 0.82812 1.8516 1.8516 1.8516 1.0234 0 1.8516-0.82812 1.8516-1.8516v-18.523h11.109v27.777h-46.293zm60.18 20.375h11.27l-12.195 12.195v-11.27c0-0.53516 0.39453-0.92578 0.92578-0.92578z" fill="#ffffff" fill-opacity="1"/></x-card.hero.svg>
+
+<x-card.cardrule lines="3">
+<x-card.normalrule>Take 1d6 Evidence points.</x-card.normalrule>
+</x-card.cardrule>
+
+HTML;
+    }
+};

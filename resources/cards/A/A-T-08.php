@@ -10,7 +10,7 @@ return new
     #[Title('Natural Healing')]
     #[Concept('Trait')]
     #[Concept('Cost', 3)]
-    #[ImageCredit('Image by Lorc and sbed on Game-Icons.net')]
+    #[ImageCredit('Icon by Lorc and sbed on Game-Icons.net')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

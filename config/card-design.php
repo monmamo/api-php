@@ -76,4 +76,4 @@ $concept = [
     'topline' => $titlebox['y'],
 ];
 
-return \compact('physical', 'height', 'width', 'icon', 'trimbox', 'viewbox', 'titlebox', 'hero', 'primary_rule_height', 'secondary_rule_height', 'concept');
+return \compact('dots_per_inch', 'physical', 'height', 'width', 'icon', 'trimbox', 'viewbox', 'titlebox', 'hero', 'primary_rule_height', 'secondary_rule_height', 'concept');

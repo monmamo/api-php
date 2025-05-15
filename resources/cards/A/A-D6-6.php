@@ -4,7 +4,7 @@ use App\Card\DiceRollCard;
 use App\CardAttributes\ImageCredit;
 
 return new
-#[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
+#[ImageCredit('Image by Delapouite on Game-Icons.net')]
 class(path: __FILE__, value: 6) extends DiceRollCard
 {
     public function heroSvg(): string

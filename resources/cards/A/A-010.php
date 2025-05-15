@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Private Event')]
 #[Concept('Environment')]
-    #[ImageCredit('Icon by Delapouite on Game-Icons.net under CC BY 3.0')]
+    #[ImageCredit('Icon by Delapouite on Game-Icons.net')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

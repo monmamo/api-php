@@ -7,20 +7,18 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[Title('Belches Loudly')]
-#[Concept('Trait')]
-#[Concept('Size', '+1')]
-#[Concept('Cost', 3)]
-
-#[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
-
-class(__FILE__) implements CardComponents
-{
-    use DefaultCardAttributes;
-
-    public function content(): \Traversable
+    #[Title('Belches Loudly')]
+    #[Concept('Trait')]
+    #[Concept('Size', '+1')]
+    #[Concept('Cost', 3)]
+    #[ImageCredit('Icon by Lorc on Game-Icons.net')]
+    class(__FILE__) implements CardComponents
     {
-        yield <<<'HTML'
+        use DefaultCardAttributes;
+
+        public function content(): \Traversable
+        {
+            yield <<<'HTML'
 <x-card.hero.svg>
 <path d="M256.813 34.094C224.143 34.094 193.987 53.718 171.438 87.219C148.888 120.719 134.594 167.777 134.594 219.905C134.594 272.033 148.888 319.092 171.438 352.593C193.988 386.093 224.143 405.718 256.813 405.718C289.483 405.718 319.638 386.092 342.188 352.592C364.738 319.092 379.063 272.032 379.063 219.904C379.063 167.776 364.737 120.717 342.188 87.217C319.638 53.715 289.482 34.091 256.813 34.091Z" fill="#808080" fill-opacity="1"></path>
 <path d="M64.405 127.47C26.542 182.658 12.175 253.02 30.843 322.688C54.659 411.578 125.865 474.81 210.093 492.938C145.894 460.577 90.12 390.486 65.874 300C49.537 239.025 50.266 178.672 64.406 127.47Z" class="" fill="#fff" fill-opacity="0.50"></path>
@@ -38,5 +36,5 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>All Monsters present take 1 @damage damage.</x-card.normalrule>
 </x-card.cardrule>
 HTML;
-    }
-};
+        }
+    };

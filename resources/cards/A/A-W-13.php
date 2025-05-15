@@ -1,22 +1,28 @@
 <?php
+
+use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageCredit;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
+use App\Concept;
+use App\Contracts\Card\CardComponents;
+use App\GeneralAttributes\Title;
 
 return new
-    #[\App\GeneralAttributes\Title("Can of Paint")]
-    #[\App\Concept("Weapon")]
-    #[\App\Concept("Item")]
-    #[\App\CardAttributes\ImageCredit("")]
-    #[\App\CardAttributes\Prerequisites([])]
+    #[Title('Can of Paint')]
+    #[Concept('Item')]
+    #[Concept('Weapon')]
     #[IsGeneratedImage]
     #[ImageIsPrototype]
-    class(__FILE__) implements \App\Contracts\Card\CardComponents {
-        use \App\CardAttributes\DefaultCardAttributes;
+    class(__FILE__) implements CardComponents
+    {
+        use DefaultCardAttributes;
+
         public function content(): \Traversable
         {
             yield '<x-card.hero.local>hero/A-W-13.png</x-card.hero.local>';
 
-            yield <<<HTML
+            yield <<<'HTML'
 
 <x-card.flavortext>Cover the earth. Eh, just your enemies.</x-card.flavortext>
 

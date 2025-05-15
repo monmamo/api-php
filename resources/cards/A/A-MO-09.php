@@ -11,7 +11,7 @@ return new
 #[Concept('Vehicle')]
 #[Concept('Cumulative')]
 #[Concept('Integrity', '2')]
-#[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
+#[ImageCredit('Image by Delapouite on Game-Icons.net')]
 
 class(__FILE__) implements CardComponents
 {

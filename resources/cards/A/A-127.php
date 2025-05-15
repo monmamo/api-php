@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -18,7 +17,6 @@ return new
 #[Concept('Speed', 3)]
 #[IsGeneratedImage]
 #[ImageIsPrototype]
-#[Prerequisites(y: 470)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

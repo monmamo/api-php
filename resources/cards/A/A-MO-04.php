@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -17,7 +16,6 @@ return new
 #[Concept('Size', 3)]
 #[Concept('Speed', 2)]
 #[ImageCredit('Icon by Designing Hub from Noun Project')]
-#[FlavorText(lines: ['Hacking is getting other people to do strange things.', '- Steve Wozniak'])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -37,6 +35,11 @@ class(__FILE__) implements CardComponents
  <path d="m50 81.406c-2.6328 0-5.0078-1.5859-6.0156-4.0156-1.0078-2.4336-0.44922-5.2344 1.4141-7.0938 1.8594-1.8633 4.6602-2.4219 7.0938-1.4141 2.4297 1.0078 4.0156 3.3828 4.0156 6.0156-0.003906 3.5938-2.9141 6.5039-6.5078 6.5078zm0-9.8945v0.003906c-1.3672 0-2.6016 0.82422-3.1289 2.0859-0.52344 1.2656-0.23438 2.7227 0.73438 3.6914s2.4258 1.2578 3.6914 0.73438c1.2617-0.52734 2.0859-1.7617 2.0859-3.1289 0-1.8672-1.5156-3.3828-3.3828-3.3867z"/>
     </g>
 </svg>
+
+<x-card.flavortext>
+    <x-card.flavortext.line dy="0">Hacking is getting other people to do strange things.</x-card.flavortext.line>
+    <x-card.flavortext.line>- Steve Wozniak</x-card.flavortext.line>
+    </x-card.flavortext>
 
         <x-card.phaserule type="Upkeep" lines="4">
             <text >

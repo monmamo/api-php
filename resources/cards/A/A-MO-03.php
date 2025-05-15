@@ -5,7 +5,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -20,7 +19,6 @@ return new
 #[Concept('Speed', 4)]
 #[IsGeneratedImage]
 #[ImageIsPrototype]
-#[Prerequisites(y: 460, lines: ['Limit 1 per player on the Battlefield.'])]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -29,6 +27,10 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.hero.local>A072.png</x-card.hero.local>
+
+<x-card.cardrule y="500" height="55" >
+<x-card.normalrule>{{\trans_choice('rules.player-limit', 1)}}</x-card.normalrule>
+</x-card.cardrule>
 
 <x-card.phaserule type="Upkeep" lines="5">
 <text >

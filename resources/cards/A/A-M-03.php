@@ -1,9 +1,8 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageIsPrototype;
+use App\CardAttributes\ImageCredit;
 use App\CardAttributes\ImagePrompt;
-use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -17,8 +16,7 @@ return new
     #[Concept('Size', 5)]
     #[Concept('Speed', 3)]
     #[Concept('Boost', 3)]
-    #[IsGeneratedImage]
-    #[ImageIsPrototype]
+    #[ImageCredit('Image by Nilanjan Animesh')]
     #[ImagePrompt('brown cat of weird zoology swimming in a lake')]
     class(__FILE__) implements CardComponents
     {
@@ -27,7 +25,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.hero.local>hero/A-M-03.png</x-card.hero.local>
+    <x-card.hero.local>hero/A-M-03.jpg</x-card.hero.local>
 
     <x-card.taxons>Aquos, Felos</x-card.taxons>
 

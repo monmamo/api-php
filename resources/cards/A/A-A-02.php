@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -12,6 +11,7 @@ return new
     #[Concept('Attack')]
     #[Concept('Physical')]
     #[Concept('Level', 40)]
+    #[Concept('Cost', 5)]
         #[ImageCredit('Icon by iconixar from the Noun Project')]
     class(__FILE__) implements CardComponents
     {

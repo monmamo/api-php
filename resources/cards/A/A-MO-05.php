@@ -1,16 +1,10 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
-
-if (!\defined('PLAYER_LIMIT_PREREQUISITE')) {
-    \define('PLAYER_LIMIT_PREREQUISITE', \trans_choice('rules.player-limit', 1));
-}
 
 return new
     #[Title('Neighborhood &#x201C;Protection&#x201D;')]
@@ -20,8 +14,6 @@ return new
     #[Concept('Size', 5)]
     #[Concept('Speed', 2)]
     #[ImageCredit('Image by fxquadro on Freepik')]
-    #[FlavorText(['Nice monster team you got there.', 'Would be a shame if something happened to it.'])]
-    #[Prerequisites(y: 525, lines: [PLAYER_LIMIT_PREREQUISITE])]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -30,6 +22,15 @@ return new
         {
             yield <<<'HTML'
     <x-card.hero.local>A186.jpg</x-card.hero.local>
+
+    <x-card.flavortext>
+    <x-card.flavortext.line>Nice monster team you got there.</x-card.flavortext.line>
+    <x-card.flavortext.line>Would be a shame if something happened to it.</x-card.flavortext.line>
+    </x-card.flavortext>
+
+    <x-card.cardrule y="500" height="55" >
+<x-card.normalrule>{{\trans_choice('rules.player-limit', 1)}}</x-card.normalrule>
+</x-card.cardrule>
 
     <x-card.phaserule type="Draw" lines="3">
         <text>

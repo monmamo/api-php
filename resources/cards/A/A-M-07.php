@@ -2,9 +2,7 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\ImagePrompt;
-use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -18,9 +16,7 @@ return new
     #[Concept('Size', 3)]
     #[Concept('Speed', 5)]
     #[Concept('Boost', 2)]
-    #[IsGeneratedImage]
-#[ImageIsPrototype]
-    #[\App\CardAttributes\ImageInDevelopment()]
+    #[ImageCredit('Image by Merry Shuporna Biswas')]
     #[ImagePrompt('yellow electric dog monster of weird zoology in a factory')]
     class(__FILE__) implements CardComponents
     {
@@ -29,7 +25,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.hero.local>hero/A-M-07.png</x-card.hero.local>
+    <x-card.hero.local>hero/A-M-07.jpg</x-card.hero.local>
 
     <x-card.taxons>Energos, Canos</x-card.taxons>
 

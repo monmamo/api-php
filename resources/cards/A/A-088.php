@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Zombie')]
 #[Concept('Bane')]
-#[ImageCredit('Image by Delapouite via Game-Icons.net, used under CC BY 3.0')]
+#[ImageCredit('Image by Delapouite via Game-Icons.net')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

@@ -1,19 +1,19 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageInDevelopment;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
-//;
 
 return new
 #[Title('Halitosis')]
 #[Concept('Bane')]
 #[IsGeneratedImage]
+#[ImageInDevelopment()]
 #[ImageIsPrototype]
     class(__FILE__) implements CardComponents
     {

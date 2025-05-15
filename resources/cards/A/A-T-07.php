@@ -12,7 +12,7 @@ return new
 #[Title('Cunning')]
 #[Concept('Trait')]
 #[Concept('Cost', 2)]
-#[ImageCredit('Icon by Caro Asercion under CC BY 3.0')]
+#[ImageCredit('Icon by Caro Asercion')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

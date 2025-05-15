@@ -1,7 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImageInDevelopment;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
@@ -19,17 +19,17 @@ return new
     #[Concept('Boost', 4)]
     #[IsGeneratedImage]
 #[ImageIsPrototype]
-    #[ImageCredit(null)]
-    class(__FILE__) implements CardComponents
-    {
-        use DefaultCardAttributes;
+#[ImageInDevelopment()]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-        public function content(): \Traversable
-        {
-            yield <<<'HTML'
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
     <x-card.hero.local>hero/felequos.png</x-card.hero.local>
 
     <x-card.taxons>Felequos</x-card.taxons>
 HTML;
-        }
-    };
+    }
+};

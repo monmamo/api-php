@@ -10,7 +10,7 @@ return new
 #[Title('Quick Feet')]
 #[Concept('Trait')]
 #[Concept('Cost', 1)]
-#[ImageCredit('Image by Lorc from Game-Icons.net')]
+#[ImageCredit('Icon by Lorc from Game-Icons.net')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

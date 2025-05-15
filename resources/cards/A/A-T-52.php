@@ -11,7 +11,7 @@ return new
 #[IsIncomplete]
 #[Title('Night Vision')]
 #[Concept('Trait')]
-#[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')] // 'https://game-icons.net/1x1/delapouite/night-vision.html',
+#[ImageCredit('Image by Delapouite on Game-Icons.net')] // 'https://game-icons.net/1x1/delapouite/night-vision.html',
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

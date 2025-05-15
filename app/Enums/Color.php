@@ -12,7 +12,7 @@ enum Color: string
     case AttackGradientTop = '#A10000';
     case BaneColor = '#797c00';
     case BaneGradientBottom = '#3c2600';
-    case BaneGradientTop = '#b6B200';
+    case BaneGradientTop = '#b57200';
     case Black = '#000000';
     case Blue = '#0000FF';
     case Brown = '#A52A2A';

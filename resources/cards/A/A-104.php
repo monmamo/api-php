@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Gaze')]
 #[Concept('Skill')]
-#[ImageCredit('Icon by Lorc on Game-Icons.net under CC BY 3.0')]
+#[ImageCredit('Icon by Lorc on Game-Icons.net')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

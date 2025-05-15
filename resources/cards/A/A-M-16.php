@@ -2,6 +2,7 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -18,7 +19,7 @@ return new
     #[Concept('Boost', '3')]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
-    #[\App\CardAttributes\ImageInDevelopment()]
+    #[ImageIsPrototype]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

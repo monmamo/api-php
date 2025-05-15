@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -16,7 +15,7 @@ return new
   #[Concept('Size', 3)]
   #[Concept('Speed', 5)]
   #[ImageCredit('Icon by InYoung Park from Noun Project')]
-  
+
   // A188.jpg
   class(__FILE__) implements CardComponents
   {
@@ -30,14 +29,13 @@ return new
 </x-card.hero.svg>
 HTML;
 
-yield <<<'HTML'
+          yield <<<'HTML'
 <x-card.cardrule y="490" height="110" >
 <x-card.smallrule>{{\trans_choice('rules.player-limit', 1)}}</x-card.smallrule>
 <x-card.smallrule>You may choose to make this card Male</x-card.smallrule>
 <x-card.smallrule>when you put it on the Battlefield.</x-card.smallrule>
 </x-card.cardrule>
 HTML;
-
 
           yield <<<'HTML'
 <x-card.phaserule type="Resolution" lines="4">

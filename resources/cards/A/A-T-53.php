@@ -10,7 +10,7 @@ return new
 #[Title('Eyes on Stalks')]
 #[Concept('Trait')]
 #[Concept('Speed', '+2')]
-#[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')] // https://game-icons.net/1x1/lorc/eyestalk.html
+#[ImageCredit('Icon by Lorc on Game-Icons.net')] // https://game-icons.net/1x1/lorc/eyestalk.html
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

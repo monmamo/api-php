@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Apple')]
     #[Concept('Item')]
-    #[ImageCredit('Image by Lorc on Game-Icons.net')]
+    #[ImageCredit('Icon by Lorc on Game-Icons.net')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

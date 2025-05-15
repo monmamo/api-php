@@ -13,7 +13,7 @@ return new
     #[Concept('DamageCapacity', 13)]
     #[Concept('Size', 4)]
     #[Concept('Speed', 4)]
-    #[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')] // https://game-icons.net/1x1/delapouite/spy.html
+    #[ImageCredit('Image by Delapouite on Game-Icons.net')] // https://game-icons.net/1x1/delapouite/spy.html
     #[Title('Spy')]
     #[Prerequisites('No limit on battlefield.')]
     class(__FILE__) implements CardComponents

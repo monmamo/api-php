@@ -2,6 +2,7 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImageInDevelopment;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\ImagePrompt;
 use App\CardAttributes\IsGeneratedImage;
@@ -19,7 +20,8 @@ return new
     #[Concept('Speed', 4)]
     #[Concept('Boost', '4')]
     #[IsGeneratedImage]
-#[ImageIsPrototype]
+    #[ImageIsPrototype]
+    #[ImageInDevelopment]
     #[ImagePrompt('blue selkie of weird zoology swimming in a lake, trees and mountains in the background')]
     #[ImageCredit(null)]
     class(__FILE__) implements CardComponents

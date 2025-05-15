@@ -2,9 +2,7 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\ImagePrompt;
-use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -18,18 +16,16 @@ return new
     #[Concept('Size', 6)]
     #[Concept('Speed', 3)]
     #[Concept('Boost', 4)]
-    #[IsGeneratedImage]
-#[ImageIsPrototype]
     #[ImagePrompt('blue seal of weird zoology swimming in a lake, trees and mountains in the background')]
-    #[ImageCredit(null)]
-    class(__FILE__) implements CardComponents
-    {
-        use DefaultCardAttributes;
-
-        public function content(): \Traversable
+    #[ImageCredit('Image by Nilanjan Animesh')]
+        class(__FILE__) implements CardComponents
         {
-            yield <<<'HTML'
-    <x-card.hero.local>hero/A-M-04.jpeg</x-card.hero.local>
+            use DefaultCardAttributes;
+
+            public function content(): \Traversable
+            {
+                yield <<<'HTML'
+    <x-card.hero.local>hero/A-M-04.jpg</x-card.hero.local>
 
     <x-card.taxons>Aquos, Otarys</x-card.taxons>
 
@@ -42,5 +38,5 @@ return new
 </text>
 </x-card.phaserule>
 HTML;
-        }
-    };
+            }
+        };

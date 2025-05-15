@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -15,7 +14,6 @@ return new
     #[Concept('Physical')]
     #[Concept('Size', '+1')]
     #[Concept('Cost', 3)]
-    #[Prerequisites(y: 490)]
     #[ImageCredit('Image by wirestock on Freepik')]
     class(__FILE__) implements CardComponents
     {

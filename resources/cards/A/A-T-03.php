@@ -2,8 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\ImageIsPrototype;
-use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -13,7 +11,7 @@ return new
     #[Concept('Trait')]
     #[Concept('Speed', '+?')]
     #[Concept('Cost', 3)]
-    #[ImageCredit('Image by Nilanjan Malakar')]
+    #[ImageCredit('Image by Nilanjan Animesh')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -21,6 +19,8 @@ return new
         public function content(): \Traversable
         {
             yield '<x-card.hero.local>hero/A-T-03.jpg</x-card.hero.local>';
+
+            yield '<x-card.flavortext>You won\'t like him when he\'s angry.</x-card.flavortext>';
 
             yield <<<'HTML'
 <x-card.phaserule type="Resolution" lines="2"><text>

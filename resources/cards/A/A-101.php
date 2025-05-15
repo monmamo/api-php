@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Gather Fire')]
 #[Concept('Draw')]
-#[ImageCredit('Icon by Carl Olsen under CC BY 3.0 on Game-Icons.Net')]
+#[ImageCredit('Icon by Carl Olsen on Game-Icons.Net')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

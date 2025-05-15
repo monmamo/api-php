@@ -10,7 +10,7 @@ return new
 #[Title('Trained while Blindfolded')]
 #[Concept('Trait')]
 #[Concept('Speed', '+3')]
-#[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')] // https://game-icons.net/1x1/delapouite/blindfold.html
+#[ImageCredit('Image by Delapouite on Game-Icons.net')] // https://game-icons.net/1x1/delapouite/blindfold.html
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

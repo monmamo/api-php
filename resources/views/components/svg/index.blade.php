@@ -14,7 +14,8 @@ try {
     $x = (float) ($x ?? $dx * ($width + $padding)) ;
     $y = (float) ($y ?? $dy * ($height+ $padding));
     $viewBox ??= match(true) {
-        isset($icon) => "0 0 512 512",default => "0 0 $width $height"
+        isset($icon) => "0 0 512 512",
+        default => "0 0 $width $height"
     };
 } catch (\ErrorException $e) {
     dump($attributes->getAttributes());

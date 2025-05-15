@@ -1,6 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageInDevelopment;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\ImagePrompt;
 use App\CardAttributes\IsGeneratedImage;
@@ -18,7 +19,8 @@ return new
     #[Concept('Speed', 3)]
     #[Concept('Boost', '2')]
     #[IsGeneratedImage]
-#[ImageIsPrototype]
+    #[ImageIsPrototype]
+    #[ImageInDevelopment]
     #[ImagePrompt('lavender cat monster of weird zoology by a lake')]
     class(__FILE__) implements CardComponents
     {

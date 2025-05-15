@@ -13,7 +13,7 @@ return new
 #[Concept('Cumulative')]
 #[Concept('Male')]
 #[Concept('Integrity', '2')]
-#[ImageCredit('Image by Delapouite on Game-Icons.net under CC BY 3.0')]
+#[ImageCredit('Image by Delapouite on Game-Icons.net')]
 #[Prerequisites(['A player may have any number of Drivers on the Battlefield.', 'You may choose to make this card Female', 'when you put it on the Battlefield.'])]
 class(__FILE__) implements CardComponents
 {
