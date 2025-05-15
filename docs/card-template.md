@@ -12,7 +12,6 @@ return new
 #[Title('TITLE')]
 #[\App\Concept('Draw')]
 //#[ImageCredit('IMAGE_CREDIT')]
-#[FlavorText('FLAVOR_TEXT')]
 class implements CardComponents
 {
     use DefaultCardAttributes;
@@ -20,6 +19,7 @@ class implements CardComponents
     public function content(): \Traversable
     {
        yield <<<'HTML'
+<x-card.flavortext>FLAVOR_TEXT</x-card.flavortext>
 HTML;
     }
 };

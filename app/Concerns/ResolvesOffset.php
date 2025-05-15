@@ -61,7 +61,6 @@ trait ResolvesOffset
      *
      * @uses \App\Dumping\dumpLabeled
      * @uses \App\Concerns\ResolvesOffset::resolveValue
-     * @uses \App\Enums\Environments::rescue
      */
     private function _resolveValue(mixed $value, mixed $key)
     {

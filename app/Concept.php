@@ -80,6 +80,9 @@ class Concept implements HasIcon
         return \collect(self::disk()->directories())->sort();
     }
 
+    /**
+     * @group nonary
+     */
     public function background()
     {
         return \view($this->type . '.background');

@@ -17,7 +17,6 @@ final class Guest
      * @param \Closure(\Illuminate\Http\Request): (\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response) $next
      * @param null|string ...$guards
      *
-     * @uses \App\Enums\Environments::info
      * @uses \redirect (Laravel) Gets an instance of the redirector.
      *
      * @return \Illuminate\Http\Response Appropriate response for the request.

@@ -37,7 +37,6 @@ abstract class Stringable
      * @deprecated
      *
      * @uses \__ (Laravel) Translates the message given to it.
-     * @uses \App\Enums\Environments::rescue
      * @uses \App\Facades\Handler::glowWarning
      * @uses \get_debug_type (native) Returns the type of a variable, with special handling for objects.
      * @uses \is_null (native) Returns whether a variable is null.

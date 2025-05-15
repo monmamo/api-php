@@ -4,7 +4,6 @@ namespace App\Facades;
 
 use App\Enums\Environments;
 use Illuminate\Support\Facades\Facade;
-use Illuminate\Support\Str;
 
 final class Environment extends Facade
 {
@@ -76,12 +75,12 @@ final class Environment extends Facade
             $patterns = \is_array($environments[0]) ? $environments[0] : $environments;
 
             foreach ($patterns as $pattern) {
-                $pattern = match(true) {
+                $pattern = match (true) {
                     $pattern instanceof Environments => $pattern->value,
                     \is_string($pattern) => $pattern,
                     default => \App\Strings\unwrap($pattern),
                 };
-                
+
                 if ($pattern === $environment) {
                     return true;
                 }

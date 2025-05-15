@@ -16,12 +16,6 @@ interface CardComponents extends HasName
      */
     public function cardNameColor(): string;
 
-        /**
-         * String indicating the system or game that the card belongs to.
-     * @group nonary
-     */
-    public function system(): string;
-
     /**
      * @group nonary
      */
@@ -56,4 +50,11 @@ interface CardComponents extends HasName
      * @group nonary
      */
     public function set(): string;
+
+    /**
+     * String indicating the system or game that the card belongs to.
+     *
+     * @group nonary
+     */
+    public function system(): string;
 }
