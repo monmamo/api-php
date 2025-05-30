@@ -19,13 +19,13 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<text y="495" filter="url(#solid)">
+<x-card.cardrule  :lines="5">
 <x-card.smallrule>You can play this card only if you have </x-card.smallrule>
 <x-card.smallrule>4 or fewer other cards in your hand.</x-card.smallrule>
 <x-card.normalrule>Draw a card for each opposing Monster</x-card.normalrule>
 <x-card.normalrule>on the Battlefield.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
-</text>
+</x-card.cardrule>
 HTML;
     }
 };

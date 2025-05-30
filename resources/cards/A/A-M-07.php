@@ -11,11 +11,12 @@ return new
     #[Title('Canibuzz')]
     #[Concept('Monster')]
     #[Concept('Male')]
-    #[Concept('DamageCapacity', 16)]
     #[Concept('Level', 35)]
+    #[Concept('DamageCapacity', 16)]
     #[Concept('Size', 3)]
     #[Concept('Speed', 5)]
     #[Concept('Boost', 2)]
+    #[Concept('Cost', 7)]
     #[ImageCredit('Image by Merry Shuporna Biswas')]
     #[ImagePrompt('yellow electric dog monster of weird zoology in a factory')]
     class(__FILE__) implements CardComponents

@@ -18,11 +18,11 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<text y="495" filter="url(#solid)">
-<x-card.smallrule>{{ trans_choice('rules.player-limit',1) }}</x-card.smallrule>
-        </text>
-
 <x-card.flavortext>Touch is the best medicine.</x-card.flavortext>
+
+<x-card.cardrule y="580" :lines="1">
+<x-card.smallrule>{{ trans_choice('rules.player-limit',1) }}</x-card.smallrule>
+        </x-card.cardrule>
 
 <x-card.phaserule type="Resolution" :lines="3">
     <text >

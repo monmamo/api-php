@@ -24,6 +24,7 @@ trait DefaultCardAttributes
     public function __construct($path)
     {
         $this->card_number = \basename($path, '.php');
+        $this->card_series = \strrchr($this->card_number, '-', true);
     }
 
     /**
@@ -218,7 +219,13 @@ trait DefaultCardAttributes
      */
     public function system(): string
     {
-        return 'ALL GAMES';
+        return match ($this->card_series) {
+            'A-DB' => 'DECKBUILDER GAMES',
+            'RC' => 'Race for the Championship',
+            'LR' => 'Raid on Leaser Ridge',
+            'MS' => 'Mean Streets',
+            default => 'ALL GAMES'
+        };
     }
 
     /**

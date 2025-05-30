@@ -11,11 +11,12 @@ return new
     #[Title('Seaweed')]
     #[Concept('Monster')]
     #[Concept('Female')]
-    #[Concept('DamageCapacity', 23)]
     #[Concept('Level', 40)]
+    #[Concept('DamageCapacity', 23)]
     #[Concept('Size', 5)]
     #[Concept('Speed', 3)]
     #[Concept('Boost', 3)]
+    #[Concept('Cost', 8)]
     #[ImageCredit('Image by Nilanjan Animesh')]
     #[ImagePrompt('brown cat of weird zoology swimming in a lake')]
     class(__FILE__) implements CardComponents

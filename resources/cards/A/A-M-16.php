@@ -2,6 +2,7 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImageInDevelopment;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
@@ -12,14 +13,16 @@ return new
     #[Title('Greybeast')]
     #[Concept('Monster')]
     #[Concept('Male')]
-    #[Concept('DamageCapacity', 22)]
     #[Concept('Level', 42)]
+    #[Concept('DamageCapacity', 22)]
     #[Concept('Size', 5)]
     #[Concept('Speed', 2)]
     #[Concept('Boost', '3')]
+    #[Concept('Cost', 8)]
     #[IsGeneratedImage]
     #[ImageCredit(null)]
-    #[ImageIsPrototype]
+    #[ImageInDevelopment]
+        #[ImageIsPrototype]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

@@ -4,8 +4,6 @@ use App\Contracts\Card\CardComponents;
 
 return new class() implements CardComponents
 {
-    private readonly string $card_number;
-
     /**
      * @group nonary
      */

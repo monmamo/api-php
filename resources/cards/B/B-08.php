@@ -1,8 +1,6 @@
 <?php
+
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
-use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -24,5 +22,5 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>Discard all Item cards on the Battlefield.</x-card.normalrule>
     </text>
 HTML;
-}
+    }
 };

@@ -1,7 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImageInDevelopment;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\ImagePrompt;
 use App\CardAttributes\IsGeneratedImage;
@@ -13,15 +13,16 @@ return new
     #[Title('Zapcat')]
     #[Concept('Monster')]
     #[Concept('Female')]
-    #[Concept('DamageCapacity', 18)]
     #[Concept('Level', 40)]
+    #[Concept('DamageCapacity', 18)]
     #[Concept('Size', 5)]
     #[Concept('Speed', 3)]
     #[Concept('Boost', 3)]
+    #[Concept('Cost', 8)]
     #[ImagePrompt('yellow electric tiger monster of weird zoology')]
     #[IsGeneratedImage]
 #[ImageIsPrototype]
-    #[ImageCredit(null)]
+    #[ImageInDevelopment]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

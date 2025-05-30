@@ -11,6 +11,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Recycle')]
 #[Concept('Draw')]
+#[Concept('Cost', 3)]
 #[ImageCredit('Image by logturnal on Freepik')]
 
 class(__FILE__) implements CardComponents

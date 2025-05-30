@@ -11,11 +11,12 @@ return new
     #[Title('Yellowback')]
     #[Concept('Monster')]
     #[Concept('Female')]
-    #[Concept('DamageCapacity', 20)]
     #[Concept('Level', 35)]
+    #[Concept('DamageCapacity', 20)]
     #[Concept('Size', 5)]
     #[Concept('Speed', 2)]
     #[Concept('Boost', 2)]
+    #[Concept('Cost', 7)]
     #[ImageCredit('Image by Nilanjan Animesh')]
     #[ImagePrompt('blue and yellow otter of weird at the edge of the water on a beach')]
     class(__FILE__) implements CardComponents

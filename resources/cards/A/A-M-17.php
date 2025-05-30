@@ -10,11 +10,12 @@ return new
     #[Title('Bluefairy')]
     #[Concept('Monster')]
     #[Concept('Male')]
-    #[Concept('DamageCapacity', 14)]
     #[Concept('Level', 30)]
+    #[Concept('DamageCapacity', 14)]
     #[Concept('Size', 4)]
     #[Concept('Speed', 5)]
     #[Concept('Boost', '2')]
+    #[Concept('Cost', 6)]
     #[ImageCredit('Image by Merry Shuporna Biswas')]
     #[ImageCredit(null)]
     class(__FILE__) implements CardComponents

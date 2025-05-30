@@ -10,6 +10,7 @@ return new
 #[Title('Butterfly Knife')]
 #[Concept('Item')]
 #[Concept('Weapon')]
+#[Concept('Cost', 3)]
 #[ImageCredit('Icon by Skoll on Game-Icons.net')]
 class(__FILE__) implements CardComponents
 {
@@ -22,9 +23,9 @@ class(__FILE__) implements CardComponents
 
 <x-card.flavortext>Expands like a butterfly, stings like a bee.</x-card.flavortext>
 
-<text y="495" filter="url(#solid)">
+<x-card.cardrule y="580" :lines="1">
 <x-card.smallrule>Attach this card to a Mobster.</x-card.smallrule>
-        </text>
+        </x-card.cardrule>
        
 <x-card.phaserule type="Resolution" lines="1">
 <text >

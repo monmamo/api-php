@@ -1,8 +1,6 @@
 <?php
+
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
-use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -10,7 +8,6 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Hyperhidrosis')]
     #[Concept('Bane')]
-    #[FlavorText('Excessive sweating.')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -18,9 +15,11 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<text y="495" filter="url(#solid)">
+<x-card.cardrule y="580" :lines="1">
         <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
-        </text >
+        </x-card.cardrule>
+
+<x-card.flavortext>Excessive sweating.</x-card.flavortext>
 
 <x-card.phaserule type="Resolution" height="135">
     <text >
@@ -29,5 +28,5 @@ TODO
 </x-card.phaserule>
 
 HTML;
-}
+    }
 };

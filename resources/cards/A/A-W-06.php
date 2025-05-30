@@ -26,6 +26,7 @@ return new
     #[Title('Gladius')]
     #[Concept('Item')]
     #[Concept('Weapon')]
+    #[Concept('Cost', 3)]
     #[ImageCredit('Icon by Skoll on Game-Icons.net')]
     class(__FILE__) implements CardComponents
     {
@@ -38,9 +39,9 @@ return new
      
 <x-card.flavortext>Definitely mightier than The Pen (A-W-15).</x-card.flavortext>
 
-<text y="495" filter="url(#solid)">
+<x-card.cardrule y="580" :lines="1">
 <x-card.smallrule>Attach this card to a Mobster.</x-card.smallrule>
-        </text>
+        </x-card.cardrule>
 
         <x-card.phaserule type="Resolution" lines="1">
 <text >

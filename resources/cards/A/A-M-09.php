@@ -11,11 +11,12 @@ return new
     #[Title('Flameback')]
     #[Concept('Monster')]
     #[Concept('Male')]
-    #[Concept('DamageCapacity', 15)]
     #[Concept('Level', 30)]
+    #[Concept('DamageCapacity', 15)]
     #[Concept('Size', 4)]
     #[Concept('Speed', 4)]
     #[Concept('Boost', 2)]
+    #[Concept('Cost', 6)]
     #[ImagePrompt('red fire rodent monster of weird zoology next to a caldera')]
     #[ImageCredit('Image by Merry Shuporna Biswas')]
     class(__FILE__) implements CardComponents

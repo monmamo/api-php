@@ -10,6 +10,7 @@ return new
     #[Title('Pistol')]
     #[Concept('Item')]
     #[Concept('Weapon')]
+    #[Concept('Cost', 3)]
     #[ImageCredit('Icon by John Colburn on Game-Icons.net')]
     class(__FILE__) implements CardComponents
     {
@@ -22,9 +23,9 @@ return new
      
 <x-card.flavortext>Nothing fancy.</x-card.flavortext>
 
-<text y="495" filter="url(#solid)">
+<x-card.cardrule y="580" :lines="1">
 <x-card.smallrule>Attach this card to a Mobster.</x-card.smallrule>
-        </text>
+        </x-card.cardrule>
 
 <x-card.phaserule type="Attack" lines="2">
 <text >

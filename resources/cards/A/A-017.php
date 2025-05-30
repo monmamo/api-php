@@ -5,10 +5,10 @@ use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
-// inspiration: https://bulbapedia.bulbagarden.net/wiki/Caitlin_(Plasma_Blast_78)
 return new
 #[Title('Sleight of Hand')]
 #[Concept('Draw')]
+#[Concept('Cost', 2)]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

@@ -11,11 +11,12 @@ return new
     #[Title('Azure')]
     #[Concept('Monster')]
     #[Concept('Male')]
-    #[Concept('DamageCapacity', 18)]
     #[Concept('Level', 30)]
+    #[Concept('DamageCapacity', 18)]
     #[Concept('Size', 3)]
     #[Concept('Speed', 5)]
     #[Concept('Boost', '2')]
+    #[Concept('Cost', 6)]
     #[ImagePrompt('blue mouse of weird zoology swimming in a lake')]
     #[ImageCredit('Image by Nilanjan Animesh')]
     class(__FILE__) implements CardComponents

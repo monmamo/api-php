@@ -23,9 +23,9 @@ class(__FILE__) implements CardComponents
 
 <x-card.flavortext>The cut you don't see is the deepest.</x-card.flavortext>
 
-<text y="495" filter="url(#solid)">
+<x-card.cardrule y="580" :lines="1">
 <x-card.smallrule>Attach this card to a Mobster.</x-card.smallrule>
-        </text>
+        </x-card.cardrule>
        
 <x-card.phaserule type="Resolution" lines="2">
 <text >

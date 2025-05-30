@@ -1,28 +1,23 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageInDevelopment;
-use App\CardAttributes\ImageIsPrototype;
-use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
-
 return new
 #[Title('Halitosis')]
 #[Concept('Bane')]
-#[IsGeneratedImage]
-#[ImageInDevelopment()]
-#[ImageIsPrototype]
-    class(__FILE__) implements CardComponents
-    {
-        use DefaultCardAttributes;
+#[ImageCredit('Image by Merry Shuporna Biswas')]
+class(__FILE__) implements CardComponents
+{
+    use DefaultCardAttributes;
 
-        public function content(): \Traversable
-        {
-            yield <<<'HTML'
-<x-card.hero.local>A110.jpg</x-card.hero.local>
+    public function content(): \Traversable
+    {
+        yield <<<'HTML'
+<x-card.hero.local>hero/Halitosis.jpg</x-card.hero.local>
 
 <x-card.flavortext>They say that bad breath is better than no breath at all…</x-card.flavortext>
 
@@ -39,5 +34,5 @@ return new
 </text>
 </x-card.phaserule>
 HTML;
-        }
-    };
+    }
+};

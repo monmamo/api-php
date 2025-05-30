@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -9,7 +8,6 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Hurricane')]
 #[Concept('Catastrophe')]
-#[FlavorText('Hope your Insurance (A-069) is paid up.')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -18,6 +16,9 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(hero/hurricane.jpg)" />
+
+<x-card.flavortext>Hope your Insurance (A-069) is paid up.</x-card.flavortext>
+
     <text y="440" filter="url(#solid)">
 <x-card.smallrule>This card can be played only if Summer </x-card.smallrule>
 <x-card.smallrule>or Autumn is on the Battlefield.</x-card.smallrule>

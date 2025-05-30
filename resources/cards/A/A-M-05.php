@@ -11,11 +11,12 @@ return new
     #[Title('Watt-a-Pest')]
     #[Concept('Monster')]
     #[Concept('Female')]
-    #[Concept('DamageCapacity', 15)]
     #[Concept('Level', 30)]
+    #[Concept('DamageCapacity', 15)]
     #[Concept('Size', 4)]
     #[Concept('Speed', 3)]
     #[Concept('Boost', 3)]
+    #[Concept('Cost', 6)]
     #[ImagePrompt('yellow electric rodent monster of weird zoology in a factory')]
     #[ImageCredit('Image by Merry Shuporna Biswas')]
     class(__FILE__) implements CardComponents

@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\RaceForTheChampionshipAttributes;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
@@ -13,7 +12,6 @@ return new
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
-    use RaceForTheChampionshipAttributes { RaceForTheChampionshipAttributes::system insteadof DefaultCardAttributes; }
 
     /**
      * @group nonary

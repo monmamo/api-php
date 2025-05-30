@@ -9,6 +9,7 @@ return new
 #[Title('Flee')]
 #[Concept('Defense')]
 #[Concept('Level', 5)]
+#[Concept('Cost', 1)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -16,13 +17,13 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <image x="0" y="0" class="hero" href="@local(hero/well-bye.jpg)" />
+            <x-card.hero.local>hero/well-bye.jpg</x-card.hero.local>
 
-    <text y="495" filter="url(#solid)">
+    <x-card.cardrule :lines="3">
     <x-card.normalrule>Discard the Monster and all cards</x-card.normalrule>
     <x-card.normalrule>attached to it.</x-card.normalrule>
     <x-card.smallrule>This counts as Knocking Out the Monster.</x-card.smallrule>
-</text>
+</x-card.cardrule>
 HTML;
     }
 };

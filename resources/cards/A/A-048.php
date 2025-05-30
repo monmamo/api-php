@@ -25,9 +25,9 @@ class(__FILE__) implements CardComponents
 
 <x-card.flavortext>Mostly error.</x-card.flavortext>
 
-<text y="495" filter="url(#solid)">
-        <x-card.smallrule>Put this card on the Battlefield during your Upkeep phase.</x-card.smallrule>
-</text>
+<x-card.cardrule y="580" :lines="1">
+<x-card.smallrule>Put this card on the Battlefield during your Upkeep phase.</x-card.smallrule>
+</x-card.cardrule>
 
 <x-card.phaserule type="Resolution" :lines="3">
     <text >

@@ -3,7 +3,7 @@
 return [
     'cards' => [
         'player-deck' => [
-            'RC-01' => 6,
+            'A-007' => 6,
             'RC-02' => 3,
             'RC-03' => 1,
         ],
@@ -48,7 +48,7 @@ return [
             'A-A-02' => 3,
             // Defense cards
             // Other cards
-            'RC-04' => 2, // Gene Pool
+            'A-DB-02' => 2, // Gene Pool
         ],
         'setback-cards' => [
             // Injury

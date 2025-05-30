@@ -7,7 +7,7 @@ if (\App\Facades\Environment::is(\App\Enums\Environments::Production)) {
 $card_generator = function():\Traversable {
     for($player = 1; $player <= 6; $player++) {
         for($i = 0; $i < 6; $i++) {
-            yield 'RC-01';
+            yield 'A-007';
         }
         for($i = 0; $i < 3; $i++) {
             yield 'RC-02';

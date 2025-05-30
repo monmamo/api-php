@@ -11,11 +11,12 @@ return new
     #[Title('Lochjaw')]
     #[Concept('Monster')]
     #[Concept('Male')]
-    #[Concept('DamageCapacity', 24)]
     #[Concept('Level', 45)]
+    #[Concept('DamageCapacity', 24)]
     #[Concept('Size', 6)]
     #[Concept('Speed', 3)]
     #[Concept('Boost', 4)]
+    #[Concept('Cost', 9)]
     #[ImagePrompt('blue seal of weird zoology swimming in a lake, trees and mountains in the background')]
     #[ImageCredit('Image by Nilanjan Animesh')]
         class(__FILE__) implements CardComponents

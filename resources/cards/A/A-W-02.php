@@ -11,6 +11,7 @@ return new
     #[Concept('Attack')]
     #[Concept('Item')]
     #[Concept('Weapon')]
+    #[Concept('Cost', 3)]
     #[ImageCredit('Icon by Faithtoken on Game-Icons.net')]
     class(__FILE__) implements CardComponents
     {

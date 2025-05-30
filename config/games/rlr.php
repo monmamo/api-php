@@ -28,11 +28,11 @@ return [
             'LR-06' => 2, // Floor Plan
             'LR-07' => 6, // Nimble Feet
             'LR-08' => 6, // Dead Run
-            'LR-09' => 6, // Sleight of Hand
+            'A-017' => 6, // Sleight of Hand
             'LR-10' => 6, // Swagger
             'LR-11' => 6, // Move Sliently
             'LR-12' => 6, // Tattle
-            'LR-13' => 6, // Brilliance
+            'A-007' => 6, // Brilliance
         ],
     ],
 ];

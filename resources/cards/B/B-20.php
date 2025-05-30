@@ -1,8 +1,6 @@
 <?php
+
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
-use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -20,4 +18,6 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="0" >Resolution phase: Roll 1d6. If 1, Attack has no effect.</x-card.cardrule>
-HTML;}};
+HTML;
+    }
+};

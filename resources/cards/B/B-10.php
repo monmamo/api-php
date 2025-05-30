@@ -1,9 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
-use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -18,10 +15,10 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<text y="495" filter="url(#solid)">
+<x-card.cardrule y="580" :lines="2">
 <x-card.normalrule>Discard all Mobster and Bystander cards on the Battlefield.</x-card.normalrule>
 <x-card.normalrule>Discard all Item cards on the Battlefield.</x-card.normalrule>
-</text>
+</x-card.cardrule>
 HTML;
         }
     };

@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageCredit;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
 use App\Concept;

@@ -12,11 +12,12 @@ return new
     #[Title('Flametail')]
     #[Concept('Monster')]
     #[Concept('Female')]
-    #[Concept('DamageCapacity', 18)]
     #[Concept('Level', 40)]
+    #[Concept('DamageCapacity', 18)]
     #[Concept('Size', 5)]
     #[Concept('Speed', 3)]
     #[Concept('Boost', '3')]
+    #[Concept('Cost', 8)]
     #[ImageCredit('Image by Merry Shuporna Biswas')]
     #[ImagePrompt('fire monster of weird zoology with a flaming tail')]
     class(__FILE__) implements CardComponents

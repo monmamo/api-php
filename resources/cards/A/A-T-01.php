@@ -2,9 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\ImageInDevelopment;
-use App\CardAttributes\ImageIsPrototype;
-use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -17,10 +14,7 @@ return new
     #[Title('Biting')]
     #[Concept('Trait')]
     #[Concept('Cost', 3)]
-    #[IsGeneratedImage]
-    #[ImageIsPrototype]
-    #[ImageCredit(null)]
-    #[ImageInDevelopment()]
+    #[ImageCredit('Image by Merry Shuporna Biswas')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -28,7 +22,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.hero.local>A006.png</x-card.hero.local>
+<x-card.hero.local>hero/A-T-01.jpg</x-card.hero.local>
 
 <x-card.flavortext>What sharp teeth you have.</x-card.flavortext>
 

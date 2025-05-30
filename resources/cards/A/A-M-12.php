@@ -11,11 +11,12 @@ return new
     #[Title('Hogner')]
     #[Concept('Monster')]
     #[Concept('Female')]
-    #[Concept('DamageCapacity', 20)]
     #[Concept('Level', 45)]
+    #[Concept('DamageCapacity', 20)]
     #[Concept('Size', 6)]
     #[Concept('Speed', 2)]
     #[Concept('Boost', '4')]
+    #[Concept('Cost', 9)]
     #[ImagePrompt('firey porcupine of weird zoology')]
     #[ImageCredit('Image by Merry Shuporna Biswas')]
     class(__FILE__) implements CardComponents

@@ -1,8 +1,6 @@
 <?php
+
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
-use App\CardAttributes\ImageCredit;
-use App\CardAttributes\LocalHeroImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -20,4 +18,6 @@ class(__FILE__) implements CardComponents
 <x-card.cardrule height="35" >
 <x-card.normalrule>No Food Items can be played.</x-card.normalrule>
 </x-card.cardrule>
-HTML;}};
+HTML;
+    }
+};

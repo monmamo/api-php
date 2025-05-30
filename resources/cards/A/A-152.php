@@ -11,6 +11,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Favorite Toy')]
 #[Concept('Item')]
+#[Concept('Cost', 2)]
 #[IsGeneratedImage]
 #[ImageIsPrototype]
 #[ImagePrompt('A fantastical mammal monster from a world of weird zoology, with patchy fur, two eyes, an asymmetrical body, and mismatched limbs, sitting in a dimly lit room. It gently clutches a small, cuddly stuffed animal, worn and stitched, with one button eye and fraying seams. The creature\'s expression is soft and emotional, conveying attachment or loneliness. The background is abstract and dreamlike, with soft shadows and eerie textures. Highly detailed, surreal, soft lighting, whimsical but unsettling atmosphere.')]
