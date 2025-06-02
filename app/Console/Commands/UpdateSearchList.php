@@ -40,8 +40,9 @@ class UpdateSearchList extends Command
             $list[\strtolower($set->name)] = '/cards/set/' . $set->value;
 
             foreach (CardSet::from($set->value)->cards() as $card_spec) {
+                $card_number = $card_spec->cardNumber();
+
                 try {
-                    $card_number = $card_spec->cardNumber();
                     $list[\strtolower($card_number)] = '/cards/card/' . $card_number;
                     $list[\strtolower($card_spec->name())] = '/cards/card/' . $card_number;
                 } catch (\Throwable $e) {

@@ -31,11 +31,11 @@ class(__FILE__) implements CardComponents
 <x-card.taxons>Unknown</x-card.taxons>
 
 <x-card.cardrule height="55" >
-<x-card.normalrule>On exposure:
-<x-card.normalrule>Trigger Security Check &</x-card.normalrule>
+<x-card.normalrule>On exposure:</x-card.normalrule>
+<x-card.normalrule>Trigger Security Check &amp;</x-card.normalrule>
 <x-card.normalrule>Attach 2 random Traits.</x-card.normalrule>
-<x-card.normalrule>Damage Capacity:: 20 + 1d6 - 1d6.</x-card.normalrule>
-<x-card.normalrule>Size: 4 + 
+<x-card.normalrule>Damage Capacity: 20 + 1d6 - 1d6.</x-card.normalrule>
+<x-card.normalrule>Size: 4 + 1d6 - 1d6.</x-card.normalrule>
 </x-card.cardrule>
 HTML;
     }

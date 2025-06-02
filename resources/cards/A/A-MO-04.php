@@ -44,7 +44,7 @@ class(__FILE__) implements CardComponents
         <x-card.phaserule type="Upkeep" lines="4">
             <text >
 <x-card.normalrule>Look at the top 3 cards of any</x-card.normalrule> 
-<x-card.normalrule>Library & choose 1 of them. Shuffle</x-card.normalrule>
+<x-card.normalrule>Library &amp; choose 1 of them. Shuffle</x-card.normalrule>
 <x-card.normalrule>the other cards back into the Library. Then</x-card.normalrule>
 <x-card.normalrule>put the card you chose on top of the Library.</x-card.normalrule>
 </text>

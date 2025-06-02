@@ -34,7 +34,7 @@ return new
     <text>
 <x-card.skilltitle>Puppy Power</x-card.skilltitle>
 <x-card.normalrule>You may transfer Electricity (A-003) between</x-card.normalrule>
-<x-card.normalrule>this Monster & any other Energos Monster.</x-card.normalrule>
+<x-card.normalrule>this Monster &amp; any other Energos Monster.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;

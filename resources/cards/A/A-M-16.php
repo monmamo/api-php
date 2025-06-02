@@ -2,9 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\ImageInDevelopment;
-use App\CardAttributes\ImageIsPrototype;
-use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -19,10 +16,7 @@ return new
     #[Concept('Speed', 2)]
     #[Concept('Boost', '3')]
     #[Concept('Cost', 8)]
-    #[IsGeneratedImage]
-    #[ImageCredit(null)]
-    #[ImageInDevelopment]
-        #[ImageIsPrototype]
+    #[ImageCredit('Image by Nilanjan Animesh')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -30,7 +24,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.hero.local>hero/A-M-16.png</x-card.hero.local>
+    <x-card.hero.local>hero/Greybeast.jpg</x-card.hero.local>
 
     <x-card.taxons>Gouros</x-card.taxons>
 

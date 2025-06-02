@@ -32,7 +32,7 @@ return new
 <x-card.phaserule type="Resolution" lines="3"><text>
             <x-card.normalrule>For each card you put facedown,</x-card.normalrule>
                 <x-card.normalrule>draw 1d4-1 cards.</x-card.normalrule>
-                <x-card.normalrule>Discard this card & the facedown cards.</x-card.normalrule>
+                <x-card.normalrule>Discard this card &amp; the facedown cards.</x-card.normalrule>
     </text>
 </x-card.phaserule>
 HTML;

@@ -26,7 +26,7 @@ return new
 
 <x-card.cardrule height="160" >
 <x-card.normalrule>This player does not have his own</x-card.normalrule>
-<x-card.normalrule>discard pile. Put existing & henceforth</x-card.normalrule>
+<x-card.normalrule>discard pile. Put existing &amp; henceforth</x-card.normalrule>
 <x-card.normalrule>discards at the bottom of your Library.</x-card.normalrule>
 <x-card.smallrule>Applies to all Discard piles used by this player.</x-card.smallrule>
 </x-card.cardrule>

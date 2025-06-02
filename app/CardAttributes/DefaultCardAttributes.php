@@ -224,7 +224,7 @@ trait DefaultCardAttributes
             'RC' => 'Race for the Championship',
             'LR' => 'Raid on Leaser Ridge',
             'MS' => 'Mean Streets',
-            default => 'ALL GAMES'
+            default => ''
         };
     }
 

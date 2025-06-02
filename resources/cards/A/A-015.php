@@ -8,7 +8,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Tattle')]
 #[Concept('Cost', 3)]
-#[Concept('Train', 2)]
+#[Concept('Training', 2)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

@@ -1,10 +1,8 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageInDevelopment;
-use App\CardAttributes\ImageIsPrototype;
+use App\CardAttributes\ImageCredit;
 use App\CardAttributes\ImagePrompt;
-use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -19,10 +17,8 @@ return new
     #[Concept('Speed', 3)]
     #[Concept('Boost', '2')]
     #[Concept('Cost', 8)]
-    #[IsGeneratedImage]
-    #[ImageIsPrototype]
-    #[ImageInDevelopment]
-    #[ImagePrompt('lavender cat monster of weird zoology by a lake')]
+    #[ImageCredit('Image by Nilanjan Animesh')]
+        #[ImagePrompt('lavender cat monster of weird zoology by a lake')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -30,7 +26,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.hero.local>hero/regfelor.png</x-card.hero.local>
+    <x-card.hero.local>hero/whiskers.jpg</x-card.hero.local>
 
     <x-card.taxons>Regos, Felos</x-card.taxons>
 

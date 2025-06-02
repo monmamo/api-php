@@ -24,9 +24,9 @@ class(__FILE__) implements CardComponents
         
         <x-card.phaserule type="Draw" lines="5"><text>
 <x-card.normalrule>You may do one of the following:</x-card.normalrule>
-<x-card.normalrule>&bullet; Put a basic Mana card</x-card.normalrule>
+<x-card.normalrule>&#8226; Put a basic Mana card</x-card.normalrule>
 <x-card.normalrule>from your Discard into your Hand.</x-card.normalrule>
-<x-card.normalrule>&bullet; Shuffle 3 basic Mana cards</x-card.normalrule>
+<x-card.normalrule>&#8226; Shuffle 3 basic Mana cards</x-card.normalrule>
 <x-card.normalrule>from your Discard pile into your Library.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>

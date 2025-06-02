@@ -25,7 +25,7 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>Discard 2+ cards from your hand.</x-card.normalrule>
 <x-card.normalrule>Lay your hand aside. Draw twice as many</x-card.normalrule>
 <x-card.normalrule>cards as you discarded. You may reveal any</x-card.normalrule>
-<x-card.normalrule>Mana cards you draw & put them in your</x-card.normalrule>
+<x-card.normalrule>Mana cards you draw &amp; put them in your</x-card.normalrule>
 <x-card.normalrule>hand. Put the remaining cards at the bottom</x-card.normalrule>
 <x-card.normalrule>of your Library, then shuffle your Library.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />

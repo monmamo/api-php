@@ -2,16 +2,13 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\ImageInDevelopment;
-use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\ImagePrompt;
-use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-    #[Title('Silky Selkie')]
+    #[Title('Silky')]
     #[Concept('Monster')]
     #[Concept('Male')]
     #[Concept('Level', 45)]
@@ -20,11 +17,8 @@ return new
     #[Concept('Speed', 4)]
     #[Concept('Boost', '4')]
     #[Concept('Cost', 9)]
-    #[IsGeneratedImage]
-    #[ImageIsPrototype]
-    #[ImageInDevelopment]
+    #[ImageCredit('Image by Nilanjan Animesh')]
     #[ImagePrompt('blue selkie of weird zoology swimming in a lake, trees and mountains in the background')]
-    #[ImageCredit(null)]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -32,7 +26,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.hero.local>hero/A-M-19.jpeg</x-card.hero.local>
+    <x-card.hero.local>hero/Silky.jpg</x-card.hero.local>
 
     <x-card.taxons>Aquos, Selkos</x-card.taxons>
 

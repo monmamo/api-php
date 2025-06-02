@@ -1,9 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageInDevelopment;
-use App\CardAttributes\ImageIsPrototype;
-use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -18,9 +16,7 @@ return new
     #[Concept('Speed', 3)]
     #[Concept('Boost', '3')]
     #[Concept('Cost', 8)]
-    #[IsGeneratedImage]
-    #[ImageIsPrototype]
-    #[ImageInDevelopment]
+    #[ImageCredit('Image by Nilanjan Animesh')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -28,9 +24,9 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.hero.local>hero/A-M-20.jpeg</x-card.hero.local>
+    <x-card.hero.local>hero/Grumpus.jpg</x-card.hero.local>
 
-    <x-card.taxons>Hominos, Gouros</x-card.taxons>
+    <x-card.taxons>Hominos</x-card.taxons>
 
 <x-card.phaserule type="Trait" height="170">
     <text>

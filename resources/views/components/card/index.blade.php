@@ -13,9 +13,13 @@ $id = function (string $suffix) use ($cardNumber) {
     return $cardNumber . '-' . $suffix;
 };
 
-$concept_icon_size = 80;
 $concepts = $spec->concepts();
-$concept_x_0 = \config('card-design.viewbox.width') / 2 - $concept_icon_size * count($concepts) / 2;
+$concept_count = count($concepts);
+$concept_icon_size = 80;
+if ($concept_count > 7) {
+    $concept_icon_size *= (7 / $concept_count);
+}
+$concept_x_0 = \config('card-design.viewbox.width') / 2 - $concept_icon_size * $concept_count / 2;
 
 ?>
 
@@ -140,9 +144,9 @@ $x = $concept_x_0 + $index * $concept_icon_size ;
     ?>
 
     <g class="debug">
-        <x-card.rect slug="trimbox" fill-opacity="0" stroke-width=3 stroke="#FF0000" rx="25" />
-        <x-card.rect slug="viewbox" fill-opacity="0" stroke-width=3 stroke="#2BA6DE" stroke-dasharray="1.44" rx="5" />
-        <x-card.rect slug="titlebox" fill-opacity="0" stroke-width=3 stroke="#2BA6DE"    />
+        <x-card.rect slug="trimbox" fill-opacity="0" stroke-width="3" stroke="#FF0000" rx="25" />
+        <x-card.rect slug="viewbox" fill-opacity="0" stroke-width="3" stroke="#2BA6DE" stroke-dasharray="1.44" rx="5" />
+        <x-card.rect slug="titlebox" fill-opacity="0" stroke-width="3" stroke="#2BA6DE"    />
         <?php
         $hero_attributes = [
             'x' => config("card-design.viewbox.x") + config("card-design.hero.x"),
@@ -151,7 +155,7 @@ $x = $concept_x_0 + $index * $concept_icon_size ;
             'height' => config("card-design.hero.height"),
         ];
         ?>
-        <rect id="hero-rect" slug="hero" fill-opacity="0" stroke-width=1 stroke="#2BA6DE" stroke-dasharray="1.44" {{new \Illuminate\View\ComponentAttributeBag($hero_attributes)}} />
+        <rect id="hero-rect" slug="hero" fill-opacity="0" stroke-width="1" stroke="#2BA6DE" stroke-dasharray="1.44" {{new \Illuminate\View\ComponentAttributeBag($hero_attributes)}} />
         <line x1="25%" y1="0" x2="25%" y2="100%" class="info secondary" />
         <line x1="50%" y1="0" x2="50%" y2="100%" class="info" />
         <line x1="75%" y1="0" x2="75%" y2="100%" class="info secondary" />

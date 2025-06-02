@@ -29,7 +29,7 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>an additional Speed damage to the</x-card.normalrule>
 <x-card.normalrule>defending Monster. After that damage is</x-card.normalrule>
 <x-card.normalrule>resolved, this Monster takes Speed damage.</x-card.normalrule>
-<text ></x-card.phaserule>
+    </text ></x-card.phaserule>
 HTML;
     }
 };

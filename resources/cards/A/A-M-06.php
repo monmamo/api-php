@@ -1,10 +1,8 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageInDevelopment;
-use App\CardAttributes\ImageIsPrototype;
+use App\CardAttributes\ImageCredit;
 use App\CardAttributes\ImagePrompt;
-use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -20,9 +18,7 @@ return new
     #[Concept('Boost', 3)]
     #[Concept('Cost', 8)]
     #[ImagePrompt('yellow electric tiger monster of weird zoology')]
-    #[IsGeneratedImage]
-#[ImageIsPrototype]
-    #[ImageInDevelopment]
+    #[ImageCredit('Image by Nilanjan Animesh')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -30,7 +26,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.hero.local>hero/A-M-06.png</x-card.hero.local>
+    <x-card.hero.local>hero/zapcat.jpg</x-card.hero.local>
 
     <x-card.taxons>Energos, Tigros</x-card.taxons>
 

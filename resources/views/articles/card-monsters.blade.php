@@ -51,16 +51,10 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
 
    <div class="container">
     <div class="d-flex flex-row">
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-06" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-08" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-14" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-15" width="200"/></div>
-    </div>
-    <div class="d-flex flex-row">
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-16" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-18" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-19" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-20" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-103" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-152" width="200"/></div>
     </div>
     <div class="d-flex flex-row">
         <div class="p-2"><x-card :link="true" cardNumber="A-T-02" width="200"/></div>

@@ -2,13 +2,35 @@
 
 namespace App;
 
-class Deck
+class Deck implements \Countable
 {
+    // private readonly array $individual_cards_cache;
+    // private readonly array $distinct_cards_cache;
+
     private function __construct(
         private readonly \Traversable $individual_cards,
         private readonly \Traversable $distinct_cards,
     ) {}
 
+    /**
+     * @group nonary
+     */
+    public function count(): int
+    {
+        return \iterator_count(clone $this->individual_cards);
+    }
+
+    /**
+     * @group nonary
+     */
+    public function countDistinct(): int
+    {
+        return \iterator_count(clone $this->distinct_cards);
+    }
+
+    /**
+     * @group nonary
+     */
     public function distinctCards(): \Traversable
     {
         return $this->distinct_cards;
@@ -31,14 +53,19 @@ class Deck
      */
     public static function fromCardCounts(array $cards): self
     {
-        $individual_cards = new \MultipleIterator();
+        $individual_cards = [];
+        $distinct_cards = [];
 
         foreach ($cards as $card => $count) {
-            $individual_cards->attachIterator(new SingleItemIterator($card, $count));
+            $distinct_cards[] = $card;
+
+            for ($i = 0; $i < $count; ++$i) {
+                $individual_cards[] = $card;
+            }
         }
         return new self(
-            individual_cards: $individual_cards,
-            distinct_cards: new \ArrayIterator(\array_keys($cards)),
+            individual_cards: new \ArrayIterator($individual_cards),
+            distinct_cards: new \ArrayIterator($distinct_cards),
         );
     }
 
@@ -49,6 +76,7 @@ class Deck
     {
         $cards = \config($slug);
         return match (true) {
+            \is_null($cards) => \dd($slug),
             \array_is_list($cards) => self::fromList($cards),
             default => self::fromCardCounts($cards),
         };

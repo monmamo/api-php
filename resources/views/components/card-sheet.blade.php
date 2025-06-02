@@ -1,13 +1,13 @@
 @props(['abreast'=>3,'cards'])
 <?php
-$deck = new \App\Deck($cards);
+$deck =  \App\Deck::fromAnything($cards);
 
 $dx = 0;
 $dy = 0;
 $padding_inches = 0.5/3; //20;
 $padding = $padding_inches * config('card-design.dots_per_inch');
 
-$rows = ceil(count($cards) / $abreast);
+$rows = ceil($deck->count() / $abreast);
 $sheets = ceil($rows / 3);
 
 $viewbox_width = $abreast * (config('card-design.width') +  $padding);
@@ -19,10 +19,11 @@ width="<?= $viewbox_width / config('card-design.dots_per_inch') ?>in"
 height="<?= $viewbox_height / config('card-design.dots_per_inch') ?>in" 
 viewBox="0 0 <?= $viewbox_width ?> <?= $viewbox_height ?>" xmlns="http://www.w3.org/2000/svg">
 
-<x-card.common :specs="$distinct_cards" />
+<x-card.common :specs="$deck->distinctCards()" />
 
 <?php
-foreach ($cards as $index => $cardNumber) {
+foreach ($deck->individualCards() as $index => $cardNumber) {
+    if (!is_int($index)) dd($index);
     $dx = $index % $abreast;
     $dy = floor($index / $abreast);
 ?>

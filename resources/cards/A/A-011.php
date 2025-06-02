@@ -28,7 +28,7 @@ return new
     <x-card.normalrule>attached to this Monster. Each other</x-card.normalrule>
     <x-card.normalrule>Monster on the Battlefield takes</x-card.normalrule>
     <x-card.normalrule>3 @damage for each Electricity discarded.</x-card.normalrule>
-    <x-card.normalrule>Only this Monster may attack until &</x-card.normalrule>
+    <x-card.normalrule>Only this Monster may attack until &amp;</x-card.normalrule>
     <x-card.normalrule>through this player’s next turn.</x-card.normalrule>
     </text></x-card.phaserule>
 HTML;

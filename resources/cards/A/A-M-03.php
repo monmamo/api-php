@@ -36,7 +36,7 @@ return new
 <x-card.normalrule>Discard 1+ Water (A-001) from this Monster.</x-card.normalrule>
 <x-card.normalrule>For each Water (A-001) discarded,</x-card.normalrule>
 <x-card.normalrule>Attack does 1 @damage less damage,</x-card.normalrule>
-<x-card.normalrule>& that Monster takes that damage instead.</x-card.normalrule>
+<x-card.normalrule>&amp; that Monster takes that damage instead.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 
