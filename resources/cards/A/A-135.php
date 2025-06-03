@@ -11,6 +11,7 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Investment')]
     #[Concept('Draw')]
+    #[Concept('Cost', 2)]
     #[ImageCredit('Image by photoroyalty on Freepik')]
     class(__FILE__) implements CardComponents
     {
@@ -23,17 +24,17 @@ return new
 
 <x-card.flavortext>Past performance is not indicative of future results.</x-card.flavortext>
             
-        <x-card.phaserule y="565" type="Draw" lines="2"><text>
-        <x-card.smallrule>Put this card in front of you. Put any number</x-card.smallrule>
-        <x-card.smallrule>of cards facedown on the Battlefield.</x-card.smallrule>
-    </text>
+<x-card.phaserule y="565" type="Draw" lines="2"><text>
+<x-card.smallrule>Put this card in front of you. Put any number</x-card.smallrule>
+<x-card.smallrule>of cards facedown on the Battlefield.</x-card.smallrule>
+</text>
 </x-card.phaserule>
 
 <x-card.phaserule type="Resolution" lines="3"><text>
-            <x-card.normalrule>For each card you put facedown,</x-card.normalrule>
-                <x-card.normalrule>draw 1d4-1 cards.</x-card.normalrule>
-                <x-card.normalrule>Discard this card &amp; the facedown cards.</x-card.normalrule>
-    </text>
+<x-card.normalrule>For each card you put facedown,</x-card.normalrule>
+<x-card.normalrule>draw 1d4-1 cards.</x-card.normalrule>
+<x-card.normalrule>Discard this card &amp; the facedown cards.</x-card.normalrule>
+</text>
 </x-card.phaserule>
 HTML;
         }

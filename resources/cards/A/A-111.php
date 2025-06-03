@@ -24,8 +24,7 @@ return new
             yield <<<'HTML'
   <image class="hero" href="@local(hero/personal-shopper.jpg)" />
 
-  <x-card.phaserule type="Draw"  height="170">
-      <text >
+  <x-card.phaserule type="Draw" lines="6"><text>
 <x-card.normalrule>Search your deck for 1-3 Item cards.</x-card.normalrule>
 <x-card.normalrule>Show them to your opponent(s),</x-card.normalrule>
 <x-card.normalrule>and put them into your hand.</x-card.normalrule>

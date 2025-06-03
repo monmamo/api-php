@@ -8,6 +8,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Shuffle and Draw 1d6')]
 #[Concept('Draw')]
+#[Concept('Cost', 1)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -20,11 +21,12 @@ class(__FILE__) implements CardComponents
 <text >
     <tspan x="50%" y="440" font-family="Roboto" text-anchor="middle"  font-size="265" font-weight="700" fill="#549800" >1d6</tspan>
     </text>
-<text>
+
+    <x-card.phaserule type="Draw" lines="5"><text>
 <x-card.normalrule>Shuffle your hand into your Library.</x-card.normalrule>
 <x-card.normalrule>Then draw 1d6 cards.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
-    </text>
+    </text></x-card.phaserule>
 HTML;
     }
 };

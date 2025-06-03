@@ -34,6 +34,8 @@ $debug_opacity = match (true) {
     $debug === 'false' => 0,
     default => $debug
 };
+
+$id = uniqid();
 ?>
 
 @once
@@ -42,10 +44,12 @@ $debug_opacity = match (true) {
 </defs>
 @endonce
 
-<symbol id="{{$concept->type}}-symbol" width="{{$width}}" height="{{$size}}" viewBox="{{$viewBox}}">
+<symbol id="{{$id}}" width="{{$width}}" height="{{$size}}" viewBox="{{$viewBox}}">
+    @if($debug_opacity>0) 
     <g fill-opacity="<?= $debug_opacity ?>">
         <rect x="0" y="0" width="100%" height="100%" fill="#FFFF00" />
     </g>
+    @endif
     <g fill="{{$fill}}" fill-opacity="1">{{view(($type).".icon")}}</g>
 
     @isset($badge) 
@@ -57,4 +61,4 @@ $debug_opacity = match (true) {
         @endif
 
 </symbol>
-<use href="#{{$concept->type}}-symbol" x="{{$actual_x}}" y="{{$y}}" width="{{$width}}" height="{{$size}}" class="concept-icon" />
+<use href="#{{$id}}" x="{{$actual_x}}" y="{{$y}}" width="{{$width}}" height="{{$size}}" class="concept-icon" />

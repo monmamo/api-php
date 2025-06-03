@@ -72,15 +72,29 @@ return [
             'A-DB-03' => 12, // Mentor
             'A-DB-04' => 6, // Elite Mentor
             'A-DB-05' => 2, // Champion Mentor
-            'A-152' => 2, // Favorite Toy
-            'A-017' => 4, // Sleight of Hand
-            'A-122' => 3, // Offensive Coordinator
+            'A-007' => 3, // Brilliance
+            'A-009' => 1, // Support Gear
+            'A-015' => 3, // Tattle
+            'A-016' => 1, // Whistleblower
+            'A-017' => 3, // Sleight of Hand
+            'A-033' => 1, // Wheel of Fortune
+            'A-042' => 1, // Copycat
             'A-055' => 3, // Defensive Coordinator
-            'A-007' => 4, // Brilliance
-            'A-009' => 4, // Support Gear
-            'A-015' => 4, // Tattle
-            'A-016' => 2, // Whistleblower
-            'A-081' => 4, // Recycle
+            'A-061' => 1, // Make It Rain
+            'A-077' => 3, // Round for the House
+            'A-106' => 1, // Reconnaissance Team
+            'A-122' => 3, // Offensive Coordinator
+            'A-128' => 1, // Idiot Agents
+            'A-130' => 3, // Merchandizing
+            'A-131' => 3, // Insurance Policy
+            'A-139' => 1, // Karma
+            'A-141' => 3, // Lottery
+            'A-152' => 2, // Favorite Toy
+            'A-EQ-1' => 3, // Equalizer 1
+            'A-EQ-2' => 3, // Equalizer 2
+            'A-EQ-3' => 3, // Equalizer 3
+            'A-SD-1' => 3, // Shuffle and Draw 1
+            'A-SD-2' => 3, // Shuffle and Draw 2
         ],
     ],
 ];

@@ -17,10 +17,12 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="55" >
-<x-card.normalrule>Choose one opponent. That opponent may search their Library for a Weapon. You may search your Library for a Food item.</x-card.normalrule>
+<x-card.phaserule type="Draw" lines="5"><text>
+<x-card.normalrule>Choose one opponent.</x-card.normalrule>
+<x-card.normalrule>That opponent may search their Library for a Weapon.</x-card.normalrule>
+<x-card.normalrule>You may search your Library for any number of Food items.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
-</x-card.cardrule>
+</text></x-card.phaserule>
 HTML;
     }
 };

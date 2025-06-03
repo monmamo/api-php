@@ -8,6 +8,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Insurance Policy')]
 #[Concept('Vendor')]
+#[Concept('Cost', 3)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -18,7 +19,7 @@ class(__FILE__) implements CardComponents
 <x-card.phaserule type="Draw" lines="4"><text>
 <x-card.smallrule>You can't play this card if you have any</x-card.smallrule>
 <x-card.smallrule>cards in your hand other than this card.</x-card.smallrule>
-<x-card.normalrule>Show your hand to your opponent,</x-card.normalrule>
+<x-card.normalrule>Show your hand to your opponent(s),</x-card.normalrule>
     <x-card.normalrule>then draw 5 cards.</x-card.normalrule>
     <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
     </text></x-card.phaserule>

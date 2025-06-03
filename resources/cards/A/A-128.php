@@ -8,6 +8,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Idiot Agents')]
 #[Concept('Vendor')]
+#[Concept('Cost', 5)]
 #[Concept('Integrity', 1)]
 
 class(__FILE__) implements CardComponents

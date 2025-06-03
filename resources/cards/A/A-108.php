@@ -19,8 +19,8 @@ return new
           yield <<<'HTML'
           <x-card.hero.local>A108.jpg</x-card.hero.local>
 
-  <x-card.cardrule lines="4">
-  <x-card.normalrule>Reveal the top 7 cards of your Library.</x-card.normalrule>
+<x-card.cardrule lines="4">
+<x-card.normalrule>Reveal the top 7 cards of your Library.</x-card.normalrule>
 <x-card.normalrule>You may put any Item cards in your hand.</x-card.normalrule>
 <x-card.normalrule>Discard the rest.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />

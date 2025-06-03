@@ -22,7 +22,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
         <x-card.hero.local>A212.jpg</x-card.hero.local>
         
-        <x-card.phaserule type="Draw" lines="5"><text>
+        <x-card.phaserule type="Draw" lines="6"><text>
 <x-card.normalrule>You may do one of the following:</x-card.normalrule>
 <x-card.normalrule>&#8226; Put a basic Mana card</x-card.normalrule>
 <x-card.normalrule>from your Discard into your Hand.</x-card.normalrule>

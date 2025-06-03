@@ -22,13 +22,13 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
   <image x="0" y="0" class="hero" href="@local(A082.png)" />
 
-  <x-card.cardrule lines="5">
+  <x-card.phaserule type="Draw" lines="6"><text>
 <x-card.normalrule>Discard any number of cards from your hand.</x-card.normalrule>
 <x-card.normalrule>For each card discarded, search your Library</x-card.normalrule>
 <x-card.normalrule>for a Monster or Mana card. Reveal those</x-card.normalrule>
 <x-card.normalrule>cards, then put them in your hand.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
-</x-card.cardrule>
+</text></x-card.phaserule>
 HTML;
     }
 };

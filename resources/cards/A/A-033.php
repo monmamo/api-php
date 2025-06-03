@@ -11,6 +11,7 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Wheel of Fortune')]
     #[Concept('Draw')]
+    #[Concept('Cost', 5)]
     #[ImageCredit('Image by freepik')]
     class(__FILE__) implements CardComponents
     {
@@ -23,12 +24,12 @@ return new
 
 <x-card.flavortext>This isn't a game (show).</x-card.flavortext>
 
-<x-card.cardrule lines="4">
-        <x-card.normalrule>Each player puts his hand</x-card.normalrule>
+<x-card.phaserule type="Draw" lines="5"><text>
+    <x-card.normalrule>Each player puts his hand</x-card.normalrule>
 <x-card.normalrule>on the bottom of his Library,</x-card.normalrule>
 <x-card.normalrule>then draws 7 cards.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
-</x-card.cardrule>
+</text></x-card.phaserule>
 HTML;
         }
     };

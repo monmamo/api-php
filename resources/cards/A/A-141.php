@@ -11,6 +11,7 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Lottery')]
     #[Concept('Vendor')]
+    #[Concept('Cost', 3)]
     #[ImageCredit('Image by storyset on Freepik')]
     class(__FILE__) implements CardComponents
     {

@@ -25,12 +25,12 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.flavortext>He builds the hugest venues. Yuge ones.</x-card.flavortext>
 
-<x-card.cardrule lines="4">
+<x-card.phaserule type="Draw" lines="6"><text>
   <x-card.normalrule>Discard 5 cards from your Hand</x-card.normalrule>
 <x-card.normalrule>to search your Library for a</x-card.normalrule>
 <x-card.normalrule>Venue card and play it immediately.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
-</x-card.cardrule>
+</text></x-card.phaserule>
 HTML;
     }
 };

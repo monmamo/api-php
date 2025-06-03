@@ -9,6 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Round for the House')]
 #[Concept('Draw')]
+#[Concept('Cost', 3)]
 #[ImageCredit('Image by freepic.diller on Freepik')]
 class(__FILE__) implements CardComponents
 {
