@@ -23,11 +23,11 @@ return new
      
 <x-card.flavortext>Nothing fancy.</x-card.flavortext>
 
-<x-card.cardrule y="580" :lines="1">
+<x-card.cardrule y="580" :>
 <x-card.smallrule>Attach this card to a Mobster.</x-card.smallrule>
         </x-card.cardrule>
 
-<x-card.phaserule type="Attack" lines="2">
+<x-card.phaserule type="Attack" >
 <text >
 <x-card.normalrule>If 1d6 = @dieroll(6),</x-card.normalrule>
 <x-card.normalrule>knocks out attacked Character.</x-card.normalrule>

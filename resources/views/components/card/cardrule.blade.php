@@ -1,4 +1,4 @@
-@props(['y'=>null,'height'=>30,'lines'=>0,'repeat'=>false,'backgroundOpacity'=>1])
+@props(['y'=>null,'height'=>30,'lines'=>5,'repeat'=>false,'backgroundOpacity'=>1])
 <?php
 $height += $lines*35;
 $y ??= config("card-design.titlebox.y")-$height-85;

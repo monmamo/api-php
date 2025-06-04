@@ -25,7 +25,7 @@ class(__FILE__) implements CardComponents
 
 <x-card.flavortext>Recycle today for a better upkeep phase tomorrow.</x-card.flavortext>
 
-<x-card.cardrule lines="3">
+<x-card.cardrule >
 <x-card.normalrule>Put a card from your Discard</x-card.normalrule>
 <x-card.normalrule>pile into your hand.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />

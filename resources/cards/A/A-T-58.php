@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Bulk Up')]
     #[Concept('Trait')]
-    #[Concept('Size', '+2')]
+    #[Concept('Size', '+3')]
     #[Concept('Cost', 2)]
     #[ImageCredit('Icon by Lorc on Game-Icons.net')]
     class(__FILE__) implements CardComponents

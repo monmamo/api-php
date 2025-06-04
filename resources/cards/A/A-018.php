@@ -29,11 +29,11 @@ class(__FILE__) implements CardComponents
 <path d="M393.786 382.325C392.228 384.55 390.477 386.633 388.553 388.551C386.635 390.476 384.552 392.227 382.327 393.786L489.91 489.91L393.785 382.324Z" fill="silver" fill-opacity="1" />
 </x-card.hero.local>
 
-<x-card.phaserule type="Upkeep" y="580" lines="1"><text >
+<x-card.phaserule type="Upkeep" y="580" ><text >
 <x-card.normalrule>Attach this card to a Character.</x-card.normalrule>
 </text></x-card.phaserule>
 
-        <x-card.phaserule type="Resolution" lines="3"><text>
+        <x-card.phaserule type="Resolution" ><text>
         <x-card.normalrule>For 1d4 turns hence, the</x-card.normalrule>
 <x-card.normalrule>For 1d4 turns (including this one),</x-card.normalrule>
 <x-card.normalrule>apply Confusion.</x-card.normalrule>

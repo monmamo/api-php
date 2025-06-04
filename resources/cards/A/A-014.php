@@ -24,7 +24,7 @@ return new
 
 <x-card.flavortext>Expect more. Live better. Simplify life. Get more done.</x-card.flavortext>
 
-<x-card.phaserule type="Draw" lines="5"><text>
+<x-card.phaserule type="Draw" ><text>
 <x-card.normalrule>Discard 3 cards from your hand.</x-card.normalrule>
 <x-card.normalrule>Search your Library for 2 Item cards.</x-card.normalrule>
 <x-card.normalrule>Reveal them, then put them in your hand.</x-card.normalrule>

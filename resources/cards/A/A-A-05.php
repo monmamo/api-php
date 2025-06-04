@@ -26,7 +26,7 @@ return new
     <x-card.flavortext>If you can Dodge a wrench, you can Dodge a Fireball.</x-card.flavortext>
 
 
-    <x-card.phaserule type="Resolution" lines="3">
+    <x-card.phaserule type="Resolution" >
 <text>
 <x-card.normalrule>Discard any number of Fire (A-002)</x-card.normalrule>
 <x-card.normalrule>attached to this Monster.</x-card.normalrule>

@@ -16,7 +16,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Resolution" :lines="3">
+<x-card.phaserule type="Resolution" :>
 <text >
 <x-card.normalrule>When attacking, roll 1d6. If 6,</x-card.normalrule>
 <x-card.normalrule>do not apply declared Defense.</x-card.normalrule> 

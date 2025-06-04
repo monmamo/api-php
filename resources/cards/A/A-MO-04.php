@@ -41,7 +41,7 @@ class(__FILE__) implements CardComponents
     <x-card.flavortext.line>- Steve Wozniak</x-card.flavortext.line>
     </x-card.flavortext>
 
-        <x-card.phaserule type="Upkeep" lines="4">
+        <x-card.phaserule type="Upkeep" >
             <text >
 <x-card.normalrule>Look at the top 3 cards of any</x-card.normalrule> 
 <x-card.normalrule>Library &amp; choose 1 of them. Shuffle</x-card.normalrule>

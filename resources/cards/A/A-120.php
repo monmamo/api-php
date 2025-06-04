@@ -27,14 +27,14 @@ return new
 
 <x-card.flavortext>Does a monster good!</x-card.flavortext>
 
-    <x-card.phaserule type="Upkeep" y="590" lines="2">
+    <x-card.phaserule type="Upkeep" y="590" >
     <text>
     <x-card.normalrule>Attach this card to a Monster. That</x-card.normalrule>
     <x-card.normalrule>Monster cannot attack on this turn.</x-card.normalrule>
     </text>
 </x-card.phaserule>
 
-    <x-card.phaserule type="Resolution" lines="1">
+    <x-card.phaserule type="Resolution" >
     <text>
         <x-card.normalrule>Restore Size @damage to this Monster.</x-card.normalrule>
     </text>

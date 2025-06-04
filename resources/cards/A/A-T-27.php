@@ -20,7 +20,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="3">
+<x-card.phaserule type="Resolution" >
     <text >
 <x-card.normalrule>If this Monster does any damage</x-card.normalrule>
 <x-card.normalrule>while it is Confused (even to itself),</x-card.normalrule>

@@ -23,7 +23,7 @@ return new
 
 <x-card.flavortext>Don't tell Milton.</x-card.flavortext>
 
-<x-card.cardrule lines="2">
+<x-card.cardrule >
 <x-card.normalrule>Does 6 damage. </x-card.normalrule>
 <x-card.normalrule>Target cannot attack on next turn.</x-card.normalrule>
 </x-card.cardrule>

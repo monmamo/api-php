@@ -27,7 +27,7 @@ class(__FILE__) implements CardComponents
 <x-card.flavortext.line>it’s from he who dares to blow it on his own team.</x-card.flavortext.line>
 </x-card.flavortext>
 
-<x-card.phaserule type="Upkeep" lines="3"><text>
+<x-card.phaserule type="Upkeep" ><text>
 <x-card.normalrule>Choose one player.</x-card.normalrule>
 <x-card.normalrule>That player must trash one card</x-card.normalrule>
 <x-card.normalrule>from his hand or the top of his Library.</x-card.normalrule>

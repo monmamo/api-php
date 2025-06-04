@@ -53,7 +53,7 @@ class(__FILE__) implements CardComponents
  <path d="m68.223 25.918c0 4.4023-6.8359 4.4023-6.8359 0 0-4.4023 6.8359-4.4023 6.8359 0z"/>
  </g></x-card.hero.svg>
 
-    <x-card.phaserule type="Resolution" lines="3">
+    <x-card.phaserule type="Resolution" >
     <text >
 <x-card.normalrule>Choose a team.</x-card.normalrule>
 <x-card.normalrule>Each Character on that team</x-card.normalrule>

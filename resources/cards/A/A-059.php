@@ -23,7 +23,7 @@ return new
 
 <x-card.flavortext>Make it snow.</x-card.flavortext>
 
-<x-card.phaserule type="Resolution" lines="3">
+<x-card.phaserule type="Resolution" >
 <text>
 <x-card.normalrule>When this Monster takes a</x-card.normalrule>
 <x-card.normalrule>physical attack, the attacking</x-card.normalrule>

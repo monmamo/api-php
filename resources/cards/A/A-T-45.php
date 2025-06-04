@@ -17,7 +17,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="3"><text>
+<x-card.phaserule type="Resolution" ><text>
 <x-card.normalrule>If this Monster attacks and the</x-card.normalrule>
 <x-card.normalrule>targeted Monster uses a Defense,</x-card.normalrule>
 <x-card.normalrule>reduce the damage prevented by 1d6.</x-card.normalrule>

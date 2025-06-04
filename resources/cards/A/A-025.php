@@ -21,7 +21,7 @@ return new
 
 <x-card.flavortext>Mind your own business.</x-card.flavortext>
 
-<x-card.phaserule type="Draw" lines="5">
+<x-card.phaserule type="Draw" >
 <text >
 <x-card.normalrule>Choose an opponent. That opponent</x-card.normalrule>
     <x-card.normalrule>reveals their hand. Choose one card.</x-card.normalrule>

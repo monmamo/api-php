@@ -50,7 +50,7 @@ class(__FILE__) implements CardComponents
 <path d="M345 449.965L345 489.619C355.01 489.216 365.01 488.741 375 488.207L375 450.013C370.14 452.799 364.99 454.306 359.57 454.197C354.378 454.093 349.534 452.573 345 449.965Z" class="selected" fill="#8b572a" fill-opacity="1" />
     </x-card.hero.svg>
 
-<x-card.cardrule lines="5">
+<x-card.cardrule >
 <x-card.normalrule>Draw up to two cards.</x-card.normalrule>
 <x-card.smallrule>If there are fewer than two cards in your Library, draw all of them.</x-card.smallrule>
 <x-card.normalrule>After playing, shuffle your Discard pile</x-card.normalrule> 

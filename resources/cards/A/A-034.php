@@ -21,7 +21,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.hero.local>hero/gene-pool.jpg</x-card.hero.local>
 
-<x-card.cardrule lines="5">
+<x-card.cardrule >
 <x-card.normalrule>This card can be used only during Setup.</x-card.normalrule>
 <x-card.normalrule>Put this card on your Battlefield.</x-card.normalrule>
 <x-card.normalrule>On each setup turn, you may</x-card.normalrule> 

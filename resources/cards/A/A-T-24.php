@@ -20,7 +20,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
             <x-card.hero.svg>{{ \view('Aquos.icon') }}</x-card.hero.svg>
 
-            <x-card.phaserule type="Resolution" lines="4">
+            <x-card.phaserule type="Resolution" >
     <text >
 <x-card.normalrule>When resolving, discard 1d6 Water</x-card.normalrule>
 <x-card.normalrule>(A-001) from this Monster. The</x-card.normalrule>

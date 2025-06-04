@@ -31,7 +31,7 @@ return new
 
 <x-card.flavortext>You didn't see that.</x-card.flavortext>
 
-<x-card.cardrule lines="5">
+<x-card.cardrule >
 <x-card.normalrule>Put any number of cards from your</x-card.normalrule>
     <x-card.normalrule>hand on the bottom of your Library in</x-card.normalrule>
     <x-card.normalrule>any order. Then, draw a card for each card</x-card.normalrule>

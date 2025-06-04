@@ -17,7 +17,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule lines="2" >
+<x-card.cardrule  >
 <x-card.normalrule>Male and Female effects on other Monsters</x-card.normalrule>
 <x-card.normalrule>have no effect on this Monster.</x-card.normalrule>
 </x-card.cardrule>

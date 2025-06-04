@@ -30,7 +30,7 @@ return new
 <path d="M256.813 237.095C299.009 237.095 333.188 271.305 333.188 313.5C333.188 355.693 299.008 389.875 256.813 389.875C214.618 389.875 180.407 355.695 180.407 313.5C180.407 271.305 214.617 237.094 256.813 237.094Z" class="" fill="#000000" fill-opacity="1" />
 </x-card.hero.svg>
 
-<x-card.cardrule lines="3">
+<x-card.cardrule >
 <x-card.normalrule>On encounter,</x-card.normalrule>
 <x-card.normalrule>pings any present Security System.</x-card.normalrule>
 <x-card.normalrule>All Monsters present take 1 @damage damage.</x-card.normalrule>

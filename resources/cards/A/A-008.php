@@ -35,7 +35,7 @@ return new
             yield <<<'HTML'
 <text  y="360" class="credit" text-anchor="middle" alignment-baseline="baseline"><tspan x="70%" dy="25" class="flavor" text-anchor="middle" alignment-baseline="hanging" fill="#ffffff">Just collecting the dues.</tspan></text>
 
-<x-card.cardrule y="450" lines="2" >
+<x-card.cardrule y="450"  >
 <x-card.normalrule>You may play this card only if you have a</x-card.normalrule>
 <x-card.normalrule>Mobster card on the Battlefield.</x-card.normalrule>
 </x-card.cardrule>

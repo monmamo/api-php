@@ -24,7 +24,7 @@ return new
 
 <x-card.flavortext>This isn't a game (show).</x-card.flavortext>
 
-<x-card.phaserule type="Draw" lines="5"><text>
+<x-card.phaserule type="Draw" ><text>
     <x-card.normalrule>Each player puts his hand</x-card.normalrule>
 <x-card.normalrule>on the bottom of his Library,</x-card.normalrule>
 <x-card.normalrule>then draws 7 cards.</x-card.normalrule>

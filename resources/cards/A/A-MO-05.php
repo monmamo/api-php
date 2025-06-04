@@ -32,7 +32,7 @@ return new
 <x-card.normalrule>{{\trans_choice('rules.player-limit', 1)}}</x-card.normalrule>
 </x-card.cardrule>
 
-    <x-card.phaserule type="Draw" lines="3">
+    <x-card.phaserule type="Draw" >
         <text>
             <x-card.normalrule>During your opponents' Draw phase,</x-card.normalrule>
             <x-card.normalrule>they must let you draw a card of your own,</x-card.normalrule>

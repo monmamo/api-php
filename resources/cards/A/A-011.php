@@ -19,7 +19,7 @@ return new
             yield <<<'HTML'
 <x-card.hero.svg>{{ \view('Energos.icon') }}</x-card.hero.svg>
 
-<x-card.cardrule y="470" lines="1" >
+<x-card.cardrule y="470"  >
 <x-card.normalrule>Requires Energos.</x-card.normalrule>
 </x-card.cardrule>
 

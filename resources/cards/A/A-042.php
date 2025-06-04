@@ -19,7 +19,7 @@ return new
             yield <<<'HTML'
 <x-card.flavortext>Bears a striking resemblance to Frank Abagnale.</x-card.flavortext>
 
-<x-card.phaserule type="Draw" lines="5">
+<x-card.phaserule type="Draw" >
 <text >
 <x-card.normalrule>Shuffle your hand into your Library.</x-card.normalrule>
 <x-card.normalrule>Choose another player.</x-card.normalrule>

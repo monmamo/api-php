@@ -17,7 +17,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="1">
+<x-card.phaserule type="Resolution" >
 <text >
 <x-card.normalrule>Prevent Size @damage.</x-card.normalrule>
 </text>

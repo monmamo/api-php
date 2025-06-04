@@ -17,7 +17,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Draw" lines="5"><text>
+<x-card.phaserule type="Draw" ><text>
 <x-card.normalrule>Choose one opponent.</x-card.normalrule>
 <x-card.normalrule>That opponent may search their Library for a Weapon.</x-card.normalrule>
 <x-card.normalrule>You may search your Library for any number of Food items.</x-card.normalrule>

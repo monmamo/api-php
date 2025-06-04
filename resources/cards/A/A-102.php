@@ -40,7 +40,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="5">
+<x-card.phaserule type="Resolution" >
     <text >
     <x-card.smallrule>The effect will last for</x-card.smallrule>
 <x-card.smallrule>1d6 turns, including this one.</x-card.smallrule>

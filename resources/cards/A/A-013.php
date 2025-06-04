@@ -56,7 +56,7 @@ HTML;
             );
 
             yield <<<'HTML'
-        <x-card.phaserule type="Draw" lines="5"><text>
+        <x-card.phaserule type="Draw" ><text>
             <x-card.normalrule>Look at the top 13 cards of your</x-card.normalrule>
             <x-card.normalrule>Library. You may put 3 of them into</x-card.normalrule>
             <x-card.normalrule>your hand. Put the rest on the bottom</x-card.normalrule>

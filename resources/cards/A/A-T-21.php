@@ -22,7 +22,7 @@ return new
 
 <x-card.flavortext>Prevents other monsters from lowering accuracy.</x-card.flavortext>
 
-<x-card.phaserule type="Resolution" lines="3">
+<x-card.phaserule type="Resolution" >
         <text >
 <x-card.normalrule>Ignore any Defense or effect that</x-card.normalrule>
 <x-card.normalrule> would reduce or prevent the damage</x-card.normalrule>

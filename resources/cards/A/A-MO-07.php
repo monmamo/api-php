@@ -27,7 +27,7 @@ return new
 
 <x-card.flavortext>Loose lips sink championships.</x-card.flavortext>
 
-    <x-card.phaserule type="Upkeep" lines="4"><text>
+    <x-card.phaserule type="Upkeep" ><text>
         <x-card.normalrule>Once per turn, you may look at a</x-card.normalrule>
         <x-card.normalrule>random card from any Library.</x-card.normalrule>
         <x-card.normalrule>Do not reveal the card to anyone else or</x-card.normalrule>

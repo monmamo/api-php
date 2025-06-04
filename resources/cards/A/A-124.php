@@ -38,7 +38,7 @@ HTML;
 HTML;
 
           yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="4">
+<x-card.phaserule type="Resolution" >
 <text >
 <x-card.normalrule x="55%">After all attacks and skills are resolved,</x-card.normalrule>
 <x-card.normalrule>for each Monster that did not attack,</x-card.normalrule>

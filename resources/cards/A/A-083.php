@@ -17,7 +17,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-  <x-card.cardrule lines="5">
+  <x-card.cardrule >
   <x-card.normalrule>Discard any number of cards from your hand.</x-card.normalrule>
     <x-card.normalrule>For each card discarded, search your Discard</x-card.normalrule>
     <x-card.normalrule>for a Monster or Mana card. Reveal</x-card.normalrule>

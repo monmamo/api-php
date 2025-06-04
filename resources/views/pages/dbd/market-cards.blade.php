@@ -3,4 +3,4 @@ if (\App\Facades\Environment::is(\App\Enums\Environments::Production)) {
     abort(404);
 }
 ?>
-<x-card-sheet :abreast="3" cards="games.dbd.cards.monster-cards"/>
+<x-card-sheet :abreast="3" cards="games.dbd.cards.market-cards"/>

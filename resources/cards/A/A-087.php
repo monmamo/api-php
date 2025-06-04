@@ -27,7 +27,7 @@ return new
             yield <<<'HTML'
 <x-card.hero.local>hero/fieldworker.jpg</x-card.hero.local>
 
-<x-card.cardrule y="580" :lines="1">
+<x-card.cardrule y="580" :>
     <x-card.smallrule>A player may have any number of Fieldworkers on the Battlefield.</x-card.smallrule>
     </x-card.cardrule>
 

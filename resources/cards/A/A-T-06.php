@@ -2,6 +2,7 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
+use App\CardAttributes\ImageInDevelopment;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
@@ -16,6 +17,7 @@ return new
     #[Concept('Cost', 3)]
     #[IsGeneratedImage]
     #[ImageIsPrototype]
+    #[ImageInDevelopment]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -31,7 +33,7 @@ return new
             // </g></x-card.hero.svg>
 
             yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="1">
+<x-card.phaserule type="Resolution" >
 <text >
 <x-card.normalrule>+2 @damage to all Attacks and Defenses.</x-card.normalrule>
 </text>

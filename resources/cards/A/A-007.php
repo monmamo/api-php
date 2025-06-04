@@ -30,7 +30,7 @@ class(__FILE__) implements CardComponents
 <path d="M98.86133,8.626a1.99908,1.99908,0,0,0-2.73242.73242l-5,8.66016a2.00032,2.00032,0,0,0,3.46484,2l5-8.66016A2.00062,2.00062,0,0,0,98.86133,8.626Z" />
 </g></x-card.hero.svg>
 
-<x-card.phaserule type="Draw" lines="5"><text>
+<x-card.phaserule type="Draw" ><text>
 <x-card.normalrule>Draw three cards.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>

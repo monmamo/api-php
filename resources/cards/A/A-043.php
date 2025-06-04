@@ -18,7 +18,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.flavortext>Psst. I got a great deal for you.</x-card.flavortext>
 
-<x-card.phaserule type="Draw" lines="4">
+<x-card.phaserule type="Draw" >
 <text >
 <x-card.normalrule>Cut your deck.</x-card.normalrule>
 <x-card.normalrule>Draw the top 2 cards of the top half.</x-card.normalrule>

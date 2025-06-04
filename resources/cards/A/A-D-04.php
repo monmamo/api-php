@@ -19,7 +19,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
             <x-card.hero.svg>{{ \view('Aquos.icon') }}</x-card.hero.svg>
 
-            <x-card.phaserule type="Resolution" lines="4">
+            <x-card.phaserule type="Resolution" >
     <text >
 <x-card.normalrule>For each Water (A-001) attached to</x-card.normalrule>
 <x-card.normalrule>this Monster, prevent Boost @damage.</x-card.normalrule>

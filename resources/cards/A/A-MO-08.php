@@ -26,7 +26,7 @@ class(__FILE__) implements CardComponents
 
 <x-card.flavortext>I've got a driver and that's a start.</x-card.flavortext>
 
-    <x-card.phaserule type="Draw" lines="3">
+    <x-card.phaserule type="Draw" >
 <text >
 <x-card.normalrule>You may take one additional</x-card.normalrule>
 <x-card.normalrule>Draw phase. If you do, put this card</x-card.normalrule>

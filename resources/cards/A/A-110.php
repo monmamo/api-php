@@ -21,7 +21,7 @@ class(__FILE__) implements CardComponents
 
 <x-card.flavortext>They say that bad breath is better than no breath at all…</x-card.flavortext>
 
-<x-card.cardrule y="585" lines="1" >
+<x-card.cardrule y="585"  >
 <x-card.normalrule>{{ \trans_choice('rules.monster-limit', 1)}}</x-card.normalrule>
 </x-card.cardrule>
 

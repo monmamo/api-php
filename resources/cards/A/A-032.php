@@ -29,7 +29,7 @@ return new
 
 <x-card.flavortext>Go, go, go team go!</x-card.flavortext>
 
-<x-card.phaserule type="Resolution" lines="5">
+<x-card.phaserule type="Resolution" >
     <text >
     <x-card.smallrule>A player may have any number of Cheerleaders</x-card.normalrule>
     <x-card.smallrule>on the Battlefield. You may choose to make this</x-card.normalrule>

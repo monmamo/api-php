@@ -19,7 +19,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <x-card.phaserule type="Upkeep" lines="2">
+    <x-card.phaserule type="Upkeep" >
     <text >
 <x-card.normalrule>Remove 1 @damage from each Monster</x-card.normalrule>
 <x-card.normalrule>in play (both yours and your opponents').</x-card.normalrule>

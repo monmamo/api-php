@@ -24,7 +24,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.flavortext>A scent that monsters can't compete with.</x-card.flavortext>
 
-<x-card.cardrule lines="3">
+<x-card.cardrule >
 <x-card.smallrule>{{ __('rules.attach-to-monster')}}</x-card.smallrule>
 <x-card.normalrule>For 1d4 turns, this Monster</x-card.normalrule>
 <x-card.normalrule>cannot be the target of an Attack.</x-card.normalrule>

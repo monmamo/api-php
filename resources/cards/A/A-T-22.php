@@ -28,7 +28,7 @@ class(__FILE__) implements CardComponents
 
 <x-card.flavortext>Halitosis (A-110) is the least of your problems.</x-card.flavortext>
 
-<x-card.phaserule type="Resolution" lines="5">
+<x-card.phaserule type="Resolution" >
 <text>
 <x-card.smallrule>When this Monster attacks or defends</x-card.smallrule>
 <x-card.smallrule>& has 1+ Fire (A-002) attached & is </x-card.smallrule>

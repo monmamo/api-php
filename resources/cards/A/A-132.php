@@ -20,11 +20,11 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.flavortext>Touch is the best medicine.</x-card.flavortext>
 
-<x-card.cardrule y="580" :lines="1">
+<x-card.cardrule y="580" :>
 <x-card.smallrule>{{ trans_choice('rules.player-limit',1) }}</x-card.smallrule>
         </x-card.cardrule>
 
-<x-card.phaserule type="Resolution" :lines="3">
+<x-card.phaserule type="Resolution" :>
     <text >
 <x-card.normalrule>After all attacks &amp; skills</x-card.normalrule>
 <x-card.normalrule>are resolved, restore 4 @damage to each</x-card.normalrule>

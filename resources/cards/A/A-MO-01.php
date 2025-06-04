@@ -42,7 +42,7 @@ HTML;
     <x-card.normalrule>{{\trans_choice('rules.player-limit', 1)}}</x-card.normalrule>
     </x-card.cardrule>
     
-        <x-card.phaserule type="Draw" lines="3" badge="Repeat">
+        <x-card.phaserule type="Draw"  badge="Repeat">
             <text >
             <x-card.normalrule>You may draw 1 card for each other</x-card.normalrule>
             <x-card.normalrule>Mobster you have on the Battlefield.</x-card.normalrule>

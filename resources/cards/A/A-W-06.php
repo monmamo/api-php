@@ -39,11 +39,11 @@ return new
      
 <x-card.flavortext>Definitely mightier than The Pen (A-W-15).</x-card.flavortext>
 
-<x-card.cardrule y="580" :lines="1">
+<x-card.cardrule y="580" :>
 <x-card.smallrule>Attach this card to a Mobster.</x-card.smallrule>
         </x-card.cardrule>
 
-        <x-card.phaserule type="Resolution" lines="1">
+        <x-card.phaserule type="Resolution" >
 <text >
 <x-card.normalrule>2+1d6 @damage</x-card.normalrule>
 </text>

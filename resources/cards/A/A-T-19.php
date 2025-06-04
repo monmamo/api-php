@@ -16,7 +16,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule :lines="5">
+<x-card.cardrule :>
 <x-card.normalrule>During the first round of turns,</x-card.normalrule>
 <x-card.normalrule>this Monster's Speed is halved</x-card.normalrule>
 <x-card.normalrule>and Attacks do half as much damage.</x-card.normalrule>

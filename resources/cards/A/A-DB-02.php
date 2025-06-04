@@ -11,6 +11,7 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Gene Pool')]
+#[Concept('Upkeep')]
 #[Concept('Cost', 6)]
 #[ImageCredit('Image by freepik')]
 class(__FILE__) implements CardComponents
@@ -23,7 +24,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.hero.local>hero/gene-pool.jpg</x-card.hero.local>
 
-<x-card.cardrule lines="1">
+<x-card.cardrule >
 <x-card.normalrule>You may take a Trait card for free.</x-card.normalrule>
 </x-card.phaserule>
 HTML;

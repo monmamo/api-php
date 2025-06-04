@@ -31,7 +31,7 @@ return new
 
 <x-card.flavortext>Most efficacious in every case.</x-card.flavortext>
 
-    <x-card.phaserule type="Upkeep"  lines="5"><text >
+    <x-card.phaserule type="Upkeep"  ><text >
 <x-card.smallrule>If playing this card from your hand,</x-card.smallrule>
 <x-card.smallrule>discard any number of cards from your hand.</x-card.smallrule> 
 <x-card.normalrule>For each card you paid/discarded,</x-card.normalrule>

@@ -33,11 +33,11 @@ return new
 
 <x-card.flavortext>I think something just stung me……</x-card.flavortext>
 
-            <x-card.phaserule type="Upkeep" y="580" lines="1"><text >
+            <x-card.phaserule type="Upkeep" y="580" ><text >
 <x-card.normalrule>Attach this card to a Character.</x-card.normalrule>
 </text></x-card.phaserule>
 
-        <x-card.phaserule type="Resolution" lines="3"><text>
+        <x-card.phaserule type="Resolution" ><text>
         <x-card.normalrule>For 1d4 turns hence, the</x-card.normalrule>
 <x-card.normalrule>affected Character cannot attack,</x-card.normalrule> 
 <x-card.normalrule>cannot defend, and has Speed of 0.</x-card.normalrule>

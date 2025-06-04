@@ -31,7 +31,7 @@ HTML;
         yield <<<'HTML'
 <x-card.flavortext>The smell is the least of your worries.</x-card.flavortext>
 
-<x-card.phaserule type="Resolution"  lines="2">
+<x-card.phaserule type="Resolution"  >
                  <text >
                  <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
  <x-card.normalrule>Roll 1d6. @dieroll(1,2) Discard this card.</x-card.normalrule>

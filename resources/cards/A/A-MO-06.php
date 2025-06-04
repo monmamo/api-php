@@ -25,7 +25,7 @@ return new
 
 <x-card.flavortext>Declare the pennies on your eyes.</x-card.flavortext>
 
-<x-card.phaserule type="Resolution" lines="2">
+<x-card.phaserule type="Resolution" >
     <text >
 <x-card.normalrule>Each player discards a card</x-card.normalrule>
 <x-card.normalrule>from his hand or Library.</x-card.normalrule>

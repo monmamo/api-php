@@ -15,7 +15,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Upkeep" lines="4"><text>
+<x-card.phaserule type="Upkeep" ><text>
 <x-card.normalrule>Roll 1d20 for each Monster in play</x-card.normalrule>
 <x-card.normalrule>(including those that are</x-card.normalrule>
 <x-card.normalrule>Knocked Out). The one that gets the</x-card.normalrule>

@@ -32,7 +32,7 @@ return new
         <x-card.smallrule>when you put it on the Battlefield.</x-card.smallrule>
     </text>
 
-    <x-card.phaserule type="Draw" lines="3">
+    <x-card.phaserule type="Draw" >
         <text>
         <x-card.normalrule>Search your Library for any card.</x-card.normalrule>
         <x-card.normalrule>Shuffle your Library afterwards.</x-card.normalrule>

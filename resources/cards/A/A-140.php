@@ -20,7 +20,7 @@ return new
             yield <<<'HTML'
 <x-card.flavortext>Now is not the time to panic.</x-card.flavortext>
 
-    <x-card.cardrule :lines="4">
+    <x-card.cardrule :>
 <x-card.smallrule>Cannot be played with a shared Library.</x-card.smallrule>
 <x-card.normalrule>Discard any number of cards from the top</x-card.normalrule>
 <x-card.normalrule>of your Library to remove 1 @damage per card</x-card.normalrule>

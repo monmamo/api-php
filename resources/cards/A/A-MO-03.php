@@ -32,7 +32,7 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>{{\trans_choice('rules.player-limit', 1)}}</x-card.normalrule>
 </x-card.cardrule>
 
-<x-card.phaserule type="Upkeep" lines="5">
+<x-card.phaserule type="Upkeep" >
 <text >
 <x-card.normalrule>You may choose a random card</x-card.normalrule>
 <x-card.normalrule>from an opponent's hand.</x-card.normalrule>

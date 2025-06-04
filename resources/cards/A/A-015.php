@@ -28,7 +28,7 @@ class(__FILE__) implements CardComponents
 
 <x-card.flavortext>Loose lips sink championships.</x-card.flavortext>
 
-<x-card.cardrule lines="2">
+<x-card.cardrule >
 <x-card.normalrule>Each other player must discard one card</x-card.normalrule>
 <x-card.normalrule>from his hand or the top of his Library.</x-card.normalrule>
 </x-card.cardrule>

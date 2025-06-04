@@ -1,15 +1,18 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\IsIncomplete;
+use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
-#[IsIncomplete]
-#[Title('Intimidating Form')]
-#[Concept('Trait')]
+#[Title('Cheerleader')]
+#[Concept('Mobster')]
+#[Concept('Female')]
+#[Concept('Cumulative')]
+#[Concept('Integrity', '2')]
+#[Prerequisites('Can replace any Bystander Cheerleader (A-032).')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -17,9 +20,6 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Defense" ><text>
-<x-card.normalrule>Prevents Size @damage.</x-card.normalrule>
-    </text></x-card.phaserule>
 HTML;
     }
 };

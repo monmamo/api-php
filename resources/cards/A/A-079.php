@@ -21,7 +21,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <x-card.cardrule lines="3" >
+    <x-card.cardrule  >
     <x-card.normalrule>Choose one of your Monsters on the Battlefield.</x-card.normalrule>
 <x-card.normalrule>Shuffle that Monster, all cards attached to it,</x-card.normalrule>
 <x-card.normalrule>and Rescue Drone into your Library.</x-card.normalrule>

@@ -21,7 +21,7 @@ return new
             yield <<<'HTML'
 <x-card.hero.svg>{{ \view('Pyros.icon') }}</x-card.hero.svg>
 
-<x-card.phaserule type="Resolution" lines="4">
+<x-card.phaserule type="Resolution" >
     <text >
 <x-card.normalrule>For each Fire (A-002) attached to</x-card.normalrule>
 <x-card.normalrule>this Monster, prevent Boost damage.</x-card.normalrule>

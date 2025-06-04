@@ -26,7 +26,7 @@ class(__FILE__) implements CardComponents
 
 <svg x="402px" y="322px" height="128px" width="128px" viewBox="0 0 512 512">{{view('Mobster.ban-icon')}}</svg>
 
-<x-card.cardrule :lines="4">
+<x-card.cardrule :>
     <x-card.normalrule>No Mobsters or Criminals are</x-card.normalrule>
     <x-card.normalrule>allowed on the Battlefield.</x-card.normalrule>
     <x-card.normalrule>Discard all Mobsters and Criminals</x-card.normalrule>

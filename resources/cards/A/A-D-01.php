@@ -23,7 +23,7 @@ return new
             yield <<<'HTML'
     <x-card.hero.local>AS02.jpg</x-card.hero.local> 
 
-    <x-card.phaserule type="Resolution" lines="1">
+    <x-card.phaserule type="Resolution" >
     <text >
         <x-card.normalrule>Prevent Size+Boost @damage.</x-card.normalrule>
 </text>

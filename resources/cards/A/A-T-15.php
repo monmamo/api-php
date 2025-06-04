@@ -17,7 +17,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Command" lines="5">
+<x-card.phaserule type="Command" >
       <text >
 <x-card.normalrule>When not your turn,</x-card.normalrule>
 <x-card.normalrule>roll 1d6 for each Monster</x-card.normalrule>

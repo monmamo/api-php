@@ -18,7 +18,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Draw" lines="2">
+<x-card.phaserule type="Draw" >
 <text>
 <x-card.normalrule>Put up to 3 Item cards from your</x-card.normalrule>
 <x-card.normalrule>Discard into your Library.</x-card.normalrule>

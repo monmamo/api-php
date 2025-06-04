@@ -19,7 +19,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
             <x-card.hero.local>hero/well-bye.jpg</x-card.hero.local>
 
-            <x-card.cardrule lines="4" >
+            <x-card.cardrule  >
     <x-card.smallrule>May not be used if the Monster is under any Bane.</x-card.smallrule>
     <x-card.normalrule>Shuffle the Monster and all cards</x-card.normalrule>
     <x-card.normalrule>attached to it back into your Library.</x-card.normalrule>

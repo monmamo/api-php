@@ -26,7 +26,7 @@ class(__FILE__) implements CardComponents
 <x-card.flavortext.line>(Celebrity likenesses impersonated.)</x-card.flavortext.line>
 </x-card.flavortext>
 
-<x-card.phaserule type="Draw" lines="4"><text>
+<x-card.phaserule type="Draw" ><text>
 <x-card.normalrule>Choose an opponent.</x-card.normalrule>
 <x-card.normalrule>That opponent removes all Monster cards</x-card.normalrule>
 <x-card.normalrule>from his Library and puts them in Discard.</x-card.normalrule>

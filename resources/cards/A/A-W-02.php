@@ -24,7 +24,7 @@ return new
      
 <x-card.flavortext>Just a few off the top.</x-card.flavortext>
 
-<x-card.phaserule type="Resolution" lines="1">
+<x-card.phaserule type="Resolution" >
 <text >
 <x-card.normalrule>Speed @damage.</x-card.normalrule>
 </text>

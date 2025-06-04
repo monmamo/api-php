@@ -3,7 +3,6 @@
 use App\CardAttributes\DeckbuilderBackground;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -11,8 +10,8 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Change of Venue')]
 #[Concept('Upkeep')]
+#[Concept('Cost', 2)]
 #[ImageCredit('Image by Delapouite on Game-Icons.net')]
-#[Prerequisites([])]
 class(__FILE__) implements CardComponents
 {
     use DeckbuilderBackground { DeckbuilderBackground::background insteadof \App\CardAttributes\DefaultCardAttributes; }
@@ -29,7 +28,7 @@ class(__FILE__) implements CardComponents
 
 <svg x="128" y="192" height="256" width="256" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M418.676 370.094C401.133 370.344 377.85 373.3 353.926 378.071C336.067 381.631 317.876 386.196 300.861 391.143C314.28 394.053 326.757 398.024 339.004 403.225L355.092 410.057L340.186 419.184C293.819 447.576 259.222 459.869 219.951 454.737C186.846 450.41 150.594 433.869 100.885 407.465C126.258 443.78 163.128 472.203 205.613 484.459C258.186 499.625 319.485 490.802 380.98 440.719L387.008 435.809L392.74 441.059C405.384 452.638 413.016 468.692 418.393 484.776C427.367 447.795 433.024 403.39 427.625 370.252C424.837 370.112 421.877 370.048 418.675 370.094Z" class="selected" fill="#ffffff" fill-opacity="1" /></svg>
 
-    <x-card.cardrule lines="1">
+    <x-card.cardrule >
 <x-card.normalrule>Shuffle and redeal a Market.</x-card.normalrule>
 </x-card.cardrule>
 

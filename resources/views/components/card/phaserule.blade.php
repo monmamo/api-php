@@ -1,4 +1,4 @@
-@props(['type','y'=>null,'height'=>30,'lines'=>null,'repeat'=>false,'badge'=>null])
+@props(['type','y'=>null,'height'=>30,'lines'=>5,'repeat'=>false,'badge'=>null])
 <?php
 
 use Illuminate\View\ComponentSlot;

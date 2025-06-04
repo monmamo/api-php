@@ -16,7 +16,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="2">
+<x-card.phaserule type="Resolution" >
 <text >
 <x-card.normalrule>Multiply damage done</x-card.normalrule>
 <x-card.normalrule>by Attacks by Boost.</x-card.normalrule>

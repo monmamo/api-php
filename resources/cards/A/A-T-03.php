@@ -23,7 +23,7 @@ return new
             yield '<x-card.flavortext>You won\'t like him when he\'s angry.</x-card.flavortext>';
 
             yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="2"><text>
+<x-card.phaserule type="Resolution" ><text>
             <x-card.normalrule>Increase Speed by 1</x-card.normalrule>
             <x-card.normalrule>for each 4 @damage taken.</x-card.normalrule>
         </text></x-card.phaserule>

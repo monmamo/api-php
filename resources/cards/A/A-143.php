@@ -21,7 +21,7 @@ return new
             yield <<<'HTML'
     <x-card.hero.local>A135.jpg</x-card.hero.local> 
 
-    <x-card.phaserule type="Upkeep" lines="3" >
+    <x-card.phaserule type="Upkeep"  >
     <text >
     <x-card.normalrule>You may put one card of your</x-card.normalrule>
 <x-card.normalrule>choice from your Discard pile</x-card.normalrule>

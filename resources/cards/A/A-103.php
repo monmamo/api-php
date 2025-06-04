@@ -1,6 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageInDevelopment;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
 use App\Contracts\Card\CardComponents;
@@ -9,6 +10,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Drinking Water Fountain')]
 #[IsGeneratedImage]
+#[ImageInDevelopment]
 #[ImageIsPrototype]
 class(__FILE__) implements CardComponents
 {
@@ -21,7 +23,7 @@ class(__FILE__) implements CardComponents
         
         <x-card.flavortext>All creatures need refreshment sometimes.</x-card.flavortext>
 
-        <x-card.cardrule y="585" lines="1" >
+        <x-card.cardrule y="585"  >
 <x-card.normalrule>Put this card in the Battlefield.</x-card.normalrule>
 </x-card.cardrule>
 

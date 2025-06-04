@@ -25,7 +25,7 @@ class(__FILE__) implements CardComponents
 <x-card.flavortext.line>on the field. Time to celebrate!</x-card.flavortext.line>
     </x-card.flavortext>
         
-<x-card.cardrule lines="4">
+<x-card.cardrule >
 <x-card.normalrule>Each player, including you,</x-card.normalrule>
 <x-card.normalrule>may choose to draw a card.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />

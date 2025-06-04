@@ -28,7 +28,7 @@ HTML;
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule :lines="2">
+<x-card.cardrule :>
 <x-card.normalrule>For each Defense, roll 1d6.</x-card.normalrule>
 <x-card.normalrule>If @dieroll(1), the Defense does nothing.</x-card.normalrule>
 </x-card.cardrule>

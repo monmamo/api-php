@@ -4,8 +4,8 @@ return [
     'name' => 'Deckbuilder Duel',
     'cards' => [
         'player-deck' => [
-            'A-DB-01' => 9,
-            'A-DB-06' => 1, // Change of Venue
+            // 'A-DB-01' => 9,
+            // 'A-DB-06' => 1, // Change of Venue
         ],
         'master-cards' => [
             'A-MA-01',
@@ -42,6 +42,7 @@ return [
             'A-T-09' => 3, // Oozing Affluvia
             'A-T-11' => 3, // Dual Cranial Horns
             'A-T-12' => 3, // Tackling
+            'A-T-57' => 1, // Belches Loudly
             // Attack cards
             'A-A-01' => 3, // Body Slam
             'A-A-02' => 3,
@@ -67,16 +68,22 @@ return [
             'A-W-07' => 3, // Butterfly Knife
             'A-W-08' => 3, // Switchblade
         ],
-        'market-cards' => [
+        'market-cards' => [ // 80 cards
+            'A-DB-06' => 3, // Change of Venue
             'A-DB-02' => 2, // Gene Pool
-            'A-DB-03' => 12, // Mentor
-            'A-DB-04' => 6, // Elite Mentor
+            'A-DB-03' => 20, // Mentor
+            'A-DB-04' => 8, // Elite Mentor
             'A-DB-05' => 2, // Champion Mentor
-            'A-007' => 3, // Brilliance
+            'A-EQ-1' => 3, // Equalizer 1
+            'A-EQ-2' => 3, // Equalizer 2
+            'A-EQ-3' => 3, // Equalizer 3
+            'A-SD-1' => 3, // Shuffle and Draw 1
+            'A-SD-2' => 3, // Shuffle and Draw 2
+            'A-007' => 2, // Brilliance
             'A-009' => 1, // Support Gear
-            'A-015' => 3, // Tattle
+            'A-015' => 2, // Tattle
             'A-016' => 1, // Whistleblower
-            'A-017' => 3, // Sleight of Hand
+            'A-017' => 2, // Sleight of Hand
             'A-033' => 1, // Wheel of Fortune
             'A-042' => 1, // Copycat
             'A-055' => 3, // Defensive Coordinator
@@ -85,16 +92,11 @@ return [
             'A-106' => 1, // Reconnaissance Team
             'A-122' => 3, // Offensive Coordinator
             'A-128' => 1, // Idiot Agents
-            'A-130' => 3, // Merchandizing
-            'A-131' => 3, // Insurance Policy
+            'A-130' => 2, // Merchandizing
+            'A-131' => 1, // Insurance Policy
             'A-139' => 1, // Karma
-            'A-141' => 3, // Lottery
+            'A-141' => 2, // Lottery
             'A-152' => 2, // Favorite Toy
-            'A-EQ-1' => 3, // Equalizer 1
-            'A-EQ-2' => 3, // Equalizer 2
-            'A-EQ-3' => 3, // Equalizer 3
-            'A-SD-1' => 3, // Shuffle and Draw 1
-            'A-SD-2' => 3, // Shuffle and Draw 2
         ],
     ],
 ];

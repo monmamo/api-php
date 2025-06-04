@@ -25,7 +25,7 @@ return new
 
 <x-card.flavortext>Cover the earth. Eh, just your enemies.</x-card.flavortext>
 
-<x-card.cardrule lines="5">
+<x-card.cardrule >
 <x-card.normalrule>If unopened: does 6 damage. </x-card.normalrule>
 <x-card.normalrule>Roll 1d6. If @dieroll(1,2), the can "opens."</x-card.normalrule>
 <x-card.normalrule>Henceforth, reduce Speed of all Characters</x-card.normalrule>

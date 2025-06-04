@@ -56,7 +56,7 @@ HTML;
         yield "<x-card.hero.svg><g fill=\"#ffffff\" fill-opacity=\"1\">{$hero_svg}</g></x-card.hero.svg>";
 
         yield <<<HTML
-    <x-card.cardrule lines="4">
+    <x-card.cardrule >
         <x-card.smallrule>You may apply this to any 1d6 roll,</x-card.smallrule> 
         <x-card.smallrule>be it your own or another player's.</x-card.smallrule>
         <x-card.smallrule>Discard this card after using.</x-card.smallrule>

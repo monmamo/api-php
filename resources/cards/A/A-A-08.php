@@ -29,7 +29,7 @@ class(__FILE__) implements CardComponents
 <g fill="#ff0000" fill-opacity="1" transform="translate(192,16) scale(0.25)"><x-icons.crosshair  /></g>
 </x-card.hero.svg>
 
-<x-card.phaserule type="Resolution" lines="3"><text>
+<x-card.phaserule type="Resolution" ><text>
         <x-card.normalrule>For 1d4 turns hence, the</x-card.normalrule>
 <x-card.normalrule>affected Character cannot attack,</x-card.normalrule> 
 <x-card.normalrule>cannot defend, and has Speed of 0.</x-card.normalrule>

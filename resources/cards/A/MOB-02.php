@@ -7,9 +7,13 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
+#[Title('Connected Guy')]
+#[Concept('Mobster')]
+#[Concept('Male')]
+#[Concept('DamageCapacity', 13)]
+#[Concept('Size', 4)]
+#[Concept('Speed', 4)]
 #[IsIncomplete]
-#[Title('Intimidating Form')]
-#[Concept('Trait')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -17,9 +21,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Defense" ><text>
-<x-card.normalrule>Prevents Size @damage.</x-card.normalrule>
-    </text></x-card.phaserule>
+<x-card.flavortext>An associate of a Crime Family.</x-card.flavortext>
 HTML;
     }
 };

@@ -1,6 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageInDevelopment;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\ImagePrompt;
 use App\CardAttributes\IsGeneratedImage;
@@ -14,6 +15,7 @@ return new
 #[Concept('Cost', 2)]
 #[IsGeneratedImage]
 #[ImageIsPrototype]
+#[ImageInDevelopment]
 #[ImagePrompt('A fantastical mammal monster from a world of weird zoology, with patchy fur, two eyes, an asymmetrical body, and mismatched limbs, sitting in a dimly lit room. It gently clutches a small, cuddly stuffed animal, worn and stitched, with one button eye and fraying seams. The creature\'s expression is soft and emotional, conveying attachment or loneliness. The background is abstract and dreamlike, with soft shadows and eerie textures. Highly detailed, surreal, soft lighting, whimsical but unsettling atmosphere.')]
 class(__FILE__) implements CardComponents
 {
@@ -30,7 +32,7 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>Attach this card to a Monster.</x-card.normalrule>
 </x-card.cardrule>
 
-<x-card.phaserule type="Resolution" lines="2"><text>
+<x-card.phaserule type="Resolution" ><text>
 <x-card.normalrule>If this Monster doesn't attack,</x-card.normalrule>
 <x-card.normalrule>restore 2 @damage.</x-card.normalrule>
 </text></x-card.phaserule>

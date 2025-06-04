@@ -22,11 +22,11 @@ return new
 
 <x-card.flavortext>Also stings like a bee.</x-card.flavortext>
 
-<x-card.cardrule y="580" :lines="1">
+<x-card.cardrule y="580" :>
 <x-card.smallrule>Attach this card to a Mobster.</x-card.smallrule>
         </x-card.cardrule>
        
-<x-card.phaserule type="Resolution" lines="1">
+<x-card.phaserule type="Resolution" >
 <text >
 <x-card.normalrule>Speed @damage</x-card.normalrule>
 </text>

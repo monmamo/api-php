@@ -54,9 +54,10 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
         <div class="p-2"><x-card :link="true" cardNumber="A-M-08" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-M-15" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-103" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-152" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-106" width="200"/></div>
     </div>
     <div class="d-flex flex-row">
+        <div class="p-2"><x-card :link="true" cardNumber="A-152" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-T-02" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-T-06" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-T-07" width="200"/></div>
@@ -64,32 +65,67 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
     <div class="d-flex flex-row">
         <div class="p-2"><x-card :link="true" cardNumber="A-T-10" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-T-11" width="200"/></div>
-        
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-50" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-53" width="200"/></div>
     </div>
-{{--
-    <p>These are the cards we will work on next:</p>
+    <div class="d-flex flex-row">
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-54" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-55" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-57" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-58" width="200"/></div>        
+    </div>
+
+    <p>These cards will also need art:</p>
 
     <div class="d-flex flex-row">
-        <div class="p-2"><x-card :link="true" cardNumber="A-153" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-032" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-035" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-038" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-A-01" width="200"/></div>
-    </div>
-    <div class="d-flex flex-row">
         <div class="p-2"><x-card :link="true" cardNumber="A-042" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-052" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-053" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-059" width="200"/></div>
-    </div>
-    <div class="d-flex flex-row">
-        <div class="p-2"><x-card :link="true" cardNumber="A-060" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-065" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-066" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-076" width="200"/></div>
     </div>
     <div class="d-flex flex-row">
+        <div class="p-2"><x-card :link="true" cardNumber="A-076" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-079" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-106" width="200"/></div>
     </div>
-    --}}
+    <div class="d-flex flex-row">
+        <div class="p-2"><x-card :link="true" cardNumber="A-A-01" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-A-02" width="200"/></div>
+    </div>
+    <div class="d-flex flex-row">
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-04" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-09" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-12" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-15" width="200"/></div>
+    </div>
+    <div class="d-flex flex-row">
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-16" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-17" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-18" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-19" width="200"/></div>
+    </div>
+    <div class="d-flex flex-row">
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-20" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-21" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-22" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-23" width="200"/></div>
+    </div>
+    <div class="d-flex flex-row">
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-25" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-26" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-27" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-29" width="200"/></div>
+    </div>
+    <div class="d-flex flex-row">
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-36" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-39" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-43" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-44" width="200"/></div>
+    </div>
+    <div class="d-flex flex-row">
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-48" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-49" width="200"/></div>
+        <div class="p-2"><x-card :link="true" cardNumber="A-T-52" width="200"/></div>
+    </div>
+    
     @endfragment

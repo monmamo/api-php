@@ -23,11 +23,11 @@ class(__FILE__) implements CardComponents
 
 <x-card.flavortext>The cut you don't see is the deepest.</x-card.flavortext>
 
-<x-card.cardrule y="580" :lines="1">
+<x-card.cardrule y="580" :>
 <x-card.smallrule>Attach this card to a Mobster.</x-card.smallrule>
         </x-card.cardrule>
        
-<x-card.phaserule type="Resolution" lines="2">
+<x-card.phaserule type="Resolution" >
 <text >
 <x-card.normalrule>X = Speed/4 (rounded up).</x-card.normalrule>
 <x-card.normalrule>Does Xd6-X @damage.</x-card.normalrule>
