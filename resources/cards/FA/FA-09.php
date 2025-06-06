@@ -15,7 +15,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="95" >
+<x-card.cardrule >
 <x-card.smallrule>Goes into effect if the Monster has a Bane.</x-card.smallrule>
 <x-card.normalrule>Removes all Banes.</x-card.normalrule>
 </x-card.cardrule>

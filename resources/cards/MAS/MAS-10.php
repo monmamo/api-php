@@ -20,7 +20,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Draw" lines="5"><text>
+<x-card.phaserule type="Draw" ><text>
 <x-card.normalrule>For each card you draw, you may</x-card.normalrule>
 <x-card.normalrule>look at the top 3 cards of your</x-card.normalrule>
 <x-card.normalrule>Library. if you do this, you may put one</x-card.normalrule>

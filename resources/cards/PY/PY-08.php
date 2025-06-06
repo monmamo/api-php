@@ -1,9 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -14,8 +12,7 @@ return new
 #[Title('Magma Basin')]
 #[Concept('Place')]
 #[ImageCredit('')]
-#[FlavorText([])]
-#[Prerequisites([])]
+
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -23,7 +20,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="55" >
+<x-card.cardrule >
 <x-card.normalrule>Draw phase:: You may attach a Fire (A-002) from your Refuse to one of your Pyros Monsters. If this succeeds, put 4 @damage on that Monster.</x-card.normalrule>
 </x-card.cardrule>
 HTML;

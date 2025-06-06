@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
@@ -12,7 +11,7 @@ return new
 #[Title('Flare')]
 #[Concept('Attack')]
 #[ImageCredit('')]
-#[FlavorText([])]
+
 #[Prerequisites(['Requires Pyros.'])]
 class(__FILE__) implements CardComponents
 {
@@ -21,7 +20,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="0" >
+<x-card.cardrule >
 <x-card.normalrule>TODO</x-card.normalrule>
 </x-card.cardrule>
 HTML;

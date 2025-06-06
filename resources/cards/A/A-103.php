@@ -10,7 +10,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Drinking Water Fountain')]
 #[IsGeneratedImage]
-#[ImageInDevelopment]
+#[ImageInDevelopment] // Merry
 #[ImageIsPrototype]
 class(__FILE__) implements CardComponents
 {
@@ -28,7 +28,7 @@ class(__FILE__) implements CardComponents
 </x-card.cardrule>
 
 
-     <x-card.phaserule type="Upkeep" height="205">
+     <x-card.phaserule type="Upkeep" >
        <text >
  <x-card.normalrule x="55%">You may heal 1 @damage from and/or attach</x-card.normalrule>
  <x-card.normalrule x="55%">a Water (A-001) from your Library or</x-card.normalrule>

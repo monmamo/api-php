@@ -35,7 +35,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule height="200" background-opacity="0" >
+<x-card.cardrule  background-opacity="0" >
 <x-card.normalrule>For any attempt to put this Monster to Sleep,</x-card.normalrule>
 <x-card.normalrule>roll 1d6. (Roll one die for each</x-card.normalrule>
 <x-card.normalrule>Caffeine card attached to this Monster.)</x-card.normalrule>

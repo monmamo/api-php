@@ -15,7 +15,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="55" >
+<x-card.phaserule type="Draw" lines="6"><text>
 <x-card.normalrule>Search your Library for a Consumable</x-card.normalrule>
 <x-card.normalrule>card with Monstermeal in its name.</x-card.normalrule>
 <x-card.normalrule>Reveal that/those card(s). Put that/those</x-card.normalrule>
@@ -23,7 +23,7 @@ class(__FILE__) implements CardComponents
 <x-card.normalrule>After using this card, put this card at</x-card.normalrule>
 <x-card.normalrule>the bottom of your Library.  You may take another Draw phase.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
-</x-card.cardrule>
+</text></x-card.phaserule>
 HTML;
     }
 };

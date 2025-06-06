@@ -12,7 +12,7 @@
         <div class="col-lg-10 mx-auto">
             <p class="lead mb-4">
 <p>
-    We're reimagining the business of collectible and tradable cards. The Monsters Masters & Mobsters Card System isn’t a game in itself; it’s a system of cards built from the paper to support multiple games. We’re also using this opportunity to address common criticisms of trading card games and collectible card games. We understand that buying into a TCG/CCG is a major investment. We want you to play with our game cards, not end up with boxes full of cards that are useless to you.
+    We're reimagining the business of collectible and tradable cards. The Monsters Masters & Mobsters Card System isn’t a game in itself; it’s a system of cards built from the paper to support multiple games. We’re also using this opportunity to address common criticisms of trading card games and collectible card games. We understand that buying into a TGC/CCG is a major investment. We want you to play with our game cards, not end up with boxes full of cards that are useless to you.
 </p>
 
 <h4>Hate random booster packs? So do we.</h4>

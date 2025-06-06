@@ -30,7 +30,7 @@ return new
 
     <x-card.taxons>Energos, Musos</x-card.taxons>
 
-<x-card.phaserule type="Draw" height="175">
+<x-card.phaserule type="Draw" >
 <text>
     <x-card.skilltitle>Chew on Power Cords</x-card.skilltitle>
 <x-card.normalrule>You may stop any player from</x-card.normalrule>

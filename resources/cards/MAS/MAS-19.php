@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -12,7 +11,7 @@ return new
 #[Title('Drive Off')]
 #[Concept('Skill')]
 #[ImageCredit('')]
-#[FlavorText([])]
+
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -25,7 +24,7 @@ class(__FILE__) implements CardComponents
 <x-card.smallrule>Confused, Paralyzed, Hypnotized or Asleep</x-card.smallrule>
 <x-card.smallrule>at the Command phase.</x-card.smallrule>
 </x-card.cardrule>
-<x-card.phaserule type="Command" lines="1"><text>
+<x-card.phaserule type="Command" ><text>
 <x-card.normalrule>Choose one opposing Monster.</x-card.normalrule>
 </text></x-card.cardrule>
 <x-card.phaserule type="Resolution" lines="6"><text>

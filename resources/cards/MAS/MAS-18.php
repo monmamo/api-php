@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -12,7 +11,7 @@ return new
 #[Concept('Attack')]
 #[Concept('Level', 20)]
 #[ImageCredit('')]
-#[FlavorText([])]
+
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -20,7 +19,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="55" >
+<x-card.cardrule >
 <x-card.normalrule>GROUP ATTACK. Does Xd4 where X is the number of Monsters you have in play.</x-card.normalrule>
 </x-card.cardrule>
 HTML;

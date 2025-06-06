@@ -13,7 +13,7 @@ return new
 #[Title('Cunning')]
 #[Concept('Trait')]
 #[Concept('Cost', 2)]
-#[ImageInDevelopment]
+#[ImageInDevelopment] // Merry
 #[ImageCredit('Icon by Caro Asercion')]
 class(__FILE__) implements CardComponents
 {

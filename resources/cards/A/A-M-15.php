@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageCredit;
 use App\CardAttributes\ImageInDevelopment;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
@@ -21,8 +20,7 @@ return new
     #[Concept('Cost', 7)]
     #[IsGeneratedImage]
 #[ImageIsPrototype]
-#[ImageInDevelopment]
-#[ImageCredit(null)]
+#[ImageInDevelopment] // Merry
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

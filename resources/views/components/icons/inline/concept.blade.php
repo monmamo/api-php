@@ -1,9 +1,10 @@
-@props(['fill','badge','value','concept'=>null,'x'=>0,'y'=>0,'size'])
+@props(['fill','badge','value','concept','x'=>0,'y'=>0,'size'])
 
 <?php
 $concept = match(true) {
     $concept instanceof \App\Concept => $concept,
-    is_string($concept) => new \App\Concept($concept)
+    is_string($concept) => new \App\Concept($concept),
+    default => dd($concept)
 };
 
 $badge ??= $concept->badge ?? null;

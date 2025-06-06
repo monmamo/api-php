@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
@@ -12,7 +11,7 @@ return new
 #[Title('Forest Fire')]
 #[Concept('Catastrophe')]
 #[ImageCredit('')]
-#[FlavorText([])]
+
 #[Prerequisites(['This card can be played only if the Place in play is a Forest and when a Monster uses an attack that results in the discarding of Fire (A-002)s.'])]
 class(__FILE__) implements CardComponents
 {

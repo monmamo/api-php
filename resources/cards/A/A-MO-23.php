@@ -16,10 +16,13 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="110" >
-<x-card.normalrule>Draw phase: Search your Library for any card.</x-card.normalrule>
+     <x-card.phaserule type="Draw" >
+       <text >
+<x-card.normalrule>Search your Library for any card.</x-card.normalrule>
 <x-card.normalrule>You may take another Draw phase.</x-card.normalrule>
-</x-card.cardrule>
+</text>
+</x-card.phaserule>
+
 HTML;
     }
 };

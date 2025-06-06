@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -12,7 +11,7 @@ return new
 #[Title('Familiar Bell')]
 #[Concept('Draw')]
 #[ImageCredit('')]
-#[FlavorText([])]
+
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -20,13 +19,13 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="220" >
+<x-card.phaserule type="Draw" ><text>
 <x-card.normalrule>Search your Library for a Monster with</x-card.normalrule>
 <x-card.normalrule>the same name as a Monster in your Discard.</x-card.normalrule>
 <x-card.normalrule>Reveal that/those card(s). Put that/those</x-card.normalrule>
 <x-card.normalrule>card(s) in your hand. Shuffle your Library.</x-card.normalrule>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
-</x-card.cardrule>
+</text></x-card.phaserule>
 HTML;
     }
 };

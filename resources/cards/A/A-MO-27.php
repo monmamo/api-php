@@ -15,7 +15,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="55" >
+<x-card.cardrule >
 <x-card.normalrule>Only Mobster cards allowed on the Battlefield are those who are members of a Motorcycle Gang.</x-card.normalrule>
 </x-card.cardrule>
 HTML;

@@ -12,7 +12,7 @@ return [
     'flavor-text' => [],
     'background' => \view('Environment.background'),
     'content' => <<<'HTML'
-<x-card.cardrule height="0" >
+<x-card.cardrule >
 
 <x-card.normalrule>Discard this card if the Place changes.</x-card.normalrule>
 <x-card.normalrule>Resolution phase: Each Monster that used an Attack or Defense</x-card.normalrule>

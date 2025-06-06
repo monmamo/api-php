@@ -12,7 +12,7 @@ return [
     'flavor-text' => [],
     'background' => \view('Environment.background'),
     'content' => <<<'HTML'
-<x-card.cardrule height="0" >
+<x-card.cardrule >
 <x-card.normalrule>All players put their hands face down when this card is played.</x-card.normalrule>
 <x-card.normalrule>While this card is in play, all hands remain facedown unless a rule of this card allows the player to view them. Any cards drawn during this phase must be placed facedown.</x-card.normalrule>
 <x-card.normalrule>Upkeep phase: You may pick up 1d6 cards.</x-card.normalrule>

@@ -13,7 +13,7 @@ return [
     'flavor-text' => [],
     'background' => \view('Facility.background'),
     'content' => <<<'HTML'
-<x-card.phaserule type="Resolution" lines="4">
+<x-card.phaserule type="Resolution" >
 <text >
 <x-card.normalrule>After all attacks and skills are resolved,</x-card.normalrule>
 <x-card.normalrule>for each Monster that did not attack,</x-card.normalrule>

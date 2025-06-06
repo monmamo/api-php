@@ -18,7 +18,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="55" >
+<x-card.cardrule >
 <x-card.normalrule>While this card is in play, no Mascot cards may be played or remain in play.</x-card.normalrule>
 </x-card.cardrule>
 HTML;

@@ -15,7 +15,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="55" >
+<x-card.cardrule >
 <x-card.normalrule>Upkeep phase:: Each player may heal 3 @damage from 1 of his or her Monsters.</x-card.normalrule>
 </x-card.cardrule>
 HTML;

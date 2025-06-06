@@ -15,7 +15,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="55" >
+<x-card.cardrule >
 <x-card.normalrule>When another player plays a Vendor card, you may intervene. The opposing player must pay any cost associated with the draw, but you may use whatever benefit they would get for that cost.</x-card.normalrule>
 </x-card.cardrule>
 HTML;

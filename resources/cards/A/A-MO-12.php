@@ -22,7 +22,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="0" >
+<x-card.cardrule >
 <x-card.normalrule>Resolution phase: Everyone else's Monster's attacks do 1d4 less damage.</x-card.normalrule>
 </x-card.cardrule>
 HTML;

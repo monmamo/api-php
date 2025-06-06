@@ -29,7 +29,7 @@ class(__FILE__) implements CardComponents
 
 <x-card.taxons>Canos</x-card.taxons>
 
-<x-card.cardrule height="55" >
+<x-card.cardrule  >
 <x-card.normalrule>On exposure, trigger Security Check.</x-card.normalrule>
 </x-card.cardrule>
 HTML;

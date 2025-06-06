@@ -35,7 +35,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule  >
+<x-card.cardrule lines="1" >
 <x-card.normalrule>Limit 1 Master per player on Battlefield.</x-card.normalrule>
 </x-card.cardrule>
 HTML;

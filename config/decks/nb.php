@@ -35,7 +35,7 @@ return [
         'A-T-10' => 3, // Ramming
         'A-T-11' => 3, // Dual Cranial Horns
         'A-T-12' => 3, // Tackling
-        'A-052' => 4, // Deathgrip
+        'A-A-02' => 4, // Deathgrip
         'A-T-17' => 1, // Brutality
         'A-T-25' => 4, // Focus
         'A-A-01' => 4, // Body Slam

@@ -1,6 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageInDevelopment;
 use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
@@ -12,6 +13,7 @@ return new
     #[Concept('Bane')]
     #[IsGeneratedImage]
     #[ImageIsPrototype]
+#[ImageInDevelopment] // Merry
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

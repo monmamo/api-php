@@ -13,7 +13,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule height="245" >
+<x-card.cardrule  >
 <x-card.smallrule>Put this card on the Battlefield before</x-card.smallrule>
 <x-card.smallrule>a Catastrophe card is played.</x-card.smallrule>
 <x-card.normalrule>When a Catastrophe card is played,</x-card.normalrule>

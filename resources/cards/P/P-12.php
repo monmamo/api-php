@@ -12,7 +12,7 @@ return [
     'flavor-text' => [],
     'background' => \view('Venue.background'),
     'content' => <<<'HTML'
-<x-card.cardrule height="55" >
+<x-card.cardrule >
 <x-card.normalrule>Resolution phase: Before applying the effect of any skill, roll 1d6. If ⚀⚂⚃⚃, the skill has no effect.</x-card.normalrule>
 </x-card.cardrule>
 HTML

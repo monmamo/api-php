@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\Prerequisites;
 use App\Contracts\Card\CardComponents;
@@ -10,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Fire Tail')]
 #[ImageCredit('')]
-#[FlavorText([])]
+
 #[Prerequisites(['Requires Pyros and Tail.'])]
 class(__FILE__) implements CardComponents
 {
@@ -19,7 +18,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="55" >
+<x-card.cardrule >
 <x-card.normalrule>Does 2d10 @damage.</x-card.normalrule>
 </x-card.cardrule>
 HTML;

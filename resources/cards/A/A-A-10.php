@@ -21,12 +21,14 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 
+<x-card.flavortext>A well-timed Tickle can be devastatingly effective.</x-card.flavortext>
+
 <x-card.hero.svg>
 <g fill="#ffffff" fill-opacity="1"><x-icons.meeple  /></g>
 <g fill="#ff0000" fill-opacity="1" transform="translate(0,216) scale(1,0.25)"><x-icons.crosshair  /></g>
 </x-card.hero.svg>
 
-<x-card.cardrule height="55" >
+<x-card.cardrule >
 <x-card.normalrule>Does 3xSpeed damage.</x-card.normalrule>
 </x-card.cardrule>
 HTML;

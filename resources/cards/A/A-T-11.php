@@ -15,7 +15,7 @@ return new
     #[Concept('Physical')]
     #[Concept('Size', '+1')]
     #[Concept('Cost', 3)]
-    #[ImageInDevelopment]
+    #[ImageInDevelopment] // Merry
     #[ImageCredit('Image by wirestock on Freepik')]
     class(__FILE__) implements CardComponents
     {

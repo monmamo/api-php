@@ -28,7 +28,7 @@ class(__FILE__) implements CardComponents
 
             </x-card.hero.svg>
 
-<x-card.cardrule height="55" >
+<x-card.cardrule >
 <x-card.normalrule></x-card.normalrule>
 </x-card.cardrule>
 HTML;

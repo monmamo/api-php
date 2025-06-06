@@ -30,7 +30,7 @@ class(__FILE__) implements CardComponents
 
 <x-card.taxons>Unknown</x-card.taxons>
 
-<x-card.cardrule height="55" >
+<x-card.cardrule >
 <x-card.normalrule>On exposure:</x-card.normalrule>
 <x-card.normalrule>Trigger Security Check &amp;</x-card.normalrule>
 <x-card.normalrule>Attach 2 random Traits.</x-card.normalrule>

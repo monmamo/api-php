@@ -15,7 +15,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="55" >
+<x-card.cardrule >
 <x-card.normalrule>Upkeep phase:: You may "attach" a Monster to First Aid Station. That Monster may not use any Skills nor be affected by any Skills during this turn. At the end of this turn, remove all damage and [[Bane]]s from that Monster and "detach" it from First Aid Station.</x-card.normalrule>
 </x-card.cardrule>
 HTML;

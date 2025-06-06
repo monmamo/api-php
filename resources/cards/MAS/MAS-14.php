@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -12,7 +11,7 @@ return new
 #[Concept('Bystander')]
 #[Concept('Integrity', '3')]
 #[ImageCredit('')]
-#[FlavorText([])]
+
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -20,7 +19,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Resolution" lines="2"><text>
+<x-card.phaserule type="Resolution" ><text>
     <x-card.normalrule>When one of your Monsters is Knocked Out,</x-card.normalrule>
 <x-card.normalrule>you may draw up to 3 cards.</x-card.normalrule>
 </x-card.cardrule>

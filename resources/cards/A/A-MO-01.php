@@ -37,13 +37,10 @@ HTML;
     <x-card.flavortext.line>Highest ranking member of a Crime Family.</x-card.flavortext.line>
     <x-card.flavortext.line>His way or the highway.</x-card.flavortext.line>
     </x-card.flavortext>
-
-    <x-card.cardrule y="500" height="55" >
-    <x-card.normalrule>{{\trans_choice('rules.player-limit', 1)}}</x-card.normalrule>
-    </x-card.cardrule>
     
         <x-card.phaserule type="Draw"  badge="Repeat">
             <text >
+                <x-card.smallrule>{{\trans_choice('rules.player-limit', 1)}}</x-card.smallrule>
             <x-card.normalrule>You may draw 1 card for each other</x-card.normalrule>
             <x-card.normalrule>Mobster you have on the Battlefield.</x-card.normalrule>
             <x-card.normalrule>{{ __('rules.REDRAW') }}</x-card.normalrule>

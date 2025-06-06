@@ -13,7 +13,7 @@ return new
     #[Concept('Trait')]
     #[Concept('Physical')]
     #[Concept('Cost', 3)]
-    #[ImageInDevelopment]
+    #[ImageInDevelopment] // Merry
     #[IsGeneratedImage]
     #[ImageIsPrototype]
     class(__FILE__) implements CardComponents
