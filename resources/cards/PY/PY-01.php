@@ -21,8 +21,8 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule >
-<x-card.normalrule>Discard any number of Fire (A-002) from this Monster. <x-card.normalrule>
-<x-card.normalrule>This attack does 2d4 @damage for each Fire (A-002) discarded.</x-card.normalrule>
+<x-card.ruleline>Discard any number of Fire (A-002) from this Monster. <x-card.ruleline>
+<x-card.ruleline>This attack does 2d4 @damage for each Fire (A-002) discarded.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

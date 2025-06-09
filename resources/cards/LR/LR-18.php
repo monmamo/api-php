@@ -3,7 +3,6 @@
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\Prerequisites;
-use App\CardAttributes\RaidCardAttributes;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -17,7 +16,6 @@ return new
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
-    use RaidCardAttributes { RaidCardAttributes::system insteadof DefaultCardAttributes; }
 
     public function content(): \Traversable
     {
@@ -31,11 +29,11 @@ class(__FILE__) implements CardComponents
 </x-card.flavortext>
 
 
-<x-card.cardrule lines="4">
-<x-card.normalrule>On acquire, place this card in your playing area.</x-card.normalrule>
-<x-card.normalrule>You may put up to 10 cards</x-card.normalrule>
-<x-card.normalrule>under it from your hand or discard pile.</x-card.normalrule>
-<x-card.normalrule>Each card counts as +1 Evidence.</x-card.normalrule>
+<x-card.cardrule >
+<x-card.ruleline>On acquire, place this card in your playing area.</x-card.ruleline>
+<x-card.ruleline>You may put up to 10 cards</x-card.ruleline>
+<x-card.ruleline>under it from your hand or discard pile.</x-card.ruleline>
+<x-card.ruleline>Each card counts as +1 Evidence.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

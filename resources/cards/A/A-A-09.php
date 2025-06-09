@@ -30,9 +30,9 @@ class(__FILE__) implements CardComponents
 </x-card.hero.svg>
 
 <x-card.phaserule type="Resolution" ><text>
-        <x-card.normalrule>For 1d4 turns hence, the</x-card.normalrule>
-<x-card.normalrule>affected Character cannot attack,</x-card.normalrule> 
-<x-card.normalrule>cannot defend, and has Speed of 0.</x-card.normalrule>
+        <x-card.ruleline>For 1d4 turns hence, the</x-card.ruleline>
+<x-card.ruleline>affected Character cannot attack,</x-card.ruleline> 
+<x-card.ruleline>cannot defend, and has Speed of 0.</x-card.ruleline>
 </text></x-card.phaserule>
 HTML;
     }

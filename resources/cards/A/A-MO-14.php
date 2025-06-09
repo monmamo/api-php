@@ -19,7 +19,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule >
-<x-card.normalrule>While this card is in play, no Mascot cards may be played or remain in play.</x-card.normalrule>
+<x-card.ruleline>While this card is in play, no Mascot cards may be played or remain in play.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

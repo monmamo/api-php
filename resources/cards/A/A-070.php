@@ -16,8 +16,8 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
     <x-card.cardrule :>
-    <x-card.normalrule>Search your Library for a card with flavor text.</x-card.normalrule>
-<x-card.normalrule>Put it in your hand. Shuffle your Library.</x-card.normalrule>
+    <x-card.ruleline>Search your Library for a card with flavor text.</x-card.ruleline>
+<x-card.ruleline>Put it in your hand. Shuffle your Library.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;

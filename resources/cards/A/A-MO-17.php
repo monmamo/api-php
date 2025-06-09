@@ -15,12 +15,12 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-     <x-card.phaserule type="Upkeep" height="240">
+     <x-card.phaserule type="Upkeep" >
        <text >
-<x-card.normalrule>Attach this card to one of those cards.</x-card.normalrule>
-<x-card.normalrule>Choose one opponent. That opponent must</x-card.normalrule>
-<x-card.normalrule>show you their hand.</x-card.normalrule>
-<x-card.normalrule>(Only you get to see the hand.)</x-card.normalrule>
+<x-card.ruleline>Attach this card to one of those cards.</x-card.ruleline>
+<x-card.ruleline>Choose one opponent. That opponent must</x-card.ruleline>
+<x-card.ruleline>show you their hand.</x-card.ruleline>
+<x-card.ruleline>(Only you get to see the hand.)</x-card.ruleline>
 </text>
  </x-card.phaserule>
 HTML;

@@ -10,6 +10,7 @@ return new
     #[Title('Switchblade')]
     #[Concept('Item')]
     #[Concept('Weapon')]
+#[Concept('Cost', 3)]
     #[ImageCredit('Icon by Skoll on Game-Icons.net')]
     class(__FILE__) implements CardComponents
     {
@@ -22,13 +23,11 @@ return new
 
 <x-card.flavortext>Also stings like a bee.</x-card.flavortext>
 
-<x-card.cardrule y="580" :>
-<x-card.smallrule>Attach this card to a Mobster.</x-card.smallrule>
-        </x-card.cardrule>
        
 <x-card.phaserule type="Resolution" >
 <text >
-<x-card.normalrule>Speed @damage</x-card.normalrule>
+<x-card.ruleline class="smallrule">Attach this card to a Mobster.</x-card.ruleline>
+<x-card.ruleline>Speed @damage</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

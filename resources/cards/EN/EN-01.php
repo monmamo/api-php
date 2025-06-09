@@ -1,6 +1,5 @@
 <?php
 
-use App\CardAttributes\ConceptIconHeroImage;
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\Prerequisites;
@@ -11,8 +10,8 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Conductivity')]
 #[Concept('Trait')]
-#[ImageCredit('Image by Lorc on Game-Icons.net under CC BY 3.0')]
-#[ConceptIconHeroImage('Energos')]
+#[ImageCredit('Icon by Lorc on Game-Icons.net')]
+
 #[Prerequisites(lines: 'Requires Energos.', y: 460)]
 class(__FILE__) implements CardComponents
 {
@@ -21,7 +20,9 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<text>
+            <x-card.hero.svg>{{ \view('Energos.icon') }}</x-card.hero.svg>
+
+            <text>
     TODO
 </text>
 HTML;

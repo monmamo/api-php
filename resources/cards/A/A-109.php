@@ -17,11 +17,11 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
- <x-card.phaserule type="Upkeep"  height="150"><text >
-        <x-card.normalrule>Shuffle your Knocked Out Monsters</x-card.normalrule>
-        <x-card.normalrule>into your Library.</x-card.normalrule>
-        <x-card.smallrule>The Monsters still count as Knocked Out for</x-card.smallrule>
-            <x-card.smallrule>the purpose of resolving the match.</x-card.smallrule>
+ <x-card.phaserule type="Upkeep"  ><text >
+        <x-card.ruleline>Shuffle your Knocked Out Monsters</x-card.ruleline>
+        <x-card.ruleline>into your Library.</x-card.ruleline>
+        <x-card.ruleline class="smallrule">The Monsters still count as Knocked Out for</x-card.ruleline>
+            <x-card.ruleline class="smallrule">the purpose of resolving the match.</x-card.ruleline>
     </text></x-card.phaserule>
 HTML;
     }

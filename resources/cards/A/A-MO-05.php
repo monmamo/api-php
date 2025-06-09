@@ -28,15 +28,12 @@ return new
     <x-card.flavortext.line>Would be a shame if something happened to it.</x-card.flavortext.line>
     </x-card.flavortext>
 
-    <x-card.cardrule y="500" height="55" >
-<x-card.normalrule>{{\trans_choice('rules.player-limit', 1)}}</x-card.normalrule>
-</x-card.cardrule>
-
     <x-card.phaserule type="Draw" >
         <text>
-            <x-card.normalrule>During your opponents' Draw phase,</x-card.normalrule>
-            <x-card.normalrule>they must let you draw a card of your own,</x-card.normalrule>
-            <x-card.normalrule>or discard 2 of their own cards.</x-card.normalrule>
+        <x-card.ruleline class="smallrule">{{\trans_choice('rules.player-limit', 1)}}</x-card.ruleline>
+            <x-card.ruleline>During your opponents' Draw phase,</x-card.ruleline>
+            <x-card.ruleline>they must let you draw a card of your own,</x-card.ruleline>
+            <x-card.ruleline>or discard 2 of their own cards.</x-card.ruleline>
         </text>
     </x-card.phaserule>
 HTML;

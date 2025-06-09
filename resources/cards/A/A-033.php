@@ -25,9 +25,9 @@ return new
 <x-card.flavortext>This isn't a game (show).</x-card.flavortext>
 
 <x-card.phaserule type="Draw" ><text>
-    <x-card.normalrule>Each player puts his hand</x-card.normalrule>
-<x-card.normalrule>on the bottom of his Library,</x-card.normalrule>
-<x-card.normalrule>then draws 7 cards.</x-card.normalrule>
+    <x-card.ruleline>Each player puts his hand</x-card.ruleline>
+<x-card.ruleline>on the bottom of his Library,</x-card.ruleline>
+<x-card.ruleline>then draws 7 cards.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;

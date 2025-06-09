@@ -19,9 +19,9 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.phaserule type="Draw" ><text>
-<x-card.normalrule>Discard up to 2 Monster cards</x-card.normalrule>
-<x-card.normalrule>from your hand. Draw 3 cards for</x-card.normalrule>
-<x-card.normalrule>each card you discarded in this way.</x-card.normalrule>
+<x-card.ruleline>Discard up to 2 Monster cards</x-card.ruleline>
+<x-card.ruleline>from your hand. Draw 3 cards for</x-card.ruleline>
+<x-card.ruleline>each card you discarded in this way.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;

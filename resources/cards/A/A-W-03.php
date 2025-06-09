@@ -55,9 +55,10 @@ class(__FILE__) implements CardComponents
 
     <x-card.phaserule type="Resolution" >
     <text >
-<x-card.normalrule>Choose a team.</x-card.normalrule>
-<x-card.normalrule>Each Character on that team</x-card.normalrule>
-<x-card.normalrule>takes 1d4 @damage.</x-card.normalrule>
+<x-card.ruleline>Choose a team.</x-card.ruleline>
+<x-card.ruleline>Each Character on that team</x-card.ruleline>
+<x-card.ruleline>takes 1d6 @damage.</x-card.ruleline>
+<x-card.ruleline>Then return this card to its Library or Market.</x-card.ruleline>
 </text>
  </x-card.phaserule>
 HTML;

@@ -17,7 +17,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="0" >For all Monsters, Attack -1d6 and Defense -1d6.</x-card.cardrule>
+<x-card.cardrule >For all Monsters, Attack -1d6 and Defense -1d6.</x-card.cardrule>
 HTML;
     }
 };

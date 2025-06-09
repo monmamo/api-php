@@ -41,11 +41,11 @@ SVG;
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.phaserule type="Resolution" height="130">
+<x-card.phaserule type="Resolution" >
 <text >
-<x-card.normalrule>For each of your Monsters that did not attack,</x-card.normalrule>
-<x-card.normalrule>you may restore 2 @damage or</x-card.normalrule>
-<x-card.normalrule>remove one Bane card from it.</x-card.normalrule>
+<x-card.ruleline>For each of your Monsters that did not attack,</x-card.ruleline>
+<x-card.ruleline>you may restore 2 @damage or</x-card.ruleline>
+<x-card.ruleline>remove one Bane card from it.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

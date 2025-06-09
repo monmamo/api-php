@@ -35,7 +35,7 @@ return new
             yield <<<'HTML'
 <x-card.phaserule type="Resolution" >
 <text >
-<x-card.normalrule>+2 @damage to all Attacks and Defenses.</x-card.normalrule>
+<x-card.ruleline>+2 @damage to all Attacks and Defenses.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 

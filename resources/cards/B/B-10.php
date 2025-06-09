@@ -15,9 +15,9 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.cardrule y="580" :lines="2">
-<x-card.normalrule>Discard all Mobster and Bystander cards on the Battlefield.</x-card.normalrule>
-<x-card.normalrule>Discard all Item cards on the Battlefield.</x-card.normalrule>
+<x-card.cardrule>
+<x-card.ruleline>Discard all Mobster and Bystander cards on the Battlefield.</x-card.ruleline>
+<x-card.ruleline>Discard all Item cards on the Battlefield.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
         }

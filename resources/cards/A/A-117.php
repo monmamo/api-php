@@ -20,13 +20,13 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Draw" height="210" badge="Repeat">
+<x-card.phaserule type="Draw"  badge="Repeat">
     <text>
-        <x-card.normalrule>Discard 1d4 cards from your hand.</x-card.normalrule>
-        <x-card.normalrule>Search your Library for one Item</x-card.normalrule>
-        <x-card.normalrule>card. Reveal it, then put it in your hand.</x-card.normalrule>
-        <x-card.normalrule>{{__('rules.SHUFFLE')}}</x-card.normalrule>
-        <x-card.normalrule>{{__('rules.REDRAW')}}</x-card.normalrule>
+        <x-card.ruleline>Discard 1d4 cards from your hand.</x-card.ruleline>
+        <x-card.ruleline>Search your Library for one Item</x-card.ruleline>
+        <x-card.ruleline>card. Reveal it, then put it in your hand.</x-card.ruleline>
+        <x-card.ruleline>{{__('rules.SHUFFLE')}}</x-card.ruleline>
+        <x-card.ruleline>{{__('rules.REDRAW')}}</x-card.ruleline>
         <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
         </text>
 </x-card.phaserule>

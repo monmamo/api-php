@@ -17,9 +17,9 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="165" >
-<x-card.normalrule>- Upkeep phase:: Attach Monstermeal to a Monster that is not Knocked Out.</x-card.normalrule>
-<x-card.normalrule>- Declaration phase:: This Monster may not attack or be attacked during this turn.</x-card.normalrule>
-<x-card.normalrule>- Resolution phase:: Discard this card. Remove 3 @damage from this Monster.</x-card.normalrule>
+<x-card.ruleline>- Upkeep phase:: Attach Monstermeal to a Monster that is not Knocked Out.</x-card.ruleline>
+<x-card.ruleline>- Declaration phase:: This Monster may not attack or be attacked during this turn.</x-card.ruleline>
+<x-card.ruleline>- Resolution phase:: Discard this card. Remove 3 @damage from this Monster.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

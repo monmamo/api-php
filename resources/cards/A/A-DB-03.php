@@ -30,7 +30,7 @@ class(__FILE__) implements CardComponents
 
 HTML;
         // <x-card.cardrule >
-        // <x-card.normalrule>You may trash a Train card.</x-card.normalrule>
+        // <x-card.ruleline>You may trash a Train card.</x-card.ruleline>
         // </x-card.cardrule>
     }
 };

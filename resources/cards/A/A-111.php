@@ -25,10 +25,10 @@ return new
   <image class="hero" href="@local(hero/personal-shopper.jpg)" />
 
   <x-card.phaserule type="Draw" lines="6"><text>
-<x-card.normalrule>Search your deck for 1-3 Item cards.</x-card.normalrule>
-<x-card.normalrule>Show them to your opponent(s),</x-card.normalrule>
-<x-card.normalrule>and put them into your hand.</x-card.normalrule>
-<x-card.normalrule>Shuffle your deck afterward.</x-card.normalrule>
+<x-card.ruleline>Search your deck for 1-3 Item cards.</x-card.ruleline>
+<x-card.ruleline>Show them to your opponent(s),</x-card.ruleline>
+<x-card.ruleline>and put them into your hand.</x-card.ruleline>
+<x-card.ruleline>Shuffle your deck afterward.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;

@@ -26,9 +26,9 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.hero.local>FA-08.png</x-card.hero.local>
 
-<x-card.phaserule type="Upkeep" height="240">
+<x-card.phaserule type="Upkeep" >
        <text >
-<x-card.normalrule>After all attacks have been resolved (even if the Monster has been knocked out), roll 3d6. Remove that amount of damage from that Monster. If two or three of the rolls are 5 or higher, remove all Banes from that Monster.</x-card.normalrule>
+<x-card.ruleline>After all attacks have been resolved (even if the Monster has been knocked out), roll 3d6. Remove that amount of damage from that Monster. If two or three of the rolls are 5 or higher, remove all Banes from that Monster.</x-card.ruleline>
 </text>
  </x-card.phaserule>
 HTML;

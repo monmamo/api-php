@@ -19,12 +19,12 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 Requires Aquos.
-        <x-card.phaserule type="Resolution" height="210">
+        <x-card.phaserule type="Resolution" >
 <text>
-<x-card.normalrule>If hit by a fire attack or skill,</x-card.normalrule>
-<x-card.normalrule>the damage that would be done by the fire</x-card.normalrule>
-<x-card.normalrule>attack or skill (and only that damage) is</x-card.normalrule>
-<x-card.normalrule>taken by the attacking Monster instead.</x-card.normalrule>
+<x-card.ruleline>If hit by a fire attack or skill,</x-card.ruleline>
+<x-card.ruleline>the damage that would be done by the fire</x-card.ruleline>
+<x-card.ruleline>attack or skill (and only that damage) is</x-card.ruleline>
+<x-card.ruleline>taken by the attacking Monster instead.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

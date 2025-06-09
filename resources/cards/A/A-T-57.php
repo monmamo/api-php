@@ -31,9 +31,9 @@ return new
 </x-card.hero.svg>
 
 <x-card.cardrule >
-<x-card.normalrule>On encounter,</x-card.normalrule>
-<x-card.normalrule>pings any present Security System.</x-card.normalrule>
-<x-card.normalrule>All Monsters present take 1 @damage damage.</x-card.normalrule>
+<x-card.ruleline>On encounter,</x-card.ruleline>
+<x-card.ruleline>pings any present Security System.</x-card.ruleline>
+<x-card.ruleline>All Monsters present take 1 @damage damage.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
         }

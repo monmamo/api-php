@@ -2,9 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\ImageInDevelopment;
-use App\CardAttributes\ImageIsPrototype;
-use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -19,10 +16,7 @@ return new
     #[Concept('Speed', 2)]
     #[Concept('Boost', 3)]
     #[Concept('Cost', 9)]
-    #[IsGeneratedImage]
-#[ImageIsPrototype]
-    #[ImageCredit(null)]
-    #[ImageInDevelopment()]
+    #[ImageCredit('Image by Merry Shuporna Biswas')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -30,16 +24,16 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-            <x-card.hero.local>hero/A-M-08.png</x-card.hero.local>
+            <x-card.hero.local>hero/A-M-08.jpg</x-card.hero.local>
 
             <x-card.taxons>Energos, Lupos</x-card.taxons>
 
 
-<x-card.phaserule type="Skill" height="175">
+<x-card.phaserule type="Skill" >
 <text>
-<x-card.skilltitle>Beast Mode</x-card.skilltitle>
-<x-card.normalrule>Size +1 for each Electricity (A-003)</x-card.normalrule>
-<x-card.normalrule>attached to this Monster.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Beast Mode</x-card.ruleline>
+<x-card.ruleline>Size +1 for each Electricity (A-003)</x-card.ruleline>
+<x-card.ruleline>attached to this Monster.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

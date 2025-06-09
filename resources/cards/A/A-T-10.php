@@ -26,13 +26,13 @@ return new
     <x-card.hero.local>AT32.png</x-card.hero.local>
 
     <x-card.phaserule type="Resolution" lines="7"><text>
-<x-card.normalrule>When this Monster uses Pounce or</x-card.normalrule>
-<x-card.normalrule>Physical Attack on a Monster with</x-card.normalrule>
-<x-card.normalrule>lower size, if the defending Monster takes</x-card.normalrule>
-<x-card.normalrule>any damage, roll 1d6.</x-card.normalrule>
-<x-card.normalrule>If @dieroll(4,5,6), it cannot attack on its next turn.</x-card.normalrule>
-<x-card.normalrule>If @dieroll(6), also discard one Trait</x-card.normalrule>
-<x-card.normalrule>card from the defending Monster.</x-card.normalrule>
+<x-card.ruleline>When this Monster uses Pounce or</x-card.ruleline>
+<x-card.ruleline>Physical Attack on a Monster with</x-card.ruleline>
+<x-card.ruleline>lower size, if the defending Monster takes</x-card.ruleline>
+<x-card.ruleline>any damage, roll 1d6.</x-card.ruleline>
+<x-card.ruleline>If @dieroll(4,5,6), it cannot attack on its next turn.</x-card.ruleline>
+<x-card.ruleline>If @dieroll(6), also discard one Trait</x-card.ruleline>
+<x-card.ruleline>card from the defending Monster.</x-card.ruleline>
 </text></x-card.phaserule>
 HTML;
         }

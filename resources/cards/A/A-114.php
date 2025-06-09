@@ -27,16 +27,16 @@ return new
     <x-card.hero.local>hero/personal-assistant.jpg</x-card.hero.local>
 
     <text y="540" filter="url(#solid)">
-    <x-card.smallrule>A player may have any number of Personal Assistants on the</x-card.smallrule>
-        <x-card.smallrule>Battlefield. You may choose to make this card Male or Female</x-card.smallrule>
-        <x-card.smallrule>when you put it on the Battlefield.</x-card.smallrule>
+    <x-card.ruleline class="smallrule">A player may have any number of Personal Assistants on the</x-card.ruleline>
+        <x-card.ruleline class="smallrule">Battlefield. You may choose to make this card Male or Female</x-card.ruleline>
+        <x-card.ruleline class="smallrule">when you put it on the Battlefield.</x-card.ruleline>
     </text>
 
     <x-card.phaserule type="Draw" >
         <text>
-        <x-card.normalrule>Search your Library for any card.</x-card.normalrule>
-        <x-card.normalrule>Shuffle your Library afterwards.</x-card.normalrule>
-        <x-card.normalrule>Gives 1 additional Draw action.</x-card.normalrule>
+        <x-card.ruleline>Search your Library for any card.</x-card.ruleline>
+        <x-card.ruleline>Shuffle your Library afterwards.</x-card.ruleline>
+        <x-card.ruleline>Gives 1 additional Draw action.</x-card.ruleline>
     </text>
 </x-card.phaserule>
 HTML;

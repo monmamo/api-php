@@ -33,9 +33,9 @@ HTML;
 
 <x-card.phaserule type="Resolution"  >
                  <text >
-                 <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
- <x-card.normalrule>Roll 1d6. @dieroll(1,2) Discard this card.</x-card.normalrule>
- <x-card.normalrule>@dieroll(3,4,5,6) Each other Character takes 1 @damage.</x-card.normalrule>
+                 <x-card.ruleline class="smallrule">{{trans_choice('rules.monster-limit',1)}}</x-card.ruleline>
+ <x-card.ruleline>Roll 1d6. @dieroll(1,2) Discard this card.</x-card.ruleline>
+ <x-card.ruleline>@dieroll(3,4,5,6) Each other Character takes 1 @damage.</x-card.ruleline>
          </text>
     </x-card.phaserule>
 HTML;

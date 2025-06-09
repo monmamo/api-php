@@ -24,7 +24,7 @@ return new
 
 <x-card.phaserule type="Resolution" >
 <text >
-<x-card.normalrule>Dodge prevents +Boost @damage.</x-card.normalrule>
+<x-card.ruleline>Dodge prevents +Boost @damage.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 

@@ -30,11 +30,11 @@ return new
 
     <x-card.taxons>Pyros, Musos</x-card.taxons>
 
-<x-card.phaserule type="Upkeep" height="175">
+<x-card.phaserule type="Upkeep" >
     <text>
-<x-card.skilltitle>Fiery Pest</x-card.skilltitle>
-<x-card.normalrule>Discard 1 Mobster or Bystander</x-card.normalrule>
-<x-card.normalrule>from the Battlefield.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Fiery Pest</x-card.ruleline>
+<x-card.ruleline>Discard 1 Mobster or Bystander</x-card.ruleline>
+<x-card.ruleline>from the Battlefield.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

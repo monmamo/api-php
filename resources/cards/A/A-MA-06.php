@@ -4,6 +4,7 @@ use App\CardAttributes\CardNameColor;
 use App\CardAttributes\CardTools;
 use App\CardAttributes\CreditColor;
 use App\CardAttributes\DefaultCardAttributes;
+use App\CardAttributes\ImageIsPrototype;
 use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -19,6 +20,8 @@ return new
 #[IsGeneratedImage([])]
 #[CreditColor('#000000')]
 #[CardNameColor('#000000')]
+#[Concept('Training', 5)]
+#[ImageIsPrototype]
 class(__FILE__) implements CardComponents
 {
     use CardTools;
@@ -36,7 +39,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule lines="1" >
-<x-card.normalrule>Limit 1 Master per player on Battlefield.</x-card.normalrule>
+<x-card.ruleline>Limit 1 Master per player on Battlefield.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

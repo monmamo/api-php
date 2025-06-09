@@ -30,11 +30,11 @@ return new
 
     <x-card.taxons>Energos, Canos</x-card.taxons>
 
-<x-card.phaserule type="Skill" height="175">
+<x-card.phaserule type="Skill" >
     <text>
-<x-card.skilltitle>Puppy Power</x-card.skilltitle>
-<x-card.normalrule>You may transfer Electricity (A-003) between</x-card.normalrule>
-<x-card.normalrule>this Monster &amp; any other Energos Monster.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Puppy Power</x-card.ruleline>
+<x-card.ruleline>You may transfer Electricity (A-003) between</x-card.ruleline>
+<x-card.ruleline>this Monster &amp; any other Energos Monster.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

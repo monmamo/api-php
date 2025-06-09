@@ -29,12 +29,12 @@ return new
 
  <x-card.phaserule type="Draw" :lines="7">
      <text >
-    <x-card.normalrule>You may do one of the following:</x-card.normalrule>
-    <x-card.normalrule>&#8226; Discard 3 cards from your hand.</x-card.normalrule>
-    <x-card.normalrule>Search your Library for one Durable cards.</x-card.normalrule>
-    <x-card.normalrule>Reveal any cards you select, then put them</x-card.normalrule>
-    <x-card.normalrule>in your hand. Shuffle your library.</x-card.normalrule>
-    <x-card.normalrule>&#8226; Discard a Durable card to draw two cards.</x-card.normalrule>
+    <x-card.ruleline>You may do one of the following:</x-card.ruleline>
+    <x-card.ruleline>&#8226; Discard 3 cards from your hand.</x-card.ruleline>
+    <x-card.ruleline>Search your Library for one Durable cards.</x-card.ruleline>
+    <x-card.ruleline>Reveal any cards you select, then put them</x-card.ruleline>
+    <x-card.ruleline>in your hand. Shuffle your library.</x-card.ruleline>
+    <x-card.ruleline>&#8226; Discard a Durable card to draw two cards.</x-card.ruleline>
     <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
     </text>
 </x-card.phaserule>

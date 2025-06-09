@@ -25,15 +25,15 @@ class(__FILE__) implements CardComponents
 
 <x-card.flavortext>Mostly error.</x-card.flavortext>
 
-<x-card.cardrule y="580" :>
-<x-card.smallrule>Put this card on the Battlefield during your Upkeep phase.</x-card.smallrule>
+<x-card.cardrule>
+<x-card.ruleline class="smallrule">Put this card on the Battlefield during your Upkeep phase.</x-card.ruleline>
 </x-card.cardrule>
 
 <x-card.phaserule type="Resolution" :>
     <text >
-<x-card.normalrule>You may redo any attack or defense</x-card.normalrule>
-<x-card.normalrule>once. If so, you must keep the result.</x-card.normalrule>
-<x-card.normalrule>If the result improves, discard this card.</x-card.normalrule>
+<x-card.ruleline>You may redo any attack or defense</x-card.ruleline>
+<x-card.ruleline>once. If so, you must keep the result.</x-card.ruleline>
+<x-card.ruleline>If the result improves, discard this card.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

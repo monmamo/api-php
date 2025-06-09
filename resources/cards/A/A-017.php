@@ -32,10 +32,10 @@ return new
 <x-card.flavortext>You didn't see that.</x-card.flavortext>
 
 <x-card.cardrule >
-<x-card.normalrule>Put any number of cards from your</x-card.normalrule>
-    <x-card.normalrule>hand on the bottom of your Library in</x-card.normalrule>
-    <x-card.normalrule>any order. Then, draw a card for each card</x-card.normalrule>
-    <x-card.normalrule>you put on the bottom of your Library.</x-card.normalrule>
+<x-card.ruleline>Put any number of cards from your</x-card.ruleline>
+    <x-card.ruleline>hand on the bottom of your Library in</x-card.ruleline>
+    <x-card.ruleline>any order. Then, draw a card for each card</x-card.ruleline>
+    <x-card.ruleline>you put on the bottom of your Library.</x-card.ruleline>
     <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;

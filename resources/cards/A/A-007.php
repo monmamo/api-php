@@ -31,7 +31,7 @@ class(__FILE__) implements CardComponents
 </g></x-card.hero.svg>
 
 <x-card.phaserule type="Draw" ><text>
-<x-card.normalrule>Draw three cards.</x-card.normalrule>
+<x-card.ruleline>Draw three cards.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 

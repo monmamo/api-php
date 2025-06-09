@@ -29,11 +29,11 @@ return new
 
     <x-card.taxons>Carmos</x-card.taxons>
 
-<x-card.phaserule type="Skill" height="170">
+<x-card.phaserule type="Skill" >
     <text>
-<x-card.skilltitle>Irresistible Cuteness</x-card.skilltitle>
-<x-card.normalrule>Master, Mobster and Bystander</x-card.normalrule>
-<x-card.normalrule>cards have no effect.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Irresistible Cuteness</x-card.ruleline>
+<x-card.ruleline>Master, Mobster and Bystander</x-card.ruleline>
+<x-card.ruleline>cards have no effect.</x-card.ruleline>
         </text>
 </x-card.phaserule>
 HTML;

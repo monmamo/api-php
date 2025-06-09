@@ -27,9 +27,9 @@ return new
 
 <x-card.phaserule type="Resolution" >
 <text>
-<x-card.normalrule>When this Monster takes a</x-card.normalrule>
-<x-card.normalrule>physical attack, the attacking</x-card.normalrule>
-<x-card.normalrule>Monster takes 1d6 @damage.</x-card.normalrule>
+<x-card.ruleline>When this Monster takes a</x-card.ruleline>
+<x-card.ruleline>physical attack, the attacking</x-card.ruleline>
+<x-card.ruleline>Monster takes 1d6 @damage.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 

@@ -15,14 +15,14 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule y="580" :lines="1">
-        <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
+<x-card.cardrule>
+        <x-card.ruleline class="smallrule">{{trans_choice('rules.monster-limit',1)}}</x-card.ruleline>
         </x-card.cardrule>
 
-        <x-card.phaserule type="Resolution" y="135" height="100">
+        <x-card.phaserule type="Resolution" y="135" >
             <text >
-                <x-card.normalrule>If this Monster is wearing a Garment,</x-card.normalrule> 
-                <x-card.normalrule>it takes 1d4 @damage.</x-card.normalrule>
+                <x-card.ruleline>If this Monster is wearing a Garment,</x-card.ruleline> 
+                <x-card.ruleline>it takes 1d4 @damage.</x-card.ruleline>
             </text>
         </x-card.phaserule>
 HTML;

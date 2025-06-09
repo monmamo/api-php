@@ -30,13 +30,13 @@ class(__FILE__) implements CardComponents
 </x-card.hero.local>
 
 <x-card.phaserule type="Upkeep" y="580" ><text >
-<x-card.normalrule>Attach this card to a Character.</x-card.normalrule>
+<x-card.ruleline>Attach this card to a Character.</x-card.ruleline>
 </text></x-card.phaserule>
 
         <x-card.phaserule type="Resolution" ><text>
-        <x-card.normalrule>For 1d4 turns hence, the</x-card.normalrule>
-<x-card.normalrule>For 1d4 turns (including this one),</x-card.normalrule>
-<x-card.normalrule>apply Confusion.</x-card.normalrule>
+        <x-card.ruleline>For 1d4 turns hence, the</x-card.ruleline>
+<x-card.ruleline>For 1d4 turns (including this one),</x-card.ruleline>
+<x-card.ruleline>apply Confusion.</x-card.ruleline>
 </text></x-card.phaserule>
 HTML;
     }

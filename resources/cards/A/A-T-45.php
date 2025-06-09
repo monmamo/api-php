@@ -18,9 +18,9 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.phaserule type="Resolution" ><text>
-<x-card.normalrule>If this Monster attacks and the</x-card.normalrule>
-<x-card.normalrule>targeted Monster uses a Defense,</x-card.normalrule>
-<x-card.normalrule>reduce the damage prevented by 1d6.</x-card.normalrule>
+<x-card.ruleline>If this Monster attacks and the</x-card.ruleline>
+<x-card.ruleline>targeted Monster uses a Defense,</x-card.ruleline>
+<x-card.ruleline>reduce the damage prevented by 1d6.</x-card.ruleline>
     </text>
 </x-card.cardrule>
 HTML;

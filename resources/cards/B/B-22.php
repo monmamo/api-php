@@ -20,17 +20,17 @@ class(__FILE__) implements CardComponents
 <x-card.flavortext>Hope your Insurance (A-069) is paid up.</x-card.flavortext>
 
     <text y="440" filter="url(#solid)">
-<x-card.smallrule>This card can be played only if Summer </x-card.smallrule>
-<x-card.smallrule>or Autumn is on the Battlefield.</x-card.smallrule>
-<x-card.normalrule>Each player discards 2d6 cards</x-card.normalrule>
-<x-card.normalrule>from the top of his Library.</x-card.normalrule>
-<x-card.normalrule>If the Place card on the Battlefield</x-card.normalrule>
-<x-card.normalrule>is a Venue or Facility card, discard it.</x-card.normalrule>
-<x-card.normalrule>Discard all Mobster, Bystander & Item cards</x-card.normalrule>
-<x-card.normalrule>on the Battlefield</x-card.normalrule>
-<x-card.normalrule>that are not attached to Monsters.</x-card.normalrule>
-<x-card.normalrule>Shuffle all Item cards attached to Monsters</x-card.normalrule>
-<x-card.normalrule>into the Library.</x-card.normalrule>
+<x-card.ruleline class="smallrule">This card can be played only if Summer </x-card.ruleline>
+<x-card.ruleline class="smallrule">or Autumn is on the Battlefield.</x-card.ruleline>
+<x-card.ruleline>Each player discards 2d6 cards</x-card.ruleline>
+<x-card.ruleline>from the top of his Library.</x-card.ruleline>
+<x-card.ruleline>If the Place card on the Battlefield</x-card.ruleline>
+<x-card.ruleline>is a Venue or Facility card, discard it.</x-card.ruleline>
+<x-card.ruleline>Discard all Mobster, Bystander & Item cards</x-card.ruleline>
+<x-card.ruleline>on the Battlefield</x-card.ruleline>
+<x-card.ruleline>that are not attached to Monsters.</x-card.ruleline>
+<x-card.ruleline>Shuffle all Item cards attached to Monsters</x-card.ruleline>
+<x-card.ruleline>into the Library.</x-card.ruleline>
     </text>
 HTML;
     }

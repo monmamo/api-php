@@ -20,9 +20,9 @@ class(__FILE__) implements CardComponents
             <x-card.hero.local>hero/well-bye.jpg</x-card.hero.local>
 
     <x-card.cardrule :>
-    <x-card.normalrule>Discard the Monster and all cards</x-card.normalrule>
-    <x-card.normalrule>attached to it.</x-card.normalrule>
-    <x-card.smallrule>This counts as Knocking Out the Monster.</x-card.smallrule>
+    <x-card.ruleline>Discard the Monster and all cards</x-card.ruleline>
+    <x-card.ruleline>attached to it.</x-card.ruleline>
+    <x-card.ruleline class="smallrule">This counts as Knocking Out the Monster.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

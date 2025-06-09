@@ -30,9 +30,9 @@ return new
 
     <x-card.taxons>Pyros, Hystricos</x-card.taxons>
 
-<x-card.phaserule type="Attack" height="175"><text>
-<x-card.skilltitle>Hot Quills</x-card.skilltitle>
-<x-card.normalrule>Does 3d6 @damage.</x-card.normalrule>
+<x-card.phaserule type="Attack" ><text>
+<x-card.ruleline class="skilltitle">Hot Quills</x-card.ruleline>
+<x-card.ruleline>Does 3d6 @damage.</x-card.ruleline>
         </text></x-card.phaserule>
 
 HTML;

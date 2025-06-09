@@ -21,9 +21,9 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.hero.local>hero/AdobeStock_2910609.jpeg</x-card.hero.local>
 
-<x-card.phaserule type="Attack" height="140"><text>
-<x-card.skilltitle>Bite</x-card.skilltitle>
-<x-card.normalrule>Does 3×Speed @damage.</x-card.normalrule>
+<x-card.phaserule type="Attack" ><text>
+<x-card.ruleline class="skilltitle">Bite</x-card.ruleline>
+<x-card.ruleline>Does 3×Speed @damage.</x-card.ruleline>
         </text></x-card.phaserule>
 HTML;
     }

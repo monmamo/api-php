@@ -28,9 +28,9 @@ class(__FILE__) implements CardComponents
 </x-card.flavortext>
 
 <x-card.phaserule type="Upkeep" ><text>
-<x-card.normalrule>Choose one player.</x-card.normalrule>
-<x-card.normalrule>That player must trash one card</x-card.normalrule>
-<x-card.normalrule>from his hand or the top of his Library.</x-card.normalrule>
+<x-card.ruleline>Choose one player.</x-card.ruleline>
+<x-card.ruleline>That player must trash one card</x-card.ruleline>
+<x-card.ruleline>from his hand or the top of his Library.</x-card.ruleline>
 </text></x-card.phaserule>
 
 HTML;

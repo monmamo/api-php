@@ -19,7 +19,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.flavortext>Not the ice cream treat.</x-card.flavortext>
 
-<x-card.cardrule height="0" >TODO</x-card.cardrule>
+<x-card.cardrule >TODO</x-card.cardrule>
 HTML;
     }
 };

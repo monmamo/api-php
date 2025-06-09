@@ -51,11 +51,11 @@ class(__FILE__) implements CardComponents
     </x-card.hero.svg>
 
 <x-card.cardrule >
-<x-card.normalrule>Draw up to two cards.</x-card.normalrule>
-<x-card.smallrule>If there are fewer than two cards in your Library, draw all of them.</x-card.smallrule>
-<x-card.normalrule>After playing, shuffle your Discard pile</x-card.normalrule> 
-<x-card.normalrule>into your Library, then put this card on</x-card.normalrule>
-<x-card.normalrule>the bottom of your Library.</x-card.normalrule>
+<x-card.ruleline>Draw up to two cards.</x-card.ruleline>
+<x-card.ruleline class="smallrule">If there are fewer than two cards in your Library, draw all of them.</x-card.ruleline>
+<x-card.ruleline>After playing, shuffle your Discard pile</x-card.ruleline> 
+<x-card.ruleline>into your Library, then put this card on</x-card.ruleline>
+<x-card.ruleline>the bottom of your Library.</x-card.ruleline>
 </x-card.cardrule>
 
 HTML;

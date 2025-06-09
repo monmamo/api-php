@@ -21,7 +21,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule >
-<x-card.normalrule>Declaration phase:: You may turn any Mana cards attached to this Monster into single Fire for the rest of the turn. This Skill can't be used if this Monster is Confused, Paralyzed, Hypnotized or Asleep.</x-card.normalrule>
+<x-card.ruleline>Declaration phase:: You may turn any Mana cards attached to this Monster into single Fire for the rest of the turn. This Skill can't be used if this Monster is Confused, Paralyzed, Hypnotized or Asleep.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

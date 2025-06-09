@@ -28,12 +28,12 @@ return new
 
     <x-card.taxons>Gouros</x-card.taxons>
 
-<x-card.phaserule type="Resolution" height="210">
+<x-card.phaserule type="Resolution" >
     <text>
-<x-card.skilltitle>Nightmare Fuel</x-card.skilltitle>
-<x-card.normalrule>Every Monster that does not use an</x-card.normalrule>
-<x-card.normalrule>Attack, Defense or Skill during the turn</x-card.normalrule>
-<x-card.normalrule>loses 3 @damage.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Nightmare Fuel</x-card.ruleline>
+<x-card.ruleline>Every Monster that does not use an</x-card.ruleline>
+<x-card.ruleline>Attack, Defense or Skill during the turn</x-card.ruleline>
+<x-card.ruleline>loses 3 @damage.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

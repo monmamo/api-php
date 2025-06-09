@@ -22,11 +22,11 @@ return new
 <x-card.flavortext>It's a female monster.</x-card.flavortext>
 
 <x-card.cardrule lines="5.5">
-    <x-card.smallrule>Cannot be played during the Setup phase.</x-card.smallrule>
-<x-card.normalrule>Each player adds up the remaining</x-card.normalrule>
-<x-card.normalrule>health on his Monsters.</x-card.normalrule>
-<x-card.normalrule>The player with the highest total</x-card.normalrule>
-<x-card.normalrule>shuffles his hand into his Library.</x-card.normalrule>
+    <x-card.ruleline class="smallrule">Cannot be played during the Setup phase.</x-card.ruleline>
+<x-card.ruleline>Each player adds up the remaining</x-card.ruleline>
+<x-card.ruleline>health on his Monsters.</x-card.ruleline>
+<x-card.ruleline>The player with the highest total</x-card.ruleline>
+<x-card.ruleline>shuffles his hand into his Library.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;

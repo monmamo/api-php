@@ -16,8 +16,8 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule >
-<x-card.smallrule>Goes into effect if the Monster has a Bane.</x-card.smallrule>
-<x-card.normalrule>Removes all Banes.</x-card.normalrule>
+<x-card.ruleline class="smallrule">Goes into effect if the Monster has a Bane.</x-card.ruleline>
+<x-card.ruleline>Removes all Banes.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

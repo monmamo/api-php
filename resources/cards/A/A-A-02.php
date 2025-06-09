@@ -24,9 +24,9 @@ return new
 
         <x-card.phaserule type="Resolution" >
 <text>
-<x-card.normalrule>Does 2×Boost @damage.</x-card.normalrule>
-<x-card.normalrule>The Defending Monster</x-card.normalrule>
-<x-card.normalrule>cannot use a Physical defense.</x-card.normalrule>
+<x-card.ruleline>Does 2×Boost @damage.</x-card.ruleline>
+<x-card.ruleline>The Defending Monster</x-card.ruleline>
+<x-card.ruleline>cannot use a Physical defense.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

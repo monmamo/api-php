@@ -9,7 +9,7 @@ $make_content = function ($content):string {
     foreach (\App\Strings\explode_lines($content) as $content_line) {
         $content_line = trim($content_line);
         if ($content_line === '') continue;
-        $tspans[] = "<x-card.normalrule>$content_line</x-card.normalrule>";
+        $tspans[] = "<x-card.ruleline>$content_line</x-card.ruleline>";
     }
     return Blade::render(\App\Strings\html('text', [], $tspans));
 };

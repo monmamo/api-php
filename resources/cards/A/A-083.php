@@ -18,10 +18,10 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
   <x-card.cardrule >
-  <x-card.normalrule>Discard any number of cards from your hand.</x-card.normalrule>
-    <x-card.normalrule>For each card discarded, search your Discard</x-card.normalrule>
-    <x-card.normalrule>for a Monster or Mana card. Reveal</x-card.normalrule>
-    <x-card.normalrule>those cards, then put them in your hand.</x-card.normalrule>
+  <x-card.ruleline>Discard any number of cards from your hand.</x-card.ruleline>
+    <x-card.ruleline>For each card discarded, search your Discard</x-card.ruleline>
+    <x-card.ruleline>for a Monster or Mana card. Reveal</x-card.ruleline>
+    <x-card.ruleline>those cards, then put them in your hand.</x-card.ruleline>
     <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
     </x-card.cardrule>
 HTML;

@@ -31,19 +31,19 @@ HTML;
 
           yield <<<'HTML'
 <x-card.cardrule y="490" height="110" >
-<x-card.smallrule>{{\trans_choice('rules.player-limit', 1)}}</x-card.smallrule>
-<x-card.smallrule>You may choose to make this card Male</x-card.smallrule>
-<x-card.smallrule>when you put it on the Battlefield.</x-card.smallrule>
+<x-card.ruleline class="smallrule">{{\trans_choice('rules.player-limit', 1)}}</x-card.ruleline>
+<x-card.ruleline class="smallrule">You may choose to make this card Male</x-card.ruleline>
+<x-card.ruleline class="smallrule">when you put it on the Battlefield.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
 
           yield <<<'HTML'
 <x-card.phaserule type="Resolution" >
 <text >
-<x-card.normalrule x="55%">After all attacks and skills are resolved,</x-card.normalrule>
-<x-card.normalrule>for each Monster that did not attack,</x-card.normalrule>
-<x-card.normalrule>you may restore 2 @damage or</x-card.normalrule>
-<x-card.normalrule>remove one Bane card from it.</x-card.normalrule>
+<x-card.ruleline x="55%">After all attacks and skills are resolved,</x-card.ruleline>
+<x-card.ruleline>for each Monster that did not attack,</x-card.ruleline>
+<x-card.ruleline>you may restore 2 @damage or</x-card.ruleline>
+<x-card.ruleline>remove one Bane card from it.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

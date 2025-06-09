@@ -30,11 +30,11 @@ return new
 
     <x-card.taxons>Aquos, Musos</x-card.taxons>
 
-<x-card.phaserule type="Defense" height="175">
+<x-card.phaserule type="Defense" >
 <text >
-<x-card.skilltitle>Slippery When Wet</x-card.skilltitle>
-<x-card.normalrule>Takes no damage from Physical</x-card.normalrule>
-<x-card.normalrule>attacks when 1+ Water (A-001) attached.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Slippery When Wet</x-card.ruleline>
+<x-card.ruleline>Takes no damage from Physical</x-card.ruleline>
+<x-card.ruleline>attacks when 1+ Water (A-001) attached.</x-card.ruleline>
         </text>
 </x-card.phaserule>
 

@@ -25,7 +25,7 @@ return new
 
 
     <x-card.cardrule  >
-<x-card.normalrule>No Vendor cards can be played.</x-card.normalrule>
+<x-card.ruleline>No Vendor cards can be played.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
         }

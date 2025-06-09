@@ -22,10 +22,10 @@ class(__FILE__) implements CardComponents
 
             <x-card.phaserule type="Resolution" >
     <text >
-<x-card.normalrule>When resolving, discard 1d6 Water</x-card.normalrule>
-<x-card.normalrule>(A-001) from this Monster. The</x-card.normalrule>
-<x-card.normalrule>defending/attacking Monster takes Boost @damage</x-card.normalrule>
-<x-card.normalrule>for each Water actually discarded.</x-card.normalrule>
+<x-card.ruleline>When resolving, discard 1d6 Water</x-card.ruleline>
+<x-card.ruleline>(A-001) from this Monster. The</x-card.ruleline>
+<x-card.ruleline>defending/attacking Monster takes Boost @damage</x-card.ruleline>
+<x-card.ruleline>for each Water actually discarded.</x-card.ruleline>
     </text>
     </x-card.phaserule>
 HTML;

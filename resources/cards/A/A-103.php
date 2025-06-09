@@ -24,17 +24,17 @@ class(__FILE__) implements CardComponents
         <x-card.flavortext>All creatures need refreshment sometimes.</x-card.flavortext>
 
         <x-card.cardrule y="585"  >
-<x-card.normalrule>Put this card in the Battlefield.</x-card.normalrule>
+<x-card.ruleline>Put this card in the Battlefield.</x-card.ruleline>
 </x-card.cardrule>
 
 
      <x-card.phaserule type="Upkeep" >
        <text >
- <x-card.normalrule x="55%">You may heal 1 @damage from and/or attach</x-card.normalrule>
- <x-card.normalrule x="55%">a Water (A-001) from your Library or</x-card.normalrule>
- <x-card.normalrule>Discard to each of your Monsters on the</x-card.normalrule>
- <x-card.normalrule>Battlefield. If you searched through your</x-card.normalrule>
- <x-card.normalrule>Library, shuffle it.</x-card.normalrule>
+ <x-card.ruleline x="55%">You may heal 1 @damage from and/or attach</x-card.ruleline>
+ <x-card.ruleline x="55%">a Water (A-001) from your Library or</x-card.ruleline>
+ <x-card.ruleline>Discard to each of your Monsters on the</x-card.ruleline>
+ <x-card.ruleline>Battlefield. If you searched through your</x-card.ruleline>
+ <x-card.ruleline>Library, shuffle it.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

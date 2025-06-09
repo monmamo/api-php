@@ -14,11 +14,11 @@ return new
         {
             yield <<<'HTML'
 <x-card.cardrule  >
-<x-card.smallrule>Put this card on the Battlefield before</x-card.smallrule>
-<x-card.smallrule>a Catastrophe card is played.</x-card.smallrule>
-<x-card.normalrule>When a Catastrophe card is played,</x-card.normalrule>
-<x-card.normalrule>you may shuffle all or part of your</x-card.normalrule>
-<x-card.normalrule>Discard into your Library.</x-card.normalrule>
+<x-card.ruleline class="smallrule">Put this card on the Battlefield before</x-card.ruleline>
+<x-card.ruleline class="smallrule">a Catastrophe card is played.</x-card.ruleline>
+<x-card.ruleline>When a Catastrophe card is played,</x-card.ruleline>
+<x-card.ruleline>you may shuffle all or part of your</x-card.ruleline>
+<x-card.ruleline>Discard into your Library.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
         }

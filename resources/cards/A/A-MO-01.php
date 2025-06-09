@@ -14,6 +14,7 @@ return new
 #[Concept('DamageCapacity', 15)]
 #[Concept('Size', 6)]
 #[Concept('Speed', 2)]
+#[Concept('Training', 5)]
 #[ImageCredit('Image by Karen Culp (Shutterstock #1426742492)')]
 class(__FILE__) implements CardComponents
 {
@@ -33,19 +34,22 @@ class(__FILE__) implements CardComponents
 HTML;
 
         yield <<<'HTML'
-    <x-card.flavortext>
+<x-card.flavortext y="530">
     <x-card.flavortext.line>Highest ranking member of a Crime Family.</x-card.flavortext.line>
     <x-card.flavortext.line>His way or the highway.</x-card.flavortext.line>
     </x-card.flavortext>
     
-        <x-card.phaserule type="Draw"  badge="Repeat">
-            <text >
-                <x-card.smallrule>{{\trans_choice('rules.player-limit', 1)}}</x-card.smallrule>
-            <x-card.normalrule>You may draw 1 card for each other</x-card.normalrule>
-            <x-card.normalrule>Mobster you have on the Battlefield.</x-card.normalrule>
-            <x-card.normalrule>{{ __('rules.REDRAW') }}</x-card.normalrule>
-        </text>
-    </x-card.phaserule>
+    <x-card.cardrule>
+        <x-card.ruleline class="smallrule">{{\trans_choice('rules.player-limit', 1)}}</x-card.ruleline>
+    </x-card.cardrule>
 HTML;
     }
 };
+// <x-card.phaserule type="Draw"  badge="Repeat">
+// <text >
+// <x-card.ruleline class="smallrule">{{\trans_choice('rules.player-limit', 1)}}</x-card.ruleline>
+// <x-card.ruleline>You may draw 1 card for each other</x-card.ruleline>
+// <x-card.ruleline>Mobster you have on the Battlefield.</x-card.ruleline>
+// <x-card.ruleline>{{ __('rules.REDRAW') }}</x-card.ruleline>
+// </text>
+// </x-card.phaserule>

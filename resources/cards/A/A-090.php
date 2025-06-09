@@ -21,9 +21,9 @@ class(__FILE__) implements CardComponents
             <x-card.hero.local>hero/AdobeStock_756008424.jpeg</x-card.hero.local>
 
     <x-card.cardrule  >
-    <x-card.normalrule>Play a Vendor card.</x-card.normalrule>
-<x-card.normalrule>You may ignore any requirement</x-card.normalrule>
-<x-card.normalrule>to discard cards.</x-card.normalrule>
+    <x-card.ruleline>Play a Vendor card.</x-card.ruleline>
+<x-card.ruleline>You may ignore any requirement</x-card.ruleline>
+<x-card.ruleline>to discard cards.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;

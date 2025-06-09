@@ -19,7 +19,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.phaserule type="Resolution" >
 <text >
-<x-card.normalrule>Prevent Size @damage.</x-card.normalrule>
+<x-card.ruleline>Prevent Size @damage.</x-card.ruleline>
 </text>
 </x-card.cardrule>
 HTML;

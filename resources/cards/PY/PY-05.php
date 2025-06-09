@@ -20,7 +20,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule >
-<x-card.normalrule>Upkeep phase:: If this Monster is not Confused, Paralyzed or Hypnotized, you may attach 1d4 Fire (A-002)s from your Refuse to this Monster.</x-card.normalrule>
+<x-card.ruleline>Upkeep phase:: If this Monster is not Confused, Paralyzed or Hypnotized, you may attach 1d4 Fire (A-002)s from your Refuse to this Monster.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

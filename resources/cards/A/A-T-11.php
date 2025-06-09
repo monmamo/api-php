@@ -26,10 +26,10 @@ return new
             yield <<<'HTML'
     <x-card.hero.local>A064.jpg</x-card.hero.local> 
 
-    <x-card.phaserule type="Attack" height="140">
+    <x-card.phaserule type="Attack" >
         <text>
-<x-card.skilltitle>Horn Attack</x-card.skilltitle>
-<x-card.normalrule>Does 2×Speed @damage.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Horn Attack</x-card.ruleline>
+<x-card.ruleline>Does 2×Speed @damage.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

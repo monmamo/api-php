@@ -25,10 +25,10 @@ return new
 </x-card.hero.svg>
 
 <x-card.cardrule  >
-<x-card.normalrule>This player does not have his own</x-card.normalrule>
-<x-card.normalrule>discard pile. Put existing &amp; henceforth</x-card.normalrule>
-<x-card.normalrule>discards at the bottom of your Library.</x-card.normalrule>
-<x-card.smallrule>Applies to all Discard piles used by this player.</x-card.smallrule>
+<x-card.ruleline>This player does not have his own</x-card.ruleline>
+<x-card.ruleline>discard pile. Put existing &amp; henceforth</x-card.ruleline>
+<x-card.ruleline>discards at the bottom of your Library.</x-card.ruleline>
+<x-card.ruleline class="smallrule">Applies to all Discard piles used by this player.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
         }

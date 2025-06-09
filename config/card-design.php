@@ -13,9 +13,6 @@ $physical = ['unit' => 'in', 'width' => $width_inches, 'height' => $height_inche
 $width = $dots_per_inch * $width_inches;
 $height = $dots_per_inch * $height_inches;
 
-$primary_rule_height = 35;
-$secondary_rule_height = 30;
-
 $icon = [
     'size' => $icon_size,
     'scale' => $height / $icon_size,
@@ -76,4 +73,4 @@ $concept = [
     'topline' => $titlebox['y'],
 ];
 
-return \compact('dots_per_inch', 'physical', 'height', 'width', 'icon', 'trimbox', 'viewbox', 'titlebox', 'hero', 'primary_rule_height', 'secondary_rule_height', 'concept');
+return \compact('dots_per_inch', 'physical', 'height', 'width', 'icon', 'trimbox', 'viewbox', 'titlebox', 'hero', 'concept');

@@ -18,20 +18,20 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
     <x-card.cardrule y="480" :>
-        <x-card.smallrule>Put this card on the Battlefield.</x-card.smallrule>
-<x-card.smallrule>This card will remain on the Battlefield until it is discarded by rule.</x-card.smallrule>
+        <x-card.ruleline class="smallrule">Put this card on the Battlefield.</x-card.ruleline>
+<x-card.ruleline class="smallrule">This card will remain on the Battlefield until it is discarded by rule.</x-card.ruleline>
 </x-card.cardrule>
 
 <x-card.phaserule type="Draw" y="580" :>
     <text >
-<x-card.normalrule>Draw 7 cards.</x-card.normalrule>
+<x-card.ruleline>Draw 7 cards.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 
 <x-card.phaserule type="Resolution" :>
     <text >
-<x-card.normalrule>Roll 1d6.</x-card.normalrule>
-<x-card.normalrule>If @dieroll(1,2), discard your hand and this card.</x-card.normalrule>
+<x-card.ruleline>Roll 1d6.</x-card.ruleline>
+<x-card.ruleline>If @dieroll(1,2), discard your hand and this card.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text>
 </x-card.phaserule>

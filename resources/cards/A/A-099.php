@@ -29,8 +29,8 @@ HTML;
         {
             yield <<<'HTML'
 <x-card.cardrule :>
-<x-card.normalrule>For each Defense, roll 1d6.</x-card.normalrule>
-<x-card.normalrule>If @dieroll(1), the Defense does nothing.</x-card.normalrule>
+<x-card.ruleline>For each Defense, roll 1d6.</x-card.ruleline>
+<x-card.ruleline>If @dieroll(1), the Defense does nothing.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
         }

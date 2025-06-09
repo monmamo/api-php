@@ -11,6 +11,7 @@ return new
     #[Concept('Item')]
     #[Concept('Weapon')]
     #[ImageCredit('Icon by Caro Asercion')]
+#[Concept('Cost', 2)]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -24,8 +25,8 @@ return new
 <x-card.flavortext>Don't tell Milton.</x-card.flavortext>
 
 <x-card.cardrule >
-<x-card.normalrule>Does 6 damage. </x-card.normalrule>
-<x-card.normalrule>Target cannot attack on next turn.</x-card.normalrule>
+<x-card.ruleline>Does 6 damage. </x-card.ruleline>
+<x-card.ruleline>Target cannot attack on next turn.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
         }

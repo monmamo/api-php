@@ -22,12 +22,12 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
     <image x="0" y="0" class="hero" href="@local(A146.jpg)" />
     <x-card.phaserule type="Draw" lines="6"><text>
-<x-card.normalrule>Discard 2+ cards from your hand.</x-card.normalrule>
-<x-card.normalrule>Lay your hand aside. Draw twice as many</x-card.normalrule>
-<x-card.normalrule>cards as you discarded. You may reveal any</x-card.normalrule>
-<x-card.normalrule>Mana cards you draw &amp; put them in your</x-card.normalrule>
-<x-card.normalrule>hand. Put the remaining cards at the bottom</x-card.normalrule>
-<x-card.normalrule>of your Library, then shuffle your Library.</x-card.normalrule>
+<x-card.ruleline>Discard 2+ cards from your hand.</x-card.ruleline>
+<x-card.ruleline>Lay your hand aside. Draw twice as many</x-card.ruleline>
+<x-card.ruleline>cards as you discarded. You may reveal any</x-card.ruleline>
+<x-card.ruleline>Mana cards you draw &amp; put them in your</x-card.ruleline>
+<x-card.ruleline>hand. Put the remaining cards at the bottom</x-card.ruleline>
+<x-card.ruleline>of your Library, then shuffle your Library.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;

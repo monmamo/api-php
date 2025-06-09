@@ -23,10 +23,10 @@ return new
 
 <x-card.phaserule type="Resolution" >
     <text >
-<x-card.normalrule>For each Fire (A-002) attached to</x-card.normalrule>
-<x-card.normalrule>this Monster, prevent Boost damage.</x-card.normalrule>
-<x-card.normalrule>Discard all Fire attached to this Monster</x-card.normalrule>
-<x-card.smallrule>(even if they weren't needed to prevent damage).</x-card.smallrule>
+<x-card.ruleline>For each Fire (A-002) attached to</x-card.ruleline>
+<x-card.ruleline>this Monster, prevent Boost damage.</x-card.ruleline>
+<x-card.ruleline>Discard all Fire attached to this Monster</x-card.ruleline>
+<x-card.ruleline class="smallrule">(even if they weren't needed to prevent damage).</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

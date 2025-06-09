@@ -21,10 +21,10 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.flavortext>Here's lookin' at you, kid.</x-card.flavortext>
 
-<x-card.phaserule type="Upkeep"  height="130"><text >
-<x-card.normalrule>Roll 1d4. If @dieroll(4), you may ask</x-card.normalrule>
-<x-card.normalrule>1 opponent to show you their hand.</x-card.normalrule>
-<x-card.normalrule>(Only you get to see the hand.)</x-card.normalrule>
+<x-card.phaserule type="Upkeep"  ><text >
+<x-card.ruleline>Roll 1d4. If @dieroll(4), you may ask</x-card.ruleline>
+<x-card.ruleline>1 opponent to show you their hand.</x-card.ruleline>
+<x-card.ruleline>(Only you get to see the hand.)</x-card.ruleline>
 </text></x-card.phaserule>
 HTML;
     }

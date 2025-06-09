@@ -18,9 +18,9 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.phaserule type="Draw" ><text>
-<x-card.normalrule>Choose one opponent.</x-card.normalrule>
-<x-card.normalrule>That opponent may search their Library for a Weapon.</x-card.normalrule>
-<x-card.normalrule>You may search your Library for any number of Food items.</x-card.normalrule>
+<x-card.ruleline>Choose one opponent.</x-card.ruleline>
+<x-card.ruleline>That opponent may search their Library for a Weapon.</x-card.ruleline>
+<x-card.ruleline>You may search your Library for any number of Food items.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;

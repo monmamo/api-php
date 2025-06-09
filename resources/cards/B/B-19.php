@@ -17,7 +17,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="0" >
+<x-card.cardrule >
 Discard all Mobster and Bystander cards in play.
 Draw phase: Discard 1 card from your Library before taking any other action.
 Resolution phase: After resolving all other effects, each Monster in play takes 1d4 @damage.

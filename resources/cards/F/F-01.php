@@ -19,11 +19,11 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.phaserule type="Resolution" height="130">
+<x-card.phaserule type="Resolution" >
 <text >
-<x-card.normalrule>Before resolving attacks,</x-card.normalrule>
-<x-card.normalrule>restore 2 @damage to</x-card.normalrule>
-<x-card.normalrule>each Monster on the Battlefield.</x-card.normalrule>
+<x-card.ruleline>Before resolving attacks,</x-card.ruleline>
+<x-card.ruleline>restore 2 @damage to</x-card.ruleline>
+<x-card.ruleline>each Monster on the Battlefield.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

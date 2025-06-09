@@ -17,7 +17,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="0" >Resolution phase: Roll 1d6. If 1, Attack has no effect.</x-card.cardrule>
+<x-card.cardrule >Resolution phase: Roll 1d6. If 1, Attack has no effect.</x-card.cardrule>
 HTML;
     }
 };

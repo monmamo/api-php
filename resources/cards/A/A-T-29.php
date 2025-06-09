@@ -18,9 +18,9 @@ return new
             yield <<<'HTML'
 <x-card.phaserule type="Resolution" :>
 <text >
-<x-card.normalrule>When attacking, roll 1d6. If 6,</x-card.normalrule>
-<x-card.normalrule>do not apply declared Defense.</x-card.normalrule> 
-<x-card.normalrule>Can be improved with Power Up.</x-card.normalrule>
+<x-card.ruleline>When attacking, roll 1d6. If 6,</x-card.ruleline>
+<x-card.ruleline>do not apply declared Defense.</x-card.ruleline> 
+<x-card.ruleline>Can be improved with Power Up.</x-card.ruleline>
 </text>
 </x-card.cardrule>
 HTML;

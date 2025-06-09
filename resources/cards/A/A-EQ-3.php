@@ -24,9 +24,10 @@ class(__FILE__) implements CardComponents
 </g><text x="50%" y="410" font-family="Roboto" text-anchor="middle"  font-size="300" font-weight="700" fill="#ffffff" >3</text>
 
     <x-card.phaserule type="Draw" ><text>
-<x-card.normalrule>Choose an opponent.</x-card.normalrule>
-<x-card.normalrule>Draw cards until you have the same number</x-card.normalrule>
-<x-card.normalrule>of cards in your hand as that opponent.</x-card.normalrule>
+<x-card.ruleline>Choose an opponent.</x-card.ruleline>
+<x-card.ruleline>Draw cards until you have the</x-card.ruleline>
+<x-card.ruleline>same number of cards in your hand</x-card.ruleline>
+<x-card.ruleline>as that opponent.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;

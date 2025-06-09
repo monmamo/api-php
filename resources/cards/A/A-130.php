@@ -24,8 +24,8 @@ class(__FILE__) implements CardComponents
 </x-card.flavortext>
 
      <x-card.phaserule type="Draw" ><text>
-         <x-card.normalrule>Discard a card from your hand</x-card.normalrule>
-         <x-card.normalrule>to take a card of your choice from your Library.</x-card.normalrule>
+         <x-card.ruleline>Discard a card from your hand</x-card.ruleline>
+         <x-card.ruleline>to take a card of your choice from your Library.</x-card.ruleline>
          <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
          </text></x-card.phaserule>
 HTML;

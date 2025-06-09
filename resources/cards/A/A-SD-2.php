@@ -33,8 +33,8 @@ class(__FILE__) implements CardComponents
 
 
     <x-card.phaserule type="Draw" ><text>
-<x-card.normalrule>Shuffle your hand into your Library.</x-card.normalrule>
-<x-card.normalrule>Then draw 1d6 cards.</x-card.normalrule>
+<x-card.ruleline>Shuffle your hand into your Library.</x-card.ruleline>
+<x-card.ruleline>Then draw 1d6 cards.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
     </text></x-card.phaserule>
 HTML;

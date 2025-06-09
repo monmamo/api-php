@@ -27,15 +27,15 @@ return new
             yield <<<'HTML'
 <x-card.hero.local>hero/fieldworker.jpg</x-card.hero.local>
 
-<x-card.cardrule y="580" :>
-    <x-card.smallrule>A player may have any number of Fieldworkers on the Battlefield.</x-card.smallrule>
+<x-card.cardrule>
+    <x-card.ruleline class="smallrule">A player may have any number of Fieldworkers on the Battlefield.</x-card.ruleline>
     </x-card.cardrule>
 
-<x-card.phaserule type="Draw" height="130">
+<x-card.phaserule type="Draw" >
     <text >
-        <x-card.normalrule>Draw up to 2 cards for each</x-card.normalrule>
-        <x-card.normalrule>of your Fieldworkers.</x-card.normalrule>
-        <x-card.normalrule>Then you may Redraw.</x-card.normalrule>
+        <x-card.ruleline>Draw up to 2 cards for each</x-card.ruleline>
+        <x-card.ruleline>of your Fieldworkers.</x-card.ruleline>
+        <x-card.ruleline>Then you may Redraw.</x-card.ruleline>
  </text>
 </x-card.phaserule>
 HTML;

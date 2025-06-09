@@ -28,9 +28,9 @@ class(__FILE__) implements CardComponents
 
     <x-card.phaserule type="Draw" >
 <text >
-<x-card.normalrule>You may take one additional</x-card.normalrule>
-<x-card.normalrule>Draw phase. If you do, put this card</x-card.normalrule>
-<x-card.normalrule>at the bottom of your Library.</x-card.normalrule>
+<x-card.ruleline>You may take one additional</x-card.ruleline>
+<x-card.ruleline>Draw phase. If you do, put this card</x-card.ruleline>
+<x-card.ruleline>at the bottom of your Library.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

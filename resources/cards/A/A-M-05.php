@@ -32,9 +32,9 @@ return new
 
 <x-card.phaserule type="Draw" >
 <text>
-    <x-card.skilltitle>Chew on Power Cords</x-card.skilltitle>
-<x-card.normalrule>You may stop any player from</x-card.normalrule>
-<x-card.normalrule>taking their Draw Phase.</x-card.normalrule>
+    <x-card.ruleline class="skilltitle">Chew on Power Cords</x-card.ruleline>
+<x-card.ruleline>You may stop any player from</x-card.ruleline>
+<x-card.ruleline>taking their Draw Phase.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

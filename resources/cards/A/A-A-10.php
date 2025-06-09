@@ -29,7 +29,7 @@ class(__FILE__) implements CardComponents
 </x-card.hero.svg>
 
 <x-card.cardrule >
-<x-card.normalrule>Does 3xSpeed damage.</x-card.normalrule>
+<x-card.ruleline>Does 3xSpeed damage.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

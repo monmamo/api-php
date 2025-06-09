@@ -22,8 +22,8 @@ class(__FILE__) implements CardComponents
   <image x="0" y="0" class="hero" href="@local(A212.jpg)" />
 
 <text y="500" filter="url(#solid)">
-<x-card.normalrule>Shuffle up to 5 Mana cards</x-card.normalrule>
-<x-card.normalrule>from your Discard pile into your Library.</x-card.normalrule>
+<x-card.ruleline>Shuffle up to 5 Mana cards</x-card.ruleline>
+<x-card.ruleline>from your Discard pile into your Library.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text>
 HTML;

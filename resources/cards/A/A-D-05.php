@@ -17,12 +17,12 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule  :lines="6">
-    <x-card.smallrule>A Monster may use this Defense if it is not subject to an Attack.</x-card.smallrule>
-<x-card.normalrule>Choose an opposing Monster that is</x-card.normalrule>
-<x-card.normalrule>attacking another Monster.</x-card.normalrule>
-<x-card.normalrule>If this Monster’s Speed is higher,</x-card.normalrule>
-<x-card.normalrule>this Monster takes the damage</x-card.normalrule>
-<x-card.normalrule>that Attack would have done.</x-card.normalrule>
+    <x-card.ruleline class="smallrule">A Monster may use this Defense if it is not subject to an Attack.</x-card.ruleline>
+<x-card.ruleline>Choose an opposing Monster that is</x-card.ruleline>
+<x-card.ruleline>attacking another Monster.</x-card.ruleline>
+<x-card.ruleline>If this Monster’s Speed is higher,</x-card.ruleline>
+<x-card.ruleline>this Monster takes the damage</x-card.ruleline>
+<x-card.ruleline>that Attack would have done.</x-card.ruleline>
         </x-card.cardrule>
 HTML;
     }

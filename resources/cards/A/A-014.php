@@ -25,11 +25,11 @@ return new
 <x-card.flavortext>Expect more. Live better. Simplify life. Get more done.</x-card.flavortext>
 
 <x-card.phaserule type="Draw" ><text>
-<x-card.normalrule>Discard 3 cards from your hand.</x-card.normalrule>
-<x-card.normalrule>Search your Library for 2 Item cards.</x-card.normalrule>
-<x-card.normalrule>Reveal them, then put them in your hand.</x-card.normalrule>
-<x-card.normalrule>Shuffle your library. Then put</x-card.normalrule>
-<x-card.normalrule>this card on the bottom of your library.</x-card.normalrule>
+<x-card.ruleline>Discard 3 cards from your hand.</x-card.ruleline>
+<x-card.ruleline>Search your Library for 2 Item cards.</x-card.ruleline>
+<x-card.ruleline>Reveal them, then put them in your hand.</x-card.ruleline>
+<x-card.ruleline>Shuffle your library. Then put</x-card.ruleline>
+<x-card.ruleline>this card on the bottom of your library.</x-card.ruleline>
 </text></x-card.phaserule>
 
 HTML;

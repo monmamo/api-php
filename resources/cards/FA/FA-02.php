@@ -17,9 +17,9 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.phaserule type="Draw" lines="6"><text>
-<x-card.normalrule>Search your Library for 1 Healing card.</x-card.normalrule>
-<x-card.normalrule>Reveal the card, then put it in your hand.</x-card.normalrule>
-<x-card.normalrule>Shuffle your Library afterwards.</x-card.normalrule>
+<x-card.ruleline>Search your Library for 1 Healing card.</x-card.ruleline>
+<x-card.ruleline>Reveal the card, then put it in your hand.</x-card.ruleline>
+<x-card.ruleline>Shuffle your Library afterwards.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;

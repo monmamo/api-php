@@ -32,11 +32,11 @@ return new
 <x-card.flavortext>Most efficacious in every case.</x-card.flavortext>
 
     <x-card.phaserule type="Upkeep"  ><text >
-<x-card.smallrule>If playing this card from your hand,</x-card.smallrule>
-<x-card.smallrule>discard any number of cards from your hand.</x-card.smallrule> 
-<x-card.normalrule>For each card you paid/discarded,</x-card.normalrule>
-<x-card.normalrule>restore 2 @damage to 1 Monster.</x-card.normalrule>
-<x-card.smallrule>You may use this effect across multiple Monsters.</x-card.smallrule>
+<x-card.ruleline class="smallrule">If playing this card from your hand,</x-card.ruleline>
+<x-card.ruleline class="smallrule">discard any number of cards from your hand.</x-card.ruleline> 
+<x-card.ruleline>For each card you paid/discarded,</x-card.ruleline>
+<x-card.ruleline>restore 2 @damage to 1 Monster.</x-card.ruleline>
+<x-card.ruleline class="smallrule">You may use this effect across multiple Monsters.</x-card.ruleline>
 </text></x-card.phaserule>
 HTML;
         }

@@ -23,10 +23,10 @@ return new
 
 <x-card.phaserule type="Draw" >
 <text >
-<x-card.normalrule>Choose an opponent. That opponent</x-card.normalrule>
-    <x-card.normalrule>reveals their hand. Choose one card.</x-card.normalrule>
-    <x-card.normalrule>The opponent puts that card</x-card.normalrule>
-    <x-card.normalrule>on the bottom of their Library.</x-card.normalrule>
+<x-card.ruleline>Choose an opponent. That opponent</x-card.ruleline>
+    <x-card.ruleline>reveals their hand. Choose one card.</x-card.ruleline>
+    <x-card.ruleline>The opponent puts that card</x-card.ruleline>
+    <x-card.ruleline>on the bottom of their Library.</x-card.ruleline>
     <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 

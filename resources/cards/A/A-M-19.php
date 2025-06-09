@@ -30,10 +30,10 @@ return new
 
     <x-card.taxons>Aquos, Selkos</x-card.taxons>
 
-<x-card.phaserule type="Trait" height="210">
+<x-card.phaserule type="Trait" >
     <text>
-<x-card.skilltitle>Smooth Skin</x-card.skilltitle>
-<x-card.normalrule>Physical Defense prevents +2d6 @damage.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Smooth Skin</x-card.ruleline>
+<x-card.ruleline>Physical Defense prevents +2d6 @damage.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

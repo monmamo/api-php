@@ -21,10 +21,10 @@ class(__FILE__) implements CardComponents
 
             <x-card.phaserule type="Resolution" >
     <text >
-<x-card.normalrule>For each Water (A-001) attached to</x-card.normalrule>
-<x-card.normalrule>this Monster, prevent Boost @damage.</x-card.normalrule>
-<x-card.normalrule>Discard all Water attached to this Monster</x-card.normalrule>
-<x-card.smallrule>(even if they weren't needed to prevent damage).</x-card.smallrule>
+<x-card.ruleline>For each Water (A-001) attached to</x-card.ruleline>
+<x-card.ruleline>this Monster, prevent Boost @damage.</x-card.ruleline>
+<x-card.ruleline>Discard all Water attached to this Monster</x-card.ruleline>
+<x-card.ruleline class="smallrule">(even if they weren't needed to prevent damage).</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

@@ -57,10 +57,10 @@ HTML;
 
         yield <<<HTML
     <x-card.cardrule >
-        <x-card.smallrule>You may apply this to any 1d6 roll,</x-card.smallrule> 
-        <x-card.smallrule>be it your own or another player's.</x-card.smallrule>
-        <x-card.smallrule>Discard this card after using.</x-card.smallrule>
-        <x-card.normalrule>One 1d6 roll counts as @dieroll({$value}).</x-card.normalrule>
+        <x-card.ruleline class="smallrule">You may apply this to any 1d6 roll,</x-card.ruleline> 
+        <x-card.ruleline class="smallrule">be it your own or another player's.</x-card.ruleline>
+        <x-card.ruleline class="smallrule">Discard this card after using.</x-card.ruleline>
+        <x-card.ruleline>One 1d6 roll counts as @dieroll({$value}).</x-card.ruleline>
     </x-card.cardrule>
 HTML;
     }

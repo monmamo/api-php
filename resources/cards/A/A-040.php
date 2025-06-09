@@ -21,13 +21,13 @@ return new
             
 <x-card.flavortext>Trailer hitch demagnetizers, automatic circumcisers...</x-card.flavortext>
 
-<x-card.phaserule type="Draw" height="225">
+<x-card.phaserule type="Draw" >
     <text>
-  <x-card.normalrule>Discard any number of cards from</x-card.normalrule>
-  <x-card.normalrule>your hand. For each card that you</x-card.normalrule>
-  <x-card.normalrule>discarded, search your Library for a</x-card.normalrule>
-  <x-card.normalrule>Durable Item card. Reveal it, then put</x-card.normalrule>
-  <x-card.normalrule>it in your hand. Shuffle your library.</x-card.normalrule>
+  <x-card.ruleline>Discard any number of cards from</x-card.ruleline>
+  <x-card.ruleline>your hand. For each card that you</x-card.ruleline>
+  <x-card.ruleline>discarded, search your Library for a</x-card.ruleline>
+  <x-card.ruleline>Durable Item card. Reveal it, then put</x-card.ruleline>
+  <x-card.ruleline>it in your hand. Shuffle your library.</x-card.ruleline>
   <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
   </text>
 </x-card.phaserule>

@@ -27,8 +27,8 @@ class(__FILE__) implements CardComponents
     </x-card.hero.svg>
 
 <x-card.cardrule >
-    <x-card.normalrule>Speed +1d6</x-card.normalrule>
-    <x-card.normalrule>(rolled when attached to the Monster).</x-card.normalrule>
+    <x-card.ruleline>Speed +1d6</x-card.ruleline>
+    <x-card.ruleline>(rolled when attached to the Monster).</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

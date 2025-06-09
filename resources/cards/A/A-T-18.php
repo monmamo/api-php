@@ -22,9 +22,9 @@ class(__FILE__) implements CardComponents
 
 <x-card.phaserule type="Resolution" >
     <text >
-<x-card.normalrule>If this Monster uses</x-card.normalrule>
-<x-card.normalrule>a Defense, add 4 to any roll.</x-card.normalrule>
-<x-card.smallrule>(For example, 1d6 becomes 1d10.)</x-card.smallrule>
+<x-card.ruleline>If this Monster uses</x-card.ruleline>
+<x-card.ruleline>a Defense, add 4 to any roll.</x-card.ruleline>
+<x-card.ruleline class="smallrule">(For example, 1d6 becomes 1d10.)</x-card.ruleline>
     </text>
 </x-card.phaserule>
 

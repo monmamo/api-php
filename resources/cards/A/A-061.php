@@ -23,7 +23,7 @@ class(__FILE__) implements CardComponents
 <x-card.flavortext>Who says money can't buy popularity?</x-card.flavortext>
 
 <x-card.phaserule type="Draw" ><text>
-    <x-card.normalrule>Every player may draw up to 5 cards.</x-card.normalrule>
+    <x-card.ruleline>Every player may draw 1d6 cards.</x-card.ruleline>
     <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;

@@ -46,7 +46,7 @@ class PhaseRule implements Renderable
                 if ($content_line === '') {
                     continue;
                 }
-                $tspans[] = "<x-card.normalrule>{$content_line}</x-card.normalrule>";
+                $tspans[] = "<x-card.ruleline>{$content_line}</x-card.ruleline>";
             }
             return Blade::render(\App\Strings\html('text', [], $tspans));
         };
@@ -70,7 +70,7 @@ class PhaseRule implements Renderable
         $concept = Concept::make($this->phase);
 
         $tspans = \array_map(
-            fn ($line) => \App\Strings\html('x-card.normalrule', $line),
+            fn ($line) => \App\Strings\html('x-card.ruleline', $line),
             [...\App\Strings\explode_lines($this->lines)],
         );
 

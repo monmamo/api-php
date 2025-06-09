@@ -30,12 +30,12 @@ return new
 
     <x-card.taxons>Aquos, Otarys</x-card.taxons>
 
-<x-card.phaserule type="Attack" height="210">
+<x-card.phaserule type="Attack" >
     <text>
-<x-card.skilltitle>Water Jet</x-card.skilltitle>
-<x-card.normalrule>Discard 1+ Water (A-001) from this Monster.</x-card.normalrule>
-<x-card.normalrule>For each Water (A-001) discarded,</x-card.normalrule>
-<x-card.normalrule>does 3 @damage.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Water Jet</x-card.ruleline>
+<x-card.ruleline>Discard 1+ Water (A-001) from this Monster.</x-card.ruleline>
+<x-card.ruleline>For each Water (A-001) discarded,</x-card.ruleline>
+<x-card.ruleline>does 3 @damage.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

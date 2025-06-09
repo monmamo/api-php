@@ -19,9 +19,9 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule  >
-<x-card.normalrule>As long as Candlewax is attached,</x-card.normalrule>
-<x-card.normalrule>each Fire (A-002) attached to the Monster</x-card.normalrule>
-<x-card.normalrule>counts as 2 Fire mana.</x-card.normalrule>
+<x-card.ruleline>As long as Candlewax is attached,</x-card.ruleline>
+<x-card.ruleline>each Fire (A-002) attached to the Monster</x-card.ruleline>
+<x-card.ruleline>counts as 2 Fire mana.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

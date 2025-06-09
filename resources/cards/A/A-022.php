@@ -40,12 +40,12 @@ class(__FILE__) implements CardComponents
 </g>
 
 <x-card.cardrule lines="7" >
-<x-card.normalrule>Search your Library for a card that makes a</x-card.normalrule>
-<x-card.normalrule>cultural reference. Reveal the card. Explain</x-card.normalrule>
-<x-card.normalrule>the reference. If nobody can disprove you,</x-card.normalrule>
-<x-card.normalrule>put the card in your hand.</x-card.normalrule>
-<x-card.normalrule>Otherwise discard the card.</x-card.normalrule>
-<x-card.normalrule>Then shuffle your Library.</x-card.normalrule>
+<x-card.ruleline>Search your Library for a card that makes a</x-card.ruleline>
+<x-card.ruleline>cultural reference. Reveal the card. Explain</x-card.ruleline>
+<x-card.ruleline>the reference. If nobody can disprove you,</x-card.ruleline>
+<x-card.ruleline>put the card in your hand.</x-card.ruleline>
+<x-card.ruleline>Otherwise discard the card.</x-card.ruleline>
+<x-card.ruleline>Then shuffle your Library.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 

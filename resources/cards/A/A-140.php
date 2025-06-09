@@ -21,10 +21,10 @@ return new
 <x-card.flavortext>Now is not the time to panic.</x-card.flavortext>
 
     <x-card.cardrule :>
-<x-card.smallrule>Cannot be played with a shared Library.</x-card.smallrule>
-<x-card.normalrule>Discard any number of cards from the top</x-card.normalrule>
-<x-card.normalrule>of your Library to remove 1 @damage per card</x-card.normalrule>
-<x-card.normalrule>from one of your Monsters.</x-card.normalrule>
+<x-card.ruleline class="smallrule">Cannot be played with a shared Library.</x-card.ruleline>
+<x-card.ruleline>Discard any number of cards from the top</x-card.ruleline>
+<x-card.ruleline>of your Library to remove 1 @damage per card</x-card.ruleline>
+<x-card.ruleline>from one of your Monsters.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
         }

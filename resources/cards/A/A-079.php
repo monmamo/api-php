@@ -22,9 +22,9 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
     <x-card.cardrule  >
-    <x-card.normalrule>Choose one of your Monsters on the Battlefield.</x-card.normalrule>
-<x-card.normalrule>Shuffle that Monster, all cards attached to it,</x-card.normalrule>
-<x-card.normalrule>and Rescue Drone into your Library.</x-card.normalrule>
+    <x-card.ruleline>Choose one of your Monsters on the Battlefield.</x-card.ruleline>
+<x-card.ruleline>Shuffle that Monster, all cards attached to it,</x-card.ruleline>
+<x-card.ruleline>and Rescue Drone into your Library.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

@@ -21,8 +21,8 @@ class(__FILE__) implements CardComponents
 
         <x-card.phaserule type="Draw" >
 <text>
-<x-card.normalrule>Search your Library for an Item card.</x-card.normalrule>
-<x-card.normalrule>Reveal it. Then put it in your hand.</x-card.normalrule>
+<x-card.ruleline>Search your Library for an Item card.</x-card.ruleline>
+<x-card.ruleline>Reveal it. Then put it in your hand.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </text>
 </x-card.phaserule>

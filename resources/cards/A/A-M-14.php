@@ -31,11 +31,11 @@ return new
     <x-card.taxons>Regos, Felos</x-card.taxons>
 
 
-<x-card.phaserule type="Resolution" height="175">
+<x-card.phaserule type="Resolution" >
     <text>
-<x-card.skilltitle>Mind Control</x-card.skilltitle>
-<x-card.normalrule>If attacked, roll 1d6.</x-card.normalrule>
-<x-card.normalrule>@dieroll(6) The attack has no effect.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Mind Control</x-card.ruleline>
+<x-card.ruleline>If attacked, roll 1d6.</x-card.ruleline>
+<x-card.ruleline>@dieroll(6) The attack has no effect.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 

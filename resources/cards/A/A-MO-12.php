@@ -23,7 +23,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule >
-<x-card.normalrule>Resolution phase: Everyone else's Monster's attacks do 1d4 less damage.</x-card.normalrule>
+<x-card.ruleline>Resolution phase: Everyone else's Monster's attacks do 1d4 less damage.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

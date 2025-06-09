@@ -6,28 +6,13 @@ use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
-// The gladius was a short sword used by ancient Roman foot soldiers from the 3rd century BC until the 3rd century AD. It featured a double-edged blade designed for both cutting and thrusting, making it highly effective in close-quarters combat. Typically, the blade measured between 60 to 70 centimeters (24 to 28 inches) in length and about 5 centimeters (2 inches) in width.
-
-// The Romans adopted the gladius from the Celtiberians of Hispania during the Punic Wars, referring to it as the *gladius Hispaniensis*, or "Hispanic-type sword." Over time, several variations of the gladius emerged, including:
-
-// - **Gladius Hispaniensis**: The earliest form, featuring a pronounced leaf-shaped blade.
-
-// - **Mainz Gladius**: Introduced in the early empire, it had a shorter, broader blade with a triangular point and retained a slight waist curvature.
-
-// - **Fulham Gladius**: A transitional form between the Mainz and Pompeii types, it featured straight edges and a long point.
-
-// - **Pompeii Gladius**: The most popular version, it had parallel cutting edges and a triangular tip, representing a shift towards a more standardized and utilitarian design.
-
-// The gladius was typically wielded alongside a large rectangular shield known as a *scutum*. Legionaries would throw javelins (*pila*) to disrupt enemy formations before engaging in close combat with the gladius. This combination allowed for effective thrusting attacks, which were often fatal even with shallow wounds.
-
-// By the 3rd century AD, the Roman military began transitioning to the longer *spatha*, which offered greater reach in combat. Despite this shift, the gladius remains an iconic symbol of Roman military prowess and engineering.
-
 return new
-    #[Title('Gladius')]
+    #[Title('Longsword')]
     #[Concept('Item')]
     #[Concept('Weapon')]
     #[Concept('Cost', 3)]
-    #[ImageCredit('Icon by Skoll on Game-Icons.net')]
+
+    #[ImageCredit('Icon by Delapouite on Game-Icons.net')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -35,17 +20,22 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.hero.svg><path d="M124.812 388.907a60.718 60.718 0 0 0 16.564 11.588L107.28 435.07a48.756 48.756 0 0 0-28.35-28.006l34.16-34.576a61.093 61.093 0 0 0 11.722 16.42zm209.598-276.44c-32.754 33.14-57.813 79.127-103.008 124.853-9.13 9.245-40.292 37.355-58.303 53.555l49.223 48.64c15.98-18.24 43.727-49.744 52.858-58.978 45.154-45.726 90.828-71.39 123.57-104.477C452.683 121.485 481 28.492 481 28.492s-92.67 29.4-146.59 83.976zM83.656 430.594a30.92 30.92 0 1 0 .26 43.727 30.817 30.817 0 0 0-.26-43.727zm91.13-40.603c11.16 0 20.822-2.81 24.497-6.56l20.885-21.103-69.88-69.047-20.823 21.135c-7.964 8.068-11.233 43.06 7.85 61.905 10.12 10.026 24.79 13.66 37.47 13.66z" fill="#fff" fill-opacity="1" /></x-card.hero.svg>
+<x-card.hero.svg>
+<g transform="translate(0, 0) scale(1, 1) rotate(-90, 256, 256) skewX(0) skewY(0)">
+<path d="M24.68 24.68C21.145 28.217 18.83 34.459 18.83 40.944C18.83 45.334 19.953 49.544 21.735 52.947L45.145 45.144L52.947 21.735C49.544 19.953 45.335 18.831 40.944 18.831C34.459 18.831 28.217 21.145 24.681 24.681Z" fill="#ffffff" fill-opacity="1" />
+<path d="M41.813 65.225L84.49 105.82C87.43 101.337 90.45 97.503 93.976 93.977C97.502 90.452 101.336 87.431 105.819 84.491L65.226 41.814L59.372 59.372Z" fill="#ffffff" fill-opacity="1" />
+<path d="M106.705 106.705C103.638 109.772 100.887 113.468 97.833 118.511L175.279 192.178C177.924 188.871 180.493 185.962 183.227 183.228C185.962 180.493 188.871 177.924 192.178 175.279L118.511 97.833C113.468 100.887 109.772 103.638 106.705 106.705Z" fill="#ffffff" fill-opacity="1" />
+<path d="M195.646 195.645C186.532 204.76 178.566 218.092 159.976 246.243L171.068 257.335C205.228 205.715 205.715 205.229 257.335 171.068L246.243 159.976C218.093 178.566 204.76 186.532 195.646 195.646Z" fill="#ffffff" fill-opacity="1" />
+<path d="M219.688 219.688C215.69 223.685 212.111 228.228 207.83 234.349L450.695 471.933L493.169 493.169L471.933 450.695L234.349 207.83C228.229 212.111 223.685 215.69 219.688 219.688Z" fill="silver" fill-opacity="1" /></g>
+</x-card.hero.svg>
      
 <x-card.flavortext>Definitely mightier than The Pen (A-W-15).</x-card.flavortext>
 
-<x-card.cardrule y="580" :>
-<x-card.smallrule>Attach this card to a Mobster.</x-card.smallrule>
-        </x-card.cardrule>
 
         <x-card.phaserule type="Resolution" >
 <text >
-<x-card.normalrule>2+1d6 @damage</x-card.normalrule>
+<x-card.ruleline class="smallrule">Attach this card to a Master or Mobster.</x-card.ruleline>
+<x-card.ruleline>Attacked character takes 2+1d6 @damage</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

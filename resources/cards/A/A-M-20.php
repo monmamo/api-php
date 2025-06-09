@@ -28,11 +28,11 @@ return new
 
     <x-card.taxons>Hominos</x-card.taxons>
 
-<x-card.phaserule type="Trait" height="170">
+<x-card.phaserule type="Trait" >
     <text>
-<x-card.skilltitle>Needs a Friend</x-card.skilltitle>
-<x-card.normalrule>Increase Speed by 1 for</x-card.normalrule>
-<x-card.normalrule>each Bystander on your team.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Needs a Friend</x-card.ruleline>
+<x-card.ruleline>Increase Speed by 1 for</x-card.ruleline>
+<x-card.ruleline>each Bystander on your team.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

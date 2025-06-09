@@ -13,10 +13,10 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-     <x-card.phaserule type="Upkeep" height="240">
+     <x-card.phaserule type="Upkeep" >
        <text >
-<x-card.normalrule>Discard 2 cards for each Bystander on the Battlefield.</x-card.normalrule>
-<x-card.normalrule>Remove all Bystanders from the Battlefield.</x-card.normalrule>
+<x-card.ruleline>Discard 2 cards for each Bystander on the Battlefield.</x-card.ruleline>
+<x-card.ruleline>Remove all Bystanders from the Battlefield.</x-card.ruleline>
 </text>
  </x-card.phaserule>
 HTML;

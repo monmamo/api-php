@@ -30,11 +30,11 @@ return new
 
     <x-card.taxons>Aquos, Lutros</x-card.taxons>
 
-<x-card.phaserule type="Defense" height="175">
+<x-card.phaserule type="Defense" >
 <text>
-<x-card.skilltitle>Roll Away</x-card.skilltitle>
-<x-card.normalrule>Prevent 3 @damage plus</x-card.normalrule>
-<x-card.normalrule>1 @damage for each Water (A-001) attached.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Roll Away</x-card.ruleline>
+<x-card.ruleline>Prevent 3 @damage plus</x-card.ruleline>
+<x-card.ruleline>1 @damage for each Water (A-001) attached.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 

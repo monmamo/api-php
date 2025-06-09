@@ -22,9 +22,9 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.phaserule type="Resolution" >
     <text >
-<x-card.normalrule>If this Monster does any damage</x-card.normalrule>
-<x-card.normalrule>while it is Confused (even to itself),</x-card.normalrule>
-<x-card.normalrule>it does +Boost @damage.</x-card.normalrule>
+<x-card.ruleline>If this Monster does any damage</x-card.ruleline>
+<x-card.ruleline>while it is Confused (even to itself),</x-card.ruleline>
+<x-card.ruleline>it does +Boost @damage.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

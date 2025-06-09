@@ -21,10 +21,10 @@ return new
 
 <x-card.phaserule type="Draw" >
 <text >
-<x-card.normalrule>Shuffle your hand into your Library.</x-card.normalrule>
-<x-card.normalrule>Choose another player.</x-card.normalrule>
-<x-card.normalrule>Count the number of cards in their hand.</x-card.normalrule>
-<x-card.normalrule>Draw that many cards.</x-card.normalrule>
+<x-card.ruleline>Shuffle your hand into your Library.</x-card.ruleline>
+<x-card.ruleline>Choose another player.</x-card.ruleline>
+<x-card.ruleline>Count the number of cards in their hand.</x-card.ruleline>
+<x-card.ruleline>Draw that many cards.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text>
 </x-card.phaserule>

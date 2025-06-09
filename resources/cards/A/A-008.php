@@ -36,16 +36,16 @@ return new
 <text  y="360" class="credit" text-anchor="middle" alignment-baseline="baseline"><tspan x="70%" dy="25" class="flavor" text-anchor="middle" alignment-baseline="hanging" fill="#ffffff">Just collecting the dues.</tspan></text>
 
 <x-card.cardrule y="450"  >
-<x-card.normalrule>You may play this card only if you have a</x-card.normalrule>
-<x-card.normalrule>Mobster card on the Battlefield.</x-card.normalrule>
+<x-card.ruleline>You may play this card only if you have a</x-card.ruleline>
+<x-card.ruleline>Mobster card on the Battlefield.</x-card.ruleline>
 </x-card.cardrule>
 
 <x-card.phaserule type="Draw" lines="6"><text>
-<x-card.normalrule>Choose one opponent. Roll 1d6. That</x-card.normalrule>
-<x-card.normalrule>opponent discards that many cards from</x-card.normalrule>
-<x-card.normalrule>his/her Library or all if he/she doesn't have</x-card.normalrule>
-<x-card.normalrule>that many. You may draw as many cards</x-card.normalrule>
-<x-card.normalrule>as were discarded.</x-card.normalrule>
+<x-card.ruleline>Choose one opponent. Roll 1d6. That</x-card.ruleline>
+<x-card.ruleline>opponent discards that many cards from</x-card.ruleline>
+<x-card.ruleline>his/her Library or all if he/she doesn't have</x-card.ruleline>
+<x-card.ruleline>that many. You may draw as many cards</x-card.ruleline>
+<x-card.ruleline>as were discarded.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;

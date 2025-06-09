@@ -20,9 +20,9 @@ class(__FILE__) implements CardComponents
             <x-card.hero.svg>{{ \view('Pyros.icon') }}</x-card.hero.svg>
 
             <text y="550" filter="url(#solid)">
-<x-card.normalrule>Transfer a Fire (A-002)</x-card.normalrule>
-<x-card.normalrule>from your Discard pile</x-card.normalrule>
-<x-card.normalrule>to one of your Pyros Monsters.</x-card.normalrule>
+<x-card.ruleline>Transfer a Fire (A-002)</x-card.ruleline>
+<x-card.ruleline>from your Discard pile</x-card.ruleline>
+<x-card.ruleline>to one of your Pyros Monsters.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
     </text>
 HTML;

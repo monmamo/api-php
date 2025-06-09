@@ -23,9 +23,9 @@ class(__FILE__) implements CardComponents
     <x-card.hero.local>A066.jpeg</x-card.hero.local>
 
     <x-card.cardrule :>
-    <x-card.normalrule>Discard the highest-level Monster</x-card.normalrule>
-<x-card.normalrule>of each opponent</x-card.normalrule>
-<x-card.normalrule>and all cards attached to that Monster.</x-card.normalrule>
+    <x-card.ruleline>Discard the highest-level Monster</x-card.ruleline>
+<x-card.ruleline>of each opponent</x-card.ruleline>
+<x-card.ruleline>and all cards attached to that Monster.</x-card.ruleline>
     </x-card.cardrule>
 HTML;
     }

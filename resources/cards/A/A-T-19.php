@@ -17,11 +17,11 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule :>
-<x-card.normalrule>During the first round of turns,</x-card.normalrule>
-<x-card.normalrule>this Monster's Speed is halved</x-card.normalrule>
-<x-card.normalrule>and Attacks do half as much damage.</x-card.normalrule>
-<x-card.normalrule>During subsequent turns, Speed +Boost</x-card.normalrule>
-<x-card.normalrule>and Attacks do +Boost damage.</x-card.normalrule>
+<x-card.ruleline>During the first round of turns,</x-card.ruleline>
+<x-card.ruleline>this Monster's Speed is halved</x-card.ruleline>
+<x-card.ruleline>and Attacks do half as much damage.</x-card.ruleline>
+<x-card.ruleline>During subsequent turns, Speed +Boost</x-card.ruleline>
+<x-card.ruleline>and Attacks do +Boost damage.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

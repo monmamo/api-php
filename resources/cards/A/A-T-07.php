@@ -26,10 +26,10 @@ class(__FILE__) implements CardComponents
 
     <x-card.phaserule type="Upkeep" >
         <text >
-    <x-card.normalrule>Choose a Library. Look</x-card.normalrule>
-<x-card.normalrule>at the top 4 cards of that Library</x-card.normalrule>
-<x-card.normalrule>without rearranging them.</x-card.normalrule>
-<x-card.normalrule>Then you may shuffle that Library.</x-card.normalrule>
+    <x-card.ruleline>Choose a Library. Look</x-card.ruleline>
+<x-card.ruleline>at the top 4 cards of that Library</x-card.ruleline>
+<x-card.ruleline>without rearranging them.</x-card.ruleline>
+<x-card.ruleline>Then you may shuffle that Library.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

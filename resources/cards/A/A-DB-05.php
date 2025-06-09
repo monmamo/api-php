@@ -29,7 +29,7 @@ class(__FILE__) implements CardComponents
 </x-card.hero.svg >
 
 <x-card.cardrule>
-<x-card.normalrule>You may trash a Mentor card.</x-card.normalrule>
+<x-card.ruleline>DBD: You may trash a Mentor card.</x-card.ruleline>
 </x-card.cardrule>
 
 HTML;

@@ -33,10 +33,10 @@ return new
 
 <x-card.phaserule type="Resolution" >
     <text >
-    <x-card.smallrule>A player may have any number of Cheerleaders</x-card.normalrule>
-    <x-card.smallrule>on the Battlefield. You may choose to make this</x-card.normalrule>
-    <x-card.smallrule>card Male when you put it on the Battlefield.</x-card.normalrule>
-    <x-card.normalrule>Your Monster Attacks do +1 @damage.</x-card.normalrule>
+    <x-card.ruleline class="smallrule">A player may have any number of Cheerleaders</x-card.ruleline>
+    <x-card.ruleline class="smallrule">on the Battlefield. You may choose to make this</x-card.ruleline>
+    <x-card.ruleline class="smallrule">card Male when you put it on the Battlefield.</x-card.ruleline>
+    <x-card.ruleline>Your Monster Attacks do +1 @damage.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

@@ -24,9 +24,9 @@ return new
 
 <x-card.phaserule type="Resolution" >
         <text >
-<x-card.normalrule>Ignore any Defense or effect that</x-card.normalrule>
-<x-card.normalrule> would reduce or prevent the damage</x-card.normalrule>
-<x-card.normalrule>done by this Monster.</x-card.normalrule>
+<x-card.ruleline>Ignore any Defense or effect that</x-card.ruleline>
+<x-card.ruleline> would reduce or prevent the damage</x-card.ruleline>
+<x-card.ruleline>done by this Monster.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

@@ -23,11 +23,11 @@ class(__FILE__) implements CardComponents
         <x-card.hero.local>A212.jpg</x-card.hero.local>
         
         <x-card.phaserule type="Draw" lines="6"><text>
-<x-card.normalrule>You may do one of the following:</x-card.normalrule>
-<x-card.normalrule>&#8226; Put a basic Mana card</x-card.normalrule>
-<x-card.normalrule>from your Discard into your Hand.</x-card.normalrule>
-<x-card.normalrule>&#8226; Shuffle 3 basic Mana cards</x-card.normalrule>
-<x-card.normalrule>from your Discard pile into your Library.</x-card.normalrule>
+<x-card.ruleline>You may do one of the following:</x-card.ruleline>
+<x-card.ruleline>&#8226; Put a basic Mana card</x-card.ruleline>
+<x-card.ruleline>from your Discard into your Hand.</x-card.ruleline>
+<x-card.ruleline>&#8226; Shuffle 3 basic Mana cards</x-card.ruleline>
+<x-card.ruleline>from your Discard pile into your Library.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 

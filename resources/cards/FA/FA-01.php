@@ -16,12 +16,12 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.phaserule type="Draw" lines="6"><text>
-<x-card.normalrule>Search your Library for a Consumable</x-card.normalrule>
-<x-card.normalrule>card with Monstermeal in its name.</x-card.normalrule>
-<x-card.normalrule>Reveal that/those card(s). Put that/those</x-card.normalrule>
-<x-card.normalrule>card(s) in your hand. Shuffle your Library.</x-card.normalrule>
-<x-card.normalrule>After using this card, put this card at</x-card.normalrule>
-<x-card.normalrule>the bottom of your Library.  You may take another Draw phase.</x-card.normalrule>
+<x-card.ruleline>Search your Library for a Consumable</x-card.ruleline>
+<x-card.ruleline>card with Monstermeal in its name.</x-card.ruleline>
+<x-card.ruleline>Reveal that/those card(s). Put that/those</x-card.ruleline>
+<x-card.ruleline>card(s) in your hand. Shuffle your Library.</x-card.ruleline>
+<x-card.ruleline>After using this card, put this card at</x-card.ruleline>
+<x-card.ruleline>the bottom of your Library.  You may take another Draw phase.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;

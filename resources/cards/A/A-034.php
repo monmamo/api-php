@@ -22,11 +22,11 @@ class(__FILE__) implements CardComponents
 <x-card.hero.local>hero/gene-pool.jpg</x-card.hero.local>
 
 <x-card.cardrule >
-<x-card.normalrule>This card can be used only during Setup.</x-card.normalrule>
-<x-card.normalrule>Put this card on your Battlefield.</x-card.normalrule>
-<x-card.normalrule>On each setup turn, you may</x-card.normalrule> 
-    <x-card.normalrule>attach a Trait card to a Monster</x-card.normalrule>
-<x-card.normalrule>from your hand, Library or Discard.</x-card.normalrule>
+<x-card.ruleline>This card can be used only during Setup.</x-card.ruleline>
+<x-card.ruleline>Put this card on your Battlefield.</x-card.ruleline>
+<x-card.ruleline>On each setup turn, you may</x-card.ruleline> 
+    <x-card.ruleline>attach a Trait card to a Monster</x-card.ruleline>
+<x-card.ruleline>from your hand, Library or Discard.</x-card.ruleline>
 </x-card.phaserule>
 HTML;
     }

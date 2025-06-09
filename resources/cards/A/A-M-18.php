@@ -28,10 +28,10 @@ return new
 
     <x-card.taxons>Aquos, Hystricos</x-card.taxons>
 
-<x-card.phaserule type="Attack" height="140">
+<x-card.phaserule type="Attack" >
     <text>
-<x-card.skilltitle>Ball of Pain</x-card.skilltitle>
-<x-card.normalrule>Does Speed+3d6 @damage.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Ball of Pain</x-card.ruleline>
+<x-card.ruleline>Does Speed+3d6 @damage.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 

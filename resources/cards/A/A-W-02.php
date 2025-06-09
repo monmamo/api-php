@@ -26,7 +26,7 @@ return new
 
 <x-card.phaserule type="Resolution" >
 <text >
-<x-card.normalrule>Speed @damage.</x-card.normalrule>
+<x-card.ruleline>Attacked character takes Speed @damage.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

@@ -20,16 +20,16 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.hero.local>A128.png</x-card.hero.local>
 
-<x-card.flavortext y="510">
+<x-card.flavortext y="530">
 <x-card.flavortext.line>The less we hear from them,</x-card.flavortext.line> 
 <x-card.flavortext.line>the better they are serving us.</x-card.flavortext.line>
 <x-card.flavortext.line>(Celebrity likenesses impersonated.)</x-card.flavortext.line>
 </x-card.flavortext>
 
-<x-card.phaserule type="Draw" ><text>
-<x-card.normalrule>Choose an opponent.</x-card.normalrule>
-<x-card.normalrule>That opponent removes all Monster cards</x-card.normalrule>
-<x-card.normalrule>from his Library and puts them in Discard.</x-card.normalrule>
+<x-card.phaserule type="Draw" lines=4 ><text>
+<x-card.ruleline>Choose an opponent.</x-card.ruleline>
+<x-card.ruleline>That opponent removes all Monster cards</x-card.ruleline>
+<x-card.ruleline>from his Library and puts them in Discard.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;

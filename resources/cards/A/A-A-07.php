@@ -27,9 +27,9 @@ class(__FILE__) implements CardComponents
 </x-card.hero.svg>
 
 <x-card.phaserule type="Resolution" ><text>
-<x-card.normalrule>Boost @damage to target.</x-card.normalrule>
-<x-card.normalrule >Attacked Character cannot attack next turn.</x-card.normalrule>
-<x-card.normalrule >Attacked Character Speed = 0 for 1d6 turns.</x-card.normalrule>
+<x-card.ruleline>Boost @damage to target.</x-card.ruleline>
+<x-card.ruleline >Attacked Character cannot attack next turn.</x-card.ruleline>
+<x-card.ruleline >Attacked Character Speed = 0 for 1d6 turns.</x-card.ruleline>
 </text></x-card.phaserule>
 HTML;
     }

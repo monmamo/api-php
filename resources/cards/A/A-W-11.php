@@ -11,6 +11,7 @@ return new
 #[Concept('Item')]
 #[Concept('Weapon')]
 #[ImageCredit('Icon by Delapouite on Game-Icons.net')]
+#[Concept('Cost', 3)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -23,14 +24,14 @@ class(__FILE__) implements CardComponents
 
 <x-card.flavortext>The cut you don't see is the deepest.</x-card.flavortext>
 
-<x-card.cardrule y="580" :>
-<x-card.smallrule>Attach this card to a Mobster.</x-card.smallrule>
+<x-card.cardrule>
+<x-card.ruleline class="smallrule">Attach this card to a Mobster.</x-card.ruleline>
         </x-card.cardrule>
        
 <x-card.phaserule type="Resolution" >
 <text >
-<x-card.normalrule>X = Speed/4 (rounded up).</x-card.normalrule>
-<x-card.normalrule>Does Xd6-X @damage.</x-card.normalrule>
+<x-card.ruleline>X = Speed/4 (rounded up).</x-card.ruleline>
+<x-card.ruleline>Does Xd6-X @damage.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

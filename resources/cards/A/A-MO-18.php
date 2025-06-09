@@ -15,9 +15,9 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-     <x-card.phaserule type="Upkeep" height="240">
+     <x-card.phaserule type="Upkeep" >
        <text >
-<x-card.normalrule>Discard any card with Snitch (MOB-17) attached and all cards attached to those cards.</x-card.normalrule>
+<x-card.ruleline>Discard any card with Snitch (MOB-17) attached and all cards attached to those cards.</x-card.ruleline>
 </text>
  </x-card.phaserule>
 

@@ -24,7 +24,7 @@ return new
 </x-card.hero.svg>
 
 <x-card.cardrule  >
-<x-card.normalrule>Remove 1 @damage from a Monster.</x-card.normalrule>
+<x-card.ruleline>Remove 1 @damage from a Monster.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
         }

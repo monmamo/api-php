@@ -22,15 +22,6 @@ return new class(path: __FILE__, svg: \view('Attack.icon'), imageCredit: '') imp
         $this->construct($path);
     }
 
-
-        /**
-         * String indicating the system or game that the card belongs to.
-     * @group nonary
-     */
-    public function system(): string{
-        return "Mean Streets";
-    }
-
     /**
      * @group nonary
      */

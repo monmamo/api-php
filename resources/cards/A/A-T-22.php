@@ -32,12 +32,12 @@ class(__FILE__) implements CardComponents
 
 <x-card.phaserule type="Resolution" >
 <text>
-<x-card.smallrule>When this Monster attacks or defends &amp; has</x-card.smallrule>
-<x-card.smallrule>1+ Fire (A-002) attached & is not already</x-card.smallrule>
-<x-card.smallrule>consuming Fire, the defending/attacking Monster</x-card.smallrule>
-<x-card.smallrule>takes 1d6-1 @damage. </x-card.smallrule>
-<x-card.smallrule>If the defending/attacking Monster </x-card.smallrule>
-<x-card.smallrule>takes any damage, discard 1 Fire from this Monster.</x-card.smallrule>
+<x-card.ruleline class="smallrule">When this Monster attacks or defends &amp; has</x-card.ruleline>
+<x-card.ruleline class="smallrule">1+ Fire (A-002) attached & is not already</x-card.ruleline>
+<x-card.ruleline class="smallrule">consuming Fire, the defending/attacking Monster</x-card.ruleline>
+<x-card.ruleline class="smallrule">takes 1d6-1 @damage. </x-card.ruleline>
+<x-card.ruleline class="smallrule">If the defending/attacking Monster </x-card.ruleline>
+<x-card.ruleline class="smallrule">takes any damage, discard 1 Fire from this Monster.</x-card.ruleline>
     </text>
     </x-card.phaserule>
 HTML;

@@ -17,7 +17,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule lines="1" >No Consumable may be attached to or used by this Monster.</x-card.cardrule>
+<x-card.cardrule  >No Consumable may be attached to or used by this Monster.</x-card.cardrule>
 HTML;
     }
 };

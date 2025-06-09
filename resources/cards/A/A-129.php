@@ -18,10 +18,10 @@ return new
 <x-card.flavortext>Also called "airport security."</x-card.flavortext>
 
     <x-card.cardrule  >
-<x-card.normalrule>Look at the top 5 cards of any Library.</x-card.normalrule>
-<x-card.normalrule>Discard any number of Item cards you find</x-card.normalrule>
-<x-card.normalrule>there. The owner of the Library shuffles</x-card.normalrule>
-<x-card.normalrule>the other cards back into their deck.</x-card.normalrule>
+<x-card.ruleline>Look at the top 5 cards of any Library.</x-card.ruleline>
+<x-card.ruleline>Discard any number of Item cards you find</x-card.ruleline>
+<x-card.ruleline>there. The owner of the Library shuffles</x-card.ruleline>
+<x-card.ruleline>the other cards back into their deck.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;

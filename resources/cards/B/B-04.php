@@ -15,12 +15,12 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule y="580" :lines="2">
-<x-card.normalrule>You may play this card only with an Attack.</x-card.normalrule>
-    <x-card.normalrule>Limit 2 per Monster.</x-card.normalrule>
+<x-card.cardrule>
+<x-card.ruleline>You may play this card only with an Attack.</x-card.ruleline>
+    <x-card.ruleline>Limit 2 per Monster.</x-card.ruleline>
 </x-card.cardrule>
 
-<x-card.phaserule type="Resolution" height="135">
+<x-card.phaserule type="Resolution" >
 <text >
 TODO
 </text>

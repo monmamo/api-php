@@ -22,12 +22,12 @@ class(__FILE__) implements CardComponents
 <x-card.flavortext>Someone please give that monster a bath.</x-card.flavortext>
 
 <x-card.cardrule lines="6">
-<x-card.normalrule>Fetor Strength: 1d6</x-card.normalrule>
-<x-card.normalrule>(rolled at attach; can be increased by Power Up)</x-card.normalrule>
-<x-card.normalrule>Reduce damage done by any</x-card.normalrule>
-<x-card.normalrule>Monsters' Attacks by Fetor Strength.</x-card.normalrule>
-<x-card.normalrule>Reduce damage prevented by any</x-card.normalrule>
-<x-card.normalrule>Monsters' Defenses by Fetor Strength.</x-card.normalrule>
+<x-card.ruleline>Fetor Strength: 1d6</x-card.ruleline>
+<x-card.ruleline>(rolled at attach; can be increased by Power Up)</x-card.ruleline>
+<x-card.ruleline>Reduce damage done by any</x-card.ruleline>
+<x-card.ruleline>Monsters' Attacks by Fetor Strength.</x-card.ruleline>
+<x-card.ruleline>Reduce damage prevented by any</x-card.ruleline>
+<x-card.ruleline>Monsters' Defenses by Fetor Strength.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

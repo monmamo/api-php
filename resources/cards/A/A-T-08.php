@@ -23,8 +23,8 @@ return new
 <x-card.flavortext>When I get that feeling I want natural healing…</x-card.flavortext>
 
 <x-card.phaserule type="Resolution" ><text>
-<x-card.normalrule>If this Monster is not Knocked Out,</x-card.normalrule>
-<x-card.normalrule>you may restore 2 @damage to it.</x-card.normalrule>
+<x-card.ruleline>If this Monster is not Knocked Out,</x-card.ruleline>
+<x-card.ruleline>you may restore 2 @damage to it.</x-card.ruleline>
 </text></x-card.phaserule>
 HTML;
         }

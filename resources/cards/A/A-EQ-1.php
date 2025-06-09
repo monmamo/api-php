@@ -24,8 +24,8 @@ class(__FILE__) implements CardComponents
 </g><text x="50%" y="410" font-family="Roboto" text-anchor="middle"  font-size="300" font-weight="700" fill="#ffffff" >1</text>
 
     <x-card.phaserule type="Draw" ><text>
-    <x-card.normalrule>All players shuffle their hand into</x-card.normalrule>
-<x-card.normalrule>their Library and draw up to 4 cards.</x-card.normalrule>
+    <x-card.ruleline>All players shuffle their hand into</x-card.ruleline>
+<x-card.ruleline>their Library and draw up to 4 cards.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;

@@ -27,8 +27,8 @@ return new
 
 <x-card.phaserule type="Resolution" >
     <text >
-<x-card.normalrule>Each player discards a card</x-card.normalrule>
-<x-card.normalrule>from his hand or Library.</x-card.normalrule>
+<x-card.ruleline>Each player discards a card</x-card.ruleline>
+<x-card.ruleline>from his hand or Library.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

@@ -29,16 +29,16 @@ class(__FILE__) implements CardComponents
 <x-card.hero.local>A072.png</x-card.hero.local>
 
 <x-card.cardrule y="500" height="55" >
-<x-card.normalrule>{{\trans_choice('rules.player-limit', 1)}}</x-card.normalrule>
+<x-card.ruleline>{{\trans_choice('rules.player-limit', 1)}}</x-card.ruleline>
 </x-card.cardrule>
 
 <x-card.phaserule type="Upkeep" >
 <text >
-<x-card.normalrule>You may choose a random card</x-card.normalrule>
-<x-card.normalrule>from an opponent's hand.</x-card.normalrule>
-<x-card.normalrule>The opponent must reveal that card to</x-card.normalrule>
-<x-card.normalrule>all players. You may have that player discard</x-card.normalrule>
-<x-card.normalrule>that card or shuffle it back into their Library.</x-card.normalrule>
+<x-card.ruleline>You may choose a random card</x-card.ruleline>
+<x-card.ruleline>from an opponent's hand.</x-card.ruleline>
+<x-card.ruleline>The opponent must reveal that card to</x-card.ruleline>
+<x-card.ruleline>all players. You may have that player discard</x-card.ruleline>
+<x-card.ruleline>that card or shuffle it back into their Library.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

@@ -21,8 +21,8 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.phaserule type="Draw" >
 <text>
-<x-card.normalrule>Put an Item card from your</x-card.normalrule>
-<x-card.normalrule>Discard into your Library.</x-card.normalrule>
+<x-card.ruleline>Put an Item card from your</x-card.ruleline>
+<x-card.ruleline>Discard into your Library.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text>
 </x-card.phaserule>

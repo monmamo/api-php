@@ -18,8 +18,8 @@ return new
             yield <<<'HTML'
 <x-card.phaserule type="Resolution" >
 <text >
-<x-card.normalrule>Multiply damage done</x-card.normalrule>
-<x-card.normalrule>by Attacks by Boost.</x-card.normalrule>
+<x-card.ruleline>Multiply damage done</x-card.ruleline>
+<x-card.ruleline>by Attacks by Boost.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

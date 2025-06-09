@@ -20,10 +20,10 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule  :>
-<x-card.smallrule>You can play this card only if you have </x-card.smallrule>
-<x-card.smallrule>4 or fewer other cards in your hand.</x-card.smallrule>
-<x-card.normalrule>Draw a card for each opposing Monster</x-card.normalrule>
-<x-card.normalrule>on the Battlefield.</x-card.normalrule>
+<x-card.ruleline class="smallrule">You can play this card only if you have </x-card.ruleline>
+<x-card.ruleline class="smallrule">4 or fewer other cards in your hand.</x-card.ruleline>
+<x-card.ruleline>Draw a card for each opposing Monster</x-card.ruleline>
+<x-card.ruleline>on the Battlefield.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;

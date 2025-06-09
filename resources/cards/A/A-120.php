@@ -29,14 +29,14 @@ return new
 
     <x-card.phaserule type="Upkeep" y="590" >
     <text>
-    <x-card.normalrule>Attach this card to a Monster. That</x-card.normalrule>
-    <x-card.normalrule>Monster cannot attack on this turn.</x-card.normalrule>
+    <x-card.ruleline>Attach this card to a Monster. That</x-card.ruleline>
+    <x-card.ruleline>Monster cannot attack on this turn.</x-card.ruleline>
     </text>
 </x-card.phaserule>
 
     <x-card.phaserule type="Resolution" >
     <text>
-        <x-card.normalrule>Restore Size @damage to this Monster.</x-card.normalrule>
+        <x-card.ruleline>Restore Size @damage to this Monster.</x-card.ruleline>
     </text>
 </x-card.phaserule>
 HTML;

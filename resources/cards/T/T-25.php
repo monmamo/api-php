@@ -15,8 +15,8 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="55" >
-<x-card.normalrule>Size*3, Speed /3</x-card.normalrule>
+<x-card.cardrule >
+<x-card.ruleline>Size*3, Speed /3</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

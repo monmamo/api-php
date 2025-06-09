@@ -31,10 +31,10 @@ class(__FILE__) implements CardComponents
 {{ \App\Concept::make("Resolution")->icon() }}
     </g>
 <text x="0" y="625" width="610" height="170">
-    <x-card.normalrule>If an opponent's Character attempts</x-card.normalrule>
-        <x-card.normalrule>any attack, defense, skill or effect,</x-card.normalrule>
-        <x-card.normalrule>you may choose to roll 1d6.</x-card.normalrule>
-        <x-card.normalrule>If @dieroll(6,5), that move has no effect.</x-card.normalrule>
+    <x-card.ruleline>If an opponent's Character attempts</x-card.ruleline>
+        <x-card.ruleline>any attack, defense, skill or effect,</x-card.ruleline>
+        <x-card.ruleline>you may choose to roll 1d6.</x-card.ruleline>
+        <x-card.ruleline>If @dieroll(6,5), that move has no effect.</x-card.ruleline>
     </text>
 HTML;
     }

@@ -29,11 +29,11 @@ class(__FILE__) implements CardComponents
 
 
     <text y="600" filter="url(#solid)">
-<x-card.smallrule>Limit 1 on Battlefield among all players.</x-card.smallrule>
-<x-card.smallrule>You may choose to make this card Male or Female</x-card.smallrule>
-<x-card.smallrule>when you put it on the Battlefield.</x-card.smallrule>
-<x-card.normalrule>Mobster and Criminal cards cannot use</x-card.normalrule>
-<x-card.normalrule>effects while this card is on the Battlefield.</x-card.normalrule>
+<x-card.ruleline class="smallrule">Limit 1 on Battlefield among all players.</x-card.ruleline>
+<x-card.ruleline class="smallrule">You may choose to make this card Male or Female</x-card.ruleline>
+<x-card.ruleline class="smallrule">when you put it on the Battlefield.</x-card.ruleline>
+<x-card.ruleline>Mobster and Criminal cards cannot use</x-card.ruleline>
+<x-card.ruleline>effects while this card is on the Battlefield.</x-card.ruleline>
 </text>
 HTML;
     }

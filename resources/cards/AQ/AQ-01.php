@@ -1,7 +1,6 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\FlavorText;
 use App\CardAttributes\ImageCredit;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
@@ -12,7 +11,7 @@ return new
 #[Title('Cresting Wave')]
 #[Concept('Attack')]
 #[ImageCredit('')]
-#[FlavorText([])]
+
 #[Prerequisites(lines: ['Requires Aquos.', 'Can be used only at an Ocean.'], y: 460)]
 class(__FILE__) implements CardComponents
 {
@@ -21,8 +20,8 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule height="55" >
-<x-card.normalrule>Summons a large wave, carrying the force of the ocean to sweep away opponents.</x-card.normalrule>
+<x-card.cardrule >
+<x-card.ruleline>Summons a large wave, carrying the force of the ocean to sweep away opponents.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

@@ -18,9 +18,9 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="165" >
-<x-card.normalrule>Discard all Mobster and Bystander cards in play.</x-card.normalrule>
-<x-card.normalrule>Discard all Item cards in play that are not attached to Monsters.</x-card.normalrule>
-<x-card.normalrule>Shuffle all Item cards in play that are attached to Monsters into the Library.</x-card.normalrule>
+<x-card.ruleline>Discard all Mobster and Bystander cards in play.</x-card.ruleline>
+<x-card.ruleline>Discard all Item cards in play that are not attached to Monsters.</x-card.ruleline>
+<x-card.ruleline>Shuffle all Item cards in play that are attached to Monsters into the Library.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

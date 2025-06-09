@@ -27,8 +27,8 @@ return new
 <x-card.flavortext>Give it ALL you got.</x-card.flavortext>
 
 <x-card.phaserule type="Resolution" ><text>
-<x-card.normalrule x="55%">3×Size @damage to defending Monster.</x-card.normalrule>
-<x-card.normalrule>2×Size @damage to self.</x-card.normalrule>
+<x-card.ruleline x="55%">3×Size @damage to defending Monster.</x-card.ruleline>
+<x-card.ruleline>2×Size @damage to self.</x-card.ruleline>
 </text></x-card.phaserule>
 HTML;
         }

@@ -20,8 +20,8 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.phaserule type="Resolution" >
     <text >
-<x-card.normalrule>When attacked, reduce</x-card.normalrule>
-<x-card.normalrule>damage done by Boost @damage.</x-card.normalrule>
+<x-card.ruleline>When attacked, reduce</x-card.ruleline>
+<x-card.ruleline>damage done by Boost @damage.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

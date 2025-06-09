@@ -16,7 +16,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule >
-<x-card.normalrule>When another player plays a Vendor card, you may intervene. The opposing player must pay any cost associated with the draw, but you may use whatever benefit they would get for that cost.</x-card.normalrule>
+<x-card.ruleline>When another player plays a Vendor card, you may intervene. The opposing player must pay any cost associated with the draw, but you may use whatever benefit they would get for that cost.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

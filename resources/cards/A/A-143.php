@@ -23,9 +23,9 @@ return new
 
     <x-card.phaserule type="Upkeep"  >
     <text >
-    <x-card.normalrule>You may put one card of your</x-card.normalrule>
-<x-card.normalrule>choice from your Discard pile</x-card.normalrule>
-<x-card.normalrule>on the bottom of your Library.</x-card.normalrule>
+    <x-card.ruleline>You may put one card of your</x-card.ruleline>
+<x-card.ruleline>choice from your Discard pile</x-card.ruleline>
+<x-card.ruleline>on the bottom of your Library.</x-card.ruleline>
     </text>
 </x-card.phaserule>
 HTML;

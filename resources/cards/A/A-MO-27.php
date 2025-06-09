@@ -16,7 +16,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule >
-<x-card.normalrule>Only Mobster cards allowed on the Battlefield are those who are members of a Motorcycle Gang.</x-card.normalrule>
+<x-card.ruleline>Only Mobster cards allowed on the Battlefield are those who are members of a Motorcycle Gang.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

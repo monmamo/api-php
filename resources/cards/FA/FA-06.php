@@ -16,9 +16,9 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-     <x-card.phaserule type="Upkeep" height="240">
+     <x-card.phaserule type="Upkeep" >
        <text >
-<x-card.normalrule>Each opposing player discards the top card from their Library. Exile this card.</x-card.normalrule>
+<x-card.ruleline>Each opposing player discards the top card from their Library. Exile this card.</x-card.ruleline>
 </text>
  </x-card.phaserule>
 

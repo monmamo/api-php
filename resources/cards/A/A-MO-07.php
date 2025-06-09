@@ -28,10 +28,10 @@ return new
 <x-card.flavortext>Loose lips sink championships.</x-card.flavortext>
 
     <x-card.phaserule type="Upkeep" ><text>
-        <x-card.normalrule>Once per turn, you may look at a</x-card.normalrule>
-        <x-card.normalrule>random card from any Library.</x-card.normalrule>
-        <x-card.normalrule>Do not reveal the card to anyone else or</x-card.normalrule>
-        <x-card.normalrule>change its location in the Library.</x-card.normalrule>
+        <x-card.ruleline>Once per turn, you may look at a</x-card.ruleline>
+        <x-card.ruleline>random card from any Library.</x-card.ruleline>
+        <x-card.ruleline>Do not reveal the card to anyone else or</x-card.ruleline>
+        <x-card.ruleline>change its location in the Library.</x-card.ruleline>
     </text></x-card.phaserule>
 HTML;
         }

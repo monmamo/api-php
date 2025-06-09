@@ -36,11 +36,11 @@ return new
         {
             yield <<<'HTML'
 <x-card.cardrule  background-opacity="0" >
-<x-card.normalrule>For any attempt to put this Monster to Sleep,</x-card.normalrule>
-<x-card.normalrule>roll 1d6. (Roll one die for each</x-card.normalrule>
-<x-card.normalrule>Caffeine card attached to this Monster.)</x-card.normalrule>
-<x-card.normalrule>@dieroll(5,6) The Monster remains awake.</x-card.normalrule>
-<x-card.normalrule>@dieroll(1,2) Discard this card.</x-card.normalrule>
+<x-card.ruleline>For any attempt to put this Monster to Sleep,</x-card.ruleline>
+<x-card.ruleline>roll 1d6. (Roll one die for each</x-card.ruleline>
+<x-card.ruleline>Caffeine card attached to this Monster.)</x-card.ruleline>
+<x-card.ruleline>@dieroll(5,6) The Monster remains awake.</x-card.ruleline>
+<x-card.ruleline>@dieroll(1,2) Discard this card.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
         }

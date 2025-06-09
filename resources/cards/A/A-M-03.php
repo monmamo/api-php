@@ -30,13 +30,12 @@ return new
 
     <x-card.taxons>Aquos, Felos</x-card.taxons>
 
-<x-card.phaserule type="Skill" height="245">
+<x-card.phaserule type="Skill" >
     <text>
-<x-card.skilltitle>Saliva Spray</x-card.skilltitle>
-<x-card.normalrule>Discard 1+ Water (A-001) from this Monster.</x-card.normalrule>
-<x-card.normalrule>For each Water (A-001) discarded,</x-card.normalrule>
-<x-card.normalrule>Attack does 1 @damage less damage,</x-card.normalrule>
-<x-card.normalrule>&amp; that Monster takes that damage instead.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Saliva Spray</x-card.ruleline>
+<x-card.ruleline>Discard 1+ Water (A-001) from this Monster.</x-card.ruleline>
+<x-card.ruleline>For each Water discarded, Attack does -1 @damage,</x-card.ruleline>
+<x-card.ruleline>&amp; that Monster takes that damage instead.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 

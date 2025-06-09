@@ -18,8 +18,8 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule  >
-<x-card.normalrule>Male and Female effects on other Monsters</x-card.normalrule>
-<x-card.normalrule>have no effect on this Monster.</x-card.normalrule>
+<x-card.ruleline>Male and Female effects on other Monsters</x-card.ruleline>
+<x-card.ruleline>have no effect on this Monster.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

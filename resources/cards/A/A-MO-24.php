@@ -1,11 +1,13 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Sniper')]
+#[Concept('Cost', 5)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -13,13 +15,13 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-     <x-card.phaserule type="Upkeep" height="240">
+     <x-card.phaserule type="Upkeep" >
        <text >
-<x-card.normalrule>Choose a Monster, Master, Mobster or Bystander </x-card.normalrule>
-<x-card.normalrule>on the Battlefield.</x-card.normalrule>
-<x-card.normalrule>Monster: That Monster takes 2d6 @damage.</x-card.normalrule>
-<x-card.normalrule>Others: If 1d4 is 2,3,4, Exile the card.</x-card.normalrule> 
-<x-card.normalrule>Discard all cards attached to that card.</x-card.normalrule>
+<x-card.ruleline>Choose a Monster, Mobster or Bystander</x-card.ruleline>
+<x-card.ruleline>on the Battlefield.</x-card.ruleline>
+<x-card.ruleline>Monster: That Monster takes 2d6 @damage.</x-card.ruleline>
+<x-card.ruleline>Others: If 1d4 is 2,3,4, Exile the card.</x-card.ruleline> 
+<x-card.ruleline>Discard all cards attached to that card.</x-card.ruleline>
 </text>
  </x-card.phaserule>
 

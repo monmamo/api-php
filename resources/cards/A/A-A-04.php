@@ -21,16 +21,16 @@ class(__FILE__) implements CardComponents
             <x-card.hero.svg>{{ \view('Energos.icon') }}</x-card.hero.svg>
 
             <x-card.cardrule y="515"  >
-<x-card.normalrule>Requires Energos.</x-card.normalrule>
+<x-card.ruleline>Requires Energos.</x-card.ruleline>
 </x-card.cardrule>
 
 
             <x-card.phaserule type="Resolution" >
     <text >
-<x-card.normalrule x="55%">Discard all Electricity (A-003) from the</x-card.normalrule>
-<x-card.normalrule>attacking Monster. Roll 1d6 for each</x-card.normalrule>
-<x-card.normalrule>Electricity discarded.</x-card.normalrule>
-<x-card.normalrule>The damage done is the sum of these rolls.</x-card.normalrule>
+<x-card.ruleline x="55%">Discard all Electricity (A-003) from the</x-card.ruleline>
+<x-card.ruleline>attacking Monster. Roll 1d6 for each</x-card.ruleline>
+<x-card.ruleline>Electricity discarded.</x-card.ruleline>
+<x-card.ruleline>The damage done is the sum of these rolls.</x-card.ruleline>
         </text>
         </x-card.phaserule>
 HTML;

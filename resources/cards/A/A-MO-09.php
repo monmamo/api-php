@@ -24,9 +24,9 @@ class(__FILE__) implements CardComponents
 
      <x-card.phaserule type="Upkeep" >
        <text >
-<x-card.normalrule>Shuffle 1d6 of your Mobsters in play, </x-card.normalrule>
-<x-card.normalrule>all cards attached to those cards, </x-card.normalrule>
-<x-card.normalrule>and this card into your Library.</x-card.normalrule>
+<x-card.ruleline>Shuffle 1d6 of your Mobsters in play, </x-card.ruleline>
+<x-card.ruleline>all cards attached to those cards, </x-card.ruleline>
+<x-card.ruleline>and this card into your Library/the Mobster Market.</x-card.ruleline>
 </text>
  </x-card.phaserule>
 HTML;

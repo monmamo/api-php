@@ -11,10 +11,8 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Hacker')]
 #[Concept('Mobster')]
-#[Concept('Integrity', 8)]
-#[Concept('DamageCapacity', 10)]
-#[Concept('Size', 3)]
-#[Concept('Speed', 2)]
+#[Concept('Boss')]
+#[Concept('Training', 7)]
 #[ImageCredit('Icon by Designing Hub from Noun Project')]
 class(__FILE__) implements CardComponents
 {
@@ -43,12 +41,13 @@ class(__FILE__) implements CardComponents
 
         <x-card.phaserule type="Upkeep" >
             <text >
-<x-card.normalrule>Look at the top 3 cards of any</x-card.normalrule> 
-<x-card.normalrule>Library &amp; choose 1 of them. Shuffle</x-card.normalrule>
-<x-card.normalrule>the other cards back into the Library. Then</x-card.normalrule>
-<x-card.normalrule>put the card you chose on top of the Library.</x-card.normalrule>
 </text>
 </x-card.phaserule>
 HTML;
     }
 };
+
+// <x-card.ruleline>Look at the top 3 cards of any</x-card.ruleline>
+// <x-card.ruleline>Library &amp; choose 1 of them. Shuffle</x-card.ruleline>
+// <x-card.ruleline>the other cards back into the Library. Then</x-card.ruleline>
+// <x-card.ruleline>put the card you chose on top of the Library.</x-card.ruleline>

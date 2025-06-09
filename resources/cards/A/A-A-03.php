@@ -25,15 +25,15 @@ class(__FILE__) implements CardComponents
 
 <x-card.phaserule type="Command" y="585" >
         <text >
-<x-card.normalrule>Discard any number of Fire (A-002)</x-card.normalrule>
-<x-card.normalrule>attached to the Monster using this attack.</x-card.normalrule>
+<x-card.ruleline>Discard any number of Fire (A-002)</x-card.ruleline>
+<x-card.ruleline>attached to the Monster using this attack.</x-card.ruleline>
 </text>
     </x-card.phaserule>
 
 <x-card.phaserule type="Resolution" >
         <text >
-<x-card.normalrule>Does 16d damage for</x-card.normalrule>
-<x-card.normalrule>each Fire discarded.</x-card.normalrule>
+<x-card.ruleline>Does 16d damage for</x-card.ruleline>
+<x-card.ruleline>each Fire discarded.</x-card.ruleline>
     </text>
     </x-card.phaserule>
 HTML;

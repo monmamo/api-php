@@ -28,13 +28,10 @@ class(__FILE__) implements CardComponents
 
 <x-card.flavortext>Your trusted companion's trusted companion.</x-card.flavortext>
 
-<x-card.cardrule y="600" height="55" >
-<x-card.normalrule>Attach this card to a Monster.</x-card.normalrule>
-</x-card.cardrule>
-
 <x-card.phaserule type="Resolution" ><text>
-<x-card.normalrule>If this Monster doesn't attack,</x-card.normalrule>
-<x-card.normalrule>restore 2 @damage.</x-card.normalrule>
+<x-card.ruleline class="smallrule">Attach this card to a Monster.</x-card.ruleline>
+<x-card.ruleline>If this Monster doesn't attack,</x-card.ruleline>
+<x-card.ruleline>restore 2 @damage.</x-card.ruleline>
 </text></x-card.phaserule>
 HTML;
     }

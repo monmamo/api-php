@@ -16,7 +16,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule >
-<x-card.normalrule>Upkeep phase:: Each player may heal 3 @damage from 1 of his or her Monsters.</x-card.normalrule>
+<x-card.ruleline>Upkeep phase:: Each player may heal 3 @damage from 1 of his or her Monsters.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

@@ -33,13 +33,13 @@ return new
     <x-card.taxons>Canos</x-card.taxons>
 
 
-<x-card.phaserule type="Resolution" height="235">
+<x-card.phaserule type="Resolution" >
 <text>
-<x-card.skilltitle>Resilience</x-card.skilltitle>
-<x-card.normalrule>After applying attacks and defenses,</x-card.normalrule>
-<x-card.normalrule>If subject to a Bane, roll 1d6.</x-card.normalrule>
-<x-card.normalrule>@dieroll(6,5,4) The Bane has no effect. If the</x-card.normalrule>
-<x-card.normalrule>Bane is attached, discard it.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Resilience</x-card.ruleline>
+<x-card.ruleline>After applying attacks and defenses,</x-card.ruleline>
+<x-card.ruleline>If subject to a Bane, roll 1d6.</x-card.ruleline>
+<x-card.ruleline>@dieroll(6,5,4) The Bane has no effect. If the</x-card.ruleline>
+<x-card.ruleline>Bane is attached, discard it.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

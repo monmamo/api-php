@@ -22,10 +22,10 @@ class(__FILE__) implements CardComponents
 
 <x-card.phaserule type="Draw" >
         <text >
-    <x-card.normalrule>Choose an opponent.</x-card.normalrule>
-    <x-card.normalrule>Choose 1d4 cards from his hand</x-card.normalrule>
-    <x-card.normalrule>(without looking at them).</x-card.normalrule>
-    <x-card.normalrule>He must discard those cards.</x-card.normalrule>
+    <x-card.ruleline>Choose an opponent.</x-card.ruleline>
+    <x-card.ruleline>Choose 1d4 cards from his hand</x-card.ruleline>
+    <x-card.ruleline>(without looking at them).</x-card.ruleline>
+    <x-card.ruleline>He must discard those cards.</x-card.ruleline>
     <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;

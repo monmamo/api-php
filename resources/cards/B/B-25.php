@@ -16,8 +16,8 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="110" >
-<x-card.normalrule>Each Monster in play that does not have some sort of flying ability immediately takes 20 @damage.</x-card.normalrule>
-<x-card.normalrule>Each player discards 3 cards from the top of his Library.</x-card.normalrule>
+<x-card.ruleline>Each Monster in play that does not have some sort of flying ability immediately takes 20 @damage.</x-card.ruleline>
+<x-card.ruleline>Each player discards 3 cards from the top of his Library.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

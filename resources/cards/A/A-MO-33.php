@@ -16,7 +16,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule >
-<x-card.normalrule>Choose an opponent. He/she must put all Attack and Defense cards face up.</x-card.normalrule>
+<x-card.ruleline>Choose an opponent. He/she must put all Attack and Defense cards face up.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

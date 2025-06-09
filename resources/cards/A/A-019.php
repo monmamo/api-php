@@ -31,12 +31,12 @@ HTML;
             yield <<<'HTML'
 <x-card.flavortext>Get the tissues.</x-card.flavortext>
 
-    <x-card.phaserule type="Resolution" height="170">
+    <x-card.phaserule type="Resolution" >
             <text >
-            <x-card.smallrule>{{trans_choice('rules.monster-limit',1)}}</x-card.smallrule>
-            <x-card.normalrule>For 1d6 turns, once</x-card.normalrule>
-<x-card.normalrule>all other effects have been resolved,</x-card.normalrule>
-<x-card.normalrule>this Monster takes 2 @damage.</x-card.normalrule>
+            <x-card.ruleline class="smallrule">{{trans_choice('rules.monster-limit',1)}}</x-card.ruleline>
+            <x-card.ruleline>For 1d6 turns, once</x-card.ruleline>
+<x-card.ruleline>all other effects have been resolved,</x-card.ruleline>
+<x-card.ruleline>this Monster takes 2 @damage.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

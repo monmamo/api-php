@@ -31,12 +31,12 @@ return new
 
     <x-card.taxons>Pyros, TODO</x-card.taxons>
 
-<x-card.phaserule type="Defense" height="210">
+<x-card.phaserule type="Defense" >
 <text>
-<x-card.skilltitle>Fire Roar</x-card.skilltitle>
-<x-card.normalrule>Roll 1d6.</x-card.normalrule>
-<x-card.normalrule>@dieroll(6,5) Attack has no effect.</x-card.normalrule>
-<x-card.normalrule>@dieroll(4,3,2) Attack does only half its damage.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Fire Roar</x-card.ruleline>
+<x-card.ruleline>Roll 1d6.</x-card.ruleline>
+<x-card.ruleline>@dieroll(6,5) Attack has no effect.</x-card.ruleline>
+<x-card.ruleline>@dieroll(4,3,2) Attack does only half its damage.</x-card.ruleline>
         </text>
 </x-card.phaserule>
 

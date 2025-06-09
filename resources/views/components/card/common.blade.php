@@ -37,7 +37,30 @@ $debug_opacity = match (true) {
         fill: black;
     }
 
+        .skilltitle {
+            font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-size: 45px;
+        text-align: center;
+        text-anchor: middle;
+        white-space: normal;
+        alignment-baseline: top
+        fill: black;
+    }
+
+    .normalrule {
+            font-family: 'Roboto';
+        font-style: normal;
+        font-size: 30px;
+        text-align: center;
+        text-anchor: middle;
+        white-space: normal;
+        alignment-baseline: middle;
+        fill: black;
+    }
+
     .smallrule {
+            font-family: 'Roboto';
         font-size: 20px;
         font-style: normal;
         white-space: normal;

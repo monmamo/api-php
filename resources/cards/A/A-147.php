@@ -48,7 +48,7 @@ return new
 </x-card.hero.svg>
 
 <x-card.cardrule  >
-<x-card.normalrule>Restore 1 @damage from each Monster.</x-card.normalrule>
+<x-card.ruleline>Restore 1 @damage from each Monster.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
         }

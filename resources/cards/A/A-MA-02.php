@@ -15,6 +15,7 @@ return new
 #[Concept('DamageCapacity', 12)]
 #[Concept('Size', '4')]
 #[Concept('Speed', '4')]
+#[Concept('Training', 5)]
 #[IsGeneratedImage('nerdy male anthropomorphic monster trainer')]
 #[ImageIsPrototype]
 class(__FILE__) implements CardComponents
@@ -34,7 +35,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule lines="1" >
-<x-card.normalrule>Limit 1 Master per player on Battlefield.</x-card.normalrule>
+<x-card.ruleline>Limit 1 Master per player on Battlefield.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

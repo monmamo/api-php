@@ -26,10 +26,10 @@ class(__FILE__) implements CardComponents
     </x-card.flavortext>
         
 <x-card.cardrule >
-<x-card.normalrule>Each player, including you,</x-card.normalrule>
-<x-card.normalrule>may choose to draw a card.</x-card.normalrule>
+<x-card.ruleline>Each player, including you,</x-card.ruleline>
+<x-card.ruleline>may choose to draw a card.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
-<x-card.normalrule>{{ __('rules.REDRAW') }}</x-card.normalrule>
+<x-card.ruleline>{{ __('rules.REDRAW') }}</x-card.ruleline>
 </x-card.phaserule>
 HTML;
     }

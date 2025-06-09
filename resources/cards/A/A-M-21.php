@@ -28,10 +28,10 @@ return new
 
     <x-card.taxons>Canos, Lumos</x-card.taxons>
 
-<x-card.phaserule type="Trait" height="150">
+<x-card.phaserule type="Trait" >
     <text>
-<x-card.skilltitle>Soothing Glow</x-card.skilltitle>
-<x-card.normalrule>Reduce Speed of all other Monsters by 2.</x-card.normalrule>
+<x-card.ruleline class="skilltitle">Soothing Glow</x-card.ruleline>
+<x-card.ruleline>Reduce Speed of all other Monsters by 2.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

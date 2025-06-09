@@ -42,11 +42,11 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.phaserule type="Resolution" >
     <text >
-    <x-card.smallrule>The effect will last for</x-card.smallrule>
-<x-card.smallrule>1d6 turns, including this one.</x-card.smallrule>
-<x-card.smallrule>After that many turns, discard this card.</x-card.smallrule>
-<x-card.normalrule>Reduce Attack damage</x-card.normalrule>
-<x-card.normalrule>done by all other Monsters by 1.</x-card.normalrule>
+    <x-card.ruleline class="smallrule">The effect will last for</x-card.ruleline>
+<x-card.ruleline class="smallrule">1d6 turns, including this one.</x-card.ruleline>
+<x-card.ruleline class="smallrule">After that many turns, discard this card.</x-card.ruleline>
+<x-card.ruleline>Reduce Attack damage</x-card.ruleline>
+<x-card.ruleline>done by all other Monsters by 1.</x-card.ruleline>
             </text>
         </x-card.phaserule>
 HTML;

@@ -29,12 +29,12 @@ return new
 
 <x-card.phaserule type="Draw" lines="6">
       <text >
-<x-card.normalrule>Choose an opponent. Choose a</x-card.normalrule>
-<x-card.normalrule>random card from that opponent's</x-card.normalrule>
-<x-card.normalrule>hand. They must discard that card. Reveal</x-card.normalrule>
-<x-card.normalrule>cards from the top of your Library until an</x-card.normalrule>
-<x-card.normalrule>Item card appears. Put that card in your hand.</x-card.normalrule>
-<x-card.normalrule>Shuffle the other cards back into your Library.</x-card.normalrule>
+<x-card.ruleline>Choose an opponent. Choose a</x-card.ruleline>
+<x-card.ruleline>random card from that opponent's</x-card.ruleline>
+<x-card.ruleline>hand. They must discard that card. Reveal</x-card.ruleline>
+<x-card.ruleline>cards from the top of your Library until an</x-card.ruleline>
+<x-card.ruleline>Item card appears. Put that card in your hand.</x-card.ruleline>
+<x-card.ruleline>Shuffle the other cards back into your Library.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML;

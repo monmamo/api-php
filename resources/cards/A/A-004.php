@@ -27,10 +27,10 @@ class(__FILE__) implements CardComponents
 <x-card.flavortext>Pay it forward even when it isn't cool.</x-card.flavortext>
 
 <x-card.phaserule type="Draw" ><text>
-<x-card.normalrule>The player with the fewest cards</x-card.normalrule>
-<x-card.normalrule>in their hand can draw 1 card.</x-card.normalrule>
-<x-card.normalrule>Once they have done so,</x-card.normalrule>
-<x-card.normalrule>you may draw up to 3 cards.</x-card.normalrule>
+<x-card.ruleline>The player with the fewest cards</x-card.ruleline>
+<x-card.ruleline>in their hand can draw 1 card.</x-card.ruleline>
+<x-card.ruleline>Once they have done so,</x-card.ruleline>
+<x-card.ruleline>you may draw up to 3 cards.</x-card.ruleline>
 <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;

@@ -18,7 +18,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule >
-<x-card.normalrule>Defense +5.</x-card.normalrule>
+<x-card.ruleline>Defense +5.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

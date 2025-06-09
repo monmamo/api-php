@@ -27,14 +27,14 @@ class(__FILE__) implements CardComponents
 
         yield <<<'HTML'
     <x-card.phaserule y="550" type="Command" ><text>
-        <x-card.normalrule>You may discard any number of</x-card.normalrule>
-        <x-card.normalrule>Electricity (A-003) from this Monster.</x-card.normalrule>
+        <x-card.ruleline>You may discard any number of</x-card.ruleline>
+        <x-card.ruleline>Electricity (A-003) from this Monster.</x-card.ruleline>
     </text></x-card.phaserule>
 
         <x-card.phaserule type="Resolution" ><text>
-        <x-card.normalrule>For each Electricity discarded,</x-card.normalrule>
-        <x-card.normalrule>the attacking or defending Monster</x-card.normalrule>
-        <x-card.normalrule>takes 1d4 @damage.</x-card.normalrule>
+        <x-card.ruleline>For each Electricity discarded,</x-card.ruleline>
+        <x-card.ruleline>the attacking or defending Monster</x-card.ruleline>
+        <x-card.ruleline>takes 1d4 @damage.</x-card.ruleline>
 </text></x-card.phaserule>
 HTML;
     }

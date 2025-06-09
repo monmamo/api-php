@@ -101,15 +101,15 @@ function makeNewCard(
         yield "<x-card.cardrule height=\"{$height}\" >";
 
         foreach ($secondary_lines as $line) {
-            yield "<x-card.smallrule>{$line}</x-card.smallrule>";
+            yield "<x-card.ruleline class=\"smallrule\">{$line}</x-card.ruleline>";
         }
 
         foreach ($primary_lines as $line) {
-            yield "<x-card.normalrule>{$line}</x-card.normalrule>";
+            yield "<x-card.ruleline>{$line}</x-card.ruleline>";
         }
 
         if ($height === 0) {
-            yield '<x-card.normalrule>TODO</x-card.normalrule>';
+            yield '<x-card.ruleline>TODO</x-card.ruleline>';
         }
 
         yield '</x-card.cardrule>';

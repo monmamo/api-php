@@ -31,10 +31,10 @@ class(__FILE__) implements CardComponents
 </x-card.hero.svg>
 
 <x-card.phaserule type="Draw" ><text>
-<x-card.smallrule>You can't play this card if you have any</x-card.smallrule>
-<x-card.smallrule>cards in your hand other than this card.</x-card.smallrule>
-<x-card.normalrule>Show your hand to your opponent(s),</x-card.normalrule>
-    <x-card.normalrule>then draw 5 cards.</x-card.normalrule>
+<x-card.ruleline class="smallrule">You can't play this card if you have any</x-card.ruleline>
+<x-card.ruleline class="smallrule">cards in your hand other than this card.</x-card.ruleline>
+<x-card.ruleline>Show your hand to your opponent(s),</x-card.ruleline>
+    <x-card.ruleline>then draw 5 cards.</x-card.ruleline>
     <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
     </text></x-card.phaserule>
 HTML;

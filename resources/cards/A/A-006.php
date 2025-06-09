@@ -13,10 +13,10 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-     <x-card.phaserule type="Upkeep" height="240">
+     <x-card.phaserule type="Upkeep" >
        <text >
-<x-card.normalrule>Choose a Mobster in play that is not a Boss.</x-card.normalrule>
-<x-card.normalrule>Discard it and all cards attached to it.</x-card.normalrule>
+<x-card.ruleline>Choose a Mobster in play that is not a Boss.</x-card.ruleline>
+<x-card.ruleline>Discard it and all cards attached to it.</x-card.ruleline>
 </text>
  </x-card.phaserule>
 H

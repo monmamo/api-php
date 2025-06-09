@@ -31,9 +31,9 @@ class(__FILE__) implements CardComponents
 <x-card.flavortext>Here's lookin' at you, kid.</x-card.flavortext>
 
 <x-card.phaserule type="Upkeep" ><text>
-    <x-card.normalrule>You may ask one opponent</x-card.normalrule>
-    <x-card.normalrule>to show you their hand.</x-card.normalrule>
-    <x-card.normalrule>(Only you get to see the hand.)</x-card.normalrule>
+    <x-card.ruleline>You may ask one opponent</x-card.ruleline>
+    <x-card.ruleline>to show you their hand.</x-card.ruleline>
+    <x-card.ruleline>(Only you get to see the hand.)</x-card.ruleline>
 </text></x-card.phaserule>
 HTML;
     }

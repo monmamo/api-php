@@ -28,9 +28,9 @@ return new
 
     <x-card.phaserule type="Resolution" >
 <text>
-<x-card.normalrule>Discard any number of Fire (A-002)</x-card.normalrule>
-<x-card.normalrule>attached to this Monster.</x-card.normalrule>
-<x-card.normalrule>Does Boost @damage for each Fire discarded.</x-card.normalrule>
+<x-card.ruleline>Discard any number of Fire (A-002)</x-card.ruleline>
+<x-card.ruleline>attached to this Monster.</x-card.ruleline>
+<x-card.ruleline>Does Boost @damage for each Fire discarded.</x-card.ruleline>
     </text>
     </x-card.phaserule>
 HTML;
