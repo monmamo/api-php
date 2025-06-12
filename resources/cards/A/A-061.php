@@ -24,7 +24,7 @@ class(__FILE__) implements CardComponents
 
 <x-card.phaserule type="Draw" ><text>
     <x-card.ruleline>Every player may draw 1d6 cards.</x-card.ruleline>
-    <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+    <x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

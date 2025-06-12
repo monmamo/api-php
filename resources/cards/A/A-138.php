@@ -28,7 +28,7 @@ class(__FILE__) implements CardComponents
 <x-card.ruleline>Mana cards you draw &amp; put them in your</x-card.ruleline>
 <x-card.ruleline>hand. Put the remaining cards at the bottom</x-card.ruleline>
 <x-card.ruleline>of your Library, then shuffle your Library.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

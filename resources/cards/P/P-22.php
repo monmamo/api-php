@@ -14,8 +14,8 @@ return [
     'background' => \view('Environment.background'),
     'content' => <<<'HTML'
 <x-card.cardrule >
-<x-card.smallrule></x-card.smallrule>
-<x-card.normalrule>Resolution phase: For each Attack where the Defense does not prevent all damage, add 3 @damage.</x-card.normalrule>
+<x-card.ruleline class="smallrule"></x-card.ruleline>
+<x-card.ruleline>Resolution phase: For each Attack where the Defense does not prevent all damage, add 3 @damage.</x-card.ruleline>
 </x-card.cardrule>
 HTML
 ];

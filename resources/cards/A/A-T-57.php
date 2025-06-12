@@ -33,7 +33,7 @@ return new
 <x-card.cardrule >
 <x-card.ruleline>On encounter,</x-card.ruleline>
 <x-card.ruleline>pings any present Security System.</x-card.ruleline>
-<x-card.ruleline>All Monsters present take 1 @damage damage.</x-card.ruleline>
+<x-card.ruleline>All Characters present take 1 @damage damage.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
         }

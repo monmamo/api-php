@@ -29,7 +29,7 @@ class(__FILE__) implements CardComponents
 <x-card.ruleline>immediately. If you do so, return the card</x-card.ruleline>
 <x-card.ruleline>to the Library and shuffle your Library.</x-card.ruleline>
 <x-card.ruleline>{{ __('rules.REDRAW') }}</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text>
 
 HTML;

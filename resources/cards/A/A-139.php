@@ -27,7 +27,7 @@ return new
 <x-card.ruleline>health on his Monsters.</x-card.ruleline>
 <x-card.ruleline>The player with the highest total</x-card.ruleline>
 <x-card.ruleline>shuffles his hand into his Library.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
         }

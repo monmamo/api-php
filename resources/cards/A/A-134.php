@@ -28,7 +28,7 @@ class(__FILE__) implements CardComponents
 <x-card.ruleline>from your Discard into your Hand.</x-card.ruleline>
 <x-card.ruleline>&#8226; Shuffle 3 basic Mana cards</x-card.ruleline>
 <x-card.ruleline>from your Discard pile into your Library.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 
 HTML;

@@ -29,7 +29,7 @@ return new
 <x-card.ruleline>Show them to your opponent(s),</x-card.ruleline>
 <x-card.ruleline>and put them into your hand.</x-card.ruleline>
 <x-card.ruleline>Shuffle your deck afterward.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
         }

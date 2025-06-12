@@ -25,7 +25,8 @@ class(__FILE__) implements CardComponents
 <x-card.hero.local>hero/gene-pool.jpg</x-card.hero.local>
 
 <x-card.cardrule >
-<x-card.ruleline>You may take a Trait card for free.</x-card.ruleline>
+<x-card.ruleline>You may take one Trait card for free</x-card.ruleline>
+<x-card.ruleline>on each turn.</x-card.ruleline>
 </x-card.phaserule>
 HTML;
     }

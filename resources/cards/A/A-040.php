@@ -28,7 +28,7 @@ return new
   <x-card.ruleline>discarded, search your Library for a</x-card.ruleline>
   <x-card.ruleline>Durable Item card. Reveal it, then put</x-card.ruleline>
   <x-card.ruleline>it in your hand. Shuffle your library.</x-card.ruleline>
-  <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+  <x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
   </text>
 </x-card.phaserule>
 HTML;

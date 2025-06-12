@@ -35,7 +35,7 @@ class(__FILE__) implements CardComponents
 <x-card.ruleline class="smallrule">cards in your hand other than this card.</x-card.ruleline>
 <x-card.ruleline>Show your hand to your opponent(s),</x-card.ruleline>
     <x-card.ruleline>then draw 5 cards.</x-card.ruleline>
-    <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+    <x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
     </text></x-card.phaserule>
 HTML;
     }

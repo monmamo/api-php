@@ -21,7 +21,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.phaserule type="Draw" ><text>
 <x-card.ruleline>Attach up to 2 Fire (A-002) cards from your hand to 1 of your Monsters. If you do, draw 3 cards.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

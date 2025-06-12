@@ -13,8 +13,8 @@ return [
     'background' => \view('Place.background'),
     'content' => <<<'HTML'
 <x-card.cardrule >
-<x-card.smallrule></x-card.smallrule>
-<x-card.normalrule></x-card.normalrule>
+<x-card.ruleline class="smallrule"></x-card.ruleline>
+<x-card.ruleline></x-card.ruleline>
 </x-card.cardrule>
 HTML
 ];

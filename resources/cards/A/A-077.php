@@ -28,7 +28,7 @@ class(__FILE__) implements CardComponents
 <x-card.cardrule >
 <x-card.ruleline>Each player, including you,</x-card.ruleline>
 <x-card.ruleline>may choose to draw a card.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 <x-card.ruleline>{{ __('rules.REDRAW') }}</x-card.ruleline>
 </x-card.phaserule>
 HTML;

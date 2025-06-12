@@ -27,7 +27,7 @@ return new
     <x-card.ruleline>reveals their hand. Choose one card.</x-card.ruleline>
     <x-card.ruleline>The opponent puts that card</x-card.ruleline>
     <x-card.ruleline>on the bottom of their Library.</x-card.ruleline>
-    <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+    <x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 
 HTML;

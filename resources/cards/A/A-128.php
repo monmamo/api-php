@@ -30,7 +30,7 @@ class(__FILE__) implements CardComponents
 <x-card.ruleline>Choose an opponent.</x-card.ruleline>
 <x-card.ruleline>That opponent removes all Monster cards</x-card.ruleline>
 <x-card.ruleline>from his Library and puts them in Discard.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

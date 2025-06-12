@@ -29,7 +29,7 @@ return new
 <x-card.ruleline>shuffle it, and draw 1d6 cards from it</x-card.ruleline>
 <x-card.ruleline>without looking at them.</x-card.ruleline>
 <x-card.ruleline>Shuffle those cards into your Library.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
         }

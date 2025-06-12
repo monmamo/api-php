@@ -20,6 +20,12 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.flavortext>Striving to be made, doing the dirty work.</x-card.flavortext>
+
+            <x-card.cardrule >
+<x-card.ruleline class="smallrule">You must already have a Boss on the Battlefield</x-card.ruleline>
+<x-card.ruleline class="smallrule">to put this card on the Battlefield.</x-card.ruleline>
+</x-card.cardrule>
+
 HTML;
     }
 };

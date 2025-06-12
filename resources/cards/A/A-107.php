@@ -25,7 +25,7 @@ class(__FILE__) implements CardComponents
 <x-card.ruleline>his or her Library. Then, draw a number of</x-card.ruleline>
 <x-card.ruleline>cards equal to the number of Item cards your</x-card.ruleline>
 <x-card.ruleline>opponent shuffled into his or her Library.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

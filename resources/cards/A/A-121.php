@@ -35,7 +35,7 @@ return new
     <x-card.ruleline>Reveal any cards you select, then put them</x-card.ruleline>
     <x-card.ruleline>in your hand. Shuffle your library.</x-card.ruleline>
     <x-card.ruleline>&#8226; Discard a Durable card to draw two cards.</x-card.ruleline>
-    <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+    <x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
     </text>
 </x-card.phaserule>
 HTML;

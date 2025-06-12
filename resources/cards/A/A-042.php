@@ -25,7 +25,7 @@ return new
 <x-card.ruleline>Choose another player.</x-card.ruleline>
 <x-card.ruleline>Count the number of cards in their hand.</x-card.ruleline>
 <x-card.ruleline>Draw that many cards.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text>
 </x-card.phaserule>
 HTML;

@@ -2,9 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\ImageInDevelopment;
-use App\CardAttributes\ImageIsPrototype;
-use App\CardAttributes\IsGeneratedImage;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -15,16 +12,14 @@ return new
     #[Title('Alertness')]
     #[Concept('Trait')]
     #[Concept('Cost', 3)]
-    #[IsGeneratedImage]
-    #[ImageIsPrototype]
-    #[ImageInDevelopment]
+    #[ImageCredit('Image by Nilanjan Animesh')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
 
         public function content(): \Traversable
         {
-            yield '<x-card.hero.local>hero/A-T-06.jpeg</x-card.hero.local>';
+            yield '<x-card.hero.local>hero/Alertness.jpg</x-card.hero.local>';
 
             // #[ImageCredit('Icon by Lorc on Game-Icons.net')]
             // <x-card.hero.svg><g fill="#ffffff" fill-opacity="1">

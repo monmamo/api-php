@@ -28,7 +28,7 @@ class(__FILE__) implements CardComponents
 <x-card.ruleline>Draw cards until you have the</x-card.ruleline>
 <x-card.ruleline>same number of cards in your hand</x-card.ruleline>
 <x-card.ruleline>as that opponent.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

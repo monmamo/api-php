@@ -22,7 +22,7 @@ class(__FILE__) implements CardComponents
 <x-card.ruleline>card(s) in your hand. Shuffle your Library.</x-card.ruleline>
 <x-card.ruleline>After using this card, put this card at</x-card.ruleline>
 <x-card.ruleline>the bottom of your Library.  You may take another Draw phase.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

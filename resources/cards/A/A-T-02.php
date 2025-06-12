@@ -1,9 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageInDevelopment;
-use App\CardAttributes\ImageIsPrototype;
-use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\ImageCredit;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -13,9 +11,7 @@ return new
     #[Title('Sparking')]
     #[Concept('Trait')]
     #[Concept('Cost', 2)]
-    #[IsGeneratedImage]
-    #[ImageIsPrototype]
-    #[ImageInDevelopment]
+    #[ImageCredit('Image by Nilanjan Animesh')]
     #[Prerequisites(lines: 'Requires Energos.', y: 360)]
 class(__FILE__) implements CardComponents
 {
@@ -23,7 +19,7 @@ class(__FILE__) implements CardComponents
 
     public function content(): \Traversable
     {
-        yield '<x-card.hero.local>hero/A-T-02.png</x-card.hero.local>';
+        yield '<x-card.hero.local>hero/A-T-02.jpg</x-card.hero.local>';
 
         yield <<<'HTML'
     <x-card.phaserule y="550" type="Command" ><text>

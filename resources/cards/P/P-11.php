@@ -15,9 +15,9 @@ return [
     'content' => <<<'HTML'
 <x-card.phaserule type="Resolution" >
 <text >
-<x-card.normalrule>After all attacks and skills are resolved,</x-card.normalrule>
-<x-card.normalrule>for each Monster that did not attack,</x-card.normalrule>
-<x-card.normalrule>you may restore 2 @damage.</x-card.normalrule>
+<x-card.ruleline>After all attacks and skills are resolved,</x-card.ruleline>
+<x-card.ruleline>for each Monster that did not attack,</x-card.ruleline>
+<x-card.ruleline>you may restore 2 @damage.</x-card.ruleline>
 </text>
 </x-card.phaserule>
 HTML

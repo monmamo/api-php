@@ -15,11 +15,11 @@ return [
     'background' => \view('Environment.background'),
     'content' => <<<'HTML'
 <x-card.cardrule height="275" >
-<x-card.normalrule>This card may be played only if there are two or three players.</x-card.normalrule>
-<x-card.normalrule>The Battlefield may be occupied by no more than 9 Monsters and 4 Anthropes.</x-card.normalrule>
-<x-card.normalrule>If there are additional Monsters or Anthropes in the Battlefield,</x-card.normalrule>
-<x-card.normalrule>each player in turn, starting with the one playing Narrow Battlefield,</x-card.normalrule>
-<x-card.normalrule>discards a Monster or Anthrope.</x-card.normalrule>
+<x-card.ruleline>This card may be played only if there are two or three players.</x-card.ruleline>
+<x-card.ruleline>The Battlefield may be occupied by no more than 9 Monsters and 4 Anthropes.</x-card.ruleline>
+<x-card.ruleline>If there are additional Monsters or Anthropes in the Battlefield,</x-card.ruleline>
+<x-card.ruleline>each player in turn, starting with the one playing Narrow Battlefield,</x-card.ruleline>
+<x-card.ruleline>discards a Monster or Anthrope.</x-card.ruleline>
 </x-card.cardrule>
 HTML
 ];

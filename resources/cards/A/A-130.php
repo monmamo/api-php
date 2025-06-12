@@ -18,7 +18,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-        <x-card.flavortext>
+        <x-card.flavortext y="535">
 <x-card.flavortext.line>Where the real money from the concept is made.</x-card.flavortext.line>
 <x-card.flavortext.line>- Mel Brooks (paraphrased)</x-card.flavortext.line>
 </x-card.flavortext>
@@ -26,7 +26,7 @@ class(__FILE__) implements CardComponents
      <x-card.phaserule type="Draw" ><text>
          <x-card.ruleline>Discard a card from your hand</x-card.ruleline>
          <x-card.ruleline>to take a card of your choice from your Library.</x-card.ruleline>
-         <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+         <x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
          </text></x-card.phaserule>
 HTML;
     }

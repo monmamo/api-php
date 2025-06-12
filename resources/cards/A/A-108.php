@@ -23,7 +23,7 @@ return new
 <x-card.ruleline>Reveal the top 7 cards of your Library.</x-card.ruleline>
 <x-card.ruleline>You may put any Item cards in your hand.</x-card.ruleline>
 <x-card.ruleline>Discard the rest.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
       }

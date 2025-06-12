@@ -28,7 +28,7 @@ return new
     <x-card.ruleline>Each player puts his hand</x-card.ruleline>
 <x-card.ruleline>on the bottom of his Library,</x-card.ruleline>
 <x-card.ruleline>then draws 7 cards.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
         }

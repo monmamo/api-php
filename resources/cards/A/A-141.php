@@ -27,7 +27,7 @@ return new
 <x-card.phaserule type="Draw" ><text>
 <x-card.ruleline>Discard 2+ cards from your hand.</x-card.ruleline>
 <x-card.ruleline>Then draw that number plus 2 cards.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
         }

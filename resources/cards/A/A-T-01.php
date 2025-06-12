@@ -7,7 +7,7 @@ use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 // <x-card.cardrule y="495"  :>
-// <x-card.smallrule :source="\App\Concept::make('Trait')->standardRule()" />
+// <x-card.ruleline class="smallrule" :source="\App\Concept::make('Trait')->standardRule()" />
 // </x-card.cardrule>
 
 return new

@@ -18,7 +18,7 @@ return [
             'A-MO-37', // Motorcycle Gang Leader
             'A-MO-38', // Warlord
             'A-MO-39', // Pirate
-            ],
+        ],
         'market-cards' => [ // 130 cards
             // Monster cards
             'A-M-06' => 1,
@@ -63,35 +63,38 @@ return [
             'A-055' => 2, // Defensive Coordinator
             'A-122' => 2, // Offensive Coordinator
             'A-152' => 2, // Favorite Toy
+            'A-124' => 1, // Nurse
             // Mobster cards
+            'A-MO-09' => 2, // Getaway Car
             'A-MO-28' => 1, // Consigliere
             'A-MO-02' => 3, // Crew Leader
             'A-MO-34' => 3, // Associate
-            'A-MO-35' => 5, // Soldier
-            'A-MO-15' => 7, // Minion
+            'A-MO-35' => 4, // Soldier
+            'A-MO-15' => 5, // Minion
             'A-MO-24' => 1, // Sniper
+            'A-MO-40' => 2, // Neighborhood "Protection"
 
             // Weapon cards
             'A-W-01' => 3, // Pistol
             'A-W-02' => 3, // Throwing Stars
             'A-W-03' => 3, // Grenade
-            'A-W-04' => 3, // Bowie Knife
-            'A-W-06' => 3, // Longsword
+            'A-W-04' => 2, // Bowie Knife
+            'A-W-06' => 2, // Longsword
             'A-W-07' => 1, // Butterfly Knife
-             'A-W-08' => 1, // Switchblade
+            'A-W-08' => 1, // Switchblade
             'A-W-12' => 3, // Brass Knuckles
             'A-W-13' => 1, // Can of Paint
-             'A-W-14' => 1, // Stapler
-             'A-W-15' => 1, // The Pen
-             'A-W-19' => 3, // Flaming Cocktail
-             'A-W-18' => 3, // Landmine
+            'A-W-14' => 1, // Stapler
+            'A-W-15' => 1, // The Pen
+            'A-W-19' => 3, // Flaming Cocktail
+            'A-W-18' => 3, // Landmine
 
             // Baseball Bat
             // Old Reliable "A lead pipe. AN old, heavy one."
 
             // Other cards
             'A-MO-16' => 5, // Monster Heist
-           // 'A-MO-22' => 3, // Boss's Orders
+            // 'A-MO-22' => 3, // Boss's Orders
         ],
     ],
 ];

@@ -23,7 +23,7 @@ class(__FILE__) implements CardComponents
 <x-card.ruleline>Each player shuffles all</x-card.ruleline>
 <x-card.ruleline>discarded cards into his or her Library.</x-card.ruleline>
 <x-card.ruleline>Then trash this card.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
     }

@@ -29,7 +29,7 @@ return new
     <x-card.ruleline>you may search your Library for a</x-card.ruleline>
     <x-card.ruleline>Monster card. Reveal that card.</x-card.ruleline>
     <x-card.ruleline>Put that card in your hand.</x-card.ruleline>
-    <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+    <x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
         }

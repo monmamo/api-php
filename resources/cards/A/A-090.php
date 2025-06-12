@@ -24,7 +24,7 @@ class(__FILE__) implements CardComponents
     <x-card.ruleline>Play a Vendor card.</x-card.ruleline>
 <x-card.ruleline>You may ignore any requirement</x-card.ruleline>
 <x-card.ruleline>to discard cards.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
     }

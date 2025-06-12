@@ -19,7 +19,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.flavortext>
+<x-card.flavortext y="535">
 <x-card.flavortext.line>Knife hand to the forehead.</x-card.flavortext.line>
 <x-card.flavortext.line>Stuns but does not do damage.</x-card.flavortext.line>
     </x-card.flavortext>

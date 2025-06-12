@@ -23,7 +23,7 @@ class(__FILE__) implements CardComponents
 <x-card.ruleline>Cut your deck.</x-card.ruleline>
 <x-card.ruleline>Draw the top 2 cards of the top half.</x-card.ruleline>
 <x-card.ruleline>Put the top half back on top of the bottom half.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
 </text>
 </x-card.phaserule>
 

@@ -26,7 +26,7 @@ class(__FILE__) implements CardComponents
     <x-card.ruleline>Choose 1d4 cards from his hand</x-card.ruleline>
     <x-card.ruleline>(without looking at them).</x-card.ruleline>
     <x-card.ruleline>He must discard those cards.</x-card.ruleline>
-    <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+    <x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

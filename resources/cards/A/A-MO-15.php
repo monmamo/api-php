@@ -24,8 +24,11 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.cardrule >
-<x-card.ruleline></x-card.ruleline>
+        <x-card.flavortext>Soem people call them "fans."</x-card.flavortext>
+
+            <x-card.cardrule >
+<x-card.ruleline class="smallrule">You must already have a Master or Boss on the Battlefield</x-card.ruleline>
+<x-card.ruleline class="smallrule">to put this card on the Battlefield.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

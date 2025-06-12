@@ -22,7 +22,7 @@ class(__FILE__) implements CardComponents
 <text>
 <x-card.ruleline>Put up to 3 Item cards from your</x-card.ruleline>
 <x-card.ruleline>Discard into your Library.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
 </text>
 </x-card.phaserule>
 HTML;

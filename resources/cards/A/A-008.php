@@ -46,7 +46,7 @@ return new
 <x-card.ruleline>his/her Library or all if he/she doesn't have</x-card.ruleline>
 <x-card.ruleline>that many. You may draw as many cards</x-card.ruleline>
 <x-card.ruleline>as were discarded.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
         }

@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\ImageInDevelopment;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -15,8 +14,7 @@ return new
     #[Concept('Physical')]
     #[Concept('Size', '+1')]
     #[Concept('Cost', 3)]
-    #[ImageInDevelopment] // Merry
-    #[ImageCredit('Image by wirestock on Freepik')]
+    #[ImageCredit('Image by Nilanjan Animesh')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -24,7 +22,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.hero.local>A064.jpg</x-card.hero.local> 
+    <x-card.hero.local>hero/A-T-11.jpg</x-card.hero.local> 
 
     <x-card.phaserule type="Attack" >
         <text>

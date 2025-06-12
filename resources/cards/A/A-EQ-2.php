@@ -28,7 +28,7 @@ class(__FILE__) implements CardComponents
 <x-card.ruleline>until he or she has 5 cards</x-card.ruleline>
 <x-card.ruleline>in his or her hand.</x-card.ruleline>
 <x-card.ruleline class="smallrule">(Your opponents do this first.)</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

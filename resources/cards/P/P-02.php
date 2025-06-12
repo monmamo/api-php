@@ -13,7 +13,7 @@ return [
     'background' => \view('Facility.background'),
     'content' => <<<'HTML'
 <x-card.cardrule >
-<x-card.normalrule>Resolution phase: Reduce damage done by Attacks by 4.</x-card.normalrule>
+<x-card.ruleline>Resolution phase: Reduce damage done by Attacks by 4.</x-card.ruleline>
 </x-card.cardrule>
 HTML
 ];

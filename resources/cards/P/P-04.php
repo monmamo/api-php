@@ -14,9 +14,9 @@ return [
     'content' => <<<'HTML'
 <x-card.cardrule >
 
-<x-card.normalrule>Discard this card if the Place changes.</x-card.normalrule>
-<x-card.normalrule>Resolution phase: Each Monster that used an Attack or Defense</x-card.normalrule>
-<x-card.normalrule>takes 1d6 more Damage.</x-card.normalrule>
+<x-card.ruleline>Discard this card if the Place changes.</x-card.ruleline>
+<x-card.ruleline>Resolution phase: Each Monster that used an Attack or Defense</x-card.ruleline>
+<x-card.ruleline>takes 1d6 more Damage.</x-card.ruleline>
 
 </x-card.cardrule>
 HTML

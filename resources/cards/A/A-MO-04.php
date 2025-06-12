@@ -34,7 +34,7 @@ class(__FILE__) implements CardComponents
     </g>
 </svg>
 
-<x-card.flavortext>
+<x-card.flavortext >
     <x-card.flavortext.line dy="0">Hacking is getting other people to do strange things.</x-card.flavortext.line>
     <x-card.flavortext.line>- Steve Wozniak</x-card.flavortext.line>
     </x-card.flavortext>

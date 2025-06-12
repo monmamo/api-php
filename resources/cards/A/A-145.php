@@ -24,7 +24,7 @@ return new
 <x-card.ruleline>for a Healing Item card.</x-card.ruleline>
 <x-card.ruleline>Put the card you find in your hand.</x-card.ruleline>
 <x-card.ruleline class="smallrule">If you searched your Library, shuffle it.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 
 HTML;

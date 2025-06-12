@@ -23,7 +23,7 @@ class(__FILE__) implements CardComponents
 </x-card.hero.svg>
 
 <x-card.flavortext>
-<x-card.flavortext.line>The loudest whistle never comes from the ref—</x-card.flavortext.line>
+<x-card.flavortext.line dy="0">The loudest whistle never comes from the ref—</x-card.flavortext.line>
 <x-card.flavortext.line>it’s from he who dares to blow it on his own team.</x-card.flavortext.line>
 </x-card.flavortext>
 

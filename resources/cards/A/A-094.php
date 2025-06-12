@@ -32,7 +32,7 @@ class(__FILE__) implements CardComponents
     <text >
 <x-card.ruleline>Roll 1d6.</x-card.ruleline>
 <x-card.ruleline>If @dieroll(1,2), discard your hand and this card.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text>
 </x-card.phaserule>
 HTML;

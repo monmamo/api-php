@@ -18,7 +18,7 @@ class(__FILE__) implements CardComponents
     <x-card.cardrule :>
     <x-card.ruleline>Search your Library for a card with flavor text.</x-card.ruleline>
 <x-card.ruleline>Put it in your hand. Shuffle your Library.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </x-card.cardrule>
 HTML;
     }

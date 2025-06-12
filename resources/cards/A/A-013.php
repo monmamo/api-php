@@ -61,7 +61,7 @@ HTML;
             <x-card.ruleline>Library. You may put 3 of them into</x-card.ruleline>
             <x-card.ruleline>your hand. Put the rest on the bottom</x-card.ruleline>
             <x-card.ruleline>of your Library in any order.</x-card.ruleline>
-            <x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+            <x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
             </text></x-card.phaserule>
 HTML;
         }

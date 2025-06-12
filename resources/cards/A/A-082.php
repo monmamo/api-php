@@ -27,7 +27,7 @@ class(__FILE__) implements CardComponents
 <x-card.ruleline>For each card discarded, search your Library</x-card.ruleline>
 <x-card.ruleline>for a Monster or Mana card. Reveal those</x-card.ruleline>
 <x-card.ruleline>cards, then put them in your hand.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

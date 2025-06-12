@@ -16,12 +16,12 @@ return [
     'content' => <<<'HTML'
 <image x="0" y="0" class="hero" href="@local(A029.jpg)"  />
 <x-card.cardrule height="315" >
-<x-card.smallrule></x-card.smallrule>
-<x-card.normalrule>Whenever any player attaches a Mana card</x-card.normalrule>
-<x-card.normalrule>from their hand to one</x-card.normalrule>
-<x-card.normalrule>of their Monsters, if the</x-card.normalrule>
-<x-card.normalrule>Monster does not have Psychos or Gouros,</x-card.normalrule>
-<x-card.normalrule>that Monster takes 4 @damage.</x-card.normalrule>
+<x-card.ruleline class="smallrule"></x-card.ruleline>
+<x-card.ruleline>Whenever any player attaches a Mana card</x-card.ruleline>
+<x-card.ruleline>from their hand to one</x-card.ruleline>
+<x-card.ruleline>of their Monsters, if the</x-card.ruleline>
+<x-card.ruleline>Monster does not have Psychos or Gouros,</x-card.ruleline>
+<x-card.ruleline>that Monster takes 4 @damage.</x-card.ruleline>
 </x-card.cardrule>
 HTML
 ];

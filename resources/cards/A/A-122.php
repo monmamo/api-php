@@ -12,7 +12,6 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Offensive Coordinator')]
     #[Concept('Coach')]
-    #[Concept('Male')]
     #[Concept('Integrity', '1d6')]
     #[IsGeneratedImage('head coach standing on the sidelines with a clipboard, green jacket')]
     #[ImageIsPrototype]
@@ -30,8 +29,6 @@ return new
 <x-card.ruleline class="smallrule">{{\trans_choice('rules.player-limit', 1)}}</x-card.ruleline>
 <x-card.ruleline class="smallrule">You must already have a Master on the Battlefield</x-card.ruleline>
 <x-card.ruleline class="smallrule">to put this card on the Battlefield.</x-card.ruleline>
-<x-card.ruleline class="smallrule">You may choose to make this card Female</x-card.ruleline>
-<x-card.ruleline class="smallrule">when you put it on the Battlefield.</x-card.ruleline>
 <x-card.ruleline>You may put the Attack cards you use</x-card.ruleline>
 <x-card.ruleline>back in your hand.</x-card.ruleline>
 </x-card.cardrule>

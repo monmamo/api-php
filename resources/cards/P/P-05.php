@@ -13,7 +13,7 @@ return [
     'background' => \view('Place.background'),
     'content' => <<<'HTML'
 <x-card.cardrule >
-<x-card.normalrule>TODO</x-card.normalrule>
+<x-card.ruleline>TODO</x-card.ruleline>
 </x-card.cardrule>
 HTML
 ];

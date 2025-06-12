@@ -1,4 +1,4 @@
-@props(['abreast'=>3,'cards'])
+@props(['abreast'=>3,'cards','distinct'=>false])
 <?php
 $deck =  \App\Deck::fromAnything($cards);
 
@@ -22,7 +22,7 @@ viewBox="0 0 <?= $viewbox_width ?> <?= $viewbox_height ?>" xmlns="http://www.w3.
 <x-card.common :specs="$deck->distinctCards()" />
 
 <?php
-foreach ($deck->individualCards() as $index => $cardNumber) {
+foreach ($distinct ? $deck->distinctCards():$deck->individualCards() as $index => $cardNumber) {
     if (!is_int($index)) dd($index);
     $dx = $index % $abreast;
     $dy = floor($index / $abreast);

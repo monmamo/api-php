@@ -31,7 +31,7 @@ class(__FILE__) implements CardComponents
 <x-card.ruleline>in their hand can draw 1 card.</x-card.ruleline>
 <x-card.ruleline>Once they have done so,</x-card.ruleline>
 <x-card.ruleline>you may draw up to 3 cards.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

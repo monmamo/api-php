@@ -14,8 +14,8 @@ return [
     'background' => \view('Environment.background'),
     'content' => <<<'HTML'
 <x-card.cardrule height="110" >
-<x-card.normalrule>Has no effect in an Enclosed Venue.</x-card.normalrule>
-<x-card.normalrule>Resolution phase: Add 1d6 @damage to any damage caused by an Electricity mana card.</x-card.normalrule>
+<x-card.ruleline>Has no effect in an Enclosed Venue.</x-card.ruleline>
+<x-card.ruleline>Resolution phase: Add 1d6 @damage to any damage caused by an Electricity mana card.</x-card.ruleline>
 </x-card.cardrule>
 HTML
 ];

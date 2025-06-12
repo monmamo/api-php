@@ -22,7 +22,7 @@ class(__FILE__) implements CardComponents
         yield <<<'HTML'
 <x-card.phaserule type="Draw" ><text>
 <x-card.ruleline>You may attach a Fire (A-002) from your Refuse to one of your Pyros Monsters. If this succeeds, put 4 @damage on that Monster.</x-card.ruleline>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

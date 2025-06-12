@@ -13,9 +13,9 @@ return [
     'background' => \view('Facility.background'),
     'content' => <<<'HTML'
 <x-card.cardrule height="150" >
-<x-card.smallrule></x-card.smallrule>
-<x-card.normalrule>When a rule or card text allows a player to search your Library,</x-card.normalrule>
-<x-card.normalrule>you may search your Discard instead.</x-card.normalrule>
+<x-card.ruleline class="smallrule"></x-card.ruleline>
+<x-card.ruleline>When a rule or card text allows a player to search your Library,</x-card.ruleline>
+<x-card.ruleline>you may search your Discard instead.</x-card.ruleline>
 </x-card.cardrule>
 HTML
 ];

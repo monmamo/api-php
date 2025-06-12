@@ -27,7 +27,7 @@ class(__FILE__) implements CardComponents
         <x-card.ruleline>card. Reveal it, then put it in your hand.</x-card.ruleline>
         <x-card.ruleline>{{__('rules.SHUFFLE')}}</x-card.ruleline>
         <x-card.ruleline>{{__('rules.REDRAW')}}</x-card.ruleline>
-        <x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+        <x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
         </text>
 </x-card.phaserule>
 HTML;
