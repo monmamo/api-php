@@ -7,18 +7,13 @@
     <title><?= transform($pageTitle ?? null, fn($t) => trim($t) . ' | ') ?>Monsters Masters & Mobsters</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://unpkg.com/htmx.org@2.0.2"></script>
-    <meta name="title" content="<?= $pageTitle ?? 'Monsters Masters & Mobsters' ?>">
+              <meta name="title" content="<?= $pageTitle ?? 'Monsters Masters & Mobsters' ?>">
     <meta property="og:title" content="<?= $pageTitle ?? 'Monsters Masters & Mobsters' ?>">
-    <meta name="description" content="Monsters Masters & Mobsters is a speculative fiction concept that incorporates elements of magical realism, professional sports and organized (and disorganized) crime.">
-    <meta property="og:description" content="Monsters Masters & Mobsters is a speculative fiction concept that incorporates elements of magical realism, professional sports and organized (and disorganized) crime.">
     <meta name="author" content="Monsters Masters & Mobsters LLC">
     <meta property="og:author" content="Monsters Masters & Mobsters LLC">
-    <meta name="image" content="<?= asset('public/logo-white-on-black.png') ?>">
-    <meta property="og:image" content="<?= asset('public/logo-white-on-black.png') ?>">
-    <meta name="keywords" content="Monsters Masters & Mobsters, monsters, masters, mobsters, fantasy, speculative fiction,magical realism, storytelling, organized crime, professional sports, trainable monsters">
-    <meta property="og:keywords" content="Monsters Masters & Mobsters, monsters, masters, mobsters, fantasy, speculative fiction,magical realism, storytelling, organized crime, professional sports, trainable monsters">
     <meta property="og:type" content="website">
     <meta property="twitter:type" content="website">
+    <?= $meta ?? '' ?>
     <link rel="icon" href="<?=\Illuminate\Support\Facades\Storage::disk('images')->imageToUri("plain-logo-16.png") ?>" type="image/png">
 
     <style>

@@ -19,10 +19,15 @@ return [
             'A-MO-38', // Warlord
             'A-MO-39', // Pirate
         ],
-        'market-cards' => [ // 130 cards
+        'market-cards-0' => [ 
+            // The cards that are always available in the market
+            'A-DB-03' => 10, // Mentor
+            'A-MO-34' => 10, // Associate
+            'A-MO-15' => 10, // Minion
+        ],
+        'market-cards' => [ // 110 cards
             // Monster cards
             'A-M-06' => 1,
-            'A-M-09' => 1, // Fiery Pest (?)
             'A-M-11' => 1,
             'A-M-12' => 1,
             'A-M-13' => 1,
@@ -57,7 +62,6 @@ return [
             'A-D-06' => 3, // Flee
             // Support cards (Master)
             'A-DB-02' => 2, // Gene Pool
-            'A-DB-03' => 10, // Mentor
             'A-DB-04' => 4, // Elite Mentor
             'A-DB-05' => 2, // Champion Mentor
             'A-055' => 2, // Defensive Coordinator
@@ -69,8 +73,6 @@ return [
             'A-MO-28' => 1, // Consigliere
             'A-MO-02' => 3, // Crew Leader
             'A-MO-34' => 3, // Associate
-            'A-MO-35' => 4, // Soldier
-            'A-MO-15' => 5, // Minion
             'A-MO-24' => 1, // Sniper
             'A-MO-40' => 2, // Neighborhood "Protection"
 
@@ -92,7 +94,6 @@ return [
             // Baseball Bat
             // Old Reliable "A lead pipe. AN old, heavy one."
 
-            // Other cards
             'A-MO-16' => 5, // Monster Heist
             // 'A-MO-22' => 3, // Boss's Orders
         ],
