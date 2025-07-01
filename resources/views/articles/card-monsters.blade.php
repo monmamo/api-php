@@ -52,16 +52,11 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
    <div class="container">
     <div class="d-flex flex-row">
         <div class="p-2"><x-card :link="true" cardNumber="A-M-10" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-M-15" width="200"/></div>
     </div>
     <div class="d-flex flex-row">
-        <div class="p-2"><x-card :link="true" cardNumber="A-059" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-066" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-103" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-106" width="200"/></div>        
     </div>
     <div class="d-flex flex-row">
-        <div class="p-2"><x-card :link="true" cardNumber="A-T-07" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-T-50" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-T-53" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-T-54" width="200"/></div>
@@ -75,7 +70,6 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
     <p>These cards will also need art:</p>
 
     <div class="d-flex flex-row">
-        <div class="p-2"><x-card :link="true" cardNumber="A-032" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-042" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-076" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-079" width="200"/></div>
@@ -100,7 +94,6 @@ by <a href="/people/jay-bienvenu">Jay Bienvenu</a> &bull; Posted on <time>March 
     <div class="d-flex flex-row">
         <div class="p-2"><x-card :link="true" cardNumber="A-T-20" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-T-21" width="200"/></div>
-        <div class="p-2"><x-card :link="true" cardNumber="A-T-22" width="200"/></div>
         <div class="p-2"><x-card :link="true" cardNumber="A-T-23" width="200"/></div>
     </div>
     <div class="d-flex flex-row">

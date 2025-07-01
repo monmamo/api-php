@@ -15,9 +15,7 @@ return new
 #[Title('Firebreath')]
 #[Concept('Trait')]
 #[Concept('Cost', 3)]
-#[IsGeneratedImage]
-#[ImageIsPrototype]
-    #[ImageInDevelopment] // Merry
+    #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
 #[Prerequisites(lines: 'Requires Pyros.', y: 340)]
 class(__FILE__) implements CardComponents
 {
@@ -26,7 +24,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-<x-card.hero.local>hero/firebreath.jpeg</x-card.hero.local>
+<x-card.hero.local>hero/Firebreath.jpg</x-card.hero.local>
 
 <x-card.flavortext>Halitosis (A-110) is the least of your problems.</x-card.flavortext>
 

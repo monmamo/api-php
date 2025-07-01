@@ -9,9 +9,8 @@ use App\GeneralAttributes\Title;
 
 return new
 #[Title('Drinking Water Fountain')]
-#[IsGeneratedImage]
-#[ImageInDevelopment] // Merry
-#[ImageIsPrototype]
+    #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
+    #[\App\Concept('Cost', 5)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -19,7 +18,7 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-        <x-card.hero.local>A307.png</x-card.hero.local>
+        <x-card.hero.local>hero/DrinkingWaterFountain.jpg</x-card.hero.local>
         
         <x-card.flavortext>All creatures need refreshment sometimes.</x-card.flavortext>
 

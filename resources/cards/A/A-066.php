@@ -11,8 +11,7 @@ use App\GeneralAttributes\Title;
 return new
 #[Title('Cruel Order')]
 #[Concept('Catastrophe')]
-#[ImageCredit('Generated with StarryAI. Placeholder image.')]
-#[ImageInDevelopment] // Merry
+#[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;
@@ -20,9 +19,11 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-    <x-card.hero.local>A066.jpeg</x-card.hero.local>
+    <x-card.hero.local>hero/CruelOrder.jpg</x-card.hero.local>
 
-    <x-card.cardrule :>
+            <x-card.flavortext>They're just following orders.</x-card.flavortext>
+
+    <x-card.cardrule>
     <x-card.ruleline>Discard the highest-level Monster</x-card.ruleline>
 <x-card.ruleline>of each opponent</x-card.ruleline>
 <x-card.ruleline>and all cards attached to that Monster.</x-card.ruleline>

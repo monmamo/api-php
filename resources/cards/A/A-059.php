@@ -11,9 +11,7 @@ use App\GeneralAttributes\Title;
 return new
     #[Title('Dandruff')]
     #[Concept('Bane')]
-    #[IsGeneratedImage]
-    #[ImageIsPrototype]
-#[ImageInDevelopment] // Merry
+    #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -21,7 +19,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.hero.local>hero/dandruff.jpeg</x-card.hero.local>
+<x-card.hero.local>hero/Dandruff.jpg</x-card.hero.local>
 
 <x-card.flavortext>Make it snow.</x-card.flavortext>
 

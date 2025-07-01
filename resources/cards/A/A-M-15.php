@@ -18,9 +18,7 @@ return new
     #[Concept('Speed', 3)]
     #[Concept('Boost', '3')]
     #[Concept('Cost', 7)]
-    #[IsGeneratedImage]
-#[ImageIsPrototype]
-#[ImageInDevelopment] // Merry
+    #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -28,7 +26,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-    <x-card.hero.local>hero/A-M-15.png</x-card.hero.local>
+    <x-card.hero.local>hero/GoodBoy.jpg</x-card.hero.local>
 
     <x-card.taxons>Canos</x-card.taxons>
 

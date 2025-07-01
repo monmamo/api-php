@@ -19,7 +19,7 @@ return new
     #[Concept('DamageCapacity', 10)]
     #[Concept('Size', 3)]
     #[Concept('Speed', 5)]
-    #[ImageInDevelopment] // Merry
+    #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;
@@ -27,7 +27,7 @@ return new
         public function content(): \Traversable
         {
             yield <<<'HTML'
-<x-card.hero.local>A032.jpg</x-card.hero.local>
+<x-card.hero.local>hero/Cheerleader.jpg</x-card.hero.local>
 
 <x-card.flavortext>Go, go, go team go!</x-card.flavortext>
 
