@@ -1,6 +1,10 @@
 <x-guest-layout>
 <x-slot:page-title>Monsters</x-slot>
 
+    <x-breadcrumbs>
+        <x-breadcrumbs.crumb url="/lore">Lore</x-breadcrumbs.crumb>
+    </x-breadcrumbs>
+
 <h1>Monsters</h1>
 
 <p>Monsters are animals with great genetic and biological diversity. Monsters do not have a set taxonomy but bear intangible Traits and tangible Features that are of genetic significance.</p>

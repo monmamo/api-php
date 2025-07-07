@@ -16,12 +16,12 @@ $home = [
 $world = [
     'title' => 'World',
     'links' => [
-        ['/lore/monsters', 'Monsters'],
-        ['/lore/anthropes', 'Anthropes'],
+        ['/lore', 'Lore'],
+//        ['/lore/monsters', 'Monsters'],
+  //      ['/lore/anthropes', 'Anthropes'],
         ['/taxons', 'Taxonomy'],
-        ['/lore/places', 'Places'],
-        ['/lore/organizations', 'Organizations'],
-        ['/lore/stories', 'Stories'],
+    //    ['/lore/places', 'Places'],
+      //  ['/lore/organizations', 'Organizations'],
     ],
 ];
 

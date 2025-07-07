@@ -11,6 +11,12 @@ $taxons = \Canon\taxons();
 ?>
 
 <x-guest-layout>
+
+
+    <x-breadcrumbs>
+        <x-breadcrumbs.crumb url="/lore">Lore</x-breadcrumbs.crumb>
+    </x-breadcrumbs>
+    
     <h1>Taxonomy</h1>
 
     <p>Anthropes and monsters have multiple forms of taxonomy: They can be classified by evolutionary relationships, by morphology, and by their respective powers.</p>
