@@ -2,7 +2,6 @@
 
 use App\CardAttributes\DefaultCardAttributes;
 use App\CardAttributes\ImageCredit;
-use App\CardAttributes\ImageInDevelopment;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -15,11 +14,10 @@ return new
     #[Concept('Female')]
     #[Concept('Cumulative')]
     #[Concept('Integrity', '2')]
-    #[ImageCredit('Image by freepik')]
     #[Concept('DamageCapacity', 10)]
     #[Concept('Size', 3)]
     #[Concept('Speed', 5)]
-    #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
+    #[ImageCredit('Image by Merry Shuporna Biswas')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

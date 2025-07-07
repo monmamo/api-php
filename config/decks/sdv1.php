@@ -4,6 +4,7 @@ return [
     'name' => 'Basic Common Deck',
 
     'cards' => [
+        // Needs two more cards.
         'A-004' => 2, // Alms for the Poor
         'A-013' => 1, // Baker's Dozen
         'A-014' => 2, // Big-Box Store
@@ -22,7 +23,6 @@ return [
         'A-105' => 2, // Tranquilizer Dart
         'A-108' => 2, // Grab Bag
         'A-119' => 2, // Medicinal Compound
-        'A-120' => 2, // Healing Salve
         'A-122' => 2, // Offensive Coordinator
         'A-124' => 1, // Nurse
         'A-061' => 2, // Make It Rain

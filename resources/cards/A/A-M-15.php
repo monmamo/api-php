@@ -1,9 +1,7 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageInDevelopment;
-use App\CardAttributes\ImageIsPrototype;
-use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\ImageCredit;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
@@ -18,7 +16,7 @@ return new
     #[Concept('Speed', 3)]
     #[Concept('Boost', '3')]
     #[Concept('Cost', 7)]
-    #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
+    #[ImageCredit('Image by Merry Shuporna Biswas')]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

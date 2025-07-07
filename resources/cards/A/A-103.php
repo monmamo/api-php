@@ -1,16 +1,15 @@
 <?php
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageInDevelopment;
-use App\CardAttributes\ImageIsPrototype;
-use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\ImageCredit;
+use App\Concept;
 use App\Contracts\Card\CardComponents;
 use App\GeneralAttributes\Title;
 
 return new
 #[Title('Drinking Water Fountain')]
-    #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
-    #[\App\Concept('Cost', 5)]
+    #[ImageCredit('Image by Merry Shuporna Biswas')]
+    #[Concept('Cost', 5)]
 class(__FILE__) implements CardComponents
 {
     use DefaultCardAttributes;

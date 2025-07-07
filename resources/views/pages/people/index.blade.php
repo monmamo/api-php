@@ -1,5 +1,5 @@
 <x-guest-layout>
-<h1>People</h1>
+<h1>People of Monsters Masters & Mobsters</h1>
 
 
 <h2>
@@ -24,6 +24,7 @@ Jay Bienvenu<br/><small>Creator, Curator and Canonist</small></h2>
 <h2><a href="/cards">Card System</a></h2>
 
 <p><strong>Merry Shuporna Biswas</strong> Card art.</p>
+<p><strong>Nilanjan Malakar</strong> Card art.</p>
     <p><strong>Eric Martin</strong> Card art.</p>
 
 <h2><a href="/cg">{{__('cg')}}</a></h2>

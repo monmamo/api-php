@@ -17,7 +17,7 @@ return new
     #[Concept('Speed', 5)]
     #[Concept('Boost', 2)]
     #[Concept('Cost', 7)]
-    #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
+    #[ImageCredit('Image by Merry Shuporna Biswas')]
     #[ImagePrompt('yellow electric dog monster of weird zoology in a factory')]
     class(__FILE__) implements CardComponents
     {

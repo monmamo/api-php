@@ -3,9 +3,7 @@
 // https://www.notion.so/monmamo/Firebreath-570c6fc6a1b541928a7b4168293b2c6e?pvs=4#8b14c79fef304feaaacd808a2007baa7
 
 use App\CardAttributes\DefaultCardAttributes;
-use App\CardAttributes\ImageInDevelopment;
-use App\CardAttributes\ImageIsPrototype;
-use App\CardAttributes\IsGeneratedImage;
+use App\CardAttributes\ImageCredit;
 use App\CardAttributes\Prerequisites;
 use App\Concept;
 use App\Contracts\Card\CardComponents;
@@ -15,7 +13,7 @@ return new
 #[Title('Firebreath')]
 #[Concept('Trait')]
 #[Concept('Cost', 3)]
-    #[\App\CardAttributes\ImageCredit('Image by Merry Shuporna Biswas')]
+    #[ImageCredit('Image by Merry Shuporna Biswas')]
 #[Prerequisites(lines: 'Requires Pyros.', y: 340)]
 class(__FILE__) implements CardComponents
 {
