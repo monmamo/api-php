@@ -1,4 +1,7 @@
 <x-guest-layout>
+
+       <x-slot:page-title>Lore</x-slot>
+
 <h1>The World of Monsters Masters & Mobsters</h1>
 
 <p>Here you will find information about the various creatures, places, and organizations that inhabit this world.</p>

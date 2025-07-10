@@ -1,9 +1,3 @@
-<?php
-if (\App\Facades\Environment::is(\App\Enums\Environments::Production)) {
-    abort(404);
-}
-?>
-
 <x-guest-layout>
 
         <x-slot:page-title>Design Standards for Monsters Masters & Mobsters</x-slot>
