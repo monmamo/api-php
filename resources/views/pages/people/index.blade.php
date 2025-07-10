@@ -23,22 +23,26 @@ Jay Bienvenu<br/><small>Creator, Curator and Canonist</small></h2>
 
 <h2><a href="/cards">Card System</a></h2>
 
-<p><strong>Merry Shuporna Biswas</strong> Card art.</p>
-<p><strong>Nilanjan Malakar</strong> Card art.</p>
-    <p><strong>Eric Martin</strong> Card art.</p>
+<ul class="list-unstyled">
+<li><strong><a href="/people/msb">Merry Shuporna Biswas</a></strong> Card art.</li>
+<li><strong>Nilanjan Malakar</strong> Card art.</li>
+<li><strong>Eric Martin</strong> Card art.</li>
+</ul>
 
 <h2><a href="/cg">{{__('cg')}}</a></h2>
 
-<p><strong>Hunter Andries</strong> Playtesting.</p>
-<p><strong>Josh Bellagh</strong> Playtesting and emotional support.</p>
-<p><strong>Bernadette Bienvenu</strong> Playtesting, review and editing of rules.</p>
-<p><strong>Ricky Bienvenu</strong> Playtesting.</p>
-<p><strong>Evan Frioux</strong> Playtesting.</p>
-<p><strong>Suzette Groh</strong> Playtesting.</p>
-<p><strong>Timothy Groh</strong> Playtesting.</p>
-<p><strong>Ryan Kazemi</strong> Playtesting.</p>
-<p><strong>Jeremy Monts</strong> Playtesting.</p>
-<p><strong>Bob Whitely</strong> Review and editing of the rules.</p>
+<ul class="list-unstyled">
+<li><strong>Hunter Andries</strong> Playtesting.</li>
+<li><strong>Josh Bellagh</strong> Playtesting and emotional support.</li>
+<li><strong>Bernadette Bienvenu</strong> Playtesting, review and editing of rules.</li>
+<li><strong>Ricky Bienvenu</strong> Playtesting.</li>
+<li><strong>Evan Frioux</strong> Playtesting.</li>
+<li><strong>Suzette Groh</strong> Playtesting.</li>
+<li><strong>Timothy Groh</strong> Playtesting.</li>
+<li><strong>Ryan Kazemi</strong> Playtesting.</li>
+<li><strong>Jeremy Monts</strong> Playtesting.</li>
+<li><strong>Bob Whitely</strong> Review and editing of the rules.</li>
+</ul>
 
 <p><strong>Gen Con 2024 First Exposure Playtest Hall:</strong> Ray, Jacob, Karl, Sutton, Derrick, Evelyn, Corrie and Jeremy.</p>
 
