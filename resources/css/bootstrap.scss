@@ -1,0 +1,266 @@
+// https://github.com/twbs/examples/blob/main/vite/src/scss/styles.scss
+
+
+@use "fonts" as *;
+
+
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret:                true !default;
+$enable-rounded:              true !default;
+$enable-shadows:              true !default;
+$enable-gradients:            true !default;
+$enable-transitions:          true !default;
+$enable-reduced-motion:       true !default;
+$enable-smooth-scroll:        true !default;
+$enable-grid-classes:         true !default;
+$enable-container-classes:    true !default;
+$enable-cssgrid:              false !default;
+$enable-button-pointers:      true !default;
+$enable-rfs:                  true !default;
+$enable-validation-icons:     true !default;
+$enable-negative-margins:     false !default;
+$enable-deprecation-messages: true !default;
+$enable-important-utilities:  true !default;
+
+$enable-dark-mode:            true !default;
+$color-mode-type:             data !default; // `data` or `media-query` https://getbootstrap.com/docs/5.3/customize/color-modes/
+
+
+/* Brand Color Variables */
+
+$ash-ivory: #ECE6DC;
+$biolume-acid: #83E37D;
+$brick-rust: #B24C32;
+$cave-shadow: #1C1C1C;
+$citrus-ember: #F76F3E;
+$garden-feral: #86A87B;
+$grime-indigo: #2E2A36;
+$industrial-gold: #C29E52;
+$monster-ember: #F75A3D;
+$neon-azure: #3FBFFF;
+$spoil-red: #891E1E;
+$suburban-sky: #A0BFD5;
+
+// Include functions first and variables second to ensure that all variables are available for use in the functions.
+@import "bootstrap/scss/functions";
+
+// scss-docs-start color-variables
+$blue:    $neon-azure;
+$indigo:  $grime-indigo;
+$purple:  #6f42c1 !default;
+$pink:    $monster-ember;
+$red:     $spoil-red;
+$orange:  $citrus-ember;
+$yellow:  $industrial-gold;
+$green:   #198754 !default;
+$teal:    $biolume-acid;
+$cyan:    $suburban-sky;
+// scss-docs-end color-variables
+
+
+// Settings for the `<body>` element.
+
+$body-text-align:           null !default;
+$body-color:               $grime-indigo !default;
+$body-bg:                  $ash-ivory  !default;
+
+$body-secondary-color:      rgba($body-color, .75) !default;
+// $body-secondary-bg:         $gray-200 !default;
+
+$body-tertiary-color:       rgba($body-color, .5) !default;
+// $body-tertiary-bg:          $gray-100 !default;
+
+$body-emphasis-color:       $industrial-gold !default;
+
+$link-color:                             $suburban-sky !default;
+$link-shade-percentage:                   20% !default;
+
+$code-color:                        $citrus-ember !default;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// scss-docs-start font-variables
+// stylelint-disable value-keyword-case
+$font-family-serif:     "Playfair Display", serif !default;
+$font-family-sans-serif:     Roboto, sans-serif !default;
+$font-family-sans-serif-condensed:     "Roboto Condensed" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+// stylelint-enable value-keyword-case
+
+$font-family-base:            $font-family-serif !default;
+$font-family-code:            $font-family-monospace !default;
+
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$font-size-root:              null !default;
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+
+// $font-weight-base:            $font-weight-normal !default;
+
+$line-height-base:            1.5 !default;
+$line-height-sm:              1.25 !default;
+$line-height-lg:              2 !default;
+
+
+// scss-docs-start headings-variables
+// $headings-margin-bottom:      $spacer * .5 !default;
+$headings-font-family:        $font-family-sans-serif !default;
+$headings-font-style:         null !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              $industrial-gold !default;
+// scss-docs-end headings-variables
+
+// scss-docs-start display-headings
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+) !default;
+
+$display-font-family: null !default;
+$display-font-style:  null !default;
+$display-font-weight: 300 !default;
+$display-line-height: $headings-line-height !default;
+// scss-docs-end display-headings
+
+$body-color-dark:                   $ash-ivory !default;
+$body-bg-dark:                      $grime-indigo !default;
+$body-secondary-color-dark:         rgba($body-color-dark, .75);
+// $body-secondary-bg-dark:            $gray-800;
+$body-tertiary-color-dark:          rgba($body-color-dark, .5);
+// $body-tertiary-bg-dark:             mix($gray-800, $gray-900, 50%);
+$body-emphasis-color-dark:          $industrial-gold !default;
+// $border-color-dark:                 $gray-700;
+$border-color-translucent-dark:     rgba($ash-ivory, .15);
+$headings-color-dark:               $industrial-gold !default;
+$link-color-dark:                   tint-color($link-color, 40%);
+$link-hover-color-dark:             shift-color($link-color-dark, -$link-shade-percentage);
+$code-color-dark:                   tint-color($code-color, 40%);
+$mark-color-dark:                   $body-color-dark !default;
+$mark-bg-dark:                      $industrial-gold !default;
+
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+@import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+
+// @import "bootstrap/scss/spinners";
+
+// @import "bootstrap/scss/placeholders";
+
+// Helpers
+@import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+
+//
+// Custom styles
+//
+
+
+/* Section Background Variants */
+.bg-dark-world {
+    background-color: var(--grime-indigo);
+    color: var(--ash-ivory);
+}
+
+.bg-lore-rust {
+    background-color: var(--brick-rust);
+    color: var(--ash-ivory);
+}
+
+.bg-event-ember {
+    background-color: var(--citrus-ember);
+    color: var(--grime-indigo);
+}
+
+.bg-wiki-sky {
+    background-color: var(--suburban-sky);
+    color: var(--grime-indigo);
+}
+
+.bg-noir {
+    background-color: var(--cave-shadow);
+    color: var(--ash-ivory);
+}
+
+.navbar-brand {
+    color: var(--industrial-gold);
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: var(--monster-ember);
+}
+
+.navbar-nav .nav-link {
+        font-family: "Roboto Condensed" !important;
+    color: white;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--monster-ember);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--neon-azure);
+    border-bottom: 2px solid var(--neon-azure);
+}
+
+/* Toggler (mobile menu) */
+.navbar-toggler {
+    border-color: var(--garden-feral);
+    background-color: var(--cave-shadow);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' fill='%23ECE6DC' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(236, 230, 220, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+a.navbar-brand {
+    font-family: "Roboto Condensed" !important;
+    color: white;
+}

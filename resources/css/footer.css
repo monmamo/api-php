@@ -1,0 +1,34 @@
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+}
+
+a.footer-link {
+    font-family: "Roboto Condensed" !important;
+    color: var(--bs-cyan);
+    text-decoration: none;
+}
+
+a.social {
+    font-family: "Roboto Condensed" !important;
+    color: var(--bs-cyan);
+    text-decoration: none;
+}
+
+
+a.footer-link:hover {
+    color: var(--bs-pink);
+    text-decoration: none;
+}
+
+
+.footer-column-header {
+    color: white;
+}
+
+
+.footer > a {
+    font-family: "Roboto Condensed" !important;
+}

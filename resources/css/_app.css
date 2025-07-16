@@ -1,0 +1,75 @@
+
+
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--monster-ember);
+    border-color: var(--monster-ember);
+    color: var(--ash-ivory);
+}
+
+.btn-primary:hover {
+    background-color: var(--neon-azure);
+    border-color: var(--neon-azure);
+    color: var(--grime-indigo);
+}
+
+.btn-outline-primary {
+    border-color: var(--neon-azure);
+    color: var(--neon-azure);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--neon-azure);
+    color: var(--grime-indigo);
+}
+
+
+/* Cards */
+.card {
+    background-color: var(--garden-feral);
+    border: 1px solid var(--cave-shadow);
+    color: var(--grime-indigo);
+}
+
+.card-title {
+    color: var(--grime-indigo);
+}
+
+.card-highlight {
+    border-left: 4px solid var(--neon-azure);
+    padding-left: 1rem;
+}
+
+/* Alerts / Status */
+.alert-danger {
+    background-color: var(--spoil-red);
+    color: var(--ash-ivory);
+}
+
+.alert-success {
+    background-color: var(--biolume-acid);
+    color: var(--grime-indigo);
+}
+
+
+
+.b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100%;
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
