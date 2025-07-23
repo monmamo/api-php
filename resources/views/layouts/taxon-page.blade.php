@@ -10,6 +10,7 @@ if (!class_exists($class)) abort(404);
 
 <x-guest-layout>
     <x-breadcrumbs>
+        <x-breadcrumbs.crumb url="/lore">Lore</x-breadcrumbs.crumb>
         <x-breadcrumbs.crumb url="/taxons">Taxons</x-breadcrumbs.crumb>
     </x-breadcrumbs>
     

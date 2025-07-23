@@ -74,7 +74,7 @@ $concept_x_0 = \config('card-design.viewbox.width') / 2 - $concept_icon_size * $
         );
         ?>
 
-<text x="0" y="50"         font-family="'Roboto Condensed', sans-serif"
+<text x="0" y="50"         class="narrow-sans-serif"
 font-size="50px"
 font-style="normal"
 fill="{{$cardNameColor()}}" stroke="{{$cardNameColor()}}" alignment-baseline="baseline" ><?= $cardName ?></text>
@@ -92,7 +92,7 @@ fill="{{$cardNameColor()}}" stroke="{{$cardNameColor()}}" alignment-baseline="ba
 $x = $concept_x_0 + $index * $concept_icon_size ;
 @endphp
 <x-icons.inline.concept :$concept :size="$concept_icon_size" :$x /> 
-        <text class="gloss" x="{{$x+$concept_icon_size/2}}" y="{{$concept_icon_size+10}}px" font-family="'Roboto Condensed', sans-serif" font-style="normal" font-size="15px" fill="#000000" paint-order="stroke" font-width="200" text-anchor="middle" alignment-baseline="baseline"          >{{$concept->label()}}</text>
+        <text class="gloss narrow-sans-serif" x="{{$x+$concept_icon_size/2}}" y="{{$concept_icon_size+10}}px"  font-style="normal" font-size="15px" fill="#000000" paint-order="stroke" font-width="200" text-anchor="middle" alignment-baseline="baseline"          >{{$concept->label()}}</text>
 @endforeach        
     </x-card.box>
     @endif
@@ -106,7 +106,7 @@ $x = $concept_x_0 + $index * $concept_icon_size ;
     if (\App\Reflection\hasAttribute($spec,\App\CardAttributes\ImageIsPrototype::class)) {
             echo \App\Strings\html(
             'text',
-            ['x' => '50%', 'y' => '370','transform'=>'rotate(-30,375,370)', 'text-anchor' => 'middle', 'dominant-baseline'=>"central" ,'font-family'=>"'Roboto Condensed', sans-serif" , 'font-size'=>"120px", 'fill' => '#000000','stroke'=>'#ffffff','fill-opacity' => '0.20', 'stroke-opacity' => '0.20'],
+            ['x' => '50%', 'y' => '370','transform'=>'rotate(-30,375,370)', 'text-anchor' => 'middle', 'dominant-baseline'=>"central" ,'class'=>"narrow-sans-serif" , 'font-size'=>"120px", 'fill' => '#000000','stroke'=>'#ffffff','fill-opacity' => '0.20', 'stroke-opacity' => '0.20'],
             'PROTOTYPE',
         )->toHtml();
         }
@@ -128,7 +128,7 @@ $x = $concept_x_0 + $index * $concept_icon_size ;
         if (\App\Reflection\hasAttribute($spec,\App\CardAttributes\ImageInDevelopment::class)) {
             echo \App\Strings\html(
                 'text',
-                ['x' => '50%', 'y' => '340', 'transform' => 'rotate(-30,375,340)', 'text-anchor' => 'middle', 'dominant-baseline' => "central", 'font-family' => "'Roboto Condensed', sans-serif", 'font-size' => "80px", 'fill' => '#ffffff', 'stroke' => '#000000', 'stroke-width' => '2'],
+                ['x' => '50%', 'y' => '340', 'transform' => 'rotate(-30,375,340)', 'text-anchor' => 'middle', 'dominant-baseline' => "central", 'class' => "narrow-sans-serif", 'font-size' => "80px", 'fill' => '#ffffff', 'stroke' => '#000000', 'stroke-width' => '2'],
                 'ART IN PROGRESS',
             )->toHtml();
         }
@@ -136,7 +136,7 @@ $x = $concept_x_0 + $index * $concept_icon_size ;
     if (\App\Reflection\hasAttribute($spec,\App\CardAttributes\IsIncomplete::class)) {
             echo \App\Strings\html(
             'text',
-            ['x' => '50%', 'y' => '50%', 'transform' => 'rotate(-30,375,525)', 'text-anchor' => 'middle', 'dominant-baseline' => "central", 'font-family' => "'Roboto Condensed', sans-serif", 'font-size' => "120px", 'fill' => '#ffffff', 'stroke' => '#000000', 'stroke-width' => '2'],
+            ['x' => '50%', 'y' => '50%', 'transform' => 'rotate(-30,375,525)', 'text-anchor' => 'middle', 'dominant-baseline' => "central", 'class' => "narrow-sans-serif", 'font-size' => "120px", 'fill' => '#ffffff', 'stroke' => '#000000', 'stroke-width' => '2'],
             'INCOMPLETE',
         )->toHtml();
         }

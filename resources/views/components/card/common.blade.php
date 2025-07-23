@@ -17,6 +17,10 @@ $debug_opacity = match (true) {
         font-family: 'Roboto', sans-serif;
     }
 
+    .narrow-sans-serif {
+        font-family: "Roboto Condensed", sans-serif !important; 
+    }
+
     .credit {
         font-style: normal;
         font-size: 20px;

@@ -148,6 +148,8 @@ $code-color-dark:                   tint-color($code-color, 40%);
 $mark-color-dark:                   $body-color-dark !default;
 $mark-bg-dark:                      $industrial-gold !default;
 
+$breadcrumb-divider:                quote("&#8226;") !default;
+
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/variables-dark";
 
@@ -170,7 +172,6 @@ $mark-bg-dark:                      $industrial-gold !default;
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar"; // Requires nav
 // @import "bootstrap/scss/card";
-@import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/accordion";
 // @import "bootstrap/scss/pagination";
 @import "bootstrap/scss/badge";
@@ -196,7 +197,9 @@ $mark-bg-dark:                      $industrial-gold !default;
 //
 // Custom styles
 //
-
+.narrow-sans-serif {
+    font-family: "Roboto Condensed", sans-serif !important;
+}
 
 /* Section Background Variants */
 .bg-dark-world {
@@ -263,4 +266,39 @@ $mark-bg-dark:                      $industrial-gold !default;
 a.navbar-brand {
     font-family: "Roboto Condensed" !important;
     color: white;
+}
+
+
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0;
+  margin-bottom: 1rem;
+  @include font-size(null);
+  list-style: none;
+  @include border-radius(null);
+}
+
+.breadcrumb-item {
+    a {
+  font-family: #{$font-family-sans-serif-condensed};
+  text-decoration: none;
+    }
+
+    // The separator between breadcrumbs.
+  + .breadcrumb-item {
+    padding-left: .5rem ;
+
+    &::before {
+      float: left; // Suppress inline spacings and underlining of the separator
+      padding-right: .5rem ;
+      color: var(--#{$prefix}secondary-color);
+      content: var(--#{$breadcrumb-divider}, escape-svg($breadcrumb-divider)) ;
+    }
+  }
+
+  &.active {
+    color: var(--#{$prefix}secondary-color);
+  }
 }

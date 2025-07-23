@@ -58,7 +58,7 @@ $id = uniqid();
         @endisset
 
         @if($value!==false) 
-        <text font-family="'Roboto Condensed', sans-serif" font-style="normal" font-size="400px" fill="#000000" paint-order="stroke" font-width="200" stroke="#000000" stroke-width="8px" stroke-linecap="butt" stroke-linejoin="miter" letter-spacing="-12px" text-anchor="middle" alignment-baseline="baseline"  x="256px" y="400px" filter="url(#icon-overlay-shadow)" >{{ $value }}</text>
+        <text class="narrow-sans-serif" font-style="normal" font-size="400px" fill="#000000" paint-order="stroke" font-width="200" stroke="#000000" stroke-width="8px" stroke-linecap="butt" stroke-linejoin="miter" letter-spacing="-12px" text-anchor="middle" alignment-baseline="baseline"  x="256px" y="400px" filter="url(#icon-overlay-shadow)" >{{ $value }}</text>
         @endif
 
 </symbol>

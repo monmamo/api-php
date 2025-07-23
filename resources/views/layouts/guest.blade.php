@@ -1,3 +1,7 @@
+<?php
+\Illuminate\Support\Facades\Vite::useBuildDirectory('build');
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 
@@ -5,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= transform($pageTitle ?? null, fn($t) => trim($t) . ' | ') ?>Monsters Masters & Mobsters</title>
-     @vite(['resources/js/app.js'])
+     @vite('resources/js/app.js')
     <script src="https://unpkg.com/htmx.org@2.0.2"></script>
     <meta name="title" content="<?= $pageTitle ?? 'Monsters Masters & Mobsters' ?>">
     <meta property="og:title" content="<?= $pageTitle ?? 'Monsters Masters & Mobsters' ?>">
@@ -75,7 +79,6 @@
 
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>

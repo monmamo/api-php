@@ -7,7 +7,7 @@
                         <x-application-mark height="100" color="white" />
                     </a>
                     <ul class="list-unstyled small">
-                        <li style="color: white;font-family: 'Roboto Condensed'">Ponchatoula, Louisiana, U.S.A.</li>
+                        <li class="narrow-sans-serif white" >Ponchatoula, Louisiana, U.S.A.</li>
                         <li class="mt-2"><a class="footer-link" href="/people">People/Credits</a> &bull; <a class="footer-link" href="/contact">Contact</a> <!--&bull; <a href="/credits">Credits</a --></li>
                             <li class="mt-2">
 

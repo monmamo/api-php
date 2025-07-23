@@ -3,10 +3,7 @@
 
     <h1>Upcoming Events</h1>
 
-    <h3>2024</h3>
-
-    <div class="container">
-        <div class="row">
+{{--
         <div class="card col-3">
                 <div class="card-body">
                     <h5 class="card-title"><a href="https://www.facebook.com/events/1296252661750899">Little Wars Faire</h5>
@@ -25,14 +22,7 @@
                     <p class="card-text">Convention<br />November 17<br />Mandeville, LA<br>Castine Center</p>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <h3>2025</h3>
-
-    <div class="container">
-        <div class="row">
-            <div class="card col-3">
+                        <div class="card col-3">
                 <div class="card-body">
                     <h5 class="card-title"><a href="https://fanexpohq.com/fanexponeworleans/">Fan Expo New Orleans</a></h5>
                     <p class="card-text">Convention<br />January 10-12<br />New Orleans, LA<br />Ernest N. Morial Center</p>
@@ -83,12 +73,25 @@
                     <p class="card-text">Convention<br />April 11-13 <br />Lake Charles, LA<br /></p>
                 </div>
             </div>
+
+--}}
+    <h3>2025</h3>
+
+    <div class="container">
+        <div class="row">
             <div class="card col-3">
                 <div class="card-body">
                     <h5 class="card-title">CajunCon</h5>
                     <p class="card-text">Convention<br />December <br />Gonzales, LA<br /></p>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <h3>2026</h3>
+
+        <div class="container">
+        <div class="row">
         </div>
     </div>
 

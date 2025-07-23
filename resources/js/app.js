@@ -10,4 +10,4 @@ import '../css/dropdown.css'
 import '../css/footer.css'
 
 import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip }  from 'bootstrap';
-// window.bootstrap = bootstrap;
+window.bootstrap = { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip };

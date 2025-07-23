@@ -17,11 +17,11 @@ $world = [
     'title' => 'World',
     'links' => [
         ['/lore', 'Lore'],
-//        ['/lore/monsters', 'Monsters'],
-  //      ['/lore/anthropes', 'Anthropes'],
+        //        ['/lore/monsters', 'Monsters'],
+        //      ['/lore/anthropes', 'Anthropes'],
         ['/taxons', 'Taxonomy'],
-    //    ['/lore/places', 'Places'],
-      //  ['/lore/organizations', 'Organizations'],
+        //    ['/lore/places', 'Places'],
+        //  ['/lore/organizations', 'Organizations'],
     ],
 ];
 
@@ -41,12 +41,12 @@ $products = [
 $community = [
     'title' => 'Community',
     'links' => [
-        ['/community" target="_blank" rel="noopener', 'Rules'],
-        //  [\config('external.deviantart.url') . '" target="_blank" rel="noopener', 'DeviantArt'],
-        [\config('external.discord.url') . '" target="_blank" rel="noopener', 'Discord'],
-        [\config('external.patreon.url') . '" target="_blank" rel="noopener', 'Patreon'],
-        [\config('external.github.url') . '" target="_blank" rel="noopener', 'GitHub'],
-        [\config('external.reddit.url') . '" target="_blank" rel="noopener', 'Reddit'],
+        ['/community', 'Rules'],
+        //  [\config('external.deviantart.url') , 'DeviantArt',true],
+        [\config('external.discord.url'), 'Discord', true],
+        [\config('external.patreon.url'), 'Patreon', true],
+        [\config('external.github.url'), 'GitHub', true],
+        [\config('external.reddit.url'), 'Reddit', true],
     ],
 ];
 
