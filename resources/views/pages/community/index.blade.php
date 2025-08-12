@@ -4,6 +4,7 @@
 <h5>Be respectful.</h5>
 <ul>
 <li>Treat other members with respect and courtesy.</li>
+<li>This is an international community. Be aware that cultural differences may affect how people communicate, even if they are communicating in English.</li>
 <li>Harassment, hate speech, discrimination, personal attacks, or demeaning language towards others will not be tolerated. When offering criticism, it should be constructive and aimed at helping improve, not belittling or disparaging others.</li>
 <li>Discussions about politics, religion or controversial or sensitive topics may be terminated without warning if staff deems that the discussion is a detriment to the community.</li>
 </ul>
@@ -11,7 +12,7 @@
 <h5>Observe decorum.</h5>
 <ul>
 <li>Monsters Masters & Mobsters expects community members to speak and behave in a manner behooving adulthood.</li>
-<li>Members are prohibited from posting certain content matter as listed below.</li>
+<li>Members are prohibited from posting <a href="#prohibited-content">certain content matter as listed below</a>.</li>
 <li>Members may use profanity and adult speech, but the community staff reserve the right to warn about excessive profanity or inappropriate speech and take appropriate action (including suspensions and bans) if such behavior persists.</li>
 <li>Abbreviated, censored or coded profanity will be treated the same as explicit profanity.</li>
 <li>While Monsters Masters & Mobsters is generally intended for adults, some situations and circumstances may be opened to younger audiences. In these cases, the staff reserve the right to impose additional or stricter rules on content and speech.</li>
@@ -55,7 +56,7 @@
 
 <h5>Avoid false or misleading information.</h5>
 <ul>
-<li>Make sure to fact-check any information you share and only share reliable sources. Spreading false or misleading information can be harmful and undermines the trust and integrity of the community.Staff may remove any content that is intentionally misleading or falsely represents the actions, opinions and beliefs of any person.</li>
+<li>Make sure to fact-check any information you share and only share reliable sources. Spreading false or misleading information can be harmful and undermines the trust and integrity of the community. Staff may remove any content that is intentionally misleading or falsely represents the actions, opinions and beliefs of any person.</li>
 </ul>
 
 <h5>Do not impersonate other users, staff members, or any other individuals or organizations.</h5>
@@ -65,9 +66,8 @@
 
 <h5>No excessive self-promotion.</h5>
 <ul>
-<li>Share your work in moderation, only in designated channels, and only as apropos to the topic at hand. Staff may remove any self-promotion that they deem inappropriate or excessive. Posting for the sole purpose of inappropriate self-promotion may result in an immediate ban.</li>
-<li>Do not abuse server bots.</li>
-<li>Only use server bots for their intended purposes and do not spam or misuse their commands.</li>
+<li>Share your work in moderation, only in designated channels (such as <code>#share-your-work</code> on Discord), and only as apropos to the topic at hand. Staff may remove any self-promotion that they deem inappropriate or excessive. Posting for the sole purpose of inappropriate self-promotion may result in an immediate ban.</li>
+<li>Do not abuse server bots. Only use server bots for their intended purposes and do not spam or misuse their commands.</li>
 </ul>
 
 <h5>Do not abuse emojis, capital letters or punctuation.</h5>
@@ -83,7 +83,7 @@
 <li>This includes sharing graphic content related to self-harm or discussing personal experiences in a way that may trigger others.</li>
 </ul>
 
-<h2>Prohibited Content</h2>
+<h2 id="prohibited-content">Prohibited Content</h2>
 <ul>
 <li>Images or videos showing or depicting exposure of human genitalia.</li>
 
@@ -130,4 +130,6 @@
 
 <li>Monsters Masters & Mobsters LLC reserves the right to pursue appropriate legal action to seek recompense from any person or entity whose actions subject the company to legal action.</li>
 </ul>
+
+
 </x-guest-layout>
