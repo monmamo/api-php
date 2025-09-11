@@ -9,7 +9,21 @@
 </figure>
 Jay Bienvenu<br/><small>Creator, Curator and Canonist</small></h2>
 
-<p>Monsters Masters &amp; Mobsters is created and developed by Jay Bienvenu. Jay was born in Lafayette, Louisiana, and has lived in Louisiana for most of his life but also spent two winters in Wisconsin. He completed high school at the Louisiana School for Math, Science and Arts and earned two degrees in engineering from the University of Louisiana at Lafayette. His day job is software developer for a boutique Internet and Web services company. He currently lives in Ponchatoula, Louisiana. He has three children.</p>
+<p>
+Jay is a creator from South Louisiana. He was born in Lafayette, Louisiana, and has lived in Louisiana for most of his life but also spent two winters in Wisconsin. He completed high school at the Louisiana School for Math, Science and Arts and earned two degrees in engineering from the University of Louisiana at Lafayette. His day job is software developer for a boutique Internet and Web services company. He currently lives in Ponchatoula, Louisiana. He has three children.
+</p>
+
+<p>
+Intrigued by technology from an early age, Jay followed the exciting world of rapidly evolving technology, expressing his creativity through software and website creating.  In his heart, he knew this wasn’t enough. 
+</p>
+
+<p>
+Surrounded by artistic family members, he struggled to find the right niche to shape his new world. Though his creations have taken many forms and brought him to many different towns across the United States, he is finally ready to share with the world his most ambitious and fanciful endeavor yet!
+</p>
+
+<p>
+Monsters Masters and Mobsters is his love letter to his home land of south Louisiana; to anyone that has felt different, has struggled with expressing themselves under the pressures to conform and the intriguing, sometimes seedy worlds of sports, business and politics.
+</p>
 
 <h1>Credits and Acknowledgements</h1>
 
