@@ -61,7 +61,7 @@ $t = floor(($n-1) / 10);
     $y = 9.5-$t;
 
     ?>
-    <text x="<?= $x ?>" y="<?= $y ?>" font-family="'Roboto Condensed',sans-serif" font-size="0.6px" fill="#888888" fill-opacity="1" alignment-baseline="middle" text-anchor="middle"><?= $n ?></text>
+    <text x="<?= $x ?>" y="<?= $y ?>" class="narrow-sans-serif" font-size="0.6px" fill="#888888" fill-opacity="1" alignment-baseline="middle" text-anchor="middle"><?= $n ?></text>
 <? } ?>
 
 <text x="5" y="0.5"  class="league-label" xfill="gold">Championship League</text>

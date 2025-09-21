@@ -19,15 +19,12 @@
 
 <p class="lead mb-4">Monsters Masters &amp; Mobsters is a speculative fiction concept that incorporates elements of magical realism, professional sports and organized (and disorganized) crime. The world of Monsters Masters &amp; Mobsters is our world, but instead of humans there are two types of higher beings: monsters and anthropes. Monsters Masters &amp; Mobsters represents the belief in the power of imagination and the importance of storytelling. We value creativity, originality, and the ability of fantasy and speculative fiction to inspire, entertain, and bring people together.</p>
 
+<p class="lead mb-4">Monsters Masters & Mobsters aims to provide a unique and immersive experience in the world of fantasy and speculative fiction. We believe in the power of storytelling to connect people and explore complex themes in a way that is engaging and thought-provoking. We believe the hard truths of our world can be explored through fantasy and speculative fiction. Monsters Masters & Mobsters is a platform for people to tell their stories and celebrate their cultures.</p>
+
 <p class="lead mb-4">Come with us to explore the vibrant world we are creating. Meet our diverse cast of anthropes and monsters through art, games, short stories, and many other ways to come as new portals open to whisk you away!</p>
 
-
             {{--
-            <h4>What is the mission of Monsters Masters &amp; Mobsters?</h4>
-
-    <p class="lead mb-4">We envision Monsters Masters &amp; Mobsters as a leading brand in the fantasy and speculative fiction genre, known for our originality and creativity. We strive to transport our audience into a realm of imagination and wonder, creating a community of enthusiasts who can connect and share their love for this genre.</p>
-
-    <p class="lead mb-4">As of March 2025, there are no products for Monsters Masters &amp; Mobsters available for sale. The vision for products includes books, artwork, games and other forms of merchandise.</p>
+           
 
 
     <h4>Where can I meet you in person?</h4>

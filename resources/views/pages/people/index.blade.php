@@ -1,5 +1,15 @@
 <x-guest-layout>
-<h1>People of Monsters Masters & Mobsters</h1>
+<h1>Who We Are</h1>
+
+<p>We value creativity, originality, and the ability of fantasy and speculative fiction to inspire, entertain, and bring people together.</p>
+
+<p>We value the massive diversity of our world and the many cultures that make it up. We believe that everyone has a story to tell and that these stories are worth sharing.</p>
+
+<p>We believe that all people deserve to be treated with respect and dignity, regardless of their ethnicity, heritage, beliefs, or identity.</p>
+
+<p>We believe the freedom to hold beliefs and express one's beliefs without fear of retribution is an essential element of a healthy world.</p>
+
+<h1>The People Behind Monsters Masters & Mobsters</h1>
 
 
 <h2>

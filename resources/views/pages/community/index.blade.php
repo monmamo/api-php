@@ -93,13 +93,13 @@
 
 <li>Discussion, promotion or engagement in any activity that is expressly prohibited by the laws of the United States and/or the country hosting the particular forum or venue.</li>
 
-<li>Content that demeans or dehumanizes any human being or group of persons, particularly (but not limited to) biological sex, physical ability or lack thereof, mental health, neurodivergence, body shape or form, sexual orientation or preference, gender identity or dysphoria, ethnic heritage or identity, religious identity or lack thereof.</li>
+<li>Content that demeans or dehumanizes any human being or group of human being, particularly (but not limited to) biological sex, physical ability or lack thereof, mental health, neurodivergence, body shape or form, sexual orientation or preference, gender identity or dysphoria, ethnic heritage or identity, religious identity or lack thereof, political affiliation or alignment.</li>
 
 <li>Profanity or vulgar talk that is deemed to be excessive (after a moderator has given a warning of such).</li>
 
-<li>Personal and/or information of any member that the member has not shared publicly in the community, including (but not limited to) full legal name; any nickname not used in the forum or venue; employer; address, city, jurisdiction or country of residence or employment; personal telephone numbers and email addresses; names of immediate family, friends or associates.</li>
+<li>Personal and/or information of any member that the member has not shared publicly in the community, including (but not limited to) full legal name; any nickname not used in the forum or venue; social media username or handle; employer; address, city, jurisdiction or country of residence or employment; personal telephone numbers and email addresses; names of immediate family, friends or associates.</li>
 
-<li>Financial or banking information, such as credit card numbers or bank account information</li>
+<li>Financial or banking information, such as credit card numbers or bank account information.</li>
 
 <li>Any attempt to solicit personal information from members for any purpose other than direct communication and collaboration.</li>
 

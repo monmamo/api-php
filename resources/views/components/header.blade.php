@@ -10,6 +10,8 @@
                 <x-nav.menu title="World" :links="config('ui.world.links')" />
                 <x-nav.menu title="Products" :links="config('ui.products.links')" />
                 <x-nav.menu title="Community" :links="config('ui.community.links')" />
+                <li class="nav-item"><a class="nav-link"  href="/people" role="button" >Who We Are</a></li>
+                <li class="nav-item"><a class="nav-link"  href="/work-with-us" role="button" >Work With Us</a></li>
             </ul>
             <a class="navbar-brand" href="https://www.facebook.com/people/Monsters-Masters-Mobsters/61559695048144/" aria-label="Facebook" target="_blank"><svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_136_3709)" fill="white">
