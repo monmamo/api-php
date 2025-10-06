@@ -12,7 +12,7 @@
         <div class="col-lg-10 mx-auto">
             <p class="lead mb-4">
 <p>
-    We're reimagining the business of collectible and tradable cards. The Monsters Masters & Mobsters Card System isn’t a game in itself; it’s a system of cards built from the paper to support multiple games. We’re also using this opportunity to address common criticisms of trading card games and collectible card games. We understand that buying into a TGC/CCG is a major investment. We want you to play with our game cards, not end up with boxes full of cards that are useless to you.
+    We're reimagining the business of collectible and tradable cards. The Monsters Masters & Mobsters Card System isn’t a game in itself; it’s a system of cards built from the paper to support multiple games. We’re also using this opportunity to address common criticisms of trading card games and collectible card games. We understand that buying into a TGC/CCG is a major investment. We want you to play with our game cards, not warehouse them in your closet. Whether you’re battling monsters in a high-stakes tournament or ridding the underworld of dangerous mobsters, the Card System gives you the tools to build, play, and collect your own part of the MonMaMo universe.
 </p>
 
 <h4>Hate random booster packs? So do we.</h4>
@@ -23,12 +23,12 @@
 <h4>Your cards will be just as playable 20 years from now as they are today.</h4>
 
 <p>
-    Unlike that box in our closet filled with cards that have been banned from tournaments, reprinted or otherwise devalued, your MonMaMoCS cards will always be tournament legal.
+    Do you have a box of cards in a closet filled with cards that have been banned from tournaments, reprinted or otherwise devalued? Please accept our condolences. While we can't promise to never make a broken card, we are committed to making sure that cards you buy today will be usable in future games. The Card System is designed to be flexible and extensible, so that new games can be created using existing cards.
 </p>
+
+<h4>Our rare cards will stay rare.</h4>
 <p>
-    We will not reprint rare cards. 
-    
-    We will print small batches of specific cards for particular events.
+    Our definition of "rare" doesn't mean "you might get this card if you buy a thousand booster packs." It means making special cards in small batches of specific cards for particular events. It means the "exclusive" card you got at your favorite convention won't show up as the "exclusive" card in every other pack of cards. It means that if you have a rare card, you can be sure that only a few other people in the world have that same card.
 </p>
 
 <h4>Name a game type. The Card System will work with it.</h4>
@@ -48,7 +48,7 @@
 </ul>
 
 <h4>"It fits the system."</h4>
-<p><a href="https://www.lego.com/en-us">LEGO</a> is one of the most popular toys ever because it is built around one basic form and one basic mechanic. The Card System ensures that MonMaMo cards can be used across MonMaMo products. Your starter Duel deck will become the foundation of the custom decks that you make yourself. The Card System gives you an ability to customize your MonMaMo games that few games or toys offer.</p>
+<p><a href="https://www.lego.com/en-us">LEGO</a> is one of the most popular toys ever because it is built around one basic form and one basic mechanic. The cards you bought decades ago for your favorite CCG can be played with the cards released today because they all fit the same system.  The Card System ensures that MonMaMo cards can be used across MonMaMo products. Your starter Duel deck will become the foundation of the custom decks that you make yourself. The Card System gives you an ability to customize your MonMaMo games that few games or toys offer.</p>
 
 
 <img src="@publicimage(card-parts.png)" style="float: right;" alt="Illustration of the parts of a card" width="250" loading="lazy">
