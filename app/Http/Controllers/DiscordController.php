@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 
-#[\Spatie\RouteAttributes\Attributes\Group(domain: 'discord.monmamo.test')]
-#[\Spatie\RouteAttributes\Attributes\Group(domain: 'discord.monmamo.com')]
 class DiscordController extends Controller
 {
 
@@ -172,7 +170,7 @@ class DiscordController extends Controller
     {
     }
 
-    #[\Spatie\RouteAttributes\Attributes\Post('/interactions', 'discord.interactions')]
+    #[\Spatie\RouteAttributes\Attributes\Post('/discord/interactions', 'discord.interactions')]
     public function interactions(Request $request)
     {
         $data = $request->all();
@@ -183,7 +181,7 @@ class DiscordController extends Controller
         return $this->$function_name($interactionData);
     }
 
-    #[\Spatie\RouteAttributes\Attributes\Get('/test', 'discord.test')]
+    #[\Spatie\RouteAttributes\Attributes\Get('/discord/test', 'discord.test')]
     public function test(){
 return 'Hello world from DiscordController!';
     }

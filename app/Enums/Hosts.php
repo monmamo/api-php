@@ -16,17 +16,11 @@ enum Hosts: string
     #[Environment(Environments::Development)]
     case Default2 = 'monmamo.test';
 
-    #[Environment(Environments::Development)]
-    case DiscordDevelopment = 'discord.monmamo.test';
-
     #[Environment(Environments::Testing)]
     case Dev1 = 'jb1.localhost';
 
     #[Environment(Environments::Production)]
     case Live = 'monmamo.com';
-
-    #[Environment(Environments::Production)]
-    case DiscordLive = 'discord.monmamo.com';
 
     #[Environment(Environments::Production)]
     case Live2 = 'www.monmamo.com';
