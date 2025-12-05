@@ -1,9 +1,9 @@
 <x-guest-layout>
 <h1>The Federation of Nations</h1>
 
-<p>A global intergovernmental organization established by the signing of the [[Great Agreement]]. </p>
+<p>A global intergovernmental organization established by the signing of the <a href="/lore/great-agreement">Great Agreement</a>. </p>
 
-<p>The mission of the Federation of Nations, as articulated in the Great Agreement and ratified by the nations of Erebis, Asis and Pluralis, is as follows:</p>
+<p>The mission of the Federation of Nations, as articulated in the Great Agreement and ratified by the nations of <a href="/places/erebis">Erebis</a>, <a href="/places/asis">Asis</a> and <a href="/places/pluralis">Pluralis</a>, is as follows:</p>
 
 <ul>
     <li>Maintaining international peace and security.</li>
