@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-5 col-lg-3 mb-3">
                     <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="Homepage">
-                        <x-application-mark height="100" color="white" />
+                        <x-application-mark height="100" color="white" /><span class="visually-hidden">Monsters Masters & Mobsters</span>
                     </a>
                     <ul class="list-unstyled small">
                         <li class="narrow-sans-serif white" >Ponchatoula, Louisiana, U.S.A.</li>
@@ -62,7 +62,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-1 col-md-1 col-lg-2 mb-3">
-                    <h5 class="footer-column-header">Home</h5>
+                    <div class="footer-column-header">Home</div>
                     <ul class="list-unstyled">
                         @foreach(config('ui.home.links') as $spec)
                         <x-footer.item :$spec />
@@ -70,7 +70,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-2 col-md-2 col-lg-2 mb-3">
-                    <h5 class="footer-column-header">World of MonMaMo</h5>
+                    <div class="footer-column-header">World of MonMaMo</div>
                     <ul class="list-unstyled">
                     @foreach(config('ui.world.links') as $spec)
                     <x-footer.item :$spec />
@@ -78,7 +78,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-2 col-md-2 col-lg-2 mb-3">
-                    <h5 class="footer-column-header">Products</h5>
+                    <div class="footer-column-header">Products</div>
                     <ul class="list-unstyled">
                     @foreach(config('ui.products.links') as $spec)
                     <x-footer.item :$spec />
@@ -86,7 +86,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-2 col-md-2 col-lg-2 mb-3">
-                    <h5 class="footer-column-header">Community</h5>
+                    <div class="footer-column-header">Community</div>
                     <ul class="list-unstyled">
                     @foreach(config('ui.community.links') as $spec)
                     <x-footer.item :$spec />
@@ -94,7 +94,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-1 col-md-1 col-lg-1 mb-3">
-                    <h5 class="footer-column-header">Tools</h5>
+                    <div class="footer-column-header">Tools</div>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="#" class="footer-link" data-bs-toggle="modal" data-bs-target="#dice-modal">Roll Dice</a></li>
                     </ul>

@@ -8,13 +8,14 @@
     <meta property="og:image" content="@publicimage(homepage-hero.png)">
 </x-slot:meta>
 
-    <div class="text-center">
+    <div style="background-image:url('@publicimage(homepage-background.png)')">
+
+          <div class="text-center">
         <div class="container">
-            <img src="@publicimage(homepage-hero.png)" class="img-fluid border rounded-3 shadow-lg mb-4" alt="MonMaMo Billboard" width="1920" height="1080" loading="lazy">
+            <img src="@publicimage(title-logo-white.png)" class="mb-4" style="max-width: 40%;height: auto;" alt="Monsters Masters & Mobsters Logo" loading="lazy">
           </div>
         </div>
 
-    <div class="px-4 pt-1 my-1 text-left">
           <div class="col-lg-10 mx-auto">
 
 <p class="lead mb-4">Monsters Masters &amp; Mobsters is a speculative fiction concept that incorporates elements of magical realism, professional sports and organized (and disorganized) crime. The world of Monsters Masters &amp; Mobsters is our world, but instead of humans there are two types of higher beings: monsters and anthropes. Monsters Masters &amp; Mobsters represents the belief in the power of imagination and the importance of storytelling. We value creativity, originality, and the ability of fantasy and speculative fiction to inspire, entertain, and bring people together.</p>
@@ -22,6 +23,16 @@
 <p class="lead mb-4">Monsters Masters & Mobsters aims to provide a unique and immersive experience in the world of fantasy and speculative fiction. We believe in the power of storytelling to connect people and explore complex themes in a way that is engaging and thought-provoking. We believe the hard truths of our world can be explored through fantasy and speculative fiction. Monsters Masters & Mobsters is a platform for people to tell their stories and celebrate their cultures.</p>
 
 <p class="lead mb-4">Come with us to explore the vibrant world we are creating. Meet our diverse cast of anthropes and monsters through art, games, short stories, and many other ways to come as new portals open to whisk you away!</p>
+
+<p class="lead mb-4"><label for="kitEmailAddress">Join our mailing list by entering your email address here:</label></p>
+
+<form method="POST" action="https://app.kit.com/forms/8763829/subscriptions" data-sv-form="8763829" data-uid="60b9fe9161"  min-width="">
+ <div class="mb-3">    
+    <input  name="email_address" type="email" class="form-control" id="kitEmailAddress" >
+    <div id="emailHelp" class="form-text">We respect your privacy. We will not sell your address or share it with third parties. Unsubscribe at any time.</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Subscribe</button>
+</form>
 
             {{--
            
