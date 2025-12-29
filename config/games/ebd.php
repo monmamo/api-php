@@ -19,7 +19,7 @@ return [
             'A-MO-38', // Warlord
             'A-MO-39', // Pirate
         ],
-        'market-cards-0' => [ 
+        'market-cards-0' => [
             // The cards that are always available in the market
             'A-DB-03' => 10, // Mentor
             'A-MO-34' => 10, // Associate

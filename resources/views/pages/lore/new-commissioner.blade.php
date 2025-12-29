@@ -1,4 +1,11 @@
-<x-guest-layout><x-slot:page-title>Lore</x-slot><h1>The New Commissioner</h1>
+<x-guest-layout><x-slot:page-title>The New Commissioner</x-slot>
+    
+    
+    <x-breadcrumbs>
+        <x-breadcrumbs.crumb url="/lore">Lore</x-breadcrumbs.crumb>
+    </x-breadcrumbs>
+    
+    <h1>The New Commissioner</h1>
 
 <p>"Congratulations, boss. Or should I call you 'commissioner'?"</p>
 <p>Amalica Switch turned and gave her subordinate a half-wink. "You can call me both."</p>

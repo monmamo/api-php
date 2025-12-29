@@ -23,6 +23,7 @@
     <li class="mb-2"><a href="/lore/great-agreement">The Great Agreement</a></li>
     <li class="mb-2"><a href="/lore/monster-regulation-act">The Monster Regulation Act</a></li>
     <li class="mb-2"><a href="/lore/socioeconomic-worlds">The Socioeconomic Environments</a></li>
+    <li class="mb-2"><a href="/lore/monster-safe-zone">Monster-Safe Zones and How They Shaped Civilization</a></li>
     </div>
 </div>
 </div>

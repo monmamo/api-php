@@ -7,7 +7,8 @@ namespace Canon;
  */
 function concepts(): \Traversable
 {
-    return \collect(\scandir(\base_path('canon/concepts')));
+    return \collect(\scandir(\base_path('canon/concepts')))
+        ->filter(fn ($file) => !\str_starts_with($file, '.') && $file !== 'functions.php');
 };
 
 /**
