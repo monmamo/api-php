@@ -4,6 +4,7 @@
 
     <x-breadcrumbs>
         <x-breadcrumbs.crumb url="/lore">Lore</x-breadcrumbs.crumb>
+        <x-breadcrumbs.crumb url="/lore/history">History</x-breadcrumbs.crumb>
     </x-breadcrumbs>
 
 
@@ -15,5 +16,7 @@
 
 
     <p>The Great Agreement is a pivotal moment in the history of the Monsters Masters & Mobsters universe, marking the end of the <a href="/lore/five-centuries-of-war">Five Centuries of War</a> and the establishment of the great states of the world.</p>
+
+<p>(Note that the Great Agreement itself did not end the Five Centuries of War. Some conflicts considered part of the Five Centuries of War stretched as long as four decades after the ratification.)</p>
 
     </x-guest-layout>

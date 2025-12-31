@@ -1,11 +1,7 @@
 <?php
-
 use Symfony\Component\Finder\Finder;
-
 resource_path();
-
 $taxons = \Canon\taxons();
-
 
 // {{ route('taxons.show',['slug'=> $taxon]) }}
 ?>

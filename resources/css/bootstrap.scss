@@ -6,25 +6,25 @@
 
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-caret:                true !default;
-$enable-rounded:              true !default;
-$enable-shadows:              true !default;
-$enable-gradients:            true !default;
-$enable-transitions:          true !default;
-$enable-reduced-motion:       true !default;
-$enable-smooth-scroll:        true !default;
-$enable-grid-classes:         true !default;
-$enable-container-classes:    true !default;
-$enable-cssgrid:              false !default;
-$enable-button-pointers:      true !default;
-$enable-rfs:                  true !default;
-$enable-validation-icons:     true !default;
-$enable-negative-margins:     false !default;
+$enable-caret: true !default;
+$enable-rounded: true !default;
+$enable-shadows: true !default;
+$enable-gradients: true !default;
+$enable-transitions: true !default;
+$enable-reduced-motion: true !default;
+$enable-smooth-scroll: true !default;
+$enable-grid-classes: true !default;
+$enable-container-classes: true !default;
+$enable-cssgrid: false !default;
+$enable-button-pointers: true !default;
+$enable-rfs: true !default;
+$enable-validation-icons: true !default;
+$enable-negative-margins: false !default;
 $enable-deprecation-messages: true !default;
-$enable-important-utilities:  true !default;
+$enable-important-utilities: true !default;
 
-$enable-dark-mode:            true !default;
-$color-mode-type:             data !default; // `data` or `media-query` https://getbootstrap.com/docs/5.3/customize/color-modes/
+$enable-dark-mode: true !default;
+$color-mode-type: data !default; // `data` or `media-query` https://getbootstrap.com/docs/5.3/customize/color-modes/
 
 
 /* Brand Color Variables */
@@ -46,37 +46,37 @@ $suburban-sky: #A0BFD5;
 @import "bootstrap/scss/functions";
 
 // scss-docs-start color-variables
-$blue:    $neon-azure;
-$indigo:  $grime-indigo;
-$purple:  #6f42c1 !default;
-$pink:    $monster-ember;
-$red:     $spoil-red;
-$orange:  $citrus-ember;
-$yellow:  $industrial-gold;
-$green:   #198754 !default;
-$teal:    $biolume-acid;
-$cyan:    $suburban-sky;
+$blue: $neon-azure;
+$indigo: $grime-indigo;
+$purple: #6f42c1 !default;
+$pink: $monster-ember;
+$red: $spoil-red;
+$orange: $citrus-ember;
+$yellow: $industrial-gold;
+$green: #198754 !default;
+$teal: $biolume-acid;
+$cyan: $suburban-sky;
 // scss-docs-end color-variables
 
 
 // Settings for the `<body>` element.
 
-$body-text-align:           null !default;
-$body-color:               $grime-indigo !default;
-$body-bg:                  $ash-ivory  !default;
+$body-text-align: null !default;
+$body-color: $grime-indigo !default;
+$body-bg: $ash-ivory !default;
 
-$body-secondary-color:      rgba($body-color, .75) !default;
+$body-secondary-color: rgba($body-color, .75) !default;
 // $body-secondary-bg:         $gray-200 !default;
 
-$body-tertiary-color:       rgba($body-color, .5) !default;
+$body-tertiary-color: rgba($body-color, .5) !default;
 // $body-tertiary-bg:          $gray-100 !default;
 
-$body-emphasis-color:       $industrial-gold !default;
+$body-emphasis-color: $industrial-gold !default;
 
-$link-color:                             $suburban-sky !default;
-$link-shade-percentage:                   20% !default;
+$link-color: $suburban-sky !default;
+$link-shade-percentage: 20% !default;
 
-$code-color:                        $citrus-ember !default;
+$code-color: $citrus-ember !default;
 
 // Typography
 //
@@ -84,71 +84,71 @@ $code-color:                        $citrus-ember !default;
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-serif:     "Playfair Display", serif !default;
-$font-family-sans-serif:     Roboto, sans-serif !default;
-$font-family-sans-serif-condensed:     "Roboto Condensed" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-serif: "Playfair Display", serif !default;
+$font-family-sans-serif: Roboto, sans-serif !default;
+$font-family-sans-serif-condensed: "Roboto Condensed" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 
-$font-family-base:            $font-family-serif !default;
-$font-family-code:            $font-family-monospace !default;
+$font-family-base: $font-family-serif !default;
+$font-family-code: $font-family-monospace !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
-$font-size-root:              null !default;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875 !default;
-$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-root: null !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * .875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
 
 // $font-weight-base:            $font-weight-normal !default;
 
-$line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
-$line-height-lg:              2 !default;
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
 
 
 // scss-docs-start headings-variables
 // $headings-margin-bottom:      $spacer * .5 !default;
-$headings-font-family:        $font-family-sans-serif !default;
-$headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
-$headings-color:              $industrial-gold !default;
+$headings-font-family: $font-family-sans-serif !default;
+$headings-font-style: null !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: $industrial-gold !default;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
 $display-font-sizes: (
-  1: 5rem,
-  2: 4.5rem,
-  3: 4rem,
-  4: 3.5rem,
-  5: 3rem,
-  6: 2.5rem
-) !default;
+    1: 5rem,
+    2: 4.5rem,
+    3: 4rem,
+    4: 3.5rem,
+    5: 3rem,
+    6: 2.5rem) !default;
 
 $display-font-family: null !default;
-$display-font-style:  null !default;
+$display-font-style: null !default;
 $display-font-weight: 300 !default;
 $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 
-$body-color-dark:                   $ash-ivory !default;
-$body-bg-dark:                      $grime-indigo !default;
-$body-secondary-color-dark:         rgba($body-color-dark, .75);
+$body-color-dark: $ash-ivory !default;
+$body-bg-dark: $grime-indigo !default;
+$body-secondary-color-dark: rgba($body-color-dark, .75
+);
 // $body-secondary-bg-dark:            $gray-800;
-$body-tertiary-color-dark:          rgba($body-color-dark, .5);
+$body-tertiary-color-dark: rgba($body-color-dark, .5);
 // $body-tertiary-bg-dark:             mix($gray-800, $gray-900, 50%);
-$body-emphasis-color-dark:          $industrial-gold !default;
+$body-emphasis-color-dark: $industrial-gold !default;
 // $border-color-dark:                 $gray-700;
-$border-color-translucent-dark:     rgba($ash-ivory, .15);
-$headings-color-dark:               $industrial-gold !default;
-$link-color-dark:                   tint-color($link-color, 40%);
-$link-hover-color-dark:             shift-color($link-color-dark, -$link-shade-percentage);
-$code-color-dark:                   tint-color($code-color, 40%);
-$mark-color-dark:                   $body-color-dark !default;
-$mark-bg-dark:                      $industrial-gold !default;
+$border-color-translucent-dark: rgba($ash-ivory, .15);
+$headings-color-dark: $industrial-gold !default;
+$link-color-dark: tint-color($link-color, 40%);
+$link-hover-color-dark: shift-color($link-color-dark, -$link-shade-percentage);
+$code-color-dark: tint-color($code-color, 40%);
+$mark-color-dark: $body-color-dark !default;
+$mark-bg-dark: $industrial-gold !default;
 
-$breadcrumb-divider:                quote("&#8226;") !default;
+$breadcrumb-divider: quote("&#8226;") !default;
 
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/variables-dark";
@@ -237,7 +237,7 @@ $breadcrumb-divider:                quote("&#8226;") !default;
 }
 
 .navbar-nav .nav-link {
-        font-family: "Roboto Condensed" !important;
+    font-family: "Roboto Condensed" !important;
     color: white;
     font-weight: 500;
 }
@@ -271,34 +271,34 @@ a.navbar-brand {
 
 
 .breadcrumb {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 0;
-  margin-bottom: 1rem;
-  @include font-size(null);
-  list-style: none;
-  @include border-radius(null);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0;
+    margin-bottom: 1rem;
+    @include font-size(null);
+    list-style: none;
+    @include border-radius(null);
 }
 
 .breadcrumb-item {
     a {
-  font-family: #{$font-family-sans-serif-condensed};
-  text-decoration: none;
+        font-family: #{$font-family-sans-serif-condensed};
+        text-decoration: none;
     }
 
     // The separator between breadcrumbs.
-  + .breadcrumb-item {
-    padding-left: .5rem ;
+    +.breadcrumb-item {
+        padding-left: .5rem;
 
-    &::before {
-      float: left; // Suppress inline spacings and underlining of the separator
-      padding-right: .5rem ;
-      color: var(--#{$prefix}secondary-color);
-      content: var(--#{$breadcrumb-divider}, escape-svg($breadcrumb-divider)) ;
+        &::before {
+            float: left; // Suppress inline spacings and underlining of the separator
+            padding-right: .5rem;
+            color: var(--#{$prefix}secondary-color);
+            content: var(--#{$breadcrumb-divider}, escape-svg($breadcrumb-divider));
+        }
     }
-  }
 
-  &.active {
-    color: var(--#{$prefix}secondary-color);
-  }
+    &.active {
+        color: var(--#{$prefix}secondary-color);
+    }
 }

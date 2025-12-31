@@ -16,7 +16,7 @@ $lines = array_map('str_getcsv', file($timelinePath));
 array_shift($lines);    
 
 ?>
-<table>
+<table class="table table-striped">
     <tr>
         <th>Date/Year (GA)</th>
         <th>Event</th>
