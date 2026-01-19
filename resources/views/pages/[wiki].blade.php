@@ -15,6 +15,6 @@ if(!file_exists(base_path("$configuration/profile.html"))) abort(404);
 
 ?>
 <x-guest-layout>
-<?= file_get_contents(base_path("$configuration/profile.html")) ?>
+    <?= file_get_contents(base_path("$configuration/profile.html")) ?>
 <?= file_exists(base_path("$configuration/details.html")) ? file_get_contents(base_path("$configuration/details.html")) : '' ?>
 </x-guest-layout>

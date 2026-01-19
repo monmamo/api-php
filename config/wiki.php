@@ -51,6 +51,8 @@ return [
 'Iris the Colorful' => 'canon/Anthropes/iris-the-colorful',
 'Jack Factotum' => 'canon/Anthropes/jack-factotum',
 'John Hamilton' => 'canon/Anthropes/john-hamilton',
+'Pluralis' => 'canon/Locations/pluralis',
+
 'John Welcome Meffitson' => 'canon/Anthropes/john-welcome-meffitson',
 'Jolie Archer' => 'canon/Anthropes/jolie-archer',
 'Katherine Smith of Rose Hill' => 'canon/Anthropes/katherine-smith-of-rose-hill',
