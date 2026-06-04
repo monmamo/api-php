@@ -47,11 +47,17 @@ MARKDOWN;
 
           <div class="col-lg-10 mx-auto">
 
-<p class="lead mb-4">Monsters Masters &amp; Mobsters is a speculative fiction concept that incorporates elements of magical realism, professional sports and organized (and disorganized) crime. The world of Monsters Masters &amp; Mobsters is our world, but instead of humans there are two types of higher beings: monsters and anthropes. Monsters Masters &amp; Mobsters represents the belief in the power of imagination and the importance of storytelling. We value creativity, originality, and the ability of fantasy and speculative fiction to inspire, entertain, and bring people together.</p>
-
-<p class="lead mb-4">Monsters Masters & Mobsters aims to provide a unique and immersive experience in the world of fantasy and speculative fiction. We believe in the power of storytelling to connect people and explore complex themes in a way that is engaging and thought-provoking. We believe the hard truths of our world can be explored through fantasy and speculative fiction.</p> 
-
-<p class="lead mb-4">Monsters Masters & Mobsters is a platform for people to tell their stories and celebrate their cultures. We believe that fans deserve a fandom that doesn't live and die by the whims of a large media corporation. We believe that artists and writers deserve a fandom that supports and uplifts their creative contributions, instead of running to lawyers. We believe in the power of the fan and the consumer to shape the future of fantasy.</p>
+<p class="lead mb-4">Monsters Masters &amp; Mobsters is a speculative fiction concept that incorporates elements of magical realism, professional sports and organized (and disorganized) crime. The world of Monsters Masters &amp; Mobsters is our world, but instead of humans there are two types of higher beings: monsters and anthropes.</p>
+    
+<p class="lead mb-4">Monsters Masters &amp; Mobsters represents the belief in the power of imagination and the importance of storytelling:</p>
+<ul>
+    <li>We value creativity, originality, and the ability of fantasy and speculative fiction to inspire, entertain, and bring people together.</li>
+    <li>We want to connect people and explore complex themes in ways that will engage our fans' imaginations and intellects.</li>
+<li>We believe that fans deserve culture that isn't beholden to the whims of large corporations.</li>
+<li>We believe that artists and writers deserve a fandom that supports and uplifts their creative contributions, instead of running to lawyers.</li>
+<li>We believe that all people deserve stories that respect and dignify them and their heritages, and a platform in which they can create and develop those stories.</li>
+<li>We believe in the power of the fan and the consumer to shape the future of fantasy, storytelling, and culture.</li>
+</ul>
 
 <p class="lead mb-4">Come with us to explore the vibrant world we are creating. Meet our diverse cast of anthropes and monsters through art, games, short stories, and many other ways to come as new portals open to whisk you away!</p>
 
