@@ -20,8 +20,8 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.phaserule type="Draw" ><text>
-<x-card.normalrule>You may draw a card and</x-card.normalrule>
-<x-card.normalrule>take another Draw phase.</x-card.normalrule>
+<x-card.ruleline>You may draw a card and</x-card.ruleline>
+<x-card.ruleline>take another Draw phase.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

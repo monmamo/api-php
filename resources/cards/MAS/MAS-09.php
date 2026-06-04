@@ -19,11 +19,11 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule  >
-<x-card.normalrule>Search your Library for</x-card.normalrule>
-<x-card.normalrule>any number of distinct Mana cards</x-card.normalrule>
-<x-card.normalrule>& put them into your hand.</x-card.normalrule>
-<x-card.normalrule>Shuffle your Library.</x-card.normalrule>
-<x-card.smallrule :source="\App\Concept::make('Vendor')->standardRule()" />
+<x-card.ruleline>Search your Library for</x-card.ruleline>
+<x-card.ruleline>any number of distinct Mana cards</x-card.ruleline>
+<x-card.ruleline>& put them into your hand.</x-card.ruleline>
+<x-card.ruleline>Shuffle your Library.</x-card.ruleline>
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Vendor')->standardRule()" />
 </x-card.cardrule>
 HTML;
     }

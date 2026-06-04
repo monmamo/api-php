@@ -19,7 +19,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
         <x-card.flavortext y="535">
-<x-card.flavortext.line>Where the real money from the concept is made.</x-card.flavortext.line>
+<x-card.flavortext.line>Where the real money from the intellectual property is made.</x-card.flavortext.line>
 <x-card.flavortext.line>- Mel Brooks (paraphrased)</x-card.flavortext.line>
 </x-card.flavortext>
 

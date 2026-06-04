@@ -36,11 +36,11 @@ HTML;
 
 <x-card.hero.svg ><g fill="#ffffff">{{ view('Setback.icon') }}</g></x-card.hero.svg >
 
-<x-card.cardrule lines="4">
-<x-card.normalrule>Draw a Setback card from the Setback deck.</x-card.normalrule>
-<x-card.normalrule>Play it immediately.</x-card.normalrule>
-<x-card.normalrule>Then return the card to the</x-card.normalrule> 
-<x-card.normalrule>bottom of the Setback deck.</x-card.normalrule>
+<x-card.cardrule >
+<x-card.ruleline>Draw a Setback card from the Setback deck.</x-card.ruleline>
+<x-card.ruleline>Play it immediately.</x-card.ruleline>
+<x-card.ruleline>Then return the card to the</x-card.ruleline> 
+<x-card.ruleline>bottom of the Setback deck.</x-card.ruleline>
 </x-card.cardrule>
 
 

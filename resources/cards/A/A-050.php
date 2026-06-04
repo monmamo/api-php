@@ -9,7 +9,7 @@ use App\GeneralAttributes\Title;
 return new
     #[ImageCredit('Icon by sbed on Game-Icons.net')]
     #[Title('Acid')]
-    #[FlavorText(['Corrosive substance that can dissolve materials.', 'It is often used in manufacturing and cleaning.'])]
+    #[FlavorText(['Corrosive substance that can dissolve materials.', 'Often used in manufacturing and cleaning.'])]
     class(__FILE__) implements CardComponents
     {
         use DefaultCardAttributes;

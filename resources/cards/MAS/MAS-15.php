@@ -20,11 +20,11 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.phaserule type="Draw" ><text>
-<x-card.normalrule>Search your Library for a Monster with</x-card.normalrule>
-<x-card.normalrule>the same name as a Monster in your Discard.</x-card.normalrule>
-<x-card.normalrule>Reveal that/those card(s). Put that/those</x-card.normalrule>
-<x-card.normalrule>card(s) in your hand. Shuffle your Library.</x-card.normalrule>
-<x-card.smallrule :source="\App\Concept::make('Draw')->standardRule()" />
+<x-card.ruleline>Search your Library for a Monster with</x-card.ruleline>
+<x-card.ruleline>the same name as a Monster in your Discard.</x-card.ruleline>
+<x-card.ruleline>Reveal that/those card(s). Put that/those</x-card.ruleline>
+<x-card.ruleline>card(s) in your hand. Shuffle your Library.</x-card.ruleline>
+<x-card.ruleline class="smallrule" :source="\App\Concept::make('Draw')->standardRule()" />
 </text></x-card.phaserule>
 HTML;
     }

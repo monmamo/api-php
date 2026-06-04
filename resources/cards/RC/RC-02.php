@@ -40,9 +40,9 @@ HTML;
 
 <x-card.hero.svg ><g fill="#ffffff">{{ view('Movement.icon') }}</g></x-card.hero.svg >
 
-<x-card.cardrule lines="3">
-<x-card.normalrule>Roll 1d6 for each Monster on your team.</x-card.normalrule>
-<x-card.normalrule>Move FORWARD that many spaces.</x-card.normalrule>
+<x-card.cardrule >
+<x-card.ruleline>Roll 1d6 for each Monster on your team.</x-card.ruleline>
+<x-card.ruleline>Move FORWARD that many spaces.</x-card.ruleline>
 </x-card.cardrule>
 
 

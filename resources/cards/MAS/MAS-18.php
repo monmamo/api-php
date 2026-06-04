@@ -20,7 +20,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule >
-<x-card.normalrule>GROUP ATTACK. Does Xd4 where X is the number of Monsters you have in play.</x-card.normalrule>
+<x-card.ruleline>GROUP ATTACK. Does Xd4 where X is the number of Monsters you have in play.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

@@ -19,8 +19,8 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="110" >
-<x-card.normalrule>Speed +3.</x-card.normalrule>
-<x-card.normalrule>If this Monster is Knocked Out, discard this card.</x-card.normalrule>
+<x-card.ruleline>Speed +3.</x-card.ruleline>
+<x-card.ruleline>If this Monster is Knocked Out, discard this card.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

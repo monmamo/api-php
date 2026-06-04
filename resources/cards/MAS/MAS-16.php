@@ -20,9 +20,9 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule height="165" >
-<x-card.normalrule>Prevent 1d% damage.</x-card.normalrule>
-<x-card.normalrule>The attacking Monster takes the</x-card.normalrule>
-<x-card.normalrule>amount of Damage prevented.</x-card.normalrule>
+<x-card.ruleline>Prevent 1d% damage.</x-card.ruleline>
+<x-card.ruleline>The attacking Monster takes the</x-card.ruleline>
+<x-card.ruleline>amount of Damage prevented.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

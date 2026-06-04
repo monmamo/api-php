@@ -21,7 +21,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 
-<x-card.flavortext>A well-timed Tickle can be devastatingly effective.</x-card.flavortext>
+<x-card.flavortext>Devastatingly effective at the right time.</x-card.flavortext>
 
 <x-card.hero.svg>
 <g fill="#ffffff" fill-opacity="1"><x-icons.meeple  /></g>

@@ -14,11 +14,11 @@ class(__FILE__) implements CardComponents
     public function content(): \Traversable
     {
         yield <<<'HTML'
-     <x-card.phaserule type="Upkeep" height="240">
+     <x-card.phaserule type="Upkeep" >
        <text >
-<x-card.normalrule>For each of your Monsters,</x-card.normalrule>
-<x-card.normalrule>you may return any number of Mana</x-card.normalrule>
-<x-card.normalrule>cards attached to it to your hand.</x-card.normalrule>
+<x-card.ruleline>For each of your Monsters,</x-card.ruleline>
+<x-card.ruleline>you may return any number of Mana</x-card.ruleline>
+<x-card.ruleline>cards attached to it to your hand.</x-card.ruleline>
 </text>
  </x-card.phaserule>
 HTML;

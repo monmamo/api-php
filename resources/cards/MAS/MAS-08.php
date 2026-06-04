@@ -19,7 +19,7 @@ class(__FILE__) implements CardComponents
     {
         yield <<<'HTML'
 <x-card.cardrule >
-<x-card.normalrule>No more Item cards can be played.</x-card.normalrule>
+<x-card.ruleline>No more Item cards can be played.</x-card.ruleline>
 </x-card.cardrule>
 HTML;
     }

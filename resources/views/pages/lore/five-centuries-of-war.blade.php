@@ -1,3 +1,63 @@
+<?php
+\Laravel\Folio\middleware(function (\Illuminate\Http\Request $request, \Closure $next)
+    {
+        $accept = $request->headers->get('Accept');
+
+        if (str_contains($accept, 'text/markdown')) {
+            $markdown = <<<MARKDOWN
+# The Five Centuries of War
+
+
+The "Five Centuries of War" is the name given to a prolonged period of conflict and upheaval that spanned approximately five centuries years in anthrope history, roughly from the 55th-60th centuries. There is no definite beginning or end to the Five Centuries of War; rather, the time is characterized by a series of significant conflicts and events that collectively define this era. There is a general consensus among historians about which wars and conflicts are "officially" part of the Five Centuries of War, and those conflicts actually span almost to six centuries.
+
+
+## Continental Clashes
+
+### Europe
+
+In Europe, two superpowers emerge: one in the far north (composed of united northern tribes and clans) and another in the south (a coalition of southern kingdoms and city-states).</li>
+
+The two superpowers vie for control of the continent, leading to several large-scale wars. A notable conflict involves invasions across the Bering Strait and Greenland:</li>
+
+### Asia
+
+### North and South America
+
+During this time, North and South America become major theaters of conflict as well. The northern superpower from Europe invades North America from Greenland via Iceland, while the Asian superpower invades from Siberia. The two superpowers clash in Canada, running over American tribes in the process. The hostilities between the two superpowers bleed back over to their respective continents, and a bloody war rages in the Near East.
+
+The anthrope population of North and South America fell by half during the Five Centuries of War.  The invasions by outsiders and internal conflicts separated the people into two broad groups. Those that were more developed and more cosmopolitan drew to the coasts and the Great Lakes. Less-developed tribes and clans retreated into the interior and migrated south towards the jungles.
+
+Tribes and loosely-organized nations that had occupied large regions of land coalesced around the coasts, major rivers and Great Lakes.
+
+## Pogroms and Genocide
+
+
+The Five Centuries of War are characterized by numerous pogroms against certain races, particularly those perceived as extraordinarily powerful.
+
+Races with wings were particularly targeted for persecution, as people perceived them (both naturally and through propaganda campaigns) to be capable of conquering all of anthrope civilization.
+
+The pogroms resulted in the extinction of several races and drove several other races into isolation. Monstrous anthropes disappeared from the developed peoples under the belief that their monstrosity made them more of a target.
+
+## Advances in Technology
+
+The Five Centuries of War saw profound innovations in the breeding and training of monsters. Warring nations used specific breeding techniques to produce and accumulate monsters for war. Those nations that experienced liberty from war, no matter how fleeting, took advantage of emerging technology in heavy industry. The nations of North and South America had particular success in transitioning monster husbandry from agriculture to industry.
+MARKDOWN;
+
+            return new \Illuminate\Http\Response(
+                content: $markdown,
+                headers: ['Content-Type' => 'text/markdown']
+            );
+        }
+
+                if (str_contains($accept, 'text/html')) {
+            return $next($request);
+        }
+
+
+        throw new \LogicException('Unsupported Accept header: ' . $accept);
+    });
+?>
+
 <x-guest-layout>
 
     <x-slot:page-title>The Five Centuries of War</x-slot>
@@ -17,9 +77,9 @@
 
 <h3>Europe</h3>
 
-<p>In Europe, two superpowers emerge: one in the far north (composed of united northern tribes and clans) and another in the south (a coalition of southern kingdoms and city-states).</li>
+<p>In Europe, two superpowers emerge: one in the far north (composed of united northern tribes and clans) and another in the south (a coalition of southern kingdoms and city-states).</p>
 
-    <p>The two superpowers vie for control of the continent, leading to several large-scale wars. A notable conflict involves invasions across the Bering Strait and Greenland:</li>
+    <p>The two superpowers vie for control of the continent, leading to several large-scale wars. A notable conflict involves invasions across the Bering Strait and Greenland:</p>
 
 <h3>Asia</h3>
 

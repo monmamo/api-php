@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg sticky-top bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"><x-application-logo size="32" color="white"/></a>
+    <a class="navbar-brand" href="/"><x-application-mark height="32" color="white"/></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
