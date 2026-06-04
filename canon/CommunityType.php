@@ -1,7 +1,10 @@
 <?php
 
-namespace App\Enums;
+namespace Canon;
 
+/**
+ * Represents the type of a community.
+ */
 enum CommunityType: int
 {
     case City = 20;

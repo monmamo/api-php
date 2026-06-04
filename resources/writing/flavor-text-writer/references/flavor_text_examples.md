@@ -1,0 +1,88 @@
+# Flavor Text Examples
+
+The following list contains the name of a card and the flavor text for that card and optionally an explanation:
+
+- Acid: "Corrosive substance that can dissolve materials. Often used in manufacturing and cleaning."
+- Alms for the Poor: "Pay it forward even when it isn't cool."
+- Associate: "The guy with the connections."
+- Berserk: "You won't like him when he's angry."
+- Big-Box Store: "Expect more. Live better. Simplify life. Get more done." (Slogans from various large retailers.)
+- Biting: "What sharp teeth you have."
+- Blizzard: "Not the ice cream treat."
+- Body Slam: "Give it ALL you got."
+- Box Cutter: "For cuttin' \"boxes,\" if y'know what we mean."
+- Bulk Up: "It’s not the size of the monster in the fight, but size sure helps."
+- Busybody: "Mind your own business."
+- Butterfly Knife: "Expands like a butterfly, stings like a bee."
+- Caffeine: "Because both adulting and monster battling are hard."
+- Can of Paint: "Cover the earth. Eh, just your enemies." (Parody of the slogan of a major paint company.)
+- Canned Monster Food: "Meaty chunks in a thick, savory gravy."
+- Champion Mentor: "To be the best, you need to learn from the best."
+- Cheerleader: "Go, go, go team go!"
+- Community Center: "Have a hot meal. Hang out with the boys." (From the song "YMCA".)
+- Convenience Store: "The quick stop for everything you forgot at the Big-Box Store (A-014)."
+- Copycat: "Bears a striking resemblance to Frank Abagnale." (Abagnale is an infamous impostor in the real world.)
+- Creepy Guy in the Alley: "Psst. I got a great deal for you."
+- Crooked Cop: "The wall of silence is blue."
+- Cruel Order: "They're just following orders."
+- Dandruff: "Make it snow."
+- Dividends: "The reward for investing with patience."
+- Drinking Water Fountain: "All creatures need refreshment sometimes."
+- Driver: "I've got a driver and that's a start." (From the song Drive My Car.)
+- Earthquake: "Hope your Insurance (A-069) is paid up."
+- Eau de Resistance: "A scent that monsters can't compete with."
+- Embargo: "The economy is mightier than the sword."
+- Favorite Toy: "Your trusted companion's trusted companion."
+- Fetor: "Someone please give that monster a bath."
+- Fireball: "If you can Dodge a wrench, you can Dodge a Fireball." (Based on a quote in the movie Dodgeball.)
+- Firebreath: "Halitosis (A-110) is the least of your problems."
+- Flamboyant Mogul: "He builds the hugest venues. Yuge ones." (Parody of how Donald Trump speaks.)
+- Flamethrower Attack: "The kids love this one." (A joke in the movie Spaceballs)
+- Flaming Cocktail: "Mixed up right in the kitchen sink." (From a song lyric.)
+- Flatus: "The smell is the least of your worries."
+- Fragrance: "Thank you for bathing your monster."
+- Friendly Exchange: "Take the gun. Leave the cannoli." (Play on a quote from The Godfather.)
+- Garlic: "A clove a day keeps the doctor away. (And everyone else.)"
+- Hacker: Hacking is getting other people to do strange things. - Steve Wozniak
+- Halitosis: "They say that bad breath is better than no breath at all…"
+- Hand Scope: "Here's lookin' at you, kid."
+- Hardware Store: "Trailer hitch demagnetizers, automatic circumcisers..." (Sample of the lyrics of "Hardware Store" by Weird Al Yankovic)
+- Healing Herb: "The best medicine is the one that tastes the worst."
+- Healing Salve: "Does a monster good!"
+- I Shot the Sheriff: "At least I didn't shoot the deputy." (Play on the song "I SHot the Sheriff".)
+- Idiot Agents: "The less we hear from them, the better they are serving us." (The card is a parody of Jessie and James from Pokemon.)
+- Inappropriate Traffic Stop: "Also called \"airport security.\""
+- Investment: "Past performance is not indicative of future results."
+- Landmine: "Silent but deadly."
+- League Victory: "Every champion starts at 0-0."
+- Longsword: "Definitely mightier than The Pen (A-W-15)."
+- Lottery: "Can't win if you don't play!"
+- Make It Rain: "Who says money can't buy popularity?"
+- Masseuse: "Touch is the best medicine."
+- Medicinal Compound: "Most efficacious in every case." (From a Paul McCartney song.)
+- Mentor: "Mentorship helps you pay your dues faster."
+- Merchandizing: Where the real money from the intellectual property is made. (Paraphrase of a quote by Mel Brooks.)
+- Minion: "Some people call them 'fans'."
+- Natural Healing: "When I get that feeling I want natural healing…" (A play on a song lyric.)
+- Neighborhood "Protection": Nice monster team you got there. Would be a shame if something happened to it.
+- Pistol: "Pew pew pew."
+- Razor: "The cut you don't see is the deepest."
+- Recycle: "Recycle today for a better upkeep phase tomorrow."
+- Round for the House: "Your favorite monster sports club had a great day on the field. Time to celebrate!"
+- Sheriff: "I am the law."
+- Sleight of Hand: "You didn't see that."
+- Soldier:  "Striving to be made, doing the dirty work."
+- Speakeasy: "Prohibition only drives drunkenness behind doors and into dark places. - Mark Twain"
+- Spy Drone: "Here's lookin' at you, kid."
+- Spy: "Loose lips sink championships." (Play on the proverb "loose lips sink ships".)
+- Stapler: "Don't tell Milton." (Reference to the movie Office Space.)
+- Switchblade: "Also stings like a bee."
+- Tattle: "Loose lips sink championships." (Play on the proverb "loose lips sink ships".)
+- Taxman: "Declare the pennies on your eyes." (From the song Taxman.)
+- The Pen: "This pen ain't for writin'"
+- Throwing Stars: "Just a few off the top."
+- Train: "Pay your dues."
+- Trial and Error: "Mostly error."
+- Unknown Allergen: "Get the tissues."
+- Wheel of Fortune: "This isn't a game (show)."
+- Whistleblower: "The loudest whistle never comes from the ref—it’s from he who dares to blow it on his own team." (Invented proverb)

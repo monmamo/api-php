@@ -1,0 +1,1 @@
+This folder contains documents and instructions pertaining to Monsters Masters & Mobsters as a brand. 

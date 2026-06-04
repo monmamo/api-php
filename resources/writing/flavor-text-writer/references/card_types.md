@@ -1,0 +1,29 @@
+# Card Types
+
+- Bane
+- Boost
+- Boss
+- Bystander
+- Catastrophe
+- Character
+- Command
+- Criminal
+- Draw
+- Drone
+- Environment
+- Female
+- Item
+- Level
+- Male
+- Mana
+- Monster
+- Movement
+- Resolution
+- Setup
+- Trait
+- Upkeep
+- Vehicle
+- Vendor
+- Venue
+- Weapon
+- Wearable

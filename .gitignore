@@ -17,3 +17,7 @@ auth.json
 /.idea
 /.vscode
 .DS_Store
+resources/cards/LR
+resources/cards/MAS
+resources/images/cards
+WORK-*

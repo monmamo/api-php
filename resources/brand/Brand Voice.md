@@ -1,3 +1,10 @@
+---
+name: brand-voice
+description: This skill applies the official brand voice of Monsters Masters & Mobsters to text and content produced by Monsters Masters & Mobsters. 
+keywords: branding, corporate identity, brand identity, Monsters Masters & Mobsters brand, brand voice
+---
+
+
 ## Personality: Encouraging
 
 We want to sound like a knowledgeable peer who motivates creators to experiment, share boldly, and take part in shaping the world of __Monsters Masters & Mobsters__.

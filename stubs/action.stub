@@ -1,0 +1,15 @@
+<?php
+
+namespace {{ namespace }};
+
+
+
+class {{ class }}
+{
+use \Lorisleiva\Actions\Concerns\AsAction;
+
+    public function handle()
+    {
+        // ...
+    }
+}

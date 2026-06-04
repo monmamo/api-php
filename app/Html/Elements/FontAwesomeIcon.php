@@ -15,8 +15,10 @@ final class FontAwesomeIcon extends I
      * @group fluent
      * @group unary
      *
+     * @uses \App\Html\Elements\FontAwesomeIcon::margin
+     * @uses \App\Html\Elements\FontAwesomeIcon::padding
      * @uses \App\Html\Elements\FontAwesomeIcon::fixedWidth
-     * @uses \Spatie\Html\Elements\I::class
+     * @uses \App\Html\Elements\FontAwesomeIcon::class
      *
      * @return static
      */
