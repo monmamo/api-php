@@ -3,11 +3,13 @@
     RewriteEngine On
 
     RewriteCond %{HTTP_HOST} ^monmamo\.com$ [NC]
+    
+    RewriteRule ^llms.txt$ /public/llms.txt [R=301,L]
+    RewriteRule ^robots.txt$ /public/robots.txt [R=301,L]
     RewriteRule ^build/(.*)$ /public/build/$1 [R=302,L]
-
-    RewriteCond %{HTTP_HOST} ^monmamo\.com$ [NC]
-    RewriteRule ^images/(.*)$ /public/images/$1 [R=302,L]
-
+    RewriteRule ^images/(.*)$ /public/images/$1 [R=301,L]
     RewriteRule ^(.*)$ /public/index.php [L] 
 
 </IfModule>
+
+
