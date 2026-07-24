@@ -49,6 +49,16 @@
 <p>"Ms. Switch is the perfect anthrope to take the Monster Sports Federation forward. She brings four decades of experience throughout the industry of monster sports and training. Under her leadership, the Oberforce Group launched their monster sports division. She served the local clubs of Liberty and Kingston. Most notably, she served as the first CEO of the club in Estevan. Under her leadership, the Federation brokered extended deals with our largest sponsors. The Federation's business operations are more efficient and profitable than ever. With these improvements, the Monster Sports Federation plans to improve and expand our operations both within the nation of Pluralis and throughout the world."</p>
 <p>Waxwood took a breath then continued. "Our relationships with our corporate and media partners are also stronger thanks to Ms. Switch. These partners have been part of the Monster Sports Federation family for many years. We are excited to keep these relationships going. With no further ado, let's give a warm welcome to our new commissioner."</p>
 <p>The audience applauded with vigor as Switch took the podium. Waxwood shuffled awkwardly to trade places with her. Switch gave the audience about a minute to adulate her, then began the acceptance speech she had memorized.</p>
+
+        <div class="container">
+            <img src="@publicimage(lore/new-commissioner/podium.png)" class="img-fluid border rounded-3 mx-auto d-block" alt="The New Commissioner: Switch and Waxwood"  loading="lazy">
+          </div>
+
+    <div class="text-center  mb-4">
+        Image by @moonlitmustelid
+        </div>
+
+
 <p>"Thank you, Mr. Waxwood. I want to recognize and thank the wonderful people who have joined me on this journey over the years. Thank you to my colleagues in Liberty Monster Sports Club, Kingston Monster Sports Club and Estevan Monster Sports Club. I also want to acknowledge Mullox Oberforce and the opportunity he gave me with his organization. I extend my gratitude to my mother and father, to my fellow alumni of the Caravel School of Business, and to Secretary Quiss, Treasurer Tenemos and Trustee Mackway for their support. The Monster Sports Federation is the undisputed champion of monster training and competition. Under my leadership as commissioner, we will continue the Federation's tradition of excellence."</p>
 <p>"I will now take questions from the media." She pointed to a random reporter. She didn't care who it is or what they were about to ask. Nothing would stump her today.</p>
 <p>"Ms. Switch, according to the most recent State of the Federation report, the business operations of the Federation are now 'more efficient.' The report listed cuts for several 'non-essential' positions, both in the Federation's central operations and at several clubs. Since the Federation operates as a not-for-profit company, does this mean the Federation will not create more jobs in the foreseeable future?"</p>
